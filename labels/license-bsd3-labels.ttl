@@ -1,0 +1,6 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://purl.org/NET/rdflicense/BSD3.0>
+    rdfs:label "BSD License 3-clause" ;
+.
+

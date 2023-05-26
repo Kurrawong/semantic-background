@@ -1,0 +1,656 @@
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+prov:
+    rdfs:label "W3C Provenance Ontology"@en ;
+.
+
+prov:Accept
+    rdfs:label "Accept"@en ;
+.
+
+prov:Activity
+    rdfs:label "Activity" ;
+.
+
+prov:ActivityInfluence
+    rdfs:label "Activity Influence" ;
+.
+
+prov:Agent
+    rdfs:label "Agent" ;
+.
+
+prov:AgentInfluence
+    rdfs:label "Agent Influence" ;
+.
+
+prov:Association
+    rdfs:label "Association" ;
+.
+
+prov:Attribution
+    rdfs:label "Attribution" ;
+.
+
+prov:Bundle
+    rdfs:label "Bundle" ;
+.
+
+prov:Collection
+    rdfs:label "Collection" ;
+.
+
+prov:Communication
+    rdfs:label "Communication" ;
+.
+
+prov:Contribute
+    rdfs:label """Contribute
+"""@en ;
+.
+
+prov:Contributor
+    rdfs:label "Contributor"@en ;
+.
+
+prov:Copyright
+    rdfs:label "Copyright"@en ;
+.
+
+prov:Create
+    rdfs:label "Create"@en ;
+.
+
+prov:Creator
+    rdfs:label "Creator"@en ;
+.
+
+prov:Delegation
+    rdfs:label "Delegation" ;
+.
+
+prov:Derivation
+    rdfs:label "Derivation" ;
+.
+
+prov:Dictionary
+    rdfs:label "Dictionary" ;
+.
+
+prov:DirectQueryService
+    rdfs:label "Provenance Service" ;
+.
+
+prov:EmptyCollection
+    rdfs:label "Empty Collection"@en ;
+.
+
+prov:EmptyDictionary
+    rdfs:label "Empty Dictionary" ;
+.
+
+prov:End
+    rdfs:label "End" ;
+.
+
+prov:Entity
+    rdfs:label "Entity" ;
+.
+
+prov:EntityInfluence
+    rdfs:label "Entity Influence" ;
+.
+
+prov:Generation
+    rdfs:label "Generation" ;
+.
+
+prov:Influence
+    rdfs:label "Influence" ;
+.
+
+prov:Insertion
+    rdfs:label "Insertion" ;
+.
+
+prov:InstantaneousEvent
+    rdfs:label "Instantaneous Event" ;
+.
+
+prov:Invalidation
+    rdfs:label "Invalidation" ;
+.
+
+prov:KeyEntityPair
+    rdfs:label "Key-Entity Pair" ;
+.
+
+prov:Location
+    rdfs:label "Location" ;
+.
+
+prov:Modify
+    rdfs:label "Modify"@en ;
+.
+
+prov:Organization
+    rdfs:label "Organization" ;
+.
+
+prov:Person
+    rdfs:label "Person" ;
+.
+
+prov:Plan
+    rdfs:label "Plan" ;
+.
+
+prov:PrimarySource
+    rdfs:label "Primary Source" ;
+.
+
+prov:Publish
+    rdfs:label "Publish"@en ;
+.
+
+prov:Publisher
+    rdfs:label "Publisher"@en ;
+.
+
+prov:Quotation
+    rdfs:label "Quotation" ;
+.
+
+prov:Removal
+    rdfs:label "Removal" ;
+.
+
+prov:Replace
+    rdfs:label "Replace"@en ;
+.
+
+prov:Revision
+    rdfs:label "Revision" ;
+.
+
+prov:RightsAssignment
+    rdfs:label "RightsAssignment"@en ;
+.
+
+prov:RightsHolder
+    rdfs:label "RightsHolder"@en ;
+.
+
+prov:Role
+    rdfs:label "Role" ;
+.
+
+prov:ServiceDescription
+    rdfs:label "Service Description" ;
+.
+
+prov:SoftwareAgent
+    rdfs:label
+        "Software Agent" ,
+        "SoftwareAgent" ;
+.
+
+prov:Start
+    rdfs:label "Start" ;
+.
+
+prov:Submit
+    rdfs:label "Submit"@en ;
+.
+
+prov:Usage
+    rdfs:label "Usage" ;
+.
+
+prov:actedOnBehalfOf
+    rdfs:label "acted on behalf of" ;
+.
+
+prov:activity
+    rdfs:label "activity" ;
+.
+
+prov:activityOfInfluence
+    rdfs:label "activity of influence" ;
+.
+
+prov:agent
+    rdfs:label "agent" ;
+.
+
+prov:agentOfInfluence
+    rdfs:label "agent of influence" ;
+.
+
+prov:alternateOf
+    rdfs:label "alternate of" ;
+.
+
+prov:asInBundle
+    rdfs:label "asInBundle" ;
+.
+
+prov:atLocation
+    rdfs:label "atLocation" ;
+.
+
+prov:atTime
+    rdfs:label "at time" ;
+.
+
+prov:contributed
+    rdfs:label "contributed" ;
+.
+
+prov:derivedByInsertionFrom
+    rdfs:label "derivedByInsertionFrom" ;
+.
+
+prov:derivedByRemovalFrom
+    rdfs:label "derivedByRemovalFrom" ;
+.
+
+prov:describesService
+    rdfs:label "describes service" ;
+.
+
+prov:dictionary
+    rdfs:label "dictionary" ;
+.
+
+prov:ended
+    rdfs:label "ended" ;
+.
+
+prov:endedAtTime
+    rdfs:label "ended at time" ;
+.
+
+prov:entity
+    rdfs:label "entity" ;
+.
+
+prov:entityOfInfluence
+    rdfs:label "entity of influence" ;
+.
+
+prov:generalizationOf
+    rdfs:label "generalization of" ;
+.
+
+prov:generated
+    rdfs:label "generated" ;
+.
+
+prov:generatedAsDerivation
+    rdfs:label "generated as derivation" ;
+.
+
+prov:generatedAtTime
+    rdfs:label "generated at time" ;
+.
+
+prov:hadActivity
+    rdfs:label "had activity" ;
+.
+
+prov:hadDelegate
+    rdfs:label "had delegate" ;
+.
+
+prov:hadDerivation
+    rdfs:label "had derivation" ;
+.
+
+prov:hadDictionaryMember
+    rdfs:label "hadDictionaryMember" ;
+.
+
+prov:hadGeneration
+    rdfs:label "had generation" ;
+.
+
+prov:hadInfluence
+    rdfs:label "had influence" ;
+.
+
+prov:hadMember
+    rdfs:label "had member" ;
+.
+
+prov:hadPlan
+    rdfs:label "had plan" ;
+.
+
+prov:hadPrimarySource
+    rdfs:label "had primary source" ;
+.
+
+prov:hadRevision
+    rdfs:label "had revision" ;
+.
+
+prov:hadRole
+    rdfs:label "had role" ;
+.
+
+prov:hadUsage
+    rdfs:label
+        "had usage" ,
+        "hadUsage" ;
+.
+
+prov:has_anchor
+    rdfs:label "has anchor" ;
+.
+
+prov:has_provenance
+    rdfs:label "has provenance" ;
+.
+
+prov:has_query_service
+    rdfs:label "has provenance service" ;
+.
+
+prov:influenced
+    rdfs:label "influenced" ;
+.
+
+prov:influencer
+    rdfs:label "influencer" ;
+.
+
+prov:informed
+    rdfs:label "informed" ;
+.
+
+prov:insertedKeyEntityPair
+    rdfs:label "insertedKeyEntityPair" ;
+.
+
+prov:invalidated
+    rdfs:label "invalidated" ;
+.
+
+prov:invalidatedAtTime
+    rdfs:label "invalidated at time" ;
+.
+
+prov:locationOf
+    rdfs:label "location of" ;
+.
+
+prov:mentionOf
+    rdfs:label "mentionOf" ;
+.
+
+prov:pairEntity
+    rdfs:label "pairKey" ;
+.
+
+prov:pairKey
+    rdfs:label "pairKey" ;
+.
+
+prov:pingback
+    rdfs:label "provenance pingback" ;
+.
+
+prov:provenanceUriTemplate
+    rdfs:label "provenanceUriTemplate" ;
+.
+
+prov:qualifiedAssociation
+    rdfs:label "qualified association" ;
+.
+
+prov:qualifiedAssociationOf
+    rdfs:label "qualified association of" ;
+.
+
+prov:qualifiedAttribution
+    rdfs:label "qualified attribution" ;
+.
+
+prov:qualifiedAttributionOf
+    rdfs:label "qualified attribution of" ;
+.
+
+prov:qualifiedCommunication
+    rdfs:label "qualified communication" ;
+.
+
+prov:qualifiedCommunicationOf
+    rdfs:label "qualified communication of" ;
+.
+
+prov:qualifiedDelegation
+    rdfs:label "qualified delegation" ;
+.
+
+prov:qualifiedDelegationOf
+    rdfs:label "qualified delegation of" ;
+.
+
+prov:qualifiedDerivation
+    rdfs:label "qualified derivation" ;
+.
+
+prov:qualifiedDerivationOf
+    rdfs:label "qualified derivation of" ;
+.
+
+prov:qualifiedEnd
+    rdfs:label "qualified end" ;
+.
+
+prov:qualifiedEndOf
+    rdfs:label "qualified end of" ;
+.
+
+prov:qualifiedGeneration
+    rdfs:label "qualified generation" ;
+.
+
+prov:qualifiedGenerationOf
+    rdfs:label "qualified generation of" ;
+.
+
+prov:qualifiedInfluence
+    rdfs:label "qualified influence" ;
+.
+
+prov:qualifiedInfluenceOf
+    rdfs:label "qualified influence of" ;
+.
+
+prov:qualifiedInsertion
+    rdfs:label "qualifiedInsertion" ;
+.
+
+prov:qualifiedInvalidation
+    rdfs:label "qualified invalidation" ;
+.
+
+prov:qualifiedInvalidationOf
+    rdfs:label "qualified invalidation of" ;
+.
+
+prov:qualifiedPrimarySource
+    rdfs:label "qualified primary source" ;
+.
+
+prov:qualifiedQuotation
+    rdfs:label "qualified quotation" ;
+.
+
+prov:qualifiedQuotationOf
+    rdfs:label "qualified quotation of" ;
+.
+
+prov:qualifiedRemoval
+    rdfs:label "qualifiedRemoval" ;
+.
+
+prov:qualifiedRevision
+    rdfs:label "qualified revision" ;
+.
+
+prov:qualifiedSourceOf
+    rdfs:label "qualified source of" ;
+.
+
+prov:qualifiedStart
+    rdfs:label "qualified start" ;
+.
+
+prov:qualifiedStartOf
+    rdfs:label "qualified start of" ;
+.
+
+prov:qualifiedUsage
+    rdfs:label "qualified usage" ;
+.
+
+prov:qualifiedUsingActivity
+    rdfs:label "qualified using activity" ;
+.
+
+prov:quotedAs
+    rdfs:label "quoted as" ;
+.
+
+prov:removedKey
+    rdfs:label "removedKey" ;
+.
+
+prov:revisedEntity
+    rdfs:label "revised entity" ;
+.
+
+prov:specializationOf
+    rdfs:label
+        "specialization of" ,
+        "specializationOf" ;
+.
+
+prov:started
+    rdfs:label "started" ;
+.
+
+prov:startedAtTime
+    rdfs:label "started at time" ;
+.
+
+prov:used
+    rdfs:label "used" ;
+.
+
+prov:value
+    rdfs:label "value" ;
+.
+
+prov:wasActivityOfInfluence
+    rdfs:label "was activity of influence" ;
+.
+
+prov:wasAssociateFor
+    rdfs:label "was associate for" ;
+.
+
+prov:wasAssociatedWith
+    rdfs:label "was associated with" ;
+.
+
+prov:wasAttributedTo
+    rdfs:label "was attributed to" ;
+.
+
+prov:wasDerivedFrom
+    rdfs:label "was derived from" ;
+.
+
+prov:wasEndedBy
+    rdfs:label "was ended by" ;
+.
+
+prov:wasGeneratedBy
+    rdfs:label
+        "was generated by" ,
+        "was generatedby" ;
+.
+
+prov:wasInfluencedBy
+    rdfs:label "was influenced by" ;
+.
+
+prov:wasInformedBy
+    rdfs:label "was informed by" ;
+.
+
+prov:wasInvalidatedBy
+    rdfs:label "was invalidated by" ;
+.
+
+prov:wasMemberOf
+    rdfs:label "was member of" ;
+.
+
+prov:wasPlanOf
+    rdfs:label "was plan of" ;
+.
+
+prov:wasPrimarySourceOf
+    rdfs:label "was primary source of" ;
+.
+
+prov:wasQuotedFrom
+    rdfs:label "was quoted from" ;
+.
+
+prov:wasRevisionOf
+    rdfs:label "was revision of" ;
+.
+
+prov:wasRoleIn
+    rdfs:label "wasRoleIn" ;
+.
+
+prov:wasStartedBy
+    rdfs:label "was started by" ;
+.
+
+prov:wasUsedBy
+    rdfs:label "was used by" ;
+.
+
+prov:wasUsedInDerivation
+    rdfs:label "was used in derivation" ;
+.
+
+<http://www.w3.org/ns/prov-aq#>
+    rdfs:label "PROV Access and Query Ontology"@en ;
+.
+
+<http://www.w3.org/ns/prov-dc#>
+    rdfs:label "Dublin Core extensions of the W3C PROVenance Interchange Ontology (PROV-O) "@en ;
+.
+
+<http://www.w3.org/ns/prov-dictionary#>
+    rdfs:label "W3C PROVenance Interchange Ontology (PROV-O) Dictionary Extension"@en ;
+.
+
+<http://www.w3.org/ns/prov-links#>
+    rdfs:label "W3C PROV Linking Across Provenance Bundles Ontology (PROV-LINKS)"@en ;
+.
+
+<http://www.w3.org/ns/prov-o#>
+    rdfs:label "W3C PROVenance Interchange Ontology (PROV-O)"@en ;
+.
+

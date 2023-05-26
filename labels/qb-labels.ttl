@@ -1,0 +1,149 @@
+PREFIX qb: <http://purl.org/linked-data/cube#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://purl.org/linked-data/cube>
+    rdfs:label
+        "The data cube vocabulary" ,
+        "Vocabulary for multi-dimensional (e.g. statistical) data publishing" ;
+.
+
+qb:Attachable
+    rdfs:label "Attachable (abstract)"@en ;
+.
+
+qb:AttributeProperty
+    rdfs:label "Attribute property"@en ;
+.
+
+qb:CodedProperty
+    rdfs:label "Coded property"@en ;
+.
+
+qb:ComponentProperty
+    rdfs:label "Component property (abstract)"@en ;
+.
+
+qb:ComponentSet
+    rdfs:label "Component set"@en ;
+.
+
+qb:ComponentSpecification
+    rdfs:label "Component specification"@en ;
+.
+
+qb:DataSet
+    rdfs:label "Data set"@en ;
+.
+
+qb:DataStructureDefinition
+    rdfs:label "Data structure definition"@en ;
+.
+
+qb:DimensionProperty
+    rdfs:label "Dimension property"@en ;
+.
+
+qb:HierarchicalCodeList
+    rdfs:label "Hierarchical Code List"@en ;
+.
+
+qb:MeasureProperty
+    rdfs:label "Measure property"@en ;
+.
+
+qb:Observation
+    rdfs:label "Observation"@en ;
+.
+
+qb:ObservationGroup
+    rdfs:label "Observation Group"@en ;
+.
+
+qb:Slice
+    rdfs:label "Slice"@en ;
+.
+
+qb:SliceKey
+    rdfs:label "Slice key"@en ;
+.
+
+qb:attribute
+    rdfs:label "attribute"@en ;
+.
+
+qb:codeList
+    rdfs:label "code list"@en ;
+.
+
+qb:component
+    rdfs:label "component specification"@en ;
+.
+
+qb:componentAttachment
+    rdfs:label "component attachment"@en ;
+.
+
+qb:componentProperty
+    rdfs:label "component"@en ;
+.
+
+qb:componentRequired
+    rdfs:label "component required"@en ;
+.
+
+qb:concept
+    rdfs:label "concept"@en ;
+.
+
+qb:dataSet
+    rdfs:label "data set"@en ;
+.
+
+qb:dimension
+    rdfs:label "dimension"@en ;
+.
+
+qb:measure
+    rdfs:label "measure"@en ;
+.
+
+qb:measureDimension
+    rdfs:label "measure dimension"@en ;
+.
+
+qb:measureType
+    rdfs:label "measure type"@en ;
+.
+
+qb:observation
+    rdfs:label "observation"@en ;
+.
+
+qb:observationGroup
+    rdfs:label "observation group"@en ;
+.
+
+qb:order
+    rdfs:label "order"@en ;
+.
+
+qb:parentChildProperty
+    rdfs:label "parent-child property"@en ;
+.
+
+qb:slice
+    rdfs:label "slice"@en ;
+.
+
+qb:sliceKey
+    rdfs:label "slice key"@en ;
+.
+
+qb:sliceStructure
+    rdfs:label "slice structure"@en ;
+.
+
+qb:structure
+    rdfs:label "structure"@en ;
+.
+

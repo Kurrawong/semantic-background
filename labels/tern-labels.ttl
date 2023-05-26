@@ -1,0 +1,505 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://rs.tdwg.org/dwc/terms/materialSampleID>
+    rdfs:label "material sample ID" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/>
+    rdfs:label "TERN Ontology" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Attribute>
+    rdfs:label "Attribute" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Boolean>
+    rdfs:label "Boolean" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/CategoricalValue>
+    rdfs:label "Categorical Value" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Concept>
+    rdfs:label "Concept" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/CosmOzStation>
+    rdfs:label "CosmOz Station" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Count>
+    rdfs:label "Count" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Dataset>
+    rdfs:label "Dataset" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Date>
+    rdfs:label "Date" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/DateTime>
+    rdfs:label "Date time" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Deployment>
+    rdfs:label "Deployment" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/DigitalCamera>
+    rdfs:label "Digital Camera" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Dimension>
+    rdfs:label "Dimension" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Distribution>
+    rdfs:label "Distribution" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/EarthObservationSatellite>
+    rdfs:label "Earth Observation Satellite" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/EcosystemProcessesSite>
+    rdfs:label "Ecosystem Processes Site" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/FeatureOfInterest>
+    rdfs:label "Feature of Interest" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/FixedPlatform>
+    rdfs:label "Fixed Platform" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/FluxTower>
+    rdfs:label "Flux Tower" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/IRI>
+    rdfs:label "IRI" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Input>
+    rdfs:label "Input" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Instant>
+    rdfs:label "Instant" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Instrument>
+    rdfs:label "Instrument" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/ManagedFeature>
+    rdfs:label "Feature which is managed for TERN purposes" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/MaterialSample>
+    rdfs:label "Material sample" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Method>
+    rdfs:label "Method" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/MobilePlatform>
+    rdfs:label "Mobile Platform" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/ObservableProperty>
+    rdfs:label "Observable Property" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Observation>
+    rdfs:label "Observation" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/ObservationCollection>
+    rdfs:label "Observation collection" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Parameter>
+    rdfs:label "Parameter" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Percent>
+    rdfs:label "Percent" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/PercentRange>
+    rdfs:label "Percent Range" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Platform>
+    rdfs:label "Platform" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Plot>
+    rdfs:label "Plot" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Procedure>
+    rdfs:label "Procedure" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Quadrat>
+    rdfs:label "Quadrat" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/QuantitativeMeasure>
+    rdfs:label "Quantitative Measure" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/QuantitativeRange>
+    rdfs:label "Quantitative range" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/RDFDataset>
+    rdfs:label "RDFDataset" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Result>
+    rdfs:label "Result" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Sample>
+    rdfs:label "Sample" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Sampler>
+    rdfs:label "Sampler" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Sampling>
+    rdfs:label "Sampling" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Sensor>
+    rdfs:label "Sensor" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Site>
+    rdfs:label "Ecological Site" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/SiteVisit>
+    rdfs:label "Site Visit" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/System>
+    rdfs:label "System" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Taxon>
+    rdfs:label "Taxon" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Text>
+    rdfs:label "Text" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Transect>
+    rdfs:label "Transect" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/Value>
+    rdfs:label "Value" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/area>
+    rdfs:label "area" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/attribute>
+    rdfs:label "attribute" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/cardinalDirection>
+    rdfs:label "cardinal direction" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/centroidPoint>
+    rdfs:label "centroid point" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/dateCommissioned>
+    rdfs:label "date commissioned" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/dateDecommissioned>
+    rdfs:label "date decommissioned" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/dimension>
+    rdfs:label "dimension" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/domain>
+    rdfs:label "domain" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/equipment>
+    rdfs:label "equipment" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/featureType>
+    rdfs:label "feature type" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/fluxnetID>
+    rdfs:label "fluxnet ID" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/globalMatch>
+    rdfs:label "global match" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/globalValue>
+    rdfs:label "global value" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/globalVocabulary>
+    rdfs:label "global vocabulary" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasAttribute>
+    rdfs:label "has attribute" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasCategoricalCollection>
+    rdfs:label "has categorical collection" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasEnvironmentalCharacteristic>
+    rdfs:label "has environmental characteristic" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasFeatureType>
+    rdfs:label "has feature type" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasMethod>
+    rdfs:label "has method" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasObservation>
+    rdfs:label "has observation" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasObservationTheme>
+    rdfs:label "has observation theme" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasParameter>
+    rdfs:label "has parameter" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasSampling>
+    rdfs:label "has sampling" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasSamplingPoint>
+    rdfs:label "has sampling point" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasSimpleValue>
+    rdfs:label "has simple value" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasSite>
+    rdfs:label "has site" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasSiteVisit>
+    rdfs:label "has site visit" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasSubActivity>
+    rdfs:label "has sub activity" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/hasValue>
+    rdfs:label "has value" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/instructions>
+    rdfs:label "instructions" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/instrumentType>
+    rdfs:label "instrument type" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/isAttributeOf>
+    rdfs:label "is attribute of" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/isGlobalMatchOf>
+    rdfs:label "is global match of" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/isSamplingPointOf>
+    rdfs:label "is sampling point of" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/isSiteOf>
+    rdfs:label "is site of" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/isSiteVisitOf>
+    rdfs:label "is site visit of" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/isSubActivityOf>
+    rdfs:label "is sub activity of" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/length>
+    rdfs:label "length" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/localValue>
+    rdfs:label "local value" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/localVocabulary>
+    rdfs:label "local vocabulary" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/locationDescription>
+    rdfs:label "location description" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/locationProcedure>
+    rdfs:label "location procedure" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/methodType>
+    rdfs:label "method type" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/observationType>
+    rdfs:label "observation type" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/polygon>
+    rdfs:label "polygon" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/purpose>
+    rdfs:label "purpose" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/sampleStorageLocation>
+    rdfs:label "sample storage location" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/samplingType>
+    rdfs:label "sampling type" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/scope>
+    rdfs:label "scope" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/shortName>
+    rdfs:label "short name" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/siteDescription>
+    rdfs:label "site description" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/soilClassification>
+    rdfs:label "soil classification" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/soilHorizonClassifier>
+    rdfs:label "soil horizon classifier" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/stratum>
+    rdfs:label "stratum" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/swPoint>
+    rdfs:label "sw point" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/taxon>
+    rdfs:label "taxon" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/transectDirection>
+    rdfs:label "transect direction" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/transectEndPoint>
+    rdfs:label "transect end point" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/transectStartPoint>
+    rdfs:label "transect start point" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/uncertainty>
+    rdfs:label "uncertainty" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/unit>
+    rdfs:label "unit" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/usedInstrument>
+    rdfs:label "used instrument" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/valueType>
+    rdfs:label "value type" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/vocabulary>
+    rdfs:label "vocabulary" ;
+.
+
+<https://w3id.org/tern/ontologies/tern/width>
+    rdfs:label "width" ;
+.
+
+<https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66>
+    rdfs:label "TERN" ;
+.
+
+[]    rdfs:label "Anusuriya Devaraju" ;
+.
+
+[]    rdfs:label "Habacuc Flores Moreno" ;
+.
+
+[]    rdfs:label "Javier Sanchez Gonzalez" ;
+.
+
+[]    rdfs:label "Mosheh Eliyahu" ;
+.
+
+[]    rdfs:label "Tina Parkhurst" ;
+.
+
+[]    rdfs:label "Edmond Chuc" ;
+.
+
+[]    rdfs:label "Siddeswara Guru" ;
+.
+
+[]    rdfs:label "Simon J.D.Cox" ;
+.
+
+[]    rdfs:label "CSIRO" ;
+.
+

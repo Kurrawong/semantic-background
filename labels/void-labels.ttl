@@ -1,0 +1,155 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX void: <http://rdfs.org/ns/void#>
+
+void:Dataset
+    rdfs:label "dataset" ;
+.
+
+void:DatasetDescription
+    rdfs:label "dataset description" ;
+.
+
+void:Linkset
+    rdfs:label "linkset" ;
+.
+
+void:TechnicalFeature
+    rdfs:label "technical feature" ;
+.
+
+void:class
+    rdfs:label "class" ;
+.
+
+void:classPartition
+    rdfs:label "class partition" ;
+.
+
+void:classes
+    rdfs:label "classes" ;
+.
+
+void:dataDump
+    rdfs:label "Data Dump" ;
+.
+
+void:distinctObjects
+    rdfs:label "distinct objects" ;
+.
+
+void:distinctSubjects
+    rdfs:label "distinct subjects" ;
+.
+
+void:documents
+    rdfs:label "number of documents" ;
+.
+
+void:entities
+    rdfs:label "number of entities" ;
+.
+
+void:exampleResource
+    rdfs:label "example resource of dataset" ;
+.
+
+void:feature
+    rdfs:label "feature" ;
+.
+
+void:inDataset
+    rdfs:label "in dataset" ;
+.
+
+void:linkPredicate
+    rdfs:label "a link predicate" ;
+.
+
+void:objectsTarget
+    rdfs:label "Objects Target" ;
+.
+
+void:openSearchDescription
+    rdfs:label "open search description" ;
+.
+
+void:properties
+    rdfs:label "number of properties" ;
+.
+
+void:property
+    rdfs:label "property" ;
+.
+
+void:propertyPartition
+    rdfs:label "property partition" ;
+.
+
+void:rootResource
+    rdfs:label "root resource" ;
+.
+
+void:sparqlEndpoint
+    rdfs:label "has a SPARQL endpoint at" ;
+.
+
+void:subjectsTarget
+    rdfs:label "Subjects Target" ;
+.
+
+void:subset
+    rdfs:label "has subset" ;
+.
+
+void:target
+    rdfs:label "Target" ;
+.
+
+void:triples
+    rdfs:label "number of triples" ;
+.
+
+void:uriLookupEndpoint
+    rdfs:label "has an URI look-up endpoint at" ;
+.
+
+void:uriRegexPattern
+    rdfs:label "has URI regular expression pattern" ;
+.
+
+void:uriSpace
+    rdfs:label "URI space" ;
+.
+
+void:vocabulary
+    rdfs:label "vocabulary" ;
+.
+
+<http://vocab.deri.ie/void>
+    rdfs:label "Vocabulary of Interlinked Datasets (VoID)" ;
+.
+
+[]    rdfs:label "Digital Enterprise Research Institute, NUI Galway" ;
+.
+
+[]    rdfs:label "Richard Cyganiak" ;
+.
+
+[]    rdfs:label "Jun Zhao" ;
+.
+
+[]    rdfs:label "Department of Zoology, University of Oxford" ;
+.
+
+[]    rdfs:label "Keith Alexander" ;
+.
+
+[]    rdfs:label "Talis" ;
+.
+
+[]    rdfs:label "Michael Hausenblas" ;
+.
+
+[]    rdfs:label "LiDRC" ;
+.
+

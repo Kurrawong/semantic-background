@@ -1,0 +1,67 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+dcterms:conformsTo
+    rdfs:label "conforms to" ;
+.
+
+<http://www.w3.org/ns/dx/prof>
+    rdfs:label "Profiles Vocabulary" ;
+.
+
+prof:Profile
+    rdfs:label "Profile" ;
+.
+
+prof:ResourceDescriptor
+    rdfs:label "Resource Descriptor"@en ;
+.
+
+prof:ResourceRole
+    rdfs:label "Resource Role" ;
+.
+
+prof:hasArtifact
+    rdfs:label "has artifact" ;
+.
+
+prof:hasResource
+    rdfs:label "has resource"@en ;
+.
+
+prof:hasRole
+    rdfs:label "has role" ;
+.
+
+prof:hasToken
+    rdfs:label "has token" ;
+.
+
+prof:isInheritedFrom
+    rdfs:label "is inherited from" ;
+.
+
+prof:isProfileOf
+    rdfs:label "is profile of" ;
+.
+
+prof:isTransitiveProfileOf
+    rdfs:label "is transitive profile of" ;
+.
+
+[]    rdfs:label "Nicholas J. Car" ;
+.
+
+[]    rdfs:label "SURROUND Australia Pty Ltd" ;
+.
+
+[]    rdfs:label "Rob Atkinson" ;
+.
+
+[]    rdfs:label "Open Geospatial Consortium" ;
+.
+
+[]    rdfs:label "Metalinkage" ;
+.
+

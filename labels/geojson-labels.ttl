@@ -1,0 +1,66 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<https://purl.org/geojson/vocab#Feature>
+    rdfs:label "Feature"@en ;
+.
+
+<https://purl.org/geojson/vocab#FeatureCollection>
+    rdfs:label "FeatureCollection"@en ;
+.
+
+<https://purl.org/geojson/vocab#GeometryCollection>
+    rdfs:label "GeometryCollection"@en ;
+.
+
+<https://purl.org/geojson/vocab#LineString>
+    rdfs:label "LineString"@en ;
+.
+
+<https://purl.org/geojson/vocab#MultiLineString>
+    rdfs:label "MultiLineString"@en ;
+.
+
+<https://purl.org/geojson/vocab#MultiPoint>
+    rdfs:label "MultiPoint"@en ;
+.
+
+<https://purl.org/geojson/vocab#MultiPolygon>
+    rdfs:label "MultiPolygon"@en ;
+.
+
+<https://purl.org/geojson/vocab#Point>
+    rdfs:label "Point"@en ;
+.
+
+<https://purl.org/geojson/vocab#Polygon>
+    rdfs:label "Polygon"@en ;
+.
+
+<https://purl.org/geojson/vocab#bbox>
+    rdfs:label "bbox"@en ;
+.
+
+<https://purl.org/geojson/vocab#coordinates>
+    rdfs:label "coordinates"@en ;
+.
+
+<https://purl.org/geojson/vocab#features>
+    rdfs:label "features"@en ;
+.
+
+<https://purl.org/geojson/vocab#geometry>
+    rdfs:label "geometry"@en ;
+.
+
+<https://purl.org/geojson/vocab#id>
+    rdfs:label "id"@en ;
+.
+
+<https://purl.org/geojson/vocab#properties>
+    rdfs:label "properties"@en ;
+.
+
+<https://purl.org/geojson/vocab#type>
+    rdfs:label "type"@en ;
+.
+

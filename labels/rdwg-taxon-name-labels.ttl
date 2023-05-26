@@ -1,0 +1,342 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Allolectotype>
+    rdfs:label "Allolectotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Alloneotype>
+    rdfs:label "Alloneotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Allotype>
+    rdfs:label "Allotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Bacteriological>
+    rdfs:label "Bacteriological" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#BasedOn>
+    rdfs:label "based on" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ConservedAgainst>
+    rdfs:label "conserved against" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Cotype>
+    rdfs:label "Cotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Epitype>
+    rdfs:label "Epitype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ExEpitype>
+    rdfs:label "Ex-Epitype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ExHolotype>
+    rdfs:label "Ex-Holotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ExIsotype>
+    rdfs:label "Ex-Isotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ExLectotype>
+    rdfs:label "Ex-Lectotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ExNeotype>
+    rdfs:label "Ex-Neotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ExParatype>
+    rdfs:label "Ex-Paratype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ExSyntype>
+    rdfs:label "Ex-Syntype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ExType>
+    rdfs:label "Ex-Type" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Hapantotype>
+    rdfs:label "Hapantotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Holotype>
+    rdfs:label "Holotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ICBN>
+    rdfs:label "ICBN" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ICNCP>
+    rdfs:label "ICNCP" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ICZN>
+    rdfs:label "ICZN" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Iconotype>
+    rdfs:label "Iconotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Isolectotype>
+    rdfs:label "Isolectotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Isoneotype>
+    rdfs:label "Isoneotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Isosyntype>
+    rdfs:label "Isosyntype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Isotype>
+    rdfs:label "Isotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#LaterHomonymOf>
+    rdfs:label "later homonym of" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Lectotype>
+    rdfs:label "Lectotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Neotype>
+    rdfs:label "Neotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#NomenclaturalCodeTerm>
+    rdfs:label "Nomenclatural Code Term" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#NomenclaturalNote>
+    rdfs:label "Nomenclatural Note" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#NomenclaturalNoteTypeTerm>
+    rdfs:label "Nomenclatural Note Type Term" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#NomenclaturalType>
+    rdfs:label "Nomenclatural Type" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#NomenclaturalTypeTypeTerm>
+    rdfs:label "Nomenclatural Type Type" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#NotAType>
+    rdfs:label "NotAType" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Paralectotype>
+    rdfs:label "Paralectotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Paraneotype>
+    rdfs:label "Paraneotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Paratype>
+    rdfs:label "Paratype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Plastoholotype>
+    rdfs:label "Plastoholotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Plastoisotype>
+    rdfs:label "Plastoisotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Plastolectotype>
+    rdfs:label "Plastolectotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Plastoneotype>
+    rdfs:label "Plastoneotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Plastoparatype>
+    rdfs:label "Plastoparatype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Plastosyntype>
+    rdfs:label "Plastosyntype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Plastotype>
+    rdfs:label "Plastotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#PublicationStatus>
+    rdfs:label "publication status" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ReplacementNameFor>
+    rdfs:label "replacement name for" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Sanctioned>
+    rdfs:label "sanctioned" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#SecondaryType>
+    rdfs:label "Secondary Type" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#SpellingCorrection>
+    rdfs:label "spelling correction" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#SupplementaryType>
+    rdfs:label "Supplementary Type" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Syntype>
+    rdfs:label "Syntype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#TaxonName>
+    rdfs:label "Taxon Name" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Topotype>
+    rdfs:label "Topotype" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Type>
+    rdfs:label "Type" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#Viral>
+    rdfs:label "Viral" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#authorTeam>
+    rdfs:label "Author Team" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#authorship>
+    rdfs:label "Authorship" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#basionymAuthorship>
+    rdfs:label "Basionym Authorship" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#basionymFor>
+    rdfs:label "Basionym For" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#code>
+    rdfs:label "Code" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#combinationAuthorship>
+    rdfs:label "Combination Authorship" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#cultivarNameGroup>
+    rdfs:label "Cultivar Name or Cultivar Group Name" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#genusPart>
+    rdfs:label "Genus Part" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#hasAnnotation>
+    rdfs:label "Has Annotation" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#hasBasionym>
+    rdfs:label "Has Basionym" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#infragenericEpithet>
+    rdfs:label "Infrageneric Epithet" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#infraspecificEpithet>
+    rdfs:label "Infraspecific Epithet" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#nameComplete>
+    rdfs:label "Name Complete" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#nomenclaturalCode>
+    rdfs:label "Nomenclatural Code" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#note>
+    rdfs:label "Note" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#objectTaxonName>
+    rdfs:label "Object Taxon Name" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#rank>
+    rdfs:label "Rank" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#rankString>
+    rdfs:label "Rank String" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#ruleConsidered>
+    rdfs:label "Rule Considered" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#specificEpithet>
+    rdfs:label "Specific Epithet" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#subjectTaxonName>
+    rdfs:label "Subject Taxon Name" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#type>
+    rdfs:label "Type" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#typeName>
+    rdfs:label "Type Name" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#typeOfType>
+    rdfs:label "Type of Type" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#typeSpecimen>
+    rdfs:label "Type Specimen" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#typificationString>
+    rdfs:label "Typified String" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#typifiedBy>
+    rdfs:label "Typified By" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#uninomial>
+    rdfs:label "Uninomial" ;
+.
+
+<http://rs.tdwg.org/ontology/voc/TaxonName#year>
+    rdfs:label "Publication Year" ;
+.
+

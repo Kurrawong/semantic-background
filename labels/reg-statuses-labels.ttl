@@ -1,0 +1,82 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://purl.org/linked-data/registry#Status>
+    rdfs:label "Status"@en ;
+.
+
+<https://linked.data.gov.au/def/agldwg>
+    rdfs:label "Australian Government Linked Data Working Group" ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses>
+    rdfs:label "Registry Status Vocabulary"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/accepted>
+    rdfs:label "accepted"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/addition>
+    rdfs:label "addition"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/deprecated>
+    rdfs:label "deprecated"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/experimental>
+    rdfs:label "experimental"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/invalid>
+    rdfs:label "invalid"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/notAccepted>
+    rdfs:label "notAccepted"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/original>
+    rdfs:label "stable"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/reserved>
+    rdfs:label "reserved"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/retired>
+    rdfs:label "retired"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/stable>
+    rdfs:label "stable"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/submitted>
+    rdfs:label "submitted"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/superseded>
+    rdfs:label "superseded"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/unstable>
+    rdfs:label "stable"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/valid>
+    rdfs:label "valid"@en ;
+.
+
+<https://linked.data.gov.au/org/surround>
+    rdfs:label "SURROUND Australia Pty Ltd" ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    rdfs:label "Nicholas J. Car" ;
+.
+
+<https://www.epimorphics.com>
+    rdfs:label "Epimorphics" ;
+.
+

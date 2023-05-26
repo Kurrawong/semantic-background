@@ -1,0 +1,203 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://orcid.org/0000-0001-6938-0820>
+    rdfs:label "Khalid Belhajjame" ;
+.
+
+<http://orcid.org/0000-0001-9842-9718>
+    rdfs:label "Stian Soiland-Reyes" ;
+.
+
+<http://orcid.org/0000-0002-0643-3144>
+    rdfs:label "Simon Jupp" ;
+.
+
+<http://orcid.org/0000-0002-5156-2703>
+    rdfs:label "Paolo Ciccarese" ;
+.
+
+<http://orcid.org/0000-0002-5711-4872>
+    rdfs:label "Alasdair J G Gray" ;
+.
+
+dcterms:contributor
+    rdfs:label "dcterms:contributor"@en ;
+.
+
+dcterms:creator
+    rdfs:label "dcterms:creator"@en ;
+.
+
+dcterms:hasVersion
+    rdfs:label "dcterms:hasVersion"@en ;
+.
+
+<http://purl.org/pav/>
+    rdfs:label
+        "PAV - Provenance, Authoring and Versioning"@en ,
+        "Provenance, Authoring and Versioning (PAV)"@en ;
+.
+
+<http://purl.org/pav/authoredBy>
+    rdfs:label "Authored by"@en ;
+.
+
+<http://purl.org/pav/authoredOn>
+    rdfs:label "Authored on"@en ;
+.
+
+<http://purl.org/pav/contributedBy>
+    rdfs:label "Contributed by"@en ;
+.
+
+<http://purl.org/pav/contributedOn>
+    rdfs:label "Contributed on"@en ;
+.
+
+<http://purl.org/pav/createdAt>
+    rdfs:label "Created at"@en ;
+.
+
+<http://purl.org/pav/createdBy>
+    rdfs:label "Created by"@en ;
+.
+
+<http://purl.org/pav/createdOn>
+    rdfs:label "Created on"@en ;
+.
+
+<http://purl.org/pav/createdWith>
+    rdfs:label "Created with"@en ;
+.
+
+<http://purl.org/pav/curatedBy>
+    rdfs:label "Curated by"@en ;
+.
+
+<http://purl.org/pav/curatedOn>
+    rdfs:label "Curated on"@en ;
+.
+
+<http://purl.org/pav/curates>
+    rdfs:label "Curates"@en ;
+.
+
+<http://purl.org/pav/derivedFrom>
+    rdfs:label "Derived from"@en ;
+.
+
+<http://purl.org/pav/hasCurrentVersion>
+    rdfs:label "Has current version"@en ;
+.
+
+<http://purl.org/pav/hasEarlierVersion>
+    rdfs:label "Has earlier version"@en ;
+.
+
+<http://purl.org/pav/hasVersion>
+    rdfs:label "Has version"@en ;
+.
+
+<http://purl.org/pav/importedBy>
+    rdfs:label "Imported by"@en ;
+.
+
+<http://purl.org/pav/importedFrom>
+    rdfs:label "Imported from"@en ;
+.
+
+<http://purl.org/pav/importedOn>
+    rdfs:label "Imported on"@en ;
+.
+
+<http://purl.org/pav/lastRefreshedOn>
+    rdfs:label "Last refreshed on"@en ;
+.
+
+<http://purl.org/pav/lastUpdateOn>
+    rdfs:label "Last updated on"@en ;
+.
+
+<http://purl.org/pav/previousVersion>
+    rdfs:label "Previous version"@en ;
+.
+
+<http://purl.org/pav/providedBy>
+    rdfs:label "Provided by"@en ;
+.
+
+<http://purl.org/pav/retrievedBy>
+    rdfs:label "Retrieved by"@en ;
+.
+
+<http://purl.org/pav/retrievedFrom>
+    rdfs:label "Retrieved from"@en ;
+.
+
+<http://purl.org/pav/retrievedOn>
+    rdfs:label "Retrieved on"@en ;
+.
+
+<http://purl.org/pav/sourceAccessedAt>
+    rdfs:label "Source accessed at"@en ;
+.
+
+<http://purl.org/pav/sourceAccessedBy>
+    rdfs:label "Source accessed by"@en ;
+.
+
+<http://purl.org/pav/sourceAccessedOn>
+    rdfs:label "Source accessed on"@en ;
+.
+
+<http://purl.org/pav/sourceLastAccessedOn>
+    rdfs:label "Source last accessed on"@en ;
+.
+
+<http://purl.org/pav/version>
+    rdfs:label "Version"@en ;
+.
+
+<http://www.paolociccarese.info/foaf.rdf#marco-ocana>
+    rdfs:label "Marco Ocana" ;
+.
+
+prov:alternateOf
+    rdfs:label "prov:alternateOf"@en ;
+.
+
+prov:generalizationOf
+    rdfs:label "prov:generalizationOf"@en ;
+.
+
+prov:specializationOf
+    rdfs:label "prov:specializationOf"@en ;
+.
+
+prov:wasAttributedTo
+    rdfs:label "prov:wasAttributedTo"@en ;
+.
+
+prov:wasDerivedFrom
+    rdfs:label "prov:wasDerivedFrom"@en ;
+.
+
+prov:wasInfluencedBy
+    rdfs:label "prov:wasInfluencedBy"@en ;
+.
+
+prov:wasRevisionOf
+    rdfs:label "prov:wasRevisionOf"@en ;
+.
+
+foaf:isPrimaryTopicOf
+    rdfs:label "foaf:isPrimaryTopicOf"@en ;
+.
+
+foaf:name
+    rdfs:label "foaf:name"@en ;
+.
+

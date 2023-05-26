@@ -1,0 +1,151 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+
+sosa:
+    rdfs:label "Sensor, Observation, Sample, and Actuator (SOSA) Ontology"@en ;
+.
+
+sosa:ActuatableProperty
+    rdfs:label "Actuatable Property"@en ;
+.
+
+sosa:Actuation
+    rdfs:label "Actuation"@en ;
+.
+
+sosa:Actuator
+    rdfs:label "Actuator"@en ;
+.
+
+sosa:FeatureOfInterest
+    rdfs:label "Feature Of Interest"@en ;
+.
+
+sosa:ObservableProperty
+    rdfs:label "Observable Property"@en ;
+.
+
+sosa:Observation
+    rdfs:label "Observation"@en ;
+.
+
+sosa:Platform
+    rdfs:label "Platform"@en ;
+.
+
+sosa:Procedure
+    rdfs:label "Procedure"@en ;
+.
+
+sosa:Result
+    rdfs:label "Result"@en ;
+.
+
+sosa:Sample
+    rdfs:label "Sample"@en ;
+.
+
+sosa:Sampler
+    rdfs:label "Sampler"@en ;
+.
+
+sosa:Sampling
+    rdfs:label "Sampling"@en ;
+.
+
+sosa:Sensor
+    rdfs:label "Sensor"@en ;
+.
+
+sosa:actsOnProperty
+    rdfs:label "acts on property"@en ;
+.
+
+sosa:hasFeatureOfInterest
+    rdfs:label "has feature of interest"@en ;
+.
+
+sosa:hasResult
+    rdfs:label "has result"@en ;
+.
+
+sosa:hasSample
+    rdfs:label "has sample"@en ;
+.
+
+sosa:hasSimpleResult
+    rdfs:label "has simple result"@en ;
+.
+
+sosa:hosts
+    rdfs:label "hosts"@en ;
+.
+
+sosa:isActedOnBy
+    rdfs:label "is acted on by"@en ;
+.
+
+sosa:isFeatureOfInterestOf
+    rdfs:label "is feature of interest of"@en ;
+.
+
+sosa:isHostedBy
+    rdfs:label "is hosted by"@en ;
+.
+
+sosa:isObservedBy
+    rdfs:label "is observed by"@en ;
+.
+
+sosa:isResultOf
+    rdfs:label "is result of"@en ;
+.
+
+sosa:isSampleOf
+    rdfs:label "is sample of"@en ;
+.
+
+sosa:madeActuation
+    rdfs:label "made actuation"@en ;
+.
+
+sosa:madeByActuator
+    rdfs:label "made by actuator"@en ;
+.
+
+sosa:madeBySampler
+    rdfs:label "made by sampler"@en ;
+.
+
+sosa:madeBySensor
+    rdfs:label "made by sensor"@en ;
+.
+
+sosa:madeObservation
+    rdfs:label "made observation"@en ;
+.
+
+sosa:madeSampling
+    rdfs:label "made sampling"@en ;
+.
+
+sosa:observedProperty
+    rdfs:label "observed property"@en ;
+.
+
+sosa:observes
+    rdfs:label "observes"@en ;
+.
+
+sosa:phenomenonTime
+    rdfs:label "phenomenon time"@en ;
+.
+
+sosa:resultTime
+    rdfs:label "result time"@en ;
+.
+
+sosa:usedProcedure
+    rdfs:label "used procedure"@en ;
+.
+

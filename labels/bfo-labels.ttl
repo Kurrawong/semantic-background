@@ -1,0 +1,154 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://www.ifomis.org/bfo/1.1#Entity>
+    rdfs:label "entity" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#Continuant>
+    rdfs:label "continuant" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#DependentContinuant>
+    rdfs:label "dependent_continuant" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#Disposition>
+    rdfs:label "disposition" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#FiatObjectPart>
+    rdfs:label "fiat_object_part" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#Function>
+    rdfs:label "function" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#GenericallyDependentContinuant>
+    rdfs:label "generically_dependent_continuant" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#IndependentContinuant>
+    rdfs:label "independent_continuant" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#Object>
+    rdfs:label "object" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#ObjectAggregate>
+    rdfs:label "object_aggregate" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#ObjectBoundary>
+    rdfs:label "object_boundary" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#OneDimensionalRegion>
+    rdfs:label "one_dimensional_region" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#Quality>
+    rdfs:label "quality" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#RealizableEntity>
+    rdfs:label "realizable_entity" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#Role>
+    rdfs:label "role" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#Site>
+    rdfs:label "site" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#SpatialRegion>
+    rdfs:label "spatial_region" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#SpecificallyDependentContinuant>
+    rdfs:label "specifically_dependent_continuant" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#ThreeDimensionalRegion>
+    rdfs:label "three_dimensional_region" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#TwoDimensionalRegion>
+    rdfs:label "two_dimensional_region" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/snap#ZeroDimensionalRegion>
+    rdfs:label "zero_dimensional_region" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#ConnectedSpatiotemporalRegion>
+    rdfs:label "connected_spatiotemporal_region" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#ConnectedTemporalRegion>
+    rdfs:label "connected_temporal_region" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#FiatProcessPart>
+    rdfs:label "fiat_process_part" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#Occurrent>
+    rdfs:label "occurrent" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#Process>
+    rdfs:label "process" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#ProcessAggregate>
+    rdfs:label "process_aggregate" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#ProcessBoundary>
+    rdfs:label "process_boundary" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#ProcessualContext>
+    rdfs:label "processual_context" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#ProcessualEntity>
+    rdfs:label "processual_entity" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#ScatteredSpatiotemporalRegion>
+    rdfs:label "scattered_spatiotemporal_region" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#ScatteredTemporalRegion>
+    rdfs:label "scattered_temporal_region" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInstant>
+    rdfs:label "spatiotemporal_instant" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#SpatiotemporalInterval>
+    rdfs:label "spatiotemporal_interval" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#SpatiotemporalRegion>
+    rdfs:label "spatiotemporal_region" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#TemporalInstant>
+    rdfs:label "temporal_instant" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#TemporalInterval>
+    rdfs:label "temporal_interval" ;
+.
+
+<http://www.ifomis.org/bfo/1.1/span#TemporalRegion>
+    rdfs:label "temporal_region" ;
+.
+
