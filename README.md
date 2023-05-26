@@ -7,9 +7,9 @@ We maintain the currency of these artifacts as best we can so this is a one-stop
 
 ## Content
 
-`originals/` - original RDF files from elsewhere
-`labels/` - RDF elements' labels only, extracted from `originals/`
-`scripts/` - Python scripts to process RDF files
+* `originals/` - original RDF files from elsewhere
+* `labels/` - RDF elements' labels only, extracted from `originals/`
+* `scripts/` - Python scripts to process RDF files
 
 ## License
 
@@ -21,4 +21,4 @@ Yes indeed, there is a copy of the BSD 3-Clause license in RDF in this repositor
 
 ## Contact
 
-See <https://kurrawong.ai/contact>
+See [KurrawongAI's Contact Page](https://kurrawong.ai/contact)
