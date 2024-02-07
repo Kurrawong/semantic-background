@@ -11,6 +11,7 @@ packages = [{include = "semantic_background"}]
 python = "^3.11"
 rdflib = "^6.3.2"
 html5lib = "^1.1"
+httpx = "^0.25.2"
 
 
 [build-system]
