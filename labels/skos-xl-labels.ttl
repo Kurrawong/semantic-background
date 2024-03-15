@@ -1,0 +1,30 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://www.w3.org/2008/05/skos-xl>
+    rdfs:label "SKOS XL Vocabulary"@en ;
+.
+
+<http://www.w3.org/2008/05/skos-xl#Label>
+    rdfs:label "Label"@en ;
+.
+
+<http://www.w3.org/2008/05/skos-xl#altLabel>
+    rdfs:label "alternative label"@en ;
+.
+
+<http://www.w3.org/2008/05/skos-xl#hiddenLabel>
+    rdfs:label "hidden label"@en ;
+.
+
+<http://www.w3.org/2008/05/skos-xl#labelRelation>
+    rdfs:label "label relation"@en ;
+.
+
+<http://www.w3.org/2008/05/skos-xl#literalForm>
+    rdfs:label "literal form"@en ;
+.
+
+<http://www.w3.org/2008/05/skos-xl#prefLabel>
+    rdfs:label "preferred label"@en ;
+.
+

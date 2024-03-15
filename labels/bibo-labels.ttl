@@ -1,0 +1,466 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://purl.org/ontology/bibo>
+    rdfs:label "The Bibliographic Ontology" ;
+.
+
+<http://purl.org/ontology/bibo/AcademicArticle>
+    rdfs:label "Academic Article"@en ;
+.
+
+<http://purl.org/ontology/bibo/Article>
+    rdfs:label "Article"@en ;
+.
+
+<http://purl.org/ontology/bibo/AudioDocument>
+    rdfs:label "audio document"@en ;
+.
+
+<http://purl.org/ontology/bibo/AudioVisualDocument>
+    rdfs:label "audio-visual document"@en ;
+.
+
+<http://purl.org/ontology/bibo/Bill>
+    rdfs:label "Bill"@en ;
+.
+
+<http://purl.org/ontology/bibo/Book>
+    rdfs:label "Book"@en ;
+.
+
+<http://purl.org/ontology/bibo/BookSection>
+    rdfs:label "Book Section"@en ;
+.
+
+<http://purl.org/ontology/bibo/Brief>
+    rdfs:label "Brief"@en ;
+.
+
+<http://purl.org/ontology/bibo/Chapter>
+    rdfs:label "Chapter"@en ;
+.
+
+<http://purl.org/ontology/bibo/Code>
+    rdfs:label "Code"@en ;
+.
+
+<http://purl.org/ontology/bibo/CollectedDocument>
+    rdfs:label "Collected Document"@en ;
+.
+
+<http://purl.org/ontology/bibo/Collection>
+    rdfs:label "Collection"@en ;
+.
+
+<http://purl.org/ontology/bibo/Conference>
+    rdfs:label "Conference"@en ;
+.
+
+<http://purl.org/ontology/bibo/CourtReporter>
+    rdfs:label "Court Reporter"@en ;
+.
+
+<http://purl.org/ontology/bibo/Document>
+    rdfs:label "Document"@en ;
+.
+
+<http://purl.org/ontology/bibo/DocumentPart>
+    rdfs:label "document part"@en ;
+.
+
+<http://purl.org/ontology/bibo/DocumentStatus>
+    rdfs:label "Document Status"@en ;
+.
+
+<http://purl.org/ontology/bibo/EditedBook>
+    rdfs:label "Edited Book"@en ;
+.
+
+<http://purl.org/ontology/bibo/Email>
+    rdfs:label "EMail"@en ;
+.
+
+<http://purl.org/ontology/bibo/Excerpt>
+    rdfs:label "Excerpt"@en ;
+.
+
+<http://purl.org/ontology/bibo/Film>
+    rdfs:label "Film"@en ;
+.
+
+<http://purl.org/ontology/bibo/Hearing>
+    rdfs:label "Hearing"@en ;
+.
+
+<http://purl.org/ontology/bibo/Image>
+    rdfs:label "Image"@en ;
+.
+
+<http://purl.org/ontology/bibo/Interview>
+    rdfs:label "Interview"@en ;
+.
+
+<http://purl.org/ontology/bibo/Issue>
+    rdfs:label "Issue"@en ;
+.
+
+<http://purl.org/ontology/bibo/Journal>
+    rdfs:label "Journal"@en ;
+.
+
+<http://purl.org/ontology/bibo/LegalCaseDocument>
+    rdfs:label "Legal Case Document"@en ;
+.
+
+<http://purl.org/ontology/bibo/LegalDecision>
+    rdfs:label "Decision"@en ;
+.
+
+<http://purl.org/ontology/bibo/LegalDocument>
+    rdfs:label "Legal Document"@en ;
+.
+
+<http://purl.org/ontology/bibo/Legislation>
+    rdfs:label "Legislation"@en ;
+.
+
+<http://purl.org/ontology/bibo/Letter>
+    rdfs:label "Letter"@en ;
+.
+
+<http://purl.org/ontology/bibo/Magazine>
+    rdfs:label "Magazine"@en ;
+.
+
+<http://purl.org/ontology/bibo/Manual>
+    rdfs:label "Manual"@en ;
+.
+
+<http://purl.org/ontology/bibo/Manuscript>
+    rdfs:label "Manuscript"@en ;
+.
+
+<http://purl.org/ontology/bibo/Map>
+    rdfs:label "Map"@en ;
+.
+
+<http://purl.org/ontology/bibo/MultiVolumeBook>
+    rdfs:label "Multivolume Book"@en ;
+.
+
+<http://purl.org/ontology/bibo/Newspaper>
+    rdfs:label "Newspaper"@en ;
+.
+
+<http://purl.org/ontology/bibo/Note>
+    rdfs:label "Note"@en ;
+.
+
+<http://purl.org/ontology/bibo/Patent>
+    rdfs:label "Patent"@en ;
+.
+
+<http://purl.org/ontology/bibo/Performance>
+    rdfs:label "Performance"@en ;
+.
+
+<http://purl.org/ontology/bibo/Periodical>
+    rdfs:label "Periodical"@en ;
+.
+
+<http://purl.org/ontology/bibo/PersonalCommunication>
+    rdfs:label "Personal Communication"@en ;
+.
+
+<http://purl.org/ontology/bibo/PersonalCommunicationDocument>
+    rdfs:label "Personal Communication Document"@en ;
+.
+
+<http://purl.org/ontology/bibo/Proceedings>
+    rdfs:label "Proceedings"@en ;
+.
+
+<http://purl.org/ontology/bibo/Quote>
+    rdfs:label "Quote"@en ;
+.
+
+<http://purl.org/ontology/bibo/ReferenceSource>
+    rdfs:label "Reference Source"@en ;
+.
+
+<http://purl.org/ontology/bibo/Report>
+    rdfs:label "Report"@en ;
+.
+
+<http://purl.org/ontology/bibo/Series>
+    rdfs:label "Series"@en ;
+.
+
+<http://purl.org/ontology/bibo/Slide>
+    rdfs:label "Slide"@en ;
+.
+
+<http://purl.org/ontology/bibo/Slideshow>
+    rdfs:label "Slideshow"@en ;
+.
+
+<http://purl.org/ontology/bibo/Specification>
+    rdfs:label "Specification"@en ;
+.
+
+<http://purl.org/ontology/bibo/Standard>
+    rdfs:label "Standard"@en ;
+.
+
+<http://purl.org/ontology/bibo/Statute>
+    rdfs:label "Statute"@en ;
+.
+
+<http://purl.org/ontology/bibo/Thesis>
+    rdfs:label "Thesis"@en ;
+.
+
+<http://purl.org/ontology/bibo/ThesisDegree>
+    rdfs:label "Thesis degree"@en ;
+.
+
+<http://purl.org/ontology/bibo/Webpage>
+    rdfs:label "Webpage"@en ;
+.
+
+<http://purl.org/ontology/bibo/Website>
+    rdfs:label "Website"@en ;
+.
+
+<http://purl.org/ontology/bibo/Workshop>
+    rdfs:label "Workshop"@en ;
+.
+
+<http://purl.org/ontology/bibo/abstract>
+    rdfs:label "abstract" ;
+.
+
+<http://purl.org/ontology/bibo/annotates>
+    rdfs:label "annotates"@en ;
+.
+
+<http://purl.org/ontology/bibo/argued>
+    rdfs:label "date argued"@en ;
+.
+
+<http://purl.org/ontology/bibo/authorList>
+    rdfs:label "list of authors"@en ;
+.
+
+<http://purl.org/ontology/bibo/chapter>
+    rdfs:label "chapter"@en ;
+.
+
+<http://purl.org/ontology/bibo/citedBy>
+    rdfs:label "cited by"@en ;
+.
+
+<http://purl.org/ontology/bibo/cites>
+    rdfs:label "cites"@en ;
+.
+
+<http://purl.org/ontology/bibo/content>
+    rdfs:label "content"@en ;
+.
+
+<http://purl.org/ontology/bibo/contributorList>
+    rdfs:label "list of contributors"@en ;
+.
+
+<http://purl.org/ontology/bibo/court>
+    rdfs:label "court"@en ;
+.
+
+<http://purl.org/ontology/bibo/degree>
+    rdfs:label "degree"@en ;
+.
+
+<http://purl.org/ontology/bibo/degrees/ma>
+    rdfs:label "M.A."@en ;
+.
+
+<http://purl.org/ontology/bibo/degrees/ms>
+    rdfs:label "M.S."@en ;
+.
+
+<http://purl.org/ontology/bibo/degrees/phd>
+    rdfs:label "PhD degree"@en ;
+.
+
+<http://purl.org/ontology/bibo/director>
+    rdfs:label "director" ;
+.
+
+<http://purl.org/ontology/bibo/distributor>
+    rdfs:label "distributor"@en ;
+.
+
+<http://purl.org/ontology/bibo/edition>
+    rdfs:label "edition"@en ;
+.
+
+<http://purl.org/ontology/bibo/editor>
+    rdfs:label "editor" ;
+.
+
+<http://purl.org/ontology/bibo/editorList>
+    rdfs:label "list of editors"@en ;
+.
+
+<http://purl.org/ontology/bibo/interviewee>
+    rdfs:label "interviewee" ;
+.
+
+<http://purl.org/ontology/bibo/interviewer>
+    rdfs:label "interviewer" ;
+.
+
+<http://purl.org/ontology/bibo/issue>
+    rdfs:label "issue"@en ;
+.
+
+<http://purl.org/ontology/bibo/issuer>
+    rdfs:label "issuer" ;
+.
+
+<http://purl.org/ontology/bibo/locator>
+    rdfs:label "locator"@en ;
+.
+
+<http://purl.org/ontology/bibo/numPages>
+    rdfs:label "number of pages"@en ;
+.
+
+<http://purl.org/ontology/bibo/numVolumes>
+    rdfs:label "number of volumes"@en ;
+.
+
+<http://purl.org/ontology/bibo/number>
+    rdfs:label "number"@en ;
+.
+
+<http://purl.org/ontology/bibo/organizer>
+    rdfs:label "organizer"@en ;
+.
+
+<http://purl.org/ontology/bibo/owner>
+    rdfs:label "owner"@en ;
+.
+
+<http://purl.org/ontology/bibo/pageEnd>
+    rdfs:label "page end"@en ;
+.
+
+<http://purl.org/ontology/bibo/pageStart>
+    rdfs:label "page start"@en ;
+.
+
+<http://purl.org/ontology/bibo/pages>
+    rdfs:label "pages"@en ;
+.
+
+<http://purl.org/ontology/bibo/performer>
+    rdfs:label "performer" ;
+.
+
+<http://purl.org/ontology/bibo/prefixName>
+    rdfs:label "prefix name"@en ;
+.
+
+<http://purl.org/ontology/bibo/presentedAt>
+    rdfs:label "presented at"@en ;
+.
+
+<http://purl.org/ontology/bibo/presents>
+    rdfs:label "presents"@en ;
+.
+
+<http://purl.org/ontology/bibo/producer>
+    rdfs:label "producer"@en ;
+.
+
+<http://purl.org/ontology/bibo/recipient>
+    rdfs:label "recipient" ;
+.
+
+<http://purl.org/ontology/bibo/reviewOf>
+    rdfs:label "review of"@en ;
+.
+
+<http://purl.org/ontology/bibo/section>
+    rdfs:label "section"@en ;
+.
+
+<http://purl.org/ontology/bibo/shortTitle>
+    rdfs:label "short title"@en ;
+.
+
+<http://purl.org/ontology/bibo/status>
+    rdfs:label "status"@en ;
+.
+
+<http://purl.org/ontology/bibo/status/accepted>
+    rdfs:label "accepted"@en ;
+.
+
+<http://purl.org/ontology/bibo/status/draft>
+    rdfs:label "draft"@en ;
+.
+
+<http://purl.org/ontology/bibo/status/forthcoming>
+    rdfs:label "forthcoming"@en ;
+.
+
+<http://purl.org/ontology/bibo/status/legal>
+    rdfs:label "legal"@en ;
+.
+
+<http://purl.org/ontology/bibo/status/nonPeerReviewed>
+    rdfs:label "non peer reviewed"@en ;
+.
+
+<http://purl.org/ontology/bibo/status/peerReviewed>
+    rdfs:label "peer reviewed"@en ;
+.
+
+<http://purl.org/ontology/bibo/status/published>
+    rdfs:label "published"@en ;
+.
+
+<http://purl.org/ontology/bibo/status/rejected>
+    rdfs:label "rejected"@en ;
+.
+
+<http://purl.org/ontology/bibo/status/unpublished>
+    rdfs:label "unpublished"@en ;
+.
+
+<http://purl.org/ontology/bibo/suffixName>
+    rdfs:label "suffix name"@en ;
+.
+
+<http://purl.org/ontology/bibo/transcriptOf>
+    rdfs:label "transcript of"@en ;
+.
+
+<http://purl.org/ontology/bibo/translationOf>
+    rdfs:label "translation of"@en ;
+.
+
+<http://purl.org/ontology/bibo/translator>
+    rdfs:label "translator" ;
+.
+
+<http://purl.org/ontology/bibo/uri>
+    rdfs:label "uri"@en ;
+.
+
+<http://purl.org/ontology/bibo/volume>
+    rdfs:label "volume"@en ;
+.
+

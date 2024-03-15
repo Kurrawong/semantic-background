@@ -1,0 +1,434 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://purl.org/spar/cito/AffilationSelfCitation>
+    rdfs:label "affilation self citation"@en ;
+.
+
+<http://purl.org/spar/cito/AuthorNetworkSelfCitation>
+    rdfs:label "author network self citation"@en ;
+.
+
+<http://purl.org/spar/cito/AuthorSelfCitation>
+    rdfs:label "author self citation"@en ;
+.
+
+<http://purl.org/spar/cito/Citation>
+    rdfs:label "citation"@en ;
+.
+
+<http://purl.org/spar/cito/DistantCitation>
+    rdfs:label "distant citation"@en ;
+.
+
+<http://purl.org/spar/cito/FunderSelfCitation>
+    rdfs:label "funder self citation"@en ;
+.
+
+<http://purl.org/spar/cito/JournalCartelCitation>
+    rdfs:label "journal cartel citation"@en ;
+.
+
+<http://purl.org/spar/cito/JournalSelfCitation>
+    rdfs:label "journal self citation"@en ;
+.
+
+<http://purl.org/spar/cito/SelfCitation>
+    rdfs:label "self citation"@en ;
+.
+
+<http://purl.org/spar/cito/agreesWith>
+    rdfs:label "agrees with"@en ;
+.
+
+<http://purl.org/spar/cito/cites>
+    rdfs:label "cites"@en ;
+.
+
+<http://purl.org/spar/cito/citesAsAuthority>
+    rdfs:label "cites as authority"@en ;
+.
+
+<http://purl.org/spar/cito/citesAsDataSource>
+    rdfs:label "cites as data source"@en ;
+.
+
+<http://purl.org/spar/cito/citesAsEvidence>
+    rdfs:label "cites as evidence"@en ;
+.
+
+<http://purl.org/spar/cito/citesAsMetadataDocument>
+    rdfs:label "cites as metadata document"@en ;
+.
+
+<http://purl.org/spar/cito/citesAsPotentialSolution>
+    rdfs:label "cites as potential solution"@en ;
+.
+
+<http://purl.org/spar/cito/citesAsRecommendedReading>
+    rdfs:label "cites as recommended reading"@en ;
+.
+
+<http://purl.org/spar/cito/citesAsRelated>
+    rdfs:label "cites as related"@en ;
+.
+
+<http://purl.org/spar/cito/citesAsSourceDocument>
+    rdfs:label "cites as source document"@en ;
+.
+
+<http://purl.org/spar/cito/citesForInformation>
+    rdfs:label "cites for information"@en ;
+.
+
+<http://purl.org/spar/cito/compiles>
+    rdfs:label "compiles"@en ;
+.
+
+<http://purl.org/spar/cito/confirms>
+    rdfs:label "confirms"@en ;
+.
+
+<http://purl.org/spar/cito/containsAssertionFrom>
+    rdfs:label "contains assertion from"@en ;
+.
+
+<http://purl.org/spar/cito/corrects>
+    rdfs:label "corrects"@en ;
+.
+
+<http://purl.org/spar/cito/credits>
+    rdfs:label "credits"@en ;
+.
+
+<http://purl.org/spar/cito/critiques>
+    rdfs:label "critiques"@en ;
+.
+
+<http://purl.org/spar/cito/derides>
+    rdfs:label "derides"@en ;
+.
+
+<http://purl.org/spar/cito/describes>
+    rdfs:label "describes"@en ;
+.
+
+<http://purl.org/spar/cito/disagreesWith>
+    rdfs:label "disagrees with"@en ;
+.
+
+<http://purl.org/spar/cito/discusses>
+    rdfs:label "discusses"@en ;
+.
+
+<http://purl.org/spar/cito/disputes>
+    rdfs:label "disputes"@en ;
+.
+
+<http://purl.org/spar/cito/documents>
+    rdfs:label "documents"@en ;
+.
+
+<http://purl.org/spar/cito/extends>
+    rdfs:label "extends"@en ;
+.
+
+<http://purl.org/spar/cito/givesBackgroundTo>
+    rdfs:label "gives background to"@en ;
+.
+
+<http://purl.org/spar/cito/givesSupportTo>
+    rdfs:label "gives support to"@en ;
+.
+
+<http://purl.org/spar/cito/hasCitationCharacterization>
+    rdfs:label "has citation characterization"@en ;
+.
+
+<http://purl.org/spar/cito/hasCitationCreationDate>
+    rdfs:label "has citation creation date"@en ;
+.
+
+<http://purl.org/spar/cito/hasCitationTimeSpan>
+    rdfs:label "has citation time span"@en ;
+.
+
+<http://purl.org/spar/cito/hasCitedEntity>
+    rdfs:label "has cited entity"@en ;
+.
+
+<http://purl.org/spar/cito/hasCitingEntity>
+    rdfs:label "has citing entity"@en ;
+.
+
+<http://purl.org/spar/cito/hasCoAuthorshipCitationLevel>
+    rdfs:label "has co-authorship citation level"@en ;
+.
+
+<http://purl.org/spar/cito/hasReplyFrom>
+    rdfs:label "has reply from"@en ;
+.
+
+<http://purl.org/spar/cito/includesExcerptFrom>
+    rdfs:label "includes excerpt from"@en ;
+.
+
+<http://purl.org/spar/cito/includesQuotationFrom>
+    rdfs:label "includes quotation from"@en ;
+.
+
+<http://purl.org/spar/cito/isAgreedWithBy>
+    rdfs:label "is agreed with by"@en ;
+.
+
+<http://purl.org/spar/cito/isCitedAsAuthorityBy>
+    rdfs:label "is cited as authority by"@en ;
+.
+
+<http://purl.org/spar/cito/isCitedAsDataSourceBy>
+    rdfs:label "is cited as data source by"@en ;
+.
+
+<http://purl.org/spar/cito/isCitedAsEvidenceBy>
+    rdfs:label "is cited as evidence by"@en ;
+.
+
+<http://purl.org/spar/cito/isCitedAsMetadataDocumentBy>
+    rdfs:label "is cited as metadata document by"@en ;
+.
+
+<http://purl.org/spar/cito/isCitedAsPontentialSolutionBy>
+    rdfs:label "is cited as potential solution by"@en ;
+.
+
+<http://purl.org/spar/cito/isCitedAsRecommendedReadingBy>
+    rdfs:label "is cited as recommended reading by"@en ;
+.
+
+<http://purl.org/spar/cito/isCitedAsRelatedBy>
+    rdfs:label "is cited as related by"@en ;
+.
+
+<http://purl.org/spar/cito/isCitedAsSourceDocumentBy>
+    rdfs:label "is cited as source document by"@en ;
+.
+
+<http://purl.org/spar/cito/isCitedBy>
+    rdfs:label "is cited by"@en ;
+.
+
+<http://purl.org/spar/cito/isCitedForInformationBy>
+    rdfs:label "is cited for information by"@en ;
+.
+
+<http://purl.org/spar/cito/isCompiledBy>
+    rdfs:label "is compiled by"@en ;
+.
+
+<http://purl.org/spar/cito/isConfirmedBy>
+    rdfs:label "is confirmed by"@en ;
+.
+
+<http://purl.org/spar/cito/isCorrectedBy>
+    rdfs:label "is corrected by"@en ;
+.
+
+<http://purl.org/spar/cito/isCreditedBy>
+    rdfs:label "is credited by"@en ;
+.
+
+<http://purl.org/spar/cito/isCritiquedBy>
+    rdfs:label "is critiqued by"@en ;
+.
+
+<http://purl.org/spar/cito/isDeridedBy>
+    rdfs:label "is derided by"@en ;
+.
+
+<http://purl.org/spar/cito/isDescribedBy>
+    rdfs:label "is described by"@en ;
+.
+
+<http://purl.org/spar/cito/isDisagreedWithBy>
+    rdfs:label "is disagreed with by"@en ;
+.
+
+<http://purl.org/spar/cito/isDiscussedBy>
+    rdfs:label "is discussed by"@en ;
+.
+
+<http://purl.org/spar/cito/isDisputedBy>
+    rdfs:label "is disputed by"@en ;
+.
+
+<http://purl.org/spar/cito/isDocumentedBy>
+    rdfs:label "is documented by"@en ;
+.
+
+<http://purl.org/spar/cito/isExtendedBy>
+    rdfs:label "is extended by"@en ;
+.
+
+<http://purl.org/spar/cito/isLinkedToBy>
+    rdfs:label "is linked to by"@en ;
+.
+
+<http://purl.org/spar/cito/isParodiedBy>
+    rdfs:label "is parodied by"@en ;
+.
+
+<http://purl.org/spar/cito/isPlagiarizedBy>
+    rdfs:label "is plagiarized by"@en ;
+.
+
+<http://purl.org/spar/cito/isQualifiedBy>
+    rdfs:label "is qualified by"@en ;
+.
+
+<http://purl.org/spar/cito/isRefutedBy>
+    rdfs:label "is refuted by"@en ;
+.
+
+<http://purl.org/spar/cito/isRetractedBy>
+    rdfs:label "is retracted by"@en ;
+.
+
+<http://purl.org/spar/cito/isReviewedBy>
+    rdfs:label "is reviewed by"@en ;
+.
+
+<http://purl.org/spar/cito/isRidiculedBy>
+    rdfs:label "is ridiculed by"@en ;
+.
+
+<http://purl.org/spar/cito/isSpeculatedOnBy>
+    rdfs:label "is speculated on by"@en ;
+.
+
+<http://purl.org/spar/cito/isSupportedBy>
+    rdfs:label "is supported by"@en ;
+.
+
+<http://purl.org/spar/cito/isUpdatedBy>
+    rdfs:label "is updated by"@en ;
+.
+
+<http://purl.org/spar/cito/likes>
+    rdfs:label "likes"@en ;
+.
+
+<http://purl.org/spar/cito/linksTo>
+    rdfs:label "links to"@en ;
+.
+
+<http://purl.org/spar/cito/obtainsBackgroundFrom>
+    rdfs:label "obtains background from"@en ;
+.
+
+<http://purl.org/spar/cito/obtainsSupportFrom>
+    rdfs:label "obtains support from"@en ;
+.
+
+<http://purl.org/spar/cito/parodies>
+    rdfs:label "parodies"@en ;
+.
+
+<http://purl.org/spar/cito/plagiarizes>
+    rdfs:label "plagiarizes"@en ;
+.
+
+<http://purl.org/spar/cito/providesAssertionFor>
+    rdfs:label "provides assertion for"@en ;
+.
+
+<http://purl.org/spar/cito/providesConclusionsFor>
+    rdfs:label "provides conclusions for"@en ;
+.
+
+<http://purl.org/spar/cito/providesDataFor>
+    rdfs:label "provides data for"@en ;
+.
+
+<http://purl.org/spar/cito/providesExcerptFor>
+    rdfs:label "provides excerpt for"@en ;
+.
+
+<http://purl.org/spar/cito/providesMethodFor>
+    rdfs:label "provides method for"@en ;
+.
+
+<http://purl.org/spar/cito/providesQuotationFor>
+    rdfs:label "provides quotation for"@en ;
+.
+
+<http://purl.org/spar/cito/qualifies>
+    rdfs:label "qualifies"@en ;
+.
+
+<http://purl.org/spar/cito/refutes>
+    rdfs:label "refutes"@en ;
+.
+
+<http://purl.org/spar/cito/repliesTo>
+    rdfs:label "replies to"@en ;
+.
+
+<http://purl.org/spar/cito/retracts>
+    rdfs:label "retracts"@en ;
+.
+
+<http://purl.org/spar/cito/reviews>
+    rdfs:label "reviews"@en ;
+.
+
+<http://purl.org/spar/cito/ridicules>
+    rdfs:label "ridicules"@en ;
+.
+
+<http://purl.org/spar/cito/sharesAuthorInstitutionWith>
+    rdfs:label "shares author institution with"@en ;
+.
+
+<http://purl.org/spar/cito/sharesAuthorWith>
+    rdfs:label "shares author with"@en ;
+.
+
+<http://purl.org/spar/cito/sharesFundingAgencyWith>
+    rdfs:label "shares funding agency with"@en ;
+.
+
+<http://purl.org/spar/cito/sharesJournalWith>
+    rdfs:label "shares journal with"@en ;
+.
+
+<http://purl.org/spar/cito/sharesPublicationVenueWith>
+    rdfs:label "shares publication venue with"@en ;
+.
+
+<http://purl.org/spar/cito/speculatesOn>
+    rdfs:label "speculates on"@en ;
+.
+
+<http://purl.org/spar/cito/supports>
+    rdfs:label "supports"@en ;
+.
+
+<http://purl.org/spar/cito/updates>
+    rdfs:label "updates"@en ;
+.
+
+<http://purl.org/spar/cito/usesConclusionsFrom>
+    rdfs:label "uses conclusions from"@en ;
+.
+
+<http://purl.org/spar/cito/usesDataFrom>
+    rdfs:label "uses data from"@en ;
+.
+
+<http://purl.org/spar/cito/usesMethodIn>
+    rdfs:label "uses method in"@en ;
+.
+
+<http://schema.org/citation>
+    rdfs:label "citation" ;
+.
+

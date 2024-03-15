@@ -1,0 +1,5591 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://qudt.org/2.1/vocab/quantitykind>
+    rdfs:label "QUDT Quantity Kind Vocabulary Version 2.1.33" ;
+.
+
+<http://qudt.org/vocab/quantitykind/AbsoluteActivity>
+    rdfs:label "Absolute Activity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AbsoluteHumidity>
+    rdfs:label "Absolute Humidity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AbsorbedDose>
+    rdfs:label "Absorbed Dose"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AbsorbedDoseRate>
+    rdfs:label "Absorbed Dose Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Absorptance>
+    rdfs:label "Absorptance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Acceleration>
+    rdfs:label
+        "التسارع"@ar ,
+        "Zrychlení"@cs ,
+        "Beschleunigung"@de ,
+        "Όγκος"@el ,
+        "acceleration"@en ,
+        "aceleración"@es ,
+        "شتاب"@fa ,
+        "accélération"@fr ,
+        "त्वरण"@hi ,
+        "accelerazione"@it ,
+        "加速度"@ja ,
+        "acceleratio"@la ,
+        "Pecutan"@ms ,
+        "przyspieszenie"@pl ,
+        "aceleração"@pt ,
+        "accelerație"@ro ,
+        "Ускоре́ние"@ru ,
+        "pospešek"@sl ,
+        "ivme"@tr ,
+        "加速度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/AccelerationOfGravity>
+    rdfs:label "Acceleration Of Gravity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AcceptorDensity>
+    rdfs:label "Acceptor Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AcceptorIonizationEnergy>
+    rdfs:label "Acceptor Ionization Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Acidity>
+    rdfs:label "Acidity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AcousticImpedance>
+    rdfs:label "Acoustic Impediance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Action>
+    rdfs:label "Action"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ActionTime>
+    rdfs:label "Action Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ActiveEnergy>
+    rdfs:label "Active Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ActivePower>
+    rdfs:label "Active Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Activity>
+    rdfs:label "Activity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ActivityCoefficient>
+    rdfs:label "Activity Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ActivityConcentration>
+    rdfs:label "Activity Concentration"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ActivityThresholds>
+    rdfs:label "Activity Thresholds"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Adaptation>
+    rdfs:label "Adaptation"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Admittance>
+    rdfs:label "Admittance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AlphaDisintegrationEnergy>
+    rdfs:label "Alpha Disintegration Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Altitude>
+    rdfs:label "Altitude"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AmbientPressure>
+    rdfs:label "Ambient Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AmountOfSubstance>
+    rdfs:label
+        "كمية المادة"@ar ,
+        "Количество вещество"@bg ,
+        "Látkové množství"@cs ,
+        "Stoffmenge"@de ,
+        "Ποσότητα Ουσίας"@el ,
+        "amount of substance"@en ,
+        "cantidad de sustancia"@es ,
+        "مقدار ماده"@fa ,
+        "quantité de matière"@fr ,
+        "כמות חומר"@he ,
+        "पदार्थ की मात्रा"@hi ,
+        "anyagmennyiség"@hu ,
+        "quantità di sostanza"@it ,
+        "物質量"@ja ,
+        "quantitas substantiae"@la ,
+        "Jumlah bahan"@ms ,
+        "liczność materii"@pl ,
+        "quantidade de substância"@pt ,
+        "cantitate de substanță"@ro ,
+        "Количество вещества"@ru ,
+        "množina snovi"@sl ,
+        "madde miktarı"@tr ,
+        "物质的量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/AmountOfSubstanceConcentration>
+    rdfs:label "Amount of Substance of Concentration"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AmountOfSubstanceConcentrationOfB>
+    rdfs:label "Amount of Substance of Concentration of B"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AmountOfSubstanceFraction>
+    rdfs:label "Fractional Amount of Substance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AmountOfSubstanceFractionOfB>
+    rdfs:label "Amount of Substance of Fraction of B"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AmountOfSubstancePerUnitMass>
+    rdfs:label "Amount of Substance per Unit Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AmountOfSubstancePerUnitMassPressure>
+    rdfs:label "Molar Mass variation due to Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AmountOfSubstancePerUnitVolume>
+    rdfs:label "Amount of Substance per Unit Volume"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Angle>
+    rdfs:label "Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngleOfAttack>
+    rdfs:label "Angle Of Attack"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngleOfOpticalRotation>
+    rdfs:label "Angle of Optical Rotation"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngularAcceleration>
+    rdfs:label
+        "تسارع زاوي"@ar ,
+        "Úhlové zrychlení"@cs ,
+        "Winkelbeschleunigung"@de ,
+        "angular acceleration"@en ,
+        "aceleración angular"@es ,
+        "شتاب زاویه‌ای"@fa ,
+        "accélération angulaire"@fr ,
+        "कोणीय त्वरण"@hi ,
+        "accelerazione angolare"@it ,
+        "角加速度"@ja ,
+        "Pecutan bersudut"@ms ,
+        "Przyspieszenie kątowe"@pl ,
+        "aceleração angular"@pt ,
+        "Accelerație unghiulară"@ro ,
+        "Угловое ускорение"@ru ,
+        "Açısal ivme"@tr ,
+        "角加速度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngularCrossSection>
+    rdfs:label "Angular Cross-section"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngularDistance>
+    rdfs:label "Angular Distance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngularFrequency>
+    rdfs:label
+        "تردد زاوى"@ar ,
+        "Kreisfrequenz"@de ,
+        "angular frequency"@en ,
+        "pulsación"@es ,
+        "Pulsación"@fr ,
+        "frequenza angolare"@it ,
+        "角振動数"@ja ,
+        "pulsacja"@pl ,
+        "frequência angular"@pt ,
+        "角频率"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngularImpulse>
+    rdfs:label
+        "نبضة دفعية زاوية"@ar ,
+        "Drehstoß"@de ,
+        "angular impulse"@en ,
+        "impulso angular"@es ,
+        "impulsion angulaire"@fr ,
+        "impulso angolare"@it ,
+        "角力積"@ja ,
+        "popęd kątowy"@pl ,
+        "impulsão angular"@pt ,
+        "角冲量;冲量矩"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngularMomentum>
+    rdfs:label "Angular Momentum"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngularMomentumPerAngle>
+    rdfs:label "Angular Momentum per Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngularReciprocalLatticeVector>
+    rdfs:label "Angular Reciprocal Lattice Vector"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngularVelocity>
+    rdfs:label
+        "سرعة زاوية"@ar ,
+        "Úhlová rychlost"@cs ,
+        "Winkelgeschwindigkeit"@de ,
+        "angular velocity"@en ,
+        "velocidad angular"@es ,
+        "سرعت زاویه‌ای"@fa ,
+        "vitesse angulaire"@fr ,
+        "कोणीय वेग"@hi ,
+        "velocità angolare"@it ,
+        "角速度"@ja ,
+        "Halaju bersudut"@ms ,
+        "Prędkość kątowa"@pl ,
+        "velocidade angular"@pt ,
+        "Viteză unghiulară"@ro ,
+        "Угловая скорость"@ru ,
+        "kotna hitrost"@sl ,
+        "Açısal hız"@tr ,
+        "角速度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/AngularWavenumber>
+    rdfs:label
+        "عدد موجى زاوى"@ar ,
+        "Kreisrepetenz"@de ,
+        "angular wavenumber"@en ,
+        "número de onda angular"@es ,
+        "nombre d'onde angulaire"@fr ,
+        "numero d'onda angolare"@it ,
+        "角波数"@ja ,
+        "liczba falowa kątowa"@pl ,
+        "número de onda angular"@pt ,
+        "角波数"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ApogeeRadius>
+    rdfs:label "Apogee Radius"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ApparentPower>
+    rdfs:label
+        "القدرة الظاهرية"@ar ,
+        "Scheinleistung"@de ,
+        "apparent power"@en ,
+        "potencia aparente"@es ,
+        "puissance apparente"@fr ,
+        "potenza apparente"@it ,
+        "皮相電力"@ja ,
+        "moc pozorna"@pl ,
+        "potência aparente"@pt ,
+        "视在功率"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Area>
+    rdfs:label
+        "مساحة"@ar ,
+        "Площ"@bg ,
+        "plocha"@cs ,
+        "Fläche"@de ,
+        "Ταχύτητα"@el ,
+        "area"@en ,
+        "área"@es ,
+        "مساحت"@fa ,
+        "aire"@fr ,
+        "שטח"@he ,
+        "क्षेत्रफल"@hi ,
+        "area"@it ,
+        "面積"@ja ,
+        "Keluasan"@ms ,
+        "pole powierzchni"@pl ,
+        "área"@pt ,
+        "arie"@ro ,
+        "Площадь"@ru ,
+        "površina"@sl ,
+        "alan"@tr ,
+        "面积"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/AreaAngle>
+    rdfs:label "Area Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AreaPerTime>
+    rdfs:label "Area per Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AreaRatio>
+    rdfs:label "Area Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AreaTemperature>
+    rdfs:label "Area Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AreaThermalExpansion>
+    rdfs:label "Area Thermal Expansion"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AreaTime>
+    rdfs:label "Area Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AreaTimeTemperature>
+    rdfs:label "Area Time Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AreicHeatFlowRate>
+    rdfs:label "Aeric Heat Flow Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Asset>
+    rdfs:label "Asset"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AtmosphericHydroxylationRate>
+    rdfs:label "Atmospheric Hydroxylation Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AtmosphericPressure>
+    rdfs:label "Atmospheric Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AtomScatteringFactor>
+    rdfs:label "Atom Scattering Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AtomicAttenuationCoefficient>
+    rdfs:label "Atomic Attenuation Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AtomicCharge>
+    rdfs:label "Atomic Charge"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AtomicMass>
+    rdfs:label "Atomic Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AtomicNumber>
+    rdfs:label "Atomic Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AttenuationCoefficient>
+    rdfs:label "Attenuation Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AuditoryThresholds>
+    rdfs:label "Auditory Thresholds"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AuxillaryMagneticField>
+    rdfs:label "Auxillary Magnetic Field"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AverageEnergyLossPerElementaryChargeProduced>
+    rdfs:label "Average Energy Loss per Elementary Charge Produced"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AverageHeadEndPressure>
+    rdfs:label "Average Head End Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AverageLogarithmicEnergyDecrement>
+    rdfs:label "Average Logarithmic Energy Decrement"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AverageSpecificImpulse>
+    rdfs:label "Average Specific Impulse"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/AverageVacuumThrust>
+    rdfs:label "Average Vacuum Thrust"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Basicity>
+    rdfs:label "Acidity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BendingMomentOfForce>
+    rdfs:label "Bending Moment of Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BetaDisintegrationEnergy>
+    rdfs:label "Beta Disintegration Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BevelGearPitchAngle>
+    rdfs:label "Bevel Gear Pitch Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BindingFraction>
+    rdfs:label "Binding Fraction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BioconcentrationFactor>
+    rdfs:label "Bioconcentration Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BiodegredationHalfLife>
+    rdfs:label "Biodegredation Half Life"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BloodGlucoseLevel>
+    rdfs:label "Blood Glucose Level"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BloodGlucoseLevel_Mass>
+    rdfs:label "Blood Glucose Level by Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BodyMassIndex>
+    rdfs:label "Body Mass Index"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BoilingPoint>
+    rdfs:label "Boiling Point Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BraggAngle>
+    rdfs:label "Bragg Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Breadth>
+    rdfs:label
+        "العرض"@ar ,
+        "šířka"@cs ,
+        "Breite"@de ,
+        "breadth"@en ,
+        "ancho"@es ,
+        "عرض"@fa ,
+        "largeur"@fr ,
+        "larghezza"@it ,
+        "幅"@ja ,
+        "lebar"@ms ,
+        "szerokość"@pl ,
+        "largura"@pt ,
+        "ширина"@ru ,
+        "širina"@sl ,
+        "genişliği"@tr ,
+        "寬度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/BucklingFactor>
+    rdfs:label "Buckling Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BulkModulus>
+    rdfs:label "Bulk Modulus"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BurgersVector>
+    rdfs:label "Burgers Vector"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BurnRate>
+    rdfs:label "Burn Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/BurnTime>
+    rdfs:label "Burn Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CENTER-OF-GRAVITY_X>
+    rdfs:label "Center of Gravity in the X axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CENTER-OF-GRAVITY_Y>
+    rdfs:label "Center of Gravity in the Y axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CENTER-OF-GRAVITY_Z>
+    rdfs:label "Center of Gravity in the Z axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CENTER-OF-MASS>
+    rdfs:label "Center of Mass (CoM)"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CONTRACT-END-ITEM-SPECIFICATION-MASS>
+    rdfs:label "Contract End Item (CEI) Specification Mass."@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CONTROL-MASS>
+    rdfs:label "Control Mass."@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CanonicalPartitionFunction>
+    rdfs:label "Canonical Partition Function"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Capacitance>
+    rdfs:label "Capacitance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Capacity>
+    rdfs:label "Capacity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CarrierLifetime>
+    rdfs:label "Carrier LifetIme"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CartesianArea>
+    rdfs:label "Cartesian Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CartesianCoordinates>
+    rdfs:label
+        "Kartézská soustava souřadnic"@cs ,
+        "kartesische Koordinaten"@de ,
+        "Cartesian coordinates"@en ,
+        "مختصات دکارتی"@fa ,
+        "coordonnées cartésiennes"@fr ,
+        "coordinate cartesiane"@it ,
+        "Koordiant Kartesius"@ms ,
+        "coordenadas cartesianas"@pt ,
+        "kartezyen koordinatları"@tr ,
+        "直角坐标系"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/CartesianVolume>
+    rdfs:label
+        "حجم"@ar ,
+        "Обем"@bg ,
+        "Objem"@cs ,
+        "Volumen"@de ,
+        "Επιτάχυνση"@el ,
+        "volume"@en ,
+        "volumen"@es ,
+        "حجم"@fa ,
+        "volume"@fr ,
+        "נפח"@he ,
+        "आयतन"@hi ,
+        "volume"@it ,
+        "体積"@ja ,
+        "Isipadu"@ms ,
+        "objętość"@pl ,
+        "volume"@pt ,
+        "volum"@ro ,
+        "Объём"@ru ,
+        "prostornina"@sl ,
+        "hacim"@tr ,
+        "体积"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/CatalyticActivity>
+    rdfs:label "Catalytic Activity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CatalyticActivityConcentration>
+    rdfs:label "Catalytic Activity Concentration"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CelsiusTemperature>
+    rdfs:label
+        "درجة الحرارة المئوية أو السيلسيوس"@ar ,
+        "teplota"@cs ,
+        "Celsius-Temperatur"@de ,
+        "Celsius temperature"@en ,
+        "temperatura Celsius"@es ,
+        "دمای سلسیوس/سانتیگراد"@fa ,
+        "température Celsius"@fr ,
+        "צלזיוס"@he ,
+        "सेल्सियस तापमान"@hi ,
+        "temperatura Celsius"@it ,
+        "温度"@ja ,
+        "Suhu Celsius"@ms ,
+        "temperatura"@pl ,
+        "temperatura celsius"@pt ,
+        "temperatură Celsius"@ro ,
+        "Температура Цельсия"@ru ,
+        "temperatura"@sl ,
+        "Celsius sıcaklık"@tr ,
+        "温度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/CenterOfGravity_X>
+    rdfs:label "Center of Gravity in the X axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CenterOfGravity_Y>
+    rdfs:label "Center of Gravity in the Y axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CenterOfGravity_Z>
+    rdfs:label "Center of Gravity in the Z axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CharacteristicAcousticImpedance>
+    rdfs:label "Characteristic Acoustic Impedance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CharacteristicVelocity>
+    rdfs:label "Characteristic Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ChargeNumber>
+    rdfs:label "Charge Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ChemicalAffinity>
+    rdfs:label "Chemical Affinity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ChemicalConsumptionPerMass>
+    rdfs:label "Chemical Consumption per Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ChemicalPotential>
+    rdfs:label
+        "جهد كيميائي"@ar ,
+        "Chemický potenciál"@cs ,
+        "chemisches Potential des Stoffs B"@de ,
+        "chemical potential"@en ,
+        "potencial químico"@es ,
+        "پتانسیل شیمیایی"@fa ,
+        "potential chimique"@fr ,
+        "potenziale chimico"@it ,
+        "化学ポテンシャル"@ja ,
+        "Keupayaan kimia"@ms ,
+        "Potencjał chemiczny"@pl ,
+        "potencial químico"@pt ,
+        "Potențial chimic"@ro ,
+        "Химический потенциал"@ru ,
+        "kimyasal potansiyel"@tr ,
+        "化学势"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Chromaticity>
+    rdfs:label "Chromaticity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Circulation>
+    rdfs:label "Circulation"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ClosestApproachRadius>
+    rdfs:label "Closest Approach Radius"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CoefficientOfHeatTransfer>
+    rdfs:label "Coefficient of heat transfer"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Coercivity>
+    rdfs:label "Coercivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CoherenceLength>
+    rdfs:label "Coherence Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ColdReceptorThreshold>
+    rdfs:label "Cold Receptor Threshold"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CombinedNonEvaporativeHeatTransferCoefficient>
+    rdfs:label "Combined Non Evaporative Heat Transfer Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CombustionChamberTemperature>
+    rdfs:label "Combustion Chamber Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ComplexPower>
+    rdfs:label "Complex Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Compressibility>
+    rdfs:label "Compressibility"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CompressibilityFactor>
+    rdfs:label "Compressibility Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Concentration>
+    rdfs:label "Concentration"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Conductance>
+    rdfs:label "Conductance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ConductionSpeed>
+    rdfs:label "Conduction Speed"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ConductiveHeatTransferRate>
+    rdfs:label "Conductive Heat Transfer Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Conductivity>
+    rdfs:label "Conductivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Constringence>
+    rdfs:label "Constringence"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ConvectiveHeatTransfer>
+    rdfs:label "Convective Heat Transfer"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CorrelatedColorTemperature>
+    rdfs:label
+        "Correlated Colour Temperature"@en ,
+        "Correlated Color Temperature"@en-us ;
+.
+
+<http://qudt.org/vocab/quantitykind/Count>
+    rdfs:label "Count"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CouplingFactor>
+    rdfs:label
+        "coupling factor"@en ,
+        "constante de acoplamiento"@es ,
+        "constante de couplage"@fr ,
+        "fattore di accoppiamento"@it ,
+        "結合定数"@ja ,
+        "stała sprzężenia"@pl ,
+        "Constantă de cuplaj"@ro ,
+        "Константа взаимодействия"@ru ,
+        "Çiftlenim sabiti"@tr ,
+        "耦合常數"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/CrossSection>
+    rdfs:label "Cross-section"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CrossSectionalArea>
+    rdfs:label "Cross-sectional Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CubicElectricDipoleMomentPerSquareEnergy>
+    rdfs:label "Cubic Electric Dipole Moment per Square Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CubicExpansionCoefficient>
+    rdfs:label
+        "معامل التمدد الحجمى"@ar ,
+        "Вълново число"@bg ,
+        "Volumenausdehnungskoeffizient"@de ,
+        "Κυματαριθμός"@el ,
+        "cubic expansion coefficient"@en ,
+        "coeficiente de dilatación cúbica"@es ,
+        "ضریب انبساط گرمایی"@fa ,
+        "coefficient de dilatation volumique"@fr ,
+        "מספר גל"@he ,
+        "Hullámszám"@hu ,
+        "coefficiente di dilatazione volumica"@it ,
+        "線膨張係数"@ja ,
+        "współczynnik rozszerzalności objętościowej"@pl ,
+        "coeficiente de dilatação volúmica"@pt ,
+        "Температурный коэффициент"@ru ,
+        "kübik genleşme katsayısı"@tr ,
+        "体膨胀系数"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/CurieTemperature>
+    rdfs:label
+        "درجة حرارة كوري"@ar ,
+        "Curieova teplota"@cs ,
+        "Curie-Temperatur"@de ,
+        "Curie temperature"@en ,
+        "temperatura de Curie"@es ,
+        "نقطه کوری"@fa ,
+        "température de Curie"@fr ,
+        "क्यूरी ताप"@hi ,
+        "punto di Curie"@it ,
+        "キュリー温度"@ja ,
+        "Suhu Curie"@ms ,
+        "temperatura Curie"@pl ,
+        "temperatura de Curie"@pt ,
+        "Punct Curie"@ro ,
+        "Точка Кюри"@ru ,
+        "Curie sıcaklığı"@tr ,
+        "居里点"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/CurrencyPerFlight>
+    rdfs:label "Currency Per Flight"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CurrentLinkage>
+    rdfs:label "Current Linkage"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Curvature>
+    rdfs:label "Curvature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CurvatureFromRadius>
+    rdfs:label "Curvature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/CyclotronAngularFrequency>
+    rdfs:label "Larmor Angular Frequency"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DELTA-V>
+    rdfs:label "Delta-V"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DRY-MASS>
+    rdfs:label "Dry Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DataRate>
+    rdfs:label "Data Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Debye-WallerFactor>
+    rdfs:label "Debye-Waller Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DebyeAngularFrequency>
+    rdfs:label "Debye Angular Frequency"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DebyeAngularWavenumber>
+    rdfs:label "Debye Angular Wavenumber"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DebyeTemperature>
+    rdfs:label "Debye Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DecayConstant>
+    rdfs:label "Decay Constant"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DegreeOfDissociation>
+    rdfs:label "Degree of Dissociation"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Density>
+    rdfs:label "Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DensityInCombustionChamber>
+    rdfs:label "Density In Combustion Chamber"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DensityOfStates>
+    rdfs:label "Density of states"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DensityOfTheExhaustGases>
+    rdfs:label "Density Of The Exhaust Gases"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Depth>
+    rdfs:label "Depth"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DewPointTemperature>
+    rdfs:label "Dew Point Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Diameter>
+    rdfs:label
+        "قطر"@ar ,
+        "průměr"@cs ,
+        "Durchmesser"@de ,
+        "diameter"@en ,
+        "diámetro"@es ,
+        "قطر"@fa ,
+        "diamètre"@fr ,
+        "diametro"@it ,
+        "直径"@ja ,
+        "średnica"@pl ,
+        "diâmetro"@pt ,
+        "диаметр"@ru ,
+        "premer"@sl ,
+        "çap"@tr ,
+        "直径"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/DiastolicBloodPressure>
+    rdfs:label "Diastolic Blood Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DiffusionArea>
+    rdfs:label "Diffusion Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DiffusionCoefficient>
+    rdfs:label
+        "Diffusionskoeffizient"@de ,
+        "diffusion coefficient"@en ,
+        "coeficiente de difusión"@es ,
+        "coefficient de diffusion"@fr ,
+        "coefficiente di diffusione"@it ,
+        "coeficiente de difusão"@pt ,
+        "difuzijski koeficient"@sl ;
+.
+
+<http://qudt.org/vocab/quantitykind/DiffusionCoefficientForFluenceRate>
+    rdfs:label "Diffusion Coefficient for Fluence Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DiffusionLength>
+    rdfs:label "Diffusion Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Dimensionless>
+    rdfs:label "Dimensionless"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DimensionlessRatio>
+    rdfs:label "Dimensionless Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Displacement>
+    rdfs:label "Displacement"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DisplacementCurrent>
+    rdfs:label "Displacement Current"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DisplacementCurrentDensity>
+    rdfs:label "Displacement Current Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DisplacementVectorOfIon>
+    rdfs:label "Displacement Vector of Ion"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Dissipance>
+    rdfs:label "Dissipance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Distance>
+    rdfs:label
+        "Vzdálenost"@cs ,
+        "Entfernung"@de ,
+        "distance"@en ,
+        "distancia"@es ,
+        "مسافت"@fa ,
+        "distance"@fr ,
+        "distanza"@it ,
+        "Jarak"@ms ,
+        "distância"@pt ,
+        "uzaklık"@tr ,
+        "距离"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/DistanceTraveledDuringBurn>
+    rdfs:label "Distance Traveled During a Burn"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DonorDensity>
+    rdfs:label "Donor Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DonorIonizationEnergy>
+    rdfs:label "Donor Ionization Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DoseEquivalent>
+    rdfs:label "Dose Equivalent"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DoseEquivalentQualityFactor>
+    rdfs:label "Dose Equivalent Quality Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DragCoefficient>
+    rdfs:label "Drag Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DragForce>
+    rdfs:label "Drag Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DryVolume>
+    rdfs:label "Dry Volume"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Duv>
+    rdfs:label "Delta u,v"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DynamicFriction>
+    rdfs:label "Dynamic Friction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DynamicFrictionCoefficient>
+    rdfs:label "Dynamic Friction Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DynamicPressure>
+    rdfs:label "Dynamic Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/DynamicViscosity>
+    rdfs:label
+        "لزوجة"@ar ,
+        "viskozita"@cs ,
+        "dynamische Viskosität"@de ,
+        "dynamic viscosity"@en ,
+        "viscosidad dinámica"@es ,
+        "گرانروی دینامیکی/ویسکوزیته دینامیکی"@fa ,
+        "viscosité dynamique"@fr ,
+        "श्यानता"@hi ,
+        "viscosità dinamica"@it ,
+        "粘度"@ja ,
+        "Kelikatan dinamik"@ms ,
+        "lepkość dynamiczna"@pl ,
+        "viscosidade dinâmica"@pt ,
+        "Viscozitate dinamică"@ro ,
+        "динамическую вязкость"@ru ,
+        "dinamična viskoznost"@sl ,
+        "dinamik akmazlık"@tr ,
+        "动力粘度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/EarthClosestApproachVehicleVelocity>
+    rdfs:label "Earth Closest Approach Vehicle Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EccentricityOfOrbit>
+    rdfs:label "Eccentricity Of Orbit"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EffectiveExhaustVelocity>
+    rdfs:label "Effective Exhaustvelocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EffectiveMass>
+    rdfs:label "Effective Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EffectiveMultiplicationFactor>
+    rdfs:label "Effective Multiplication Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Efficiency>
+    rdfs:label
+        "كفاءة"@ar ,
+        "Wirkungsgrad"@de ,
+        "efficiency"@en ,
+        "rendimiento"@es ,
+        "rendement"@fr ,
+        "efficienza"@it ,
+        "効率"@ja ,
+        "sprawność"@pl ,
+        "eficiência"@pt ,
+        "коэффициент полезного действия"@ru ,
+        "效率"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/EinsteinTransitionProbability>
+    rdfs:label "Einstein Transition Probability"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricCharge>
+    rdfs:label
+        "الشحنة الكهربائية"@ar ,
+        "Електрически заряд"@bg ,
+        "Elektrický náboj"@cs ,
+        "elektrische Ladung"@de ,
+        "Ηλεκτρικό φορτίο"@el ,
+        "electric charge"@en ,
+        "carga eléctrica"@es ,
+        "بار الکتریکی"@fa ,
+        "Charge électrique"@fr ,
+        "מטען חשמלי"@he ,
+        "विद्युत आवेग या विद्युत बहाव"@hi ,
+        "elektromos töltés"@hu ,
+        "carica elettrica"@it ,
+        "電荷"@ja ,
+        "onus electricum"@la ,
+        "Cas elektrik"@ms ,
+        "ładunek elektryczny"@pl ,
+        "carga elétrica"@pt ,
+        "sarcină electrică"@ro ,
+        "Электрический заряд"@ru ,
+        "električni naboj"@sl ,
+        "elektrik yükü"@tr ,
+        "电荷"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricChargeDensity>
+    rdfs:label "Electric Charge Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricChargeLineDensity>
+    rdfs:label "Electric Charge Line Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricChargeLinearDensity>
+    rdfs:label "Electric Charge Linear Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricChargePerAmountOfSubstance>
+    rdfs:label "Electric charge per amount of substance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricChargePerArea>
+    rdfs:label "Electric charge per area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricChargePerMass>
+    rdfs:label "Electric Charge Per Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricChargeSurfaceDensity>
+    rdfs:label "Electric Charge Surface Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricChargeVolumeDensity>
+    rdfs:label "Electric Charge Volume Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricConductivity>
+    rdfs:label
+        "elektrische Leitfähigkeit"@de ,
+        "electric conductivity"@en ,
+        "conductividad eléctrica"@es ,
+        "رسانايى الکتريکى/هدایت الکتریکی"@fa ,
+        "conductivité électrique"@fr ,
+        "conducibilità elettrica"@it ,
+        "Kekonduksian elektrik"@ms ,
+        "condutividade elétrica"@pt ,
+        "električna prevodnost"@sl ,
+        "elektrik iletkenliği"@tr ,
+        "电导率"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricCurrent>
+    rdfs:label
+        "تيار كهربائي"@ar ,
+        "Електрически ток"@bg ,
+        "Elektrický proud"@cs ,
+        "elektrische Stromstärke"@de ,
+        "Ένταση ηλεκτρικού ρεύματος"@el ,
+        "electric current"@en ,
+        "corriente eléctrica"@es ,
+        "جریان الکتریکی"@fa ,
+        "intensité de courant électrique"@fr ,
+        "זרם חשמלי"@he ,
+        "विद्युत धारा"@hi ,
+        "elektromos áramerősség"@hu ,
+        "corrente elettrica"@it ,
+        "電流"@ja ,
+        "fluxio electrica"@la ,
+        "Arus elektrik"@ms ,
+        "prąd elektryczny"@pl ,
+        "corrente elétrica"@pt ,
+        "curent electric"@ro ,
+        "Сила электрического тока"@ru ,
+        "električni tok"@sl ,
+        "elektrik akımı"@tr ,
+        "电流"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricCurrentDensity>
+    rdfs:label
+        "كثافة التيار"@ar ,
+        "Hustota elektrického proudu"@cs ,
+        "elektrische Stromdichte"@de ,
+        "electric current density"@en ,
+        "densidad de corriente"@es ,
+        "چگالی جریان الکتریکی"@fa ,
+        "densité de courant"@fr ,
+        "धारा घनत्व"@hi ,
+        "densità di corrente elettrica"@it ,
+        "電流密度"@ja ,
+        "Ketumpatan arus elektrik"@ms ,
+        "Gęstość prądu elektrycznego"@pl ,
+        "densidade de corrente elétrica"@pt ,
+        "Densitate de curent"@ro ,
+        "плотность тока"@ru ,
+        "gostota električnega toka"@sl ,
+        "Akım yoğunluğu"@tr ,
+        "电流密度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricCurrentPerAngle>
+    rdfs:label "Electric Current per Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricCurrentPerUnitEnergy>
+    rdfs:label "Electric Current per Unit Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricCurrentPerUnitLength>
+    rdfs:label "Electric Current per Unit Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricCurrentPerUnitTemperature>
+    rdfs:label "Electric Current per Unit Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricCurrentPhasor>
+    rdfs:label "Electric Current Phasor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricDipoleMoment>
+    rdfs:label
+        "عزم ثنائي قطب"@ar ,
+        "Dipólový moment"@cs ,
+        "elektrisches Dipolmoment"@de ,
+        "electric dipole moment"@en ,
+        "momento de dipolo eléctrico"@es ,
+        "گشتاور دوقطبی الکتریکی"@fa ,
+        "moment dipolaire"@fr ,
+        "विद्युत द्विध्रुव आघूर्ण"@hi ,
+        "momento di dipolo elettrico"@it ,
+        "電気双極子"@ja ,
+        "Momen dwikutub elektrik"@ms ,
+        "elektryczny moment dipolowy"@pl ,
+        "momento do dipolo elétrico"@pt ,
+        "moment electric dipolar"@ro ,
+        "Электрический дипольный момент"@ru ,
+        "elektrik dipol momenti"@tr ,
+        "电偶极矩"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricDipoleMoment_CubicPerEnergy_Squared>
+    rdfs:label "Cubic Electric Dipole Moment per Square Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricDipoleMoment_QuarticPerEnergy_Cubic>
+    rdfs:label "Quartic Electric Dipole Moment per Cubic Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricDisplacement>
+    rdfs:label "Electric Displacement"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricDisplacementField>
+    rdfs:label "Electric Displacement Field"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricField>
+    rdfs:label "Electric Field"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricFieldStrength>
+    rdfs:label
+        "عدد الموجة"@ar ,
+        "Електрично поле"@bg ,
+        "elektrické pole"@cs ,
+        "elektrische Feldstärke"@de ,
+        "Ηλεκτρικό πεδίο"@el ,
+        "electric field strength"@en ,
+        "intensidad de campo eléctrico"@es ,
+        "شدت میدان الکتریکی"@fa ,
+        "intensité de champ électrique"@fr ,
+        "שדה חשמלי"@he ,
+        "विद्युत्-क्षेत्र"@hi ,
+        "Elektromos mező"@hu ,
+        "intensità di campo elettrico"@it ,
+        "電界強度"@ja ,
+        "Kekuatan medan elektrik"@ms ,
+        "natężenie pola elektrycznego"@pl ,
+        "intensidade de campo elétrico"@pt ,
+        "câmp electric"@ro ,
+        "Напряженность электрического поля"@ru ,
+        "jakost električnega polja"@sl ,
+        "elektriksel alan kuvveti"@tr ,
+        "電場"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricFlux>
+    rdfs:label "Electric Flux"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricFluxDensity>
+    rdfs:label
+        "إزاحة كهربائية"@ar ,
+        "Elektrická indukce"@cs ,
+        "elektrische Flussdichte"@de ,
+        "electric flux density"@en ,
+        "Densidad de flujo eléctrico"@es ,
+        "چگالی شار الکتریکی"@fa ,
+        "Induction électrique"@fr ,
+        "spostamento elettrico"@it ,
+        "電束密度"@ja ,
+        "Ketumpatan fluks elektrik"@ms ,
+        "Indukcja elektryczna"@pl ,
+        "campo de deslocamento elétrico"@pt ,
+        "Inducție electrică"@ro ,
+        "Электрическая индукция"@ru ,
+        "elektrik akı yoğunluğu"@tr ,
+        "電位移"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricPolarizability>
+    rdfs:label
+        "قابلية استقطاب"@ar ,
+        "Polarizovatelnost"@cs ,
+        "elektrische Polarisierbarkeit"@de ,
+        "electric polarizability"@en ,
+        "Polarizabilidad"@es ,
+        "قطبیت پذیری الکتریکی"@fa ,
+        "Polarisabilité"@fr ,
+        "polarizzabilità elettrica"@it ,
+        "分極率"@ja ,
+        "Kepengkutuban elektrik"@ms ,
+        "Polaryzowalność"@pl ,
+        "polarizabilidade"@pt ,
+        "Поляризуемость"@ru ,
+        "Kutuplanabilirlik"@tr ,
+        "極化性"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricPolarization>
+    rdfs:label
+        "إستقطاب كهربائي"@ar ,
+        "elektrische Polarisation"@de ,
+        "electric polarization"@en ,
+        "polarización eléctrica"@es ,
+        "polarisation électrique"@fr ,
+        "polarizzazione elettrica"@it ,
+        "電気分極"@ja ,
+        "polaryzacja elektryczna"@pl ,
+        "polarização eléctrica"@pt ,
+        "электрическая поляризация"@ru ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricPotential>
+    rdfs:label
+        "كمون كهربائي"@ar ,
+        "Електрически потенциал"@bg ,
+        "elektrický potenciál"@cs ,
+        "elektrisches Potenzial"@de ,
+        "electric potential"@en ,
+        "potencial eléctrico"@es ,
+        "پتانسیل الکتریکی"@fa ,
+        "potentiel électrique"@fr ,
+        "מתח חשמלי (הפרש פוטנציאלים)"@he ,
+        "विद्युत विभव"@hi ,
+        "elektromos feszültség , elektromos potenciálkülönbség"@hu ,
+        "potenziale elettrico"@it ,
+        "電位"@ja ,
+        "tensio electrica"@la ,
+        "Keupayaan elektrik"@ms ,
+        "potencjał elektryczny"@pl ,
+        "potencial elétrico"@pt ,
+        "potențial electric"@ro ,
+        "электростатический потенциал"@ru ,
+        "električni potencial"@sl ,
+        "elektrik potansiyeli"@tr ,
+        "電勢"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricPotentialDifference>
+    rdfs:label
+        "جهد كهربائي"@ar ,
+        "elektrické napětí"@cs ,
+        "elektrische Spannung"@de ,
+        "electric potential difference"@en ,
+        "tensión eléctrica"@es ,
+        "ولتاژ/ اختلاف پتانسیل"@fa ,
+        "tension électrique"@fr ,
+        "विभवांतर"@hi ,
+        "differenza di potenziale elettrico"@it ,
+        "電圧"@ja ,
+        "Voltan Perbezaan keupayaan elektrik"@ms ,
+        "napięcie elektryczne"@pl ,
+        "tensão elétrica (diferença de potencial)"@pt ,
+        "diferență de potențial electric"@ro ,
+        "электрическое напряжение"@ru ,
+        "električna napetost"@sl ,
+        "gerilim"@tr ,
+        "電壓"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricPower>
+    rdfs:label
+        "القدرة الفعالة"@ar ,
+        "Wirkleistung"@de ,
+        "electric power"@en ,
+        "potencia activa"@es ,
+        "puissance active"@fr ,
+        "potenza attiva"@it ,
+        "有効電力"@ja ,
+        "moc czynna"@pl ,
+        "potência activa"@pt ,
+        "有功功率"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricPropulsionPropellantMass>
+    rdfs:label "Electric Propulsion Propellant Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricQuadrupoleMoment>
+    rdfs:label
+        "elektrisches Quadrupolmoment"@de ,
+        "electric quadrupole moment"@en ,
+        "momento de cuadrupolo eléctrico"@es ,
+        "گشتاور چهار قطبی الکتریکی"@fa ,
+        "moment quadrupolaire électrique"@fr ,
+        "momento di quadrupolo elettrico"@it ,
+        "四極子"@ja ,
+        "Momen kuadrupol elektrik"@ms ,
+        "elektryczny moment kwadrupolowy"@pl ,
+        "momento de quadrupolo elétrico"@pt ,
+        "Электрический квадрупольный момент"@ru ,
+        "elektrik kuadrupol momenti"@tr ,
+        "电四极矩"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricSusceptibility>
+    rdfs:label
+        "المتأثرية الكهربائية، سرعة التأثر الكهربائية"@ar ,
+        "elektrische Suszeptibilität"@de ,
+        "electric susceptibility"@en ,
+        "susceptibilidad eléctrica"@es ,
+        "susceptibilité électrique"@fr ,
+        "suscettività elettrica"@it ,
+        "電気感受率"@ja ,
+        "podatność elektryczna"@pl ,
+        "susceptibilidade eléctrica"@pt ,
+        "электрическая восприимчивость"@ru ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectricalPowerToMassRatio>
+    rdfs:label "Electrical Power To Mass Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectrolyticConductivity>
+    rdfs:label "Electrolytic Conductivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectromagneticEnergyDensity>
+    rdfs:label "Electromagnetic Energy Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectromagneticPermeability>
+    rdfs:label "Permeability"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectromagneticPermeabilityRatio>
+    rdfs:label "Electromagnetic Permeability Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectromagneticWavePhaseSpeed>
+    rdfs:label "Electromagnetic Wave Phase Speed"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectromotiveForce>
+    rdfs:label
+        "قوة محركة كهربائية"@ar ,
+        "Elektromotorické napětí"@cs ,
+        "elektromotorische Kraft"@de ,
+        "electromotive force"@en ,
+        "fuerza electromotriz"@es ,
+        "نیروی محرک الکتریکی"@fa ,
+        "force électromotrice"@fr ,
+        "विद्युतवाहक बल"@hi ,
+        "forza elettromotrice"@it ,
+        "起電力"@ja ,
+        "Daya gerak elektrik"@ms ,
+        "siła elektromotoryczna"@pl ,
+        "força eletromotriz"@pt ,
+        "forță electromotoare"@ro ,
+        "электродвижущая сила"@ru ,
+        "elektromotorna sila"@sl ,
+        "Elektromotor kuvvet"@tr ,
+        "電動勢"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectronAffinity>
+    rdfs:label "Electron Affinity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectronDensity>
+    rdfs:label "Electron Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectronMeanFreePath>
+    rdfs:label "Electron Mean Free Path"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ElectronRadius>
+    rdfs:label "Electron Radius"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EllipticalOrbitApogeeVelocity>
+    rdfs:label "Elliptical Orbit Apogee Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EllipticalOrbitPerigeeVelocity>
+    rdfs:label "Elliptical Orbit Perigee Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Emissivity>
+    rdfs:label "Emissivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Energy>
+    rdfs:label
+        "الطاقة"@ar ,
+        "Енергия"@bg ,
+        "Energie"@cs ,
+        "Energie"@de ,
+        "Έργο - Ενέργεια"@el ,
+        "energy"@en ,
+        "energia"@es ,
+        "انرژی"@fa ,
+        "énergie"@fr ,
+        "אנרגיה ועבודה"@he ,
+        "ऊर्जा"@hi ,
+        "energia , munka , hő"@hu ,
+        "energia"@it ,
+        "エネルギー"@ja ,
+        "energia"@la ,
+        "Tenaga"@ms ,
+        "energia"@pl ,
+        "energia"@pt ,
+        "energie"@ro ,
+        "Энергия"@ru ,
+        "energija"@sl ,
+        "enerji"@tr ,
+        "能量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyDensity>
+    rdfs:label "Energy Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyDensityOfStates>
+    rdfs:label "Energy Density of States"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyExpenditure>
+    rdfs:label "Energy Expenditure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyFluence>
+    rdfs:label "Energy Fluence"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyFluenceRate>
+    rdfs:label "Energy Fluence Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyImparted>
+    rdfs:label "Energy Imparted"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyInternal>
+    rdfs:label
+        "طاقة داخلية"@ar ,
+        "vnitřní energie"@cs ,
+        "innere Energie"@de ,
+        "internal energy"@en ,
+        "energía interna"@es ,
+        "انرژی درونی"@fa ,
+        "énergie interne"@fr ,
+        "आन्तरिक ऊर्जा"@hi ,
+        "energia interna"@it ,
+        "内部エネルギー"@ja ,
+        "Tenaga dalaman"@ms ,
+        "energia wewnętrzna"@pl ,
+        "energia interna"@pt ,
+        "energie internă"@ro ,
+        "внутренняя энергия"@ru ,
+        "Notranja energija"@sl ,
+        "İç enerji"@tr ,
+        "内能"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyKinetic>
+    rdfs:label
+        "طاقة حركية"@ar ,
+        "kinetická energie"@cs ,
+        "kinetische Energie"@de ,
+        "kinetic energy"@en ,
+        "energía cinética"@es ,
+        "انرژی جنبشی"@fa ,
+        "énergie cinétique"@fr ,
+        "गतिज ऊर्जा"@hi ,
+        "energia cinetica"@it ,
+        "運動エネルギー"@ja ,
+        "Tenaga kinetik"@ms ,
+        "energia kinetyczna"@pl ,
+        "energia cinética"@pt ,
+        "Energie cinetică"@ro ,
+        "кинетическая энергия"@ru ,
+        "Kinetik enerji"@tr ,
+        "动能"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyLevel>
+    rdfs:label "Energy Level"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyPerArea>
+    rdfs:label "Energy per Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyPerAreaElectricCharge>
+    rdfs:label "Energy Per Area Electric Charge"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyPerElectricCharge>
+    rdfs:label "Energy per electric charge"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyPerMagneticFluxDensity_Squared>
+    rdfs:label "Energy Per Square Magnetic Flux Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyPerMassAmountOfSubstance>
+    rdfs:label "Energy and work per mass amount of substance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyPerSquareMagneticFluxDensity>
+    rdfs:label "Energy Per Square Magnetic Flux Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EnergyPerTemperature>
+    rdfs:label "Energy per temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Energy_Squared>
+    rdfs:label "Square Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Enthalpy>
+    rdfs:label
+        "محتوى حراري"@ar ,
+        "entalpie"@cs ,
+        "Enthalpie"@de ,
+        "enthalpy"@en ,
+        "entalpía"@es ,
+        "آنتالپی"@fa ,
+        "enthalpie"@fr ,
+        "पूर्ण ऊष्मा"@hi ,
+        "entalpia"@it ,
+        "エンタルピー"@ja ,
+        "Entalpi"@ms ,
+        "entalpia"@pl ,
+        "entalpia"@pt ,
+        "Entalpie"@ro ,
+        "энтальпия"@ru ,
+        "entalpija"@sl ,
+        "Entalpi"@tr ,
+        "焓"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Entropy>
+    rdfs:label
+        "إنتروبيا"@ar ,
+        "entropie"@cs ,
+        "Entropie"@de ,
+        "entropy"@en ,
+        "entropía"@es ,
+        "آنتروپی"@fa ,
+        "entropie"@fr ,
+        "एन्ट्रॉपी"@hi ,
+        "entropia"@it ,
+        "エントロピー"@ja ,
+        "Entropi"@ms ,
+        "entropia"@pl ,
+        "entropia"@pt ,
+        "entropie"@ro ,
+        "Энтропия"@ru ,
+        "entropija"@sl ,
+        "entropi"@tr ,
+        "熵"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/EquilibriumConstant>
+    rdfs:label "Equilibrium Constant"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EquilibriumConstantOnConcentrationBasis>
+    rdfs:label "Equilibrium Constant on Concentration Basis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EquilibriumConstantOnPressureBasis>
+    rdfs:label "Equilibrium Constant on Pressure Basis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EquilibriumPositionVectorOfIon>
+    rdfs:label "Equilibrium Position Vector of Ion"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EquivalentAbsorptionArea>
+    rdfs:label "Equivalent absorption area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EvaporativeHeatTransfer>
+    rdfs:label "Evaporative Heat Transfer"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/EvaporativeHeatTransferCoefficient>
+    rdfs:label "Combined Non Evaporative Heat Transfer Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ExchangeIntegral>
+    rdfs:label "Exchange Integral"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ExhaustGasMeanMolecularWeight>
+    rdfs:label "Exhaust Gas Mean Molecular Weight"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ExhaustGasesSpecificHeat>
+    rdfs:label "Exhaust Gases Specific Heat"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ExhaustStreamPower>
+    rdfs:label "Exhaust Stream Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ExitPlaneCrossSectionalArea>
+    rdfs:label "Exit Plane Cross-sectional Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ExitPlanePressure>
+    rdfs:label "Exit Plane Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ExitPlaneTemperature>
+    rdfs:label "Exit Plane Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ExpansionRatio>
+    rdfs:label "Expansion Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Exposure>
+    rdfs:label "Exposure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ExposureRate>
+    rdfs:label "Exposure Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ExtentOfReaction>
+    rdfs:label "Extent of Reaction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FLIGHT-PERFORMANCE-RESERVE-PROPELLANT-MASS>
+    rdfs:label "Flight Performance Reserve Propellant Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FUEL-BIAS>
+    rdfs:label "Fuel Bias"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FastFissionFactor>
+    rdfs:label "Fast Fission Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FermiAngularWavenumber>
+    rdfs:label "Fermi Angular Wavenumber"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FermiEnergy>
+    rdfs:label "Fermi Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FermiTemperature>
+    rdfs:label "Fermi Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FinalOrCurrentVehicleMass>
+    rdfs:label "Final Or Current Vehicle Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FirstMomentOfArea>
+    rdfs:label "First Moment of Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FirstStageMassRatio>
+    rdfs:label "First Stage Mass Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FishBiotransformationHalfLife>
+    rdfs:label "Fish Biotransformation Half Life"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FissionCoreRadiusToHeightRatio>
+    rdfs:label "Fission Core Radius To Height Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FissionFuelUtilizationFactor>
+    rdfs:label "Fission Fuel Utilization Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FissionMultiplicationFactor>
+    rdfs:label "Fission Multiplication Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FlashPoint>
+    rdfs:label "Flash Point Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FlightPathAngle>
+    rdfs:label "Flight Path Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Flux>
+    rdfs:label "Flux"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Force>
+    rdfs:label
+        "وحدة القوة في نظام متر كيلوغرام ثانية"@ar ,
+        "сила"@bg ,
+        "Síla"@cs ,
+        "Kraft"@de ,
+        "Δύναμη"@el ,
+        "force"@en ,
+        "fuerza"@es ,
+        "نیرو"@fa ,
+        "force"@fr ,
+        "כוח"@he ,
+        "बल"@hi ,
+        "erő"@hu ,
+        "forza"@it ,
+        "力"@ja ,
+        "vis"@la ,
+        "Daya"@ms ,
+        "siła"@pl ,
+        "força"@pt ,
+        "forță"@ro ,
+        "Сила"@ru ,
+        "sila"@sl ,
+        "kuvvet"@tr ,
+        "力"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ForceMagnitude>
+    rdfs:label "Force Magnitude"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ForcePerAngle>
+    rdfs:label "Force per Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ForcePerArea>
+    rdfs:label "Force Per Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ForcePerAreaTime>
+    rdfs:label "Force Per Area Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ForcePerElectricCharge>
+    rdfs:label "Force per Electric Charge"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ForcePerLength>
+    rdfs:label "Force per Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Frequency>
+    rdfs:label
+        "التردد لدى نظام الوحدات الدولي"@ar ,
+        "Честота"@bg ,
+        "Frekvence"@cs ,
+        "Frequenz"@de ,
+        "Συχνότητα"@el ,
+        "frequency"@en ,
+        "frecuencia"@es ,
+        "بسامد"@fa ,
+        "fréquence"@fr ,
+        "תדירות"@he ,
+        "आवृत्ति"@hi ,
+        "frekvencia"@hu ,
+        "frequenza"@it ,
+        "周波数"@ja ,
+        "frequentia"@la ,
+        "Frekuensi"@ms ,
+        "częstotliwość"@pl ,
+        "frequência"@pt ,
+        "frecvență"@ro ,
+        "Частота"@ru ,
+        "frekvenca"@sl ,
+        "frekans"@tr ,
+        "频率"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Friction>
+    rdfs:label "Friction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FrictionCoefficient>
+    rdfs:label "Friction Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Fugacity>
+    rdfs:label
+        "انفلاتية"@ar ,
+        "fugacita"@cs ,
+        "Fugazität"@de ,
+        "fugacity"@en ,
+        "fugacidad"@es ,
+        "بی‌دوامی"@fa ,
+        "fugacité"@fr ,
+        "fugacità"@it ,
+        "フガシティー"@ja ,
+        "Fugasiti"@ms ,
+        "Lotność"@pl ,
+        "fugacidade"@pt ,
+        "fugacitate"@ro ,
+        "fügasite"@tr ,
+        "逸度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/FundamentalLatticeVector>
+    rdfs:label "Fundamental Lattice vector"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/FundamentalReciprocalLatticeVector>
+    rdfs:label "Fundamental Reciprocal Lattice Vector"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GFactorOfNucleus>
+    rdfs:label "g-Factor of Nucleus"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GROSS-LIFT-OFF-WEIGHT>
+    rdfs:label "Gross Lift-Off Weight"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Gain>
+    rdfs:label "Gain"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GapEnergy>
+    rdfs:label "Gap Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GeneFamilyAbundance>
+    rdfs:label "Gene Family Abundance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GeneralizedCoordinate>
+    rdfs:label "Generalized Coordinate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GeneralizedForce>
+    rdfs:label "Generalized Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GeneralizedMomentum>
+    rdfs:label "Generalized Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GeneralizedVelocity>
+    rdfs:label "Generalized Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GibbsEnergy>
+    rdfs:label
+        "طاقة غيبس الحرة"@ar ,
+        "Gibbsova volná energie"@cs ,
+        "freie Enthalpie"@de ,
+        "Gibbs energy"@en ,
+        "Energía de Gibbs"@es ,
+        "انرژی آزاد گیبس"@fa ,
+        "enthalpie libre"@fr ,
+        "energia libera di Gibbs"@it ,
+        "ギブズエネルギー"@ja ,
+        "Tenaga Gibbs"@ms ,
+        "entalpia swobodna"@pl ,
+        "energia livre de Gibbs"@pt ,
+        "Entalpie liberă"@ro ,
+        "энергия Гиббса"@ru ,
+        "Prosta entalpija"@sl ,
+        "Gibbs Serbest Enerjisi"@tr ,
+        "吉布斯自由能"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/GrandCanonicalPartitionFunction>
+    rdfs:label "Grand Canonical Partition Function"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GravitationalAttraction>
+    rdfs:label "Gravitational Attraction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Gravity_API>
+    rdfs:label "API Gravity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GroupSpeedOfSound>
+    rdfs:label "Group Speed of Sound"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GrowingDegreeDay_Cereal>
+    rdfs:label "Growing Degree Days (Cereals)"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GruneisenParameter>
+    rdfs:label "Gruneisen Parameter"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GustatoryThreshold>
+    rdfs:label "Gustatory Threshold"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/GyromagneticRatio>
+    rdfs:label "Gyromagnetic Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Half-Life>
+    rdfs:label
+        "Poločas rozpadu"@cs ,
+        "Halbwertszeit"@de ,
+        "half-life"@en ,
+        "semiperiodo"@es ,
+        "نیمه عمر"@fa ,
+        "temps de demi-vie"@fr ,
+        "tempo di dimezzamento"@it ,
+        "Separuh hayat"@ms ,
+        "meia-vida"@pt ,
+        "yarılanma süresi"@tr ,
+        "半衰期"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Half-ValueThickness>
+    rdfs:label "Half-Value Thickness"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HallCoefficient>
+    rdfs:label "Hall Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HamiltonFunction>
+    rdfs:label "Hamilton Function"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HeadEndPressure>
+    rdfs:label "Head End Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HeartRate>
+    rdfs:label "Heart Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Heat>
+    rdfs:label
+        "حرارة"@ar ,
+        "jednotka tepla"@cs ,
+        "Wärme"@de ,
+        "heat"@en ,
+        "calor"@es ,
+        "کمیت گرما"@fa ,
+        "quantité de chaleur"@fr ,
+        "ऊष्मा"@hi ,
+        "calore"@it ,
+        "熱量"@ja ,
+        "labor"@la ,
+        "kuantiti haba Haba"@ms ,
+        "ciepło"@pl ,
+        "quantidade de calor"@pt ,
+        "cantitate de căldură"@ro ,
+        "Теплота"@ru ,
+        "toplota"@sl ,
+        "ısı miktarı"@tr ,
+        "热量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/HeatCapacity>
+    rdfs:label
+        "سعة حرارية"@ar ,
+        "tepelná kapacita"@cs ,
+        "Wärmekapazität"@de ,
+        "heat capacity"@en ,
+        "capacidad calorífica"@es ,
+        "ظرفیت گرمایی"@fa ,
+        "capacité thermique"@fr ,
+        "ऊष्मा धारिता"@hi ,
+        "capacità termica"@it ,
+        "熱容量"@ja ,
+        "muatan haba"@ms ,
+        "pojemność cieplna"@pl ,
+        "capacidade térmica"@pt ,
+        "capacitate termică"@ro ,
+        "теплоёмкость"@ru ,
+        "toplotna kapaciteta"@sl ,
+        "isı kapasitesi"@tr ,
+        "热容"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/HeatCapacityRatio>
+    rdfs:label "Heat Capacity Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HeatFlowRate>
+    rdfs:label "Heat Flow Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HeatFlowRatePerUnitArea>
+    rdfs:label "Heat Flow Rate per Unit Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HeatFluxDensity>
+    rdfs:label "Heat Flux Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HeatingValue>
+    rdfs:label "Calorific Value"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Height>
+    rdfs:label
+        "Výška"@cs ,
+        "Höhe"@de ,
+        "height"@en ,
+        "altura"@es ,
+        "ارتفاع"@fa ,
+        "hauteur"@fr ,
+        "altezza"@it ,
+        "Ketinggian"@ms ,
+        "altura"@pt ,
+        "Înălțime"@ro ,
+        "высота"@ru ,
+        "yükseklik"@tr ,
+        "高度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/HelmholtzEnergy>
+    rdfs:label
+        "طاقة هلمهولتز الحرة"@ar ,
+        "Helmholtzova volná energie"@cs ,
+        "freie Energie"@de ,
+        "Helmholtz energy"@en ,
+        "Energía de Helmholtz"@es ,
+        "انرژی آزاد هلمولتز"@fa ,
+        "énergie libre"@fr ,
+        "energia libera di Helmholz"@it ,
+        "ヘルムホルツの自由エネルギー"@ja ,
+        "Tenaga Helmholtz"@ms ,
+        "energia swobodna"@pl ,
+        "energia livre de Helmholtz"@pt ,
+        "свободная энергия Гельмгольца"@ru ,
+        "Prosta energija"@sl ,
+        "Helmholtz enerjisi"@tr ,
+        "亥姆霍兹自由能"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/HenrysLawVolatilityConstant>
+    rdfs:label "Henry's Law Volatility Constant"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HoleDensity>
+    rdfs:label "Hole Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HorizontalVelocity>
+    rdfs:label "Horizontal Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HydraulicPermeability>
+    rdfs:label "Hydraulic Permeability"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/HyperfineStructureQuantumNumber>
+    rdfs:label "Hyperfine Structure Quantum Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/INERT-MASS>
+    rdfs:label "Inert Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IgnitionIntervalTime>
+    rdfs:label "Ignition interval time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Illuminance>
+    rdfs:label
+        "شدة الضوء"@ar ,
+        "Осветеност"@bg ,
+        "Intenzita osvětlení"@cs ,
+        "Beleuchtungsstärke"@de ,
+        "illuminance"@en ,
+        "luminosidad"@es ,
+        "شدت روشنایی"@fa ,
+        "éclairement lumineux"@fr ,
+        "הארה (שטף ליחידת שטח)"@he ,
+        "प्रदीपन"@hi ,
+        "megvilágítás"@hu ,
+        "illuminamento"@it ,
+        "照度"@ja ,
+        "Pencahayaan"@ms ,
+        "natężenie oświetlenia"@pl ,
+        "iluminamento"@pt ,
+        "iluminare"@ro ,
+        "Освещённость"@ru ,
+        "osvetljenost"@sl ,
+        "aydınlanma şiddeti"@tr ,
+        "照度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Impedance>
+    rdfs:label "Impedance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Incidence>
+    rdfs:label "Incidence"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IncidenceProportion>
+    rdfs:label "Incidence Proportion"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IncidenceRate>
+    rdfs:label "Incidence Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Inductance>
+    rdfs:label
+        "المحاثة (التحريض)"@ar ,
+        "Индуктивност"@bg ,
+        "Indukčnost"@cs ,
+        "Induktivität"@de ,
+        "inductance"@en ,
+        "inductancia"@es ,
+        "القاوری"@fa ,
+        "Inductance électrique"@fr ,
+        "השראות"@he ,
+        "प्रेरकत्व"@hi ,
+        "induktivitás"@hu ,
+        "induttanza"@it ,
+        "インダクタンス・誘導係数"@ja ,
+        "inductantia"@la ,
+        "Indukstans"@ms ,
+        "indukcyjność"@pl ,
+        "indutância"@pt ,
+        "inductanță"@ro ,
+        "Индуктивность"@ru ,
+        "induktivnost"@sl ,
+        "İndüktans"@tr ,
+        "电感"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/InfiniteMultiplicationFactor>
+    rdfs:label "Infinite Multiplication Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InformationEntropy>
+    rdfs:label "Information Entropy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InformationFlowRate>
+    rdfs:label "Information flow rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InitialExpansionRatio>
+    rdfs:label "Initial Expansion Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InitialNozzleThroatDiameter>
+    rdfs:label "Initial Nozzle Throat Diameter"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InitialVehicleMass>
+    rdfs:label "Initial Vehicle Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InitialVelocity>
+    rdfs:label "Initial Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InstantaneousPower>
+    rdfs:label "Instantaneous Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InternalConversionFactor>
+    rdfs:label "InternalConversionFactor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InternalEnergy>
+    rdfs:label "Internal Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IntinsicCarrierDensity>
+    rdfs:label "Intinsic Carrier Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseAmountOfSubstance>
+    rdfs:label "Inverse amount of substance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseEnergy>
+    rdfs:label "Inverse Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseEnergy_Squared>
+    rdfs:label "Inverse Square Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseLength>
+    rdfs:label "Inverse Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseLengthTemperature>
+    rdfs:label "Inverse Length Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseMagneticFlux>
+    rdfs:label "Inverse Magnetic Flux"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseMass_Squared>
+    rdfs:label "Inverse Square Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InversePermittivity>
+    rdfs:label "Inverse Permittivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InversePressure>
+    rdfs:label "Inverse Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseSquareEnergy>
+    rdfs:label "Inverse Square Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseSquareMass>
+    rdfs:label "Inverse Square Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseSquareTime>
+    rdfs:label "Inverse Square Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseTemperature>
+    rdfs:label "Inverse Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseTime>
+    rdfs:label "Inverse Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseTimeTemperature>
+    rdfs:label "Inverse Time Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseTime_Squared>
+    rdfs:label "Inverse Square Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/InverseVolume>
+    rdfs:label "Inverse Volume"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IonConcentration>
+    rdfs:label "Ion Concentration"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IonCurrent>
+    rdfs:label "Ion Current"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IonDensity>
+    rdfs:label "Ion Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IonTransportNumber>
+    rdfs:label "Ion Transport Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IonicCharge>
+    rdfs:label "Ionic Charge"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IonicStrength>
+    rdfs:label "Ionic Strength"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IonizationEnergy>
+    rdfs:label "Ionization Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Irradiance>
+    rdfs:label
+        "الطاقة الهلامية"@ar ,
+        "Intenzita záření"@cs ,
+        "Bestrahlungsstärke"@de ,
+        "irradiance"@en ,
+        "irradiancia"@es ,
+        "پرتو افکنی/چگالی تابش"@fa ,
+        "éclairement énergétique"@fr ,
+        "irradianza"@it ,
+        "熱流束"@ja ,
+        "Kepenyinaran"@ms ,
+        "irradiância"@pt ,
+        "Поверхностная плотность потока энергии"@ru ,
+        "yoğunluk"@tr ,
+        "辐照度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/IsentropicCompressibility>
+    rdfs:label "Isentropic Compressibility"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/IsentropicExponent>
+    rdfs:label
+        "نسبة السعة الحرارية"@ar ,
+        "Poissonova konstanta"@cs ,
+        "Isentropenexponent"@de ,
+        "isentropic exponent"@en ,
+        "Coeficiente de dilatación adiabática"@es ,
+        "exposant isoentropique"@fr ,
+        "Coefficiente di dilatazione adiabatica"@it ,
+        "比熱比"@ja ,
+        "Wykładnik adiabaty"@pl ,
+        "Coeficiente de expansão adiabática"@pt ,
+        "Coeficient de transformare adiabatică"@ro ,
+        "Показатель адиабаты"@ru ,
+        "adiabatni eksponent"@sl ,
+        "ısı sığası oranı; adyabatik indeks"@tr ,
+        "绝热指数"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/IsothermalCompressibility>
+    rdfs:label
+        "معامل الانضغاط عند ثبوت درجة الحرارة"@ar ,
+        "objemová stlačitelnost"@cs ,
+        "isotherme Kompressibilität"@de ,
+        "isothermal compressibility"@en ,
+        "compresibilidad isotérmica"@es ,
+        "ضریب تراکم‌پذیری همدما"@fa ,
+        "compressibilité isotherme"@fr ,
+        "comprimibilità isotermica"@it ,
+        "等温圧縮率"@ja ,
+        "Ketermampatan isotermik"@ms ,
+        "ściśliwość izotermiczna"@pl ,
+        "compressibilidade isotérmica"@pt ,
+        "изотермический коэффициент сжимаемости"@ru ,
+        "Izotermna stisljivost"@sl ,
+        "等温压缩率"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/IsothermalMoistureCapacity>
+    rdfs:label "Isothermal Moisture Capacity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Kerma>
+    rdfs:label "Kerma"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/KermaRate>
+    rdfs:label "Kerma Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/KinematicViscosity>
+    rdfs:label
+        "لزوجة"@ar ,
+        "viskozita"@cs ,
+        "kinematische Viskosität"@de ,
+        "kinematic viscosity"@en ,
+        "viscosidad cinemática"@es ,
+        "گرانروی جنبشی/ویسکوزیته جنبشی"@fa ,
+        "viscosité cinématique"@fr ,
+        "श्यानता"@hi ,
+        "viscosità cinematica"@it ,
+        "粘度"@ja ,
+        "Kelikatan kinematik"@ms ,
+        "lepkość kinematyczna"@pl ,
+        "viscosidade cinemática"@pt ,
+        "Viscozitate cinematică"@ro ,
+        "кинематическую вязкость"@ru ,
+        "kinematična viskoznost"@sl ,
+        "Kinematik akmazlık"@tr ,
+        "运动粘度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/KineticEnergy>
+    rdfs:label "Kinetic Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LagrangeFunction>
+    rdfs:label "Lagrange Function"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Landau-GinzburgNumber>
+    rdfs:label "Landau-Ginzburg Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LandeGFactor>
+    rdfs:label "Lande g-Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LarmorAngularFrequency>
+    rdfs:label "Larmor Angular Frequency"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LatticePlaneSpacing>
+    rdfs:label "Lattice Plane Spacing"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LatticeVector>
+    rdfs:label "Lattice Vector"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LeakageFactor>
+    rdfs:label "Leakage Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Length>
+    rdfs:label
+        "طول"@ar ,
+        "Дължина"@bg ,
+        "Délka"@cs ,
+        "Länge"@de ,
+        "Μήκος"@el ,
+        "length"@en ,
+        "longitud"@es ,
+        "طول"@fa ,
+        "longueur"@fr ,
+        "אורך"@he ,
+        "लम्बाई"@hi ,
+        "hossz"@hu ,
+        "lunghezza"@it ,
+        "長さ"@ja ,
+        "longitudo"@la ,
+        "Panjang"@ms ,
+        "długość"@pl ,
+        "comprimento"@pt ,
+        "lungime"@ro ,
+        "Длина"@ru ,
+        "dolžina"@sl ,
+        "uzunluk"@tr ,
+        "长度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/LengthByForce>
+    rdfs:label "Length Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LengthEnergy>
+    rdfs:label "Length Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LengthMass>
+    rdfs:label "Length Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LengthMolarEnergy>
+    rdfs:label "Length Molar Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LengthPerUnitElectricCurrent>
+    rdfs:label "Length per Unit Electric Current"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LengthPercentage>
+    rdfs:label "Length Percentage"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LengthRatio>
+    rdfs:label "Length Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LengthTemperature>
+    rdfs:label "Length Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LengthTemperatureTime>
+    rdfs:label "Length Temperature Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Lethargy>
+    rdfs:label "Lethargy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LevelWidth>
+    rdfs:label "Level Width"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LiftCoefficient>
+    rdfs:label "Lift Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LiftForce>
+    rdfs:label "Lift Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearAbsorptionCoefficient>
+    rdfs:label "Linear Absorption Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearAcceleration>
+    rdfs:label "Linear Acceleration"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearAttenuationCoefficient>
+    rdfs:label "Linear Attenuation Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearCompressibility>
+    rdfs:label "Linear Compressibility"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearDensity>
+    rdfs:label "Linear Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearElectricCurrent>
+    rdfs:label "Linear Electric Current"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearElectricCurrentDensity>
+    rdfs:label "Linear Electric Current Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearEnergyTransfer>
+    rdfs:label "Linear Energy Transfer"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearExpansionCoefficient>
+    rdfs:label
+        "معدل التمدد الحراري الخطي"@ar ,
+        "linearer Ausdehnungskoeffizient"@de ,
+        "linear expansion coefficient"@en ,
+        "coeficiente de expansión térmica lineal"@es ,
+        "coefficient de dilatation linéique"@fr ,
+        "coefficiente di dilatazione lineare"@it ,
+        "線熱膨張係数"@ja ,
+        "współczynnik liniowej rozszerzalności cieplnej"@pl ,
+        "coeficiente de dilatação térmica linear"@pt ,
+        "线性热膨胀系数"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearForce>
+    rdfs:label
+        "Streckenlast"@de ,
+        "Linear Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearIonization>
+    rdfs:label "Linear Ionization"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearMomentum>
+    rdfs:label "Linear Momentum"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearStiffness>
+    rdfs:label
+        "Streckenlast"@de ,
+        "Linear Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearStrain>
+    rdfs:label "Linear Strain"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearThermalExpansion>
+    rdfs:label "Linear Thermal Expansion"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinearVelocity>
+    rdfs:label "Linear Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LinkedFlux>
+    rdfs:label "Linked Flux"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LiquidVolume>
+    rdfs:label "Liquid Volume"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LogOctanolAirPartitionCoefficient>
+    rdfs:label "Octanol Air Partition Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LogOctanolWaterPartitionCoefficient>
+    rdfs:label "Logarithm of Octanol Water Partition Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LogarithmicFrequencyInterval>
+    rdfs:label
+        "Interval měření frekvence ?"@cs ,
+        "Frequenzmaßintervall"@de ,
+        "logarithmic frequency interval"@en ,
+        "فاصله فرکانس لگاریتمی"@fa ,
+        "intervalle de fréquence logarithmique"@fr ,
+        "intervallo logaritmico di frequenza"@it ,
+        "Selang kekerapan logaritma"@ms ,
+        "intervalo logarítmico de frequência"@pt ,
+        "частотный интервал"@ru ,
+        "logaritmik frekans aralığı"@tr ,
+        "对数频率间隔"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/LondonPenetrationDepth>
+    rdfs:label "London Penetration Depth"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Long-RangeOrderParameter>
+    rdfs:label "Long-Range Order Parameter"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LorenzCoefficient>
+    rdfs:label "Lorenz Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LossAngle>
+    rdfs:label "Loss Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LossFactor>
+    rdfs:label "Loss Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LowerCriticalMagneticFluxDensity>
+    rdfs:label "Lower Critical Magnetic Flux Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Luminance>
+    rdfs:label "Luminance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LuminousEfficacy>
+    rdfs:label "Luminous Efficacy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LuminousEmittance>
+    rdfs:label "Luminous Emmitance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LuminousEnergy>
+    rdfs:label "Luminous Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LuminousExposure>
+    rdfs:label "Luminous Exposure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LuminousFlux>
+    rdfs:label
+        "التدفق الضوئي"@ar ,
+        "Светлинен поток"@bg ,
+        "Světelný tok"@cs ,
+        "Lichtstrom"@de ,
+        "luminous flux"@en ,
+        "flujo luminoso"@es ,
+        "شار نوری"@fa ,
+        "flux lumineux"@fr ,
+        "שטף הארה"@he ,
+        "प्रकाशीय बहाव"@hi ,
+        "fényáram"@hu ,
+        "flusso luminoso"@it ,
+        "光束"@ja ,
+        "fluctús lucis"@la ,
+        "Fluks berluminositi"@ms ,
+        "strumień świetlny"@pl ,
+        "fluxo luminoso"@pt ,
+        "flux luminos"@ro ,
+        "Световой поток"@ru ,
+        "svetlobni tok"@sl ,
+        "işık akısı"@tr ,
+        "光通量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/LuminousFluxPerArea>
+    rdfs:label "Luminous Flux per Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LuminousFluxRatio>
+    rdfs:label "Luminous Flux Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/LuminousIntensity>
+    rdfs:label
+        "شدة الإضاءة"@ar ,
+        "Интензитет на светлината"@bg ,
+        "Svítivost"@cs ,
+        "Lichtstärke"@de ,
+        "Ένταση Φωτεινότητας"@el ,
+        "luminous intensity"@en ,
+        "intensidad luminosa"@es ,
+        "شدت نور"@fa ,
+        "intensité lumineuse"@fr ,
+        "עוצמת הארה"@he ,
+        "प्रकाशीय तीव्रता"@hi ,
+        "fényerősség"@hu ,
+        "intensità luminosa"@it ,
+        "光度"@ja ,
+        "intensitas luminosa"@la ,
+        "Keamatan berluminositi"@ms ,
+        "światłość"@pl ,
+        "intensidade luminosa"@pt ,
+        "intensitate luminoasă"@ro ,
+        "Сила света"@ru ,
+        "svetilnost"@sl ,
+        "ışık şiddeti"@tr ,
+        "发光强度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/LuminousIntensityDistribution>
+    rdfs:label "Ion Concentration"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MASS-DELIVERED>
+    rdfs:label "Mass Delivered"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MASS-GROWTH-ALLOWANCE>
+    rdfs:label "Mass Growth Allowance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MASS-MARGIN>
+    rdfs:label "Mass Margin"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MASS-PROPERTY-UNCERTAINTY>
+    rdfs:label "Mass Property Uncertainty"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MOMENT-OF-INERTIA_Y>
+    rdfs:label "Moment of Inertia in the Y axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MOMENT-OF-INERTIA_Z>
+    rdfs:label "Moment of Inertia in the Z axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MachNumber>
+    rdfs:label
+        "عدد ماخ"@ar ,
+        "Machovo číslo"@cs ,
+        "Mach-Zahl"@de ,
+        "Mach number"@en ,
+        "número de Mach"@es ,
+        "عدد ماخ"@fa ,
+        "nombre de Mach"@fr ,
+        "मैक संख्या"@hi ,
+        "numero di Mach"@it ,
+        "マッハ数n"@ja ,
+        "Nombor Mach"@ms ,
+        "liczba Macha"@pl ,
+        "número de Mach"@pt ,
+        "număr Mach"@ro ,
+        "число Маха"@ru ,
+        "Machovo število"@sl ,
+        "Mach sayısı"@tr ,
+        "马赫"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MacroscopicCrossSection>
+    rdfs:label "Macroscopic Cross-section"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MacroscopicTotalCrossSection>
+    rdfs:label "Macroscopic Total Cross-section"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MadelungConstant>
+    rdfs:label
+        "ثابت مادلونك"@ar ,
+        "Madelung-Konstante"@de ,
+        "Madelung constant"@en ,
+        "Constante de Madelung"@es ,
+        "ثابت مادلونگ"@fa ,
+        "Constante de Madelung"@fr ,
+        "Costante di Madelung"@it ,
+        "マーデルングエネルギー"@ja ,
+        "Stała Madelunga"@pl ,
+        "constante de Madelung"@pt ,
+        "постоянная Маделунга"@ru ,
+        "馬德隆常數"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticAreaMoment>
+    rdfs:label "Magnetic Area Moment"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticDipoleMoment>
+    rdfs:label "Magnetic Dipole Moment"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticField>
+    rdfs:label "Magnetic Field"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticFieldStrength_H>
+    rdfs:label
+        "حقل مغناطيسي"@ar ,
+        "Magnetické pole"@cs ,
+        "magnetische Feldstärke"@de ,
+        "magnetic field strength"@en ,
+        "intensidad de campo magnético"@es ,
+        "شدت میدان مغناطیسی"@fa ,
+        "intensité de champ magnétique"@fr ,
+        "intensità di campo magnetico"@it ,
+        "磁場"@ja ,
+        "Kekuatan medan magnetik"@ms ,
+        "pole magnetyczne"@pl ,
+        "intensidade de campo magnético"@pt ,
+        "Câmp magnetic"@ro ,
+        "Магнитное поле"@ru ,
+        "jakost magnetnega polja"@sl ,
+        "Manyetik alan"@tr ,
+        "磁場"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticFlux>
+    rdfs:label
+        "التدفق المغناطيسي"@ar ,
+        "Магнитен поток"@bg ,
+        "Magnetický tok"@cs ,
+        "magnetischer Flux"@de ,
+        "magnetic flux"@en ,
+        "flujo magnético"@es ,
+        "شار مغناطیسی"@fa ,
+        "Flux d'induction magnétique"@fr ,
+        "שטף מגנטי"@he ,
+        "चुम्बकीय बहाव"@hi ,
+        "mágneses fluxus"@hu ,
+        "flusso magnetico"@it ,
+        "磁束"@ja ,
+        "fluxus magneticus"@la ,
+        "Fluks magnet"@ms ,
+        "strumień magnetyczny"@pl ,
+        "fluxo magnético"@pt ,
+        "flux de inducție magnetică"@ro ,
+        "Магнитный поток"@ru ,
+        "magnetni pretok"@sl ,
+        "manyetik akı"@tr ,
+        "磁通量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticFluxDensity>
+    rdfs:label
+        "المجال المغناطيسي"@ar ,
+        "Магнитна индукция"@bg ,
+        "Magnetická indukce"@cs ,
+        "magnetische Flussdichte"@de ,
+        "magnetic flux density"@en ,
+        "Densidad de flujo magnético"@es ,
+        "چگالی شار مغناطیسی"@fa ,
+        "Densité de flux magnétique"@fr ,
+        "צפיפות שטף מגנטי"@he ,
+        "चुम्बकीय क्षेत्र"@hi ,
+        "mágneses indukció"@hu ,
+        "densità di flusso magnetico"@it ,
+        "磁束密度"@ja ,
+        "densitas fluxus magnetici"@la ,
+        "Ketumpatan fluks magnet"@ms ,
+        "indukcja magnetyczna"@pl ,
+        "densidade de fluxo magnético"@pt ,
+        "inducție magnetică"@ro ,
+        "Магнитная индукция"@ru ,
+        "gostota magnetnega pretoka"@sl ,
+        "manyetik akı yoğunluğu"@tr ,
+        "磁通量密度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticFluxPerUnitLength>
+    rdfs:label "Magnetic flux per unit length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticMoment>
+    rdfs:label
+        "عزم مغناطيسي"@ar ,
+        "Magnetický dipól"@cs ,
+        "magnetisches Dipolmoment"@de ,
+        "magnetic moment"@en ,
+        "momento de dipolo magnético"@es ,
+        "دوقطبی مغناطیسی"@fa ,
+        "moment magnétique"@fr ,
+        "चुम्बकीय द्विध्रुव"@hi ,
+        "momento di dipolo magnetico"@it ,
+        "磁気双極子"@ja ,
+        "Momen magnetik"@ms ,
+        "dipol magnetyczny"@pl ,
+        "momento de dipolo magnético"@pt ,
+        "Магнитный момент"@ru ,
+        "Manyetik moment"@tr ,
+        "磁偶极"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticPolarization>
+    rdfs:label "Magnetic Polarization"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticQuantumNumber>
+    rdfs:label "Magnetic Quantum Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticReluctivity>
+    rdfs:label "Magnetic Reluctivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticSusceptability>
+    rdfs:label "Magnetic Susceptability"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticTension>
+    rdfs:label "Magnetic Tension"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagneticVectorPotential>
+    rdfs:label
+        "magnetický potenciál"@cs ,
+        "magnetisches Potenzial"@de ,
+        "magnetic vector potential"@en ,
+        "potencial magnético"@es ,
+        "پتانسیل برداری مغناطیسی"@fa ,
+        "potentiel magnétique"@fr ,
+        "potenziale vettore magnetico"@it ,
+        "Keupayaan vektor magnetik"@ms ,
+        "potencjał magnetyczny"@pl ,
+        "potencial magnético"@pt ,
+        "potențial magnetic"@ro ,
+        "Магнитний потенциал"@ru ,
+        "manyetik potansiyeli"@tr ,
+        "磁向量势"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Magnetization>
+    rdfs:label
+        "مغنطة"@ar ,
+        "Magnetisierung"@de ,
+        "magnetization"@en ,
+        "magnetización"@es ,
+        "aimantation"@fr ,
+        "magnetizzazione"@it ,
+        "磁化"@ja ,
+        "magnetyzacia"@pl ,
+        "magnetização"@pt ,
+        "намагниченность"@ru ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagnetizationField>
+    rdfs:label "Magnetization Field"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MagnetomotiveForce>
+    rdfs:label "Magnetomotive Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Mass>
+    rdfs:label
+        "كتلة"@ar ,
+        "Маса"@bg ,
+        "Hmotnost"@cs ,
+        "Masse"@de ,
+        "Μάζα"@el ,
+        "mass"@en ,
+        "masa"@es ,
+        "جرم"@fa ,
+        "masse"@fr ,
+        "מסה"@he ,
+        "भार"@hi ,
+        "tömeg"@hu ,
+        "massa"@it ,
+        "質量"@ja ,
+        "massa"@la ,
+        "Jisim"@ms ,
+        "masa"@pl ,
+        "massa"@pt ,
+        "masă"@ro ,
+        "Масса"@ru ,
+        "masa"@sl ,
+        "kütle"@tr ,
+        "质量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassAbsorptionCoefficient>
+    rdfs:label "Mass Absorption Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassAmountOfSubstance>
+    rdfs:label "Mass Amount of Substance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassAmountOfSubstanceTemperature>
+    rdfs:label "Mass Amount of Substance Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassAttenuationCoefficient>
+    rdfs:label "Mass Attenuation Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassConcentration>
+    rdfs:label "Mass Concentration"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassConcentrationOfWater>
+    rdfs:label "Mass Concentration of Water"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassConcentrationOfWaterVapour>
+    rdfs:label "Mass Concentration of Water Vapour"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassDefect>
+    rdfs:label "Mass Defect"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassDensity>
+    rdfs:label
+        "الكثافة"@ar ,
+        "hustota"@cs ,
+        "Massendichte"@de ,
+        "mass density"@en ,
+        "densidad"@es ,
+        "چگالی"@fa ,
+        "densité"@fr ,
+        "घनत्व"@hi ,
+        "densità"@it ,
+        "密度"@ja ,
+        "Ketumpatan jisim"@ms ,
+        "gęstość"@pl ,
+        "densidade"@pt ,
+        "densitate"@ro ,
+        "плотность"@ru ,
+        "Gostôta"@sl ,
+        "yoğunluk"@tr ,
+        "密度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassEnergyTransferCoefficient>
+    rdfs:label "Mass Energy Transfer Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassExcess>
+    rdfs:label "Mass Excess"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassFlowRate>
+    rdfs:label "Mass Flow Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassFraction>
+    rdfs:label "Mass Fraction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassFractionOfDryMatter>
+    rdfs:label "Mass Fraction of Dry Matter"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassFractionOfWater>
+    rdfs:label "Mass Fraction of Water"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassNumber>
+    rdfs:label "Mass Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassOfElectricalPowerSupply>
+    rdfs:label "Mass Of Electrical Power Supply"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassOfSolidBooster>
+    rdfs:label "Mass Of Solid Booster"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassOfTheEarth>
+    rdfs:label "Mass Of The Earth"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassPerArea>
+    rdfs:label "Mass per Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassPerAreaTime>
+    rdfs:label "Mass per Area Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassPerElectricCharge>
+    rdfs:label "Mass per Electric Charge"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassPerEnergy>
+    rdfs:label "Mass per Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassPerLength>
+    rdfs:label "Mass per Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassPerTime>
+    rdfs:label "Mass per Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassRatio>
+    rdfs:label "Mass Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassRatioOfWaterToDryMatter>
+    rdfs:label "Mass Concentration of Water To Dry Matter"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassRatioOfWaterVapourToDryGas>
+    rdfs:label "Mass Ratio of Water Vapour to Dry Gas"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassTemperature>
+    rdfs:label "Mass Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassicActivity>
+    rdfs:label "Massic Activity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MassieuFunction>
+    rdfs:label "Massieu Function"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MaxExpectedOperatingThrust>
+    rdfs:label "Maximum Expected Operating Thrust"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MaxOperatingThrust>
+    rdfs:label "Max Operating Thrust"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MaxSeaLevelThrust>
+    rdfs:label "Max Sea Level Thrust"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MaximumBeta-ParticleEnergy>
+    rdfs:label "Maximum Beta-Particle Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MaximumExpectedOperatingPressure>
+    rdfs:label "Maximum Expected Operating Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MaximumOperatingPressure>
+    rdfs:label "Maximum Operating Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MeanEnergyImparted>
+    rdfs:label "Mean Energy Imparted"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MeanFreePath>
+    rdfs:label "Mean Free Path"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MeanLifetime>
+    rdfs:label "Mean Lifetime"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MeanLinearRange>
+    rdfs:label "Mean Linear Range"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MeanMassRange>
+    rdfs:label "Mean Mass Range"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MechanicalEnergy>
+    rdfs:label "Mechanical Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MechanicalImpedance>
+    rdfs:label "Mechanical Impedance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MechanicalMobility>
+    rdfs:label "Mechanical Mobility"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MechanicalSurfaceImpedance>
+    rdfs:label "Mechanical surface impedance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MeltingPoint>
+    rdfs:label "Melting Point Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MicroCanonicalPartitionFunction>
+    rdfs:label "Micro Canonical Partition Function"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MicrobialFormation>
+    rdfs:label "Microbial Formation"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MigrationArea>
+    rdfs:label "Migration Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MigrationLength>
+    rdfs:label "Migration Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Mobility>
+    rdfs:label
+        "قابلية التحرك"@ar ,
+        "Beweglichkeit"@de ,
+        "mobility"@en ,
+        "movilidad"@es ,
+        "mobilité"@fr ,
+        "mobilità"@it ,
+        "移動度"@ja ,
+        "mobilność"@pl ,
+        "mobilidade"@pt ,
+        "迁移率"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MobilityRatio>
+    rdfs:label "Mobility Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ModulusOfAdmittance>
+    rdfs:label "Modulus Of Admittance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ModulusOfElasticity>
+    rdfs:label "Modulus of Elasticity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ModulusOfImpedance>
+    rdfs:label "Modulus Of Impedance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ModulusOfLinearSubgradeReaction>
+    rdfs:label "Modulus of Linear Subgrade Reaction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ModulusOfRotationalSubgradeReaction>
+    rdfs:label "Modulus of Rotational Subgrade Reaction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ModulusOfSubgradeReaction>
+    rdfs:label "Modulus of Subgrade Reaction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MoistureDiffusivity>
+    rdfs:label "Moisture Diffusivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolalityOfSolute>
+    rdfs:label "Molality of Solute"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarAbsorptionCoefficient>
+    rdfs:label "Molar Absorption Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarAngularMomentum>
+    rdfs:label "Molar Angular Momentum"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarAttenuationCoefficient>
+    rdfs:label "Molar Attenuation Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarConductivity>
+    rdfs:label "Molar Conductivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarEnergy>
+    rdfs:label "Molar Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarEntropy>
+    rdfs:label "Molar Entropy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarFlowRate>
+    rdfs:label "Molar Flow Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarHeatCapacity>
+    rdfs:label "Molar Heat Capacity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarMass>
+    rdfs:label
+        "كتلة مولية"@ar ,
+        "Molární hmotnost"@cs ,
+        "Molmasse"@de ,
+        "molar mass"@en ,
+        "masa molar"@es ,
+        "جرم مولی"@fa ,
+        "masse molaire"@fr ,
+        "मोलर द्रव्यमान"@hi ,
+        "massa molare"@it ,
+        "モル質量"@ja ,
+        "Jisim molar"@ms ,
+        "Masa molowa"@pl ,
+        "massa molar"@pt ,
+        "Masă molară"@ro ,
+        "Молярная масса"@ru ,
+        "molska masa"@sl ,
+        "molar kütle"@tr ,
+        "摩尔质量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarOpticalRotatoryPower>
+    rdfs:label "Molar Optical Rotatory Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarRefractivity>
+    rdfs:label "Molar Refractivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolarVolume>
+    rdfs:label
+        "حجم مولي"@ar ,
+        "molární objem"@cs ,
+        "Molvolumen"@de ,
+        "molar volume"@en ,
+        "volumen molar"@es ,
+        "حجم مولی"@fa ,
+        "volume molaire"@fr ,
+        "volume molare"@it ,
+        "モル体積"@ja ,
+        "Isipadu molar"@ms ,
+        "volume molar"@pl ,
+        "volume molar"@pt ,
+        "volum molar"@ro ,
+        "Молярный объём"@ru ,
+        "molski volumen"@sl ,
+        "molar hacim"@tr ,
+        "摩尔体积"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MoleFraction>
+    rdfs:label "Mole Fraction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolecularConcentration>
+    rdfs:label "Molecular Concentration"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolecularMass>
+    rdfs:label "Molecular Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MolecularViscosity>
+    rdfs:label "Molecular Viscosity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MomentOfForce>
+    rdfs:label "Moment of Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MomentOfInertia>
+    rdfs:label
+        "عزم القصور الذاتي"@ar ,
+        "Moment setrvačnosti"@cs ,
+        "Massenträgheitsmoment"@de ,
+        "moment of inertia"@en ,
+        "momento de inercia"@es ,
+        "گشتاور لختی"@fa ,
+        "moment d'inertie"@fr ,
+        "जड़त्वाघूर्ण"@hi ,
+        "momento di inerzia"@it ,
+        "慣性モーメント"@ja ,
+        "Momen inersia"@ms ,
+        "Moment bezwładności"@pl ,
+        "momento de inércia"@pt ,
+        "Moment de inerție"@ro ,
+        "Момент инерции"@ru ,
+        "Eylemsizlik momenti"@tr ,
+        "轉動慣量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Momentum>
+    rdfs:label
+        "زخم الحركة"@ar ,
+        "hybnost"@cs ,
+        "Impuls"@de ,
+        "momentum"@en ,
+        "cantidad de movimiento"@es ,
+        "تکانه"@fa ,
+        "quantité de mouvement"@fr ,
+        "quantità di moto"@it ,
+        "運動量"@ja ,
+        "Momentum"@ms ,
+        "pęd"@pl ,
+        "momento linear"@pt ,
+        "impuls"@ro ,
+        "импульс"@ru ,
+        "gibalna količina"@sl ,
+        "Momentum"@tr ,
+        "动量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/MomentumPerAngle>
+    rdfs:label "Momentum per Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MorbidityRate>
+    rdfs:label "Morbidity Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MortalityRate>
+    rdfs:label "Mortality Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MultiplicationFactor>
+    rdfs:label "Multiplication Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/MutualInductance>
+    rdfs:label "Mutual Inductance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NOMINAL-ASCENT-PROPELLANT-MASS>
+    rdfs:label "Nominal Ascent Propellant Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NapierianAbsorbance>
+    rdfs:label "Napierian Absorbance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NeelTemperature>
+    rdfs:label "Neel Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NeutronDiffusionCoefficient>
+    rdfs:label
+        "Diffusionskoeffizient"@de ,
+        "diffusion coefficient"@en ,
+        "coeficiente de difusión"@es ,
+        "coefficient de diffusion"@fr ,
+        "coefficiente di diffusione"@it ,
+        "coeficiente de difusão"@pt ,
+        "difuzijski koeficient"@sl ;
+.
+
+<http://qudt.org/vocab/quantitykind/NeutronDiffusionLength>
+    rdfs:label "Neutron Diffusion Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NeutronNumber>
+    rdfs:label
+        "عدد النيوترونات"@ar ,
+        "Neutronové číslo"@cs ,
+        "Neutronenzahl"@de ,
+        "neutron number"@en ,
+        "número neutrónico"@es ,
+        "عدد نوترون"@fa ,
+        "Nombre de neutrons"@fr ,
+        "numero neutronico"@it ,
+        "Nombor neutron"@ms ,
+        "liczba neutronowa"@pl ,
+        "número de neutrons"@pt ,
+        "число нейтронов"@ru ,
+        "nötron snumarası"@tr ,
+        "中子數"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/NeutronYieldPerAbsorption>
+    rdfs:label "Neutron Yield per Absorption"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NeutronYieldPerFission>
+    rdfs:label "Neutron Yield per Fission"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Non-LeakageProbability>
+    rdfs:label "Non-Leakage Probability"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NonActivePower>
+    rdfs:label "Non-active Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NonNegativeLength>
+    rdfs:label "Positive Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NormalStress>
+    rdfs:label "Normal Stress"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NormalizedDimensionlessRatio>
+    rdfs:label "Positive Dimensionless Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NozzleThroatCrossSectionalArea>
+    rdfs:label "Nozzle Throat Cross-sectional Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NozzleThroatDiameter>
+    rdfs:label "Nozzle Throat Diameter"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NozzleThroatPressure>
+    rdfs:label "Nozzle Throat Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NozzleWallsThrustReaction>
+    rdfs:label "Nozzle Walls Thrust Reaction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NuclearQuadrupoleMoment>
+    rdfs:label "Nuclear Quadrupole Moment"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NuclearRadius>
+    rdfs:label "Nuclear Radius"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NuclearSpinQuantumNumber>
+    rdfs:label "Spin Quantum Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NucleonNumber>
+    rdfs:label
+        "عدد كتلي"@ar ,
+        "Nukleové číslo"@cs ,
+        "Nukleonenzahl"@de ,
+        "nucleon number"@en ,
+        "número másico"@es ,
+        "عدد جرمی"@fa ,
+        "nombre de masse"@fr ,
+        "numero di massa"@it ,
+        "質量数"@ja ,
+        "Nombor nukleon"@ms ,
+        "liczba masowa"@pl ,
+        "número de massa"@pt ,
+        "nükleon numarası"@tr ,
+        "质量数"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/NumberDensity>
+    rdfs:label "Number Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/NumberOfParticles>
+    rdfs:label "Number of Particles"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/OlfactoryThreshold>
+    rdfs:label "Olfactory Threshold"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/OrbitalAngularMomentumPerUnitMass>
+    rdfs:label "Orbital Angular Momentum per Unit Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/OrbitalAngularMomentumQuantumNumber>
+    rdfs:label "Orbital Angular Momentum Quantum Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/OrbitalRadialDistance>
+    rdfs:label "Orbital Radial Distance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/OrderOfReflection>
+    rdfs:label "Order of Reflection"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/OsmoticCoefficient>
+    rdfs:label "Osmotic Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/OsmoticPressure>
+    rdfs:label
+        "Osmotický tlak"@cs ,
+        "osmotischer Druck"@de ,
+        "osmotic pressure"@en ,
+        "presión osmótica"@es ,
+        "فشار اسمزی"@fa ,
+        "pression osmotique"@fr ,
+        "pressione osmotica"@it ,
+        "Tekanan osmotik"@ms ,
+        "pressão osmótica"@pt ,
+        "ozmotik basıç"@tr ,
+        "渗透压"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/OverRangeDistance>
+    rdfs:label "Over-range distance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PH>
+    rdfs:label "PH"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PREDICTED-MASS>
+    rdfs:label "Predicted Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PRODUCT-OF-INERTIA>
+    rdfs:label "Product of Inertia"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PRODUCT-OF-INERTIA_X>
+    rdfs:label "Product of Inertia in the X axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PRODUCT-OF-INERTIA_Y>
+    rdfs:label "Product of Inertia in the Y axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PRODUCT-OF-INERTIA_Z>
+    rdfs:label "Product of Inertia in the Z axis"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PackingFraction>
+    rdfs:label "Packing Fraction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PartialPressure>
+    rdfs:label "Partial Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ParticleCurrent>
+    rdfs:label "Particle Current"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ParticleFluence>
+    rdfs:label "Particle Fluence"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ParticleFluenceRate>
+    rdfs:label "Particle Fluence Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ParticleNumberDensity>
+    rdfs:label "Particle Number Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ParticlePositionVector>
+    rdfs:label "Particle Position Vector"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ParticleSourceDensity>
+    rdfs:label "Particle Source Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PathLength>
+    rdfs:label "Path Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PayloadMass>
+    rdfs:label "Payload Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PayloadRatio>
+    rdfs:label "Payload Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PeltierCoefficient>
+    rdfs:label "Peltier Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Period>
+    rdfs:label "Period"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Permeability>
+    rdfs:label "Permeability"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PermeabilityRatio>
+    rdfs:label "Permeability Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Permeance>
+    rdfs:label "Permeance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Permittivity>
+    rdfs:label "Permittivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PermittivityRatio>
+    rdfs:label "Permittivity Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PhaseCoefficient>
+    rdfs:label "Phase coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PhaseDifference>
+    rdfs:label
+        "اختلاف طور"@ar ,
+        "Phasenverschiebungswinkel"@de ,
+        "phase difference"@en ,
+        "diferencia de fase"@es ,
+        "différence de phase"@fr ,
+        "sfasamento angolare"@it ,
+        "位相差"@ja ,
+        "przesunięcie fazowe"@pl ,
+        "diferença de fase"@pt ;
+.
+
+<http://qudt.org/vocab/quantitykind/PhaseSpeedOfSound>
+    rdfs:label "Phase speed of sound"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PhononMeanFreePath>
+    rdfs:label "Phonon Mean Free Path"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PhotoThresholdOfAwarenessFunction>
+    rdfs:label "Photo Threshold of Awareness Function"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PhotonIntensity>
+    rdfs:label "Photon Intensity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PhotonRadiance>
+    rdfs:label "Photon Radiance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PhotosyntheticPhotonFlux>
+    rdfs:label "Photosynthetic Photon Flux"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PhotosyntheticPhotonFluxDensity>
+    rdfs:label "Photosynthetic Photon Flux Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PlanarForce>
+    rdfs:label
+        "Flächenlast"@de ,
+        "Planar Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PlanckFunction>
+    rdfs:label "Planck Function"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PlaneAngle>
+    rdfs:label
+        "الزاوية النصف قطرية"@ar ,
+        "Равнинен ъгъл"@bg ,
+        "Rovinný úhel"@cs ,
+        "ebener Winkel"@de ,
+        "Επίπεδη γωνία"@el ,
+        "plane angle"@en ,
+        "ángulo plano"@es ,
+        "زاویه مستوی"@fa ,
+        "angle plan"@fr ,
+        "זווית"@he ,
+        "क्षेत्र"@hi ,
+        "szög"@hu ,
+        "angolo piano"@it ,
+        "弧度"@ja ,
+        "angulus planus"@la ,
+        "Sudut satah"@ms ,
+        "kąt płaski"@pl ,
+        "medida angular"@pt ,
+        "unghi plan"@ro ,
+        "Плоский угол"@ru ,
+        "ravninski kot"@sl ,
+        "düzlemsel açı"@tr ,
+        "角度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/PoissonRatio>
+    rdfs:label "Poisson Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PolarMomentOfInertia>
+    rdfs:label "Polar moment of inertia"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Polarizability>
+    rdfs:label "Polarizability"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PolarizationField>
+    rdfs:label "Polarization Field"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Population>
+    rdfs:label "Population"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PositionVector>
+    rdfs:label "Position Vector"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PositiveDimensionlessRatio>
+    rdfs:label "Positive Dimensionless Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PositiveLength>
+    rdfs:label "Positive Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PositivePlaneAngle>
+    rdfs:label "Positive Plane Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PotentialEnergy>
+    rdfs:label
+        "طاقة وضع"@ar ,
+        "potenciální energie"@cs ,
+        "potentielle Energie"@de ,
+        "potential energy"@en ,
+        "energía potencial"@es ,
+        "انرژی پتانسیل"@fa ,
+        "énergie potentielle"@fr ,
+        "स्थितिज ऊर्जा"@hi ,
+        "energia potenziale"@it ,
+        "位置エネルギー"@ja ,
+        "Tenaga keupayaan"@ms ,
+        "Energia potencjalna"@pl ,
+        "energia potencial"@pt ,
+        "Energie potențială"@ro ,
+        "потенциальная энергия"@ru ,
+        "Potansiyel enerji"@tr ,
+        "势能"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Power>
+    rdfs:label
+        "القدرة"@ar ,
+        "Мощност"@bg ,
+        "Výkon"@cs ,
+        "Leistung"@de ,
+        "Ισχύς"@el ,
+        "power"@en ,
+        "potencia"@es ,
+        "توان، نرخ جریان گرما"@fa ,
+        "puissance"@fr ,
+        "הספק"@he ,
+        "शक्ति"@hi ,
+        "teljesítmény , hőáramlás"@hu ,
+        "potenza"@it ,
+        "電力・仕事率"@ja ,
+        "potentia"@la ,
+        "Kuasa"@ms ,
+        "moc"@pl ,
+        "potência"@pt ,
+        "putere"@ro ,
+        "Мощность"@ru ,
+        "moč"@sl ,
+        "güç"@tr ,
+        "功率、热流"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/PowerArea>
+    rdfs:label "Power Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PowerAreaPerSolidAngle>
+    rdfs:label "Power Area per Solid Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PowerFactor>
+    rdfs:label
+        "معامل القدرة"@ar ,
+        "Účiník"@cs ,
+        "Leistungsfaktor"@de ,
+        "power factor"@en ,
+        "factor de potencia"@es ,
+        "ضریب توان"@fa ,
+        "facteur de puissance"@fr ,
+        "शक्ति गुणांक"@hi ,
+        "fattore di potenza"@it ,
+        "力率"@ja ,
+        "faktor kuasa"@ms ,
+        "Współczynnik mocy"@pl ,
+        "fator de potência"@pt ,
+        "factor de putere"@ro ,
+        "Коэффициент_мощности"@ru ,
+        "güç faktörü"@tr ,
+        "功率因数"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/PowerPerArea>
+    rdfs:label "Power Per Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PowerPerAreaAngle>
+    rdfs:label "Power per Area Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PowerPerAreaQuarticTemperature>
+    rdfs:label "Power per area quartic temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PowerPerElectricCharge>
+    rdfs:label "Power Per Electric Charge"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PoyntingVector>
+    rdfs:label
+        "متجَه بوينتنج"@ar ,
+        "Poynting-Vektor"@de ,
+        "Poynting vector"@en ,
+        "vector de Poynting"@es ,
+        "vecteur de Poynting"@fr ,
+        "vettore di Poynting"@it ,
+        "ポインティングベクトル"@ja ,
+        "wektor Poyntinga"@pl ,
+        "vector de Poynting"@pt ,
+        "вектор Пойнтинга"@ru ;
+.
+
+<http://qudt.org/vocab/quantitykind/Pressure>
+    rdfs:label
+        "الضغط أو الإجهاد"@ar ,
+        "Налягане"@bg ,
+        "Tlak"@cs ,
+        "Druck"@de ,
+        "Πίεση - τάση"@el ,
+        "pressure"@en ,
+        "presión"@es ,
+        "فشار، تنش"@fa ,
+        "pression"@fr ,
+        "לחץ"@he ,
+        "दबाव"@hi ,
+        "nyomás"@hu ,
+        "pressione"@it ,
+        "圧力"@ja ,
+        "pressio"@la ,
+        "Tekanan"@ms ,
+        "ciśnienie"@pl ,
+        "pressão"@pt ,
+        "presiune"@ro ,
+        "Давление"@ru ,
+        "tlak"@sl ,
+        "basınç"@tr ,
+        "压强、压力"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/PressureBurningRateConstant>
+    rdfs:label "Pressure Burning Rate Constant"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PressureBurningRateIndex>
+    rdfs:label "Pressure Burning Rate Index"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PressureCoefficient>
+    rdfs:label "Pressure Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PressureLossPerLength>
+    rdfs:label "Pressure Loss per Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PressurePercentage>
+    rdfs:label "Pressure Percentage"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PressureRatio>
+    rdfs:label "Pressure Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Prevalence>
+    rdfs:label "Prevalence"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PrincipalQuantumNumber>
+    rdfs:label "Principal Quantum Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PropagationCoefficient>
+    rdfs:label "Propagation coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PropellantBurnRate>
+    rdfs:label "Propellant Burn Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PropellantMass>
+    rdfs:label "Propellant Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PropellantMeanBulkTemperature>
+    rdfs:label "Propellant Mean Bulk Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/PropellantTemperature>
+    rdfs:label "Propellant Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/QualityFactor>
+    rdfs:label "Quality Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/QuantumNumber>
+    rdfs:label "Quantum Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/QuarticElectricDipoleMomentPerCubicEnergy>
+    rdfs:label "Quartic Electric Dipole Moment per Cubic Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RESERVE-MASS>
+    rdfs:label "Reserve Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RF-Power>
+    rdfs:label "RF-Power Level"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadialDistance>
+    rdfs:label "Radial Distance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Radiance>
+    rdfs:label "Radiance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadianceFactor>
+    rdfs:label "Radiance Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadiantEmmitance>
+    rdfs:label "Radiant Emmitance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadiantEnergy>
+    rdfs:label
+        "طاقة إشعاعية"@ar ,
+        "energie záření"@cs ,
+        "Strahlungsenergie"@de ,
+        "radiant energy"@en ,
+        "energía radiante"@es ,
+        "انرژی تابشی"@fa ,
+        "énergie rayonnante"@fr ,
+        "विकिरण ऊर्जा"@hi ,
+        "energia radiante"@it ,
+        "放射エネルギー"@ja ,
+        "Tenaga sinaran"@ms ,
+        "energia promienista"@pl ,
+        "energia radiante"@pt ,
+        "энергия излучения"@ru ,
+        "Işınım erkesi"@tr ,
+        "辐射能"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadiantEnergyDensity>
+    rdfs:label "Radiant Energy Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadiantExposure>
+    rdfs:label "Radiant Exposure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadiantFluence>
+    rdfs:label "Radiant Fluence"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadiantFluenceRate>
+    rdfs:label "Radiant Fluence Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadiantFlux>
+    rdfs:label
+        "قدرة إشعاعية"@ar ,
+        "Strahlungsfluss"@de ,
+        "radiant flux"@en ,
+        "potencia radiante"@es ,
+        "flux énergétique"@fr ,
+        "flusso radiante"@it ,
+        "放射パワー"@ja ,
+        "moc promieniowania"@pl ,
+        "potência radiante"@pt ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadiantIntensity>
+    rdfs:label "Radiant Intensity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadiativeHeatTransfer>
+    rdfs:label "Radiative Heat Transfer"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Radiosity>
+    rdfs:label "Radiosity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Radius>
+    rdfs:label "Radius"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RadiusOfCurvature>
+    rdfs:label "Radius of Curvature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RatioOfSpecificHeatCapacities>
+    rdfs:label "Ratio of Specific Heat Capacities"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Reactance>
+    rdfs:label "Reactance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ReactionEnergy>
+    rdfs:label "Reaction Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ReactivePower>
+    rdfs:label
+        "القدرة الكهربائية الردفعلية;الردية"@ar ,
+        "Jalový výkon"@cs ,
+        "Blindleistung"@de ,
+        "reactive power"@en ,
+        "potencia reactiva"@es ,
+        "توان راکتیو"@fa ,
+        "puissance réactive"@fr ,
+        "potenza reattiva"@it ,
+        "無効電力"@ja ,
+        "Kuasa reaktif"@ms ,
+        "moc bierna"@pl ,
+        "potência reativa"@pt ,
+        "reaktif güç"@tr ,
+        "无功功率"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Reactivity>
+    rdfs:label "Reactivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ReactorTimeConstant>
+    rdfs:label "Reactor Time Constant"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RecombinationCoefficient>
+    rdfs:label "Recombination Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Reflectance>
+    rdfs:label "Reflectance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ReflectanceFactor>
+    rdfs:label "Reflectance Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Reflectivity>
+    rdfs:label "Reflectivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RefractiveIndex>
+    rdfs:label
+        "معامل الانكسار"@ar ,
+        "Index lomu"@cs ,
+        "Brechzahl"@de ,
+        "refractive index"@en ,
+        "índice de refracción"@es ,
+        "ضریب شکست"@fa ,
+        "indice de réfraction"@fr ,
+        "अपवर्तनांक"@hi ,
+        "indice di rifrazione"@it ,
+        "屈折率"@ja ,
+        "Indeks biasan"@ms ,
+        "Współczynnik załamania"@pl ,
+        "índice refrativo"@pt ,
+        "Indice de refracție"@ro ,
+        "Показатель преломления"@ru ,
+        "kırılma indeksi"@tr ,
+        "折射率"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativeAtomicMass>
+    rdfs:label "Relative Atomic Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativeHumidity>
+    rdfs:label "Relative Humidity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativeLuminousFlux>
+    rdfs:label "Relative Luminous Flux"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativeMassConcentrationOfVapour>
+    rdfs:label "Relative Mass Concentration of Vapour"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativeMassDefect>
+    rdfs:label "Relative Mass Defect"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativeMassDensity>
+    rdfs:label "Relative Mass Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativeMassExcess>
+    rdfs:label "Relative Mass Excess"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativeMassRatioOfVapour>
+    rdfs:label "Relative Mass Ratio of Vapour"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativeMolecularMass>
+    rdfs:label "Relative Molecular Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativePartialPressure>
+    rdfs:label "Relative Partial Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelativePressureCoefficient>
+    rdfs:label "Relative Pressure Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RelaxationTIme>
+    rdfs:label "Relaxation TIme"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Reluctance>
+    rdfs:label "Reluctance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ResidualResistivity>
+    rdfs:label "Residual Resistivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Resistance>
+    rdfs:label "Resistance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ResistancePercentage>
+    rdfs:label "Resistance Percentage"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ResistanceRatio>
+    rdfs:label "Resistance Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Resistivity>
+    rdfs:label "Resistivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ResonanceEnergy>
+    rdfs:label "Resonance Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ResonanceEscapeProbability>
+    rdfs:label "Resonance Escape Probability"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ResonanceEscapeProbabilityForFission>
+    rdfs:label "Resonance Escape Probability For Fission"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RespiratoryRate>
+    rdfs:label "Respiratory Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RestEnergy>
+    rdfs:label "Rest Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RestMass>
+    rdfs:label
+        "كتلة ساكنة"@ar ,
+        "Klidová hmotnost"@cs ,
+        "Ruhemasse"@de ,
+        "rest mass"@en ,
+        "masa invariante"@es ,
+        "جرم سکون"@fa ,
+        "masse au repos"@fr ,
+        "निश्चर द्रव्यमान"@hi ,
+        "massa a riposo"@it ,
+        "不変質量"@ja ,
+        "Jisim rehat"@ms ,
+        "masa spoczynkowa"@pl ,
+        "massa de repouso"@pt ,
+        "masa invariantă"@ro ,
+        "инвариантная масса"@ru ,
+        "Mirovna masa"@sl ,
+        "dinlenme kütlesi"@tr ,
+        "静止质量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ReverberationTime>
+    rdfs:label "Reverberation Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ReynoldsNumber>
+    rdfs:label "Reynolds Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RichardsonConstant>
+    rdfs:label "Richardson Constant"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RocketAtmosphericTransverseForce>
+    rdfs:label "Rocket Atmospheric Transverse Force"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RotationalMass>
+    rdfs:label "Rotational Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/RotationalStiffness>
+    rdfs:label "Rotational Stiffness"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ScalarMagneticPotential>
+    rdfs:label "Scalar Magnetic Potential"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SecondAxialMomentOfArea>
+    rdfs:label "Second Axial Moment of Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SecondMomentOfArea>
+    rdfs:label
+        "Flächenträgheitsmoment"@de ,
+        "second moment of area"@en ,
+        "segundo momento de érea"@es ,
+        "گشتاور دوم سطح"@fa ,
+        "moment quadratique"@fr ,
+        "क्षेत्रफल का द्वितीय आघूर्ण"@hi ,
+        "secondo momento di area"@it ,
+        "断面二次モーメント"@ja ,
+        "Geometryczny moment bezwładności"@pl ,
+        "Segundo momento de área"@pt ,
+        "截面二次轴矩"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/SecondOrderReactionRateConstant>
+    rdfs:label "Reaction Rate Constant"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SecondPolarMomentOfArea>
+    rdfs:label "Second Polar Moment of Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SecondStageMassRatio>
+    rdfs:label "Second Stage Mass Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SectionAreaIntegral>
+    rdfs:label "Section Area Integral"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SectionModulus>
+    rdfs:label "Section Modulus"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SeebeckCoefficient>
+    rdfs:label "Seebeck Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SerumOrPlasmaLevel>
+    rdfs:label "Serum or Plasma Level"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ShannonDiversityIndex>
+    rdfs:label "Shannon Diversity Index"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ShearModulus>
+    rdfs:label "Shear Modulus"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ShearStrain>
+    rdfs:label "Shear Strain"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ShearStress>
+    rdfs:label "Shear Stress"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Short-RangeOrderParameter>
+    rdfs:label "Short-Range Order Parameter"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SignalDetectionThreshold>
+    rdfs:label "Signal Detection Threshold"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SignalStrength>
+    rdfs:label "Signal Strength"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SingleStageLauncherMassRatio>
+    rdfs:label "Single Stage Launcher Mass Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Slowing-DownArea>
+    rdfs:label "Slowing-Down Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Slowing-DownDensity>
+    rdfs:label "Slowing-Down Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Slowing-DownLength>
+    rdfs:label "Slowing-Down Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoilAdsorptionCoefficient>
+    rdfs:label "Soil Adsorption Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SolidAngle>
+    rdfs:label
+        "الزاوية الصلبة"@ar ,
+        "Пространствен ъгъл"@bg ,
+        "Prostorový úhel"@cs ,
+        "Raumwinkel"@de ,
+        "Στερεά γωνία"@el ,
+        "solid angle"@en ,
+        "ángulo sólido"@es ,
+        "زاویه فضایی"@fa ,
+        "angle solide"@fr ,
+        "זווית מרחבית"@he ,
+        "आयतन"@hi ,
+        "térszög"@hu ,
+        "angolo solido"@it ,
+        "立体角"@ja ,
+        "angulus solidus"@la ,
+        "Sudut padu"@ms ,
+        "kąt bryłowy"@pl ,
+        "ângulo sólido"@pt ,
+        "unghi solid"@ro ,
+        "Телесный угол"@ru ,
+        "prostorski kot"@sl ,
+        "katı cisimdeki açı"@tr ,
+        "立体角度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/SolidStateDiffusionLength>
+    rdfs:label "Diffusion Length (Solid State Physics)"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Solubility_Water>
+    rdfs:label "Water Solubility"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundEnergyDensity>
+    rdfs:label "Sound energy density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundExposure>
+    rdfs:label "Sound exposure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundExposureLevel>
+    rdfs:label "Sound exposure level"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundIntensity>
+    rdfs:label "Sound intensity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundParticleAcceleration>
+    rdfs:label "Sound particle acceleration"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundParticleDisplacement>
+    rdfs:label "Sound Particle Displacement"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundParticleVelocity>
+    rdfs:label
+        "سرعة جسيم"@ar ,
+        "Schallschnelle"@de ,
+        "sound particle velocity"@en ,
+        "velocidad acústica de una partícula"@es ,
+        "vitesse  acoustique d‘une particule"@fr ,
+        "velocità di spostamento"@it ,
+        "粒子速度"@ja ,
+        "prędkość akustyczna"@pl ,
+        "velocidade acústica de uma partícula"@pt ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundPower>
+    rdfs:label
+        "القدرة الصوتية"@ar ,
+        "Schallleistung"@de ,
+        "sound power"@en ,
+        "potencie acústica"@es ,
+        "puissance acoustique"@fr ,
+        "potenza sonora"@it ,
+        "音源の音響出力"@ja ,
+        "moc akustyczna"@pl ,
+        "potência acústica"@pt ,
+        "звуковая мощность"@ru ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundPowerLevel>
+    rdfs:label "Sound power level"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundPressure>
+    rdfs:label "Sound pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundPressureLevel>
+    rdfs:label
+        "كمية جذر الطاقة"@ar ,
+        "Hladina akustického tlaku"@cs ,
+        "Schalldruckpegel"@de ,
+        "sound pressure level"@en ,
+        "nivel de presión sonora"@es ,
+        "سطح یک کمیت توان-ریشه"@fa ,
+        "niveau de pression acoustique"@fr ,
+        "livello di pressione sonora"@it ,
+        "利得"@ja ,
+        "Tahap medan"@ms ,
+        "miary wielkości ilorazowych"@pl ,
+        "nível de pressão acústica"@pt ,
+        "уровень звукового давления"@ru ,
+        "gerilim veya akım oranı"@tr ,
+        "声压级"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundReductionIndex>
+    rdfs:label "Sound reduction index"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SoundVolumeVelocity>
+    rdfs:label "Sound volume velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SourceVoltage>
+    rdfs:label "Source Voltage"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SourceVoltageBetweenSubstances>
+    rdfs:label "Source Voltage Between Substances"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpatialSummationFunction>
+    rdfs:label "Spatial Summation Function"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificAcousticImpedance>
+    rdfs:label "Specific Acoustic Impedance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificActivity>
+    rdfs:label "Specific Activity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificElectricCharge>
+    rdfs:label "Specific Electric Charge"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificElectricCurrent>
+    rdfs:label "Specific Electrical Current"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificEnergy>
+    rdfs:label "Specific Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificEnergyImparted>
+    rdfs:label "Specific Energy Imparted"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificEnthalpy>
+    rdfs:label "Specific Enthalpy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificEntropy>
+    rdfs:label "Specific Entropy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificGibbsEnergy>
+    rdfs:label "Specific Gibbs Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificHeatCapacity>
+    rdfs:label "Specific Heat Capacity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificHeatCapacityAtConstantPressure>
+    rdfs:label "Specific heat capacity at constant pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificHeatCapacityAtConstantVolume>
+    rdfs:label "Specific heat capacity at constant volume"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificHeatCapacityAtSaturation>
+    rdfs:label "Specific Heat Capacity at Saturation"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificHeatPressure>
+    rdfs:label "Specific Heat Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificHeatVolume>
+    rdfs:label "Specific Heat Volume"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificHeatsRatio>
+    rdfs:label "Specific Heats Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificHelmholtzEnergy>
+    rdfs:label "Specific Helmholtz Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificImpulse>
+    rdfs:label "Specific Impulse"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificImpulseByMass>
+    rdfs:label "Specific Impulse by Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificImpulseByWeight>
+    rdfs:label "Specific Impulse by Weight"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificInternalEnergy>
+    rdfs:label "Specific Internal Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificOpticalRotatoryPower>
+    rdfs:label "Specific Optical Rotatory Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificPower>
+    rdfs:label "Specific Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificSurfaceArea>
+    rdfs:label "Specific Surface Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificThrust>
+    rdfs:label "Specific thrust"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpecificVolume>
+    rdfs:label "Specific Volume"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpectralAngularCrossSection>
+    rdfs:label "Spectral Angular Cross-section"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpectralCrossSection>
+    rdfs:label "Spectral Cross-section"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpectralLuminousEfficiency>
+    rdfs:label "Spectral Luminous Efficiency"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpectralRadiantEnergyDensity>
+    rdfs:label "Spectral Radiant Energy Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Speed>
+    rdfs:label "Speed"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpeedOfLight>
+    rdfs:label
+        "سرعة الضوء"@ar ,
+        "Rychlost světla"@cs ,
+        "Lichtgeschwindigkeit"@de ,
+        "speed of light"@en ,
+        "velocidad de la luz"@es ,
+        "سرعت نور"@fa ,
+        "vitesse de la lumière"@fr ,
+        "प्रकाश का वेग"@hi ,
+        "velocità della luce"@it ,
+        "光速"@ja ,
+        "Kelajuan cahaya"@ms ,
+        "Prędkość światła"@pl ,
+        "Velocidade da luz"@pt ,
+        "Viteza luminii"@ro ,
+        "Скорость света"@ru ,
+        "Hitrost svetlobe"@sl ,
+        "Işık hızı"@tr ,
+        "光速"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpeedOfSound>
+    rdfs:label
+        "سرعة الصوت"@ar ,
+        "rychlost zvuku"@cs ,
+        "Schallgeschwindigkeit"@de ,
+        "speed of sound"@en ,
+        "velocidad del sonido"@es ,
+        "سرعت صوت"@fa ,
+        "vitesse du son"@fr ,
+        "ध्वनि का वेग"@hi ,
+        "velocità del suono"@it ,
+        "音速"@ja ,
+        "Kelajuan bunyi"@ms ,
+        "prędkość dźwięku"@pl ,
+        "velocidade do som"@pt ,
+        "viteza sunetului"@ro ,
+        "скорость звука"@ru ,
+        "Hitrost zvoka"@sl ,
+        "Ses hızı"@tr ,
+        "音速"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/SphericalIlluminance>
+    rdfs:label "Illuminance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Spin>
+    rdfs:label
+        "لف مغزلي"@ar ,
+        "spin"@cs ,
+        "Spin"@de ,
+        "spin"@en ,
+        "espín"@es ,
+        "اسپین/چرخش"@fa ,
+        "spin"@fr ,
+        "spin"@it ,
+        "スピン角運動量"@ja ,
+        "Spin"@ms ,
+        "spin"@pl ,
+        "spin"@pt ,
+        "Spin"@ro ,
+        "Спин"@ru ,
+        "spin"@sl ,
+        "Spin"@tr ,
+        "自旋"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/SpinQuantumNumber>
+    rdfs:label "Spin Quantum Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SquareEnergy>
+    rdfs:label "Square Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StagePropellantMass>
+    rdfs:label "Stage Propellant Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StageStructuralMass>
+    rdfs:label "Stage Structure Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StandardAbsoluteActivity>
+    rdfs:label "Standard Absolute Activity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StandardChemicalPotential>
+    rdfs:label "Standard Chemical Potential"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StandardGravitationalParameter>
+    rdfs:label "Standard Gravitational Parameter"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StaticFriction>
+    rdfs:label "Static Friction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StaticFrictionCoefficient>
+    rdfs:label "Static Friction Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StaticPressure>
+    rdfs:label "Static pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StatisticalWeight>
+    rdfs:label "Statistical Weight"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StochasticProcess>
+    rdfs:label "Stochastic Process"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StoichiometricNumber>
+    rdfs:label "Stoichiometric Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Strain>
+    rdfs:label "Strain"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StrainEnergyDensity>
+    rdfs:label "Strain Energy Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Stress>
+    rdfs:label "Stress"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StressIntensityFactor>
+    rdfs:label "Stress Intensity Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StressOpticCoefficient>
+    rdfs:label "Stress-Optic Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StructuralEfficiency>
+    rdfs:label "Structural Efficiency"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/StructureFactor>
+    rdfs:label "Structure Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SuperconductionTransitionTemperature>
+    rdfs:label "Superconduction Transition Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SuperconductorEnergyGap>
+    rdfs:label "Superconductor Energy Gap"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SurfaceActivityDensity>
+    rdfs:label "Surface Activity Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SurfaceCoefficientOfHeatTransfer>
+    rdfs:label "Surface Coefficient of Heat Transfer"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SurfaceDensity>
+    rdfs:label "Surface Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SurfaceTension>
+    rdfs:label
+        "توتر سطحي"@ar ,
+        "povrchové napětí"@cs ,
+        "Oberflächenspannung"@de ,
+        "surface tension"@en ,
+        "tensión superficial"@es ,
+        "کشش سطحی"@fa ,
+        "tension superficielle"@fr ,
+        "पृष्ठ तनाव"@hi ,
+        "tensione superficiale"@it ,
+        "表面張力"@ja ,
+        "Tegangan permukaan"@ms ,
+        "napięcie powierzchniowe"@pl ,
+        "tensão superficial"@pt ,
+        "Tensiune superficială"@ro ,
+        "поверхностное натяжение"@ru ,
+        "površinska napetost"@sl ,
+        "Yüzey gerilimi"@tr ,
+        "表面张力"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Susceptance>
+    rdfs:label "Susceptance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/SystolicBloodPressure>
+    rdfs:label "Systolic Blood Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TARGET-BOGIE-MASS>
+    rdfs:label "Target Bogie Mass"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Temperature>
+    rdfs:label "Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TemperatureAmountOfSubstance>
+    rdfs:label "Temperature Amount of Substance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TemperatureGradient>
+    rdfs:label "Temperature Gradient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TemperaturePerMagneticFluxDensity>
+    rdfs:label "Temperature per Magnetic Flux Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TemperaturePerTime>
+    rdfs:label "Temperature per Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TemperaturePerTime_Squared>
+    rdfs:label "Temperature per Time Squared"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TemperatureRateOfChange>
+    rdfs:label "Temperature Rate of Change"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TemperatureRatio>
+    rdfs:label "Temperature Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TemporalSummationFunction>
+    rdfs:label "Temporal Summation Function"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Tension>
+    rdfs:label "Tension"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalAdmittance>
+    rdfs:label "Thermal Admittance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalConductance>
+    rdfs:label "Thermal Conductance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalConductivity>
+    rdfs:label "Thermal Conductivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalDiffusionFactor>
+    rdfs:label "Thermal Diffusion Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalDiffusionRatio>
+    rdfs:label "Thermal Diffusion Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalDiffusionRatioCoefficient>
+    rdfs:label "Thermal Diffusion Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalDiffusivity>
+    rdfs:label "Thermal Diffusivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalEfficiency>
+    rdfs:label "Thermal Efficiency"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalEnergy>
+    rdfs:label "Thermal Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalEnergyLength>
+    rdfs:label "Thermal Energy Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalExpansionCoefficient>
+    rdfs:label "Thermal Expansion Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalInsulance>
+    rdfs:label "Thermal Insulance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalResistance>
+    rdfs:label
+        "مقاومة حرارية"@ar ,
+        "opór cieplny"@cs ,
+        "thermischer Widerstand"@de ,
+        "thermal resistance"@en ,
+        "resistencia térmica"@es ,
+        "résistance thermique"@fr ,
+        "resistenza termica"@it ,
+        "熱抵抗"@ja ,
+        "resistência térmica"@pt ,
+        "热阻"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalResistivity>
+    rdfs:label "Thermal Resistivity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalTransmittance>
+    rdfs:label "Thermal Transmittance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalUtilizationFactor>
+    rdfs:label "Thermal Utilization Factor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermalUtilizationFactorForFission>
+    rdfs:label "Thermal Utilization Factor For Fission"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermodynamicCriticalMagneticFluxDensity>
+    rdfs:label "Thermodynamic Critical Magnetic Flux Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermodynamicEnergy>
+    rdfs:label "Thermodynamic Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermodynamicEntropy>
+    rdfs:label "Thermodynamic Entropy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThermodynamicTemperature>
+    rdfs:label
+        "درجة الحرارة المطلقة"@ar ,
+        "Термодинамична температура"@bg ,
+        "Termodynamická teplota"@cs ,
+        "thermodynamische Temperatur"@de ,
+        "Απόλυτη"@el ,
+        "thermodynamic temperature"@en ,
+        "temperatura"@es ,
+        "دمای ترمودینامیکی"@fa ,
+        "température thermodynamique"@fr ,
+        "טמפרטורה מוחלטת"@he ,
+        "ऊष्मगतिकीय तापमान"@hi ,
+        "abszolút hőmérséklet"@hu ,
+        "temperatura termodinamica"@it ,
+        "熱力学温度"@ja ,
+        "temperatura thermodynamica absoluta"@la ,
+        "Suhu termodinamik"@ms ,
+        "temperatura"@pl ,
+        "temperatura"@pt ,
+        "temperatură termodinamică"@ro ,
+        "Термодинамическая температура"@ru ,
+        "temperatura"@sl ,
+        "termodinamik sıcaklık"@tr ,
+        "热力学温度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Thickness>
+    rdfs:label "Thickness"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThomsonCoefficient>
+    rdfs:label "Thomson Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Thrust>
+    rdfs:label "Thrust"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThrustCoefficient>
+    rdfs:label "Thrust Coefficient"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThrustToMassRatio>
+    rdfs:label "Thrust To Mass Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThrustToWeightRatio>
+    rdfs:label "Thrust To Weight Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/ThrusterPowerToThrustEfficiency>
+    rdfs:label "Thruster Power To Thrust Efficiency"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Time>
+    rdfs:label
+        "زمن"@ar ,
+        "Време"@bg ,
+        "Čas"@cs ,
+        "Zeit"@de ,
+        "Χρόνος"@el ,
+        "time"@en ,
+        "tiempo"@es ,
+        "زمان"@fa ,
+        "temps"@fr ,
+        "זמן"@he ,
+        "समय"@hi ,
+        "idő"@hu ,
+        "tempo"@it ,
+        "時間"@ja ,
+        "tempus"@la ,
+        "Masa"@ms ,
+        "czas"@pl ,
+        "tempo"@pt ,
+        "timp"@ro ,
+        "Время"@ru ,
+        "čas"@sl ,
+        "zaman"@tr ,
+        "时间"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/TimeAveragedSoundIntensity>
+    rdfs:label "Time averaged sound intensity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TimePercentage>
+    rdfs:label "Time Percentage"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TimeRatio>
+    rdfs:label "Time Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TimeSquared>
+    rdfs:label "Time Squared"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TimeTemperature>
+    rdfs:label "Time Temperature"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Time_Squared>
+    rdfs:label "Time Squared"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Torque>
+    rdfs:label
+        "عزم محورى"@ar ,
+        "Torsionmoment"@de ,
+        "torque"@en ,
+        "par"@es ,
+        "couple"@fr ,
+        "coppia"@it ,
+        "トルク"@ja ,
+        "moment obrotowy"@pl ,
+        "momento de torção"@pt ,
+        "转矩"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/TorquePerAngle>
+    rdfs:label "Torque per Angle"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TorquePerLength>
+    rdfs:label "Torque per Length"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TotalAngularMomentum>
+    rdfs:label "Total Angular Momentum"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TotalAngularMomentumQuantumNumber>
+    rdfs:label "Total Angular Momentum Quantum Number"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TotalAtomicStoppingPower>
+    rdfs:label "Total Atomic Stopping Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TotalCrossSection>
+    rdfs:label "Total Cross-section"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TotalCurrent>
+    rdfs:label "Total Current"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TotalCurrentDensity>
+    rdfs:label "Total Current Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TotalIonization>
+    rdfs:label "Total Ionization"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TotalLinearStoppingPower>
+    rdfs:label "Total Linear Stopping Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TotalMassStoppingPower>
+    rdfs:label "Total Mass Stopping Power"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TotalPressure>
+    rdfs:label "Total Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TouchThresholds>
+    rdfs:label "Touch Thresholds"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Transmittance>
+    rdfs:label "Transmittance"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TransmittanceDensity>
+    rdfs:label "Transmittance Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/TrueExhaustVelocity>
+    rdfs:label "True Exhaust Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Turbidity>
+    rdfs:label "Turbidity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Turns>
+    rdfs:label "Turns"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Unknown>
+    rdfs:label "Unknown"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/UpperCriticalMagneticFluxDensity>
+    rdfs:label "Upper Critical Magnetic Flux Density"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VacuumThrust>
+    rdfs:label "Vacuum Thrust"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VaporPermeability>
+    rdfs:label "Vapor Permeability"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VaporPressure>
+    rdfs:label "Vapor Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VehicleVelocity>
+    rdfs:label "Vehicle Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Velocity>
+    rdfs:label
+        "السرعة"@ar ,
+        "Rychlost"@cs ,
+        "Geschwindigkeit"@de ,
+        "Επιφάνεια"@el ,
+        "velocity"@en ,
+        "velocidad"@es ,
+        "سرعت/تندی"@fa ,
+        "vitesse"@fr ,
+        "מהירות"@he ,
+        "गति"@hi ,
+        "velocità"@it ,
+        "速力"@ja ,
+        "velocitas"@la ,
+        "Halaju"@ms ,
+        "prędkość"@pl ,
+        "velocidade"@pt ,
+        "viteză"@ro ,
+        "Ско́рость"@ru ,
+        "hitrost"@sl ,
+        "hız"@tr ,
+        "速度"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/VentilationRatePerFloorArea>
+    rdfs:label "Ventilation Rate per Floor Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VerticalVelocity>
+    rdfs:label "Vertical Velocity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VideoFrameRate>
+    rdfs:label "Video Frame Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Viscosity>
+    rdfs:label "Viscosity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VisibleRadiantEnergy>
+    rdfs:label "Visible Radiant Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VisionThresholds>
+    rdfs:label "Vision Thresholds"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Voltage>
+    rdfs:label "Voltage"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VoltagePercentage>
+    rdfs:label "Voltage Percentage"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VoltagePhasor>
+    rdfs:label "Voltage Phasor"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VoltageRatio>
+    rdfs:label "Voltage Ratio"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Volume>
+    rdfs:label "Volume"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VolumeFlowRate>
+    rdfs:label "Volume Flow Rate"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VolumeFraction>
+    rdfs:label "Volume Fraction"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VolumePerArea>
+    rdfs:label "Volume per Unit Area"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VolumePerUnitTime>
+    rdfs:label "Volume per Unit Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VolumeStrain>
+    rdfs:label "Volume Strain"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VolumeThermalExpansion>
+    rdfs:label "Volume Thermal Expansion"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VolumetricFlux>
+    rdfs:label "Volumetric Flux"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VolumetricHeatCapacity>
+    rdfs:label "Volumetric Heat Capacity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/VolumicElectromagneticEnergy>
+    rdfs:label "Volumic Electromagnetic Energy"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Vorticity>
+    rdfs:label "Vorticity"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/WarmReceptorThreshold>
+    rdfs:label "Warm Receptor Threshold"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/WarpingConstant>
+    rdfs:label "Warping Constant"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/WarpingMoment>
+    rdfs:label "Warping Moment"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/WaterHorsepower>
+    rdfs:label "Water Horsepower"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Wavelength>
+    rdfs:label
+        "Vlnové délka"@cs ,
+        "Wellenlänge"@de ,
+        "wavelength"@en ,
+        "longitud de onda"@es ,
+        "طول موج"@fa ,
+        "longueur d'onde"@fr ,
+        "lunghezza d'onda"@it ,
+        "Jarak gelombang"@ms ,
+        "comprimento de onda"@pt ,
+        "длина волны"@ru ,
+        "dalga boyu"@tr ,
+        "波长"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Wavenumber>
+    rdfs:label
+        "عدد الموجة"@ar ,
+        "Vlnové číslo"@cs ,
+        "Repetenz"@de ,
+        "wavenumber"@en ,
+        "número de ola"@es ,
+        "عدد موج"@fa ,
+        "nombre d'onde"@fr ,
+        "numero d'onda"@it ,
+        "波数"@ja ,
+        "Bilangan gelombang"@ms ,
+        "Liczba falowa"@pl ,
+        "número de onda"@pt ,
+        "Волновое число"@ru ,
+        "valovno število"@sl ,
+        "dalga sayısı"@tr ,
+        "波数"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/WebTime>
+    rdfs:label "Web Time"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/WebTimeAveragePressure>
+    rdfs:label "Web Time Average Pressure"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/WebTimeAverageThrust>
+    rdfs:label "Web Time Average Thrust"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Weight>
+    rdfs:label
+        "وزن"@ar ,
+        "tíha"@cs ,
+        "Gewicht"@de ,
+        "weight"@en ,
+        "peso"@es ,
+        "وزن"@fa ,
+        "poids"@fr ,
+        "forza peso"@it ,
+        "重さ"@ja ,
+        "Berat"@ms ,
+        "Siła ciężkości"@pl ,
+        "peso"@pt ,
+        "greutate"@ro ,
+        "Вес"@ru ,
+        "Ağırlık"@tr ,
+        "重量"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/Width>
+    rdfs:label "Width"@en ;
+.
+
+<http://qudt.org/vocab/quantitykind/Work>
+    rdfs:label
+        "práce"@cs ,
+        "Arbeit"@de ,
+        "work"@en ,
+        "trabajo"@es ,
+        "کار"@fa ,
+        "travail"@fr ,
+        "कार्य"@hi ,
+        "lavoro"@it ,
+        "仕事量"@ja ,
+        "kerja"@ms ,
+        "praca"@pl ,
+        "trabalho"@pt ,
+        "lucru mecanic"@ro ,
+        "delo"@sl ,
+        "iş"@tr ,
+        "功"@zh ;
+.
+
+<http://qudt.org/vocab/quantitykind/WorkFunction>
+    rdfs:label "Work Function"@en ;
+.
+
+<http://voag.linkedmodel.org/schema/voag#QUDT-QUANTITY-KINDS-VocabCatalogEntry_v1.2>
+    rdfs:label "QUDT Quantity Kinds Vocabulary Catalog Entry v1.2" ;
+.
+
+<http://www.linkedmodel.org/schema/vaem#GMD_QUDT-QUANTITY-KINDS-ALL>
+    rdfs:label
+        "QUDT Quantity Kind Vocabulary Metadata Version 2.1.33" ,
+        "QUDT Quantity Kinds Version 2.1 Vocabulary" ;
+.
+
