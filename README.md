@@ -8,8 +8,10 @@ We maintain the currency of these artifacts as best we can so this is a one-stop
 ## Content
 
 * `originals/` - original RDF files from elsewhere
+* `overrides/` - versions of files from `originals/` with processing done to them to improve labels 
 * `labels/` - RDF elements' labels only, extracted from `originals/`
 * `scripts/` - Python scripts to process RDF files
+** `generate.py` - extracts labels from files in `originals/` or their override versions in `overrides/` and places them in `labels/`
 
 ## License
 
