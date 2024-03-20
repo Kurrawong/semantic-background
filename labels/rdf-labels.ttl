@@ -2,7 +2,7 @@ PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 rdf:Alt
-    rdfs:label "Alt" ;
+    rdfs:label "Alternatives" ;
 .
 
 rdf:Bag
@@ -10,7 +10,7 @@ rdf:Bag
 .
 
 rdf:CompoundLiteral
-    rdfs:label "CompoundLiteral" ;
+    rdfs:label "Compound Literal" ;
 .
 
 rdf:HTML
@@ -26,7 +26,7 @@ rdf:List
 .
 
 rdf:PlainLiteral
-    rdfs:label "PlainLiteral" ;
+    rdfs:label "Plain Literal" ;
 .
 
 rdf:Property
@@ -34,7 +34,7 @@ rdf:Property
 .
 
 rdf:Seq
-    rdfs:label "Seq" ;
+    rdfs:label "Sequence" ;
 .
 
 rdf:Statement
@@ -42,7 +42,7 @@ rdf:Statement
 .
 
 rdf:XMLLiteral
-    rdfs:label "XMLLiteral" ;
+    rdfs:label "XML Literal" ;
 .
 
 rdf:direction
@@ -54,7 +54,7 @@ rdf:first
 .
 
 rdf:langString
-    rdfs:label "langString" ;
+    rdfs:label "Lang String" ;
 .
 
 rdf:language
