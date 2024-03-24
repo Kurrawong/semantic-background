@@ -1,0 +1,739 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+
+sh:
+    rdfs:label "W3C Shapes Constraint Language (SHACL) Vocabulary"@en ;
+.
+
+sh:AbstractResult
+    rdfs:label "Abstract result"@en ;
+.
+
+sh:AndConstraintComponent
+    rdfs:label "And constraint component"@en ;
+.
+
+sh:BlankNode
+    rdfs:label "Blank node"@en ;
+.
+
+sh:BlankNodeOrIRI
+    rdfs:label "Blank node or IRI"@en ;
+.
+
+sh:BlankNodeOrLiteral
+    rdfs:label "Blank node or literal"@en ;
+.
+
+sh:ClassConstraintComponent
+    rdfs:label "Class constraint component"@en ;
+.
+
+sh:ClosedConstraintComponent
+    rdfs:label "Closed constraint component"@en ;
+.
+
+sh:ConstraintComponent
+    rdfs:label "Constraint component"@en ;
+.
+
+sh:DatatypeConstraintComponent
+    rdfs:label "Datatype constraint component"@en ;
+.
+
+sh:DisjointConstraintComponent
+    rdfs:label "Disjoint constraint component"@en ;
+.
+
+sh:EqualsConstraintComponent
+    rdfs:label "Equals constraint component"@en ;
+.
+
+sh:ExpressionConstraintComponent
+    rdfs:label "Expression constraint component"@en ;
+.
+
+sh:Function
+    rdfs:label "Function"@en ;
+.
+
+sh:HasValueConstraintComponent
+    rdfs:label "Has-value constraint component"@en ;
+.
+
+sh:IRI
+    rdfs:label "IRI"@en ;
+.
+
+sh:IRIOrLiteral
+    rdfs:label "IRI or literal"@en ;
+.
+
+sh:InConstraintComponent
+    rdfs:label "In constraint component"@en ;
+.
+
+sh:Info
+    rdfs:label "Info"@en ;
+.
+
+sh:JSConstraint
+    rdfs:label "JavaScript-based constraint"@en ;
+.
+
+sh:JSConstraintComponent
+    rdfs:label "JavaScript constraint component"@en ;
+.
+
+sh:JSExecutable
+    rdfs:label "JavaScript executable"@en ;
+.
+
+sh:JSFunction
+    rdfs:label "JavaScript function"@en ;
+.
+
+sh:JSLibrary
+    rdfs:label "JavaScript library"@en ;
+.
+
+sh:JSRule
+    rdfs:label "JavaScript rule"@en ;
+.
+
+sh:JSTarget
+    rdfs:label "JavaScript target"@en ;
+.
+
+sh:JSTargetType
+    rdfs:label "JavaScript target type"@en ;
+.
+
+sh:JSValidator
+    rdfs:label "JavaScript validator"@en ;
+.
+
+sh:LanguageInConstraintComponent
+    rdfs:label "Language-in constraint component"@en ;
+.
+
+sh:LessThanConstraintComponent
+    rdfs:label "Less-than constraint component"@en ;
+.
+
+sh:LessThanOrEqualsConstraintComponent
+    rdfs:label "less-than-or-equals constraint component"@en ;
+.
+
+sh:Literal
+    rdfs:label "Literal"@en ;
+.
+
+sh:MaxCountConstraintComponent
+    rdfs:label "Max-count constraint component"@en ;
+.
+
+sh:MaxExclusiveConstraintComponent
+    rdfs:label "Max-exclusive constraint component"@en ;
+.
+
+sh:MaxInclusiveConstraintComponent
+    rdfs:label "Max-inclusive constraint component"@en ;
+.
+
+sh:MaxLengthConstraintComponent
+    rdfs:label "Max-length constraint component"@en ;
+.
+
+sh:MinCountConstraintComponent
+    rdfs:label "Min-count constraint component"@en ;
+.
+
+sh:MinExclusiveConstraintComponent
+    rdfs:label "Min-exclusive constraint component"@en ;
+.
+
+sh:MinInclusiveConstraintComponent
+    rdfs:label "Min-inclusive constraint component"@en ;
+.
+
+sh:MinLengthConstraintComponent
+    rdfs:label "Min-length constraint component"@en ;
+.
+
+sh:NodeConstraintComponent
+    rdfs:label "Node constraint component"@en ;
+.
+
+sh:NodeKind
+    rdfs:label "Node kind"@en ;
+.
+
+sh:NodeKindConstraintComponent
+    rdfs:label "Node-kind constraint component"@en ;
+.
+
+sh:NodeShape
+    rdfs:label "Node shape"@en ;
+.
+
+sh:NotConstraintComponent
+    rdfs:label "Not constraint component"@en ;
+.
+
+sh:OrConstraintComponent
+    rdfs:label "Or constraint component"@en ;
+.
+
+sh:Parameter
+    rdfs:label "Parameter"@en ;
+.
+
+sh:Parameterizable
+    rdfs:label "Parameterizable"@en ;
+.
+
+sh:PatternConstraintComponent
+    rdfs:label "Pattern constraint component"@en ;
+.
+
+sh:PrefixDeclaration
+    rdfs:label "Prefix declaration"@en ;
+.
+
+sh:PropertyConstraintComponent
+    rdfs:label "Property constraint component"@en ;
+.
+
+sh:PropertyGroup
+    rdfs:label "Property group"@en ;
+.
+
+sh:PropertyShape
+    rdfs:label "Property shape"@en ;
+.
+
+sh:QualifiedMaxCountConstraintComponent
+    rdfs:label "Qualified-max-count constraint component"@en ;
+.
+
+sh:QualifiedMinCountConstraintComponent
+    rdfs:label "Qualified-min-count constraint component"@en ;
+.
+
+sh:ResultAnnotation
+    rdfs:label "Result annotation"@en ;
+.
+
+sh:Rule
+    rdfs:label "Rule"@en ;
+.
+
+sh:SPARQLAskExecutable
+    rdfs:label "SPARQL ASK executable"@en ;
+.
+
+sh:SPARQLAskValidator
+    rdfs:label "SPARQL ASK validator"@en ;
+.
+
+sh:SPARQLConstraint
+    rdfs:label "SPARQL constraint"@en ;
+.
+
+sh:SPARQLConstraintComponent
+    rdfs:label "SPARQL constraint component"@en ;
+.
+
+sh:SPARQLConstructExecutable
+    rdfs:label "SPARQL CONSTRUCT executable"@en ;
+.
+
+sh:SPARQLExecutable
+    rdfs:label "SPARQL executable"@en ;
+.
+
+sh:SPARQLFunction
+    rdfs:label "SPARQL function"@en ;
+.
+
+sh:SPARQLRule
+    rdfs:label "SPARQL CONSTRUCT rule"@en ;
+.
+
+sh:SPARQLSelectExecutable
+    rdfs:label "SPARQL SELECT executable"@en ;
+.
+
+sh:SPARQLSelectValidator
+    rdfs:label "SPARQL SELECT validator"@en ;
+.
+
+sh:SPARQLTarget
+    rdfs:label "SPARQL target"@en ;
+.
+
+sh:SPARQLTargetType
+    rdfs:label "SPARQL target type"@en ;
+.
+
+sh:SPARQLUpdateExecutable
+    rdfs:label "SPARQL UPDATE executable"@en ;
+.
+
+sh:Severity
+    rdfs:label "Severity"@en ;
+.
+
+sh:Shape
+    rdfs:label "Shape"@en ;
+.
+
+sh:Target
+    rdfs:label "Target"@en ;
+.
+
+sh:TargetType
+    rdfs:label "Target type"@en ;
+.
+
+sh:TripleRule
+    rdfs:label "A rule based on triple (subject, predicate, object) pattern."@en ;
+.
+
+sh:UniqueLangConstraintComponent
+    rdfs:label "Unique-languages constraint component"@en ;
+.
+
+sh:ValidationReport
+    rdfs:label "Validation report"@en ;
+.
+
+sh:ValidationResult
+    rdfs:label "Validation result"@en ;
+.
+
+sh:Validator
+    rdfs:label "Validator"@en ;
+.
+
+sh:Violation
+    rdfs:label "Violation"@en ;
+.
+
+sh:Warning
+    rdfs:label "Warning"@en ;
+.
+
+sh:XoneConstraintComponent
+    rdfs:label "Exactly one constraint component"@en ;
+.
+
+sh:alternativePath
+    rdfs:label "alternative path"@en ;
+.
+
+sh:and
+    rdfs:label "and"@en ;
+.
+
+sh:annotationProperty
+    rdfs:label "annotation property"@en ;
+.
+
+sh:annotationValue
+    rdfs:label "annotation value"@en ;
+.
+
+sh:annotationVarName
+    rdfs:label "annotation variable name"@en ;
+.
+
+sh:ask
+    rdfs:label "ask"@en ;
+.
+
+sh:class
+    rdfs:label "class"@en ;
+.
+
+sh:closed
+    rdfs:label "closed"@en ;
+.
+
+sh:condition
+    rdfs:label "condition"@en ;
+.
+
+sh:conforms
+    rdfs:label "conforms"@en ;
+.
+
+sh:construct
+    rdfs:label "construct"@en ;
+.
+
+sh:datatype
+    rdfs:label "datatype"@en ;
+.
+
+sh:deactivated
+    rdfs:label "deactivated"@en ;
+.
+
+sh:declare
+    rdfs:label "declare"@en ;
+.
+
+sh:defaultValue
+    rdfs:label "default value"@en ;
+.
+
+sh:description
+    rdfs:label "description"@en ;
+.
+
+sh:detail
+    rdfs:label "detail"@en ;
+.
+
+sh:disjoint
+    rdfs:label "disjoint"@en ;
+.
+
+sh:entailment
+    rdfs:label "entailment"@en ;
+.
+
+sh:equals
+    rdfs:label "equals"@en ;
+.
+
+sh:expression
+    rdfs:label "expression"@en ;
+.
+
+sh:filterShape
+    rdfs:label "filter shape"@en ;
+.
+
+sh:flags
+    rdfs:label "flags"@en ;
+.
+
+sh:focusNode
+    rdfs:label "focus node"@en ;
+.
+
+sh:group
+    rdfs:label "group"@en ;
+.
+
+sh:hasValue
+    rdfs:label "has value"@en ;
+.
+
+sh:ignoredProperties
+    rdfs:label "ignored properties"@en ;
+.
+
+sh:in
+    rdfs:label "in"@en ;
+.
+
+sh:intersection
+    rdfs:label "intersection"@en ;
+.
+
+sh:inversePath
+    rdfs:label "inverse path"@en ;
+.
+
+sh:js
+    rdfs:label "JavaScript constraint"@en ;
+.
+
+sh:jsFunctionName
+    rdfs:label "JavaScript function name"@en ;
+.
+
+sh:jsLibrary
+    rdfs:label "JavaScript library"@en ;
+.
+
+sh:jsLibraryURL
+    rdfs:label "JavaScript library URL"@en ;
+.
+
+sh:labelTemplate
+    rdfs:label "label template"@en ;
+.
+
+sh:languageIn
+    rdfs:label "language in"@en ;
+.
+
+sh:lessThan
+    rdfs:label "less than"@en ;
+.
+
+sh:lessThanOrEquals
+    rdfs:label "less than or equals"@en ;
+.
+
+sh:maxCount
+    rdfs:label "max count"@en ;
+.
+
+sh:maxExclusive
+    rdfs:label "max exclusive"@en ;
+.
+
+sh:maxInclusive
+    rdfs:label "max inclusive"@en ;
+.
+
+sh:maxLength
+    rdfs:label "max length"@en ;
+.
+
+sh:message
+    rdfs:label "message"@en ;
+.
+
+sh:minCount
+    rdfs:label "min count"@en ;
+.
+
+sh:minExclusive
+    rdfs:label "min exclusive"@en ;
+.
+
+sh:minInclusive
+    rdfs:label "min inclusive"@en ;
+.
+
+sh:minLength
+    rdfs:label "min length"@en ;
+.
+
+sh:name
+    rdfs:label "name"@en ;
+.
+
+sh:namespace
+    rdfs:label "namespace"@en ;
+.
+
+sh:node
+    rdfs:label "node"@en ;
+.
+
+sh:nodeKind
+    rdfs:label "node kind"@en ;
+.
+
+sh:nodeValidator
+    rdfs:label "shape validator"@en ;
+.
+
+sh:nodes
+    rdfs:label "nodes"@en ;
+.
+
+sh:not
+    rdfs:label "not"@en ;
+.
+
+sh:object
+    rdfs:label "object"@en ;
+.
+
+sh:oneOrMorePath
+    rdfs:label "one or more path"@en ;
+.
+
+sh:optional
+    rdfs:label "optional"@en ;
+.
+
+sh:or
+    rdfs:label "or"@en ;
+.
+
+sh:order
+    rdfs:label "order"@en ;
+.
+
+sh:parameter
+    rdfs:label "parameter"@en ;
+.
+
+sh:path
+    rdfs:label "path"@en ;
+.
+
+sh:pattern
+    rdfs:label "pattern"@en ;
+.
+
+sh:predicate
+    rdfs:label "predicate"@en ;
+.
+
+sh:prefix
+    rdfs:label "prefix"@en ;
+.
+
+sh:prefixes
+    rdfs:label "prefixes"@en ;
+.
+
+sh:property
+    rdfs:label "property"@en ;
+.
+
+sh:propertyValidator
+    rdfs:label "property validator"@en ;
+.
+
+sh:qualifiedMaxCount
+    rdfs:label "qualified max count"@en ;
+.
+
+sh:qualifiedMinCount
+    rdfs:label "qualified min count"@en ;
+.
+
+sh:qualifiedValueShape
+    rdfs:label "qualified value shape"@en ;
+.
+
+sh:qualifiedValueShapesDisjoint
+    rdfs:label "qualified value shapes disjoint"@en ;
+.
+
+sh:result
+    rdfs:label "result"@en ;
+.
+
+sh:resultAnnotation
+    rdfs:label "result annotation"@en ;
+.
+
+sh:resultMessage
+    rdfs:label "result message"@en ;
+.
+
+sh:resultPath
+    rdfs:label "result path"@en ;
+.
+
+sh:resultSeverity
+    rdfs:label "result severity"@en ;
+.
+
+sh:returnType
+    rdfs:label "return type"@en ;
+.
+
+sh:rule
+    rdfs:label "rule"@en ;
+.
+
+sh:select
+    rdfs:label "select"@en ;
+.
+
+sh:severity
+    rdfs:label "severity"@en ;
+.
+
+sh:shapesGraph
+    rdfs:label "shapes graph"@en ;
+.
+
+sh:shapesGraphWellFormed
+    rdfs:label "shapes graph well-formed"@en ;
+.
+
+sh:sourceConstraint
+    rdfs:label "source constraint"@en ;
+.
+
+sh:sourceConstraintComponent
+    rdfs:label "source constraint component"@en ;
+.
+
+sh:sourceShape
+    rdfs:label "source shape"@en ;
+.
+
+sh:sparql
+    rdfs:label "constraint (in SPARQL)"@en ;
+.
+
+sh:subject
+    rdfs:label "subject"@en ;
+.
+
+sh:suggestedShapesGraph
+    rdfs:label "suggested shapes graph"@en ;
+.
+
+sh:target
+    rdfs:label "target"@en ;
+.
+
+sh:targetClass
+    rdfs:label "target class"@en ;
+.
+
+sh:targetNode
+    rdfs:label "target node"@en ;
+.
+
+sh:targetObjectsOf
+    rdfs:label "target objects of"@en ;
+.
+
+sh:targetSubjectsOf
+    rdfs:label "target subjects of"@en ;
+.
+
+sh:this
+    rdfs:label "this"@en ;
+.
+
+sh:union
+    rdfs:label "union"@en ;
+.
+
+sh:uniqueLang
+    rdfs:label "unique languages"@en ;
+.
+
+sh:update
+    rdfs:label "update"@en ;
+.
+
+sh:validator
+    rdfs:label "validator"@en ;
+.
+
+sh:value
+    rdfs:label "value"@en ;
+.
+
+sh:xone
+    rdfs:label "exactly one"@en ;
+.
+
+sh:zeroOrMorePath
+    rdfs:label "zero or more path"@en ;
+.
+
+sh:zeroOrOnePath
+    rdfs:label "zero or one path"@en ;
+.
+
