@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from rdflib import Graph
-from rdflib.namespace import DCTERMS, RDFS, SDO, SKOS
+from rdflib.namespace import DCTERMS, RDFS, SDO, SKOS, DC
 
 parent_dir = Path(__file__).parent.parent
 
@@ -12,7 +12,12 @@ for f in Path(parent_dir / "originals").glob("*.ttl"):
 
     print(f"extracting labels for {f}")
     parts = os.path.splitext(str(f))
-    new_file_path = Path(str(f).replace("originals", "labels").replace("overrides", "labels").replace(".ttl", "-labels.ttl"))
+    new_file_path = Path(
+        str(f)
+        .replace("originals", "labels")
+        .replace("overrides", "labels")
+        .replace(".ttl", "-labels.ttl")
+    )
     print(f"writing {new_file_path}")
 
     g = Graph().parse(f)
@@ -22,5 +27,15 @@ for f in Path(parent_dir / "originals").glob("*.ttl"):
         RDFS.label | SKOS.prefLabel | SDO.name | DCTERMS.title
     ):
         g2.add((s, RDFS.label, o))
+
+    for s, o in g.subject_objects(
+        SKOS.definition | SDO.description | DCTERMS.description | DC.description | SKOS.scopeNote | RDFS.comment
+    ):
+        g2.add((s, SDO.description, o))
+
+    for s, o in g.subject_objects(
+        RDFS.seeAlso
+    ):
+        g2.add((s, RDFS.seeAlso, o))
 
     g2.serialize(destination=new_file_path, format="longturtle")
