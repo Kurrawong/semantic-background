@@ -1,17 +1,21 @@
 # Semantic Background
 
-This repository contains Semantic Web ontologies and vocabularies frequently used by members of [KurrawongAI](https://kurrawong.ai). 
+This repository contains tidy versions of Semantic Web ontologies and vocabularies frequently used by members of [KurrawongAI](https://kurrawong.ai). 
+
+We keep copies of them all here, so they are in one pace, and we tidy up labels etc., without altering any ontological content.
 
 We maintain the currency of these artifacts as best we can so this is a one-stop-shop for most of our daily Semantic Web reference object needs!
+
+NOTE: We will be producing an annotations' lookup tool soon alongside all of Kurrawong's other tools at <https://tools.dev.kurrawong.ai/> that will allow you to see if this repository contains neat annotations for a given IRI.
 
 
 ## Content
 
-* `originals/` - original RDF files from elsewhere
-* `overrides/` - versions of files from `originals/` with processing done to them to improve labels 
-* `labels/` - RDF elements' labels only, extracted from `originals/`
-* `scripts/` - Python scripts to process RDF files
-** `generate.py` - extracts labels from files in `originals/` or their override versions in `overrides/` and places them in `labels/`
+Most users of this repo will only need the `annotations/` & `ontologies/` folders.
+
+* `annotations/` - labels, descriptions and seeAlso links only from all ontologies
+* `ontologies/` - full ontologies either originals or with annontation updates only (neater labels etc.)
+* `source/` - the original ontologies, manual overrides and scripts needed to generate the content of the `annotations/` & `ontologies/` folders 
 
 ## License
 

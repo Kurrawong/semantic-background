@@ -1,24 +1,36 @@
 import os
+import shutil
 from pathlib import Path
 from rdflib import Graph
 from rdflib.namespace import DCTERMS, RDFS, SDO, SKOS, DC
 
 parent_dir = Path(__file__).parent.parent
 
-# use the original or, if it exists, an override
+print(f"Working in {parent_dir}")
+
+# make annotations & copy originals
 for f in Path(parent_dir / "originals").glob("*.ttl"):
+    print(f"Processing {f}")
     if Path(str(f).replace("originals", "overrides")).is_file():
         f = Path(str(f).replace("originals", "overrides"))
 
-    print(f"extracting labels for {f}")
+    new_ontology_file_path = str(f)\
+        .replace("originals", "ontologies")\
+        .replace("overrides", "ontologies")\
+        .replace("sources/", "")
+
+    print(f"Copying whole ontology to {new_ontology_file_path}")
+    shutil.copy(f, new_ontology_file_path)
+
     parts = os.path.splitext(str(f))
-    new_file_path = Path(
+    new_annotation_file_path = Path(
         str(f)
-        .replace("originals", "labels")
-        .replace("overrides", "labels")
-        .replace(".ttl", "-labels.ttl")
+        .replace("originals", "annotations")
+        .replace("overrides", "annotations")
+        .replace("sources/", "")
+        .replace(".ttl", "-annotations.ttl")
     )
-    print(f"writing {new_file_path}")
+    print(f"Copying annotations to {new_annotation_file_path}")
 
     g = Graph().parse(f)
 
@@ -38,4 +50,4 @@ for f in Path(parent_dir / "originals").glob("*.ttl"):
     ):
         g2.add((s, RDFS.seeAlso, o))
 
-    g2.serialize(destination=new_file_path, format="longturtle")
+    g2.serialize(destination=new_annotation_file_path, format="longturtle")
