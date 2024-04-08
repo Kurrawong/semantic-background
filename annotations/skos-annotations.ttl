@@ -10,9 +10,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 skos:Collection
     rdfs:label "Collection"@en ;
-    schema:description
-        "A meaningful collection of concepts."@en ,
-        "Labelled collections can be used where you would like a set of concepts to be displayed under a 'node label' in the hierarchy."@en ;
+    schema:description "A meaningful collection of concepts."@en ;
 .
 
 skos:Concept
@@ -22,16 +20,12 @@ skos:Concept
 
 skos:ConceptScheme
     rdfs:label "Concept Scheme"@en ;
-    schema:description
-        "A concept scheme may be defined to include concepts from different sources."@en ,
-        "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
+    schema:description "A set of concepts, optionally including statements about semantic relationships between those concepts."@en ;
 .
 
 skos:OrderedCollection
     rdfs:label "Ordered Collection"@en ;
-    schema:description
-        "An ordered collection of concepts, where both the grouping and the ordering are meaningful."@en ,
-        "Ordered collections can be used where you would like a set of concepts to be displayed in a specific order, and optionally under a 'node label'."@en ;
+    schema:description "An ordered collection of concepts, where both the grouping and the ordering are meaningful."@en ;
 .
 
 skos:altLabel
@@ -51,15 +45,12 @@ skos:broader
     rdfs:label "has broader"@en ;
     schema:description
         "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."@en ,
-        "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en ,
         "Relates a concept to a concept that is more general in meaning."@en ;
 .
 
 skos:broaderTransitive
     rdfs:label "has broader transitive"@en ;
-    schema:description
-        "skos:broaderTransitive is a transitive superproperty of skos:broader." ,
-        "By convention, skos:broaderTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en ;
+    schema:description "skos:broaderTransitive is a transitive superproperty of skos:broader." ;
 .
 
 skos:changeNote
@@ -114,9 +105,7 @@ skos:historyNote
 
 skos:inScheme
     rdfs:label "is in scheme"@en ;
-    schema:description
-        "A concept may be a member of more than one concept scheme."@en ,
-        "Relates a resource (for example a concept) to a concept scheme in which it is included."@en ;
+    schema:description "Relates a resource (for example a concept) to a concept scheme in which it is included."@en ;
 .
 
 skos:mappingRelation
@@ -147,30 +136,23 @@ skos:narrowMatch
 skos:narrower
     rdfs:label "has narrower"@en ;
     schema:description
-        "By convention, skos:broader is only used to assert an immediate (i.e. direct) hierarchical link between two conceptual resources."@en ,
         "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."@en ,
         "Relates a concept to a concept that is more specific in meaning."@en ;
 .
 
 skos:narrowerTransitive
     rdfs:label "has narrower transitive"@en ;
-    schema:description
-        "skos:narrowerTransitive is a transitive superproperty of skos:narrower." ,
-        "By convention, skos:narrowerTransitive is not used to make assertions. Rather, the properties can be used to draw inferences about the transitive closure of the hierarchical relation, which is useful e.g. when implementing a simple query expansion algorithm in a search application."@en ;
+    schema:description "skos:narrowerTransitive is a transitive superproperty of skos:narrower." ;
 .
 
 skos:notation
     rdfs:label "notation"@en ;
-    schema:description
-        "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ,
-        "By convention, skos:notation is used with a typed literal in the object position of the triple."@en ;
+    schema:description "A notation, also known as classification code, is a string of characters such as \"T58.5\" or \"303.4833\" used to uniquely identify a concept within the scope of a given concept scheme."@en ;
 .
 
 skos:note
     rdfs:label "note"@en ;
-    schema:description
-        "A general note, for any purpose."@en ,
-        "This property may be used directly, or as a super-property for more specific note types."@en ;
+    schema:description "A general note, for any purpose."@en ;
 .
 
 skos:prefLabel
@@ -202,9 +184,7 @@ skos:scopeNote
 
 skos:semanticRelation
     rdfs:label "is in semantic relation with"@en ;
-    schema:description
-        "Links a concept to a concept related by meaning."@en ,
-        "This property should not be used directly, but as a super-property for all properties denoting a relationship of meaning between concepts."@en ;
+    schema:description "Links a concept to a concept related by meaning."@en ;
 .
 
 skos:topConceptOf

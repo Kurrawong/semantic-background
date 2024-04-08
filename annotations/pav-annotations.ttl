@@ -25,18 +25,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:label "Alasdair J G Gray" ;
 .
 
-dcterms:contributor
-    rdfs:label "dcterms:contributor"@en ;
-.
-
-dcterms:creator
-    rdfs:label "dcterms:creator"@en ;
-.
-
-dcterms:hasVersion
-    rdfs:label "dcterms:hasVersion"@en ;
-.
-
 <http://purl.org/pav/>
     rdfs:label
         "PAV - Provenance, Authoring and Versioning"@en ,
@@ -158,34 +146,6 @@ The provider might not coincide with the dct:publisher, which would describe the
 
 <http://www.paolociccarese.info/foaf.rdf#marco-ocana>
     rdfs:label "Marco Ocana" ;
-.
-
-prov:alternateOf
-    rdfs:label "prov:alternateOf"@en ;
-.
-
-prov:generalizationOf
-    rdfs:label "prov:generalizationOf"@en ;
-.
-
-prov:specializationOf
-    rdfs:label "prov:specializationOf"@en ;
-.
-
-prov:wasAttributedTo
-    rdfs:label "prov:wasAttributedTo"@en ;
-.
-
-prov:wasDerivedFrom
-    rdfs:label "prov:wasDerivedFrom"@en ;
-.
-
-prov:wasInfluencedBy
-    rdfs:label "prov:wasInfluencedBy"@en ;
-.
-
-prov:wasRevisionOf
-    rdfs:label "prov:wasRevisionOf"@en ;
 .
 
 foaf:isPrimaryTopicOf

@@ -1,53 +1,7 @@
-PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-dcterms:abstract
-    rdfs:label "abstract" ;
-.
-
-dcterms:contributor
-    rdfs:label "contributor" ;
-.
-
-dcterms:created
-    rdfs:label "created" ;
-.
-
-dcterms:creator
-    rdfs:label "creator" ;
-.
-
-dcterms:description
-    rdfs:label "description" ;
-.
-
-dcterms:isReplacedBy
-    rdfs:label "is replaced by" ;
-.
-
-dcterms:modified
-    rdfs:label "modified" ;
-.
-
-dcterms:rights
-    rdfs:label "rights" ;
-.
-
-dcterms:source
-    rdfs:label "source" ;
-.
-
-dcterms:subject
-    rdfs:label "subject" ;
-.
-
-dcterms:title
-    rdfs:label "title" ;
-.
 
 <http://qudt.org/2.1/schema/qudt>
     rdfs:label "QUDT Schema - Version 2.1.27" ;
@@ -1369,10 +1323,6 @@ dcterms:title
 <http://www.linkedmodel.org/schema/vaem#QUDT>
     rdfs:label "QUDT" ;
     schema:description "QUDT is a non-profit organization that governs the QUDT ontologies."^^rdf:HTML ;
-.
-
-prov:wasDerivedFrom
-    rdfs:label "was derived from" ;
 .
 
 <http://qudt.org/schema/qudt/IntervalScale>
