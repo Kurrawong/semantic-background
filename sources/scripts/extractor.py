@@ -41,7 +41,7 @@ for f in Path(parent_dir / "originals").glob("*.ttl"):
         g2.add((s, RDFS.label, o))
 
     for s, o in g.subject_objects(
-        SKOS.definition | SDO.description | DCTERMS.description | DC.description | SKOS.scopeNote | RDFS.comment
+        SKOS.definition | SDO.description | DCTERMS.description | DC.description | RDFS.comment
     ):
         g2.add((s, SDO.description, o))
 

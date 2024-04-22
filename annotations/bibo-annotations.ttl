@@ -1,55 +1,6 @@
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-<http://purl.org/NET/c4dm/event.owl#Event>
-    schema:description "Used to describe bibliographic related events such as conferences, hearing, etc."@en ;
-.
-
-<http://purl.org/NET/c4dm/event.owl#place>
-    schema:description "Used to relate an event such as a conference to the geographical place where it happens, for example Paris."@en ;
-.
-
-<http://purl.org/NET/c4dm/event.owl#sub_event>
-    schema:description "Used to link big events with smaller events such as workshops that happen in the context of a conference."@en ;
-.
-
-<http://purl.org/NET/c4dm/event.owl#time>
-    schema:description "Used to describe the timing of an event. For example, when a conference starts and stops."@en ;
-.
-
-dcterms:created
-    schema:description "Used to describe the creation date of a bibliographic item"@en ;
-.
-
-dcterms:description
-    schema:description "Used to describe a bibliographic resource."@en ;
-.
-
-dcterms:format
-    schema:description "Used to describe the format of a bibliographic resource."@en ;
-.
-
-dcterms:issued
-    schema:description "Used to describe the issue date of a bibliographic resource"@en ;
-.
-
-dcterms:language
-    schema:description "Used to link a bibliographic resource to the language used to express it."@en ;
-.
-
-dcterms:rights
-    schema:description "Used to describe rights related to a bibliographic resource."@en ;
-.
-
-dcterms:subject
-    schema:description "Used to describe the subject of a bibliographic resource."@en ;
-.
-
-dcterms:title
-    schema:description "Used to describe the title of a bibliographic resource"@en ;
-.
 
 <http://purl.org/ontology/bibo>
     rdfs:label "The Bibliographic Ontology" ;

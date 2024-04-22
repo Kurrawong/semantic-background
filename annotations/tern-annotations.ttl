@@ -53,10 +53,7 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 
 <https://w3id.org/tern/ontologies/tern/Dataset>
     rdfs:label "Dataset" ;
-    schema:description
-        "A collection of data, published or curated by a single agent, and available for access or download in one or more representations." ,
-        "This class describes the actual dataset as published by the dataset provider. In cases where a distinction between the actual dataset and its entry in the catalog is necessary (because metadata such as modification date might differ), the catalog record class can be used for the latter." ,
-        "This class describes the conceptual dataset. One or more representations might be available, with differing schematic layouts and formats or serializations." ;
+    schema:description "A collection of data, published or curated by a single agent, and available for access or download in one or more representations." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/Date>
@@ -84,9 +81,7 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 
 <https://w3id.org/tern/ontologies/tern/Distribution>
     rdfs:label "Distribution" ;
-    schema:description
-        "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)." ,
-        "This represents a general availability of a dataset. It implies no information about the actual access method of the data, i.e. whether by direct download, API, or through a Web page. The use of dcat:downloadURL property indicates directly downloadable distributions." ;
+    schema:description "A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above)." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/EarthObservationSatellite>
@@ -196,9 +191,7 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 
 <https://w3id.org/tern/ontologies/tern/Procedure>
     rdfs:label "Procedure" ;
-    schema:description
-        "A workflow, protocol, plan, algorithm, or computational method specifying how to make an [Observation](#Observation), create a [Sample](#Sample), or make a change to the state of the world (via an [Actuator](http://w3.org/ns/sosa/Actuator). A [Procedure](#Procedure) is re-usable, and might be involved in many [Observations](#Observation), [Samplings](#Sampling), or [Actuations](http://w3.org/ns/sosa/Actuation). it explains the steps to be carried out to arrive at reproducible [Results](#Result)." ,
-        "[Input](#Input) can be used to capture any input values for a procedure, such as the input value of the basal wedge to estimate the basal area per hectare." ;
+    schema:description "A workflow, protocol, plan, algorithm, or computational method specifying how to make an [Observation](#Observation), create a [Sample](#Sample), or make a change to the state of the world (via an [Actuator](http://w3.org/ns/sosa/Actuator). A [Procedure](#Procedure) is re-usable, and might be involved in many [Observations](#Observation), [Samplings](#Sampling), or [Actuations](http://w3.org/ns/sosa/Actuation). it explains the steps to be carried out to arrive at reproducible [Results](#Result)." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/Quadrat>
@@ -245,9 +238,7 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 
 <https://w3id.org/tern/ontologies/tern/Site>
     rdfs:label "Ecological Site" ;
-    schema:description
-        "Location where observations may be made. This is a subclass of [Sample](#Sample) because a site should be designed to be representative of an environmental system (which may be an ecosystem or bioregion) or zone (which may be a zone such as a parcel or tract)." ,
-        "Use [dcterms:hasPart](http://purl.org/dc/terms/hasPart) and [dcterms:isPartOf](http://purl.org/dc/terms/isPartOf) to model [Site](#EcologicalSite) and [Subsite](#EcologicalSite) relationships. E.g. In TERN, there are SuperSites that contain multiple core 1 ha plots." ;
+    schema:description "Location where observations may be made. This is a subclass of [Sample](#Sample) because a site should be designed to be representative of an environmental system (which may be an ecosystem or bioregion) or zone (which may be a zone such as a parcel or tract)." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/SiteVisit>
@@ -300,16 +291,12 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 
 <https://w3id.org/tern/ontologies/tern/dateCommissioned>
     rdfs:label "date commissioned" ;
-    schema:description
-        "The date when, e.g., a [Site](#EcologicalSite) is ready to commence its operations, after it is successfully installed and tested." ,
-        "Use ISO 8601 international standard for representing dates and times. Missing start date may be set to the first of the month." ;
+    schema:description "The date when, e.g., a [Site](#EcologicalSite) is ready to commence its operations, after it is successfully installed and tested." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/dateDecommissioned>
     rdfs:label "date decommissioned" ;
-    schema:description
-        "The date when, e.g., a [Site](#EcologicalSite) is decommissioned or stopped operating." ,
-        "Use ISO 8601 international standard for representing dates and times. Missing end date may be set to the end of the month." ;
+    schema:description "The date when, e.g., a [Site](#EcologicalSite) is decommissioned or stopped operating." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/dimension>
@@ -340,9 +327,7 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 
 <https://w3id.org/tern/ontologies/tern/globalMatch>
     rdfs:label "global match" ;
-    schema:description
-        "Link a concept to an upper concept (in the closed system)." ,
-        "Use in between controlled vocabularies." ;
+    schema:description "Link a concept to an upper concept (in the closed system)." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/globalValue>
@@ -445,9 +430,7 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 
 <https://w3id.org/tern/ontologies/tern/isGlobalMatchOf>
     rdfs:label "is global match of" ;
-    schema:description
-        "An inverse property of [globalMatch](#globalMatch); Links an upper concept to a concept (in the closed system)." ,
-        "Use in between controlled vocabularies." ;
+    schema:description "An inverse property of [globalMatch](#globalMatch); Links an upper concept to a concept (in the closed system)." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/isSamplingPointOf>
@@ -533,9 +516,7 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 
 <https://w3id.org/tern/ontologies/tern/siteDescription>
     rdfs:label "site description" ;
-    schema:description
-        "Contextual information is collected at each site. This includes measures of slope an aspect, surface strew and lithology, and information on the grazing and fire history of the site (Credit: TERN AusPlots)." ,
-        "Value is usually a summary sentence of the site." ;
+    schema:description "Contextual information is collected at each site. This includes measures of slope an aspect, surface strew and lithology, and information on the grazing and fire history of the site (Credit: TERN AusPlots)." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/soilClassification>
@@ -550,9 +531,7 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 
 <https://w3id.org/tern/ontologies/tern/stratum>
     rdfs:label "stratum" ;
-    schema:description
-        "A stratum is a distinct, easily seen, layer of foliage and branches of a measurable height." ,
-        "Value should be from a controlled vocabulary identified by a URI." ;
+    schema:description "A stratum is a distinct, easily seen, layer of foliage and branches of a measurable height." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/swPoint>
@@ -562,9 +541,7 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 
 <https://w3id.org/tern/ontologies/tern/taxon>
     rdfs:label "taxon" ;
-    schema:description
-        "Taxon classification." ,
-        "Value should be from a controlled vocabulary identified by a URI." ;
+    schema:description "Taxon classification." ;
 .
 
 <https://w3id.org/tern/ontologies/tern/transectDirection>

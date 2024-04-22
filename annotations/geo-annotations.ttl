@@ -78,9 +78,7 @@ geo:defaultGeometry
 geo:dggsLiteral
     rdfs:label "DGGS Literal"@en ;
     rdfs:seeAlso <http://www.opengis.net/doc/AS/dggs/2.0> ;
-    schema:description
-        "This datatype is not expected to be used directly but to serve as an abstract datatype for a series of specific DGGS literal types, for specific DGGS implementations" ,
-        "A textual serialization of a Discrete Global Grid (DGGS) Geometry object."@en ;
+    schema:description "A textual serialization of a Discrete Global Grid (DGGS) Geometry object."@en ;
 .
 
 geo:dimension
@@ -155,16 +153,12 @@ geo:hasArea
 
 geo:hasBoundingBox
     rdfs:label "has bounding box"@en ;
-    schema:description
-        "The minimum or smallest bounding or enclosing box of a given Feature."@en ,
-        "The target is a Geometry that defines a rectilinear region whose edges are aligned with the axes of the coordinate reference system, which exactly contains the Geometry or Feature e.g. sf:Envelope."@en ;
+    schema:description "The minimum or smallest bounding or enclosing box of a given Feature."@en ;
 .
 
 geo:hasCentroid
     rdfs:label "has centroid"@en ;
-    schema:description
-        "The arithmetic mean position of all the Geometry points of a given Feature."@en ,
-        "The target Geometry shall describe a point, e.g. sf:Point."@en ;
+    schema:description "The arithmetic mean position of all the Geometry points of a given Feature."@en ;
 .
 
 geo:hasDefaultGeometry

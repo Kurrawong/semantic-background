@@ -1,12 +1,6 @@
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
-
-dcterms:conformsTo
-    rdfs:label "conforms to" ;
-    schema:description "An established standard to which the described resource conforms"@en ;
-.
 
 <http://www.w3.org/ns/dx/prof>
     rdfs:label "Profiles Vocabulary" ;

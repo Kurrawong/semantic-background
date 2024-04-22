@@ -38,9 +38,7 @@ PREFIX schema: <https://schema.org/>
 
 <http://purl.obolibrary.org/obo/BFO_0000011>
     rdfs:label "spatiotemporal region"@en ;
-    schema:description
-        "'Spacetime' here refers to the maximal instance of the universal spatiotemporal region."@en ,
-        "(Elucidation) A spatiotemporal region is an occurrent that is an occurrent part of spacetime"@en ;
+    schema:description "(Elucidation) A spatiotemporal region is an occurrent that is an occurrent part of spacetime"@en ;
 .
 
 <http://purl.obolibrary.org/obo/BFO_0000015>
@@ -70,9 +68,7 @@ PREFIX schema: <https://schema.org/>
 
 <http://purl.obolibrary.org/obo/BFO_0000020>
     rdfs:label "specifically dependent continuant"@en ;
-    schema:description
-        "On the multiple bearers case, see relational quality."@en ,
-        "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b s-depends on c"@en ;
+    schema:description "b is a specifically dependent continuant =Def b is a continuant & there is some independent continuant c which is not a spatial region & which is such that b s-depends on c"@en ;
 .
 
 <http://purl.obolibrary.org/obo/BFO_0000023>
@@ -107,9 +103,7 @@ PREFIX schema: <https://schema.org/>
 
 <http://purl.obolibrary.org/obo/BFO_0000030>
     rdfs:label "object"@en ;
-    schema:description
-        "(Elucidation) an object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en ,
-        "A description of three primary sorts of causal unity is provided in Basic Formal Ontology 2.0. Specification and User’s Guide"@en ;
+    schema:description "(Elucidation) an object is a material entity which manifests causal unity & is of a type instances of which are maximal relative to the sort of causal unity manifested"@en ;
 .
 
 <http://purl.obolibrary.org/obo/BFO_0000031>
@@ -419,9 +413,7 @@ PREFIX schema: <https://schema.org/>
 
 <http://purl.obolibrary.org/obo/BFO_0000195>
     rdfs:label "specifically depends on"@en ;
-    schema:description
-        "(Elucidation) b specifically depends on c means: b and c do not share common parts & b is of a nature such that at all times t it cannot exist at t unless c exists at t & b is not a boundary of c"@en ,
-        "The analogue of s-dependence for occurrents is has participant."@en ;
+    schema:description "(Elucidation) b specifically depends on c means: b and c do not share common parts & b is of a nature such that at all times t it cannot exist at t unless c exists at t & b is not a boundary of c"@en ;
 .
 
 <http://purl.obolibrary.org/obo/BFO_0000196>
@@ -446,9 +438,7 @@ PREFIX schema: <https://schema.org/>
 
 <http://purl.obolibrary.org/obo/BFO_0000202>
     rdfs:label "temporal interval"@en ;
-    schema:description
-        "(Elucidation) a temporal interval is a one-dimensional temporal region that is continuous, thus without gaps or breaks"@en ,
-        "A one-dimensional temporal region can include as parts not only temporal intervals but also temporal instants separated from other parts by gaps."@en ;
+    schema:description "(Elucidation) a temporal interval is a one-dimensional temporal region that is continuous, thus without gaps or breaks"@en ;
 .
 
 <http://purl.obolibrary.org/obo/BFO_0000203>

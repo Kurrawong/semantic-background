@@ -27,9 +27,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 <http://www.w3.org/2008/05/skos-xl#labelRelation>
     rdfs:label "label relation"@en ;
-    schema:description
-        "The property skosxl:labelRelation is used for representing binary ('direct') relations between instances of the class skosxl:Label."@en ,
-        "skosxl:labelRelation is not intended to be used directly, but rather as the basis for a design pattern which can be refined for more specific labeling scenarios."@en ;
+    schema:description "The property skosxl:labelRelation is used for representing binary ('direct') relations between instances of the class skosxl:Label."@en ;
 .
 
 <http://www.w3.org/2008/05/skos-xl#literalForm>
