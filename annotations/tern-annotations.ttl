@@ -593,30 +593,29 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
     rdfs:label "TERN" ;
 .
 
-[]    rdfs:label "Anusuriya Devaraju" ;
+[]    rdfs:label "Anusuriya Devaraju" ; ;
 .
 
-[]    rdfs:label "Habacuc Flores Moreno" ;
+[]    rdfs:label "Habacuc Flores Moreno" ; ;
 .
 
-[]    rdfs:label "Javier Sanchez Gonzalez" ;
+[]    rdfs:label "Javier Sanchez Gonzalez" ; ;
 .
 
-[]    rdfs:label "Mosheh Eliyahu" ;
+[]    rdfs:label "Mosheh Eliyahu" ; ;
 .
 
-[]    rdfs:label "Tina Parkhurst" ;
+[]    rdfs:label "Tina Parkhurst" ; ;
 .
 
-[]    rdfs:label "Edmond Chuc" ;
+[]    rdfs:label "Edmond Chuc" ; ;
 .
 
-[]    rdfs:label "Siddeswara Guru" ;
+[]    rdfs:label "Siddeswara Guru" ; ;
 .
 
-[]    rdfs:label "Simon J.D.Cox" ;
+[]    rdfs:label "Simon J.D.Cox" ; ;
 .
 
-[]    rdfs:label "CSIRO" ;
+[]    rdfs:label "CSIRO" ; ;
 .
-

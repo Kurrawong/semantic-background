@@ -5,4 +5,3 @@ PREFIX schema: <https://schema.org/>
     rdfs:label "Core terms defined by Darwin Core"@en ;
     schema:description "This term list includes all currently valid terms that have been defined in the core Darwin Core namespace dwc:.  To comment on this schema, please create a new issue in https://github.com/tdwg/dwc/issues"@en ;
 .
-

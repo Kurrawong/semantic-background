@@ -1,0 +1,2341 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+
+<http://id.loc.gov/ontologies/bibframe/>
+    rdfs:label "BIBFRAME vocabulary" ;
+    schema:description """The Bibframe vocabulary consists of RDF classes and properties used for the description of 
+            items cataloged principally by libraries, but may also be used to describe items cataloged by museums and archives. 
+            Classes include the three core classes - Work, Instance, and Item - in addition to many more 
+            classes to support description. Properties describe characteristics of the resource being 
+            described as well as relationships among resources. For example: one Work
+            might be a "translation of" another Work; an Instance may be an 
+            "instance of" a particular Bibframe Work.  Other properties describe attributes of Works and Instances.  For
+            example: the Bibframe property "subject" expresses an important attribute of a Work 
+            (what the Work is about), and the property "extent" (e.g. number of pages) expresses an
+            attribute of an Instance."""@en ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/AbbreviatedTitle>
+    rdfs:label "Abbreviated title" ;
+    schema:description "Title as abbreviated for citation, indexing, and/or identification." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/AccessPolicy>
+    rdfs:label "Access policy" ;
+    schema:description "Access restrictions and allowances regarding access to a resource, e.g., lending policy, access restrictions, embargos." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/AccessionNumber>
+    rdfs:label "Accession number" ;
+    schema:description "Accession Number" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/AcquisitionSource>
+    rdfs:label "Acquisition source" ;
+    schema:description "Information about an organization, person, etc., from which a resource may be obtained." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/AdminMetadata>
+    rdfs:label "Administrative metadata" ;
+    schema:description "Metadata about the metadata, especially provenance information." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Agent>
+    rdfs:label "Agent" ;
+    schema:description "Entity having a role in a resource, such as a person or organization." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Ansi>
+    rdfs:label "ANSI number" ;
+    schema:description "American National Standards Institute identifier." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/AppliedMaterial>
+    rdfs:label "Applied material" ;
+    schema:description "Physical or chemical substance applied to a base material of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Archival>
+    rdfs:label "Archival controlled" ;
+    schema:description "Resources organically created, accumulated, and/or used by a person, family, or organization in the course of conduct of affairs and preserved because of their continuing value." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Arrangement>
+    rdfs:label "Arrangement" ;
+    schema:description "Resource that represents an arrangement of another resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/AspectRatio>
+    rdfs:label "Aspect ratio" ;
+    schema:description "Proportional relationship between an image's width and its height." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Audio>
+    rdfs:label "Audio" ;
+    schema:description "Resources expressed in an audible form, including music or other sounds." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/AudioIssueNumber>
+    rdfs:label "Audio issue number" ;
+    schema:description "Number assigned by publishers of sound recordings to identify the issue designation, or serial identification, of the resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/AudioTake>
+    rdfs:label "Audio recording take" ;
+    schema:description "Identifier assigned to the smallest identifiable unit of a recording session, e.g., a specific recording of an individual song." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Barcode>
+    rdfs:label "Barcode" ;
+    schema:description "Optical machine-readable representation of data relating to the item to which it is attached." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/BaseMaterial>
+    rdfs:label "Base material" ;
+    schema:description "Underlying physical material of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Binding>
+    rdfs:label "Binding method" ;
+    schema:description "Information about methods used to bind a published or unpublished resource, or other binding information." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/BookFormat>
+    rdfs:label "Book format" ;
+    schema:description "Result of folding a printed sheet to form a gathering of leaves." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/BroadcastStandard>
+    rdfs:label "Broadcast standard" ;
+    schema:description "System used to format a video resource for television broadcast, e.g., HDTV, PAL." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Capture>
+    rdfs:label "Capture of content" ;
+    schema:description "Information about place and date associated with the capture (i.e., recording, filming, etc.) of the content of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/CaptureStorage>
+    rdfs:label "Capture and Storage Technique" ;
+    schema:description "Specifies the sound capture and storage technique used on a sound recording resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Carrier>
+    rdfs:label "Carrier type" ;
+    schema:description "Categorization reflecting the format of the storage medium and housing of a carrier." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Cartographic>
+    rdfs:label "Cartographic information" ;
+    schema:description "Content that represents the whole or part of the earth, any celestial body, or imaginary place at any scale." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/CartographicDataType>
+    rdfs:label "Digital cartographic data type" ;
+    schema:description "Data type for encoding of geospatial information in a cartographic resource, e.g., raster, vector, point." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/CartographicObjectType>
+    rdfs:label "Digital cartographic object type" ;
+    schema:description "Object type for encoding of geospatial information in a cartographic resource, e.g., point, line, polygon." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Cartography>
+    rdfs:label "Cartography" ;
+    schema:description "Resource that shows spatial information, including maps, atlases, globes, digital, and other cartographic resources." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Chronology>
+    rdfs:label "Chronology" ;
+    schema:description "Dates associated with issues or items held." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Classification>
+    rdfs:label "Classification entity" ;
+    schema:description "System of coding and organizing materials according to their subject." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ClassificationDdc>
+    rdfs:label "DDC Classification" ;
+    schema:description "Dewey Decimal Classification number used for subject access." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ClassificationLcc>
+    rdfs:label "LCC Classification" ;
+    schema:description "Library of Congress Classification number used for subject access." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ClassificationNlm>
+    rdfs:label "NLM classification" ;
+    schema:description "National Library of Medicine Classification number used for subject access" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ClassificationUdc>
+    rdfs:label "UDC Classification" ;
+    schema:description "Universal Decimal Classification number used for subject access." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Coden>
+    rdfs:label "CODEN" ;
+    schema:description "Identifier for scientific and technical periodical titles assigned by the International CODEN Section of Chemical Abstracts Service." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Collection>
+    rdfs:label "Collection" ;
+    schema:description "Aggregation of resources, generally gathered together artificially." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/CollectionArrangement>
+    rdfs:label "Organization of materials information" ;
+    schema:description "Information about the organization and arrangement of a collection of items. For instance, for computer files, organization and arrangement information may be the file structure and sort sequence of a file; for visual materials, this information may be how a collection is arranged." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/CollectiveTitle>
+    rdfs:label "Collective title" ;
+    schema:description "Title for a compilation of resources." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ColorContent>
+    rdfs:label "Color content" ;
+    schema:description "Color characteristics of a resource, e.g., black and white, multicolored, etc." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Content>
+    rdfs:label "Content type" ;
+    schema:description "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ContentAccessibility>
+    rdfs:label "Content accessibility information" ;
+    schema:description "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Contribution>
+    rdfs:label "Contribution" ;
+    schema:description "Agent and role with respect to the resource being described." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/CopyrightNumber>
+    rdfs:label "Copyright-legal deposit number" ;
+    schema:description "Identifier assigned to a copyright registration or legal deposit." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/CopyrightRegistration>
+    rdfs:label "Copyright registration" ;
+    schema:description "Copyright or Legal Deposit registration information" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/CoverArt>
+    rdfs:label "Cover art" ;
+    schema:description "Cover illustration of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Dataset>
+    rdfs:label "Dataset" ;
+    schema:description "Data encoded in a defined structure. Includes numeric data, environmental data,etc., used by applications software to calculate averages, correlations, etc., or to produce models, etc., but not normally displayed in its raw form." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/DescriptionAuthentication>
+    rdfs:label "Metadata authentication" ;
+    schema:description "Indication of specific types of reviews that have been carried out on the description information." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/DescriptionConventions>
+    rdfs:label "Description conventions" ;
+    schema:description "Rules used for the descriptive content of the resource description." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/DescriptionLevel>
+    rdfs:label "Description level" ;
+    schema:description "Designation of the descriptive content of the metadata." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/DigitalCharacteristic>
+    rdfs:label "Digital characteristic" ;
+    schema:description "Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Dissertation>
+    rdfs:label "Dissertation information" ;
+    schema:description "Information about a work presented as part of the formal requirements for an academic degree." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/DissertationIdentifier>
+    rdfs:label "Dissertation Identifier" ;
+    schema:description "Identifier assigned to a thesis or dissertation for identification purposes ." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Distribution>
+    rdfs:label "Distributor" ;
+    schema:description "Information relating to distribution of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Doi>
+    rdfs:label "DOI" ;
+    schema:description "Digital Object Identifier." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Ean>
+    rdfs:label "EAN" ;
+    schema:description "International Article Identifier." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Eidr>
+    rdfs:label "EIDR" ;
+    schema:description "Entertainment Identifier Registry" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Electronic>
+    rdfs:label "Electronic" ;
+    schema:description "Resource that is intended for manipulation by a computer, accessed either directly or remotely." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Emulsion>
+    rdfs:label "Emulsion" ;
+    schema:description "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/EncodedBitrate>
+    rdfs:label "Encoded bitrate" ;
+    schema:description "Speed at which streaming audio, video, etc., is designed to play, e.g., 32 kbps." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/EncodingFormat>
+    rdfs:label "Encoding format" ;
+    schema:description "Schema, standard, etc., used to encode the digital content of a resource, e.g., MP3, XML, JPEG." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Ensemble>
+    rdfs:label "Ensemble" ;
+    schema:description "Ensemble" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Enumeration>
+    rdfs:label "Enumeration" ;
+    schema:description "Numbering or other enumeration associated with issues or items held." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/EnumerationAndChronology>
+    rdfs:label "Enumeration and chronology" ;
+    schema:description "Numbering or other enumeration and dates associated with issues or items held." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Event>
+    rdfs:label "Event entity" ;
+    schema:description "Something that happens at a certain time and location, such as a performance, speech, or athletic event." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Extent>
+    rdfs:label "Extent" ;
+    schema:description "Number and type of units and/or subunits making up a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Family>
+    rdfs:label "Family" ;
+    schema:description "Two or more persons related by birth, marriage, adoption, civil union, or similar legal status, or who otherwise present themselves as a family." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/FileSize>
+    rdfs:label "File size" ;
+    schema:description "Number of bytes in a digital file, e.g., 162 KB." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/FileType>
+    rdfs:label "File type" ;
+    schema:description "General type of data content encoded in a computer file, e.g., text file, audio file." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Fingerprint>
+    rdfs:label "Fingerprint identifier" ;
+    schema:description "Identifier that is used to assist in the identification of antiquarian books by recording information comprising groups of characters taken from specified positions on specified pages of the book." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/FontSize>
+    rdfs:label "Font size" ;
+    schema:description "Size of the type used to represent the characters and symbols in a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Frequency>
+    rdfs:label "Frequency" ;
+    schema:description "Information about intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Generation>
+    rdfs:label "Generation" ;
+    schema:description "Relationship between an original carrier and the carrier of a reproduction made from the original." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/GenerationProcess>
+    rdfs:label "Generation process" ;
+    schema:description "Indication of the program or process used to generate the description by application of a particular transformation." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/GenreForm>
+    rdfs:label "Genre/form" ;
+    schema:description "Form category or genre to which a resource belongs." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/GeographicCoverage>
+    rdfs:label "Geographic coverage" ;
+    schema:description "Geographic coverage of the content of the resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/GrooveCharacteristic>
+    rdfs:label "Groove characteristic" ;
+    schema:description "Groove width of an analog disc or the groove pitch of an analog cylinder, e.g., coarse groove, microgroove" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Gtin14Number>
+    rdfs:label "Global Trade Item Number 14" ;
+    schema:description "14 digit number assigned to identify trade items as various packaging levels. GTIN-14 encompasses EAN/UCC-128 and ITF-14." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Hdl>
+    rdfs:label "Handle" ;
+    schema:description "Unique and persistent identifier for digital objects developed by the Corporation for National Research Initiatives." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Hub>
+    rdfs:label "Hub" ;
+    schema:description "An abstract resource that functions as a bridge between two Works." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Identifier>
+    rdfs:label "Identifier" ;
+    schema:description "Token or name that is associated with a resource, such as a URI or an ISBN." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Illustration>
+    rdfs:label "Illustrative content" ;
+    schema:description "Information about content intended to illustrate a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ImmediateAcquisition>
+    rdfs:label "Immediate acquisition" ;
+    schema:description "Information about the circumstances, e.g., source, date, method, under which the resource was directly acquired." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Instance>
+    rdfs:label "Instance" ;
+    schema:description "Resource reflecting an individual, material embodiment of a Work." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Integrating>
+    rdfs:label "Integrating resource" ;
+    schema:description "Resource that is added to or changed by updates that do not remain discrete but are integrated into the whole." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/IntendedAudience>
+    rdfs:label "Intended audience information" ;
+    schema:description "Information that identifies the specific intended or target audience or intellectual level for which the content described is considered appropriate. Also used to record interest and motivation levels and special learner characteristics." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Isan>
+    rdfs:label "ISAN" ;
+    schema:description "International Standard Audiovisual Number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Isbn>
+    rdfs:label "ISBN" ;
+    schema:description "International Standard Book Number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Ismn>
+    rdfs:label "ISMN" ;
+    schema:description "International Standard Music Number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Isni>
+    rdfs:label "ISNI" ;
+    schema:description "International Standard Name Identifier, a unique, persistent reference number for the identities of contributors to creative works." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Iso>
+    rdfs:label "ISO number" ;
+    schema:description "International Organization for Standardization standard number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Isrc>
+    rdfs:label "ISRC" ;
+    schema:description "International Standard Recording Code." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Issn>
+    rdfs:label "ISSN" ;
+    schema:description "International Standard Serial Number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/IssnL>
+    rdfs:label "ISSN-L" ;
+    schema:description "International Standard Serial Number that links together various media versions of a continuing resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Issuance>
+    rdfs:label "Mode of issuance" ;
+    schema:description "Information about whether a resource is issued in one or more parts, the way it is updated, and its intended termination." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Istc>
+    rdfs:label "ISTC" ;
+    schema:description "International Standard Text Code, a numbering system developed to enable the unique identification of textual works." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Iswc>
+    rdfs:label "ISWC" ;
+    schema:description "International Standard Musical Work Code, a unique, persistent reference number for the identification of musical works." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Item>
+    rdfs:label "Item" ;
+    schema:description "Single example of an Instance." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Jurisdiction>
+    rdfs:label "Jurisdiction" ;
+    schema:description "Legal or political unit administering a geographic area." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/KeyTitle>
+    rdfs:label "Key title" ;
+    schema:description "Unique title for a continuing resource that is assigned by the ISSN International Center in conjunction with an ISSN." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Kit>
+    rdfs:label "Kit" ;
+    schema:description "Resource that contains a mixture of various components issued as a unit and intended primarily for instructional purposes." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Language>
+    rdfs:label "Language entity" ;
+    schema:description "Language entity." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Layout>
+    rdfs:label "Layout" ;
+    schema:description "Arrangement of text, images, tactile notation, etc., in a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/LcOverseasAcq>
+    rdfs:label "LC acquisition program" ;
+    schema:description "Identification number assigned by the Library of Congress to works acquired through one of its collaborative overseas acquisition programs." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Lccn>
+    rdfs:label "LCCN" ;
+    schema:description "Library of Congress Control Number that identifies a resource description." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Local>
+    rdfs:label "Local identifier" ;
+    schema:description "Identifier established locally and not a standard number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Manufacture>
+    rdfs:label "Manufacturer" ;
+    schema:description "Information relating to manufacture of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Manuscript>
+    rdfs:label "Manuscript" ;
+    schema:description "Resource which is written in handwriting or typescript. These are generally unique resources." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Material>
+    rdfs:label "Material" ;
+    schema:description "Substance or composition of the resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MatrixNumber>
+    rdfs:label "Audio matrix number" ;
+    schema:description "Matrix identifier assigned to the master from which a specific sound recording was pressed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Media>
+    rdfs:label "Media type" ;
+    schema:description "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Meeting>
+    rdfs:label "Meeting" ;
+    schema:description "Gathering of individuals or representatives of various bodies for the purpose of discussing and/or acting on topics of common interest." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Microform>
+    rdfs:label "Microform" ;
+    schema:description "Resource that contains microimages, either transparent or opaque, that may be reproductions of existing textual or graphic materials or may be original publications." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MixedMaterial>
+    rdfs:label "Mixed material" ;
+    schema:description "Resource comprised of multiple types which is not driven by software. For instance, an archival collection of text, photographs and sound recordings." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Modification>
+    rdfs:label "Modification" ;
+    schema:description "Information relating to modification of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Monograph>
+    rdfs:label "Monograph" ;
+    schema:description "Resource that is issued as a single physical unit or intangible single logical unit." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Mount>
+    rdfs:label "Mount" ;
+    schema:description "Physical material or object used for the support or backing to which the base material of a resource has been attached." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MovementNotation>
+    rdfs:label "Movement notation" ;
+    schema:description "Information on the symbol system used to convey the content of a movement resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MovingImage>
+    rdfs:label "Moving image" ;
+    schema:description "Images intended to be perceived as moving, including motion pictures (using liveaction and/or animation), video recordings of performances, events,etc." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Multimedia>
+    rdfs:label "Software or multimedia" ;
+    schema:description "Electronic resource which is a computer program or consists of multiple media types that are software driven, such as videogames." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MusicAudio>
+    rdfs:label "Music audio" ;
+    schema:description "Music resource expressed in an audible form." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MusicDistributorNumber>
+    rdfs:label "Music distributor number" ;
+    schema:description "Identifier appearing on a resource assigned by a distributor to a specific audio recording, notated music publication, music-related publication, or videorecording." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MusicEnsemble>
+    rdfs:label "Music ensemble" ;
+    schema:description "Ensemble for which a musical work is appropriate." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MusicFormat>
+    rdfs:label "Notated music format" ;
+    schema:description "Layout for content of a resource that is presented in the form of musical notation." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MusicInstrument>
+    rdfs:label "Musical instrument" ;
+    schema:description "Instrument for which a musical work is appropriate." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MusicMedium>
+    rdfs:label "Music medium information" ;
+    schema:description "Summary statement of the medium for a musical work." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MusicNotation>
+    rdfs:label "Music notation" ;
+    schema:description "Information on the symbol system used to convey the content of a music resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MusicPlate>
+    rdfs:label "Music plate number" ;
+    schema:description "Identifiers assigned by a music publisher or printer to the printing plates for the notated portion of a notated music publication, or an identifier that emulates the printing plate tradition in contemporary publications." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MusicPublisherNumber>
+    rdfs:label "Music publisher number" ;
+    schema:description "Identifier assigned to a notated music publication other than an issue, matrix, or plate number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/MusicVoice>
+    rdfs:label "Music voice" ;
+    schema:description "Voice for which a musical work is appropriate." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Nbn>
+    rdfs:label "NBN" ;
+    schema:description "National Bibliography Number that identifies a resource description." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/NonMusicAudio>
+    rdfs:label "Non-music audio" ;
+    schema:description "Resource expressed in an audible form, including spoken word and other non-musical sounds." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/NotatedMovement>
+    rdfs:label "Notated movement" ;
+    schema:description "Graphic, non-realized representations of movement intended to be perceived visually, e.g. dance." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/NotatedMusic>
+    rdfs:label "Notated music" ;
+    schema:description "Graphic, non-realized representations of musical works intended to be perceived visually." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Notation>
+    rdfs:label "Notation" ;
+    schema:description "Information on the alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Note>
+    rdfs:label "Note" ;
+    schema:description "Information, usually in textual form, on attributes of a resource or some aspect of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Object>
+    rdfs:label "Three-dimensional object" ;
+    schema:description "Resource in a form intended to be perceived visually in three-dimensions. Includes man-made objects such as models, sculptures, clothing, and toys, as well as naturally occurring objects such as specimens mounted for viewing." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ObjectCount>
+    rdfs:label "Digital cartographic object count" ;
+    schema:description "Number of objects in encoded geospatial information in a cartographic resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Organization>
+    rdfs:label "Organization" ;
+    schema:description "Corporation or group of persons and/or organizations that acts, or may act, as a unit." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ParallelTitle>
+    rdfs:label "Parallel title proper" ;
+    schema:description "Title in another language and/or script." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Person>
+    rdfs:label "Person" ;
+    schema:description "Individual or identity established by an individual (either alone or in collaboration with one or more other individuals)." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Place>
+    rdfs:label "Place" ;
+    schema:description "Geographic location." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/PlaybackChannels>
+    rdfs:label "Configuration of playback channels" ;
+    schema:description "Configuration/number of sound channels used to make a recording, such as one channel for a monophonic recording, e.g., mono, stereo, quadraphonic, surround." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/PlaybackCharacteristic>
+    rdfs:label "Special playback characteristics" ;
+    schema:description "Equalization system, noise reduction system, etc., used in making an audio recording, e.g., CCIR standard, CX encoded, Dolby." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/PlayingSpeed>
+    rdfs:label "Playing speed" ;
+    schema:description "Speed at which an audio carrier must be operated to produce the sound intended, e.g., 78 rpm, 19 cm/s." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Polarity>
+    rdfs:label "Polarity" ;
+    schema:description "Relationship of the colors and tones in an image to the colors and tones of the object reproduced." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/PostalRegistration>
+    rdfs:label "Postal registration number" ;
+    schema:description "Number assigned to a publication for which the specified postal service permits the use of a special mailing class privilege." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/PresentationFormat>
+    rdfs:label "Presentation format" ;
+    schema:description "Format used in the production of a projected image, e.g., Cinerama, IMAX." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/PrimaryContribution>
+    rdfs:label "Primary contribution" ;
+    schema:description "Contribution for which the agent is the name chosen as the name part of the name and title access point." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Print>
+    rdfs:label "Printed" ;
+    schema:description "Resource that is printed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Production>
+    rdfs:label "Producer" ;
+    schema:description "Information relating to production of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ProductionMethod>
+    rdfs:label "Production method" ;
+    schema:description "Process used to produce a resource" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Projection>
+    rdfs:label "Projection" ;
+    schema:description "Method or system used to represent the surface of the earth or of a celestial sphere on a plane." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ProjectionCharacteristic>
+    rdfs:label "Projection characteristic" ;
+    schema:description "Technical specification relating to the projection of a motion picture film." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ProjectionSpeed>
+    rdfs:label "Projection speed" ;
+    schema:description "Speed at which a projected carrier must be operated to produce the moving image intended, e.g., 20 fps." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ProvisionActivity>
+    rdfs:label "Provider entity" ;
+    schema:description "Information about the agent or place relating to the publication, printing, distribution, issue, release, or production of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/PubFrequency>
+    rdfs:label "Publication Frequency" ;
+    schema:description "Information about the publication frequency of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Publication>
+    rdfs:label "Publisher" ;
+    schema:description "Information relating to publication of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/PublisherNumber>
+    rdfs:label "Publisher number" ;
+    schema:description "Number assigned by a publisher that is not one of the specific defined types." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/RecordingMedium>
+    rdfs:label "Recording medium" ;
+    schema:description "Type of medium used to record sound on an audio carrier, e.g., magnetic, optical." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/RecordingMethod>
+    rdfs:label "Type of recording" ;
+    schema:description "Method used to encode audio content for playback, e.g., analog, digital." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ReductionRatio>
+    rdfs:label "Reduction ratio" ;
+    schema:description "Size of a micro-image in relation to the original from which it was produced." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/RegionalEncoding>
+    rdfs:label "Regional encoding" ;
+    schema:description "Identification of the region of the world for which a videodisc has been encoded, e.g., region 4." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Relief>
+    rdfs:label "Relief" ;
+    schema:description "Relief term specified on a cartographic resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ReportNumber>
+    rdfs:label "Technical report number" ;
+    schema:description "Identification number of a technical report that is not a Standard Technical Report Number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Resolution>
+    rdfs:label "Resolution" ;
+    schema:description "Clarity or fineness of detail in a digital image, expressed by the measurement of the image in pixels, etc., e.g., 3.1 megapixels." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/RetentionPolicy>
+    rdfs:label "Retention policy" ;
+    schema:description "Policy of holding institution for retaining resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Review>
+    rdfs:label "Review" ;
+    schema:description "Review of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Role>
+    rdfs:label "Role" ;
+    schema:description "Function played or provided by a contributor, e.g., author, illustrator, etc." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Scale>
+    rdfs:label "Scale" ;
+    schema:description "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Script>
+    rdfs:label "Script" ;
+    schema:description "Information on the script, or symbol system used to convey the content of a text resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Serial>
+    rdfs:label "Serial" ;
+    schema:description "Resource that is issued in successive parts, usually numbered, that has no predetermined conclusion." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Series>
+    rdfs:label "Series" ;
+    schema:description "Resource with a collective title that applies to a group of separate resources, each of which also has its own title." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ShelfMark>
+    rdfs:label "Shelf location" ;
+    schema:description "Piece/item identifier, such as a call or other type of number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ShelfMarkDdc>
+    rdfs:label "DDC call number" ;
+    schema:description "Shelf mark based on Dewey Decimal Classification." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ShelfMarkLcc>
+    rdfs:label "LCC call number" ;
+    schema:description "Shelf mark based on Library of Congress Classification." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ShelfMarkNlm>
+    rdfs:label "NLM call number" ;
+    schema:description "Shelf mark based on National Library of Medicine Classification." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ShelfMarkUdc>
+    rdfs:label "UDC call number" ;
+    schema:description "Shelf mark based on Universal Decimal Classification." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Sici>
+    rdfs:label "SICI" ;
+    schema:description "Serial Item and Contribution Identifier." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/SoundCharacteristic>
+    rdfs:label "Sound characteristic" ;
+    schema:description "Technical specification relating to the encoding of sound in a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/SoundContent>
+    rdfs:label "Sound content" ;
+    schema:description "Indication of whether the production of sound is an integral part of the resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Source>
+    rdfs:label "Source" ;
+    schema:description "Resource from which value or label came or was derived." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Status>
+    rdfs:label "Status" ;
+    schema:description "Designation of the validity or position of something, e.g., whether something is incorrect or available." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/StillImage>
+    rdfs:label "Still image" ;
+    schema:description "Resource expressed through line, shape, shading, etc., intended to be perceived visually as a still image or images in two dimensions. Includes two-dimensional images and slides and transparencies." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/StockNumber>
+    rdfs:label "Stock number" ;
+    schema:description "Identification number used for stock purposes and assigned by agencies such as distributors, publishers, or vendors." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Strn>
+    rdfs:label "STRN" ;
+    schema:description "Standard Technical Report Number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/StudyNumber>
+    rdfs:label "Study number" ;
+    schema:description "Identification number for a computer data file." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Sublocation>
+    rdfs:label "Sublocation" ;
+    schema:description "Specific place within the holding entity where the item is located or made available." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Summary>
+    rdfs:label "Summary" ;
+    schema:description "Description of the content of a resource, such as an abstract, summary, etc.." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/SupplementaryContent>
+    rdfs:label "Supplementary material" ;
+    schema:description "Index, bibliography, appendix, etc. intended to supplement the primary content of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/SystemRequirement>
+    rdfs:label "System Requirement" ;
+    schema:description "Equipment or system requirements beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/TableOfContents>
+    rdfs:label "Table of contents" ;
+    schema:description "Table of contents of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Tactile>
+    rdfs:label "Tactile material" ;
+    schema:description "Resource that is intended to be perceived by touch." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/TactileNotation>
+    rdfs:label "Tactile notation" ;
+    schema:description "Information on the symbol system used to convey the content of a tactile resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/TapeConfig>
+    rdfs:label "Tape configuration" ;
+    schema:description "Number of tracks on an audiotape, e.g., 12 track." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Temporal>
+    rdfs:label "Temporal concept" ;
+    schema:description "Chronological period." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Text>
+    rdfs:label "Text" ;
+    schema:description "Resource intended to be perceived visually and understood through the use of language in written or spoken form." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Title>
+    rdfs:label "Title entity" ;
+    schema:description "Title information relating to a resource: work title, preferred title, instance title, transcribed title, translated title, variant form of title, etc." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Topic>
+    rdfs:label "Topic" ;
+    schema:description "Concept or area of knowledge." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/TrackConfig>
+    rdfs:label "Track configuration" ;
+    schema:description "Configuration of the audio track on a sound-track film, e.g., center track, edge track." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/TransliteratedTitle>
+    rdfs:label "Transliterated title" ;
+    schema:description "Title transliterated from one script to another." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Unit>
+    rdfs:label "Unit" ;
+    schema:description "Units in which a value is expressed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Upc>
+    rdfs:label "UPC" ;
+    schema:description "Universal Product Code." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Urn>
+    rdfs:label "URN" ;
+    schema:description "Uniform Resource Name." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/UsageAndAccessPolicy>
+    rdfs:label "Use and access conditions" ;
+    schema:description "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/UsePolicy>
+    rdfs:label "Use policy" ;
+    schema:description "Usage limitations placed on a resource with respect to reproduction, publication, exhibition, etc.." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/VariantTitle>
+    rdfs:label "Title variation" ;
+    schema:description "Title associated with the resource that is different from the Work or Instance title." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/VideoCharacteristic>
+    rdfs:label "Video characteristic" ;
+    schema:description "Technical specification relating to the encoding of video images in a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/VideoFormat>
+    rdfs:label "Video format" ;
+    schema:description "Standard, etc., used to encode the analog video content of a resource, e.g., Beta, 8mm." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/VideoRecordingNumber>
+    rdfs:label "Video recording number" ;
+    schema:description "Number assigned by a publisher to a video recording." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/Work>
+    rdfs:label "Work" ;
+    schema:description "Resource reflecting a conceptual essence of a cataloging resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/absorbed>
+    rdfs:label "Absorption of" ;
+    schema:description
+        "Resource that has been incorporated into another resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/absorbedBy>
+    rdfs:label "Absorbed by" ;
+    schema:description
+        "Resource that incorporates another resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/accompaniedBy>
+    rdfs:label "Accompanied by" ;
+    schema:description
+        "Resource that accompanies the described resource." ,
+        "Suggested use - With Work, Instance or Item" ,
+        "Suggested value - Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/accompanies>
+    rdfs:label "Accompanies" ;
+    schema:description
+        "Resource that adds to or is issued with the described resource." ,
+        "Suggested use - With Work, Instance or Item" ,
+        "Suggested value - Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/acquisitionSource>
+    rdfs:label "Source of acquisition" ;
+    schema:description
+        "Information about an organization, person, etc., from which a resource may be obtained." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/acquisitionTerms>
+    rdfs:label "Terms of acquisition" ;
+    schema:description
+        "Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/adminMetadata>
+    rdfs:label "Administrative metadata" ;
+    schema:description "Metadata about the metadata, especially provenance information." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/adminMetadataFor>
+    rdfs:label "Administrative metadata for" ;
+    schema:description "Relates an Administrative metadata resource to the resource it captures information about." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/agent>
+    rdfs:label "Associated agent" ;
+    schema:description "Entity associated with a resource or element of description, such as the name of the entity responsible for the content or of the publication, printing, distribution, issue, release or production of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/agentOf>
+    rdfs:label "Associated agent of" ;
+    schema:description "Property relating an agent, such as an entity responsible for the content or of the publication, printing, distribution, issue, release or production, to another resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/appliedMaterial>
+    rdfs:label "Applied material" ;
+    schema:description
+        "Physical or chemical substance applied to a base material of a resource." ,
+        "Suggested use - With Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/appliedMaterialOf>
+    rdfs:label "Appllied material of" ;
+    schema:description "Relates a Material resource to that which it is the applied material of." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/arrangement>
+    rdfs:label "Arrangement" ;
+    schema:description "Relates one resource to another of which it is an arrangement of the first." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/arrangementOf>
+    rdfs:label "Arrangement of" ;
+    schema:description "Relates an arrangement to the resource of which it is an arrangement." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ascensionAndDeclination>
+    rdfs:label "Cartographic ascension and declination" ;
+    schema:description "System for identifying the location of a celestial object in the sky covered by the cartographic content of a resource using the angles of right ascension and declination." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/aspectRatio>
+    rdfs:label "Aspect ratio" ;
+    schema:description
+        "Proportional relationship between an image's width and its height." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/assigner>
+    rdfs:label "Assigner" ;
+    schema:description "Entity that assigned the metadata, such as the entity that assigned a classification number, entity that assigned a name, entity that assigned an identifier." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/awards>
+    rdfs:label "Award note" ;
+    schema:description
+        "Information on awards associated with the described resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/baseMaterial>
+    rdfs:label "Base material" ;
+    schema:description
+        "Suggested use - With Work, Instance or Item" ,
+        "Underlying physical material of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/baseMaterialOf>
+    rdfs:label "Base material of" ;
+    schema:description "Relates a Material resource to that which it is the base material of." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/binding>
+    rdfs:label "Binding method" ;
+    schema:description "A method used to bind a published or unpublished resource,or other binding information." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/bookFormat>
+    rdfs:label "Book format" ;
+    schema:description "Result of folding a printed sheet to form a gathering of leaves." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/capture>
+    rdfs:label "Capture of content" ;
+    schema:description
+        "Information about place and date associated with the capture (e.g., recording, filming) of the content of a resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/carrier>
+    rdfs:label "Carrier type" ;
+    schema:description "Categorization reflecting the format of the storage medium and housing of a carrier." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/cartographicAttributes>
+    rdfs:label "Cartographic data" ;
+    schema:description
+        "Cartographic data that identifies characteristics of the resource, such as coordinates, projection, etc." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/changeDate>
+    rdfs:label "Description change date" ;
+    schema:description "Date or date and time on which the metadata was modified." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/classification>
+    rdfs:label "Classification" ;
+    schema:description
+        "Classification number in any scheme." ,
+        "Suggested use - With Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/classificationPortion>
+    rdfs:label "Classification number" ;
+    schema:description "Classification number (single class number or beginning number of a span) that indicates the subject by applying a formal system of coding and organizing resources." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/code>
+    rdfs:label "Code" ;
+    schema:description "String of characters that serves as a code representing information." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/collectionArrangement>
+    rdfs:label "Collection Organization and arrangement" ;
+    schema:description
+        "Information about the organization and arrangement of a collection of resources." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/collectionArrangementOf>
+    rdfs:label "Organization and arrangement of Collection" ;
+    schema:description
+        "Relates an Arrangement resource to that which it describes." ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/collectionOrganization>
+    rdfs:label "Organization of material" ;
+    schema:description "Manner in which the resource is divided into smaller units." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/colorContent>
+    rdfs:label "Color content" ;
+    schema:description
+        "Color characteristics, e.g., black and white, multicolored." ,
+        "Suggested use - With Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/content>
+    rdfs:label "Content type" ;
+    schema:description "Categorization reflecting the fundamental form of communication in which the content is expressed and the human sense through which it is intended to be perceived." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/contentAccessibility>
+    rdfs:label "Content accessibility information" ;
+    schema:description
+        "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/continuedBy>
+    rdfs:label "Continued by" ;
+    schema:description
+        "Resource whose content continues an earlier resource under a new title." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/continuedInPartBy>
+    rdfs:label "Continued in part by" ;
+    schema:description
+        "Resource part of whose content separated from an earlier resource to form a new resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/continues>
+    rdfs:label "Continuation of" ;
+    schema:description
+        "Resource that is continued by the content of a later resource under a new title." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/continuesInPart>
+    rdfs:label "Continuation in part of" ;
+    schema:description
+        "Resource that split into two or more separate resources with new titles." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/contribution>
+    rdfs:label "Contributor and role" ;
+    schema:description
+        "Agent and its role in relation to the resource." ,
+        "Suggested use - With Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/contributionOf>
+    rdfs:label "Contribution of" ;
+    schema:description
+        "Relates a contribution resource, which associates an Agent and Role together, to the relevant resource." ,
+        "Suggested value - Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/coordinates>
+    rdfs:label "Cartographic coordinates" ;
+    schema:description "Mathematical system for identifying the area covered by the cartographic content of a resource, expressed either by means of longitude and latitude on the surface of planets or by the angles of right ascension and declination for celestial cartographic content." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/copyrightDate>
+    rdfs:label "Copyright date" ;
+    schema:description
+        "Date associated with a claim of protection under copyright or a similar regime." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/copyrightRegistration>
+    rdfs:label "Copyright registration information" ;
+    schema:description
+        "Copyright and Legal Deposit registration information" ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/count>
+    rdfs:label "Number of units" ;
+    schema:description "Number associated with a measure of units, such as the number of units and/or subunits making up a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/coverArt>
+    rdfs:label "Cover art" ;
+    schema:description
+        "Cover art image of a resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/creationDate>
+    rdfs:label "Description creation date" ;
+    schema:description "Date or date and time on which the original metadata first created." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/credits>
+    rdfs:label "Credits note" ;
+    schema:description
+        "Information in note form of credits for persons or organizations who have participated in the creation and/or production of the resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/custodialHistory>
+    rdfs:label "Custodial history" ;
+    schema:description
+        "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource." ,
+        "Suggested use - With Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/dataSource>
+    rdfs:label "Data source" ;
+    schema:description
+        "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/date>
+    rdfs:label "Date" ;
+    schema:description "Date designation associated with a resource or element of description, such as date of title variation; year a degree was awarded; date associated with the publication, printing, distribution, issue, release or production of a resource. May be date typed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/degree>
+    rdfs:label "Degree" ;
+    schema:description "Degree for which author was a candidate." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/derivativeOf>
+    rdfs:label "Is derivative of" ;
+    schema:description
+        "Source work from which the described resource is derived." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/derivedFrom>
+    rdfs:label "Source metadata" ;
+    schema:description "Link to the metadata that was the source of the data." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/descriptionAuthentication>
+    rdfs:label "Description authentication" ;
+    schema:description "Indication of specific types of reviews that have been carried out on the description information." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/descriptionConventions>
+    rdfs:label "Description conventions" ;
+    schema:description "Rules used for the descriptive content of the resource description." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/descriptionLanguage>
+    rdfs:label "Description language" ;
+    schema:description "Language used for the metadata." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/descriptionLevel>
+    rdfs:label "Description level" ;
+    schema:description "Designation of the descriptive content of the metadata." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/descriptionModifier>
+    rdfs:label "Description modifier" ;
+    schema:description "Agency that modified a description." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/digitalCharacteristic>
+    rdfs:label "Digital characteristic" ;
+    schema:description "Technical specification relating to the digital encoding of text, image, audio, video, and other types of data in a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/dimensions>
+    rdfs:label "Dimensions" ;
+    schema:description "Measurements of the carrier or carriers and/or the container of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/dissertation>
+    rdfs:label "Dissertation Information" ;
+    schema:description
+        "Suggested use - With Work or Instance" ,
+        "Work presented as part of the formal requirements for an academic degree." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/duration>
+    rdfs:label "Duration" ;
+    schema:description
+        "Information about the playing time, running time, etc. of a resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/edition>
+    rdfs:label "Classification scheme edition" ;
+    schema:description "Edition of the classification scheme, such as full, abridged or a number, when a classification scheme designates editions." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/editionEnumeration>
+    rdfs:label "Edition enumeration" ;
+    schema:description "Enumeration of the edition; usually transcribed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/editionStatement>
+    rdfs:label "Edition statement" ;
+    schema:description "Information identifying the edition or version of the resource and associated statements of responsibility for the edition; usually transcribed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/electronicLocator>
+    rdfs:label "Electronic location" ;
+    schema:description "Electronic location from which the resource is available." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/emulsion>
+    rdfs:label "Emulsion" ;
+    schema:description "Suspension of light-sensitive chemicals used as a coating on a microfilm or microfiche, e.g., silver halide." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ensemble>
+    rdfs:label "Ensemble" ;
+    schema:description "Ensemble applicable to the Work." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/ensembleType>
+    rdfs:label "Ensemble type" ;
+    schema:description "Specific type of ensemble, such as orchestra, band, guitar ensemble." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/enumerationAndChronology>
+    rdfs:label "Numbering or other enumeration and dates associated with issues or items held." ;
+    schema:description "Numbering and dates of issues or items held." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/equinox>
+    rdfs:label "Cartographic equinox" ;
+    schema:description "One of two points of intersection of the ecliptic and the celestial equator, occupied by the sun when its declination is 0 degrees." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/eventContent>
+    rdfs:label "Event content" ;
+    schema:description "Work whose content is the described event." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/eventContentOf>
+    rdfs:label "Has event content" ;
+    schema:description "Event that is the content of the described work." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/exclusionGRing>
+    rdfs:label "Cartographic G ring area excluded" ;
+    schema:description "Coordinate pairs that identify the closed non-intersecting boundary of the area contained within the G-polygon outer ring that is excluded." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/expressionOf>
+    rdfs:label "Expression of" ;
+    schema:description
+        "Suggested use - With Work or Hub" ,
+        "Suggested value - With Work or Hub" ,
+        "Work or Hub that the described Work or Hub is an expression of. Use to connect Works and/or Hubs under LRM/RDA guidelines or similar implementations." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/extent>
+    rdfs:label "Extent" ;
+    schema:description "Number and type of units and/or subunits making up a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/findingAid>
+    rdfs:label "Finding aid" ;
+    schema:description
+        "Relationship for archival, visual, and manuscript resources to a finding aid or similar control materials." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/findingAidOf>
+    rdfs:label "Finding aid for" ;
+    schema:description
+        "Finding aid or similar control materials for archival, visual, and manuscript resources." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/firstIssue>
+    rdfs:label "Multipart first issue" ;
+    schema:description "Beginning date of a resource and/or the sequential designations." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/fontSize>
+    rdfs:label "Font size" ;
+    schema:description "Size of the type used to represent the characters and symbols in a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/frequency>
+    rdfs:label "Frequency" ;
+    schema:description "Intervals at which the parts of a serially produced resource or the updates to an integrating resource are issued." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/generation>
+    rdfs:label "Generation" ;
+    schema:description "Relationship between an original carrier and the carrier of a reproduction made from the original." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/generationDate>
+    rdfs:label "Date generated" ;
+    schema:description "Date of conversion of the metadata from another format." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/generationProcess>
+    rdfs:label "Description generation" ;
+    schema:description "Indication of the program or process used to generate the description by application of a particular transformation." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/genreForm>
+    rdfs:label "Genre/form" ;
+    schema:description
+        "Form category or genre to which a resource belongs" ,
+        "Suggested use - With Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/geographicCoverage>
+    rdfs:label "Geographic coverage" ;
+    schema:description "Geographic coverage of the content of the resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/grantingInstitution>
+    rdfs:label "Degree issuing institution" ;
+    schema:description "Name of degree granting institution." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/hasDerivative>
+    rdfs:label "Has derivative" ;
+    schema:description
+        "Resource that is a modification of the described work." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/hasEquivalent>
+    rdfs:label "Equivalence" ;
+    schema:description
+        "Resource embodies the same content as the described resource." ,
+        "Suggested use - With Work, Instance or Item" ,
+        "Suggested value - Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/hasExpression>
+    rdfs:label "Expressed as" ;
+    schema:description
+        "Suggested use - With Work or Hub" ,
+        "Suggested value - With Work or Hub" ,
+        "Work or Hub that is an expression of a described Work or Hub. Use to relate Works and/or Hubs under LRM/RDA guidelines or similar implementations." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/hasInstance>
+    rdfs:label "Instance of Work" ;
+    schema:description "Instance is related to described Work. For use to connect Works to Instances in the BIBFRAME structure." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/hasItem>
+    rdfs:label "Has holding" ;
+    schema:description "Item which is an example of the described Instance." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/hasPart>
+    rdfs:label "Has part" ;
+    schema:description
+        "Resource that is included either physically or logically in the described resource" ,
+        "Suggested use - With Work, Instance, Item or Event" ,
+        "Suggested value - Work, Instance, Item or Event" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/hasReproduction>
+    rdfs:label "Reproduced as" ;
+    schema:description "Resource that reproduces another Resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/hasSeries>
+    rdfs:label "In series" ;
+    schema:description
+        "Resource in which the part has been issued; the title of the larger resource appears on the part." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/hasSubseries>
+    rdfs:label "Subseries" ;
+    schema:description
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ,
+        "series resource that is part of another series." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/heldBy>
+    rdfs:label "Held by" ;
+    schema:description "Entity holding the item or from which it is available." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/hierarchicalLevel>
+    rdfs:label "Hierarchical level of material" ;
+    schema:description "Hierarchical position of the described materials relative to other material from the same source." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/historyOfWork>
+    rdfs:label "History of the work" ;
+    schema:description "Information about the history of a Work." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/identifiedBy>
+    rdfs:label "Identifier" ;
+    schema:description "Character string associated with a resource that serves to differentiate that resource from other resources, i.e., that uniquely identifies an entity." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/identifies>
+    rdfs:label "Resource identified" ;
+    schema:description "Resource that is associated with a character string that serves to differentiate one resource from another." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/illustrativeContent>
+    rdfs:label "Illustrative content information" ;
+    schema:description
+        "Information about content intended to illustrate a resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/immediateAcquisition>
+    rdfs:label "Immediate acquisition" ;
+    schema:description "Information about the circumstances, e.g., source, date, method, under which the resource was directly acquired." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/index>
+    rdfs:label "Has index" ;
+    schema:description
+        "Resource has an accompanying index" ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/indexOf>
+    rdfs:label "Index to" ;
+    schema:description
+        "Index that accompanies a resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/instanceOf>
+    rdfs:label "Instance of" ;
+    schema:description "Work the Instance described instantiates or manifests. For use to connect Instances to Works in the BIBFRAME structure." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/instrument>
+    rdfs:label "Instrument" ;
+    schema:description "Instrument for which a musical Work is appropriate." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/instrumentalType>
+    rdfs:label "Instrument role" ;
+    schema:description "Specific role of instrument, such as alternate, doubling, solo, ensemble." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/intendedAudience>
+    rdfs:label "Intended audience" ;
+    schema:description
+        "Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/issuance>
+    rdfs:label "Mode of issuance" ;
+    schema:description
+        "Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/issuedWith>
+    rdfs:label "Issued with" ;
+    schema:description
+        "Resource that is issued on the same carrier as the resource being described." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/itemOf>
+    rdfs:label "Holding for" ;
+    schema:description "Instance for which the described Item is an example." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/itemPortion>
+    rdfs:label "Classification item number" ;
+    schema:description "Number attached to a classification string that indicates a particular item." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/language>
+    rdfs:label "Language information" ;
+    schema:description "Language associated with a resource or its parts." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/lastIssue>
+    rdfs:label "Multipart last issue" ;
+    schema:description "Ending date of a resource and/or the sequential designations." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/layout>
+    rdfs:label "Layout" ;
+    schema:description "Arrangement of text, images, tactile notation, etc., in a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/legalDate>
+    rdfs:label "Date of legal work" ;
+    schema:description "Date of legal work, or promulgation of a law, or signing of a treaty." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/mainTitle>
+    rdfs:label "Main title" ;
+    schema:description "Title being addressed. Possible title component." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/material>
+    rdfs:label "Material" ;
+    schema:description
+        "Resource uses, is composed of, integrates, etc. the related material." ,
+        "Suggested use - With Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/materialOf>
+    rdfs:label "Material of" ;
+    schema:description
+        "Suggested use - With Work, Instance or Item" ,
+        "This material is related to a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/media>
+    rdfs:label "Media type" ;
+    schema:description
+        "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/mergedToForm>
+    rdfs:label "Merged to form" ;
+    schema:description
+        "One of two or more resources that come together to form a new resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/mergerOf>
+    rdfs:label "Merger of" ;
+    schema:description
+        "One of two or more resources which came together to form a new resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/mount>
+    rdfs:label "Mount material or object" ;
+    schema:description "Physical material or object used for the support or backing to which the base material of a resource has been attached." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/musicFormat>
+    rdfs:label "Format of notated music" ;
+    schema:description
+        "Layout for content of a resource that is presented in the form of musical notation, such as full score, condensed score, vocal score, etc." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/musicKey>
+    rdfs:label "Music key" ;
+    schema:description "Pitch and mode for music." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/musicMedium>
+    rdfs:label "Music medium of performance" ;
+    schema:description "Instrumental, vocal, and/or other medium of performance for which a musical resource was originally conceived, written or performed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/musicOpusNumber>
+    rdfs:label "Music opus number" ;
+    schema:description "Numeric designation of a musical work assigned by a composer, publisher, or a musicologist." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/musicSerialNumber>
+    rdfs:label "Music serial number" ;
+    schema:description "Numeric designation for musical works consecutively numbered in music reference sources." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/musicThematicNumber>
+    rdfs:label "Music thematic number" ;
+    schema:description "Numeric designation for a musical work as found in a thematic index for the composer." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/natureOfContent>
+    rdfs:label "Content nature" ;
+    schema:description
+        "Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/notation>
+    rdfs:label "Notation system" ;
+    schema:description
+        "Alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/note>
+    rdfs:label "Note" ;
+    schema:description "General textual information relating to a resource, such as Information about a specific copy of a resource or information about a particular attribute of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/noteFor>
+    rdfs:label "Note for" ;
+    schema:description "Relates a Note resource to the resource to which the note pertains." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/noteType>
+    rdfs:label "Note type" ;
+    schema:description "Type of note." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/originDate>
+    rdfs:label "Origin date" ;
+    schema:description "Date or date range associated with the creation of a Work." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/originPlace>
+    rdfs:label "Origin place" ;
+    schema:description
+        "Place from which the creation of the resource originated." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/originalVersion>
+    rdfs:label "Original version" ;
+    schema:description
+        "Resource is the original version of which this resource is a reproduction." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/originalVersionOf>
+    rdfs:label "Original version of" ;
+    schema:description
+        "Original version of a resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/otherEdition>
+    rdfs:label "Other edition" ;
+    schema:description
+        "Resource has other available editions, for example simultaneously published language editions or reprints." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/otherPhysicalFormat>
+    rdfs:label "Has other physical format" ;
+    schema:description
+        "Resource that is manifested in another physical carrier." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/outerGRing>
+    rdfs:label "Cartographic outer G ring area covered" ;
+    schema:description "Coordinate pairs that identify the closed non-intersecting boundary of the area covered." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/part>
+    rdfs:label "Part" ;
+    schema:description "Part of a resource to which information applies." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/partName>
+    rdfs:label "Part title" ;
+    schema:description "Part or section name of a title. Possible title component." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/partNumber>
+    rdfs:label "Part number" ;
+    schema:description "Part or section enumeration of a title. Possible title component." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/partOf>
+    rdfs:label "Is part of" ;
+    schema:description
+        "Resource in which the described resource is physically or logically contained." ,
+        "Suggested use - With Work, Instance, Item or Event" ,
+        "Suggested value - Work, Instance, Item or Event" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/pattern>
+    rdfs:label "Arrangement of material" ;
+    schema:description "Pattern of arrangement of materials within a unit." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/physicalLocation>
+    rdfs:label "Storing or shelving location" ;
+    schema:description "Location in the holding agency where the item is shelved or stored." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/place>
+    rdfs:label "Place" ;
+    schema:description "Geographic location or place entity associated with a resource or element of description, such as the place associated with the publication, printing, distribution, issue, release or production of a resource, place of an event." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/polarity>
+    rdfs:label "Polarity" ;
+    schema:description "Relationship of the colors and tones in an image to the colors and tones of the object reproduced." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/precededBy>
+    rdfs:label "Preceded by" ;
+    schema:description
+        "Resource that precedes the resource being described, e.g., is earlier in time or before in narrative." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/preferredCitation>
+    rdfs:label "Preferred citation" ;
+    schema:description
+        "Citation to the resource preferred by its custodian of the resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/productionMethod>
+    rdfs:label "Production method" ;
+    schema:description "Process used to produce a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/projection>
+    rdfs:label "Cartographic projection" ;
+    schema:description "Method or system used to represent the surface of the earth or of a celestial sphere on a plane." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/projectionCharacteristic>
+    rdfs:label "Projection characteristic" ;
+    schema:description "Technical specification relating to the projection of a motion picture film." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/provisionActivity>
+    rdfs:label "Provision activity" ;
+    schema:description "Place, name, and/or date information relating to the publication, printing, distribution, issue, release, production, etc. of a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/provisionActivityStatement>
+    rdfs:label "Provider statement" ;
+    schema:description "Statement relating to providers of a resource; usually transcribed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/pubFrequency>
+    rdfs:label "Publication frequency" ;
+    schema:description
+        "Relates a resource to a publication frequency resource to capture such details as first issue, last issue, status, etc." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/qualifier>
+    rdfs:label "Qualifier" ;
+    schema:description "Qualifier of information, such as an addition to a title to make it unique or qualifying information associated with an identifier." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/reductionRatio>
+    rdfs:label "Reduction ratio" ;
+    schema:description "Size of a micro-image in relation to the original from which it was produced." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/referencedBy>
+    rdfs:label "Referenced by" ;
+    schema:description
+        "Resource that references the described resource" ,
+        "Suggested use - With Work, Instance or Item" ,
+        "Suggested value - Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/references>
+    rdfs:label "References" ;
+    schema:description
+        "Resource that is referenced by the described resource." ,
+        "Suggested use - With Work, Instance or Item" ,
+        "Suggested value - Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/relatedTo>
+    rdfs:label "Related resource" ;
+    schema:description "Any relationship between Work, Instance, Item, and Event resources." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/relief>
+    rdfs:label "Relief" ;
+    schema:description "Relief term specified on a cartographic resource" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/replacedBy>
+    rdfs:label "Replaced by" ;
+    schema:description
+        "Later resource used in place of an earlier resource, usually because the later resource contains updated or new information." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/replacementOf>
+    rdfs:label "Replacement of" ;
+    schema:description
+        "Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/reproductionOf>
+    rdfs:label "Reproduction of" ;
+    schema:description "Resource that is a reproduction of another Resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/responsibilityStatement>
+    rdfs:label "Creative responsibility statement" ;
+    schema:description "Statement relating to any persons, families, or corporate bodies responsible for the creation of, or contributing to the content of a resource; usually transcribed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/review>
+    rdfs:label "Review content" ;
+    schema:description
+        "Review of a resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/role>
+    rdfs:label "Contributor role" ;
+    schema:description "Function provided by a contributor, e.g., author, illustrator, etc." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/scale>
+    rdfs:label "Scale" ;
+    schema:description
+        "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/schedulePart>
+    rdfs:label "Classification designation" ;
+    schema:description "Designates whether the classification number is from the standard or optional part of a schedule or table." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/separatedFrom>
+    rdfs:label "Separated from" ;
+    schema:description
+        "Resource that spun off a part of its content to form a new resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/seriesEnumeration>
+    rdfs:label "Series enumeration" ;
+    schema:description "Series enumeration of the resource; usually transcribed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/seriesOf>
+    rdfs:label "Series container of" ;
+    schema:description
+        "Resource that is a part of a larger resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/seriesStatement>
+    rdfs:label "Series statement" ;
+    schema:description "Statement of the series the resource is in; usually transcribed; includes the ISSN if applicable." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/shelfMark>
+    rdfs:label "Shelf mark" ;
+    schema:description "Piece identifier, such as a call or other type of number." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/soundCharacteristic>
+    rdfs:label "Sound characteristic" ;
+    schema:description "Technical specification relating to the encoding of sound in a resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/soundContent>
+    rdfs:label "Sound content" ;
+    schema:description
+        "Indication of whether the production of sound is an integral part of the resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/source>
+    rdfs:label "Source" ;
+    schema:description "Resource from which value or label came or was derived, such as the formal source/scheme from which a classification number is taken or derived, list from which an agent name is taken or derived, source within which an identifier is unique." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/spanEnd>
+    rdfs:label "Classification number span end" ;
+    schema:description "Ending number of classification number span." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/splitInto>
+    rdfs:label "Split into" ;
+    schema:description
+        "One of two or more resources resulting from the division of an earlier resource into separate resources." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/status>
+    rdfs:label "Status" ;
+    schema:description "Designation of the validity or position of something, such as indication that the classification number is canceled or invalid, circulation availability of an item, indication of whether the identifier is canceled or invalid." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/subject>
+    rdfs:label "Subject" ;
+    schema:description
+        "Subject term(s) describing a resource." ,
+        "Suggested use - With Work, Instance, Item or Event" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/subjectOf>
+    rdfs:label "Subject of" ;
+    schema:description
+        "Relates a subject to that which it describes." ,
+        "Suggested value - Work, Instance, Item or Event" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/sublocation>
+    rdfs:label "Held in sublocation" ;
+    schema:description "Specific place within the holding entity where the item is located or made available." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/subseriesEnumeration>
+    rdfs:label "Subseries enumeration" ;
+    schema:description "Subseries enumeration of the resource; usually transcribed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/subseriesOf>
+    rdfs:label "Subseries of" ;
+    schema:description
+        "Series resource of which the described resource is a part." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/subseriesStatement>
+    rdfs:label "Subseries statement" ;
+    schema:description "Statement of the subseries the resource is in; usually transcribed; includes the ISSN if applicable." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/subtitle>
+    rdfs:label "Subtitle" ;
+    schema:description "Word, character, or group of words and/or characters that contains the remainder of the title after the main title. Possible title component." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/succeededBy>
+    rdfs:label "Succeeded by" ;
+    schema:description
+        "Resource that succeeds the resource being described, e.g., later in time or after in a narrative." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/summary>
+    rdfs:label "Summary content" ;
+    schema:description
+        "Suggested use - With Work or Instance" ,
+        "Summary or abstract of the resource described." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/supplement>
+    rdfs:label "Supplement" ;
+    schema:description
+        "Resource that updates or otherwise complements the predominant resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/supplementTo>
+    rdfs:label "Supplement to" ;
+    schema:description
+        "Resource that is updated or otherwise complemented by the augmenting resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/supplementaryContent>
+    rdfs:label "Supplementary material" ;
+    schema:description
+        "Material such as an index, bibliography, appendix intended to supplement the primary content of a resource." ,
+        "Suggested use - With Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/systemRequirement>
+    rdfs:label "Equipment or system requirements" ;
+    schema:description "Equipment or system requirement beyond what is normal and obvious for the type of carrier or type of file, such as make and model of equipment or hardware, operating system, amount of memory, programming language, other necessary software, any plug-ins or peripherals required to play, view, or run the resource, etc." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/table>
+    rdfs:label "Classification table identification" ;
+    schema:description "Number of the table from which the classification number in a subdivision entry is taken, e.g., a DDC table." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/tableOfContents>
+    rdfs:label "Table of contents content" ;
+    schema:description
+        "Suggested use - With Work or Instance" ,
+        "Table of contents of the described resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/tableSeq>
+    rdfs:label "Classification table sequence number" ;
+    schema:description "Sequence number or other identifier for an internal classification sub arrangement or add in a classification scheme." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/temporalCoverage>
+    rdfs:label "Temporal coverage" ;
+    schema:description "Time period coverage of the content of the resource." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/title>
+    rdfs:label "Title resource" ;
+    schema:description
+        "Name given to a resource." ,
+        "Suggested use - With Work, Instance, Item or Event" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/titleOf>
+    rdfs:label "Title of" ;
+    schema:description
+        "Relates a title resource to that which it is the title of." ,
+        "Suggested value - Work, Instance, Item or Event" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/translation>
+    rdfs:label "Translation as" ;
+    schema:description
+        "Resource that translates the text of the source entity into a language different from that of the original." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/translationOf>
+    rdfs:label "Translation of" ;
+    schema:description
+        "Resource that has been translated, i.e., the text is expressed in a language different from that of the original resource." ,
+        "Suggested use - With Work or Instance" ,
+        "Suggested value - Work or Instance" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/unit>
+    rdfs:label "Type of unit" ;
+    schema:description "Units in which a value is expressed, such as the physical or logical constituent of a resource (e.g., a volume, audiocassette, film reel, a map, a digital file)." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/usageAndAccessPolicy>
+    rdfs:label "Use and access condition" ;
+    schema:description
+        "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending." ,
+        "Suggested use - With Work, Instance or Item" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/validDate>
+    rdfs:label "Valid date" ;
+    schema:description "The date or date range during which the resource is accurate." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/variantType>
+    rdfs:label "Variant title type" ;
+    schema:description "Type of title variation, e.g., acronym, cover, spine, earlier, later, series version." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/version>
+    rdfs:label "Version" ;
+    schema:description "Term or terms that identify works such as arranged for music, vulgate for religious work, etc." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/videoCharacteristic>
+    rdfs:label "Video characteristic" ;
+    schema:description "Technical specification relating to the encoding of video images in a resource" ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/voice>
+    rdfs:label "Voice" ;
+    schema:description "Voice for which a musical work is appropriate, such as soprano, tenor, mixed." ;
+.
+
+<http://id.loc.gov/ontologies/bibframe/voiceType>
+    rdfs:label "Type of voice" ;
+    schema:description "Specific type of voice group, such as chorus, solo." ;
+.

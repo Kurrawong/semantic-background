@@ -188,4 +188,3 @@ qb:structure
     rdfs:label "structure"@en ;
     schema:description "indicates the structure to which this data set conforms"@en ;
 .
-

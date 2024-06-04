@@ -40,4 +40,3 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     rdfs:seeAlso skos:prefLabel ;
     schema:description "The property skosxl:prefLabel is used to associate an skosxl:Label with a skos:Concept. The property is analogous to skos:prefLabel."@en ;
 .
-

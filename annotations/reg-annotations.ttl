@@ -342,4 +342,3 @@ PREFIX schema: <https://schema.org/>
     rdfs:label "validation query"@en ;
     schema:description "A SPARQL ASK query which can be used to validate a proposed entry in this register. Returns true of an error is found."@en ;
 .
-

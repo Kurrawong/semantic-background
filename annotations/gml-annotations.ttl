@@ -218,4 +218,3 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <http://www.opengis.net/ont/gml#TriangulatedSurface>
     rdfs:label "Triangulated Surface"@en ;
 .
-
