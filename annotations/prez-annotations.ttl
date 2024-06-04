@@ -1,0 +1,21 @@
+PREFIX prez: <https://prez.dev/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+prez:CatalogList
+    skos:prefLabel "catalog list" .
+
+prez:DatasetList
+    skos:prefLabel "dataset list" .
+
+prez:FeatureCollectionList
+    skos:prefLabel "feature collection list" .
+    
+prez:FeatureList
+    skos:prefLabel "feature list" .
+
+prez:SchemesList
+    skos:prefLabel "schemes list" .
+
+prez:VocPrezCollectionList
+    skos:prefLabel "VocPrez collection list" .
+
