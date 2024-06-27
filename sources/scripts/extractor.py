@@ -1,8 +1,9 @@
 import os
 import shutil
 from pathlib import Path
+
 from rdflib import Graph
-from rdflib.namespace import DCTERMS, RDFS, SDO, SKOS, DC
+from rdflib.namespace import DC, DCTERMS, RDFS, SDO, SKOS
 
 parent_dir = Path(__file__).parent.parent
 
@@ -14,10 +15,12 @@ for f in Path(parent_dir / "originals").glob("*.ttl"):
     if Path(str(f).replace("originals", "overrides")).is_file():
         f = Path(str(f).replace("originals", "overrides"))
 
-    new_ontology_file_path = str(f)\
-        .replace("originals", "ontologies")\
-        .replace("overrides", "ontologies")\
+    new_ontology_file_path = (
+        str(f)
+        .replace("originals", "ontologies")
+        .replace("overrides", "ontologies")
         .replace("sources/", "")
+    )
 
     print(f"Copying whole ontology to {new_ontology_file_path}")
     shutil.copy(f, new_ontology_file_path)
@@ -41,13 +44,15 @@ for f in Path(parent_dir / "originals").glob("*.ttl"):
         g2.add((s, RDFS.label, o))
 
     for s, o in g.subject_objects(
-        SKOS.definition | SDO.description | DCTERMS.description | DC.description | RDFS.comment
+        SKOS.definition
+        | SDO.description
+        | DCTERMS.description
+        | DC.description
+        | RDFS.comment
     ):
         g2.add((s, SDO.description, o))
 
-    for s, o in g.subject_objects(
-        RDFS.seeAlso
-    ):
+    for s, o in g.subject_objects(RDFS.seeAlso):
         g2.add((s, RDFS.seeAlso, o))
 
     g2.serialize(destination=new_annotation_file_path, format="longturtle")
