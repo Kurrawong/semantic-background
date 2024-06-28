@@ -1,0 +1,12 @@
+PREFIX altr-ext: <http://www.w3.org/ns/dx/conneg/altr-ext#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+altr-ext:constrainsClass
+    skos:prefLabel "constrains class" .
+
+altr-ext:hasDefaultResourceFormat
+    skos:prefLabel "has default resource format" .
+
+altr-ext:hasResourceFormat
+    skos:prefLabel "has resource format" .
+
