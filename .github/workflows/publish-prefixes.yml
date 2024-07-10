@@ -23,9 +23,9 @@ jobs:
         run: poetry install
       - name: run script 
         run: |
-            source ../../.venv/bin/activate
+            source .venv/bin/activate
+            cd ./sources/scripts
             python export_prefixes.py
-        working-directory: ./sources/scripts
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
