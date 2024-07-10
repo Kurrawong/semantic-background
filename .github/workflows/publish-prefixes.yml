@@ -25,6 +25,7 @@ jobs:
         run: |
             source .venv/bin/activate
             cd ./sources/scripts
+            mkdir ns
             python export_prefixes.py
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
