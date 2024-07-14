@@ -1,0 +1,8 @@
+@prefix shacl-ext: <http://example.com/shacl-extension#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+shacl-ext:allPredicateValues rdfs:label "All Predicate Values" .
+shacl-ext:limit rdfs:label "limit" .
+shacl-ext:offset rdfs:label "offset" .
+shacl-ext:orderBy rdfs:label "order by" .
+shacl-ext:bnode-depth rdfs:label "blank node depth" .
