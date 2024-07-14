@@ -191,3 +191,4 @@ skos:topConceptOf
     rdfs:label "is top concept in scheme"@en ;
     schema:description "Relates a concept to the concept scheme that it is a top level concept of."@en ;
 .
+

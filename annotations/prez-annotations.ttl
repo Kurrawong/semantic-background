@@ -1,21 +1,70 @@
-PREFIX prez: <https://prez.dev/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
-prez:CatalogList
-    skos:prefLabel "catalog list" .
+<https://prez.dev/CatalogList>
+    rdfs:label "Catalog List" ;
+.
 
-prez:DatasetList
-    skos:prefLabel "dataset list" .
+<https://prez.dev/DatasetList>
+    rdfs:label "Dataset List" ;
+.
 
-prez:FeatureCollectionList
-    skos:prefLabel "feature collection list" .
-    
-prez:FeatureList
-    skos:prefLabel "feature list" .
+<https://prez.dev/FeatureCollectionList>
+    rdfs:label "Feature Collection List" ;
+.
 
-prez:SchemesList
-    skos:prefLabel "schemes list" .
+<https://prez.dev/FeatureList>
+    rdfs:label "Feature List" ;
+.
 
-prez:VocPrezCollectionList
-    skos:prefLabel "VocPrez collection list" .
+<https://prez.dev/SchemesList>
+    rdfs:label "Schemes List" ;
+.
+
+<https://prez.dev/VocPrezCollectionList>
+    rdfs:label "VocPrez Collection List" ;
+.
+
+<https://prez.dev/count>
+    rdfs:label "count" ;
+.
+
+<https://prez.dev/link>
+    rdfs:label "link" ;
+.
+
+<https://prez.dev/members>
+    rdfs:label "members" ;
+.
+
+<https://prez.dev/ont/deliversClasses>
+    rdfs:label "delivers classes" ;
+.
+
+<https://prez.dev/ont/endpointTemplate>
+    rdfs:label "endpoint template" ;
+.
+
+<https://prez.dev/ont/focusToParentRelation>
+    rdfs:label "focus to parent relation" ;
+.
+
+<https://prez.dev/ont/parentEndpoint>
+    rdfs:label "parent endpoint" ;
+.
+
+<https://prez.dev/ont/parentToFocusRelation>
+    rdfs:label "parent to focus relation" ;
+.
+
+<https://prez.dev/searchResultMatch>
+    rdfs:label "Matched Term" ;
+.
+
+<https://prez.dev/searchResultPredicate>
+    rdfs:label "Matched Predicate" ;
+.
+
+<https://prez.dev/searchResultWeight>
+    rdfs:label "Search Result Weight" ;
+.
 

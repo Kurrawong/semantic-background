@@ -21,3 +21,4 @@ PREFIX schema: <https://schema.org/>
     rdfs:label "user docs" ;
     schema:description "human-oriented documentation, examples etc for use of this term" ;
 .
+

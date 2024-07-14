@@ -80,3 +80,4 @@ rdfs:subPropertyOf
     rdfs:label "subproperty of" ;
     schema:description "The subject is a subproperty of a property." ;
 .
+

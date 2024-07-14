@@ -6781,3 +6781,4 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <https://stratigraphy.org/icschart/ChronostratChart2020-01.pdf> ;
     schema:description "RDF representation of the Geologic Time Scale, as defined in the International Chronostratigraphic Chart (ICC) from the International Commission on Stratigraphy (ICS). The ICC embraces both chronostratigraphic (time-rock) units and their equivalent geochronologic (geologic-time) units, the former being related to the ‘Stratigraphic points’ referred to below, and the latter (geochronologic units) being employed in this RDF representation."@en ;
 .
+

@@ -718,29 +718,30 @@ dcat:hadRole
         "La funzione di un'entità o un agente rispetto ad un'altra entità o risorsa."@it ;
 .
 
-[]    rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ; ;
+[]    rdfs:seeAlso <https://orcid.org/0000-0002-3884-3420> ;
 .
 
-[]    rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ; ;
+[]    rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me> ;
 .
 
-[]    rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ; ;
+[]    rdfs:seeAlso <http://www.eurecom.fr/~atemezin/gatemezing-foaf.rdf> ;
 .
 
-[]    rdfs:seeAlso <https://jakub.klímek.com/#me> ; ;
+[]    rdfs:seeAlso <https://jakub.klímek.com/#me> ;
 .
 
-[]    rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ; ;
+[]    rdfs:seeAlso <https://orcid.org/0000-0001-5648-2713> ;
 .
 
-[]    rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ; ;
+[]    rdfs:seeAlso <https://orcid.org/0000-0001-9300-2694> ;
 .
 
-[]    rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ; ;
+[]    rdfs:seeAlso <http://fadmaa.me/foaf.ttl> ;
 .
 
-[]    rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ; ;
+[]    rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
 .
 
-[]    rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ; ;
+[]    rdfs:seeAlso <https://orcid.org/0000-0003-3499-8262> ;
 .
+

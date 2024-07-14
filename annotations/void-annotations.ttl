@@ -160,26 +160,27 @@ void:vocabulary
 []    rdfs:label "Digital Enterprise Research Institute, NUI Galway" ;
     rdfs:seeAlso
         <http://www.deri.ie/> ,
-        <http://www.insight-centre.org> ; ;
+        <http://www.insight-centre.org> ;
 .
 
-[]    rdfs:label "Richard Cyganiak" ; ;
+[]    rdfs:label "Richard Cyganiak" ;
 .
 
-[]    rdfs:label "Jun Zhao" ; ;
+[]    rdfs:label "Jun Zhao" ;
 .
 
-[]    rdfs:label "Department of Zoology, University of Oxford" ; ;
+[]    rdfs:label "Department of Zoology, University of Oxford" ;
 .
 
-[]    rdfs:label "Keith Alexander" ; ;
+[]    rdfs:label "Keith Alexander" ;
 .
 
-[]    rdfs:label "Talis" ; ;
+[]    rdfs:label "Talis" ;
 .
 
-[]    rdfs:label "Michael Hausenblas" ; ;
+[]    rdfs:label "Michael Hausenblas" ;
 .
 
-[]    rdfs:label "LiDRC" ; ;
+[]    rdfs:label "LiDRC" ;
 .
+

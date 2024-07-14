@@ -210,3 +210,4 @@ PREFIX schema: <https://schema.org/>
         "An occurrent [span:Occurrent] that is part of time." ,
         "Time and temporal region [span:TemporalRegion] entities are entities in their own rights which exist independently of any entities which can be located at them. This view of time can be called \"absolutist\" or \"the container view\" in analogy to what is traditionally the case with space (see spatial region [snap:SpatialRegion]." ;
 .
+

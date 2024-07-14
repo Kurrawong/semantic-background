@@ -192,3 +192,4 @@ sosa:usedProcedure
     rdfs:label "used procedure"@en ;
     schema:description "A relation to link to a re-usable Procedure used in making an Observation, an Actuation, or a Sample, typically through a Sensor, Actuator or Sampler."@en ;
 .
+

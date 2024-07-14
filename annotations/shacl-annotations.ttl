@@ -920,3 +920,4 @@ sh:zeroOrOnePath
     rdfs:label "zero or one path"@en ;
     schema:description "The (single) value of this property represents a path that is matched zero or one times."@en ;
 .
+

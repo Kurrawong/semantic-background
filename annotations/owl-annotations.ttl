@@ -410,3 +410,4 @@ owl:withRestrictions
     rdfs:label "withRestrictions" ;
     schema:description "The property that determines the collection of facet-value pairs that define a datatype restriction." ;
 .
+

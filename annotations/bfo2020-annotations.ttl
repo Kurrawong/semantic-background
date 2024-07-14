@@ -505,3 +505,4 @@ PREFIX schema: <https://schema.org/>
     rdfs:label "BFO 2020" ;
     schema:description "The most recent version of this file will always be in the GitHub repository https://github.com/bfo-ontology/bfo-2020" ;
 .
+

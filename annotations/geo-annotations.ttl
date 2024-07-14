@@ -365,29 +365,30 @@ geo:wktLiteral
     schema:description "A Well-known Text serialization of a Geometry object."@en ;
 .
 
-[]    rdfs:label "Open Geospatial Consortium" ; ;
+[]    rdfs:label "Open Geospatial Consortium" ;
 .
 
-[]    rdfs:label "Matthew Perry" ; ;
+[]    rdfs:label "Matthew Perry" ;
 .
 
-[]    rdfs:label "John Herring" ; ;
+[]    rdfs:label "John Herring" ;
 .
 
-[]    rdfs:label "Nicholas J. Car" ; ;
+[]    rdfs:label "Nicholas J. Car" ;
 .
 
-[]    rdfs:label "Joseph Abhayaratna" ; ;
+[]    rdfs:label "Joseph Abhayaratna" ;
 .
 
-[]    rdfs:label "Timo Homburg" ; ;
+[]    rdfs:label "Timo Homburg" ;
 .
 
-[]    rdfs:label "Simon J D Cox" ; ;
+[]    rdfs:label "Simon J D Cox" ;
 .
 
-[]    rdfs:label "Frans Knibbe" ; ;
+[]    rdfs:label "Frans Knibbe" ;
 .
 
-[]    rdfs:label "Mathias Bonduel" ; ;
+[]    rdfs:label "Mathias Bonduel" ;
 .
+

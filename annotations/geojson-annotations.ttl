@@ -84,3 +84,4 @@ PREFIX schema: <https://schema.org/>
     rdfs:label "type"@en ;
     schema:description "RFC 7946 Section 3."@en ;
 .
+

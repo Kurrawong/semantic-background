@@ -6655,3 +6655,4 @@ In thermodynamics, in a system of which the entropy is considered as an independ
         "磁場"@zh ;
     schema:description "\\(\\textbf{Magnetic Field Strength}\\) is a vector quantity obtained at a given point by subtracting the magnetization \\(M\\) from the magnetic flux density \\(B\\) divided by the magnetic constant \\(\\mu_0\\). The magnetic field strength is related to the total current density \\(J_{tot}\\) via: \\(\\text{rot} H = J_{tot}\\)."^^<http://qudt.org/schema/qudt/LatexString> ;
 .
+

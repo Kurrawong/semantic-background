@@ -14231,3 +14231,4 @@ schema:yield
     rdfs:label "yield" ;
     schema:description "The quantity that results by performing instructions. For example, a paper airplane, 10 personalized candles." ;
 .
+
