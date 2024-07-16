@@ -3,7 +3,7 @@ from pathlib import Path
 from rdflib import Graph
 
 parent_dir = Path(__file__).parent.parent.parent
-output_dir = parent_dir / "output/gh-pages/ns"
+output_dir = parent_dir / "sources/gh-pages/ns"
 output_dir.mkdir(parents=True, exist_ok=True)
 
 for item in output_dir.glob('**/*'):
