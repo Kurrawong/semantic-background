@@ -7,7 +7,7 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v4
@@ -21,13 +21,12 @@ jobs:
           virtualenvs-path: ./.venv
       - name: Install Python dependencies
         run: poetry install --no-root
-      - name: run script 
+      - name: run script
         run: |
-            source .venv/bin/activate
-            cd ./sources/scripts
-            mkdir ns
-            python export_prefixes.py
+          pushd ./sources/scripts
+          poetry run python export_prefixes.py
+          popd
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./sources/scripts/ns 
+          folder: ./output/gh-pages
