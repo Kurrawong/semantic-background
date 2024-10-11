@@ -1,0 +1,22 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<http://www.w3.org/ns/dx/connegp/altr-ext#constrainsClass>
+    rdfs:label "Constrains Class" ;
+.
+
+<http://www.w3.org/ns/dx/connegp/altr-ext#hasDefaultProfile>
+    rdfs:label "Has Default Profile" ;
+.
+
+<http://www.w3.org/ns/dx/connegp/altr-ext#hasDefaultResourceFormat>
+    rdfs:label "Default Resource Format" ;
+.
+
+<http://www.w3.org/ns/dx/connegp/altr-ext#hasNodeShape>
+    rdfs:label "Has Node Shape" ;
+.
+
+<http://www.w3.org/ns/dx/connegp/altr-ext#hasResourceFormat>
+    rdfs:label "Has Resource Format" ;
+.
+

@@ -1,0 +1,8 @@
+@prefix altr-ext: <http://www.w3.org/ns/dx/connegp/altr-ext#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+altr-ext:hasDefaultResourceFormat rdfs:label "Default Resource Format" .
+altr-ext:hasResourceFormat rdfs:label "Has Resource Format" .
+altr-ext:constrainsClass rdfs:label "Constrains Class" .
+altr-ext:hasNodeShape rdfs:label "Has Node Shape" .
+altr-ext:hasDefaultProfile rdfs:label "Has Default Profile" .
