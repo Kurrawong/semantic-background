@@ -1019,4 +1019,3 @@ time:years
         "length of, or element of the length of, a temporal extent expressed in years"@en ,
         "Longitud de, o elemento de la longitud de, una extensión temporal expresada en años."@es ;
 .
-

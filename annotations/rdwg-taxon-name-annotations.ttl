@@ -418,4 +418,3 @@ PREFIX schema: <https://schema.org/>
          combintationAuthorTeam properties. The main role of this property is to aid disambiguation where author strings may be confusing. This property is not restricted to a date type as feedback
          from TCS suggested that this restriction was inappropriate.""" ;
 .
-

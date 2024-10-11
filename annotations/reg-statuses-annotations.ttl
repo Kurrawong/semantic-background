@@ -99,4 +99,3 @@ Note that just like the original form of this vocabulary, while it is a SKOS voc
 <https://www.epimorphics.com>
     rdfs:label "Epimorphics" ;
 .
-

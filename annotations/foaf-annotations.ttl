@@ -394,4 +394,3 @@ foaf:yahooChatID
     rdfs:label "Yahoo chat ID" ;
     schema:description "A Yahoo chat ID" ;
 .
-

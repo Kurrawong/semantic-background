@@ -524,4 +524,3 @@ The date the digital resource was created can be indicated with pav:createdOn.
 
 The location the agent was at when creating the digital resource can be made using pav:createdAt."""@en ;
 .
-

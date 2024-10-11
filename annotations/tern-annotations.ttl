@@ -592,31 +592,3 @@ Each system is comprised of a data logger, neutron detector, satellite telemetry
 <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66>
     rdfs:label "TERN" ;
 .
-
-[]    rdfs:label "Anusuriya Devaraju" ;
-.
-
-[]    rdfs:label "Habacuc Flores Moreno" ;
-.
-
-[]    rdfs:label "Javier Sanchez Gonzalez" ;
-.
-
-[]    rdfs:label "Mosheh Eliyahu" ;
-.
-
-[]    rdfs:label "Tina Parkhurst" ;
-.
-
-[]    rdfs:label "Edmond Chuc" ;
-.
-
-[]    rdfs:label "Siddeswara Guru" ;
-.
-
-[]    rdfs:label "Simon J.D.Cox" ;
-.
-
-[]    rdfs:label "CSIRO" ;
-.
-

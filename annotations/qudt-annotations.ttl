@@ -288,8 +288,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <p class="lm-para">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure. 
 
-</p><p class="lm-para">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded as &quot;fundamental&quot; in this sense.</p>
-<p class="lm-para">A quantity is distinguished from a &quot;quantity kind&quot; in that the former carries a value and the latter is a type specifier.</p>"""^^rdf:HTML ;
+<p class="lm-para">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded as "fundamental" in this sense.</p>
+<p class="lm-para">A quantity is distinguished from a "quantity kind" in that the former carries a value and the latter is a type specifier.</p>"""^^rdf:HTML ;
 .
 
 <http://qudt.org/schema/qudt/QuantityKind>
@@ -372,7 +372,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/Scale>
     rdfs:label "Scale" ;
-    schema:description "Scales (also called &quot;scales of measurement&quot; or &quot;levels of measurement&quot;)  are expressions that typically refer to the theory of scale types."^^rdf:HTML ;
+    schema:description "Scales (also called \"scales of measurement\" or \"levels of measurement\")  are expressions that typically refer to the theory of scale types."^^rdf:HTML ;
 .
 
 <http://qudt.org/schema/qudt/ScaleType>
@@ -934,7 +934,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/id>
     rdfs:label "qudt id" ;
-    schema:description "The &quot;qudt:id&quot; is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: &quot;UCCCENNNN&quot;, where &quot;CCC&quot; is a numeric code or a category and &quot;NNNN&quot; is a digit string for a member element of that category. For scaled units there may be an addition field that has the format &quot;QNN&quot; where &quot;NN&quot; is a digit string representing an exponent power, and &quot;Q&quot; is a qualifier that indicates with the code &quot;P&quot; that the power is a positive decimal exponent, or the code &quot;N&quot; for a negative decimal exponent, or the code &quot;B&quot; for binary positive exponents."^^rdf:HTML ;
+    schema:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents."^^rdf:HTML ;
 .
 
 <http://qudt.org/schema/qudt/iec61360Code>
@@ -1313,7 +1313,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA>
     rdfs:label "QUDT Schema - Version 2.1.27" ;
-    schema:description """<p class="lm-para">The QUDT, or &quot;Quantity, Unit, Dimension and Type&quot; schema defines the base classes properties, and restrictions used for modeling physical quantities, units of measure, and their dimensions in various measurement systems. The goal of the QUDT ontology is to provide a unified model of, measurable quantities, units for measuring different kinds of quantities, the numerical values of quantities in different units of measure and the data structures and data types used to store and manipulate these objects in software.</p>
+    schema:description """<p class="lm-para">The QUDT, or "Quantity, Unit, Dimension and Type" schema defines the base classes properties, and restrictions used for modeling physical quantities, units of measure, and their dimensions in various measurement systems. The goal of the QUDT ontology is to provide a unified model of, measurable quantities, units for measuring different kinds of quantities, the numerical values of quantities in different units of measure and the data structures and data types used to store and manipulate these objects in software.</p>
 
 <p class="lm-para">Except for unit prefixes, all units are specified in separate vocabularies. Descriptions are provided in both HTML and LaTeX formats. A quantity is a measure of an observable phenomenon, that, when associated with something, becomes a property of that thing; a particular object, event, or physical system. </p>
 
@@ -1332,9 +1332,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://qudt.org/schema/qudt/OrdinalScale> ,
         <http://qudt.org/schema/qudt/RatioScale> ;
     schema:description
-        """<p>The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has two defined points (the freezing and boiling point of water at specific conditions) and then separated into 100 intervals, date when measured from an arbitrary epoch (such as AD), percentage such as a percentage return on a stock,[16] location in Cartesian coordinates, and direction measured in degrees from true or magnetic north. Ratios are not meaningful since 20 °C cannot be said to be &quot;twice as hot&quot; as 10 °C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called &quot;scaled variables&quot;, but the formal mathematical term is an affine space (in this case an affine line).</p>
+        """<p>The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has two defined points (the freezing and boiling point of water at specific conditions) and then separated into 100 intervals, date when measured from an arbitrary epoch (such as AD), percentage such as a percentage return on a stock,[16] location in Cartesian coordinates, and direction measured in degrees from true or magnetic north. Ratios are not meaningful since 20 °C cannot be said to be "twice as hot" as 10 °C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called "scaled variables", but the formal mathematical term is an affine space (in this case an affine line).</p>
 <p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered set</p>"""^^rdf:HTML ,
-        "median, percentile &amp; Monotonic increasing (order (&lt;)) &amp; totally ordered set"^^rdf:HTML ;
+        "median, percentile & Monotonic increasing (order (<)) & totally ordered set"^^rdf:HTML ;
 .
 
 <http://qudt.org/schema/qudt/NominalScale>
@@ -1361,6 +1361,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://qudt.org/schema/qudt/IntervalScale> ,
         <http://qudt.org/schema/qudt/NominalScale> ,
         <http://qudt.org/schema/qudt/OrdinalScale> ;
-    schema:description "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has &quot;twice the length&quot; of another (= is &quot;twice as long&quot;). Very informally, many ratio scales can be described as specifying &quot;how much&quot; of something (i.e. an amount or magnitude) or &quot;how many&quot; (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero."^^rdf:HTML ;
+    schema:description "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \"twice the length\" of another (= is \"twice as long\"). Very informally, many ratio scales can be described as specifying \"how much\" of something (i.e. an amount or magnitude) or \"how many\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero."^^rdf:HTML ;
 .
-

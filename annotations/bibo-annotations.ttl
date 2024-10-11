@@ -613,4 +613,3 @@ another purpose."""@en ;
     rdfs:label "volume"@en ;
     schema:description "A volume number"@en ;
 .
-

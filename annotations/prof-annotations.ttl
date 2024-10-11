@@ -60,19 +60,3 @@ prof:isTransitiveProfileOf
     rdfs:label "is transitive profile of" ;
     schema:description "The transitive closure of the prof:isProfileOf property. Relates a profile to another specification that it is a profile of, possibly via a chain of intermediate profiles that are in prof:isProfileOf relationships"@en ;
 .
-
-[]    rdfs:label "Nicholas J. Car" ;
-.
-
-[]    rdfs:label "SURROUND Australia Pty Ltd" ;
-.
-
-[]    rdfs:label "Rob Atkinson" ;
-.
-
-[]    rdfs:label "Open Geospatial Consortium" ;
-.
-
-[]    rdfs:label "Metalinkage" ;
-.
-

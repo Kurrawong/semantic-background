@@ -364,31 +364,3 @@ geo:wktLiteral
     rdfs:seeAlso <https://portal.ogc.org/files/?artifact_id=25355> ;
     schema:description "A Well-known Text serialization of a Geometry object."@en ;
 .
-
-[]    rdfs:label "Open Geospatial Consortium" ;
-.
-
-[]    rdfs:label "Matthew Perry" ;
-.
-
-[]    rdfs:label "John Herring" ;
-.
-
-[]    rdfs:label "Nicholas J. Car" ;
-.
-
-[]    rdfs:label "Joseph Abhayaratna" ;
-.
-
-[]    rdfs:label "Timo Homburg" ;
-.
-
-[]    rdfs:label "Simon J D Cox" ;
-.
-
-[]    rdfs:label "Frans Knibbe" ;
-.
-
-[]    rdfs:label "Mathias Bonduel" ;
-.
-

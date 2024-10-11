@@ -620,4 +620,3 @@ dcterms:valid
         "Date (often a range) of validity of a resource."@en ,
         "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty."@en ;
 .
-

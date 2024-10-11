@@ -122,4 +122,3 @@ rdf:value
     rdfs:label "value" ;
     schema:description "Idiomatic property used for structured values." ;
 .
-

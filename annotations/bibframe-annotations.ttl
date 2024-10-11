@@ -2339,4 +2339,3 @@ PREFIX schema: <https://schema.org/>
     rdfs:label "Type of voice" ;
     schema:description "Specific type of voice group, such as chorus, solo." ;
 .
-
