@@ -2,8 +2,10 @@ import os
 import shutil
 from pathlib import Path
 
-from rdflib import Graph
-from rdflib.namespace import DC, DCTERMS, RDFS, SDO, SKOS
+from rdflib import Graph, Namespace, BNode, Literal
+from rdflib.namespace import DC, DCTERMS, RDFS, SDO, SKOS, XSD
+
+MADS = Namespace("http://www.loc.gov/mads/rdf/v1#")
 
 parent_dir = Path(__file__).parent.parent
 
@@ -35,13 +37,15 @@ for f in Path(parent_dir / "originals").glob("*.ttl"):
     )
     print(f"Copying annotations to {new_annotation_file_path}")
 
+
     g = Graph().parse(f)
 
     g2 = Graph()
     for s, o in g.subject_objects(
-        RDFS.label | SKOS.prefLabel | SDO.name | DCTERMS.title
+        RDFS.label | SKOS.prefLabel | SDO.name | DCTERMS.title | MADS.authoritativeLabel
     ):
-        g2.add((s, RDFS.label, o))
+        if not isinstance(s, BNode):  # prevents creating labels for BNs like contributors to ontologies
+            g2.add((s, RDFS.label, o))
 
     for s, o in g.subject_objects(
         SKOS.definition
@@ -50,9 +54,11 @@ for f in Path(parent_dir / "originals").glob("*.ttl"):
         | DC.description
         | RDFS.comment
     ):
-        g2.add((s, SDO.description, o))
+        if not isinstance(s, BNode):
+            g2.add((s, SDO.description, o))
 
     for s, o in g.subject_objects(RDFS.seeAlso):
-        g2.add((s, RDFS.seeAlso, o))
+        if not isinstance(s, BNode):
+            g2.add((s, RDFS.seeAlso, o))
 
-    g2.serialize(destination=new_annotation_file_path, format="longturtle")
+    g2.serialize(destination=new_annotation_file_path, format="longturtle", )
