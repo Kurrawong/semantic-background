@@ -8,10 +8,8 @@ readme = "README.md"
 packages = [{include = "semantic_background"}]
 
 [tool.poetry.dependencies]
-python = "^3.11"
-rdflib = "^6.3.2"
-html5lib = "^1.1"
-httpx = "^0.25.2"
+python = "^3.12"
+rdflib = "^7.0.0"
 
 
 [build-system]
