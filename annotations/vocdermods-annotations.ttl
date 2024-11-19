@@ -1,0 +1,50 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+
+<https://kurrawong.ai>
+    rdfs:label "KurrawongAI" ;
+.
+
+<https://linked.data.gov.au/def/vocdermods>
+    rdfs:label "Vocabulary Derivation Modes"@en ;
+    schema:description "The modes by which one vocabulary may derive from another"@en ;
+.
+
+<https://linked.data.gov.au/def/vocdermods/direct>
+    rdfs:label "Direct"@en ;
+    schema:description "Derivation without alteration"@en ;
+.
+
+<https://linked.data.gov.au/def/vocdermods/extension>
+    rdfs:label "Extension"@en ;
+    schema:description "Derivation with extension"@en ;
+.
+
+<https://linked.data.gov.au/def/vocdermods/none>
+    rdfs:label "None"@en ;
+    schema:description "This vocabulary does not derive from another"@en ;
+.
+
+<https://linked.data.gov.au/def/vocdermods/not-applicable>
+    rdfs:label "Not Applicable"@en ;
+    schema:description "Derivation mode is not applicable to this vocabulary"@en ;
+.
+
+<https://linked.data.gov.au/def/vocdermods/relabelling>
+    rdfs:label "Relabelling"@en ;
+    schema:description "Derivation with relabelling"@en ;
+.
+
+<https://linked.data.gov.au/def/vocdermods/subsetting>
+    rdfs:label "Subsetting"@en ;
+    schema:description "Derivation with subsetting"@en ;
+.
+
+<https://linked.data.gov.au/def/vocdermods/subsetting-and-extension>
+    rdfs:label "Subset & Extension"@en ;
+    schema:description "Derivation with subsetting and extension"@en ;
+.
+
+<https://linked.data.gov.au/org/mer>
+    rdfs:label "SA Minerals and Energy Resources" ;
+.
