@@ -10,6 +10,7 @@ packages = [{include = "semantic_background"}]
 [tool.poetry.dependencies]
 python = "^3.12"
 rdflib = "^7.0.0"
+pytest = "^8.3.3"
 
 
 [build-system]
