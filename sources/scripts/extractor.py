@@ -3,7 +3,7 @@ import shutil
 from pathlib import Path
 
 from rdflib import Graph, Namespace, BNode, Literal
-from rdflib.namespace import DC, DCTERMS, RDFS, SDO, SKOS, XSD
+from rdflib.namespace import DC, DCTERMS, RDF, RDFS, SDO, SKOS
 
 MADS = Namespace("http://www.loc.gov/mads/rdf/v1#")
 
@@ -42,9 +42,18 @@ for f in Path(parent_dir / "originals").glob("*.ttl"):
 
     g2 = Graph()
     for s, o in g.subject_objects(
-        RDFS.label | SKOS.prefLabel | SDO.name | DCTERMS.title | MADS.authoritativeLabel
+        RDFS.label
+        | SKOS.prefLabel
+        | SDO.name
+        | DCTERMS.title
+        | MADS.authoritativeLabel
     ):
         if not isinstance(s, BNode):  # prevents creating labels for BNs like contributors to ontologies
+            # convert HTML literals to strings
+            if "qudt" in f.name:
+                if type(o) == Literal:
+                    if o.datatype == RDF.HTML:
+                        o = Literal(str(o))
             g2.add((s, RDFS.label, o))
 
     for s, o in g.subject_objects(
@@ -55,6 +64,10 @@ for f in Path(parent_dir / "originals").glob("*.ttl"):
         | RDFS.comment
     ):
         if not isinstance(s, BNode):
+            if "qudt" in f.name:
+                if type(o) == Literal:
+                    if o.datatype == RDF.HTML:
+                        o = Literal(str(o))
             g2.add((s, SDO.description, o))
 
     for s, o in g.subject_objects(RDFS.seeAlso):

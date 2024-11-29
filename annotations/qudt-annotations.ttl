@@ -1,4 +1,3 @@
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -18,7 +17,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/Aspect>
     rdfs:label "QUDT Aspect" ;
-    schema:description "An aspect is an abstract type class that defines properties that can be reused."^^rdf:HTML ;
+    schema:description "An aspect is an abstract type class that defines properties that can be reused." ;
 .
 
 <http://qudt.org/schema/qudt/AspectClass>
@@ -28,7 +27,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <http://qudt.org/schema/qudt/BaseDimensionMagnitude>
     rdfs:label "Base Dimension Magnitude" ;
     schema:description """<p class="lm-para">A <em>Dimension</em> expresses a magnitude for a base quantiy kind such as mass, length and time.</p>
-<p class="lm-para">DEPRECATED - each exponent is expressed as a property. Keep until a validaiton of this has been done.</p>"""^^rdf:HTML ;
+<p class="lm-para">DEPRECATED - each exponent is expressed as a property. Keep until a validaiton of this has been done.</p>""" ;
 .
 
 <http://qudt.org/schema/qudt/BigEndian>
@@ -94,7 +93,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/Citation>
     rdfs:label "Citation" ;
-    schema:description "Provides a simple way of making citations."^^rdf:HTML ;
+    schema:description "Provides a simple way of making citations." ;
 .
 
 <http://qudt.org/schema/qudt/Comment>
@@ -103,29 +102,29 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/Concept>
     rdfs:label "QUDT Concept" ;
-    schema:description "The root class for all QUDT concepts."^^rdf:HTML ;
+    schema:description "The root class for all QUDT concepts." ;
 .
 
 <http://qudt.org/schema/qudt/ConstantValue>
     rdfs:label "Constant value" ;
-    schema:description "Used to specify the values of a constant."^^rdf:HTML ;
+    schema:description "Used to specify the values of a constant." ;
 .
 
 <http://qudt.org/schema/qudt/CountingUnit>
     rdfs:label "Counting Unit" ;
-    schema:description "Used for all units that express counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second."^^rdf:HTML ;
+    schema:description "Used for all units that express counts. Examples are Atomic Number, Number, Number per Year, Percent and Sample per Second." ;
 .
 
 <http://qudt.org/schema/qudt/CurrencyUnit>
     rdfs:label "Currency Unit" ;
     schema:description
-        "Currency Units have their own subclass of unit because: (a) they have additonal properites such as 'country' and (b) their URIs do not conform to the same rules as other units."^^rdf:HTML ,
-        "Used for all units that express currency."^^rdf:HTML ;
+        "Currency Units have their own subclass of unit because: (a) they have additonal properites such as 'country' and (b) their URIs do not conform to the same rules as other units." ,
+        "Used for all units that express currency." ;
 .
 
 <http://qudt.org/schema/qudt/DataEncoding>
     rdfs:label "Data Encoding" ;
-    schema:description "<p><em>Data Encoding</em> expresses the properties that specify how data is represented at the bit and byte level. These properties are applicable to describing raw data.</p>"^^rdf:HTML ;
+    schema:description "<p><em>Data Encoding</em> expresses the properties that specify how data is represented at the bit and byte level. These properties are applicable to describing raw data.</p>" ;
 .
 
 <http://qudt.org/schema/qudt/Datatype>
@@ -145,12 +144,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/DerivedUnit>
     rdfs:label "Derived Unit" ;
-    schema:description "A DerivedUnit is a type specification for units that are derived from other units."^^rdf:HTML ;
+    schema:description "A DerivedUnit is a type specification for units that are derived from other units." ;
 .
 
 <http://qudt.org/schema/qudt/DimensionlessUnit>
     rdfs:label "Dimensionless Unit" ;
-    schema:description "A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero."^^rdf:HTML ;
+    schema:description "A Dimensionless Unit is a quantity for which all the exponents of the factors corresponding to the base quantities in its quantity dimension are zero." ;
 .
 
 <http://qudt.org/schema/qudt/Discipline>
@@ -180,14 +179,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>
 
-<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of Scalar Datatype. This allows them to be used as the reference of a datatype specification.</p>"""^^rdf:HTML ;
+<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of Scalar Datatype. This allows them to be used as the reference of a datatype specification.</p>""" ;
 .
 
 <http://qudt.org/schema/qudt/Enumeration>
     rdfs:label "Enumeration" ;
     schema:description """<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>
 
-<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of <em>Scalar Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>"""^^rdf:HTML ;
+<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of <em>Scalar Datatype</em>. This allows them to be used as the reference of a datatype specification.</p>""" ;
 .
 
 <http://qudt.org/schema/qudt/EnumerationScale>
@@ -227,7 +226,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/LogarithmicUnit>
     rdfs:label "Logarithmic Unit" ;
-    schema:description "Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the byte, as well as units of relative signal strength magnitude such as the decibel."^^rdf:HTML ;
+    schema:description "Logarithmic units are abstract mathematical units that can be used to express any quantities (physical or mathematical) that are defined on a logarithmic scale, that is, as being proportional to the value of a logarithm function. Examples of logarithmic units include common units of information and entropy, such as the bit, and the byte, as well as units of relative signal strength magnitude such as the decibel." ;
 .
 
 <http://qudt.org/schema/qudt/LongUnsignedIntegerEncoding>
@@ -266,7 +265,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/PhysicalConstant>
     rdfs:label "Physical Constant" ;
-    schema:description "A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric permittivity of free space ε0, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used."^^rdf:HTML ;
+    schema:description "A physical constant is a physical quantity that is generally believed to be both universal in nature and constant in time. It can be contrasted with a mathematical constant, which is a fixed numerical value but does not directly involve any physical measurement. There are many physical constants in science, some of the most widely recognized being the speed of light in vacuum c, Newton's gravitational constant G, Planck's constant h, the electric permittivity of free space ε0, and the elementary charge e. Physical constants can take many dimensional forms, or may be dimensionless depending on the system of quantities and units used." ;
 .
 
 <http://qudt.org/schema/qudt/PlaneAngleUnit>
@@ -279,7 +278,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/Quantifiable>
     rdfs:label "Quantifiable" ;
-    schema:description "<p><em>Quantifiable</em> ascribes to some thing the capability of being measured, observed, or counted.</p>"^^rdf:HTML ;
+    schema:description "<p><em>Quantifiable</em> ascribes to some thing the capability of being measured, observed, or counted.</p>" ;
 .
 
 <http://qudt.org/schema/qudt/Quantity>
@@ -289,12 +288,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <p class="lm-para">In other words, quantities are quantifiable aspects of the world, such as the duration of a movie, the distance between two points, velocity of a car, the pressure of the atmosphere, and a person's weight; and units are used to describe their numerical measure. 
 
 <p class="lm-para">Many <b>quantity kinds</b> are related to each other by various physical laws, and as a result, the associated units of some quantity kinds can be expressed as products (or ratios) of powers of other quantity kinds (e.g., momentum is mass times velocity and velocity is defined as distance divided by time). In this way, some quantities can be calculated from other measured quantities using their associations to the quantity kinds in these expressions. These quantity kind relationships are also discussed in dimensional analysis. Those that cannot be so expressed can be regarded as "fundamental" in this sense.</p>
-<p class="lm-para">A quantity is distinguished from a "quantity kind" in that the former carries a value and the latter is a type specifier.</p>"""^^rdf:HTML ;
+<p class="lm-para">A quantity is distinguished from a "quantity kind" in that the former carries a value and the latter is a type specifier.</p>""" ;
 .
 
 <http://qudt.org/schema/qudt/QuantityKind>
     rdfs:label "Quantity Kind" ;
-    schema:description "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity."^^rdf:HTML ;
+    schema:description "A <b>Quantity Kind</b> is any observable property that can be  measured and quantified numerically. Familiar examples include physical properties such as length, mass, time, force, energy, power, electric charge, etc. Less familiar examples include currency, interest rate, price to earning ratio, and information capacity." ;
 .
 
 <http://qudt.org/schema/qudt/QuantityKindDimensionVector>
@@ -303,32 +302,32 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <p class="lm-para">The rational powers of the dimensional exponents, \\(\\alpha, \\, \\beta, \\, \\gamma, \\, \\delta, \\, \\epsilon, \\, \\eta, \\, \\nu\\), are positive, negative, or zero.</p>
 
-<p class="lm-para">For example, the dimension of the physical quantity kind \\(\\it{speed}\\) is \\(\\boxed{length/time}\\), \\(L/T\\) or \\(LT^{-1}\\), and the dimension of the physical quantity kind force is \\(\\boxed{mass \\times acceleration}\\) or \\(\\boxed{mass \\times (length/time)/time}\\), \\(ML/T^2\\) or \\(MLT^{-2}\\) respectively.</p>"""^^rdf:HTML ;
+<p class="lm-para">For example, the dimension of the physical quantity kind \\(\\it{speed}\\) is \\(\\boxed{length/time}\\), \\(L/T\\) or \\(LT^{-1}\\), and the dimension of the physical quantity kind force is \\(\\boxed{mass \\times acceleration}\\) or \\(\\boxed{mass \\times (length/time)/time}\\), \\(ML/T^2\\) or \\(MLT^{-2}\\) respectively.</p>""" ;
 .
 
 <http://qudt.org/schema/qudt/QuantityKindDimensionVector_CGS>
     rdfs:label "CGS Dimension vector" ;
-    schema:description "A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S. quantity kind."^^rdf:HTML ;
+    schema:description "A <em>CGS Dimension Vector</em> is used to specify the dimensions for a C.G.S. quantity kind." ;
 .
 
 <http://qudt.org/schema/qudt/QuantityKindDimensionVector_CGS-EMU>
     rdfs:label "CGS EMU Dimension vector" ;
-    schema:description "A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU C.G.S. quantity kind."^^rdf:HTML ;
+    schema:description "A <em>CGS EMU Dimension Vector</em> is used to specify the dimensions for EMU C.G.S. quantity kind." ;
 .
 
 <http://qudt.org/schema/qudt/QuantityKindDimensionVector_CGS-ESU>
     rdfs:label "CGS ESU Dimension vector" ;
-    schema:description "A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU C.G.S. quantity kind."^^rdf:HTML ;
+    schema:description "A <em>CGS ESU Dimension Vector</em> is used to specify the dimensions for ESU C.G.S. quantity kind." ;
 .
 
 <http://qudt.org/schema/qudt/QuantityKindDimensionVector_CGS-GAUSS>
     rdfs:label "CGS GAUSS Dimension vector" ;
-    schema:description "A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for Gaussioan C.G.S. quantity kind."^^rdf:HTML ;
+    schema:description "A <em>CGS GAUSS Dimension Vector</em> is used to specify the dimensions for Gaussioan C.G.S. quantity kind." ;
 .
 
 <http://qudt.org/schema/qudt/QuantityKindDimensionVector_CGS-LH>
     rdfs:label "CGS LH Dimension vector" ;
-    schema:description "A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside C.G.S. quantity kind."^^rdf:HTML ;
+    schema:description "A <em>CGS LH Dimension Vector</em> is used to specify the dimensions for Lorentz-Heaviside C.G.S. quantity kind." ;
 .
 
 <http://qudt.org/schema/qudt/QuantityKindDimensionVector_ISO>
@@ -350,7 +349,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/QuantityValue>
     rdfs:label "Quantity value" ;
-    schema:description "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values."^^rdf:HTML ;
+    schema:description "A <i>Quantity Value</i> expresses the magnitude and kind of a quantity and is given by the product of a numerical value <code>n</code> and a unit of measure <code>U</code>. The number multiplying the unit is referred to as the numerical value of the quantity expressed in that unit. Refer to <a href=\"http://physics.nist.gov/Pubs/SP811/sec07.html\">NIST SP 811 section 7</a> for more on quantity values." ;
 .
 
 <http://qudt.org/schema/qudt/Rule>
@@ -372,7 +371,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/Scale>
     rdfs:label "Scale" ;
-    schema:description "Scales (also called \"scales of measurement\" or \"levels of measurement\")  are expressions that typically refer to the theory of scale types."^^rdf:HTML ;
+    schema:description "Scales (also called \"scales of measurement\" or \"levels of measurement\")  are expressions that typically refer to the theory of scale types." ;
 .
 
 <http://qudt.org/schema/qudt/ScaleType>
@@ -425,12 +424,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/SystemOfQuantityKinds>
     rdfs:label "System of Quantity Kinds" ;
-    schema:description "A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous change in position.  In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.  From a scientific point of view, the division of quantities into base quantities and derived quantities is a matter of convention."^^rdf:HTML ;
+    schema:description "A system of quantity kinds is a set of one or more quantity kinds together with a set of zero or more algebraic equations that define relationships between quantity kinds in the set. In the physical sciences, the equations relating quantity kinds are typically physical laws and definitional relations, and constants of proportionality. Examples include Newton’s First Law of Motion, Coulomb’s Law, and the definition of velocity as the instantaneous change in position.  In almost all cases, the system identifies a subset of base quantity kinds. The base set is chosen so that all other quantity kinds of interest can be derived from the base quantity kinds and the algebraic equations. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind.  From a scientific point of view, the division of quantities into base quantities and derived quantities is a matter of convention." ;
 .
 
 <http://qudt.org/schema/qudt/SystemOfUnits>
     rdfs:label "System of Units" ;
-    schema:description "A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds together with the definitions of each unit. Units may be defined by experimental observation or by proportion to another unit not included in the system. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind."^^rdf:HTML ;
+    schema:description "A system of units is a set of units which are chosen as the reference scales for some set of quantity kinds together with the definitions of each unit. Units may be defined by experimental observation or by proportion to another unit not included in the system. If the unit system is explicitly associated with a quantity kind system, then the unit system must define at least one unit for each quantity kind." ;
 .
 
 <http://qudt.org/schema/qudt/TotallyOrdered>
@@ -503,7 +502,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/abbreviation>
     rdfs:label "abbreviation" ;
-    schema:description "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, <em>sq ft</em> means <em>square foot</em>, and <em>cu ft</em> means <em>cubic foot</em>."^^rdf:HTML ;
+    schema:description "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, <em>sq ft</em> means <em>square foot</em>, and <em>cu ft</em> means <em>cubic foot</em>." ;
 .
 
 <http://qudt.org/schema/qudt/acronym>
@@ -516,7 +515,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/allowedUnitOfSystem>
     rdfs:label "allowed unit of system" ;
-    schema:description "This property relates a unit of measure with a unit system that does not define the unit, but allows its use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system."^^rdf:HTML ;
+    schema:description "This property relates a unit of measure with a unit system that does not define the unit, but allows its use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system." ;
 .
 
 <http://qudt.org/schema/qudt/ansiSQLName>
@@ -549,7 +548,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/applicableSystem>
     rdfs:label "applicable system" ;
-    schema:description "This property relates a unit of measure with a unit system that may or may not define the unit, but within which the unit is compatible."^^rdf:HTML ;
+    schema:description "This property relates a unit of measure with a unit system that may or may not define the unit, but within which the unit is compatible." ;
 .
 
 <http://qudt.org/schema/qudt/applicableUSCustomaryUnit>
@@ -562,12 +561,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/baseDimensionEnumeration>
     rdfs:label "base dimension enumeration" ;
-    schema:description "This property associates a system of quantities with an enumeration that enumerates the base dimensions of the system in canonical order."^^rdf:HTML ;
+    schema:description "This property associates a system of quantities with an enumeration that enumerates the base dimensions of the system in canonical order." ;
 .
 
 <http://qudt.org/schema/qudt/baseUnitOfSystem>
     rdfs:label "is base unit of system" ;
-    schema:description "This property relates a unit of measure to the system of units in which it is defined as a base unit for the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power."^^rdf:HTML ;
+    schema:description "This property relates a unit of measure to the system of units in which it is defined as a base unit for the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power." ;
 .
 
 <http://qudt.org/schema/qudt/basis>
@@ -618,7 +617,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/code>
     rdfs:label "code" ;
-    schema:description "A code is a string that uniquely identifies a QUDT concept. The use of this property has been deprecated."^^rdf:HTML ;
+    schema:description "A code is a string that uniquely identifies a QUDT concept. The use of this property has been deprecated." ;
 .
 
 <http://qudt.org/schema/qudt/coherentUnitOfSystem>
@@ -646,18 +645,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <http://qudt.org/schema/qudt/currencyCode>
     rdfs:label "currency code" ;
     rdfs:seeAlso "https://en.wikipedia.org/wiki/ISO_4217"^^xsd:anyURI ;
-    schema:description "Alphabetic Currency Code as defined by ISO 4217. For example, US Dollar has the code 'USD'."^^rdf:HTML ;
+    schema:description "Alphabetic Currency Code as defined by ISO 4217. For example, US Dollar has the code 'USD'." ;
 .
 
 <http://qudt.org/schema/qudt/currencyExponent>
     rdfs:label "currency exponent" ;
-    schema:description "The currency exponent indicates the number of decimal places between a major currency unit and its minor currency unit. For example, the US dollar is the major currency unit of the United States, and the US cent is the minor currency unit. Since one cent is 1/100 of a dollar, the US dollar has a currency exponent of 2. However, the Japanese Yen has no minor currency units, so the yen has a currency exponent of 0."^^rdf:HTML ;
+    schema:description "The currency exponent indicates the number of decimal places between a major currency unit and its minor currency unit. For example, the US dollar is the major currency unit of the United States, and the US cent is the minor currency unit. Since one cent is 1/100 of a dollar, the US dollar has a currency exponent of 2. However, the Japanese Yen has no minor currency units, so the yen has a currency exponent of 0." ;
 .
 
 <http://qudt.org/schema/qudt/currencyNumber>
     rdfs:label "currency number" ;
     rdfs:seeAlso "https://en.wikipedia.org/wiki/ISO_4217"^^xsd:anyURI ;
-    schema:description "Numeric currency Code as defined by ISO 4217. For example, US Dollar has the number 840."^^rdf:HTML ;
+    schema:description "Numeric currency Code as defined by ISO 4217. For example, US Dollar has the number 840." ;
 .
 
 <http://qudt.org/schema/qudt/dataEncoding>
@@ -678,12 +677,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/default>
     rdfs:label "default" ;
-    schema:description "The default element in an enumeration"^^rdf:HTML ;
+    schema:description "The default element in an enumeration" ;
 .
 
 <http://qudt.org/schema/qudt/definedUnitOfSystem>
     rdfs:label "defined unit of system" ;
-    schema:description "This property relates a unit of measure with the unit system that defines the unit."^^rdf:HTML ;
+    schema:description "This property relates a unit of measure with the unit system that defines the unit." ;
 .
 
 <http://qudt.org/schema/qudt/denominatorDimensionVector>
@@ -696,12 +695,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/derivedCoherentUnitOfSystem>
     rdfs:label "is coherent derived unit of system" ;
-    schema:description "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units with a proportionality constant of one."^^rdf:HTML ;
+    schema:description "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units with a proportionality constant of one." ;
 .
 
 <http://qudt.org/schema/qudt/derivedNonCoherentUnitOfSystem>
     rdfs:label "is non-coherent derived unit of system" ;
-    schema:description "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units without proportionality constant of one."^^rdf:HTML ;
+    schema:description "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units without proportionality constant of one." ;
 .
 
 <http://qudt.org/schema/qudt/derivedQuantityKindOfSystem>
@@ -710,7 +709,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/derivedUnitOfSystem>
     rdfs:label "is derived unit of system" ;
-    schema:description "This property relates a unit of measure to the system of units in which it is defined as a derived unit. That is, the derived unit is defined as a product of the base units for the system raised to some rational power."^^rdf:HTML ;
+    schema:description "This property relates a unit of measure to the system of units in which it is defined as a derived unit. That is, the derived unit is defined as a product of the base units for the system raised to some rational power." ;
 .
 
 <http://qudt.org/schema/qudt/dimensionExponent>
@@ -759,7 +758,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/element>
     rdfs:label "element" ;
-    schema:description "An element of an enumeration"^^rdf:HTML ;
+    schema:description "An element of an enumeration" ;
 .
 
 <http://qudt.org/schema/qudt/elementKind>
@@ -792,12 +791,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/example>
     rdfs:label "example" ;
-    schema:description "The 'qudt:example' property is used to annotate an instance of a class with a reference to a concept that is an example. The type of this property is 'rdf:Property'. This allows both scalar and object ranges."^^rdf:HTML ;
+    schema:description "The 'qudt:example' property is used to annotate an instance of a class with a reference to a concept that is an example. The type of this property is 'rdf:Property'. This allows both scalar and object ranges." ;
 .
 
 <http://qudt.org/schema/qudt/expression>
     rdfs:label "expression" ;
-    schema:description "An 'expression' is a finite combination of symbols that are well-formed according to rules that apply to units of measure, quantity kinds and their dimensions."^^rdf:HTML ;
+    schema:description "An 'expression' is a finite combination of symbols that are well-formed according to rules that apply to units of measure, quantity kinds and their dimensions." ;
 .
 
 <http://qudt.org/schema/qudt/fieldCode>
@@ -806,7 +805,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/figure>
     rdfs:label "figure" ;
-    schema:description "Provides a link to an image."^^rdf:HTML ;
+    schema:description "Provides a link to an image." ;
 .
 
 <http://qudt.org/schema/qudt/figureCaption>
@@ -826,7 +825,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:description """This property relates a quantity kind to its generalization. A quantity kind, PARENT, is a generalization of the quantity kind CHILD only if:
 
 1. PARENT and CHILD have the same dimensions in every system of quantities;
-2. Every unit that is a measure of quantities of kind CHILD is also a valid measure of quantities of kind PARENT."""^^rdf:HTML ;
+2. Every unit that is a measure of quantities of kind CHILD is also a valid measure of quantities of kind PARENT.""" ;
 .
 
 <http://qudt.org/schema/qudt/guidance>
@@ -835,7 +834,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/hasAllowedUnit>
     rdfs:label "allowed unit" ;
-    schema:description "This property relates a unit system with a unit of measure that is not defined by or part of the system, but is allowed for use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system."^^rdf:HTML ;
+    schema:description "This property relates a unit system with a unit of measure that is not defined by or part of the system, but is allowed for use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system." ;
 .
 
 <http://qudt.org/schema/qudt/hasBaseQuantityKind>
@@ -844,17 +843,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/hasBaseUnit>
     rdfs:label "base unit" ;
-    schema:description "This property relates a system of units to a base unit defined within the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power."^^rdf:HTML ;
+    schema:description "This property relates a system of units to a base unit defined within the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power." ;
 .
 
 <http://qudt.org/schema/qudt/hasCoherentUnit>
     rdfs:label "coherent unit" ;
-    schema:description "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one."^^rdf:HTML ;
+    schema:description "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one." ;
 .
 
 <http://qudt.org/schema/qudt/hasDefinedUnit>
     rdfs:label "defined unit" ;
-    schema:description "This property relates a unit system with a unit of measure that is defined by the system."^^rdf:HTML ;
+    schema:description "This property relates a unit system with a unit of measure that is defined by the system." ;
 .
 
 <http://qudt.org/schema/qudt/hasDenominatorPart>
@@ -871,7 +870,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/hasDerivedUnit>
     rdfs:label "derived unit" ;
-    schema:description "This property relates a system of units to a unit of measure that is defined within the system in terms of the base units for the system. That is, the derived unit is defined as a product of the base units for the system raised to some rational power."^^rdf:HTML ;
+    schema:description "This property relates a system of units to a unit of measure that is defined within the system in terms of the base units for the system. That is, the derived unit is defined as a product of the base units for the system raised to some rational power." ;
 .
 
 <http://qudt.org/schema/qudt/hasDimension>
@@ -888,7 +887,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/hasNonCoherentUnit>
     rdfs:label "has non-coherent unit" ;
-    schema:description "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one."^^rdf:HTML ;
+    schema:description "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one." ;
 .
 
 <http://qudt.org/schema/qudt/hasNumeratorPart>
@@ -917,7 +916,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/hasUnit>
     rdfs:label "has unit" ;
-    schema:description "This property relates a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system."^^rdf:HTML ;
+    schema:description "This property relates a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system." ;
 .
 
 <http://qudt.org/schema/qudt/hasUnitSystem>
@@ -934,7 +933,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/id>
     rdfs:label "qudt id" ;
-    schema:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents."^^rdf:HTML ;
+    schema:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
 .
 
 <http://qudt.org/schema/qudt/iec61360Code>
@@ -951,7 +950,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/informativeReference>
     rdfs:label "informative reference" ;
-    schema:description "Provides a way to reference a source that provided useful but non-normative information."^^rdf:HTML ;
+    schema:description "Provides a way to reference a source that provided useful but non-normative information." ;
 .
 
 <http://qudt.org/schema/qudt/integerPercentage>
@@ -981,12 +980,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/isUnitOfSystem>
     rdfs:label "is unit of system" ;
-    schema:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system."^^rdf:HTML ;
+    schema:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
 .
 
 <http://qudt.org/schema/qudt/isoNormativeReference>
     rdfs:label "normative reference (ISO)" ;
-    schema:description "Provides a way to reference the ISO unit definition."^^rdf:HTML ;
+    schema:description "Provides a way to reference the ISO unit definition." ;
 .
 
 <http://qudt.org/schema/qudt/javaName>
@@ -1064,12 +1063,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/negativeDeltaLimit>
     rdfs:label "negative delta limit" ;
-    schema:description "A negative change limit between consecutive sample values for a parameter. The Negative Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined."^^rdf:HTML ;
+    schema:description "A negative change limit between consecutive sample values for a parameter. The Negative Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined." ;
 .
 
 <http://qudt.org/schema/qudt/normativeReference>
     rdfs:label "normative reference" ;
-    schema:description "Provides a way to reference information that is an authorative source providing a standard definition"^^rdf:HTML ;
+    schema:description "Provides a way to reference information that is an authorative source providing a standard definition" ;
 .
 
 <http://qudt.org/schema/qudt/numeratorDimensionVector>
@@ -1123,12 +1122,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/plainTextDescription>
     rdfs:label "description (plain text)" ;
-    schema:description "A plain text description is used to provide a description with only simple ASCII characters for cases where LaTeX , HTML or other markup would not be appropriate."^^rdf:HTML ;
+    schema:description "A plain text description is used to provide a description with only simple ASCII characters for cases where LaTeX , HTML or other markup would not be appropriate." ;
 .
 
 <http://qudt.org/schema/qudt/positiveDeltaLimit>
     rdfs:label "Positive delta limit" ;
-    schema:description "A positive change limit between consecutive sample values for a parameter. The Positive Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined."^^rdf:HTML ;
+    schema:description "A positive change limit between consecutive sample values for a parameter. The Positive Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined." ;
 .
 
 <http://qudt.org/schema/qudt/prefix>
@@ -1158,7 +1157,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/quantity>
     rdfs:label "quantity" ;
-    schema:description "a property to relate an observable thing with a quantity (qud:Quantity)"^^rdf:HTML ;
+    schema:description "a property to relate an observable thing with a quantity (qud:Quantity)" ;
 .
 
 <http://qudt.org/schema/qudt/quantityValue>
@@ -1183,7 +1182,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/relativeStandardUncertainty>
     rdfs:label "relative standard uncertainty" ;
-    schema:description "The relative standard uncertainty of a measurement is the (absolute) standard uncertainty divided by the magnitude of the exact value."^^rdf:HTML ;
+    schema:description "The relative standard uncertainty of a measurement is the (absolute) standard uncertainty divided by the magnitude of the exact value." ;
 .
 
 <http://qudt.org/schema/qudt/relevantQuantityKind>
@@ -1209,12 +1208,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/specialization>
     rdfs:label "specialization" ;
-    schema:description "This property relates a quantity kind to its specialization(s). For example, linear velocity and angular velocity are both specializations of velocity."^^rdf:HTML ;
+    schema:description "This property relates a quantity kind to its specialization(s). For example, linear velocity and angular velocity are both specializations of velocity." ;
 .
 
 <http://qudt.org/schema/qudt/standardUncertainty>
     rdfs:label "standard uncertainty" ;
-    schema:description "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements."^^rdf:HTML ;
+    schema:description "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements." ;
 .
 
 <http://qudt.org/schema/qudt/symbol>
@@ -1236,33 +1235,33 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/ucumCaseInsensitiveCode>
     rdfs:label "ucum case-insensitive code" ;
-    schema:description "<em>ucumCode</em> associates a QUDT unit with a UCUM case-insensitive code."^^rdf:HTML ;
+    schema:description "<em>ucumCode</em> associates a QUDT unit with a UCUM case-insensitive code." ;
 .
 
 <http://qudt.org/schema/qudt/ucumCaseSensitiveCode>
     rdfs:label "ucum case-sensitive code" ;
-    schema:description "<em>ucumCode</em> associates a QUDT unit with with a UCUM case-sensitive code."^^rdf:HTML ;
+    schema:description "<em>ucumCode</em> associates a QUDT unit with with a UCUM case-sensitive code." ;
 .
 
 <http://qudt.org/schema/qudt/ucumCode>
     rdfs:label "ucum code" ;
     rdfs:seeAlso <https://ucum.org/ucum.html> ;
-    schema:description "<p><em>ucumCode</em> associates a QUDT unit with its UCUM code (case-sensitive). </p><p>In SHACL the values are derived from specific ucum properties using 'sh:values'.</p>"^^rdf:HTML ;
+    schema:description "<p><em>ucumCode</em> associates a QUDT unit with its UCUM code (case-sensitive). </p><p>In SHACL the values are derived from specific ucum properties using 'sh:values'.</p>" ;
 .
 
 <http://qudt.org/schema/qudt/udunitsCode>
     rdfs:label "udunits code" ;
-    schema:description "The UDUNITS package supports units of physical quantities. Its C library provides for arithmetic manipulation of units and for conversion of numeric values between compatible units. The package contains an extensive unit database, which is in XML format and user-extendable. The package also contains a command-line utility for investigating units and converting values."^^rdf:HTML ;
+    schema:description "The UDUNITS package supports units of physical quantities. Its C library provides for arithmetic manipulation of units and for conversion of numeric values between compatible units. The package contains an extensive unit database, which is in XML format and user-extendable. The package also contains a command-line utility for investigating units and converting values." ;
 .
 
 <http://qudt.org/schema/qudt/uneceCommonCode>
     rdfs:label "unece common code" ;
-    schema:description "The UN/CEFACT Recommendation 20 provides three character alphabetic and alphanumeric codes for representing units of measurement for length, area, volume/capacity, mass (weight), time, and other quantities used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade."^^rdf:HTML ;
+    schema:description "The UN/CEFACT Recommendation 20 provides three character alphabetic and alphanumeric codes for representing units of measurement for length, area, volume/capacity, mass (weight), time, and other quantities used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade." ;
 .
 
 <http://qudt.org/schema/qudt/unit>
     rdfs:label "unit" ;
-    schema:description "A reference to the unit of measure of a quantity (variable or constant) of interest."^^rdf:HTML ;
+    schema:description "A reference to the unit of measure of a quantity (variable or constant) of interest." ;
 .
 
 <http://qudt.org/schema/qudt/unitFor>
@@ -1279,7 +1278,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/value>
     rdfs:label "value" ;
-    schema:description "A property to relate an observable thing with a value of any kind"^^rdf:HTML ;
+    schema:description "A property to relate an observable thing with a value of any kind" ;
 .
 
 <http://qudt.org/schema/qudt/valueQuantity>
@@ -1317,12 +1316,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <p class="lm-para">Except for unit prefixes, all units are specified in separate vocabularies. Descriptions are provided in both HTML and LaTeX formats. A quantity is a measure of an observable phenomenon, that, when associated with something, becomes a property of that thing; a particular object, event, or physical system. </p>
 
-<p class="lm-para">A quantity has meaning in the context of a measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc.  Or, as stated at Wikipedia, in the language of measurement, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of these quantities are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time).</p>"""^^rdf:HTML ;
+<p class="lm-para">A quantity has meaning in the context of a measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc.  Or, as stated at Wikipedia, in the language of measurement, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of these quantities are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time).</p>""" ;
 .
 
 <http://www.linkedmodel.org/schema/vaem#QUDT>
     rdfs:label "QUDT" ;
-    schema:description "QUDT is a non-profit organization that governs the QUDT ontologies."^^rdf:HTML ;
+    schema:description "QUDT is a non-profit organization that governs the QUDT ontologies." ;
 .
 
 <http://qudt.org/schema/qudt/IntervalScale>
@@ -1333,8 +1332,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://qudt.org/schema/qudt/RatioScale> ;
     schema:description
         """<p>The interval type allows for the degree of difference between items, but not the ratio between them. Examples include temperature with the Celsius scale, which has two defined points (the freezing and boiling point of water at specific conditions) and then separated into 100 intervals, date when measured from an arbitrary epoch (such as AD), percentage such as a percentage return on a stock,[16] location in Cartesian coordinates, and direction measured in degrees from true or magnetic north. Ratios are not meaningful since 20 °C cannot be said to be "twice as hot" as 10 °C, nor can multiplication/division be carried out between any two dates directly. However, ratios of differences can be expressed; for example, one difference can be twice another. Interval type variables are sometimes also called "scaled variables", but the formal mathematical term is an affine space (in this case an affine line).</p>
-<p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered set</p>"""^^rdf:HTML ,
-        "median, percentile & Monotonic increasing (order (<)) & totally ordered set"^^rdf:HTML ;
+<p>Characteristics: median, percentile &amp; Monotonic increasing (order (&lt;) &amp; totally ordered set</p>""" ,
+        "median, percentile & Monotonic increasing (order (<)) & totally ordered set" ;
 .
 
 <http://qudt.org/schema/qudt/NominalScale>
@@ -1343,7 +1342,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://qudt.org/schema/qudt/IntervalScale> ,
         <http://qudt.org/schema/qudt/OrdinalScale> ,
         <http://qudt.org/schema/qudt/RatioScale> ;
-    schema:description "A nominal scale differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship: For example, a Globally unique identifier. Examples of these classifications include gender, nationality, ethnicity, language, genre, style, biological species, and form. In a university one could also use hall of affiliation as an example."^^rdf:HTML ;
+    schema:description "A nominal scale differentiates between items or subjects based only on their names or (meta-)categories and other qualitative classifications they belong to; thus dichotomous data involves the construction of classifications as well as the classification of items. Discovery of an exception to a classification can be viewed as progress. Numbers may be used to represent the variables but the numbers do not have numerical value or relationship: For example, a Globally unique identifier. Examples of these classifications include gender, nationality, ethnicity, language, genre, style, biological species, and form. In a university one could also use hall of affiliation as an example." ;
 .
 
 <http://qudt.org/schema/qudt/OrdinalScale>
@@ -1352,7 +1351,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://qudt.org/schema/qudt/IntervalScale> ,
         <http://qudt.org/schema/qudt/NominalScale> ,
         <http://qudt.org/schema/qudt/RatioScale> ;
-    schema:description "The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion."^^rdf:HTML ;
+    schema:description "The ordinal type allows for rank order (1st, 2nd, 3rd, etc.) by which data can be sorted, but still does not allow for relative degree of difference between them. Examples include, on one hand, dichotomous data with dichotomous (or dichotomized) values such as 'sick' vs. 'healthy' when measuring health, 'guilty' vs. 'innocent' when making judgments in courts, 'wrong/false' vs. 'right/true' when measuring truth value, and, on the other hand, non-dichotomous data consisting of a spectrum of values, such as 'completely agree', 'mostly agree', 'mostly disagree', 'completely disagree' when measuring opinion." ;
 .
 
 <http://qudt.org/schema/qudt/RatioScale>
@@ -1361,5 +1360,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://qudt.org/schema/qudt/IntervalScale> ,
         <http://qudt.org/schema/qudt/NominalScale> ,
         <http://qudt.org/schema/qudt/OrdinalScale> ;
-    schema:description "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \"twice the length\" of another (= is \"twice as long\"). Very informally, many ratio scales can be described as specifying \"how much\" of something (i.e. an amount or magnitude) or \"how many\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero."^^rdf:HTML ;
+    schema:description "The ratio type takes its name from the fact that measurement is the estimation of the ratio between a magnitude of a continuous quantity and a unit magnitude of the same kind (Michell, 1997, 1999). A ratio scale possesses a meaningful (unique and non-arbitrary) zero value. Most measurement in the physical sciences and engineering is done on ratio scales. Examples include mass, length, duration, plane angle, energy and electric charge. In contrast to interval scales, ratios are now meaningful because having a non-arbitrary zero point makes it meaningful to say, for example, that one object has \"twice the length\" of another (= is \"twice as long\"). Very informally, many ratio scales can be described as specifying \"how much\" of something (i.e. an amount or magnitude) or \"how many\" (a count). The Kelvin temperature scale is a ratio scale because it has a unique, non-arbitrary zero point called absolute zero." ;
 .
