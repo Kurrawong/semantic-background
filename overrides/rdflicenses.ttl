@@ -266,7 +266,7 @@ DEALINGS IN THE SOFTWARE.
 
 :BSD2.0
     a odrl:Policy ;
-    rdfs:label "2-clause BSD License" ;
+    rdfs:label "BSD 2-clause License" ;
     cc:legalcode """
 <OWNER> = Regents of the University of California
 <YEAR> = 1998

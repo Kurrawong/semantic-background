@@ -11,7 +11,7 @@ for item in output_dir.glob('**/*'):
         item.unlink()
 
 g = Graph()
-for f in Path(parent_dir / "ontologies").glob("*.ttl"):
+for f in Path(parent_dir / "originals").glob("*.ttl"):
     g.parse(f)
 
 for ns_prefix, namespace in g.namespaces():

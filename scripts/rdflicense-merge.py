@@ -1,3 +1,11 @@
+"""
+This script acquires and then merges individual RDF License files from ODRL's Best Practice:
+
+https://github.com/w3c/odrl/tree/master/bp/license/rdflicense
+
+API at https://api.github.com/repos/w3c/odrl/contents/bp/license/rdflicense
+"""
+
 import rdflib
 import creds
 from github import Github

@@ -19,14 +19,14 @@ rdf:langString a rdfs:Datatype ;
 	rdfs:subClassOf rdfs:Literal ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:seeAlso <http://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal> ;
-	rdfs:label "langString" ;
+	rdfs:label "Lang String" ;
 	rdfs:comment "The datatype of language-tagged string values" .
 
 rdf:PlainLiteral a rdfs:Datatype ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
 	rdfs:subClassOf rdfs:Literal ;
 	rdfs:seeAlso <http://www.w3.org/TR/rdf-plain-literal/> ;
-	rdfs:label "PlainLiteral" ;
+	rdfs:label "Plain Literal" ;
 	rdfs:comment "The class of plain (i.e. untyped) literal values, as used in RIF and OWL 2" .
 
 rdf:type a rdf:Property ;
@@ -77,13 +77,13 @@ rdf:Bag a rdfs:Class ;
 
 rdf:Seq a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Seq" ;
+	rdfs:label "Sequence" ;
 	rdfs:comment "The class of ordered containers." ;
 	rdfs:subClassOf rdfs:Container .
 
 rdf:Alt a rdfs:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Alt" ;
+	rdfs:label "Alternatives" ;
 	rdfs:comment "The class of containers of alternatives." ;
 	rdfs:subClassOf rdfs:Container .
 
@@ -122,7 +122,7 @@ rdf:rest a rdf:Property ;
 rdf:XMLLiteral a rdfs:Datatype ;
 	rdfs:subClassOf rdfs:Literal ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "XMLLiteral" ;
+	rdfs:label "XML Literal" ;
 	rdfs:comment "The datatype of XML literal values." .
 
 rdf:JSON a rdfs:Datatype ;
@@ -133,7 +133,7 @@ rdf:JSON a rdfs:Datatype ;
 	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-json-datatype> .
 
 rdf:CompoundLiteral a rdfs:Class ;
-	rdfs:label "CompoundLiteral" ;
+	rdfs:label "Compound Literal" ;
 	rdfs:comment "A class representing a compound literal." ;
 	rdfs:subClassOf rdfs:Resource ;
 	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;

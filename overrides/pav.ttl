@@ -100,7 +100,6 @@ foaf:name a owl:AnnotationProperty ;
     foaf:name "Alasdair J G Gray" .
 
 dcterms:hasVersion a owl:ObjectProperty ;
-    rdfs:label "dcterms:hasVersion"@en ;
     rdfs:isDefinedBy dcterms: .
 
 pav:authoredOn a owl:DatatypeProperty ;
@@ -234,31 +233,25 @@ This property is normally used in a functional way, although PAV does not formal
 
 prov:alternateOf a owl:ObjectProperty,
         owl:SymmetricProperty ;
-    rdfs:label "prov:alternateOf"@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
 
 prov:generalizationOf a owl:ObjectProperty ;
-    rdfs:label "prov:generalizationOf"@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o-inverses#> ;
     owl:inverseOf prov:specializationOf .
 
 prov:specializationOf a owl:ObjectProperty ;
-    rdfs:label "prov:specializationOf"@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
 
 prov:wasRevisionOf a owl:ObjectProperty ;
-    rdfs:label "prov:wasRevisionOf"@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
     rdfs:subPropertyOf prov:wasDerivedFrom .
 
 dcterms:contributor a owl:AnnotationProperty,
         owl:ObjectProperty ;
-    rdfs:label "dcterms:contributor"@en ;
     rdfs:isDefinedBy dcterms: .
 
 dcterms:creator a owl:AnnotationProperty,
         owl:ObjectProperty ;
-    rdfs:label "dcterms:creator"@en ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dcterms:contributor .
 
@@ -492,11 +485,9 @@ For instance, the given agent could be a curator (also pav:curatedBy) which cons
     rdfs:seeAlso pav:sourceAccessedAt .
 
 prov:wasInfluencedBy a owl:ObjectProperty ;
-    rdfs:label "prov:wasInfluencedBy"@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
 
 prov:wasDerivedFrom a owl:ObjectProperty ;
-    rdfs:label "prov:wasDerivedFrom"@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
     rdfs:subPropertyOf prov:wasInfluencedBy .
 
@@ -520,7 +511,6 @@ Note that it might be confusing to indicate pav:previousVersion from a resource 
     owl:equivalentProperty pav1:previousVersion .
 
 prov:wasAttributedTo a owl:ObjectProperty ;
-    rdfs:label "prov:wasAttributedTo"@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> ;
     rdfs:subPropertyOf prov:wasInfluencedBy .
 

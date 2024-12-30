@@ -22,54 +22,43 @@
 dcterms:abstract
   a owl:AnnotationProperty ;
   rdfs:isDefinedBy dcterms: ;
-  rdfs:label "abstract" ;
   rdfs:range xsd:string ;
 .
 dcterms:contributor
   a rdf:Property ;
-  rdfs:label "contributor" ;
 .
 dcterms:created
   a rdf:Property ;
-  rdfs:label "created" ;
   rdfs:range xsd:date ;
 .
 dcterms:creator
   a owl:AnnotationProperty ;
-  rdfs:label "creator" ;
 .
 dcterms:description
   a owl:AnnotationProperty ;
-  rdfs:label "description" ;
 .
 dcterms:isReplacedBy
   a owl:ObjectProperty ;
-  rdfs:label "is replaced by" ;
 .
 dcterms:modified
   a rdf:Property ;
-  rdfs:label "modified" ;
   rdfs:range xsd:date ;
 .
 dcterms:rights
   a owl:AnnotationProperty ;
-  rdfs:label "rights" ;
   rdfs:range xsd:string ;
 .
 dcterms:source
   a owl:AnnotationProperty ;
   rdfs:isDefinedBy dcterms: ;
-  rdfs:label "source" ;
   rdfs:range xsd:anyURI ;
 .
 dcterms:subject
   a owl:AnnotationProperty ;
-  rdfs:label "subject" ;
   rdfs:range xsd:string ;
 .
 dcterms:title
   a owl:AnnotationProperty ;
-  rdfs:label "title" ;
   rdfs:range xsd:string ;
 .
 <http://qudt.org/2.1/schema/qudt>
@@ -3191,6 +3180,5 @@ vaem:QUDT
 prov:wasDerivedFrom
   a rdf:Property ;
   rdfs:isDefinedBy <http://www.w3.org/ns/prov> ;
-  rdfs:label "was derived from" ;
   rdfs:range qudt:Concept ;
 .

@@ -25,7 +25,6 @@ Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
 
 rdfs:comment
     a owl:AnnotationProperty ;
-    rdfs:comment ""@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
 
 rdfs:isDefinedBy
@@ -33,12 +32,10 @@ rdfs:isDefinedBy
 
 rdfs:label
     a owl:AnnotationProperty ;
-    rdfs:comment ""@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
 
 rdfs:seeAlso
-    a owl:AnnotationProperty ;
-    rdfs:comment ""@en .
+    a owl:AnnotationProperty .
 
 owl:Thing
     a owl:Class .
@@ -1797,7 +1794,6 @@ If you wish to make comments regarding this document, please send them to public
 ## Definitions from other ontologies
 rdfs:comment
     a owl:AnnotationProperty ;
-    rdfs:comment ""@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 rdfs:isDefinedBy
@@ -1805,12 +1801,10 @@ rdfs:isDefinedBy
 
 rdfs:label
     a owl:AnnotationProperty ;
-    rdfs:comment ""@en ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov#> .
 
 rdfs:seeAlso
-    a owl:AnnotationProperty ;
-    rdfs:comment ""@en .
+    a owl:AnnotationProperty .
 
 owl:Thing
     a owl:Class .

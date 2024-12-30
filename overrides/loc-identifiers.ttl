@@ -237,7 +237,6 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         <http://id.loc.gov/vocabulary/identifiers/worldcat> ,
         <http://id.loc.gov/vocabulary/identifiers/xgamea> ,
         <http://id.loc.gov/vocabulary/identifiers/zbaut> ;
-    rdfs:comment "" ;
     skos:definition "The Standard Identifiers Scheme lists standard number or code systems and assigns a URI to each database or publication that defines or contains the identifiers. The purpose of these source codes is to enable the type of standard numbers or codes in resource descriptions to be indicated by URI."@en ;
 .
 

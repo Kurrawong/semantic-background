@@ -4,9 +4,8 @@ This repository contains tidy versions of Semantic Web ontologies and vocabulari
 
 We keep copies of them all here, so they are in one pace, and we tidy up labels etc., without altering any ontological content.
 
-We maintain the currency of these artifacts as best we can so this is a one-stop-shop for most of our daily Semantic Web reference object needs!
+We maintain the currency of these artifacts as best we can, so this is a one-stop-shop for most of our daily Semantic Web reference object needs!
 
-NOTE: We will be producing an annotations' lookup tool soon alongside all of Kurrawong's other tools at <https://tools.dev.kurrawong.ai/> that will allow you to see if this repository contains neat annotations for a given IRI.
 
 
 ## Content
@@ -14,8 +13,9 @@ NOTE: We will be producing an annotations' lookup tool soon alongside all of Kur
 Most users of this repo will only need the `annotations/` & `ontologies/` folders.
 
 * `annotations/` - labels, descriptions and seeAlso links only from all ontologies
-* `ontologies/` - full ontologies either originals or with annontation updates only (neater labels etc.)
-* `source/` - the original ontologies, manual overrides and scripts needed to generate the content of the `annotations/` & `ontologies/` folders 
+* `ontologies/` - full ontologies, either originals or with annotation updates only (neater labels etc.)
+* `originals/` - the original ontologies, manual overrides and scripts needed to generate the content of the `annotations/` & `ontologies/` folders 
+* `overrides/` - manually edited versions of the original ontology files, only altering stylistic aspects of annotations
 
 ## License
 
