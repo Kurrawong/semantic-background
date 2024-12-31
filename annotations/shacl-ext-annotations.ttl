@@ -1,21 +1,21 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
 
 <http://example.com/shacl-extension#allPredicateValues>
-    rdfs:label "All Predicate Values" ;
+    schema:name "All Predicate Values" ;
 .
 
 <http://example.com/shacl-extension#bnode-depth>
-    rdfs:label "blank node depth" ;
+    schema:name "blank node depth" ;
 .
 
 <http://example.com/shacl-extension#limit>
-    rdfs:label "limit" ;
+    schema:name "limit" ;
 .
 
 <http://example.com/shacl-extension#offset>
-    rdfs:label "offset" ;
+    schema:name "offset" ;
 .
 
 <http://example.com/shacl-extension#orderBy>
-    rdfs:label "order by" ;
+    schema:name "order by" ;
 .

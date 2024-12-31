@@ -8,271 +8,271 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 prov:Accept
-    rdfs:label "Accept"@en ;
+    schema:name "Accept"@en ;
 .
 
 prov:Activity
-    rdfs:label "Activity" ;
+    schema:name "Activity" ;
 .
 
 prov:ActivityInfluence
-    rdfs:label "Activity Influence" ;
     rdfs:seeAlso prov:activity ;
     schema:description
         "ActivityInfluence provides additional descriptions of an Activity's binary influence upon any other kind of resource. Instances of ActivityInfluence use the prov:activity property to cite the influencing Activity."@en ,
         "It is not recommended that the type ActivityInfluence be asserted without also asserting one of its more specific subclasses."@en ;
+    schema:name "Activity Influence" ;
 .
 
 prov:Agent
-    rdfs:label "Agent" ;
+    schema:name "Agent" ;
 .
 
 prov:AgentInfluence
-    rdfs:label "Agent Influence" ;
     rdfs:seeAlso prov:agent ;
     schema:description
         "AgentInfluence provides additional descriptions of an Agent's binary influence upon any other kind of resource. Instances of AgentInfluence use the prov:agent property to cite the influencing Agent."@en ,
         "It is not recommended that the type AgentInfluence be asserted without also asserting one of its more specific subclasses."@en ;
+    schema:name "Agent Influence" ;
 .
 
 prov:Association
-    rdfs:label "Association" ;
     schema:description "An instance of prov:Association provides additional descriptions about the binary prov:wasAssociatedWith relation from an prov:Activity to some prov:Agent that had some responsiblity for it. For example, :baking prov:wasAssociatedWith :baker; prov:qualifiedAssociation [ a prov:Association; prov:agent :baker; :foo :bar ]."@en ;
+    schema:name "Association" ;
 .
 
 prov:Attribution
-    rdfs:label "Attribution" ;
     schema:description "An instance of prov:Attribution provides additional descriptions about the binary prov:wasAttributedTo relation from an prov:Entity to some prov:Agent that had some responsible for it. For example, :cake prov:wasAttributedTo :baker; prov:qualifiedAttribution [ a prov:Attribution; prov:entity :baker; :foo :bar ]."@en ;
+    schema:name "Attribution" ;
 .
 
 prov:Bundle
-    rdfs:label "Bundle" ;
     schema:description "Note that there are kinds of bundles (e.g. handwritten letters, audio recordings, etc.) that are not expressed in PROV-O, but can be still be described by PROV-O."@en ;
+    schema:name "Bundle" ;
 .
 
 prov:Collection
-    rdfs:label "Collection" ;
+    schema:name "Collection" ;
 .
 
 prov:Communication
-    rdfs:label "Communication" ;
     schema:description "An instance of prov:Communication provides additional descriptions about the binary prov:wasInformedBy relation from an informed prov:Activity to the prov:Activity that informed it. For example, :you_jumping_off_bridge prov:wasInformedBy :everyone_else_jumping_off_bridge; prov:qualifiedCommunication [ a prov:Communication; prov:activity :everyone_else_jumping_off_bridge; :foo :bar ]."@en ;
+    schema:name "Communication" ;
 .
 
 prov:Contribute
-    rdfs:label """Contribute
+    schema:name """Contribute
 """@en ;
 .
 
 prov:Contributor
-    rdfs:label "Contributor"@en ;
+    schema:name "Contributor"@en ;
 .
 
 prov:Copyright
-    rdfs:label "Copyright"@en ;
+    schema:name "Copyright"@en ;
 .
 
 prov:Create
-    rdfs:label "Create"@en ;
+    schema:name "Create"@en ;
 .
 
 prov:Creator
-    rdfs:label "Creator"@en ;
+    schema:name "Creator"@en ;
 .
 
 prov:Delegation
-    rdfs:label "Delegation" ;
     schema:description "An instance of prov:Delegation provides additional descriptions about the binary prov:actedOnBehalfOf relation from a performing prov:Agent to some prov:Agent for whom it was performed. For example, :mixing prov:wasAssociatedWith :toddler . :toddler prov:actedOnBehalfOf :mother; prov:qualifiedDelegation [ a prov:Delegation; prov:entity :mother; :foo :bar ]."@en ;
+    schema:name "Delegation" ;
 .
 
 prov:Derivation
-    rdfs:label "Derivation" ;
     schema:description
         "An instance of prov:Derivation provides additional descriptions about the binary prov:wasDerivedFrom relation from some derived prov:Entity to another prov:Entity from which it was derived. For example, :chewed_bubble_gum prov:wasDerivedFrom :unwrapped_bubble_gum; prov:qualifiedDerivation [ a prov:Derivation; prov:entity :unwrapped_bubble_gum; :foo :bar ]."@en ,
         "The more specific forms of prov:Derivation (i.e., prov:Revision, prov:Quotation, prov:PrimarySource) should be asserted if they apply."@en ;
+    schema:name "Derivation" ;
 .
 
 prov:Dictionary
-    rdfs:label "Dictionary" ;
     schema:description
         "A given dictionary forms a given structure for its members. A different structure (obtained either by insertion or removal of members) constitutes a different dictionary." ,
         "This concept allows for the provenance of the dictionary, but also of its constituents to be expressed. Such a notion of dictionary corresponds to a wide variety of concrete data structures, such as a maps or associative arrays." ;
+    schema:name "Dictionary" ;
 .
 
 prov:DirectQueryService
-    rdfs:label "Provenance Service" ;
     schema:description "Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments." ;
+    schema:name "Provenance Service" ;
 .
 
 prov:EmptyCollection
-    rdfs:label "Empty Collection"@en ;
+    schema:name "Empty Collection"@en ;
 .
 
 prov:EmptyDictionary
-    rdfs:label "Empty Dictionary" ;
+    schema:name "Empty Dictionary" ;
 .
 
 prov:End
-    rdfs:label "End" ;
     schema:description "An instance of prov:End provides additional descriptions about the binary prov:wasEndedBy relation from some ended prov:Activity to an prov:Entity that ended it. For example, :ball_game prov:wasEndedBy :buzzer; prov:qualifiedEnd [ a prov:End; prov:entity :buzzer; :foo :bar; prov:atTime '2012-03-09T08:05:08-05:00'^^xsd:dateTime ]."@en ;
+    schema:name "End" ;
 .
 
 prov:Entity
-    rdfs:label "Entity" ;
+    schema:name "Entity" ;
 .
 
 prov:EntityInfluence
-    rdfs:label "Entity Influence" ;
     rdfs:seeAlso prov:entity ;
     schema:description
         "EntityInfluence provides additional descriptions of an Entity's binary influence upon any other kind of resource. Instances of EntityInfluence use the prov:entity property to cite the influencing Entity."@en ,
         "It is not recommended that the type EntityInfluence be asserted without also asserting one of its more specific subclasses."@en ;
+    schema:name "Entity Influence" ;
 .
 
 prov:Generation
-    rdfs:label "Generation" ;
     schema:description "An instance of prov:Generation provides additional descriptions about the binary prov:wasGeneratedBy relation from a generated prov:Entity to the prov:Activity that generated it. For example, :cake prov:wasGeneratedBy :baking; prov:qualifiedGeneration [ a prov:Generation; prov:activity :baking; :foo :bar ]."@en ;
+    schema:name "Generation" ;
 .
 
 prov:Influence
-    rdfs:label "Influence" ;
     schema:description
         "An instance of prov:Influence provides additional descriptions about the binary prov:wasInfluencedBy relation from some influenced Activity, Entity, or Agent to the influencing Activity, Entity, or Agent. For example, :stomach_ache prov:wasInfluencedBy :spoon; prov:qualifiedInfluence [ a prov:Influence; prov:entity :spoon; :foo :bar ] . Because prov:Influence is a broad relation, the more specific relations (Communication, Delegation, End, etc.) should be used when applicable."@en ,
         "Because prov:Influence is a broad relation, its most specific subclasses (e.g. prov:Communication, prov:Delegation, prov:End, prov:Revision, etc.) should be used when applicable."@en ;
+    schema:name "Influence" ;
 .
 
 prov:Insertion
-    rdfs:label "Insertion" ;
+    schema:name "Insertion" ;
 .
 
 prov:InstantaneousEvent
-    rdfs:label "Instantaneous Event" ;
     schema:description "An instantaneous event, or event for short, happens in the world and marks a change in the world, in its activities and in its entities. The term 'event' is commonly used in process algebra with a similar meaning. Events represent communications or interactions; they are assumed to be atomic and instantaneous."@en ;
+    schema:name "Instantaneous Event" ;
 .
 
 prov:Invalidation
-    rdfs:label "Invalidation" ;
     schema:description "An instance of prov:Invalidation provides additional descriptions about the binary prov:wasInvalidatedBy relation from an invalidated prov:Entity to the prov:Activity that invalidated it. For example, :uncracked_egg prov:wasInvalidatedBy :baking; prov:qualifiedInvalidation [ a prov:Invalidation; prov:activity :baking; :foo :bar ]."@en ;
+    schema:name "Invalidation" ;
 .
 
 prov:KeyEntityPair
-    rdfs:label "Key-Entity Pair" ;
+    schema:name "Key-Entity Pair" ;
 .
 
 prov:Location
-    rdfs:label "Location" ;
     rdfs:seeAlso prov:atLocation ;
+    schema:name "Location" ;
 .
 
 prov:Modify
-    rdfs:label "Modify"@en ;
+    schema:name "Modify"@en ;
 .
 
 prov:Organization
-    rdfs:label "Organization" ;
+    schema:name "Organization" ;
 .
 
 prov:Person
-    rdfs:label "Person" ;
+    schema:name "Person" ;
 .
 
 prov:Plan
-    rdfs:label "Plan" ;
     schema:description "There exist no prescriptive requirement on the nature of plans, their representation, the actions or steps they consist of, or their intended goals. Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations."@en ;
+    schema:name "Plan" ;
 .
 
 prov:PrimarySource
-    rdfs:label "Primary Source" ;
     schema:description "An instance of prov:PrimarySource provides additional descriptions about the binary prov:hadPrimarySource relation from some secondary prov:Entity to an earlier, primary prov:Entity. For example, :blog prov:hadPrimarySource :newsArticle; prov:qualifiedPrimarySource [ a prov:PrimarySource; prov:entity :newsArticle; :foo :bar ] ."@en ;
+    schema:name "Primary Source" ;
 .
 
 prov:Publish
-    rdfs:label "Publish"@en ;
+    schema:name "Publish"@en ;
 .
 
 prov:Publisher
-    rdfs:label "Publisher"@en ;
+    schema:name "Publisher"@en ;
 .
 
 prov:Quotation
-    rdfs:label "Quotation" ;
     schema:description "An instance of prov:Quotation provides additional descriptions about the binary prov:wasQuotedFrom relation from some taken prov:Entity from an earlier, larger prov:Entity. For example, :here_is_looking_at_you_kid prov:wasQuotedFrom :casablanca_script; prov:qualifiedQuotation [ a prov:Quotation; prov:entity :casablanca_script; :foo :bar ]."@en ;
+    schema:name "Quotation" ;
 .
 
 prov:Removal
-    rdfs:label "Removal" ;
+    schema:name "Removal" ;
 .
 
 prov:Replace
-    rdfs:label "Replace"@en ;
+    schema:name "Replace"@en ;
 .
 
 prov:Revision
-    rdfs:label "Revision" ;
     schema:description "An instance of prov:Revision provides additional descriptions about the binary prov:wasRevisionOf relation from some newer prov:Entity to an earlier prov:Entity. For example, :draft_2 prov:wasRevisionOf :draft_1; prov:qualifiedRevision [ a prov:Revision; prov:entity :draft_1; :foo :bar ]."@en ;
+    schema:name "Revision" ;
 .
 
 prov:RightsAssignment
-    rdfs:label "RightsAssignment"@en ;
+    schema:name "RightsAssignment"@en ;
 .
 
 prov:RightsHolder
-    rdfs:label "RightsHolder"@en ;
+    schema:name "RightsHolder"@en ;
 .
 
 prov:Role
-    rdfs:label "Role" ;
     rdfs:seeAlso prov:hadRole ;
+    schema:name "Role" ;
 .
 
 prov:ServiceDescription
-    rdfs:label "Service Description" ;
     schema:description "Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments." ;
+    schema:name "Service Description" ;
 .
 
 prov:SoftwareAgent
-    rdfs:label
+    schema:name
         "Software Agent" ,
         "SoftwareAgent" ;
 .
 
 prov:Start
-    rdfs:label "Start" ;
     schema:description "An instance of prov:Start provides additional descriptions about the binary prov:wasStartedBy relation from some started prov:Activity to an prov:Entity that started it. For example, :foot_race prov:wasStartedBy :bang; prov:qualifiedStart [ a prov:Start; prov:entity :bang; :foo :bar; prov:atTime '2012-03-09T08:05:08-05:00'^^xsd:dateTime ] ."@en ;
+    schema:name "Start" ;
 .
 
 prov:Submit
-    rdfs:label "Submit"@en ;
+    schema:name "Submit"@en ;
 .
 
 prov:Usage
-    rdfs:label "Usage" ;
     schema:description "An instance of prov:Usage provides additional descriptions about the binary prov:used relation from some prov:Activity to an prov:Entity that it used. For example, :keynote prov:used :podium; prov:qualifiedUsage [ a prov:Usage; prov:entity :podium; :foo :bar ]."@en ;
+    schema:name "Usage" ;
 .
 
 prov:actedOnBehalfOf
-    rdfs:label "acted on behalf of" ;
     schema:description "An object property to express the accountability of an agent towards another agent. The subordinate agent acted on behalf of the responsible agent in an actual activity. "@en ;
+    schema:name "acted on behalf of" ;
 .
 
 prov:activityOfInfluence
-    rdfs:label "activity of influence" ;
+    schema:name "activity of influence" ;
 .
 
 prov:agentOfInfluence
-    rdfs:label "agent of influence" ;
+    schema:name "agent of influence" ;
 .
 
 prov:asInBundle
-    rdfs:label "asInBundle" ;
     schema:description """prov:asInBundle is used to specify which bundle the general entity of a prov:mentionOf property is described.
 
 When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:asInBundle :b is also asserted to cite the Bundle in which :y was described."""@en ;
+    schema:name "asInBundle" ;
 .
 
 prov:atTime
-    rdfs:label "at time" ;
     schema:description "The time at which an InstantaneousEvent occurred, in the form of xsd:dateTime."@en ;
+    schema:name "at time" ;
 .
 
 prov:category
@@ -288,7 +288,7 @@ prov:constraints
 .
 
 prov:contributed
-    rdfs:label "contributed" ;
+    schema:name "contributed" ;
 .
 
 prov:definition
@@ -296,20 +296,20 @@ prov:definition
 .
 
 prov:derivedByInsertionFrom
-    rdfs:label "derivedByInsertionFrom" ;
+    schema:name "derivedByInsertionFrom" ;
 .
 
 prov:derivedByRemovalFrom
-    rdfs:label "derivedByRemovalFrom" ;
+    schema:name "derivedByRemovalFrom" ;
 .
 
 prov:describesService
-    rdfs:label "describes service" ;
     schema:description "relates a generic provenance query service resource (type prov:ServiceDescription) to a specific query service description (e.g. a prov:DirectQueryService or a sd:Service)."@en ;
+    schema:name "describes service" ;
 .
 
 prov:dictionary
-    rdfs:label "dictionary" ;
+    schema:name "dictionary" ;
 .
 
 prov:dm
@@ -325,126 +325,126 @@ prov:editorsDefinition
 .
 
 prov:ended
-    rdfs:label "ended" ;
+    schema:name "ended" ;
 .
 
 prov:endedAtTime
-    rdfs:label "ended at time" ;
     schema:description "The time at which an activity ended. See also prov:startedAtTime."@en ;
+    schema:name "ended at time" ;
 .
 
 prov:entityOfInfluence
-    rdfs:label "entity of influence" ;
+    schema:name "entity of influence" ;
 .
 
 prov:generalizationOf
-    rdfs:label "generalization of" ;
+    schema:name "generalization of" ;
 .
 
 prov:generated
-    rdfs:label "generated" ;
+    schema:name "generated" ;
 .
 
 prov:generatedAsDerivation
-    rdfs:label "generated as derivation" ;
+    schema:name "generated as derivation" ;
 .
 
 prov:generatedAtTime
-    rdfs:label "generated at time" ;
     schema:description "The time at which an entity was completely created and is available for use."@en ;
+    schema:name "generated at time" ;
 .
 
 prov:hadActivity
-    rdfs:label "had activity" ;
     schema:description
         "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ,
         "The _optional_ Activity of an Influence, which used, generated, invalidated, or was the responsibility of some Entity. This property is _not_ used by ActivityInfluence (use prov:activity instead)."@en ;
+    schema:name "had activity" ;
 .
 
 prov:hadDelegate
-    rdfs:label "had delegate" ;
+    schema:name "had delegate" ;
 .
 
 prov:hadDerivation
-    rdfs:label "had derivation" ;
+    schema:name "had derivation" ;
 .
 
 prov:hadDictionaryMember
-    rdfs:label "hadDictionaryMember" ;
+    schema:name "hadDictionaryMember" ;
 .
 
 prov:hadGeneration
-    rdfs:label "had generation" ;
     schema:description "The _optional_ Generation involved in an Entity's Derivation."@en ;
+    schema:name "had generation" ;
 .
 
 prov:hadInfluence
-    rdfs:label "had influence" ;
+    schema:name "had influence" ;
 .
 
 prov:hadMember
-    rdfs:label "had member" ;
+    schema:name "had member" ;
 .
 
 prov:hadPlan
-    rdfs:label "had plan" ;
     schema:description "The _optional_ Plan adopted by an Agent in Association with some Activity. Plan specifications are out of the scope of this specification."@en ;
+    schema:name "had plan" ;
 .
 
 prov:hadPrimarySource
-    rdfs:label "had primary source" ;
+    schema:name "had primary source" ;
 .
 
 prov:hadRevision
-    rdfs:label "had revision" ;
+    schema:name "had revision" ;
 .
 
 prov:hadUsage
-    rdfs:label
+    schema:description "The _optional_ Usage involved in an Entity's Derivation."@en ;
+    schema:name
         "had usage" ,
         "hadUsage" ;
-    schema:description "The _optional_ Usage involved in an Entity's Derivation."@en ;
 .
 
 prov:has_anchor
-    rdfs:label "has anchor" ;
     schema:description "Indicates anchor URI for a potentially dynamic resource instance."@en ;
+    schema:name "has anchor" ;
 .
 
 prov:has_provenance
-    rdfs:label "has provenance" ;
     schema:description "Indicates a provenance-URI for a resource; the resource identified by this property presents a provenance record about its subject or anchor resource."@en ;
+    schema:name "has provenance" ;
 .
 
 prov:has_query_service
-    rdfs:label "has provenance service" ;
     schema:description "Indicates a provenance query service that can access provenance related to its subject or anchor resource."@en ;
+    schema:name "has provenance service" ;
 .
 
 prov:influenced
-    rdfs:label "influenced" ;
+    schema:name "influenced" ;
 .
 
 prov:influencer
-    rdfs:label "influencer" ;
     schema:description "Subproperties of prov:influencer are used to cite the object of an unqualified PROV-O triple whose predicate is a subproperty of prov:wasInfluencedBy (e.g. prov:used, prov:wasGeneratedBy). prov:influencer is used much like rdf:object is used."@en ;
+    schema:name "influencer" ;
 .
 
 prov:informed
-    rdfs:label "informed" ;
+    schema:name "informed" ;
 .
 
 prov:insertedKeyEntityPair
-    rdfs:label "insertedKeyEntityPair" ;
+    schema:name "insertedKeyEntityPair" ;
 .
 
 prov:invalidated
-    rdfs:label "invalidated" ;
+    schema:name "invalidated" ;
 .
 
 prov:invalidatedAtTime
-    rdfs:label "invalidated at time" ;
     schema:description "The time at which an entity was invalidated (i.e., no longer usable)."@en ;
+    schema:name "invalidated at time" ;
 .
 
 prov:inverse
@@ -453,14 +453,14 @@ prov:inverse
 .
 
 prov:locationOf
-    rdfs:label "location of" ;
+    schema:name "location of" ;
 .
 
 prov:mentionOf
-    rdfs:label "mentionOf" ;
     schema:description """prov:mentionOf is used to specialize an entity as described in another bundle. It is to be used in conjuction with prov:asInBundle.
 
 prov:asInBundle is used to cite the Bundle in which the generalization was mentioned."""@en ;
+    schema:name "mentionOf" ;
 .
 
 prov:n
@@ -474,75 +474,75 @@ prov:order
 .
 
 prov:pairEntity
-    rdfs:label "pairKey" ;
+    schema:name "pairKey" ;
 .
 
 prov:pairKey
-    rdfs:label "pairKey" ;
+    schema:name "pairKey" ;
 .
 
 prov:pingback
-    rdfs:label "provenance pingback" ;
     schema:description "Relates a resource to a provenance pingback service that may receive additional provenance links about the resource."@en ;
+    schema:name "provenance pingback" ;
 .
 
 prov:provenanceUriTemplate
-    rdfs:label "provenanceUriTemplate" ;
     schema:description "Relates a provenance service to a URI template string for constructing provenance-URIs."@en ;
+    schema:name "provenanceUriTemplate" ;
 .
 
 prov:qualifiedAssociation
-    rdfs:label "qualified association" ;
     schema:description "If this Activity prov:wasAssociatedWith Agent :ag, then it can qualify the Association using prov:qualifiedAssociation [ a prov:Association;  prov:agent :ag; :foo :bar ]."@en ;
+    schema:name "qualified association" ;
 .
 
 prov:qualifiedAssociationOf
-    rdfs:label "qualified association of" ;
+    schema:name "qualified association of" ;
 .
 
 prov:qualifiedAttribution
-    rdfs:label "qualified attribution" ;
     schema:description "If this Entity prov:wasAttributedTo Agent :ag, then it can qualify how it was influenced using prov:qualifiedAttribution [ a prov:Attribution;  prov:agent :ag; :foo :bar ]."@en ;
+    schema:name "qualified attribution" ;
 .
 
 prov:qualifiedAttributionOf
-    rdfs:label "qualified attribution of" ;
+    schema:name "qualified attribution of" ;
 .
 
 prov:qualifiedCommunication
-    rdfs:label "qualified communication" ;
     schema:description "If this Activity prov:wasInformedBy Activity :a, then it can qualify how it was influenced using prov:qualifiedCommunication [ a prov:Communication;  prov:activity :a; :foo :bar ]."@en ;
+    schema:name "qualified communication" ;
 .
 
 prov:qualifiedCommunicationOf
-    rdfs:label "qualified communication of" ;
+    schema:name "qualified communication of" ;
 .
 
 prov:qualifiedDelegation
-    rdfs:label "qualified delegation" ;
     schema:description "If this Agent prov:actedOnBehalfOf Agent :ag, then it can qualify how with prov:qualifiedResponsibility [ a prov:Responsibility;  prov:agent :ag; :foo :bar ]."@en ;
+    schema:name "qualified delegation" ;
 .
 
 prov:qualifiedDelegationOf
-    rdfs:label "qualified delegation of" ;
+    schema:name "qualified delegation of" ;
 .
 
 prov:qualifiedDerivation
-    rdfs:label "qualified derivation" ;
     schema:description "If this Entity prov:wasDerivedFrom Entity :e, then it can qualify how it was derived using prov:qualifiedDerivation [ a prov:Derivation;  prov:entity :e; :foo :bar ]."@en ;
+    schema:name "qualified derivation" ;
 .
 
 prov:qualifiedDerivationOf
-    rdfs:label "qualified derivation of" ;
+    schema:name "qualified derivation of" ;
 .
 
 prov:qualifiedEnd
-    rdfs:label "qualified end" ;
     schema:description "If this Activity prov:wasEndedBy Entity :e1, then it can qualify how it was ended using prov:qualifiedEnd [ a prov:End;  prov:entity :e1; :foo :bar ]."@en ;
+    schema:name "qualified end" ;
 .
 
 prov:qualifiedEndOf
-    rdfs:label "qualified end of" ;
+    schema:name "qualified end of" ;
 .
 
 prov:qualifiedForm
@@ -568,100 +568,100 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 .
 
 prov:qualifiedGeneration
-    rdfs:label "qualified generation" ;
     schema:description "If this Activity prov:generated Entity :e, then it can qualify how it performed the Generation using prov:qualifiedGeneration [ a prov:Generation;  prov:entity :e; :foo :bar ]."@en ;
+    schema:name "qualified generation" ;
 .
 
 prov:qualifiedGenerationOf
-    rdfs:label "qualified generation of" ;
+    schema:name "qualified generation of" ;
 .
 
 prov:qualifiedInfluence
-    rdfs:label "qualified influence" ;
     schema:description "Because prov:qualifiedInfluence is a broad relation, the more specific relations (qualifiedCommunication, qualifiedDelegation, qualifiedEnd, etc.) should be used when applicable."@en ;
+    schema:name "qualified influence" ;
 .
 
 prov:qualifiedInfluenceOf
-    rdfs:label "qualified influence of" ;
+    schema:name "qualified influence of" ;
 .
 
 prov:qualifiedInsertion
-    rdfs:label "qualifiedInsertion" ;
+    schema:name "qualifiedInsertion" ;
 .
 
 prov:qualifiedInvalidation
-    rdfs:label "qualified invalidation" ;
     schema:description "If this Entity prov:wasInvalidatedBy Activity :a, then it can qualify how it was invalidated using prov:qualifiedInvalidation [ a prov:Invalidation;  prov:activity :a; :foo :bar ]."@en ;
+    schema:name "qualified invalidation" ;
 .
 
 prov:qualifiedInvalidationOf
-    rdfs:label "qualified invalidation of" ;
+    schema:name "qualified invalidation of" ;
 .
 
 prov:qualifiedPrimarySource
-    rdfs:label "qualified primary source" ;
     schema:description "If this Entity prov:hadPrimarySource Entity :e, then it can qualify how using prov:qualifiedPrimarySource [ a prov:PrimarySource; prov:entity :e; :foo :bar ]."@en ;
+    schema:name "qualified primary source" ;
 .
 
 prov:qualifiedQuotation
-    rdfs:label "qualified quotation" ;
     schema:description "If this Entity prov:wasQuotedFrom Entity :e, then it can qualify how using prov:qualifiedQuotation [ a prov:Quotation;  prov:entity :e; :foo :bar ]."@en ;
+    schema:name "qualified quotation" ;
 .
 
 prov:qualifiedQuotationOf
-    rdfs:label "qualified quotation of" ;
+    schema:name "qualified quotation of" ;
 .
 
 prov:qualifiedRemoval
-    rdfs:label "qualifiedRemoval" ;
+    schema:name "qualifiedRemoval" ;
 .
 
 prov:qualifiedRevision
-    rdfs:label "qualified revision" ;
     schema:description "If this Entity prov:wasRevisionOf Entity :e, then it can qualify how it was revised using prov:qualifiedRevision [ a prov:Revision;  prov:entity :e; :foo :bar ]."@en ;
+    schema:name "qualified revision" ;
 .
 
 prov:qualifiedSourceOf
-    rdfs:label "qualified source of" ;
+    schema:name "qualified source of" ;
 .
 
 prov:qualifiedStart
-    rdfs:label "qualified start" ;
     schema:description "If this Activity prov:wasStartedBy Entity :e1, then it can qualify how it was started using prov:qualifiedStart [ a prov:Start;  prov:entity :e1; :foo :bar ]."@en ;
+    schema:name "qualified start" ;
 .
 
 prov:qualifiedStartOf
-    rdfs:label "qualified start of" ;
+    schema:name "qualified start of" ;
 .
 
 prov:qualifiedUsage
-    rdfs:label "qualified usage" ;
     schema:description "If this Activity prov:used Entity :e, then it can qualify how it used it using prov:qualifiedUsage [ a prov:Usage; prov:entity :e; :foo :bar ]."@en ;
+    schema:name "qualified usage" ;
 .
 
 prov:qualifiedUsingActivity
-    rdfs:label "qualified using activity" ;
+    schema:name "qualified using activity" ;
 .
 
 prov:quotedAs
-    rdfs:label "quoted as" ;
+    schema:name "quoted as" ;
 .
 
 prov:removedKey
-    rdfs:label "removedKey" ;
+    schema:name "removedKey" ;
 .
 
 prov:revisedEntity
-    rdfs:label "revised entity" ;
+    schema:name "revised entity" ;
 .
 
 prov:started
-    rdfs:label "started" ;
+    schema:name "started" ;
 .
 
 prov:startedAtTime
-    rdfs:label "started at time" ;
     schema:description "The time at which an activity started. See also prov:endedAtTime."@en ;
+    schema:name "started at time" ;
 .
 
 prov:unqualifiedForm
@@ -669,105 +669,104 @@ prov:unqualifiedForm
 .
 
 prov:used
-    rdfs:label "used" ;
     schema:description "A prov:Entity that was used by this prov:Activity. For example, :baking prov:used :spoon, :egg, :oven ."@en ;
+    schema:name "used" ;
 .
 
 prov:value
-    rdfs:label "value" ;
+    schema:name "value" ;
 .
 
 prov:wasActivityOfInfluence
-    rdfs:label "was activity of influence" ;
+    schema:name "was activity of influence" ;
 .
 
 prov:wasAssociateFor
-    rdfs:label "was associate for" ;
+    schema:name "was associate for" ;
 .
 
 prov:wasAssociatedWith
-    rdfs:label "was associated with" ;
     schema:description "An prov:Agent that had some (unspecified) responsibility for the occurrence of this prov:Activity."@en ;
+    schema:name "was associated with" ;
 .
 
 prov:wasAttributedTo
-    rdfs:label "was attributed to" ;
     schema:description "Attribution is the ascribing of an entity to an agent."@en ;
+    schema:name "was attributed to" ;
 .
 
 prov:wasDerivedFrom
-    rdfs:label "was derived from" ;
     schema:description "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
+    schema:name "was derived from" ;
 .
 
 prov:wasEndedBy
-    rdfs:label "was ended by" ;
     schema:description "End is when an activity is deemed to have ended. An end may refer to an entity, known as trigger, that terminated the activity."@en ;
+    schema:name "was ended by" ;
 .
 
 prov:wasGeneratedBy
-    rdfs:label
+    schema:name
         "was generated by" ,
         "was generatedby" ;
 .
 
 prov:wasInfluencedBy
-    rdfs:label "was influenced by" ;
     schema:description
         "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ,
         "Because prov:wasInfluencedBy is a broad relation, its more specific subproperties (e.g. prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.) should be used when applicable."@en ;
+    schema:name "was influenced by" ;
 .
 
 prov:wasInformedBy
-    rdfs:label "was informed by" ;
     schema:description "An activity a2 is dependent on or informed by another activity a1, by way of some unspecified entity that is generated by a1 and used by a2."@en ;
+    schema:name "was informed by" ;
 .
 
 prov:wasInvalidatedBy
-    rdfs:label "was invalidated by" ;
+    schema:name "was invalidated by" ;
 .
 
 prov:wasMemberOf
-    rdfs:label "was member of" ;
+    schema:name "was member of" ;
 .
 
 prov:wasPlanOf
-    rdfs:label "was plan of" ;
+    schema:name "was plan of" ;
 .
 
 prov:wasPrimarySourceOf
-    rdfs:label "was primary source of" ;
+    schema:name "was primary source of" ;
 .
 
 prov:wasQuotedFrom
-    rdfs:label "was quoted from" ;
     schema:description "An entity is derived from an original entity by copying, or 'quoting', some or all of it."@en ;
+    schema:name "was quoted from" ;
 .
 
 prov:wasRevisionOf
-    rdfs:label "was revision of" ;
     schema:description "A revision is a derivation that revises an entity into a revised version."@en ;
+    schema:name "was revision of" ;
 .
 
 prov:wasRoleIn
-    rdfs:label "wasRoleIn" ;
+    schema:name "wasRoleIn" ;
 .
 
 prov:wasStartedBy
-    rdfs:label "was started by" ;
     schema:description "Start is when an activity is deemed to have started. A start may refer to an entity, known as trigger, that initiated the activity."@en ;
+    schema:name "was started by" ;
 .
 
 prov:wasUsedBy
-    rdfs:label "was used by" ;
+    schema:name "was used by" ;
 .
 
 prov:wasUsedInDerivation
-    rdfs:label "was used in derivation" ;
+    schema:name "was used in derivation" ;
 .
 
 <http://www.w3.org/ns/prov-aq#>
-    rdfs:label "PROV Access and Query Ontology"@en ;
     rdfs:seeAlso
         <http://www.w3.org/TR/prov-aq/> ,
         prov: ;
@@ -776,87 +775,88 @@ prov:wasUsedInDerivation
         """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
+    schema:name "PROV Access and Query Ontology"@en ;
 .
 
 <http://www.w3.org/ns/prov-dc#>
-    rdfs:label "Dublin Core extensions of the W3C PROVenance Interchange Ontology (PROV-O) "@en ;
     schema:description """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
+    schema:name "Dublin Core extensions of the W3C PROVenance Interchange Ontology (PROV-O) "@en ;
 .
 
 <http://www.w3.org/ns/prov-dictionary#>
-    rdfs:label "W3C PROVenance Interchange Ontology (PROV-O) Dictionary Extension"@en ;
     rdfs:seeAlso
         <http://www.w3.org/TR/prov-dictionary/> ,
         <http://www.w3.org/ns/prov> ;
     schema:description """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
+    schema:name "W3C PROVenance Interchange Ontology (PROV-O) Dictionary Extension"@en ;
 .
 
 <http://www.w3.org/ns/prov-links#>
-    rdfs:label "W3C PROV Linking Across Provenance Bundles Ontology (PROV-LINKS)"@en ;
     rdfs:seeAlso
         <http://www.w3.org/TR/prov-links/> ,
         <http://www.w3.org/ns/prov> ;
     schema:description """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/
 ). All feedback is welcome."""@en ;
+    schema:name "W3C PROV Linking Across Provenance Bundles Ontology (PROV-LINKS)"@en ;
 .
 
 <http://www.w3.org/ns/prov-o#>
-    rdfs:label "W3C PROVenance Interchange Ontology (PROV-O)"@en ;
     rdfs:seeAlso
         <http://www.w3.org/TR/prov-o/> ,
         <http://www.w3.org/ns/prov> ;
     schema:description """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
+    schema:name "W3C PROVenance Interchange Ontology (PROV-O)"@en ;
 .
 
 prov:
-    rdfs:label "W3C Provenance Ontology"@en ;
     rdfs:seeAlso <http://www.w3.org/TR/prov-overview/> ;
     schema:description """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page).
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/
 Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
+    schema:name "W3C Provenance Ontology"@en ;
 .
 
 prov:activity
-    rdfs:label "activity" ;
+    schema:name "activity" ;
 .
 
 prov:agent
-    rdfs:label "agent" ;
+    schema:name "agent" ;
 .
 
 prov:alternateOf
-    rdfs:label "alternate of" ;
     rdfs:seeAlso prov:specializationOf ;
+    schema:name "alternate of" ;
 .
 
 prov:atLocation
-    rdfs:label "atLocation" ;
     schema:description
         "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ,
         "The Location of any resource."@en ;
+    schema:name "atLocation" ;
 .
 
 prov:entity
-    rdfs:label "entity" ;
+    schema:name "entity" ;
 .
 
 prov:hadRole
-    rdfs:label "had role" ;
     schema:description
         "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#owl-profile\">PROV-O OWL Profile</a>." ,
         "The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ]."@en ;
+    schema:name "had role" ;
 .
 
 prov:specializationOf
-    rdfs:label
+    rdfs:seeAlso prov:alternateOf ;
+    schema:name
         "specialization of" ,
         "specializationOf" ;
-    rdfs:seeAlso prov:alternateOf ;
 .

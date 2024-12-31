@@ -6,77 +6,77 @@ rdfs:
 .
 
 rdfs:Class
-    rdfs:label "Class" ;
     schema:description "The class of classes." ;
+    schema:name "Class" ;
 .
 
 rdfs:Container
-    rdfs:label "Container" ;
     schema:description "The class of RDF containers." ;
+    schema:name "Container" ;
 .
 
 rdfs:ContainerMembershipProperty
-    rdfs:label "Container Membership Property" ;
     schema:description """The class of container membership properties, rdf:_1, rdf:_2, ...,
                     all of which are sub-properties of 'member'.""" ;
+    schema:name "Container Membership Property" ;
 .
 
 rdfs:Datatype
-    rdfs:label "Datatype" ;
     schema:description "The class of RDF datatypes." ;
+    schema:name "Datatype" ;
 .
 
 rdfs:Literal
-    rdfs:label "Literal" ;
     schema:description "The class of literal values, eg. textual strings and integers." ;
+    schema:name "Literal" ;
 .
 
 rdfs:Resource
-    rdfs:label "Resource" ;
     schema:description "The class resource, everything." ;
+    schema:name "Resource" ;
 .
 
 rdfs:comment
-    rdfs:label "comment" ;
     schema:description "A description of the subject resource." ;
+    schema:name "comment" ;
 .
 
 rdfs:domain
-    rdfs:label "domain" ;
     schema:description "A domain of the subject property." ;
+    schema:name "domain" ;
 .
 
 rdfs:isDefinedBy
-    rdfs:label "is defined by" ;
     schema:description "The defininition of the subject resource." ;
+    schema:name "is defined by" ;
 .
 
 rdfs:label
-    rdfs:label "label" ;
     schema:description "A human-readable name for the subject." ;
+    schema:name "label" ;
 .
 
 rdfs:member
-    rdfs:label "member" ;
     schema:description "A member of the subject resource." ;
+    schema:name "member" ;
 .
 
 rdfs:range
-    rdfs:label "range" ;
     schema:description "A range of the subject property." ;
+    schema:name "range" ;
 .
 
 rdfs:seeAlso
-    rdfs:label "see also" ;
     schema:description "Further information about the subject resource." ;
+    schema:name "see also" ;
 .
 
 rdfs:subClassOf
-    rdfs:label "subclass of" ;
     schema:description "The subject is a subclass of a class." ;
+    schema:name "subclass of" ;
 .
 
 rdfs:subPropertyOf
-    rdfs:label "subproperty of" ;
     schema:description "The subject is a subproperty of a property." ;
+    schema:name "subproperty of" ;
 .

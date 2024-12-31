@@ -1,220 +1,219 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://www.opengis.net/ont/gml>
-    rdfs:label "GML Geometry Types Vocabulary" ;
     schema:description "An RDF/OWL vocabulary defining GML geometry types"^^xsd:string ;
+    schema:name "GML Geometry Types Vocabulary" ;
 .
 
 <http://www.opengis.net/ont/gml#AbstractCurveSegment>
-    rdfs:label "Abstract Curve Segment"@en ;
+    schema:name "Abstract Curve Segment"@en ;
 .
 
 <http://www.opengis.net/ont/gml#AbstractGeometricPrimitive>
-    rdfs:label "Abstract Geometric Primitive"@en ;
+    schema:name "Abstract Geometric Primitive"@en ;
 .
 
 <http://www.opengis.net/ont/gml#AbstractGeometry>
-    rdfs:label "Abstract Geometry"@en ;
+    schema:name "Abstract Geometry"@en ;
 .
 
 <http://www.opengis.net/ont/gml#AbstractGriddedSurface>
-    rdfs:label "Abstract Gridded Surface"@en ;
+    schema:name "Abstract Gridded Surface"@en ;
 .
 
 <http://www.opengis.net/ont/gml#AbstractParametricCurveSurface>
-    rdfs:label "Abstract Parametric Curve Surface"@en ;
+    schema:name "Abstract Parametric Curve Surface"@en ;
 .
 
 <http://www.opengis.net/ont/gml#AbstractSurfacePatch>
-    rdfs:label "Abstract Surface Patch"@en ;
+    schema:name "Abstract Surface Patch"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Arc>
-    rdfs:label "Arc"@en ;
+    schema:name "Arc"@en ;
 .
 
 <http://www.opengis.net/ont/gml#ArcByBulge>
-    rdfs:label "Arc by Bulge"@en ;
+    schema:name "Arc by Bulge"@en ;
 .
 
 <http://www.opengis.net/ont/gml#ArcByCenterPoint>
-    rdfs:label "Arc by Center Point"@en ;
+    schema:name "Arc by Center Point"@en ;
 .
 
 <http://www.opengis.net/ont/gml#ArcString>
-    rdfs:label "Arc String"@en ;
+    schema:name "Arc String"@en ;
 .
 
 <http://www.opengis.net/ont/gml#ArcStringByBulge>
-    rdfs:label "Arc String by Bulge"@en ;
+    schema:name "Arc String by Bulge"@en ;
 .
 
 <http://www.opengis.net/ont/gml#BSpline>
-    rdfs:label "BSpline"@en ;
+    schema:name "BSpline"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Bezier>
-    rdfs:label "Bezier"@en ;
+    schema:name "Bezier"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Circle>
-    rdfs:label "Circle"@en ;
+    schema:name "Circle"@en ;
 .
 
 <http://www.opengis.net/ont/gml#CircleByCenterPoint>
-    rdfs:label "CircleByCenterPoint"@en ;
+    schema:name "CircleByCenterPoint"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Clothoid>
-    rdfs:label "Clothoid"@en ;
+    schema:name "Clothoid"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Composite>
-    rdfs:label "Composite"@en ;
+    schema:name "Composite"@en ;
 .
 
 <http://www.opengis.net/ont/gml#CompositeCurve>
-    rdfs:label "Composite Curve"@en ;
+    schema:name "Composite Curve"@en ;
 .
 
 <http://www.opengis.net/ont/gml#CompositeSolid>
-    rdfs:label "Composite Solid"@en ;
+    schema:name "Composite Solid"@en ;
 .
 
 <http://www.opengis.net/ont/gml#CompositeSurface>
-    rdfs:label "Composite Surface"@en ;
+    schema:name "Composite Surface"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Cone>
-    rdfs:label "Cone"@en ;
+    schema:name "Cone"@en ;
 .
 
 <http://www.opengis.net/ont/gml#CubicSpline>
-    rdfs:label "Cubic Spline"@en ;
+    schema:name "Cubic Spline"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Curve>
-    rdfs:label "Curve"@en ;
+    schema:name "Curve"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Cylinder>
-    rdfs:label "Cylinder"@en ;
+    schema:name "Cylinder"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Geodesic>
-    rdfs:label "Geodesic"@en ;
+    schema:name "Geodesic"@en ;
 .
 
 <http://www.opengis.net/ont/gml#GeodesicString>
-    rdfs:label "Geodesic String"@en ;
+    schema:name "Geodesic String"@en ;
 .
 
 <http://www.opengis.net/ont/gml#GeometricComplex>
-    rdfs:label "Geometric Complex"@en ;
+    schema:name "Geometric Complex"@en ;
 .
 
 <http://www.opengis.net/ont/gml#LineString>
-    rdfs:label "Line String"@en ;
+    schema:name "Line String"@en ;
 .
 
 <http://www.opengis.net/ont/gml#LineStringSegment>
-    rdfs:label "Line String Segment"@en ;
+    schema:name "Line String Segment"@en ;
 .
 
 <http://www.opengis.net/ont/gml#LinearRing>
-    rdfs:label "Linear Ring"@en ;
+    schema:name "Linear Ring"@en ;
 .
 
 <http://www.opengis.net/ont/gml#MultiCurve>
-    rdfs:label "Multi-Curve"@en ;
+    schema:name "Multi-Curve"@en ;
 .
 
 <http://www.opengis.net/ont/gml#MultiGeometry>
-    rdfs:label "Multi-Geometry"@en ;
+    schema:name "Multi-Geometry"@en ;
 .
 
 <http://www.opengis.net/ont/gml#MultiPoint>
-    rdfs:label "Multi-Point"@en ;
+    schema:name "Multi-Point"@en ;
 .
 
 <http://www.opengis.net/ont/gml#MultiSolid>
-    rdfs:label "Multi-Solid"@en ;
+    schema:name "Multi-Solid"@en ;
 .
 
 <http://www.opengis.net/ont/gml#MultiSurface>
-    rdfs:label "Multi-Surface"@en ;
+    schema:name "Multi-Surface"@en ;
 .
 
 <http://www.opengis.net/ont/gml#OffsetCurve>
-    rdfs:label "Offset Curve"@en ;
+    schema:name "Offset Curve"@en ;
 .
 
 <http://www.opengis.net/ont/gml#OrientableCurve>
-    rdfs:label "Orientable Curve"@en ;
+    schema:name "Orientable Curve"@en ;
 .
 
 <http://www.opengis.net/ont/gml#OrientableSurface>
-    rdfs:label "Orientable Surface"@en ;
+    schema:name "Orientable Surface"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Point>
-    rdfs:label "Point"@en ;
+    schema:name "Point"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Polygon>
-    rdfs:label "Polygon"@en ;
+    schema:name "Polygon"@en ;
 .
 
 <http://www.opengis.net/ont/gml#PolygonPatch>
-    rdfs:label "Polygon Patch"@en ;
+    schema:name "Polygon Patch"@en ;
 .
 
 <http://www.opengis.net/ont/gml#PolyhedralSurface>
-    rdfs:label "Polyhedral Surface"@en ;
+    schema:name "Polyhedral Surface"@en ;
 .
 
 <http://www.opengis.net/ont/gml#PolynomialSpline>
-    rdfs:label "Polynomial Spline"@en ;
+    schema:name "Polynomial Spline"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Rectangle>
-    rdfs:label "Rectangle"@en ;
+    schema:name "Rectangle"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Ring>
-    rdfs:label "Ring"@en ;
+    schema:name "Ring"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Shell>
-    rdfs:label "Shell"@en ;
+    schema:name "Shell"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Solid>
-    rdfs:label "Solid"@en ;
+    schema:name "Solid"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Sphere>
-    rdfs:label "Sphere"@en ;
+    schema:name "Sphere"@en ;
 .
 
 <http://www.opengis.net/ont/gml#SplineCurve>
-    rdfs:label "Spline Curve"@en ;
+    schema:name "Spline Curve"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Surface>
-    rdfs:label "Surface"@en ;
+    schema:name "Surface"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Tin>
-    rdfs:label "Triangulated Irregular Network"@en ;
+    schema:name "Triangulated Irregular Network"@en ;
 .
 
 <http://www.opengis.net/ont/gml#Triangle>
-    rdfs:label "Triangle"@en ;
+    schema:name "Triangle"@en ;
 .
 
 <http://www.opengis.net/ont/gml#TriangulatedSurface>
-    rdfs:label "Triangulated Surface"@en ;
+    schema:name "Triangulated Surface"@en ;
 .

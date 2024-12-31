@@ -1,4 +1,3 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 
 <http://www.w3.org/2003/06/sw-vocab-status/ns>
@@ -8,16 +7,16 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://www.w3.org/2003/06/sw-vocab-status/ns#moreinfo>
-    rdfs:label "more info" ;
     schema:description "more information about the status etc of a term, typically human oriented" ;
+    schema:name "more info" ;
 .
 
 <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status>
-    rdfs:label "term status" ;
     schema:description "the status of a vocabulary term, expressed as a short symbolic string; known values include 'unstable','testing', 'stable' and 'archaic'" ;
+    schema:name "term status" ;
 .
 
 <http://www.w3.org/2003/06/sw-vocab-status/ns#userdocs>
-    rdfs:label "user docs" ;
     schema:description "human-oriented documentation, examples etc for use of this term" ;
+    schema:name "user docs" ;
 .

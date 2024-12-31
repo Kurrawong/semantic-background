@@ -1,6 +1,10 @@
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix prez: <https://prez.dev/> .
-@prefix prez-ont: <https://prez.dev/ont/> .
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prez: <https://prez.dev/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+<https://prez.dev/ont/>
+    a owl:Ontology ;
+.
 
 prez:link rdfs:label "link" .
 prez:count rdfs:label "count" .
@@ -14,8 +18,8 @@ prez:VocPrezCollectionList rdfs:label "VocPrez Collection List" .
 prez:searchResultMatch rdfs:label "Matched Term" .
 prez:searchResultPredicate rdfs:label "Matched Predicate" .
 prez:searchResultWeight rdfs:label "Search Result Weight" .
-prez-ont:endpointTemplate rdfs:label "endpoint template" .
-prez-ont:deliversClasses rdfs:label "delivers classes" .
-prez-ont:parentEndpoint rdfs:label "parent endpoint" .
-prez-ont:parentToFocusRelation rdfs:label "parent to focus relation" .
-prez-ont:focusToParentRelation rdfs:label "focus to parent relation" .
+prez:endpointTemplate rdfs:label "endpoint template" .
+prez:deliversClasses rdfs:label "delivers classes" .
+prez:parentEndpoint rdfs:label "parent endpoint" .
+prez:parentToFocusRelation rdfs:label "parent to focus relation" .
+prez:focusToParentRelation rdfs:label "focus to parent relation" .

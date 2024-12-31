@@ -1,69 +1,69 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
 
 <https://prez.dev/CatalogList>
-    rdfs:label "Catalog List" ;
+    schema:name "Catalog List" ;
 .
 
 <https://prez.dev/DatasetList>
-    rdfs:label "Dataset List" ;
+    schema:name "Dataset List" ;
 .
 
 <https://prez.dev/FeatureCollectionList>
-    rdfs:label "Feature Collection List" ;
+    schema:name "Feature Collection List" ;
 .
 
 <https://prez.dev/FeatureList>
-    rdfs:label "Feature List" ;
+    schema:name "Feature List" ;
 .
 
 <https://prez.dev/SchemesList>
-    rdfs:label "Schemes List" ;
+    schema:name "Schemes List" ;
 .
 
 <https://prez.dev/VocPrezCollectionList>
-    rdfs:label "VocPrez Collection List" ;
+    schema:name "VocPrez Collection List" ;
 .
 
 <https://prez.dev/count>
-    rdfs:label "count" ;
+    schema:name "count" ;
+.
+
+<https://prez.dev/deliversClasses>
+    schema:name "delivers classes" ;
+.
+
+<https://prez.dev/endpointTemplate>
+    schema:name "endpoint template" ;
+.
+
+<https://prez.dev/focusToParentRelation>
+    schema:name "focus to parent relation" ;
 .
 
 <https://prez.dev/link>
-    rdfs:label "link" ;
+    schema:name "link" ;
 .
 
 <https://prez.dev/members>
-    rdfs:label "members" ;
+    schema:name "members" ;
 .
 
-<https://prez.dev/ont/deliversClasses>
-    rdfs:label "delivers classes" ;
+<https://prez.dev/parentEndpoint>
+    schema:name "parent endpoint" ;
 .
 
-<https://prez.dev/ont/endpointTemplate>
-    rdfs:label "endpoint template" ;
-.
-
-<https://prez.dev/ont/focusToParentRelation>
-    rdfs:label "focus to parent relation" ;
-.
-
-<https://prez.dev/ont/parentEndpoint>
-    rdfs:label "parent endpoint" ;
-.
-
-<https://prez.dev/ont/parentToFocusRelation>
-    rdfs:label "parent to focus relation" ;
+<https://prez.dev/parentToFocusRelation>
+    schema:name "parent to focus relation" ;
 .
 
 <https://prez.dev/searchResultMatch>
-    rdfs:label "Matched Term" ;
+    schema:name "Matched Term" ;
 .
 
 <https://prez.dev/searchResultPredicate>
-    rdfs:label "Matched Predicate" ;
+    schema:name "Matched Predicate" ;
 .
 
 <https://prez.dev/searchResultWeight>
-    rdfs:label "Search Result Weight" ;
+    schema:name "Search Result Weight" ;
 .

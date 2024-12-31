@@ -1,0 +1,3932 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX schema: <https://schema.org/>
+
+<https://www.ica.org/standards/RiC/ontology>
+    schema:description """
+         <html:div xmlns:html="http://www.w3.org/1999/xhtml" xml:lang="en" id="introduction">
+            <html:h3>Introduction</html:h3>
+            <html:p>RiC-O (Records in Contexts-Ontology) is an OWL ontology for describing archival
+               record resources. As the third part of Records in Contexts standard, it is a formal
+               representation of Records in Contexts Conceptual Model (RiC-CM). This version, which
+               is v1.0.1, is the latest official release. It is compliant with RiC-CM v1.0.</html:p>
+            <html:p>The following diagram shows the main RiC-CM 1.0 entities and a few relations
+               between them: <html:img src="https://github.com/ICA-EGAD/RiC-O/blob/7bc6d5d59ecc85a4b901cc79d649ae50209fd69e/diagrams/diagrams_v1-0/RiC-CM-overview/diagram_RiC-CM-overview-RiC-v1-0.jpg?raw=true" alt="A partial overview of RiC-CM 1.0 main entities" class="diagram"/>
+            </html:p>
+            <html:div id="design-principles">
+               <html:h4>RiC-O design principles</html:h4>
+               <html:p>The following design principles were followed when developing RiC-O.</html:p>
+               <html:p>
+                  <html:strong>1. RiC-O is a domain and reference ontology</html:strong>.</html:p>
+               <html:p>RiC-O provides <html:strong>a generic vocabulary and formal rules for
+                     creating RDF datasets (or generating them from existing archival metadata) that
+                     describe in a consistent way any kind of archival record
+                  resource</html:strong>. It supports publishing RDF datasets as Linked Data,
+                  querying them using SPARQL, and making inferences using the logic of the
+                  ontology.</html:p>
+               <html:p>While some projects have built some specific ontologies for describing
+                  archives, in 2013 no generic domain ontology existed for the specific needs of the
+                  archival community. This is why EGAD decided to develop RiC-O as a part of RiC
+                  standard.</html:p>
+               <html:p>Apart from this first, main target, <html:strong>RiC-O, as a technical
+                     implementation of RiC-CM that also extends and refines it and that includes
+                     formal logic, can guide or inspire, in many ways, the development of any tool
+                     or system that manages (i.e. stores, enables to edit or processes) and
+                     publishes descriptive archival metadata.</html:strong>. Of course, other
+                  technical implementations of RiC-CM may be developed later on. Also, the current
+                  technical implementations of the former ICA standards, e.g. EAD and EAC-CPF XML
+                  schemas, should be made closer to RiC-CM in the future; on this topic, see <html:a href="https://www2.archivists.org/groups/technical-subcommittee-on-encoded-archival-standards-ts-eas">the news and announcements of the Technical Subcommittee on Encoded Archival
+                     Standards (TS-EAS) of the Society of American Archivists</html:a>.</html:p>
+               <html:p>As RiC-O is a generic, domain ontology, <html:strong>it does not address by
+                     itself every specific need or expectation</html:strong> that may occur in every
+                  archival institution or project. It is rather <html:strong>a high level
+                     framework</html:strong> and an institution or project implementing RiC-O can
+                  apply only such a subset of properties as meets their needs, or extend the
+                  specification according to their particular requirements, or do both.</html:p>
+               <html:p>As a domain ontology, RiC-O, at this stage, does not borrow from other
+                  existing ontologies (such as the cultural heritage models – IFLA-LRM and
+                  CIDOC-CRM, PREMIS, or PROV-O). It should therefore be easier, for an archival
+                  institution or archival project, to understand, implement and maintain RiC-O
+                  within its system.</html:p>
+               <html:p>Alignment with those and other models, where possible, will be undertaken in
+                  a future revision cycle to support the interconnected nature of resource
+                  description across the domains. This is of course essential for interconnecting
+                  RDF datasets conforming to RiC-O with other datasets, or for using parts of RiC-O
+                  in other contexts than the archival or records management realm.</html:p>
+               <html:p>
+                  <html:strong>2. RiC-O is immediately usable.</html:strong>
+               </html:p>
+               <html:p><html:strong>This is a key feature</html:strong>. <html:strong>Metadata
+                     conforming to superseded ICA standards can be transformed to RiC-O
+                     successfully</html:strong>. Converting existing archival metadata created or
+                  generated in current information systems and compliant with ICA standards to
+                  RDF/RiC-O is possible without losing data or structure.</html:p>
+               <html:p>During the ongoing development process of RiC-O, intensive conversion
+                  testing, either by hand or using scripts, was conducted on XML/EAD finding aids
+                  and XML/EAC-CPF authority records to ensure that RiC-O is usable with existing
+                  descriptive metadata. An <html:a href="https://github.com/ArchivesNationalesFR/rico-converter">open source
+                     conversion software</html:a> was also developed and made available in April
+                  2020.</html:p>
+               <html:p>While some existing metadata sets may have a very fine level of granularity
+                  and accuracy, already using, for example, controlled vocabularies, or describing
+                  curation events separately, often these metadata don’t have the very precise
+                  structure that RiC-CM recommends. Even then, such a conversion process remains
+                  possible. In order to allow this, RiC-O sometimes provides several methods for
+                  representing information (as described below). From this point of view, RiC-O v1.0
+                  may be considered a transitional ontology, in which some components may be
+                  deprecated later on.</html:p>
+               <html:p>The usability of a model also depends on its documentation. RiC-O is
+                  documented extensively. The documentation will be reviewed and updated on a
+                  continuing basis.</html:p>
+               <html:p>
+                  <html:strong>3. RiC-O provides a flexible framework</html:strong>.</html:p>
+               <html:p>
+                  <html:strong>This is a very important principle too</html:strong>. It is related
+                  with the usability principle quoted above. Moreover, <html:strong>archival
+                     description is flexible by essence</html:strong>. It is quite commonly noted
+                  that today the level of granularity of information varies from one finding aid to
+                  another (or from one authority record to another), or even within the same finding
+                  aid. Some series or agents are described summarily because little is known about
+                  them and there is little time for extensive research, while other series, even
+                  records, or agents are described in detail; some relations (e.g. that relating to
+                  provenance) may be described without any detail while others may be thoroughly
+                  documented, as ISAAR(CPF) and EAC-CPF allow it.</html:p>
+               <html:p>Being generally flexible, for an OWL ontology, depends first on the
+                  polyhierarchical systems of classes and properties it provides. A superproperty or
+                  superclass, more general or generic than its subproperties or subclasses, must
+                  exist and be available for handling information, while at the same time more
+                  accurate subcomponents must be there for handling more accurate description. Also,
+                  RiC-O provides methods for describing relations as full entities, as well as
+                  direct and short paths between entities.</html:p>
+               <html:p>
+                  <html:strong>4. RiC-O opens new potential for archival description.</html:strong>
+               </html:p>
+               <html:p><html:strong>Linked Data tools and interfaces enable end users to go through
+                     RDF/RiC-O graphs, query them using SPARQL, and make inferences. This means a
+                     completely new way of consulting archival metadata and their multiple
+                     contexts.</html:strong> An end user should be able to ask of any given data
+                  set, for example, “What are (according to your dataset) the corporate bodies that
+                  succeeded a given entity from its end of existence to now (as concerns this given
+                  activity)?”, or “what instantiations of this photograph exist?”, or “what are the
+                  existing copies of this original charter?”, and get a list of these entities. This
+                  means that institutions or projects that invest in the implementation of RiC-O
+                  will be able to query their data in ways not possible with the previous ICA
+                  standards, and will get new insight into the content and context of their archives
+                  that wasn’t visible with the existing ICA-standards. What is more, repositories
+                  using RiC-O may infer new assertions from the RDF datasets and link them to other
+                  resources outside their institution, thereby amplifying the query and inferencing
+                  possibilities manifold.</html:p>
+               <html:p>
+                  <html:strong>5. RiC-O is extensible.</html:strong>
+               </html:p>
+               <html:p>Institutions with descriptive needs beyond what RiC-O provides out-of-the-box
+                  have the option of extending the ontology by adding new subclasses or
+                  subproperties as needed. Also, the concepts defined in existing SKOS vocabularies
+                  (e.g. a list of documentary form types) can also be connected to RiC-O based
+                  graphs (using the *Type classes, and properties which are in the domain or range
+                  of these classes).</html:p>
+               <html:p>RiC-O has also the potential to be usable in other contexts than purely
+                  archival ones. It can be used to “hook” archival description to descriptive
+                  metadata in other domains (e.g. bibliographic or museum metadata). As said above,
+                  alignment with other models will be undertaken by EGAD in a future revision cycle,
+                  facilitating such connections.</html:p>
+            </html:div>
+            <html:div id="understanding-RiCO">
+               <html:h4>Understanding RiC-O: a quick overview of some features</html:h4>
+               <html:div id="fromRiCCM-to-RiCO">
+                  <html:h5>From RiC-CM to RiC-O</html:h5>
+                  <html:div id="From_RiC-CM_components_to_RiC-O_classes">
+                     <html:h6>1. From RiC-CM components to RiC-O classes</html:h6>
+                     <html:p><html:strong>Each RiC-CM entity has a corresponding class in
+                           RiC-O</html:strong>. These classes are organized according to the same
+                        hierarchy as in RiC-CM. Some projects may need very few of them (e.g. Agent,
+                        Record Resource and Activity only), while others may need more (e.g.
+                        Corporate Body and Person; Record; Place; Organic Provenance
+                        Relation).</html:p>
+                     <html:p><html:strong>Many classes only exist in RiC-O and not in
+                           RiC-CM</html:strong>. These additional classes address special
+                        needs:</html:p>
+                     <html:ul>
+                        <html:li><html:strong>some correspond to RiC-CM attributes</html:strong>,
+                           when it may be considered necessary to handle them as full entities. This
+                           is the case for <html:a href="#rico:Type">Type</html:a> and its
+                           subclasses, that correspond to RiC-CM attributes that contain controlled
+                           values, and that can help to articulate RiC-O with external RDF resources
+                           like SKOS vocabularies; and also for <html:a href="#rico:Language">Language</html:a>, <html:a href="#rico:Name">Name</html:a> and
+                              <html:a href="#rico:Identifier">Identifier</html:a>, that can be
+                           considered as full entities and as key linking nodes in a RDF graph. All
+                           these classes have been grouped under a <html:a href="#rico:Concept">Concept</html:a> class. </html:li>
+                        <html:li><html:strong>some classes have been added in order to provide a
+                              more accurate definition and model for some entities</html:strong>.
+                              <html:a href="#rico:Place">Place</html:a> thus comes along with a
+                              <html:a href="#rico:PhysicalLocation">Physical Location
+                           class</html:a>, and with a <html:a href="#rico:Coordinates">Coordinates
+                              class</html:a>. A Place is considered both a geographical and
+                           historical entity. As a historical entity, among other features, it has a
+                           history, and may be preceded or succeeded by other Places. A Place also
+                           may have zero to many Physical Location through time (for instance, its
+                           boundaries, if it is an administrative area or a country, may change).
+                           Each Physical Location may be connected to zero to many Coordinates. This
+                           model is quite close to the Linked Places Format (<html:a href="https://github.com/LinkedPasts/linked-places">https://github.com/LinkedPasts/linked-places</html:a>). Another
+                           example of such an addition is the <html:a href="#rico:Proxy">Proxy
+                              class</html:a>, that represents (stands for) a Record Resource as it
+                           exists in a specific Record Set.</html:li>
+                        <html:li><html:strong>finally, a system of n-ary classes helps to implement
+                              the Relations section of RiC-CM</html:strong>. While these relations
+                           also are represented as simple, binary object properties (e.g. <html:a href="#rico:hasOrganicProvenance">hasOrganicProvenance</html:a> that
+                           corresponds to RiC-R026 relation), you may need to assign different
+                           attributes to a relation, e.g. a date, certainty or description, as it is
+                           already possible, and quite often done, in a XML/EAC-CPF file. One of the
+                           standard available methods for representing such a documented relation in
+                           RDF for now is to use a class. The RDF-star specification, which is being
+                           developed by the W3C RDF-DEV Community Group, provides a far simpler
+                           method (allowing to consider a triple as the subject or object of another
+                           triple; see <html:a href="https://w3c.github.io/rdf-star/">https://w3c.github.io/rdf-star/</html:a>) and is already being used
+                           by some tools; however it is not yet a complete W3C standard. Thus, for
+                           example, in RiC-O a <html:a href="#rico:OrganicProvenanceRelation">OrganicProvenanceRelation class</html:a> exists. This class may
+                           connect one to many Agents to one to many created or accumulated Record
+                           Resources or Instantiations, and has some specific object properties
+                           (certainty, date, description, source). Back to the <html:a href="#rico:hasOrganicProvenance">hasOrganicProvenance</html:a> object
+                           property, let us add that it is formally defined in RiC-O, using OWL 2
+                           property chain axiom (see <html:a href="https://www.w3.org/TR/owl2-new-features/#F8:_Property_Chain_Inclusion">https://www.w3.org/TR/owl2-new-features/#F8:_Property_Chain_Inclusion</html:a>),
+                           as a ‘shortcut’ for the longer path
+                           ‘thingIsSourceOfRelation/organicProvenanceRelation_role/relationHasTarget’,
+                           where the intermediate node is an instance of OrganicProvenanceRelation:<html:br/>
+                           
+                           
+                           <html:img src="https://github.com/ICA-EGAD/RiC-O/blob/prepare_1.0.1_version/ontology/current-version/HTML_view/rico_hasOrganicProvenance.png?raw=true" class="code" alt="rico:hasOrganicProvenance object property as a shortcut"/>
+                           
+                           
+                           <html:br/>A triplestore, with the appropriate configuration, may thus
+                           infer the direct ‘hasOrganicProvenance’ assertion from this long
+                           path.</html:li>
+                     </html:ul>
+                  </html:div>
+                  <html:div id="about_RiC-O_datatype-properties">
+                     <html:h6>2. About RiC-O datatype properties (relations whose object is a
+                        litteral)</html:h6>
+                     <html:p><html:strong>Most of the datatype properties in RiC-O correspond to
+                           RiC-CM attributes that contain free, plain text</html:strong>. See for
+                        example <html:a href="#rico:generalDescription">rico:generalDescription</html:a>, <html:a href="#rico:history">rico:history</html:a> and <html:a href="#scopeAndContent">rico:scopeAndContent</html:a>.</html:p>
+                     <html:p>In many simple usecases it’s sufficent to just use the <html:a href="#rico:identifier">rico:identifier</html:a> or <html:a href="#rico:name">rico:name</html:a> datatype properties. However, in
+                        addition to these datatype properties, the Name and Identifier RiC-CM
+                        attributes also have corresponding classes (subclasses of <html:a href="#rico:Appellation">rico:Appellation</html:a>). A resource may have
+                        several Identifiers (e.g. archival reference code, system number, digital
+                        object identifier) or Names and each comes with different attributes; in
+                        this case instances of classes are needed.</html:p>
+                     <html:p>The Location RiC-CM attribute also has a <html:a href="#rico:PhysicalLocation">rico:PhysicalLocation</html:a>
+                        corresponding class (for users who want to use Place, Physical Location and
+                        Coordinates for handling places).</html:p>
+                     <html:p>As already said too, every RiC-CM attribute that has ‘controlled value’
+                        or ‘rule-based’ as a schema value, has a class as corresponding component in
+                        RiC-O. <html:strong>However, for these CM attributes that correspond to a
+                           RiC-O class, as it is necessary to provide an immediately usable
+                           ontology, two supplementary datatype properties exist that allow not to
+                           use the classes, at least for a while, if you want to implement RiC-O and
+                           create RiC-O/RDF datasets from existing archival metadata without being
+                           able to handle URIs for the information you have</html:strong>.</html:p>
+                     <html:p>For example, you may not be able to handle and maintain URIs for some
+                        controlled values you use in EAD finding aids for carrier types: maybe your
+                        information system does not use a vocabulary for this, and you cannot for a
+                        while consider these carrier types as full entities. Nevertheless you want
+                        to produce RiC-O datasets where every piece of information is kept, and you
+                        want to avoid blank nodes. If RiC-O would only provide the Carrier Type
+                        class, it would be an issue for you.</html:p>
+                     <html:p>So RiC-O provides a <html:a href="#rico:type">rico:type</html:a>
+                        datatype property, with range rdfs:literal, which allows you to move
+                        forward. For RiC-CM Coordinates attribute, you also have the <html:a href="#rico:geographicalCoordinates">rico:geographicalCoordinates</html:a> datatype property.</html:p>
+                     <html:p>These datatype properties have a skos:scopeNote which says (for
+                        example) &quot;Provided for usability reasons. May be made deprecated or removed
+                        later on. Use only if you don’t use Physical Location and Coordinates
+                        classes with Place.&quot;</html:p>
+                     <html:p><html:strong>The same key design principle (RiC-O must be immediately
+                           usable) led us to define some datatype properties that would enable users
+                           to use RiC-O in simple usecases where they do not want to consider dates
+                           and rules as full entities</html:strong>. Thus, there of course is Date
+                        and Rule classes in RiC-O (since there are Date and Rule entities in
+                        RiC-CM). And <html:strong>you also have a <html:a href="#rico:date">rico:date</html:a> datatype property, which has several
+                           subproperties; plus a <html:a href="#rico:ruleFollowed">rico:ruleFollowed</html:a> datatype property</html:strong>. The same
+                        analysis led us to keep the <html:a href="#rico:history">rico:history</html:a> datatype property in RiC-O (same as RiC-CM history
+                        attribute), while RiC-CM and RiC-O also provide the <html:a href="#rico:Event">Event</html:a> class, and using a series of Events may
+                        of course be a better method, easier to query, link and display, than simply
+                        using a history prose discourse. The two methods may be used in parallel
+                        within the same dataset by an institution that, for example, would decide to
+                        emphasize only the accession, appraisal and description events among the
+                        whole history of Record Resources.</html:p>
+                     <html:p>These datatype properties have the same kind of skos:scopeNote as
+                        above.</html:p>
+                     <html:p>Finally, <html:strong>we have introduced a few datatype properties that
+                           do not correspond to any RiC-CM attribute</html:strong>.</html:p>
+                     <html:p>Some are superproperties, and thus group datatype properties: <html:a href="#rico:physicalOrLogicalExtent">rico:physicalOrLogicalExtent</html:a>, with rico:carrierExtent,
+                        rico:instantiationExtent and rico:recordResourceExtent as subproperties;
+                           <html:a href="#rico:textualValue">rico:textualValue</html:a>, with
+                        rico:expressedDate, rico:normalizedValue and rico:quantity as subproperties;
+                           <html:a href="#rico:measure">rico:measure</html:a>; <html:a href="#rico:referenceSystem">rico:referenceSystem</html:a>.</html:p>
+                     <html:p>Some are simply more specific properties: <html:a href="#rico:accrualsStatus">rico:accrualsStatus</html:a>; <html:a href="#rico:recordResourceStructure">rico:recordResourceStructure</html:a> and <html:a href="#rico:instantiationStructure">rico:instantiationStructure</html:a>,
+                        subproperties of rico:structure; <html:a href="#rico:title">rico:title</html:a> (subproperty of rico:name); rico:altitude,
+                        rico:height, rico:latitude, rico:length, rico:longitude, rico:width
+                        (subproperties of <html:a href="#rico:measure">rico:measure</html:a>),
+                        rico:geodesicSystem and rico:altimetricSystem (subproperties of <html:a href="#rico:referenceSystem">rico:referenceSystem</html:a>).</html:p>
+                  </html:div>
+                  <html:div id="about_RiC-O_object-properties">
+                     <html:h6>3. About RiC-O object properties (relations between two
+                        entities)</html:h6>
+                     <html:p>In order to connect all the classes created, <html:strong>a significant
+                           number of object properties have been defined, in addition to the 85
+                           relations defined in RiC-CM 1.0.</html:strong></html:p>
+                     <html:p>While the 'flat' list of object properties is a long one,
+                           <html:strong>the object properties are grouped
+                           hierarchically</html:strong>, so that one can use the upper to
+                        intermediate level ones for simplicity sake, or choose the most accurate and
+                        expressive ones, or extend the system adding a subproperty easily. It is
+                        expected that, in most use cases, a subset of these properties only will be
+                        needed.</html:p>
+                     <html:p>Below we just give a few details on certain specific sets of
+                        properties.</html:p>
+                     <html:p>While in RiC-CM it was not possible to achieve such a level of
+                        precision with simple attributes, <html:strong>RiC-O includes object
+                           properties to assert that a <html:a href="#rico:RecordSet">rico:RecordSet</html:a> has or had members (either all of them, or
+                           some of them) that share some characteristics</html:strong>, i.e.
+                        Language, ContentType, DocumentaryFormType, LegalStatus, or RecordState. See
+                        for example <html:a href="#rico:hasOrHadAllMembersWithCategory">rico:hasOrHadAllMembersWithCategory</html:a>, and its
+                        subproperties.</html:p>
+                     <html:p><html:strong>Some of the object properties are formally defined as
+                           shortcuts</html:strong>: they can be inferred if you create triples that
+                        include instances of the Relation classes. See the example explained above
+                        in the <html:a href="#RiC-O_classes">section dedicated to
+                        classes</html:a>.</html:p>
+                     <html:p><html:strong>Many properties, new in RiC-O 1.0, are transitive or
+                           reflexive</html:strong>, as explained in the <html:a href="#history-note">history note</html:a> above.</html:p>
+                  </html:div>
+                  <html:div id="named-individuals">
+                     <html:h6>4. Named Individuals</html:h6>
+                     <html:p>RiC-O adds six individuals to address current and frequent
+                        needs:</html:p>
+                     <html:ul>
+                        <html:li><html:a href="#FindingAid">FindingAid</html:a> and <html:a href="#AuthorityRecord">AuthorityRecord</html:a>, which are instances
+                           of both RiC-O Documentary Form Type and SKOS Concept. They can be used
+                           for categorizing Records, finding aids and authority records being
+                           considered as Records. For example, a Record with Documentary Form Type
+                           ‘Finding Aid’ may be connected to one to many Record Resources using the
+                           'rico:describes’ object property. </html:li>
+                        <html:li><html:a href="#Fonds">Fonds</html:a>, <html:a href="#Series">Series</html:a>, <html:a href="#File">File</html:a>, and <html:a href="#Collection">Collection</html:a> are instances of both Record
+                           Set Type class and skos:Concept. Their definition is taken from the
+                           ISAD(G) glossary. They can be used for categorizing Record
+                           Sets.</html:li>
+                     </html:ul>
+                     <html:p>We expect other categories to be defined by the archival community as
+                        RiC-O matures, forming rich, hopefully multilingual, SKOS vocabularies that
+                        support rich description (for example, allowing an instance of the <html:a href="#rico:DocumentaryFormType">Documentary Form Type class</html:a> to
+                        have a history and temporal relations to other documentary form
+                        types).</html:p>
+                  </html:div>
+               </html:div>
+               <html:div id="RiCO-documentation">
+                  <html:h5>RiC-O documentation and annotation properties</html:h5>
+                  <html:p>Each class or property has an English, a French and a Spanish label
+                     (rdfs:label), and a description (rdfs:comment). Some also have a skos:scopeNote
+                     or a skos:example.</html:p>
+                  <html:p>When a RiC-O class or property corresponds to a RiC-CM component in any
+                     way, its description and scope note are either the same as or derived from
+                     their RiC-CM definition and scope note.</html:p>
+                  <html:p>RiC-O provides two annotation properties (subproperties of rdfs:comment)
+                     for handling:</html:p>
+                  <html:ul>
+                     <html:li>information about the corresponding RiC-CM component when applicable
+                           (<html:a href="#rico:RiCCMCorrespondingComponent">rico:RiCCMCorrespondingComponent</html:a>). Various phrasings are used
+                        in this property depending on the rule applied for defining the RiC-CM
+                        component.</html:li>
+                     <html:li>information about possible mappings with other models or ontologies
+                           (<html:a href="#rico:closeTo">rico:closeTo</html:a>, rarely used in this
+                        1.0.1 version)).</html:li>
+                  </html:ul>
+                  <html:p>Any change in the definition of a class or property made since December
+                     2019 is documented using a skos:changeNote.</html:p>
+               </html:div>
+            </html:div>
+            <html:div id="next-steps">
+               <html:h4>Next steps</html:h4>
+               <html:p>The following is a non exhaustive list of known issues, topics or tasks on
+                  which EGAD has begun to work and will continue to work in the next
+                  months.</html:p>
+               <html:ul>
+                  <html:li>articulate the Event and Activity classes, and the Relation system of
+                     classes</html:li>
+                  <html:li>add suggestions of mappings (in rico:closeTo) and OWL equivalences
+                     between some classes or properties and components in other models (among which
+                     - this is not an exhaustive list- PREMIS, Schema.org, PROV-O, IFLA-LRM and RDA,
+                     CIDOC-CRM), or document how these models can be used together. </html:li>
+               </html:ul>
+            </html:div>
+         </html:div>
+      """^^rdf:XMLLiteral ;
+    schema:name
+        """International Council on Archives Records in Contexts Ontology
+         (ICA RiC-O) version 1.0.1"""@en ,
+        """International Council on Archives Records in Contexts Ontology (ICA
+         RiC-O) version 1.0.1"""@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#AccumulationRelation>
+    schema:description """Connects at least one Record Resource or Instantiation to at least
+         one Agent, when the Record Resource or Instantiation is or was accumulated by the Agent, be
+         it intentionally (collecting it) or not (receiving it in the course of its activities). The
+         Record Resource(s) or Instantiation(s) is the source of the Relation, and the Agent(s) is
+         the target."""@en ;
+    schema:name "Accumulation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Activity>
+    schema:description "The doing of something for some human purpose."@en ;
+    schema:name "Activity"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#ActivityDocumentationRelation>
+    schema:description """Connects at least one Record Resource or Instantiation to at least
+         one Activity, when the Record Resource or Instantiation results from the Activity. The
+         Record Resource(s) or Instantiation(s) is the source of the Relation, and the
+         Activity(-ies) is the target."""@en ;
+    schema:name "Activity Documentation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#ActivityType>
+    schema:description "Categorization of an Activity."@en ;
+    schema:name "Activity Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Agent>
+    schema:description """A Person, or Group, or an entity created by a Person or Group
+         (Mechanism), or a Position, that acts in the world."""@en ;
+    schema:name "Agent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#AgentControlRelation>
+    schema:description """Connects at least one Agent, to at least another Agent, when the
+         first one(s) control(s) or controlled in a way the activities of the second one(s). The
+         Relation is oriented from the controlling agent to the controlled one: the controlling
+         Agent(s) is the source of the Relation, and the controlled Agent(s) is the
+         target."""@en ;
+    schema:name "Agent Control Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#AgentHierarchicalRelation>
+    schema:description """Connects at least one Agent to at least another Agent, when the
+         first one is or was hierarchically superior to the second one. The Relation is oriented
+         towards the 'bottom' of the hierarchical tree: the superior Agent(s) is the source of the
+         Relation, and the inferior Agent(s) is the target."""@en ;
+    schema:name "Agent Hierarchical Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#AgentName>
+    schema:description """A label, title or term designating an Agent in order to make it
+         distinguishable from other similar entities."""@en ;
+    schema:name "Agent Name"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#AgentTemporalRelation>
+    schema:description """Connects at least one Agent to at least another Agent that
+         succeeds it chronologically for, for instance, fullfilling some functions or performing
+         some activities. The Relation is oriented chronologically, from the predecessor to the
+         successor: the predecessor Agent(s) is the source of the Relation, and the successor
+         Agent(s) is the target."""@en ;
+    schema:name "Agent Temporal Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#AgentToAgentRelation>
+    schema:description """Connects at least two Agents. This Relation is a generic, not
+         oriented one."""@en ;
+    schema:name "Agent Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Appellation>
+    schema:description """A concept of any kind that is used for designating an Entity and
+         referring to it."""@en ;
+    schema:name "Appellation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#AppellationRelation>
+    schema:description """Connects an Appellation and at least one Thing that the
+         Appellation designates or designated. The Appellation is the source of the Relation and the
+         Thing(s) is the target."""@en ;
+    schema:name "Appellation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#AuthorityRelation>
+    schema:description """Connects at least one Agent and at least one Thing over which the
+         Agent has or had some authority. The Agent(s) is the source of the relation, and the
+         Thing(s) is the target."""@en ;
+    schema:name "Authority Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#AuthorshipRelation>
+    schema:description """Connects at least one Record to at least one Person, Group or
+         Position that is or was responsible for conceiving and formulating the information
+         contained in the Record. The Record is the source of the Relation and the Person(s),
+         Group(s) or Position(s) is the target. """@en ;
+    schema:name "Authorship Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#CarrierExtent>
+    schema:description """Number of physical units and/or physical dimensions of the carrier
+         of an Instantiation."""@en ;
+    schema:name "Carrier Extent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#CarrierType>
+    schema:description """Categorization of physical material on which information is
+         represented."""@en ;
+    schema:name "Carrier Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#ChildRelation>
+    schema:description """Connects at least one Person to at least another Person, when the
+         first has(ave) child(s) the second one(s). The Relation is oriented from the parent to the
+         child: the parent is the source of the relation, and the child(ren) is the
+         target."""@en ;
+    schema:name "Child Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Concept>
+    schema:description """An idea, unit of thought, abstract cultural object or
+         category"""@en ;
+    schema:name "Concept"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#ContentType>
+    schema:description """The fundamental form of communication in which a Record or Record
+         Part is expressed."""@en ;
+    schema:name "Content Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Coordinates>
+    schema:description """Longitudinal and latitudinal information about a
+         Place."""@en ;
+    schema:name "Coordinates"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#CorporateBody>
+    schema:description """An organized group of persons that act together as an Agent, and
+         that has a recognized legal or social status."""@en ;
+    schema:name "Corporate Body"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#CorporateBodyType>
+    schema:description "Categorization of a Corporate Body."@en ;
+    schema:name "Corporate Body Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#CorrespondenceRelation>
+    schema:description """Connects at least two Persons, when they correspond or
+         corresponded to each other. This Relation is not oriented."""@en ;
+    schema:name "Correspondence Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#CreationRelation>
+    schema:description """Connects at least one Record Resource or Instantiation to at least
+         one Agent, when the Agent is either responsible for all or some of the content of the
+         Record Resource, or is a contributor to the genesis or production of the Instantiation. The
+         Record Resource or Instantiation is the source of the Relation, and the Agent(s) is the
+         target. """@en ;
+    schema:name "Creation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Date>
+    schema:description """Chronological information associated with an entity that
+         contributes to its identification and contextualization."""@en ;
+    schema:name "Date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#DateType>
+    schema:description "Categorization of a Date."@en ;
+    schema:name "Date Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#DemographicGroup>
+    schema:description """Categorization of a Person or Group based on shared
+         characteristics."""@en ;
+    schema:name "Demographic Group"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#DerivationRelation>
+    schema:description """Connects an Instantiation to at least one Instantiation that is
+         derived from it, whether it exists or has been lost or destroyed. The Relation is oriented
+         chronologically, from the first Instantiation in time to the derived Instantiation: the
+         first Instantiation is the source of the Relation, and the derived Instantiation(s) is the
+         target."""@en ;
+    schema:name "Derivation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#DescendanceRelation>
+    schema:description """Connects at least one Person to at least another Person, when the
+         first has/have descendant the second one(s). The Relation is oriented from the ascendant to
+         the descendant: the ascendant Person(s) is the source of the Relation, and the descendant
+         Person(s) is the target."""@en ;
+    schema:name "Descendance Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#DocumentaryFormType>
+    schema:description """Categorization of a Record or Record Part with respect to its
+         extrinsic and intrinsic elements that together communicate its content, administrative and
+         documentary context, and authority."""@en ;
+    schema:name "Documentary Form Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Event>
+    schema:description "Something that happens or occurs in time and space."@en ;
+    schema:name "Event"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#EventRelation>
+    schema:description """Connects at least one Event to at least one Thing, when the first
+         is associated with the existence and lifecycle of the second one. The Event(s) is the
+         source of the Relation, and the Thing(s) is the target."""@en ;
+    schema:name "Event Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#EventType>
+    schema:description "Categorization of an Event."@en ;
+    schema:name "Event Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Extent>
+    schema:description """Countable characteristics of the content of an entity expressed as
+         a quantity."""@en ;
+    schema:name "Extent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#ExtentType>
+    schema:description """Categorization of the extent that is being
+         measured."""@en ;
+    schema:name "Extent Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Family>
+    schema:description """Two or more persons related by birth, or through marriage,
+         adoption, civil union, or other social conventions that bind them together as a socially
+         recognized familial group."""@en ;
+    schema:name "Family"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#FamilyRelation>
+    schema:description """Connects at least two Persons, when they have some family link,
+         i.e. belong to the same family. This Relation is a generic, not oriented
+         one."""@en ;
+    schema:name "Family Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#FamilyType>
+    schema:description "Categorization of a Family."@en ;
+    schema:name "Family Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#FunctionalEquivalenceRelation>
+    schema:description """Connects at least two Instantiations which may be considered as
+         equivalent. This Relation is not oriented."""@en ;
+    schema:name "Functional Equivalence Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Group>
+    schema:description "Two or more Agents that act together as an Agent."@en ;
+    schema:name "Group"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#GroupSubdivisionRelation>
+    schema:description """Connects a Group and at least another Group, when the first one
+         has or had the second one(s) among its subdivisions. The Relation is oriented from the
+         Group to its subdivision(s): the parent Group is the source and the subdivision Group(s) is
+         the target."""@en ;
+    schema:name "Group Subdivision Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Identifier>
+    schema:description """A word, number, letter, symbol, or any combination of these used
+         to uniquely identify or reference an individual instance of an entity within a specific
+         information domain."""@en ;
+    schema:name "Identifier"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#IdentifierType>
+    schema:description "Categorization of an Identifier."@en ;
+    schema:name "Identifier Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Instantiation>
+    schema:description """The inscription of information made by an Agent on a physical
+         carrier in any persistent, recoverable form as a means of communicating information through
+         time and space."""@en ;
+    schema:name "Instantiation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#InstantiationExtent>
+    schema:description """Countable characteristics of an Instantiation expressed as a
+         quantity."""@en ;
+    schema:name "Instantiation Extent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#InstantiationToInstantiationRelation>
+    schema:description """Connects at least two instantiations. This Relation is a generic,
+         not oriented one."""@en ;
+    schema:name "Instantiation to Instantiation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#IntellectualPropertyRightsRelation>
+    schema:description """Connects at least one Agent and one Record Resource or
+         Instantiation on which the Agent has or had some intellectual property rights. The Agent(s)
+         is the source of the Relation and the Record Resource(s) or Instantiation(s) is the
+         target."""@en ;
+    schema:name "Intellectual Property Rights Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#KnowingOfRelation>
+    schema:description """Connects at least one Person to at least another one, when the
+         first one has some knowledge of the second one through time or space. The first Person is
+         the source of the Relation, and the second one is the target."""@en ;
+    schema:name "Knowing Of Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#KnowingRelation>
+    schema:description """Connects at least two Persons who directly know each other during
+         their existence. This Relation is not oriented."""@en ;
+    schema:name "Knowing Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Language>
+    schema:description """A spoken or written human language represented in a Record
+         Resource or used by an Agent."""@en ;
+    schema:name "Language"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#LeadershipRelation>
+    schema:description """Connects at least one Person and at least one Group, when the
+         first one(s) lead(s) or led the second one(s). The Relation is oriented from the leading
+         Person to the Group: the leading Person(s) is the source of the Relation, and the Group(s)
+         is the target."""@en ;
+    schema:name "Leadership Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#LegalStatus>
+    schema:description "A status defined by law."@en ;
+    schema:name "Legal Status"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#ManagementRelation>
+    schema:description """Connects at least one Agent and at least one Record Resource or
+         Instantiation that the Agent manages or managed. The Agent(s) is the source of the
+         Relation, and the Record Resource(s) or Instantiation(s) is the target."""@en ;
+    schema:name "Management Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Mandate>
+    schema:description """Delegation of responsibility or authority by an Agent to another
+         Agent to perform an Activity."""@en ;
+    schema:name "Mandate"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#MandateRelation>
+    schema:description """Connects at least one Mandate and at least one Agent, when the
+         first gives or gave the second one the authority or competencies to act. May also involve
+         one to many Activities that the Mandate(s) assign(s) or assigned to the Agent(s). The
+         Mandate(s) is the source of the Relation and the Agent(s) is the target."""@en ;
+    schema:name "Mandate Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#MandateType>
+    schema:description "Categorization of a Mandate."@en ;
+    schema:name "Mandate Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Mechanism>
+    schema:description """A process or system created by a Person or Group that performs an
+         Activity."""@en ;
+    schema:name "Mechanism"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#MembershipRelation>
+    schema:description """Connects a Group and at least one Person, when the first one has
+         or had the second one(s) among its members. The Relation is oriented from the Group to its
+         members: the Group(s) is the source of the Relation, and the Person(s) is the
+         target."""@en ;
+    schema:name "Membership Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#MigrationRelation>
+    schema:description """Connects an Instantiation and at least another Instantiation it
+         has been migrated into. The Relation is oriented chronologically, from the first
+         Instantiation in time (the migrated one) to the one which results from its migration: the
+         first Instantiation in time is the source of the Relation, and the resulting Instantiation
+         is the target."""@en ;
+    schema:name "Migration Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Name>
+    schema:description """A label, title or term designating an entity in order to make it
+         distinguishable from other similar entities."""@en ;
+    schema:name "Name"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#OccupationType>
+    schema:description """Categorization of a profession, trade, or craft pursued by a
+         Person in fulfilment of an Activity."""@en ;
+    schema:name "Occupation Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#OrganicOrFunctionalProvenanceRelation>
+    schema:description """Connects at least one Record Resource or Instantiation to at least
+         one Agent or Activity, when the Agent or Activity is the provenance of the Record Resource
+         or Instantiation (i.e. when the Agent created, accumulated or maintained the Record
+         Resource or Instantiation, or when the Activity resulted into them). The Record Resource(s)
+         or Instantiation(s) is the source of the Relation, and the Agent(s) or Activity(-ies) is
+         the target."""@en ;
+    schema:name "Organic or functional provenance Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#OrganicProvenanceRelation>
+    schema:description """Connects at least one Record Resource or an Instantiation to at
+         least one Agent that creates or accumulates the Record Resource, receives it, or sends it.
+         The Record Resource(s) or Instantiation(s) is the source of the Relation, and the Agent(s)
+         is the target."""@en ;
+    schema:name "Organic Provenance Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#OwnershipRelation>
+    schema:description """Connects at least one Group, Person or Position and at least a
+         Thing that these Agent(s) own(s) or owned. The Group(s), Person(s) or Position(s) is the
+         source of the Relation, and the Agent(s) is the target."""@en ;
+    schema:name "Ownership Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#PerformanceRelation>
+    schema:description """Connects at least one Activity to at least one Agent that performs
+         or performed the activity. The Activity(-ies) is the source of the Relation and the
+         Agent(s) is the target."""@en ;
+    schema:name "Performance Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Person>
+    schema:description "An individual human being."@en ;
+    schema:name "Person"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#PhysicalLocation>
+    schema:description """A delimitation of the physical territory of a
+         Place."""@en ;
+    schema:name "Physical Location"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Place>
+    schema:description "Bounded, named geographic area or region."@en ;
+    schema:name "Place"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#PlaceName>
+    schema:description """A label, title or term designating a Place in order to make it
+         distinguishable from other similar entities."""@en ;
+    schema:name "Place Name"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#PlaceRelation>
+    schema:description """Connects a Place and at least one Thing when the first is
+         associated with the existence and lifecycle of the second one. The Place is the source of
+         the Relation and the Thing(s) is the target."""@en ;
+    schema:name "Place Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#PlaceType>
+    schema:description "Categorization of a Place."@en ;
+    schema:name "Place Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Position>
+    schema:description "The functional role of a Person within a Group."@en ;
+    schema:name "Position"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#PositionHoldingRelation>
+    schema:description """Connects at least one Person and at least one Position that the
+         Person(s) occupies or occupied. The Person is the source of the Relation and the Position
+         is the target."""@en ;
+    schema:name "Position Holding Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#PositionToGroupRelation>
+    schema:description """Connects at least one Position and a Group in which the
+         position(s) exist(s) or existed, or that is (are) defined by that group's organizational
+         structure. The Position(s) is the source of the Relation and the Group is the
+         target."""@en ;
+    schema:name "Position to Group Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#ProductionTechniqueType>
+    schema:description """The method used in the representation of information on an
+         instantiation."""@en ;
+    schema:name "Production Technique Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Proxy>
+    schema:description """A Proxy represents (stands for) a Record Resource as it exists in
+         a specific Record Set."""@en ;
+    schema:name "Proxy"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Record>
+    schema:description """Discrete information content formed and inscribed, at least once,
+         by any method on any carrier in any persistent, recoverable form by an Agent in the course
+         of life or work activity."""@en ;
+    schema:name "Record"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RecordPart>
+    schema:description """Component of a Record with independent information content that
+         contributes to the intellectual completeness of the Record."""@en ;
+    schema:name "Record Part"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RecordResource>
+    schema:description """Information produced or acquired and retained by an Agent in the
+         course of life or work activity."""@en ;
+    schema:name "Record Resource"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RecordResourceExtent>
+    schema:description """The quantity of information content, as human experienced,
+         contained in a Record Resource."""@en ;
+    schema:name "Record Resource Extent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RecordResourceGeneticRelation>
+    schema:description """Connects two or more record resources when there is a genetic link
+         between them. Genetic in this sense is as defined by diplomatics, i.e., the process by
+         which a record resource is developed. This Relation is a generic, not oriented
+         one."""@en ;
+    schema:name "Record Resource Genetic Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RecordResourceHoldingRelation>
+    schema:description """Connects at least one Agent and one or more Record Resource or
+         Instantiation that the Agent(s) hold(s) or held. The Agent(s) is the source of the Relation
+         and the Record Resource(s) or Instantiation is the target."""@en ;
+    schema:name "Record Resource Holding Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RecordResourceToInstantiationRelation>
+    schema:description """Connects a Record Resource to one or more Instantiations that
+         instantiate it, and which either may exist or may have been lost or destroyed. The Record
+         Resource is the source of the Relation and the Instantiation(s) is the
+         target."""@en ;
+    schema:name "Record Resource to Instantiation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RecordResourceToRecordResourceRelation>
+    schema:description """Connects at least two Record Resources. This Relation is a
+         generic, not oriented one."""@en ;
+    schema:name "Record Resource to Record Resource Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RecordSet>
+    schema:description """One or more records that are grouped together by an Agent based on
+         the records sharing one or more attributes or relations."""@en ;
+    schema:name "Record Set"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RecordSetType>
+    schema:description "A broad categorization of the type of Record Set."@en ;
+    schema:name "Record Set Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RecordState>
+    schema:description """Description of the production or reproduction status of a Record
+         or Record Part."""@en ;
+    schema:name "Record State"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Relation>
+    schema:description """The top level relation class. It connects at least two Things. An
+         instance of a Relation may have some datatype and object properties: a general description
+         (datatype property) like any Thing; a certainty (for 'certain', 'quite probable',
+         'uncertain','unknown'); a date (use either the date datatype property or the Date class and
+         isAssociatedWithDate object property); a state (relationState); a location (use the Place
+         class and isAssociatedWithPlace object property); a source of information that can be used
+         as an evidence for it (use either source datatype property or hasSource object property).
+         This Relation is the most generic one; it is not oriented."""@en ;
+    schema:name "Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RepresentationType>
+    schema:description """Method of recording the content type of an
+         Instantiation"""@en ;
+    schema:name "Representation Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RiCCMCorrespondingComponent>
+    schema:description """When it exists, specifies the identifier and name of RiC-CM
+         component that corresponds to the annotated class or property."""@en ;
+    schema:name "RiC-CM corresponding component"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RoleType>
+    schema:description """The role an Agent plays in some context (usually in some creation
+         relation). Not to be confused with a Position (position of an agent in some group). For
+         example, a Person who is the head of some Corporate Body may play the role of annotator (of
+         a record) in a creation relation."""@en ;
+    schema:name "Role Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Rule>
+    schema:description """Conditions that govern the existence, responsibility, or authority
+         of an Agent; or the performance of an Activity by an Agent; or that contribute to the
+         distinct characteristics of things created or managed by an Agent."""@en ;
+    schema:name "Rule"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RuleRelation>
+    schema:description """Connects at least one Rule to at least one Thing when it is
+         associated with existence and lifecycle of the Thing. The Rule(s) is the source of the
+         Relation, and the Thing(s) is the target."""@en ;
+    schema:name "Rule Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#RuleType>
+    schema:description "Categorization of a Rule."@en ;
+    schema:name "Rule Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#SequentialRelation>
+    schema:description """Connects at least one Thing to at least one other Thing that
+         follows or followed it in some sequence. The Relation is oriented from the first Thing(s)
+         in the sequence to the following one(s): the first Thing(s) is the source, and the
+         following Thing(s) is the target."""@en ;
+    schema:name "Sequential Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#SiblingRelation>
+    schema:description """Connects at least two Persons, when they are siblings. This
+         Relation is not oriented."""@en ;
+    schema:name "Sibling Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#SpouseRelation>
+    schema:description """Connects at least two Persons, when they are spouses. This
+         Relation is not oriented."""@en ;
+    schema:name "Spouse Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#TeachingRelation>
+    schema:description """Connects at least one Person to at least another Person who is or
+         was their student. The Relation is oriented from the teacher(s) to the student(s): the
+         teacher Person(s) is the source of the Relation, and the student Person(s) is the
+         target."""@en ;
+    schema:name "Teaching Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#TemporalRelation>
+    schema:description """Connects at least one Thing to at least one other Thing that
+         follows it in chronological order. The Relation is oriented chronologically: the preceding
+         Thing(s) is the source of the Relation, the following Thing(s) is the
+         target."""@en ;
+    schema:name "Temporal Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Thing>
+    schema:description """Any idea, material thing, or event within the realm of human
+         experience."""@en ;
+    schema:name "Thing"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Title>
+    schema:description "A name that is used for a Record Resource or a Rule"@en ;
+    schema:name "Title"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#Type>
+    schema:description """A superclass for any category of some thing. A type characterizes
+         an entity."""@en ;
+    schema:name "Type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#TypeRelation>
+    schema:description """Connects a category (a Type) and at least one Thing that belongs
+         to this category. The Type(s) is the source of the Relation, and the Thing(s) is the
+         target."""@en ;
+    schema:name "Type Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#UnitOfMeasurement>
+    schema:description """A definite magnitude of a quantity, defined and adopted by
+         convention or by law, that is used as a standard for measurement of the same kind of
+         quantity. Can be spacial units (cm, m), weight (g, kg), time (s, h), storage (MB, TB) or
+         more informal units used in the archival context like number of boxes, pages or
+         words."""@en ;
+    schema:name "Unit Of Measurement"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#WholePartRelation>
+    schema:description """Connects a Thing to at least one other Thing that is or was a
+         portion or division of the whole Thing. The Relation is oriented from the Thing to its
+         part(s): the Thing is the source of the Relation, and the part Thing(s) is the
+         target."""@en ;
+    schema:name "Whole Part Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#WorkRelation>
+    schema:description """Connects at least two Agents that have or had some type of work
+         relation in the course of their activities. This Relation is not oriented."""@en ;
+    schema:name "Work Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#accruals>
+    schema:description """Information on the anticipated accession(s) to the Record
+         Set."""@en ;
+    schema:name "accruals"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#accrualsStatus>
+    schema:description "Information on the status of possible accruals"@en ;
+    schema:name "accruals status"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#accumulationRelation_role>
+    schema:description """Connects a AccumulationRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Accumulation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#activityDocumentationRelation_role>
+    schema:description """Connects a ActivityDocumentationRelation to itself. It is a
+         reflexive property, that can stand for an instance of the class when necessary, e.g. when
+         you explore a knowledge graph."""@en ;
+    schema:name "has the role of the Activity Documentation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#activityIsContextOfRelation>
+    schema:description """Connects an Activity to an Agent Temporal Relation (when the
+         Activity is transferred from an Agent to another one) or a Mandate Relation (the Mandate
+         assigns the Activity to the Agent or defines it)."""@en ;
+    schema:name "activity is context of relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#affectsOrAffected>
+    schema:description """Connects an Event to a Thing on which the Event has or had some
+         significant impact."""@en ;
+    schema:name "affects or affected"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#agentControlRelation_role>
+    schema:description """Connects a AgentControlRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Agent Control Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#agentHasOrHadLocation>
+    schema:description """Inverse of 'is or was location of agent' object
+         property."""@en ;
+    schema:name "agent has or had location"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#agentHierarchicalRelation_role>
+    schema:description """Connects a AgentHierarchicalRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Agent Hierarchical Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#agentTemporalRelation_role>
+    schema:description """Connects a AgentTemporalRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Agent Temporal Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#agentToAgentRelation_role>
+    schema:description """Connects a AgentToAgentRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Agent Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#altimetricSystem>
+    schema:description "Reference system used for altitude"@en ;
+    schema:name "altimetric system"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#altitude>
+    schema:description """The height of a Place above a reference level, especially above
+         sea level."""@en ;
+    schema:name "altitude"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#appellationRelation_role>
+    schema:description """Connects a AppellationRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Appellation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#asConcernsActivity>
+    schema:description """Connects an Agent Temporal Relation or Mandate Relation, to an
+         Activity that is, either transferred from an Agent to another one, or assigned by a Mandate
+         to an Agent."""@en ;
+    schema:name "as concerns activity"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#authenticityNote>
+    schema:description """Description of the evidence that a Record Resource or
+         Instantiation is what it purports to be, was created or sent by the said Agent at the said
+         time, and has not been tampered with, corrupted, or forged. """@en ;
+    schema:name "authenticity note"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#authorityRelation_role>
+    schema:description """Connects a AuthorityRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Authority Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#authorizedBy>
+    schema:description "Inverse of 'authorizes' object property"@en ;
+    schema:name "authorized by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#authorizes>
+    schema:description """Connects a Mandate to the Agent that the Mandate gives the
+         authority or competencies to act."""@en ;
+    schema:name "authorizes"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#authorizingAgent>
+    schema:description """Connects a Mandate Relation to an Agent that assigns the
+         Mandate."""@en ;
+    schema:name "authorizing agent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#authorizingMandate>
+    schema:description """Information on a Mandate that authorizes an Agent to perform an
+         Activity."""@en ;
+    schema:name "authorizing mandate"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#authorshipRelation_role>
+    schema:description """Connects a AuthorshipRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Authorship Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#beginningDate>
+    schema:description "Date at which something began."@en ;
+    schema:name "beginning date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#birthDate>
+    schema:description "Date at which a Person was born."@en ;
+    schema:name "birth date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#carrierExtent>
+    schema:description """Number of physical units and/or physical dimensions of the carrier
+         of an Instantiation. In order to manage an Instantiation of a record resource it is
+         necessary to note the extent of the carrier as well as that of the Instantiation itself.
+         Whether it is necessary to note dimensions, the number of relevant units, or both, depends
+         on the nature of the carrier and particular business needs."""@en ;
+    schema:name "carrier extent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#childRelation_role>
+    schema:description """Connects a ChildRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Child Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#classification>
+    schema:description """A term, number or alphanumeric string that is usually taken from
+         an external classification vocabulary or scheme that qualifies a Record Resource. """@en ;
+    schema:name "classification"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#closeTo>
+    schema:description """An annotation property for recording a possible mapping to a
+         component in another model or ontology"""@en ;
+    schema:name "close to"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#conditionsOfAccess>
+    schema:description """Terms and circumstances affecting the availability of a Record
+         Resource or an Instantiation for consultation."""@en ;
+    schema:name "conditions of access"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#conditionsOfUse>
+    schema:description """Terms and circumstances affecting the use of a Record Resource or
+         an Instantiation after access has been provided. Includes conditions governing reproduction
+         of the Record Resource under applicable copyright (intellectual property) and/or property
+         legislation or due to conservation status."""@en ;
+    schema:name "conditions of use"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#contained>
+    schema:description """Connects a Place to a Place that it contained in the
+         past."""@en ;
+    schema:name "contained"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#containsOrContained>
+    schema:description """Connects a Place to a region that is or was within
+         it."""@en ;
+    schema:name "contains or contained"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#containsTransitive>
+    schema:description """Connects a Place to a Place that it contains, directly or indirectly. This is a
+         transitive relation.""" ;
+    schema:name "contains transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#correspondenceRelation_role>
+    schema:description """Connects a CorrespondenceRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Correspondence Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#creationDate>
+    schema:description "Date at which an entity was created."@en ;
+    schema:name "creation date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#creationRelation_role>
+    schema:description """Connects a CreationRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Creation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#creationWithRole>
+    schema:description """Connects a Creation Relation to the Role Type that the creator
+         Agent(s) has in the creation process"""@en ;
+    schema:name "creation with role"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#date>
+    schema:description """Chronological information associated with an entity that
+         contributes to its identification and contextualization."""@en ;
+    schema:name "date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#dateQualifier>
+    schema:description """A human readable qualification of a Date to indicate the level of
+         precision or certainty."""@en ;
+    schema:name "date qualifier"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#deathDate>
+    schema:description "Date at which a Person died."@en ;
+    schema:name "death date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#derivationRelation_role>
+    schema:description """Connects a DerivationRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Derivation Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#descendanceRelation_role>
+    schema:description """Connects a DescendanceRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Descendance Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#describesOrDescribed>
+    schema:description """Connects a Record Resource to a Thing that it describes or
+         described."""@en ;
+    schema:name "describes or described"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#destructionDate>
+    schema:description "Date at which an entity was deleted."@en ;
+    schema:name "destruction date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#directlyContains>
+    schema:description "Connects a Place to another Place that it directly contains." ;
+    schema:name "contains directly"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#directlyFollowsInSequence>
+    schema:description """Connects a Thing to a Thing that it follows directly in some non
+         chronological sequence."""@en ;
+    schema:name "directly follows in sequence"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#directlyIncludes>
+    schema:description """Connects a Record Set to a Record or Record Set which it includes
+         directly."""@en ;
+    schema:name "directly includes"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#directlyPrecedesInSequence>
+    schema:description """Connects a Thing to a Thing that it precedes directly in some non
+         chronological sequence."""@en ;
+    schema:name "directly precedes in sequence"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#documentedBy>
+    schema:description "Inverse of 'documents' object property."@en ;
+    schema:name "documented by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#documents>
+    schema:description """Connects a Record Resource or an Instantiation to the Activity
+         that generates the Record Resource or Instantiation."""@en ;
+    schema:name "documents"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#endDate>
+    schema:description "Date at which something ended."@en ;
+    schema:name "end date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#eventRelation_role>
+    schema:description """Connects a EventRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Event Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#evidences>
+    schema:description """Connects a Record Resource to a Relation, when the first is used
+         for proving the existence of the second one, or for describing it."""@en ;
+    schema:name "evidences"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#existsOrExistedIn>
+    schema:description """Connects a Position to a Group in which that Position exists or
+         existed, or that is defined by that Group's organizational structure."""@en ;
+    schema:name "exists or existed in"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#expressedDate>
+    schema:description """Natural language expression of a date. This property is a
+         specialization of the name property. In order that the precise meaning of the date can be
+         understood, information such as the calendar used or other specific context should be
+         included."""@en ;
+    schema:name "expressed date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#expressesOrExpressed>
+    schema:description """Inverse of 'is or was expressed by' object
+         property."""@en ;
+    schema:name "expresses or expressed"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#familyRelation_role>
+    schema:description """Connects a FamilyRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Family Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#followedInSequence>
+    schema:description """Connects a Thing to a Thing that it followed in some non
+         chronological sequence in the past."""@en ;
+    schema:name "followed in sequence"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#followsInSequenceTransitive>
+    schema:description """Connects a Thing to a Thing that it directly or indirectly follows
+         in some non chronological sequence."""@en ;
+    schema:name "follows in sequence transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#followsInTime>
+    schema:description """Inverse of 'precedes in time' object property. This is a
+         transitive relation."""@en ;
+    schema:name "follows in time"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#followsOrFollowed>
+    schema:description "Inverse of 'precedesOrPreceded' object property."@en ;
+    schema:name "follows or followed"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#functionalEquivalenceRelation_role>
+    schema:description """Connects a FunctionalEquivalenceRelation to itself. It is a
+         reflexive property, that can stand for an instance of the class when necessary, e.g. when
+         you explore a knowledge graph."""@en ;
+    schema:name "has the role of the Functional Equivalence Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#generalDescription>
+    schema:description """General information about an entity. General description may be
+         used to describe any entity. There are different appropriate uses for general description.
+         First, while it is recommended that more specific properties be used in describing an
+         entity, it may be desirable, for economic or other reasons, to describe two or more
+         specific properties together. Second, general description may be used to describe one or
+         more characteristics that are not otherwise accommodated in RiC-O. Third, it may be used to
+         provide a succinct summary or abstract description in addition to more detailed specific
+         description."""@en ;
+    schema:name "general description"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#geodesicSystem>
+    schema:description "Reference system used for geographical coordinates."@en ;
+    schema:name "geodesic system"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#geographicalCoordinates>
+    schema:description "Longitudinal and latitudinal information about a Place. "@en ;
+    schema:name "geographical coordinates"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#groupSubdivisionRelation_role>
+    schema:description """Connects a GroupSubdivisionRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Group Subdivision Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hadComponent>
+    schema:description """Connects an Instantiation to another Instantiation that was its
+         component in the past."""@en ;
+    schema:name "had component"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hadConstituent>
+    schema:description """Connects a Record or Record Part to another Record or Record Part
+         that was its constituent in the past."""@en ;
+    schema:name "had constituent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hadPart>
+    schema:description """Connects a Thing to a Thing that was a constitutive or component
+         part of that Thing in the past."""@en ;
+    schema:name "had part"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hadSubdivision>
+    schema:description "Connects a Group to one of its past subdivisions."@en ;
+    schema:name "had subdivision"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hadSubevent>
+    schema:description """Connects a past Event to one of a series of past Events that
+         constituted that original, broader, past Event."""@en ;
+    schema:name "had subevent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hadSubordinate>
+    schema:description """Connects an Agent to an Agent that was hierarchically inferior in
+         the past."""@en ;
+    schema:name "had subordinate"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasAccumulator>
+    schema:description """Connects a Record Resource or an Instantiation to the Agent that
+         accumulates it, be it intentionally (collecting) or not (receiving in the course of its
+         activities)."""@en ;
+    schema:name "has accumulator"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasActivityType>
+    schema:description """Connects an Activity to an Activity Type that categorizes
+         it."""@en ;
+    schema:name "has activity type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasAddressee>
+    schema:description """Connects a Record Resource or an Instantiation to the Agent that
+         it is addressed to."""@en ;
+    schema:name "has addressee"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasAncestor>
+    schema:description """Inverse of 'has descendant' object property. This is a transitive
+         relation."""@en ;
+    schema:name "has ancestor"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasAuthor>
+    schema:description """Connects a Record to the Group, Person or Position that is
+         responsible for conceiving and formulating the information contained in the
+         Record."""@en ;
+    schema:name "has author"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasBeginningDate>
+    schema:description "Inverse of 'is beginning date of' object property"@en ;
+    schema:name "has beginning date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasBirthDate>
+    schema:description "Inverse of 'is birth date of' object property"@en ;
+    schema:name "has birth date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasBirthPlace>
+    schema:description "Inverse of 'is birth place of' object property"@en ;
+    schema:name "has birth place"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasCarrierType>
+    schema:description """Connects an Instantiation to a Carrier Type which categorizes its
+         carrier."""@en ;
+    schema:name "has carrier type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasChild>
+    schema:description "Connects a Person to one of their children."@en ;
+    schema:name "has child"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasCollector>
+    schema:description """Connects a Record Resource or an Instantiation to the Agent that
+         collects it intentionally, i.e., the Agent is a collector."""@en ;
+    schema:name "has collector"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasComponentTransitive>
+    schema:description """Connects an Instantiation to another Instantiation that is,
+         directly or indirectly, a component of that Instantiation. This is a transitive
+         relation."""@en ;
+    schema:name "has component transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasConstituentTransitive>
+    schema:description """Connects a Record or Record Part to another Record or Record Part
+         that is its constituent, directly or indirectly. This is a transitive
+         relation."""@en ;
+    schema:name "has constituent transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasContentOfType>
+    schema:description """Connects a Record or a Record Part to a Content Type which
+         categorizes its content."""@en ;
+    schema:name "has content of type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasCopy>
+    schema:description """Connects a Record Resource to a copy of that Record
+         Resource."""@en ;
+    schema:name "has copy"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasCreationDate>
+    schema:description "Inverse of 'is creation date of' object property"@en ;
+    schema:name "has creation date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasCreator>
+    schema:description """Connects a Record Resource or an Instantiation to an Agent that is
+         either responsible for all or some of the content of the Record Resource or is a
+         contributor to the genesis or production of an Instantiation."""@en ;
+    schema:name "has creator"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDateType>
+    schema:description "Connects a Date to its Date Type."@en ;
+    schema:name "has date type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDeathDate>
+    schema:description "Inverse of 'is death date of' object property"@en ;
+    schema:name "has death date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDeathPlace>
+    schema:description "Inverse of 'is death place of' object property"@en ;
+    schema:name "has death place"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDescendant>
+    schema:description """Connects a Person to one of their descendants. This is a
+         transitive relation."""@en ;
+    schema:name "has descendant"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDestructionDate>
+    schema:description """Inverse of 'is destruction date of' object
+         property."""@en ;
+    schema:name "has destruction date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDirectComponent>
+    schema:description """Connects an Instantiation to another Instantiation that is its
+         direct component."""@en ;
+    schema:name "has direct component"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDirectConstituent>
+    schema:description """Connects a Record to another Record or Record Part that is its
+         direct constituent."""@en ;
+    schema:name "has direct constituent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDirectPart>
+    schema:description """Connects a Thing to a Thing that is a direct constitutive or
+         component part of that Thing."""@en ;
+    schema:name "has direct part"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDirectSubdivision>
+    schema:description "Connects a Group to one of its direct subdivisions."@en ;
+    schema:name "has direct subdivision"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDirectSubevent>
+    schema:description """Connects an ongoing Event to one of a series of Events that
+         directly constitute that broader, ongoing Event."""@en ;
+    schema:name "has direct subevent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDirectSubordinate>
+    schema:description """Connects an Agent to an Agent that is its direct
+         subordinate."""@en ;
+    schema:name "has direct subordinate"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDocumentaryFormType>
+    schema:description """Connects a Record or Record Part to its Documentary Form
+         Type."""@en ;
+    schema:name "has documentary form type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasDraft>
+    schema:description "Inverse of 'is draft of' object property."@en ;
+    schema:name "has draft"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasEndDate>
+    schema:description "Inverse of 'is end date of' object property."@en ;
+    schema:name "has end date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasEventType>
+    schema:description """Connects an Event to an Event Type which categorizes
+         it."""@en ;
+    schema:name "has event type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasExtent>
+    schema:description """Connects a Record Resource or Instantiation to an
+         Extent"""@en ;
+    schema:name "has extent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasExtentType>
+    schema:description """Connects an Extent to an Extent Type that categorizes what is
+         being measured."""@en ;
+    schema:name "has extent type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasFamilyAssociationWith>
+    schema:description """Connects two Persons that have some type of family link, i.e.
+         belong to the same family. This relation is symmetric."""@en ;
+    schema:name "has family association with"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasFamilyType>
+    schema:description """Connects a Family to a Family Type that categorizes
+         it."""@en ;
+    schema:name "has family type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasGeneticLinkToRecordResource>
+    schema:description """Connects two Record Resources when there is a genetic link between
+         them. Genetic in this sense is as defined by diplomatics, i.e. the process by which a
+         Record Resource is developed. This relation is symmetric."""@en ;
+    schema:name "has genetic link to record resource"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasIdentifierType>
+    schema:description """Connects an Identifier and an Identifier Type that categorizes
+         it."""@en ;
+    schema:name "has identifier type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasModificationDate>
+    schema:description """Inverse of 'is modification date of' object
+         property."""@en ;
+    schema:name "has modification date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAgentName>
+    schema:description """Connects an Agent and (one of) its present or past Agent
+         Name."""@en ;
+    schema:name "has or had agent name"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAllMembersWithCategory>
+    schema:description """Connects a Record Set and a Category (Type) to which all the
+         Records or Record Parts that are or were included in the Record Set belong."""@en ;
+    schema:name "has or had all members with category"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAllMembersWithContentType>
+    schema:description """Connects a Record Set and a Content Type that categorizes all the
+         Records or Record Parts that are or were included in the Record Set."""@en ;
+    schema:name "has or had all members with content type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAllMembersWithCreationDate>
+    schema:description """Inverse of 'is or was creation date of all members of' object
+         property"""@en ;
+    schema:name "has or had all members with creation date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAllMembersWithDocumentaryFormType>
+    schema:description """Connects a Record Set and a Documentary Form Type that categorizes
+         all the Records or Record Parts that are or were included in the Record Set."""@en ;
+    schema:name "has or had all members with documentary form type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAllMembersWithLanguage>
+    schema:description """Connects a Record Set and a Language used by all the Records or
+         Record Parts that are or were included in the Record Set."""@en ;
+    schema:name "has or had all members with language"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAllMembersWithLegalStatus>
+    schema:description """Connects a Record Set and a Legal Status that categorizes all the
+         Records or Record Parts that are or were included in the Record Set."""@en ;
+    schema:name "has or had all members with legal status"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAllMembersWithRecordState>
+    schema:description """Connects a Record Set and a Record State that categorizes all the
+         Records or Record Parts that are or were included in the Record Set."""@en ;
+    schema:name "has or had all members with record state"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAnalogueInstantiation>
+    schema:description """Connects a record resource to one of its analogue instantiations,
+         whether it exists or has been lost or destroyed."""@en ;
+    schema:name "has or had analogue instantiation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAppellation>
+    schema:description """Connects a Thing to an Appellation that is or was used for
+         designating it."""@en ;
+    schema:name "has or had appellation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadAuthorityOver>
+    schema:description """Connects an Agent to a Thing over which the Agent has or had some
+         kind of authority."""@en ;
+    schema:name "has or had authority over"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadCategory>
+    schema:description """Connects a Thing to a Type that categorizes or categorized
+         it."""@en ;
+    schema:name "has or had category"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadComponent>
+    schema:description """Connects an Instantiation to one of its present or past component
+         instantiations."""@en ;
+    schema:name "has or had component"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadConstituent>
+    schema:description """Connects a Record or Record Part to a Record or Record part that
+         is or was a constituent of that Record or Record Part."""@en ;
+    schema:name "has or had constituent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadController>
+    schema:description """Inverse of 'is or was controller of' object
+         property."""@en ;
+    schema:name "has or had controller"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadCoordinates>
+    schema:description """Connects a Physical Location to its past or present coordinates in
+         a reference system."""@en ;
+    schema:name "has or had coordinates"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadCorporateBodyType>
+    schema:description """Connects a Corporate Body to a Corporate Body Type which
+         categorizes or categorized it."""@en ;
+    schema:name "has or had corporate body type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadCorrespondent>
+    schema:description """Connects two Persons that correspond or have corresponded with
+         each other. This relation is symmetric."""@en ;
+    schema:name "has or had correspondent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadDemographicGroup>
+    schema:description """Connects a Person or a Group to a Demographic Group to which it
+         belongs or belonged."""@en ;
+    schema:name "has or had demographic group"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadDerivedInstantiation>
+    schema:description """Connects an instantiation to an instantiation that is derived from
+         it, whether it exists or has been lost or destroyed."""@en ;
+    schema:name "has or had derived instantiation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadDigitalInstantiation>
+    schema:description """Connects a record resource to one of its digital instantiations,
+         whether it exists or has been lost or destroyed."""@en ;
+    schema:name "has or had digital instantiation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadEmployer>
+    schema:description "Inverse of 'is or was employer of' object property."@en ;
+    schema:name "has or had employer"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadHolder>
+    schema:description "Inverse of 'is or was holder of' object property."@en ;
+    schema:name "has or had holder"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadIdentifier>
+    schema:description """Connects a Thing to one of its past or present
+         Identifiers."""@en ;
+    schema:name "has or had identifier"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadInstantiation>
+    schema:description """Connects a Record Resource to an Instantiation, which either may
+         exist or may have been lost or destroyed."""@en ;
+    schema:name "has or had instantiation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadIntellectualPropertyRightsHolder>
+    schema:description """Inverse of 'is or was holder of intellectual property rights of'
+         object property."""@en ;
+    schema:name "has or had intellectual property rights holder"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadJurisdiction>
+    schema:description """Inverse of 'is or was jurisdiction of' object
+         property."""@en ;
+    schema:name "has or had jurisdiction"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadLanguage>
+    schema:description """Connects an Agent, Record or Record Part to a Language that uses
+         or used it."""@en ;
+    schema:name "has or had language"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadLeader>
+    schema:description "Inverse of 'is or was leader of' object property."@en ;
+    schema:name "has or had leader"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadLegalStatus>
+    schema:description """Connects an Agent or Record Resource to a Legal Status which
+         categorized or categorizes it."""@en ;
+    schema:name "has or had legal status"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadLocation>
+    schema:description "Inverse of 'is or was location of' object property."@en ;
+    schema:name "has or had location"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadMainSubject>
+    schema:description """Connects a Record Resource to a Thing that is or was its main
+         subject."""@en ;
+    schema:name "has or had main subject"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadManager>
+    schema:description "Inverse of 'is or was manager of' object property."@en ;
+    schema:name "has or had manager"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadMandateType>
+    schema:description """Connects a Mandate to a Mandate Type that categorized or
+         categorizes it."""@en ;
+    schema:name "has or had mandate type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadMember>
+    schema:description """Connects a Group to a Person that is or was a member of that
+         Group."""@en ;
+    schema:name "has or had member"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadMostMembersWithCreationDate>
+    schema:description """Inverse of 'is or was creation date of most members of' object
+         property"""@en ;
+    schema:name "has or had most members with creation date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadName>
+    schema:description """Connects a Thing to one of its past or present
+         Names."""@en ;
+    schema:name "has or had name"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadOccupationOfType>
+    schema:description """Connects a Person to an Occupation Type that categorized or
+         categorizes his/her occupation (profession, trade or craft)."""@en ;
+    schema:name "has or had occupation of type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadOwner>
+    schema:description "Inverse of 'is or was owner of' object property."@en ;
+    schema:name "has or had owner"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadPart>
+    schema:description """Connects a Thing to a constitutive or component part of that
+         Thing."""@en ;
+    schema:name "has or had part"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadParticipant>
+    schema:description """Connects an Event to a Thing that is or was actively or passively
+         involved in it."""@en ;
+    schema:name "has or had participant"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadPhysicalLocation>
+    schema:description """Connects a Place to one of its past or present Physical
+         Location."""@en ;
+    schema:name "has or had physical location"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadPlaceName>
+    schema:description """Connects a Place to one of its past or present
+         names."""@en ;
+    schema:name "has or had place name"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadPlaceType>
+    schema:description """Connects a Place to a Place Type that categorized or categorizes
+         it."""@en ;
+    schema:name "has or had place type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadPosition>
+    schema:description "Inverse of 'exists or existed in' object property."@en ;
+    schema:name "has or had position"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadRuleType>
+    schema:description """Connects a Rule to a Rule Type that categorized or categorizes
+         it."""@en ;
+    schema:name "has or had rule type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSomeMembersWithCategory>
+    schema:description """Connects a Record Set and a Category (Type) to which some of the
+         Records or Record Parts that are or were included in the Record Set belong."""@en ;
+    schema:name "has or had some members with category"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSomeMembersWithContentType>
+    schema:description """Connects a Record Set and a Content Type that categorizes some of
+         the Records or Record Parts that are or were included in the Record Set."""@en ;
+    schema:name "has or had some members with content type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSomeMembersWithCreationDate>
+    schema:description """Inverse of 'is or was creation date of some members of' object
+         property"""@en ;
+    schema:name "has or had some members with creation date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSomeMembersWithDocumentaryFormType>
+    schema:description """Connects a Record Set and a Documentary Form Type that categorizes
+         some of the Records or Record Parts that are or were included in the Record
+         Set."""@en ;
+    schema:name "has or had some members with documentary form type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSomeMembersWithLanguage>
+    schema:description """Connects a Record Set and a Language used by some of the Records
+         or Record Parts that are or were included in the Record Set."""@en ;
+    schema:name "has or had some members with language"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSomeMembersWithLegalStatus>
+    schema:description """Connects a Record Set and a Legal Status that categorizes some of
+         the Records or Record Parts that are or were included in the Record Set."""@en ;
+    schema:name "has or had some members with legal status"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSomeMembersWithRecordState>
+    schema:description """Connects a Record Set and a Record State that categorizes some of
+         the Records or Record Parts that are or were included in the Record Set."""@en ;
+    schema:name "has or had some members with record state"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSpouse>
+    schema:description """Connects two Persons who are or were married. This relation is
+         symmetric."""@en ;
+    schema:name "has or had spouse"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadStudent>
+    schema:description "Inverse of 'has or had teacher' object property."@en ;
+    schema:name "has or had student"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSubdivision>
+    schema:description """Connects a Group to one of its present or past
+         subdivisions."""@en ;
+    schema:name "has or had subdivision"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSubevent>
+    schema:description """Connects an Event to one of a series of Events that constitute the
+         original, broader, past or ongoing Event."""@en ;
+    schema:name "has or had subevent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSubject>
+    schema:description """Connects a Record Resource to a Thing that is or was its
+         subject."""@en ;
+    schema:name "has or had subject"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadSubordinate>
+    schema:description """Connects an Agent to an Agent that is hierarchically
+         inferior."""@en ;
+    schema:name "has or had subordinate"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadTeacher>
+    schema:description """Connects a Person to another Person who is or was their
+         teacher."""@en ;
+    schema:name "has or had teacher"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadTitle>
+    schema:description """Connects a Record Resource, Instantiation or Rule to a title that
+         is or was used for designating it."""@en ;
+    schema:name "has or had title"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrHadWorkRelationWith>
+    schema:description """Connects two Agents that have or had some type of work relation in
+         the course of their activities. This relation is symmetric."""@en ;
+    schema:name "has or had work relation with"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrganicOrFunctionalProvenance>
+    schema:description """Connects a Record Resource or an Instantiation to an Agent that
+         creates or accumulates it, receives it, or sends it, or to an Activity that generates
+         it."""@en ;
+    schema:name "has organic or functional provenance"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOrganicProvenance>
+    schema:description """Connects a Record Resource or an Instantiation to an Agent that
+         creates or accumulates the Record Resource, receives it, or sends it."""@en ;
+    schema:name "has organic provenance"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasOriginal>
+    schema:description "Inverse of 'is original of' object property."@en ;
+    schema:name "has original"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasPartTransitive>
+    schema:description """Connects a Thing to a Thing that is, directly or indirectly, a
+         constitutive or component part of that Thing. This is a transitive relation."""@en ;
+    schema:name "has part transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasProductionTechniqueType>
+    schema:description """Connects an Instantiation to a Production Technique Type that
+         categorizes its production technique."""@en ;
+    schema:name "has production technique type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasPublicationDate>
+    schema:description "Inverse of 'is publication date of' object property"@en ;
+    schema:name "has publication date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasPublisher>
+    schema:description """Connects a Record resource to an Agent who published
+         it."""@en ;
+    schema:name "has publisher"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasReceiver>
+    schema:description """Connects a Record Resource or an Instantiation to the Agent that
+         receives it in the course of the Agent's activities."""@en ;
+    schema:name "has receiver"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasRecordSetType>
+    schema:description """Connects a Record Set to a Record Set Type that categorizes
+         it."""@en ;
+    schema:name "has record set type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasRecordState>
+    schema:description """Connects a Record or Record Part to a Record State that
+         categorizes its state."""@en ;
+    schema:name "has record state"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasReply>
+    schema:description """Connects a Record Resource to a reply, usually in the form of
+         correspondence."""@en ;
+    schema:name "has reply"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasRepresentationType>
+    schema:description """Connects an Instantiation to a Representation Type that
+         categorizes its representation type."""@en ;
+    schema:name "has representation type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasSender>
+    schema:description """Connects a Record Resource or an Instantiation to the Agent that
+         sends it"""@en ;
+    schema:name "has sender"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasSibling>
+    schema:description """Connects two Persons who are siblings. This relation is
+         symmetric."""@en ;
+    schema:name "has sibling"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasSubdivisionTransitive>
+    schema:description """Connects a Group to another Group that is one of its direct or
+         indirect subdivisions. This is a transitive relation."""@en ;
+    schema:name "has subdivision transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasSubeventTransitive>
+    schema:description """Connects an ongoing Event to one of a series of Events that
+         directly or indirectly constitute that broader, ongoing Event. This is a transitive
+         relation."""@en ;
+    schema:name "has subevent transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasSubordinateTransitive>
+    schema:description """Connects an Agent to an Agent that is directly or indirectly
+         hierarchically inferior. This is a transitive relation."""@en ;
+    schema:name "has subordinate transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasSuccessor>
+    schema:description """Connects an Agent to another Agent that succeeds it
+         chronologically."""@en ;
+    schema:name "has successor"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasUnitOfMeasurement>
+    schema:description "Connects an Extent to a Unit Of Measurement"@en ;
+    schema:name "has unit of measurement"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#hasWithin>
+    schema:description "Inverse of 'is within' object property"@en ;
+    schema:name "has within"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#height>
+    schema:description "Vertical dimension of an entity."@en ;
+    schema:name "height"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#history>
+    schema:description """Summary of the development of an entity throughout its
+         existence."""@en ;
+    schema:name "history"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#identifier>
+    schema:description """A word, number, letter, symbol, or any combination of these used
+         to uniquely identify or reference an individual instance of an entity within a specific
+         information domain. Can include Global Persistent Identifiers (globally unique and
+         persistently resolvable identifier for the entity) and/or Local Identifiers. Both the
+         domain within which the identifier is unique, and the rules used in forming the identifier
+         value should be provided with the identifier value."""@en ;
+    schema:name "identifier"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#included>
+    schema:description """Connects a Record Set to a Record or Record Set which it included
+         in the past."""@en ;
+    schema:name "included"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#includesOrIncluded>
+    schema:description """Connects a Record Set to a Record or Record Set it aggregates, or
+         aggregated in the past."""@en ;
+    schema:name "includes or included"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#includesTransitive>
+    schema:description """Connects a Record Set to a Record or Record Set which it includes
+         directly or indirectly. This is a transitive relation."""@en ;
+    schema:name "includes transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#instantiationExtent>
+    schema:description """Countable characteristics of an Instantiation expressed as a
+         quantity."""@en ;
+    schema:name "Instantiation extent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#instantiationStructure>
+    schema:description """Information about the physical arrangement and composition of an
+         Instantiation."""@en ;
+    schema:name "Instantiation structure"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#instantiationToInstantiationRelation_role>
+    schema:description """Connects a InstantiationToInstantiationRelation to itself. It is a
+         reflexive property, that can stand for an instance of the class when necessary, e.g. when
+         you explore a knowledge graph."""@en ;
+    schema:name """has the role of the Instantiation to Instantiation
+         Relation"""@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#integrityNote>
+    schema:description """Information about the known intellectual completeness of a Record
+         Resource."""@en ;
+    schema:name "integrity note"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#intellectualPropertyRightsRelation_role>
+    schema:description """Connects a IntellectualPropertyRightsRelation to itself. It is a
+         reflexive property, that can stand for an instance of the class when necessary, e.g. when
+         you explore a knowledge graph."""@en ;
+    schema:name """has the role of the Intellectual Property Rights
+         Relation"""@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#intersects>
+    schema:description """Connects two Dates that overlap. This relation is
+         symmetric."""@en ;
+    schema:name "intersects"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isAccumulatorOf>
+    schema:description "Inverse of 'has accumulator' object property."@en ;
+    schema:name "is accumulator of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isActivityTypeOf>
+    schema:description """Connects an Activity Type to an Activity that it
+         categorizes."""@en ;
+    schema:name "is activity type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isAddresseeOf>
+    schema:description "Inverse of 'has addressee' object property."@en ;
+    schema:name "is addressee of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isAgentAssociatedWithAgent>
+    schema:description """Connects two Agents. This object property is
+         symmetric."""@en ;
+    schema:name "is agent associated with agent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isAgentAssociatedWithPlace>
+    schema:description """Inverse of 'is place associated with agent' object
+         property."""@en ;
+    schema:name "is agent associated with place"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isAssociatedWithDate>
+    schema:description """Inverse of 'is date associated with' object
+         property."""@en ;
+    schema:name "is associated with date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isAssociatedWithEvent>
+    schema:description """Inverse of 'is event associated with' object
+         property."""@en ;
+    schema:name "is associated with event"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isAssociatedWithPlace>
+    schema:description """Inverse of 'is place associated with' object
+         property."""@en ;
+    schema:name "is associated with place"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isAssociatedWithRule>
+    schema:description """Inverse of 'is rule associated with' object
+         property."""@en ;
+    schema:name "is associated with rule"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isAuthorOf>
+    schema:description "Inverse of 'has author' object property."@en ;
+    schema:name "is author of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isAuthorizingAgentInMandateRelation>
+    schema:description """Connects an Agent that assigns the Mandate, to a Mandate
+         Relation."""@en ;
+    schema:name "is authorizing agent in mandate relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isBeginningDateOf>
+    schema:description """Connects a Date to a Thing that came into existence on that
+         Date."""@en ;
+    schema:name "is beginning date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isBirthDateOf>
+    schema:description """Connects a Date to a Person that was born on that
+         Date."""@en ;
+    schema:name "is birth date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isBirthPlaceOf>
+    schema:description """Connects a Place to a Person who was born in that
+         Place."""@en ;
+    schema:name "is birth place of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isCarrierTypeOf>
+    schema:description """Connects a Carrier Type to an Instantiation whose carrier it
+         categorizes."""@en ;
+    schema:name "is carrier type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isChildOf>
+    schema:description "Inverse of 'has child' object property."@en ;
+    schema:name "is child of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isCollectorOf>
+    schema:description "Inverse of 'has collector' object property."@en ;
+    schema:name "is collector of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isComponentOfTransitive>
+    schema:description """Connects an Instantiation to another Instantiation of which it is,
+         directly or indirectly, a component. This is a transitive relation."""@en ;
+    schema:name "is component of transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isConstituentOfTransitive>
+    schema:description """Connects a Record or Record Part to another Record or Record Part
+         of which it is a constituent, directly or indirectly. This is a transitive
+         relation."""@en ;
+    schema:name "is constituent of transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isContainedByTransitive>
+    schema:description """Connects a Place to a Place that is, directly or indirectly,
+         contained by it. This is a transitive relation."""@en ;
+    schema:name "is contained by transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isContentTypeOf>
+    schema:description """Connects a Content Type to a Record or Record Part whose content
+         it categorizes."""@en ;
+    schema:name "is content type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isCopyOf>
+    schema:description "Inverse of 'has copy' object property."@en ;
+    schema:name "is copy of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isCreationDateOf>
+    schema:description """Connects a Date to a Record Resource or Instantiation that was
+         created at this Date."""@en ;
+    schema:name "is creation date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isCreatorOf>
+    schema:description "Inverse of 'has creator' object property."@en ;
+    schema:name "is creator of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDateAssociatedWith>
+    schema:description """Connects a Date to a Thing with whose existence and lifecycle the
+         Date is associated."""@en ;
+    schema:name "is date associated with"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDateOfOccurrenceOf>
+    schema:description """Connects a Date to an Event that occurred at this Date. An event
+         or activity can be recurrent, which implies that one single event can be related to several
+         dates."""@en ;
+    schema:name "is date of occurrence of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDateTypeOf>
+    schema:description "Connects a Date Type to a Date that it categorizes."@en ;
+    schema:name "is date type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDeathDateOf>
+    schema:description "Connects a Date to a Person who died on that Date."@en ;
+    schema:name "is death date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDeathPlaceOf>
+    schema:description """Connects a Place to a Person who died in that
+         Place."""@en ;
+    schema:name "is death place of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDestructionDateOf>
+    schema:description """Connects a Date to a Thing that was destructed at that
+         Date."""@en ;
+    schema:name "is destruction date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDirectComponentOf>
+    schema:description """Connects an Instantiation to another Instantiation of which it is
+         a direct component."""@en ;
+    schema:name "is direct component of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDirectConstituentOf>
+    schema:description """Connects a Record or Record Part to another Record or Record Part
+         of which it is a direct constituent."""@en ;
+    schema:name "is direct constituent of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDirectPartOf>
+    schema:description """Connects a Thing to a Thing of which it is direct constitutive or
+         component part."""@en ;
+    schema:name "is direct part of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDirectSubdivisionOf>
+    schema:description """Connects a Group to the Group it is a direct subdivision
+         of."""@en ;
+    schema:name "is direct subdivision of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDirectSubeventOf>
+    schema:description """Connects an ongoing Event to the Event it is a direct part
+         of."""@en ;
+    schema:name "is direct subevent of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDirectSubordinateTo>
+    schema:description """Connects an Agent to an Agent that is directly hierarchically
+         superior."""@en ;
+    schema:name "is direct subordinate to"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDirectlyContainedBy>
+    schema:description """Connects a Place to a Place that directly contains
+         it."""@en ;
+    schema:name "is directly contained by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDirectlyIncludedIn>
+    schema:description """Connects a Record to a Record or Record Set in which it is
+         directly included."""@en ;
+    schema:name "is directly included in"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDocumentaryFormTypeOf>
+    schema:description """Connects a Documentary Form Type to a Record or Record Part that
+         it categorizes."""@en ;
+    schema:name "is documentary form type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isDraftOf>
+    schema:description "Connects a draft to the final version of a Record."@en ;
+    schema:name "is draft of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isEndDateOf>
+    schema:description """Connects a Date to a Thing whose existence ended on that
+         Date."""@en ;
+    schema:name "is end date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isEquivalentTo>
+    schema:description "Connects two Things that are considered equivalent."@en ;
+    schema:name "is equivalent to"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isEventAssociatedWith>
+    schema:description """Connects an Event to a Thing that is associated with the existence
+         and lifecycle of the Event."""@en ;
+    schema:name "is event associated with"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isEventTypeOf>
+    schema:description """Connects an Event Type to an Event that it
+         categorizes."""@en ;
+    schema:name "is event type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isEvidencedBy>
+    schema:description """Connects a Relation to a Record Resource that is used for proving
+         is existence or describing it."""@en ;
+    schema:name "is evidenced by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isExtentOf>
+    schema:description "Connects an Extent to a Thing"@en ;
+    schema:name "is extent of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isExtentTypeOf>
+    schema:description """Connects an Extent Type to an Extent that it
+         categorizes."""@en ;
+    schema:name "is extent type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isFamilyTypeOf>
+    schema:description """Connects a Family Type to a Family that it
+         categorizes."""@en ;
+    schema:name "is family type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isFromUseDateOf>
+    schema:description """Connects a Date to an Appellation, when it is the date at which
+         the Appellation was first used."""@en ;
+    schema:name "is from use date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isFunctionallyEquivalentTo>
+    schema:description """Connects two Instantiations which may be considered as equivalent.
+         This relation is symmetric."""@en ;
+    schema:name "is functionally equivalent to"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isIdentifierTypeOf>
+    schema:description """Connects an Identifier Type and an Identifier that it
+         categorizes."""@en ;
+    schema:name "is identifier type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isIncludedInTransitive>
+    schema:description """Connects a Record to a Record or Record Set in which it is
+         directly or indirectly included. This is a transitive relation."""@en ;
+    schema:name "is included in transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isInstantiationAssociatedWithInstantiation>
+    schema:description """Connects two Instantiations. This relation is
+         symmetric."""@en ;
+    schema:name "is instantiation associated with instantiation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isLastUpdateDateOf>
+    schema:description """Connects a Date and a Thing that was last modified at this
+         Date."""@en ;
+    schema:name "is last update date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isModificationDateOf>
+    schema:description """Connects a Date to a Thing that was modified on that
+         Date."""@en ;
+    schema:name "is modification date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasAdjacentTo>
+    schema:description """Connects two Places that are or were geographically adjacent. This
+         relation is symmetric."""@en ;
+    schema:name "is or was adjacent to"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasAffectedBy>
+    schema:description "Inverse of 'affects or affected' object property."@en ;
+    schema:name "is or was affected by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasAgentNameOf>
+    schema:description """Connects an Agent Name to an Agent it designates or
+         designated."""@en ;
+    schema:name "is or was agent name of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasAnalogueInstantiationOf>
+    schema:description """Inverse of 'has or had analogue instantiation' object
+         property."""@en ;
+    schema:name "is or was analogue instantiation of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasAppellationOf>
+    schema:description """Connects an Appellation to a Thing that it designates or
+         designated."""@en ;
+    schema:name "is or was appellation of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasCategoryOf>
+    schema:description """Connects a Type (a category) to a Thing that it categorizes or
+         categorized."""@en ;
+    schema:name "is or was category of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasCategoryOfAllMembersOf>
+    schema:description """Connects a Category (Type) and a Record Set whose all present or
+         past Record or Record Part members belong to that Category."""@en ;
+    schema:name "is or was category of all members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasCategoryOfSomeMembersOf>
+    schema:description """Connects a Category (Type) and a Record Set whose some present or
+         past Record or Record Part members belong to that Category."""@en ;
+    schema:name "is or was category of some members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasComponentOf>
+    schema:description "Inverse of 'has or had component' object property."@en ;
+    schema:name "is or was component of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasConstituentOf>
+    schema:description """Inverse of 'has or had constituent' object
+         property."""@en ;
+    schema:name "is or was constituent of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasContainedBy>
+    schema:description "Inverse of 'contains or contained' object property."@en ;
+    schema:name "is or was contained by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasContentTypeOfAllMembersOf>
+    schema:description """Connects a Content Type and a Record Set whose all past or present
+         Record or Record Part members have that Content Type."""@en ;
+    schema:name "is or was content type of all members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasContentTypeOfSomeMembersOf>
+    schema:description """Connects a Content Type and a Record Set whose some past or
+         present Record or Record Part members have that Content Type."""@en ;
+    schema:name "is or was content type of some members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasControllerOf>
+    schema:description """Connects an Agent to another Agent it controls or
+         controlled."""@en ;
+    schema:name "is or was controller of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasCoordinatesOf>
+    schema:description """Connects an instance of Coordinates to a Physical Location it
+         locates or located on earth, according to some reference system."""@en ;
+    schema:name "is or was coordinates of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasCorporateBodyTypeOf>
+    schema:description """Connects a Corporate Body Type to a Corporate Body that it
+         categorizes or categorized."""@en ;
+    schema:name "is or was corporate body type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasCreationDateOfAllMembersOf>
+    schema:description """Connects a Date to a Record Set all of whose present or past
+         members were created at this Date."""@en ;
+    schema:name "is or was creation date of all members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasCreationDateOfMostMembersOf>
+    schema:description """Connects a Date to a Record Set most of whose present or past
+         members were created at this Date."""@en ;
+    schema:name "is or was creation date of most members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasCreationDateOfSomeMembersOf>
+    schema:description """Connects a Date to a Record Set some of whose present or past
+         members were created at this Date."""@en ;
+    schema:name "is or was creation date of some members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasDemographicGroupOf>
+    schema:description """Connects a Demographic Group to a Person or Group which belongs or
+         belonged to it."""@en ;
+    schema:name "is or was demographic group of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasDerivedFromInstantiation>
+    schema:description """Inverse of 'has or had derived instantiation' object
+         property."""@en ;
+    schema:name "is or was derived from instantiation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasDescribedBy>
+    schema:description """Inverse of 'describes or described' object
+         property."""@en ;
+    schema:name "is or was described by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasDigitalInstantiationOf>
+    schema:description """Inverse of 'has or had digital instantiation' object
+         property."""@en ;
+    schema:name "is or was digital instantiation of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasDocumentaryFormTypeOfAllMembersOf>
+    schema:description """Connects a Documentary Form Type and a Record Set whose all past
+         or present Record or Record Part members have that Documentary Form Type."""@en ;
+    schema:name "is or was documentary form type of all members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasDocumentaryFormTypeOfSomeMembersOf>
+    schema:description """Connects a Documentary Form Type and a Record Set whose some past
+         or present Record or Record Part members have that Documentary Form Type."""@en ;
+    schema:name "is or was documentary form type of some members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasEmployerOf>
+    schema:description """Connects a Corporate Body or a Person to a Person who is or was
+         their employee."""@en ;
+    schema:name "is or was employer of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasEnforcedBy>
+    schema:description """Connects a Rule to an Agent that enforces or enforced the
+         Rule."""@en ;
+    schema:name "is or was enforced by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasExpressedBy>
+    schema:description """Connects a Rule to a Record Resource that expresses or expressed
+         the Rule."""@en ;
+    schema:name "is or was expressed by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasHolderOf>
+    schema:description """Connects an Agent to a Record Resource or Instantiation that the
+         Agent holds or held."""@en ;
+    schema:name "is or was holder of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasHolderOfIntellectualPropertyRightsOf>
+    schema:description """Connects an Agent to a Record Resource or Instantiation on which
+         the Agent has or had some intellectual property rights."""@en ;
+    schema:name "is or was holder of intellectual property rights of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasIdentifierOf>
+    schema:description """Connects an Identifier to a Thing that it identified or
+         identifies."""@en ;
+    schema:name "is or was identifier of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasIncludedIn>
+    schema:description "Inverse of 'includes or included' object property."@en ;
+    schema:name "is or was included in"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasInstantiationOf>
+    schema:description """Inverse of 'has or had instantiation' object
+         property."""@en ;
+    schema:name "is or was instantiation of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasJurisdictionOf>
+    schema:description """Connects a Place to an Agent that has or had jurisdiction over the
+         Place."""@en ;
+    schema:name "is or was jurisdiction of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasLanguageOf>
+    schema:description """Connects a Language to an Agent, Record or Record Part that uses
+         or used it."""@en ;
+    schema:name "is or was language of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasLanguageOfAllMembersOf>
+    schema:description """Connects a Language and a Record Set whose all present or past
+         Record or Record Part members use that Language."""@en ;
+    schema:name "is or was language of all members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasLanguageOfSomeMembersOf>
+    schema:description """Connects a Language and a Record Set whose some present or past
+         Record or Record Part members use that Language."""@en ;
+    schema:name "is or was language of some members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasLeaderOf>
+    schema:description """Connects a Person to the Group that Person leads or led in the
+         past."""@en ;
+    schema:name "is or was leader of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasLegalStatusOf>
+    schema:description """Connects a Legal Status to an Agent or Record Resource that it
+         categorizes."""@en ;
+    schema:name "is or was legal status of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasLegalStatusOfAllMembersOf>
+    schema:description """Connects a Legal Status and a Record Set whose all past or present
+         Record or Record Part members have that Legal Status."""@en ;
+    schema:name "is or was legal status of all members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasLegalStatusOfSomeMembersOf>
+    schema:description """Connects a Legal Status and a Record Set whose some past or
+         present Record or Record Part members have that Legal Status."""@en ;
+    schema:name "is or was legal status of some members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasLocationOf>
+    schema:description """Connects a Place to a Thing that is or was located in the
+         Place."""@en ;
+    schema:name "is or was location of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasLocationOfAgent>
+    schema:description """Connects a Place to an Agent that is or was located in this
+         Place."""@en ;
+    schema:name "is or was location of agent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasMainSubjectOf>
+    schema:description """Inverse of 'has or had main subject' object
+         property."""@en ;
+    schema:name "is or was main subject of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasManagerOf>
+    schema:description """Connects an Agent to a Record Resource or Instantiation that the
+         Agent managed or manages."""@en ;
+    schema:name "is or was manager of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasMandateTypeOf>
+    schema:description """Connects a Mandate Type to a Mandate that it categorized or
+         categorizes."""@en ;
+    schema:name "is or was mandate type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasMemberOf>
+    schema:description "Inverse of 'has or had member' object property."@en ;
+    schema:name "is or was member of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasNameOf>
+    schema:description """Connects a Name to a Thing that it designated or
+         designates."""@en ;
+    schema:name "is or was name of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasOccupationTypeOf>
+    schema:description """Connects an Occupation Type to a Person whose occupation is or was
+         categorized by it."""@en ;
+    schema:name "is or was occupation type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasOccupiedBy>
+    schema:description "Inverse of 'occupies or occupied' object property."@en ;
+    schema:name "is or was occupied by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasOwnerOf>
+    schema:description """Connects a Group, Person or Position to a Thing that this Agent
+         owns or owned."""@en ;
+    schema:name "is or was owner of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasPartOf>
+    schema:description "Inverse of 'has or had part' relation."@en ;
+    schema:name "is or was part of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasParticipantIn>
+    schema:description """Inverse of 'has or had participant' object
+         property."""@en ;
+    schema:name "is or was participant in"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasPerformedBy>
+    schema:description """Connects an Activity to an Agent that performed or performs the
+         Activity."""@en ;
+    schema:name "is or was performed by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasPhysicalLocationOf>
+    schema:description """Connects a Physical Location to a Place, when it is or was its
+         location."""@en ;
+    schema:name "is or was physical location of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasPlaceNameOf>
+    schema:description """Connects a Place Name to a Place that was or is designated by
+         it."""@en ;
+    schema:name "is or was place name of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasPlaceTypeOf>
+    schema:description """Connects a Place Type to a Place that is or was categorized by
+         it."""@en ;
+    schema:name "is or was place type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasRecordStateOfAllMembersOf>
+    schema:description """Connects a Record State and a Record Set whose all past or present
+         Record or Record Part members have that Record State."""@en ;
+    schema:name "is or was record state of all members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasRecordStateOfSomeMembersOf>
+    schema:description """Connects a Record State and a Record Set whose some past or
+         present Record or Record Part members have that Record State."""@en ;
+    schema:name "is or was record state of some members of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasRegulatedBy>
+    schema:description """Inverse of the 'regulates or regulated' object
+         property."""@en ;
+    schema:name "is or was regulated by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasResponsibleForEnforcing>
+    schema:description "Inverse of 'is or was enforced by' object property."@en ;
+    schema:name "is or was responsible for enforcing"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasRuleTypeOf>
+    schema:description """Connects a Rule Type to a Rule that it categorized or
+         categorizes."""@en ;
+    schema:name "is or was rule type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasSubdivisionOf>
+    schema:description """Inverse of 'has or had subdivision' object
+         property."""@en ;
+    schema:name "is or was subdivision of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasSubeventOf>
+    schema:description "Inverse of 'has or had subevent' object property."@en ;
+    schema:name "is or was subevent of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasSubjectOf>
+    schema:description "Inverse of 'has or had subject' object property."@en ;
+    schema:name "is or was subject of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasSubordinateTo>
+    schema:description """Inverse of 'has or had subordinate' object
+         property."""@en ;
+    schema:name "is or was subordinate to"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasTitleOf>
+    schema:description """Connects a Title to a Record Resource, Instantiation or Rule that
+         it designated or designates."""@en ;
+    schema:name "is or was title of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrWasUnderAuthorityOf>
+    schema:description """Inverse of 'has or had authority over' object
+         property."""@en ;
+    schema:name "is or was under authority of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrganicOrFunctionalProvenanceOf>
+    schema:description """Inverse of 'has organic or functional provenance' object
+         property."""@en ;
+    schema:name "is organic or functional provenance of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOrganicProvenanceOf>
+    schema:description """Inverse of 'has organic provenance' object
+         property."""@en ;
+    schema:name "is organic provenance of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isOriginalOf>
+    schema:description """Connects the original version of a Record to a copy or a later
+         version."""@en ;
+    schema:name "is original of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isPartOfTransitive>
+    schema:description """Connects a Thing to a Thing of which it is a a constitutive or
+         component part, directly or indirectly. This is a transitive relation."""@en ;
+    schema:name "is part of transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWith>
+    schema:description """Connects a Place to a Thing with whose existence and lifecycle the
+         Place is associated."""@en ;
+    schema:name "is place associated with"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isPlaceAssociatedWithAgent>
+    schema:description """Connects a Place to an Agent which is related to that
+         Place."""@en ;
+    schema:name "is place associated with agent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isProductionTechniqueTypeOf>
+    schema:description """Connects a Production Technique Type to an Instantiation whose
+         production technique is categorized by it."""@en ;
+    schema:name "is production technique type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isPublicationDateOf>
+    schema:description """Connects a Date to a Record Resource that was made public at this
+         Date."""@en ;
+    schema:name "is publication date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isPublisherOf>
+    schema:description """Connects an Agent to a Record Resource that it
+         published."""@en ;
+    schema:name "is publisher of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isReceiverOf>
+    schema:description "Inverse of 'received by' object property."@en ;
+    schema:name "is receiver of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isRecordResourceAssociatedWithRecordResource>
+    schema:description """Connects two Record Resources. This relation is
+         symmetric."""@en ;
+    schema:name "is record resource associated with record resource"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isRecordSetTypeOf>
+    schema:description """Connects a Record Set Type to a Record Set that it
+         categorizes."""@en ;
+    schema:name "is record set type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isRecordStateOf>
+    schema:description """Connects a Record State to a Record or Record Part whose state it
+         categorizes."""@en ;
+    schema:name "is record state of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isRelatedTo>
+    schema:description """The most generic relation, is related to, connects any Thing to
+         any other Thing. This relation is symmetric."""@en ;
+    schema:name "is related to"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isReplyTo>
+    schema:description "Inverse of 'has reply' object property."@en ;
+    schema:name "is reply to"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isRepresentationTypeOf>
+    schema:description """Connects a Representation Type to an Instantiation that it
+         categorizes."""@en ;
+    schema:name "is representation type of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isResponsibleForIssuing>
+    schema:description "Inverse of 'issued by' object property."@en ;
+    schema:name "is responsible for issuing"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isRuleAssociatedWith>
+    schema:description """Connects a Rule to a Thing that is associated with the
+         Rule."""@en ;
+    schema:name "is rule associated with"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isSenderOf>
+    schema:description "Inverse of 'has sender' object property."@en ;
+    schema:name "is sender of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isSubdivisionOfTransitive>
+    schema:description """Connects a Group to the Group it is a direct or indirect
+         subdivision of. This is a transitive relation."""@en ;
+    schema:name "is subdivision of transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isSubeventOfTransitive>
+    schema:description """Connects an ongoing Event to an Event of which it is a direct or
+         indirect part. This is a transitive relation."""@en ;
+    schema:name "is subevent of transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isSubordinateToTransitive>
+    schema:description """Connects an Agent to an Agent that is directly or indirectly
+         hierarchically superior. This is a transitive relation."""@en ;
+    schema:name "is subordinate to transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isSuccessorOf>
+    schema:description "Inverse of 'has successor' object property."@en ;
+    schema:name "is successor of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isToUseDateOf>
+    schema:description """Connects a Date to an Appellation, when it is the date till which
+         the Appellation was used."""@en ;
+    schema:name "is to use date of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isUnitOfMeasurementOf>
+    schema:description """Inverse of 'has unit of measurement' object
+         property"""@en ;
+    schema:name "is unit of measurement of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#isWithin>
+    schema:description "Connects a Date to a Date in which it is contained."@en ;
+    schema:name "is within"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#issuedBy>
+    schema:description """Connects a Rule to the Agent that issued or published the
+         Rule."""@en ;
+    schema:name "issued by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#knowingOfRelation_role>
+    schema:description """Connects a KnowingOfRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Knowing Of Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#knowingRelation_role>
+    schema:description """Connects a KnowingRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Knowing Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#knownBy>
+    schema:description "Inverse of 'knows of' object property."@en ;
+    schema:name "known by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#knows>
+    schema:description """Connects two Persons that directly know each other during their
+         existence. This relation is symmetric."""@en ;
+    schema:name "knows"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#knowsOf>
+    schema:description """Connects a Person to another Person they have some knowledge of
+         through time or space."""@en ;
+    schema:name "knows of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#lastModificationDate>
+    schema:description "Date at which an entity was last updated."@en ;
+    schema:name "last modification date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#latitude>
+    schema:description "Distance in degrees north or south of the equator."@en ;
+    schema:name "latitude"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#leadershipRelation_role>
+    schema:description """Connects a LeadershipRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Leadership Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#leadershipWithPosition>
+    schema:description """Connects a Leadership Relation to the Position occupied by the
+         leading Person."""@en ;
+    schema:name "leadership with position"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#length>
+    schema:description "Length of an entity."@en ;
+    schema:name "length"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#location>
+    schema:description """A delimitation of the physical territory of a Place. Used to
+         describe basic human-readable text such as an address, a cadastral reference, or less
+         precise information found in a Record."""@en ;
+    schema:name "location"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#longitude>
+    schema:description """Distance in degrees east or west of a prime
+         meridian."""@en ;
+    schema:name "longitude"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#managementRelation_role>
+    schema:description """Connects a ManagementRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Management Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#mandateRelation_role>
+    schema:description """Connects a MandateRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Mandate Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#measure>
+    schema:description """The extent, quantity, amount, or degree of an entity, as
+         determined by measurement or calculation."""@en ;
+    schema:name "measure"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#membershipRelation_role>
+    schema:description """Connects a MembershipRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Membership Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#membershipWithPosition>
+    schema:description """Connects a Membership Relation to the Position occupied by the
+         member Person(s)."""@en ;
+    schema:name "membership with position"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#migratedFrom>
+    schema:description "Inverse of 'migrated into' object property."@en ;
+    schema:name "migrated from"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#migratedInto>
+    schema:description """Connects an Instantiation to a version it has been migrated
+         into."""@en ;
+    schema:name "migrated into"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#migrationRelation_role>
+    schema:description """Connects a MigrationRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Migration Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#modificationDate>
+    schema:description "Date of the modification of an entity."@en ;
+    schema:name "modification date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#name>
+    schema:description """A label, title or term designating an entity in order to make it
+         distinguishable from other similar entities."""@en ;
+    schema:name "name"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#normalizedDateValue>
+    schema:description """Machine readable representation of the date based on a public
+         technical standard."""@en ;
+    schema:name "normalized date value"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#normalizedValue>
+    schema:description """Value representation based on a standard, preferably
+         machine-readable."""@en ;
+    schema:name "normalized value"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#occupiesOrOccupied>
+    schema:description """Connects a Person to a Position they occupy or
+         occupied."""@en ;
+    schema:name "occupies or occupied"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#occurredAtDate>
+    schema:description """Inverse of 'is date of occurrence of' object
+         property"""@en ;
+    schema:name "occurred at date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#organicOrFunctionalProvenanceRelation_role>
+    schema:description """Connects a OrganicOrFunctionalProvenanceRelation to itself. It is
+         a reflexive property, that can stand for an instance of the class when necessary, e.g. when
+         you explore a knowledge graph."""@en ;
+    schema:name """has the role of the Organic or functional provenance
+         Relation"""@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#organicProvenanceRelation_role>
+    schema:description """Connects a OrganicProvenanceRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Organic Provenance Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#overlapsOrOverlapped>
+    schema:description """Connects two Places that geographically overlap or overlapped.
+         This relation is symmetric."""@en ;
+    schema:name "overlaps or overlapped"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#ownershipRelation_role>
+    schema:description """Connects a OwnershipRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Ownership Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#performanceRelation_role>
+    schema:description """Connects a PerformanceRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Performance Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#performsOrPerformed>
+    schema:description """Inverse of 'is or was performed by' object
+         property."""@en ;
+    schema:name "performs or performed"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#physicalCharacteristicsNote>
+    schema:description """Information about the physical features, completeness, or
+         conservation status of an Instantiation. Includes information about the physical nature and
+         condition such as conservation status or the deterioration of an Instantiation (for example
+         its carrier) affecting the ability to recover information. """@en ;
+    schema:name "physical characteristics note"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#physicalOrLogicalExtent>
+    schema:description """Countable characteristics of the content of an entity expressed as
+         a quantity."""@en ;
+    schema:name "physical or logical extent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#placeRelation_role>
+    schema:description """Connects a PlaceRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Place Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#positionHoldingRelation_role>
+    schema:description """Connects a PositionHoldingRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Position Holding Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#positionIsContextOfLeadershipRelation>
+    schema:description """Connects a Position to a Leadership Relation (the leading Person
+         occupies that Position)."""@en ;
+    schema:name "position is context of leadership relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#positionIsContextOfMembershipRelation>
+    schema:description """Connects a Position to a Membership Relation (the member Person
+         occupies that Position)."""@en ;
+    schema:name "position is context of membership relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#positionToGroupRelation_role>
+    schema:description """Connects a PositionToGroupRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Position to Group Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#precededInSequence>
+    schema:description """Connects a Thing to a Thing that followed it in some non
+         chronological sequence in the past."""@en ;
+    schema:name "preceded in sequence"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#precedesInSequenceTransitive>
+    schema:description """Connects a Thing to a Thing that follows it directly or indirectly
+         in some non chronological sequence. This is a transitive relation."""@en ;
+    schema:name "precedes in sequence transitive"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#precedesInTime>
+    schema:description """Connects a Thing to a Thing that follows it in chronological
+         order. This is a transitive relation."""@en ;
+    schema:name "precedes in time"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#precedesOrPreceded>
+    schema:description """Connects a Thing to a Thing that follows or followed it in some
+         sequence."""@en ;
+    schema:name "precedes or preceded"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#productionTechnique>
+    schema:description """The method used in the representation of information on an
+         Instantiation."""@en ;
+    schema:name "production technique"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#proxyFor>
+    schema:description """Connects a Proxy to the Record Resource it stands for in the
+         specific context of a Record Set."""@en ;
+    schema:name "proxy for"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#proxyIn>
+    schema:description """Connects a Proxy to the Record Set in which it stands for
+         (represents) another Record Resource."""@en ;
+    schema:name "proxy in"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#publicationDate>
+    schema:description "Date of the publication of a Record Resource."@en ;
+    schema:name "publication date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#qualityOfRepresentationNote>
+    schema:description """Characteristics of an Instantiation that affect the ability to
+         recover the intellectual content. Such characteristics may be related to the methods used
+         in creating the Instantiation or introduced subsequent to the creation through
+         accident."""@en ;
+    schema:name "quality of representation note"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#quantity>
+    schema:description "Machine-readable quantity."@en ;
+    schema:name "quantity"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#recordResourceExtent>
+    schema:description """The quantity of information content, as human experienced,
+         contained in a Record Resource. The method and precision of expressing the quantity of
+         information represented in a Record Resource will vary according to the kind of Record
+         Resource being described, processing economy constraints, etc. For record sets, quantity
+         may be expressed as number of records, or, for analogue records in particular, by the
+         physical storage dimensions of the members of the Record Set. For individual records or
+         record parts, quantity may be expressed in more precise terms. """@en ;
+    schema:name "Record Resource Extent"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#recordResourceGeneticRelation_role>
+    schema:description """Connects a RecordResourceGeneticRelation to itself. It is a
+         reflexive property, that can stand for an instance of the class when necessary, e.g. when
+         you explore a knowledge graph."""@en ;
+    schema:name "has the role of the Record Resource Genetic Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#recordResourceHoldingRelation_role>
+    schema:description """Connects a RecordResourceHoldingRelation to itself. It is a
+         reflexive property, that can stand for an instance of the class when necessary, e.g. when
+         you explore a knowledge graph."""@en ;
+    schema:name "has the role of the Record Resource Holding Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#recordResourceStructure>
+    schema:description """Information about the intellectual arrangement and composition of
+         a Record Resource. For Record and Record Part, it encompasses information about the
+         intellectual composition of the record, the presence of record parts and their functions.
+         For Record Set, it encompasses information about the methodology or criteria used for
+         arranging the Record Set members or Record members within the containing Record
+         Set"""@en ;
+    schema:name "Record Resource structure"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#recordResourceToInstantiationRelation_role>
+    schema:description """Connects a RecordResourceToInstantiationRelation to itself. It is
+         a reflexive property, that can stand for an instance of the class when necessary, e.g. when
+         you explore a knowledge graph."""@en ;
+    schema:name """has the role of the Record Resource to Instantiation
+         Relation"""@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#recordResourceToRecordResourceRelation_role>
+    schema:description """Connects a RecordResourceToRecordResourceRelation to itself. It is
+         a reflexive property, that can stand for an instance of the class when necessary, e.g. when
+         you explore a knowledge graph."""@en ;
+    schema:name """has the role of the Record Resource to Record Resource
+         Relation"""@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#referenceSystem>
+    schema:description """Framework or standard used to represent an
+         information."""@en ;
+    schema:name "reference system"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#regulatesOrRegulated>
+    schema:description """Connects a Rule to a Thing that it regulates or
+         regulated."""@en ;
+    schema:name "regulates or regulated"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#relationCertainty>
+    schema:description """Qualifies the level of certitude of the accuracy of a
+         Relation."""@en ;
+    schema:name "relation certainty "@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#relationConnects>
+    schema:description """Connects an n-ary Relation to any of the Things
+         involved."""@en ;
+    schema:name "relation connects"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#relationHasContext>
+    schema:description """Connects an n-ary Relation to a Thing that is a secondary,
+         contextual entity during the existence of the Relation."""@en ;
+    schema:name "relation has context"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#relationHasSource>
+    schema:description """Connects an n-ary Relation to a Thing that is its
+         source."""@en ;
+    schema:name "relation has source"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#relationHasTarget>
+    schema:description """Connects an n-ary Relation to a Thing that is its
+         target."""@en ;
+    schema:name "relation has target"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#relationSource>
+    schema:description """A source of information used for identifying and describing a
+         Relation."""@en ;
+    schema:name "relation source"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#relationState>
+    schema:description """Used to qualify the state of a Relation (e. g. present, past,
+         ongoing, unknown)."""@en ;
+    schema:name "relation state"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#relation_role>
+    schema:description """Connects a Relation to itself. It is a reflexive property, that
+         can stand for an instance of the class when necessary, e.g. when you explore a knowledge
+         graph."""@en ;
+    schema:name "has the role of the Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#resultedFromTheMergerOf>
+    schema:description "Inverse of 'was merged into' object property."@en ;
+    schema:name "resulted from the merger of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#resultedFromTheSplitOf>
+    schema:description "Inverse of 'was split into' object property."@en ;
+    schema:name "resulted from the split of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#resultsOrResultedFrom>
+    schema:description """Inverse of 'results or resulted in' object
+         property."""@en ;
+    schema:name "results or resulted from"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#resultsOrResultedIn>
+    schema:description """Connects an Event to a Thing that results or resulted from the
+         Event."""@en ;
+    schema:name "results or resulted in"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#roleIsContextOfCreationRelation>
+    schema:description """Connects a Role Type to a Creation Relation (this Role Type being
+         the specific role played by the creating Person in the context of this
+         Relation)."""@en ;
+    schema:name "role is context of creation relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#ruleFollowed>
+    schema:description """The rule or conditions that govern the existence or lifecycle of a
+         Thing."""@en ;
+    schema:name "rule followed"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#ruleRelation_role>
+    schema:description """Connects a RuleRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Rule Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#scopeAndContent>
+    schema:description """Summary of the scope (such as time periods, geography) and content
+         (such as subject matter, administrative processes) of a Record Resource. Provides a more
+         complete summary of the informational content of the Record Resource highlighting the
+         information conveyed in the Record Resource, why it was created, received, and/or
+         maintained, and the agents connected to it. It may include description of relations with
+         agents, activities, dates and places, or with other record resources."""@en ;
+    schema:name "scope and content"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#sequentialRelation_role>
+    schema:description """Connects a SequentialRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Sequential Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#siblingRelation_role>
+    schema:description """Connects a SiblingRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Sibling Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#spouseRelation_role>
+    schema:description """Connects a SpouseRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Spouse Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#structure>
+    schema:description """Information about the intellectual arrangement and composition of
+         a Record Resource or the physical arrangement and composition of an Instantiation. For
+         Record and Record Part, it encompasses information about the intellectual composition of
+         the record, the presence of record parts and their functions. For Record Set, it
+         encompasses information about the methodology or criteria used for arranging the Record Set
+         members or Record members within the containing Record Set. For Instantiation, it may
+         comprise information about the composition of the physical elements of the
+         instantiation"""@en ;
+    schema:name "structure"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#teachingRelation_role>
+    schema:description """Connects a TeachingRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Teaching Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#technicalCharacteristics>
+    schema:description """Describes any relevant physical or software feature of any device
+         involved in the creation or management of a Record Resource."""@en ;
+    schema:name "technical characteristics"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#temporalRelation_role>
+    schema:description """Connects a TemporalRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Temporal Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#textualValue>
+    schema:description "A textual expression of an Appellation or Date."@en ;
+    schema:name "textual value"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#thingIsConnectedToRelation>
+    schema:description "Connects a Thing to a n-ary Relation."@en ;
+    schema:name "thing is connected to relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#thingIsContextOfRelation>
+    schema:description """Connects a Thing (that is a secondary, contextual entity during
+         the existence of the Relation) to a n-ary Relation."""@en ;
+    schema:name "thing is context of relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#thingIsSourceOfRelation>
+    schema:description """Connects a Thing (that is the source of a Relation) to a
+         Relation."""@en ;
+    schema:name "thing is source of relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#thingIsTargetOfRelation>
+    schema:description """Connects a Thing (that is the target of a Relation) to a n-ary
+         Relation."""@en ;
+    schema:name "thing is target of relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#title>
+    schema:description """An identifying name of a Record Resource, Instantiation or
+         Rule."""@en ;
+    schema:name "title"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#type>
+    schema:description "A term used to characterize an entity."@en ;
+    schema:name "type"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#typeRelation_role>
+    schema:description """Connects a TypeRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Type Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#unitOfMeasurement>
+    schema:description """A definite magnitude of a quantity, defined and adopted by
+         convention or by law, that is used as a standard for measurement of the same kind of
+         quantity. Can be spacial units (cm, m), weight (g, kg), time (s, h), storage (MB, TB) or
+         more informal units used in the archival context like number of boxes, pages or
+         words."""@en ;
+    schema:name "unit of measurement"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#usedFromDate>
+    schema:description "Date at which an Appellation was first used."@en ;
+    schema:name "used from date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#usedToDate>
+    schema:description "Date until an Appellation was used."@en ;
+    schema:name "used to date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasComponentOf>
+    schema:description """Connects an Instantiation to another Instantiation of which it was
+         a component in the past."""@en ;
+    schema:name "was component of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasConstituentOf>
+    schema:description """Connects a Record or Record Part to another Record or Record Part
+         of which it was a constituent in the past."""@en ;
+    schema:name "was constituent of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasContainedBy>
+    schema:description """Connects a Place to a Place within which it was
+         contained."""@en ;
+    schema:name "was contained by"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasIncludedIn>
+    schema:description """Connects a Record to a Record or Record Set in which it was
+         included in the past."""@en ;
+    schema:name "was included in"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasLastUpdatedAtDate>
+    schema:description """Connects a Thing to the Date when it was last
+         modified."""@en ;
+    schema:name "was last updated at date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasMergedInto>
+    schema:description """Connects a Corporate Body to another Corporate Body that is the
+         result of a merger of the previous one with one to many other corporate
+         bodies."""@en ;
+    schema:name "was merged into"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasPartOf>
+    schema:description """Connects a Thing to a Thing of which it was a constitutive or
+         component part in the past."""@en ;
+    schema:name "was part of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasSplitInto>
+    schema:description """Connects a Corporate Body to one of the Corporate Bodies that
+         results from the split of the previous one into two to many corporate
+         bodies."""@en ;
+    schema:name "was split into"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasSubdivisionOf>
+    schema:description """Connects a subdivision to the Group it was a part of in the
+         past."""@en ;
+    schema:name "was subdivision of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasSubeventOf>
+    schema:description """Connects a past Event to the broader Event of which it was a
+         part."""@en ;
+    schema:name "was subevent of"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasSubordinateTo>
+    schema:description """Connects an Agent to an Agent that was hierarchically superior in
+         the past."""@en ;
+    schema:name "was subordinate to"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasUsedFromDate>
+    schema:description """Connects an Appellation to the Date from which it was
+         used."""@en ;
+    schema:name "was used from date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wasUsedToDate>
+    schema:description """Connects an Appellation to the Date till when it was
+         used."""@en ;
+    schema:name "was used to date"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#wholePartRelation_role>
+    schema:description """Connects a WholePartRelation to itself. It is a reflexive
+         property, that can stand for an instance of the class when necessary, e.g. when you explore
+         a knowledge graph."""@en ;
+    schema:name "has the role of the Whole Part Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#width>
+    schema:description "Horizontal dimension of an entity."@en ;
+    schema:name "width"@en ;
+.
+
+<https://www.ica.org/standards/RiC/ontology#workRelation_role>
+    schema:description """Connects a WorkRelation to itself. It is a reflexive property,
+         that can stand for an instance of the class when necessary, e.g. when you explore a
+         knowledge graph."""@en ;
+    schema:name "has the role of the Work Relation"@en ;
+.
+
+<https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes>
+    schema:description """A vocabulary that provides URIs for describing documentary form
+         types of RiC Records and Record Parts."""@en ;
+    schema:name "Documentary Form Types"@en ;
+.
+
+<https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#AuthorityRecord>
+    schema:description """This category can be used for records that describe an
+         entity."""@en ;
+    schema:name "authority record"@en ;
+.
+
+<https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#FindingAid>
+    schema:description """This documentary form type can be used for records that
+         aggregate and organizes metadata on some record(s) or record set(s)."""@en ;
+    schema:name "finding aid"@en ;
+.
+
+<https://www.ica.org/standards/RiC/vocabularies/recordSetTypes>
+    schema:description """A vocabulary that provides URIs for describing types of RiC
+         Record Sets."""@en ;
+    schema:name "Record Set Types"@en ;
+.
+
+<https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Collection>
+    schema:description """An artificial assemblage of documents accumulated on the basis
+         of some common characteristic without regard to the provenance of those documents. Not to
+         be confused with an archival fonds. (From ICA ISAD(G))"""@en ;
+    schema:name "collection"@en ;
+.
+
+<https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#File>
+    schema:description """An organized unit of documents grouped together either for
+         current use by the creator or in the process of archival arrangement, because they relate
+         to the same subject, activity, or transaction. A file is usually the basic unit within a
+         record series. (From ICA ISAD(G))"""@en ;
+    schema:name "file"@en ;
+.
+
+<https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Fonds>
+    schema:description """The whole of the records, regardless of form or medium,
+         organically created and/or accumulated and used by a particular person, family, or
+         corporate body in the course of that creator's activities and functions. (From ICA
+         ISAD(G))"""@en ;
+    schema:name "fonds"@en ;
+.
+
+<https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Series>
+    schema:description """Documents arranged in accordance with a filing system or
+         maintained as a unit because they result from the same accumulation or filing process, or
+         the same activity; have a particular form; or because of some other relationship arising
+         out of their creation, receipt, or use. A series is also known as a records series. (From
+         ICA ISAD(G))"""@en ;
+    schema:name "series"@en ;
+.

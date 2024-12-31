@@ -3,123 +3,123 @@ PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://www.opengis.net/def/nil>
-    rdfs:label "OGC nils"^^xsd:string ;
     rdfs:seeAlso
         <http://www.opengis.net/def/nil?_view=collection> ,
         <http://www.opengis.net/doc/ogc-na-policies> ;
     schema:description
         "OGC nils"^^xsd:string ,
         "The URIs for resources in this document were assigned in accordance with the OGC Naming policies, overseen by the OGC Naming Authority. They are not otherwise managed as part of a delegated governance via a specific artefact, such as CodeLists from a normative schema."^^xsd:string ;
+    schema:name "OGC nils"^^xsd:string ;
 .
 
 <http://www.opengis.net/def/nil/>
-    rdfs:label "Concepts in OGC nils" ;
     schema:description "Collection hierarchy for this ConceptScheme" ;
+    schema:name "Concepts in OGC nils" ;
 .
 
 <http://www.opengis.net/def/nil/OGC/>
-    rdfs:label "OGC Nils" ;
     schema:description "OGC Nils" ;
+    schema:name "OGC Nils" ;
 .
 
 <http://www.opengis.net/def/nil/OGC/0/>
-    rdfs:label "OGC Nils 0" ;
     schema:description "OGC Nils 0" ;
+    schema:name "OGC Nils 0" ;
 .
 
 <http://www.opengis.net/def/nil/OGC/0/AboveDetectionRange>
-    rdfs:label "above detection range"@en ;
     rdfs:seeAlso <http://www.opengis.net/doc/gml#clause-8.2.3.1> ;
     schema:description "Value was above the detection range of the instrument used to estimate it."@en ;
+    schema:name "above detection range"@en ;
 .
 
 <http://www.opengis.net/def/nil/OGC/0/BelowDetectionRange>
-    rdfs:label "below detection range"@en ;
     rdfs:seeAlso <http://www.opengis.net/doc/gml#clause-8.2.3.1> ;
     schema:description "Value was below the detection range of the instrument used to estimate it."@en ;
+    schema:name "below detection range"@en ;
 .
 
 <http://www.opengis.net/def/nil/OGC/0/inapplicable>
-    rdfs:label "inapplicable"@en ;
     rdfs:seeAlso <http://www.opengis.net/doc/gml#clause-8.2.3.1> ;
     schema:description "There is no value"@en ;
+    schema:name "inapplicable"@en ;
 .
 
 <http://www.opengis.net/def/nil/OGC/0/missing>
-    rdfs:label "missing"@en ;
     rdfs:seeAlso <http://www.opengis.net/doc/gml#clause-8.2.3.1> ;
     schema:description "The correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist"@en ;
+    schema:name "missing"@en ;
 .
 
 <http://www.opengis.net/def/nil/OGC/0/template>
-    rdfs:label "template"@en ;
     rdfs:seeAlso <http://www.opengis.net/doc/gml#clause-8.2.3.1> ;
     schema:description "The value will be available later"@en ;
+    schema:name "template"@en ;
 .
 
 <http://www.opengis.net/def/nil/OGC/0/unknown>
-    rdfs:label "unknown"@en ;
     rdfs:seeAlso <http://www.opengis.net/doc/gml#clause-8.2.3.1> ;
     schema:description "The correct value is not known to, or not computable by, the sender of this data. However, the correct value probably exists"@en ;
+    schema:name "unknown"@en ;
 .
 
 <http://www.opengis.net/def/nil/OGC/0/withheld>
-    rdfs:label "withheld"@en ;
     rdfs:seeAlso <http://www.opengis.net/doc/gml#clause-8.2.3.1> ;
     schema:description "The value is not divulged."@en ;
+    schema:name "withheld"@en ;
 .
 
 <http://www.opengis.net/def/nil/ogc/0/above-detection-range>
-    rdfs:label "above detection range"@en ;
     schema:description "above detection range"@en ;
+    schema:name "above detection range"@en ;
 .
 
 <http://www.opengis.net/def/nil/ogc/0/below-detection-range>
-    rdfs:label "below detection range"@en ;
     schema:description "below detection range"@en ;
+    schema:name "below detection range"@en ;
 .
 
 <http://www.opengis.net/def/nil/ogc/0/inapplicable>
-    rdfs:label "inapplicable"@en ;
     schema:description "inapplicable"@en ;
+    schema:name "inapplicable"@en ;
 .
 
 <http://www.opengis.net/def/nil/ogc/0/missing>
-    rdfs:label "missing"@en ;
     schema:description "missing"@en ;
+    schema:name "missing"@en ;
 .
 
 <http://www.opengis.net/def/nil/ogc/0/template>
-    rdfs:label "template"@en ;
     schema:description "template"@en ;
+    schema:name "template"@en ;
 .
 
 <http://www.opengis.net/def/nil/ogc/0/unknown>
-    rdfs:label "unknown"@en ;
     schema:description "unknown"@en ;
+    schema:name "unknown"@en ;
 .
 
 <http://www.opengis.net/def/nil/ogc/0/withheld>
-    rdfs:label "withheld"@en ;
     schema:description "withheld"@en ;
+    schema:name "withheld"@en ;
 .
 
 <http://www.opengis.net/def/ogc/AboveDetectionRange>
-    rdfs:label "above detection range"@en ;
+    schema:name "above detection range"@en ;
 .
 
 <http://www.opengis.net/def/ogc/BelowDetectionRange>
-    rdfs:label "below detection range"@en ;
+    schema:name "below detection range"@en ;
 .
 
 <http://www.opengis.net/def/ogc/inapplicable>
-    rdfs:label "inapplicable"@en ;
+    schema:name "inapplicable"@en ;
 .
 
 <http://www.opengis.net/def/ogc/missing>
-    rdfs:label "missing"@en ;
+    schema:name "missing"@en ;
 .
 
 <http://www.opengis.net/def/ogc/withheld>
-    rdfs:label "withheld"@en ;
+    schema:name "withheld"@en ;
 .

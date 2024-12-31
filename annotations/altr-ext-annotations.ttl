@@ -1,21 +1,21 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
 
 <http://www.w3.org/ns/dx/connegp/altr-ext#constrainsClass>
-    rdfs:label "constrains class" ;
+    schema:name "constrains class" ;
 .
 
 <http://www.w3.org/ns/dx/connegp/altr-ext#hasDefaultProfile>
-    rdfs:label "has default profile" ;
+    schema:name "has default profile" ;
 .
 
 <http://www.w3.org/ns/dx/connegp/altr-ext#hasDefaultResourceFormat>
-    rdfs:label "has default resource format" ;
+    schema:name "has default resource format" ;
 .
 
 <http://www.w3.org/ns/dx/connegp/altr-ext#hasNodeShape>
-    rdfs:label "has node shape" ;
+    schema:name "has node shape" ;
 .
 
 <http://www.w3.org/ns/dx/connegp/altr-ext#hasResourceFormat>
-    rdfs:label "has resource format" ;
+    schema:name "has resource format" ;
 .

@@ -1,919 +1,918 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 
 <http://id.loc.gov/vocabulary/identifiers>
-    rdfs:label "Standard Identifiers"@en ;
     schema:description "The Standard Identifiers Scheme lists standard number or code systems and assigns a URI to each database or publication that defines or contains the identifiers. The purpose of these source codes is to enable the type of standard numbers or codes in resource descriptions to be indicated by URI."@en ;
+    schema:name "Standard Identifiers"@en ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/agorha>
-    rdfs:label "AGORHA (Accès global et organisé aux ressources en histoire de l'art)" ;
+    schema:name "AGORHA (Accès global et organisé aux ressources en histoire de l'art)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/agrovoc>
-    rdfs:label "AGROVOC multilingual agricultural thesaurus" ;
+    schema:name "AGROVOC multilingual agricultural thesaurus" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/allmovie>
-    rdfs:label "AllMovie" ;
+    schema:name "AllMovie" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/allmusic>
-    rdfs:label "AllMusic" ;
+    schema:name "AllMusic" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/allocine>
-    rdfs:label "AlloCiné" ;
+    schema:name "AlloCiné" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/amnbo>
-    rdfs:label "American National Biography Online" ;
+    schema:name "American National Biography Online" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ansi>
-    rdfs:label "American National Standards Institute and National Information Standards Organisation number for an ANSI or ANSI/NISO standard" ;
+    schema:name "American National Standards Institute and National Information Standards Organisation number for an ANSI or ANSI/NISO standard" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/archinl>
-    rdfs:label "archINFORM index of locations" ;
+    schema:name "archINFORM index of locations" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/archinpe>
-    rdfs:label "archINFORM index of persons" ;
+    schema:name "archINFORM index of persons" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/archinpr>
-    rdfs:label "archINFORM projects" ;
+    schema:name "archINFORM projects" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/archna>
-    rdfs:label "Archnet authorities" ;
+    schema:name "Archnet authorities" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/archns>
-    rdfs:label "Archnet sites" ;
+    schema:name "Archnet sites" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ark>
-    rdfs:label "Archival resource key (ARK) identifiers" ;
+    schema:name "Archival resource key (ARK) identifiers" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/artsy>
-    rdfs:label "Artsy" ;
+    schema:name "Artsy" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/artukart>
-    rdfs:label "Art UK artists" ;
+    schema:name "Art UK artists" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/artukaw>
-    rdfs:label "Art UK artworks" ;
+    schema:name "Art UK artworks" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/arxiv>
-    rdfs:label "arXiv" ;
+    schema:name "arXiv" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/atg>
-    rdfs:label "Agricultural thesaurus and glossary" ;
+    schema:name "Agricultural thesaurus and glossary" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ausbn>
-    rdfs:label "Australian business number (ABN)" ;
+    schema:name "Australian business number (ABN)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/auscn>
-    rdfs:label "Australian company number (ACN)" ;
+    schema:name "Australian company number (ACN)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ausnzst>
-    rdfs:label "Australian/New Zealand standards" ;
+    schema:name "Australian/New Zealand standards" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ausrn>
-    rdfs:label "Australian registered body number (ABRN)" ;
+    schema:name "Australian registered body number (ABRN)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ausst>
-    rdfs:label "Australian standards (Standards Australia)" ;
+    schema:name "Australian standards (Standards Australia)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/balat>
-    rdfs:label "BALaT (Belgian art links and tools) People & institutions" ;
+    schema:name "BALaT (Belgian art links and tools) People & institutions" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bbcth>
-    rdfs:label "BBC things" ;
+    schema:name "BBC things" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bbrainza>
-    rdfs:label "BookBrainz author" ;
+    schema:name "BookBrainz author" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bbrainzp>
-    rdfs:label "BookBrainz publisher" ;
+    schema:name "BookBrainz publisher" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bbrainzw>
-    rdfs:label "BookBrainz work" ;
+    schema:name "BookBrainz work" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bdrc>
-    rdfs:label "Buddhist Digital Resource Center" ;
+    schema:name "Buddhist Digital Resource Center" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bdusc>
-    rdfs:label "Biographical directory of the United States Congress" ;
+    schema:name "Biographical directory of the United States Congress" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/belvku>
-    rdfs:label "Belvedere Künstler" ;
+    schema:name "Belvedere Künstler" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/belvwrk>
-    rdfs:label "Belvedere Werke" ;
+    schema:name "Belvedere Werke" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/benezit>
-    rdfs:label "Benezit dictionary of artists" ;
+    schema:name "Benezit dictionary of artists" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bew>
-    rdfs:label "Biographies of the entomologists of the world" ;
+    schema:name "Biographies of the entomologists of the world" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bfi>
-    rdfs:label "BFI - British Film Institute" ;
+    schema:name "BFI - British Film Institute" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bhb>
-    rdfs:label "Bibliography of the Hebrew book" ;
+    schema:name "Bibliography of the Hebrew book" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bibbi>
-    rdfs:label "BIBBI autoriteter" ;
+    schema:name "BIBBI autoriteter" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bigenc>
-    rdfs:label "Большая российская энциклопедия = Bolʹshai︠a︡ rossiĭskai︠a︡ ėnt︠s︡iklopedii︠a︡ (Great Russian Encyclopedia)" ;
+    schema:name "Большая российская энциклопедия = Bolʹshai︠a︡ rossiĭskai︠a︡ ėnt︠s︡iklopedii︠a︡ (Great Russian Encyclopedia)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bnfcg>
-    rdfs:label "BnF catalogue général" ;
+    schema:name "BnF catalogue général" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bpn>
-    rdfs:label "Biografisch Portaal van Nederland = Biography portal of the Netherlands" ;
+    schema:name "Biografisch Portaal van Nederland = Biography portal of the Netherlands" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/bsi>
-    rdfs:label "British Standards Institution" ;
+    schema:name "British Standards Institution" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/cabt>
-    rdfs:label "CABI thesaurus" ;
+    schema:name "CABI thesaurus" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/cana>
-    rdfs:label "Canadiana authorities" ;
+    schema:name "Canadiana authorities" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/cantic>
-    rdfs:label "CANTIC (Catàleg d'autoritats de noms i títols de Catalunya)" ;
+    schema:name "CANTIC (Catàleg d'autoritats de noms i títols de Catalunya)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/cbwpid>
-    rdfs:label "Collective biographies of women" ;
+    schema:name "Collective biographies of women" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/cerl>
-    rdfs:label "CERL thesaurus" ;
+    schema:name "CERL thesaurus" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/cgndb>
-    rdfs:label "Canadian geographical names database" ;
+    schema:name "Canadian geographical names database" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/clara>
-    rdfs:label "Clara: database of women artists" ;
+    schema:name "Clara: database of women artists" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/cnbksy>
-    rdfs:label "Quan guo bao kan suo yin (CNBKSY)" ;
+    schema:name "Quan guo bao kan suo yin (CNBKSY)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/conccc>
-    rdfs:label "Congress.gov congressional committee codes" ;
+    schema:name "Congress.gov congressional committee codes" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/csfdcz>
-    rdfs:label "Česko-Slovenská filmová databáze" ;
+    schema:name "Česko-Slovenská filmová databáze" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/danacode>
-    rdfs:label "Danacode" ;
+    schema:name "Danacode" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/darome>
-    rdfs:label "Digital atlas of the Roman Empire" ;
+    schema:name "Digital atlas of the Roman Empire" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/datoses>
-    rdfs:label "datos.bne.es" ;
+    schema:name "datos.bne.es" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/discogs>
-    rdfs:label "Discogs" ;
+    schema:name "Discogs" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/dkfilm>
-    rdfs:label "Det Danske Filminstitut Filmdatabasen" ;
+    schema:name "Det Danske Filminstitut Filmdatabasen" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/dma>
-    rdfs:label "Digital musikkarkiv" ;
+    schema:name "Digital musikkarkiv" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/doi>
-    rdfs:label "Digital object identifier" ;
+    schema:name "Digital object identifier" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/dpb>
-    rdfs:label "Dictionnaire des peintres belges" ;
+    schema:name "Dictionnaire des peintres belges" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ean>
-    rdfs:label "International article number" ;
+    schema:name "International article number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ecli>
-    rdfs:label "European case law identifier" ;
+    schema:name "European case law identifier" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/eidr>
-    rdfs:label "EIDR: entertainment identifier registry" ;
+    schema:name "EIDR: entertainment identifier registry" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/elsst>
-    rdfs:label "ELSST thesaurus - European language social science thesaurus" ;
+    schema:name "ELSST thesaurus - European language social science thesaurus" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/emanus-vlid>
-    rdfs:label "Digital platform for manuscript material from Swiss libraries and archives" ;
+    schema:name "Digital platform for manuscript material from Swiss libraries and archives" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/emlo>
-    rdfs:label "Early modern letters online" ;
+    schema:name "Early modern letters online" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/erara-vlid>
-    rdfs:label "The platform for digitized rare books from Swiss institutions" ;
+    schema:name "The platform for digitized rare books from Swiss institutions" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/famsea>
-    rdfs:label "FamilySearch" ;
+    schema:name "FamilySearch" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/fast>
-    rdfs:label "FAST: faceted application of subject terminology" ;
+    schema:name "FAST: faceted application of subject terminology" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/fidecp>
-    rdfs:label "Fide chess profile" ;
+    schema:name "Fide chess profile" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/filmaff>
-    rdfs:label "Film affinity" ;
+    schema:name "Film affinity" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/filmport>
-    rdfs:label "filmportal.de" ;
+    schema:name "filmportal.de" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/findagr>
-    rdfs:label "Find a Grave" ;
+    schema:name "Find a Grave" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/fisa>
-    rdfs:label "FIS athlete" ;
+    schema:name "FIS athlete" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/freebase>
-    rdfs:label "Freebase" ;
+    schema:name "Freebase" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gacsch>
-    rdfs:label "Global agricultural concept space (GACS)" ;
+    schema:name "Global agricultural concept space (GACS)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gec>
-    rdfs:label "Gran enciclopèdia catalana" ;
+    schema:name "Gran enciclopèdia catalana" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gemet>
-    rdfs:label "GEMET thesaurus" ;
+    schema:name "GEMET thesaurus" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/geogndb>
-    rdfs:label "Geographic names database" ;
+    schema:name "Geographic names database" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/geonames>
-    rdfs:label "GeoNames" ;
+    schema:name "GeoNames" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/geprishisp>
-    rdfs:label "GEPRIS Historisch ID (Person)" ;
+    schema:name "GEPRIS Historisch ID (Person)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gettyaat>
-    rdfs:label "Art & architecture theasurus online" ;
+    schema:name "Art & architecture theasurus online" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gettyart>
-    rdfs:label "J. Paul Getty Museum artists" ;
+    schema:name "J. Paul Getty Museum artists" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gettyobj>
-    rdfs:label "J. Paul Getty Museum objects" ;
+    schema:name "J. Paul Getty Museum objects" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gettytgn>
-    rdfs:label "Getty thesaurus of geographic names online" ;
+    schema:name "Getty thesaurus of geographic names online" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gettyulan>
-    rdfs:label "Union list of artist names online" ;
+    schema:name "Union list of artist names online" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gnd>
-    rdfs:label "Gemeinsame Normdatei" ;
+    schema:name "Gemeinsame Normdatei" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gnis>
-    rdfs:label "Geographic names information system (GNIS)" ;
+    schema:name "Geographic names information system (GNIS)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/goodra>
-    rdfs:label "Goodreads authors" ;
+    schema:name "Goodreads authors" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gtaa>
-    rdfs:label "Gemeenschappelijke Thesaurus voor Audiovisuele Archieven" ;
+    schema:name "Gemeenschappelijke Thesaurus voor Audiovisuele Archieven" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/gtin-14>
-    rdfs:label "Global trade identification number 14 (EAN/UCC-128 or ITF-14)" ;
+    schema:name "Global trade identification number 14 (EAN/UCC-128 or ITF-14)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/hdl>
-    rdfs:label "Handle" ;
+    schema:name "Handle" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/iaafa>
-    rdfs:label "World Athletics" ;
+    schema:name "World Athletics" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ibdb>
-    rdfs:label "IBDB: Internet Broadway database" ;
+    schema:name "IBDB: Internet Broadway database" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/iconauth>
-    rdfs:label "Iconography authority" ;
+    schema:name "Iconography authority" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/iconclass>
-    rdfs:label "Iconclass" ;
+    schema:name "Iconclass" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/idref>
-    rdfs:label "IdRef: identifiants et référentiels" ;
+    schema:name "IdRef: identifiants et référentiels" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ilot>
-    rdfs:label "ILO Thesaurus" ;
+    schema:name "ILO Thesaurus" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/imdb>
-    rdfs:label "IMDB: Internet Movie Database" ;
+    schema:name "IMDB: Internet Movie Database" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/inspire>
-    rdfs:label "INSPIRE HEP" ;
+    schema:name "INSPIRE HEP" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isan>
-    rdfs:label "International standard audiovisual number" ;
+    schema:name "International standard audiovisual number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isbn>
-    rdfs:label "International standard book number" ;
+    schema:name "International standard book number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isbn-a>
-    rdfs:label "International standard book number (the actionable ISBN)" ;
+    schema:name "International standard book number (the actionable ISBN)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isbnre>
-    rdfs:label "ISBN (International Standard Book Number) registrant element" ;
+    schema:name "ISBN (International Standard Book Number) registrant element" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isbnsbn>
-    rdfs:label "Identificativo SBN" ;
+    schema:name "Identificativo SBN" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isfdbau>
-    rdfs:label "ISFDB author directory" ;
+    schema:name "ISFDB author directory" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isfdbaw>
-    rdfs:label "ISFDB award directory" ;
+    schema:name "ISFDB award directory" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isfdbma>
-    rdfs:label "ISFDB magazine directory" ;
+    schema:name "ISFDB magazine directory" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isfdbpu>
-    rdfs:label "ISFDB publisher directory" ;
+    schema:name "ISFDB publisher directory" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isil>
-    rdfs:label "ISIL (International standard identifier for libraries and related organizations)" ;
+    schema:name "ISIL (International standard identifier for libraries and related organizations)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ismm>
-    rdfs:label "International standard music number" ;
+    schema:name "International standard music number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isni>
-    rdfs:label "International standard name identifier" ;
+    schema:name "International standard name identifier" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/iso>
-    rdfs:label "International Organization for Standardization number for an ISO standard" ;
+    schema:name "International Organization for Standardization number for an ISO standard" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/isrc>
-    rdfs:label "International standard recording code" ;
+    schema:name "International standard recording code" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/issn>
-    rdfs:label "International standard serial number" ;
+    schema:name "International standard serial number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/issn-l>
-    rdfs:label "Linking International standard serial number" ;
+    schema:name "Linking International standard serial number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/issue-number>
-    rdfs:label "Sound recording issue number" ;
+    schema:name "Sound recording issue number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/istc>
-    rdfs:label "International standard text code" ;
+    schema:name "International standard text code" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/iswc>
-    rdfs:label "International standard musical work code" ;
+    schema:name "International standard musical work code" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/it-acnp>
-    rdfs:label "Catalogo italiano dei periodici" ;
+    schema:name "Catalogo italiano dei periodici" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/itar>
-    rdfs:label "ITAR (Importtjeneste og autoritetsregistre)" ;
+    schema:name "ITAR (Importtjeneste og autoritetsregistre)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/kaken>
-    rdfs:label "Researcher Number of the Grants-in-Aid for Scientific Research (KAKENHI) Program" ;
+    schema:name "Researcher Number of the Grants-in-Aid for Scientific Research (KAKENHI) Program" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/kda>
-    rdfs:label "Kunstindeks Danmark artist" ;
+    schema:name "Kunstindeks Danmark artist" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/kdw>
-    rdfs:label "Kunstindeks Danmark work" ;
+    schema:name "Kunstindeks Danmark work" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/kinopo>
-    rdfs:label "KinoPoisk" ;
+    schema:name "KinoPoisk" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/knpam>
-    rdfs:label "Russian National Heritage Registry for Books" ;
+    schema:name "Russian National Heritage Registry for Books" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ktga>
-    rdfs:label "Author ID of the Union Catalogue Database of Japanese Texts" ;
+    schema:name "Author ID of the Union Catalogue Database of Japanese Texts" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ktgw>
-    rdfs:label "Work ID of the Union Catalogue Database of Japanese Texts" ;
+    schema:name "Work ID of the Union Catalogue Database of Japanese Texts" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/kulturnav>
-    rdfs:label "Kulturnav" ;
+    schema:name "Kulturnav" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/lattes>
-    rdfs:label "Curriculo Lattes" ;
+    schema:name "Curriculo Lattes" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/lccn>
-    rdfs:label "Library of Congress control number" ;
+    schema:name "Library of Congress control number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/lcmd>
-    rdfs:label "Library of Congress Manuscript Division field of history codes" ;
+    schema:name "Library of Congress Manuscript Division field of history codes" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/lei>
-    rdfs:label "Legal entity identifier system" ;
+    schema:name "Legal entity identifier system" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/libaus>
-    rdfs:label "Libraries Australia" ;
+    schema:name "Libraries Australia" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/local>
-    rdfs:label "Locally defined identifier" ;
+    schema:name "Locally defined identifier" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/manto>
-    rdfs:label "MANTO" ;
+    schema:name "MANTO" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/margaz>
-    rdfs:label "Marine Gazetteer" ;
+    schema:name "Marine Gazetteer" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/matrix-number>
-    rdfs:label "Sound recording matrix number" ;
+    schema:name "Sound recording matrix number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/mesh>
-    rdfs:label "Medical Subject Headings" ;
+    schema:name "Medical Subject Headings" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/mocofo>
-    rdfs:label "Musée d'Orsay Catalogue des oeuvres fiche oeuvre" ;
+    schema:name "Musée d'Orsay Catalogue des oeuvres fiche oeuvre" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/moma>
-    rdfs:label "Museum of Modern Art" ;
+    schema:name "Museum of Modern Art" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/morana>
-    rdfs:label "Musée d'Orsay Répertoire des artistes notice artiste" ;
+    schema:name "Musée d'Orsay Répertoire des artistes notice artiste" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/moviemetf>
-    rdfs:label "MovieMeter films" ;
+    schema:name "MovieMeter films" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/moviemetr>
-    rdfs:label "MovieMeter regisseurs" ;
+    schema:name "MovieMeter regisseurs" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/munzing>
-    rdfs:label "Munzinger" ;
+    schema:name "Munzinger" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/muscl>
-    rdfs:label "Music Sales Classical" ;
+    schema:name "Music Sales Classical" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/music-plate>
-    rdfs:label "Publisher's music plate number" ;
+    schema:name "Publisher's music plate number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/music-publisher>
-    rdfs:label "Publisher-assigned music number" ;
+    schema:name "Publisher-assigned music number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/musicb>
-    rdfs:label "MusicBrainz" ;
+    schema:name "MusicBrainz" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/nacat>
-    rdfs:label "National Archives Catalog" ;
+    schema:name "National Archives Catalog" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/nagv>
-    rdfs:label "The National Archives (Great Britain)" ;
+    schema:name "The National Archives (Great Britain)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/natgazfid>
-    rdfs:label "U.S. National Gazetteer Feature Name Identifier" ;
+    schema:name "U.S. National Gazetteer Feature Name Identifier" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/nga>
-    rdfs:label "National Gallery of Art" ;
+    schema:name "National Gallery of Art" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ngva>
-    rdfs:label "National Gallery of Victoria artist" ;
+    schema:name "National Gallery of Victoria artist" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ngvw>
-    rdfs:label "National Gallery of Victoria work" ;
+    schema:name "National Gallery of Victoria work" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/nii>
-    rdfs:label "Author Authority ID of NACSIS-CAT" ;
+    schema:name "Author Authority ID of NACSIS-CAT" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/nipo>
-    rdfs:label "NIPO (Número de Identificación de las Publicaciones Oficiales)" ;
+    schema:name "NIPO (Número de Identificación de las Publicaciones Oficiales)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/nlg>
-    rdfs:label "National Library of Greece" ;
+    schema:name "National Library of Greece" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/nndb>
-    rdfs:label "NNDB (Notable Names Database)" ;
+    schema:name "NNDB (Notable Names Database)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/npg>
-    rdfs:label "National Portrait Gallery" ;
+    schema:name "National Portrait Gallery" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/nstc>
-    rdfs:label "National Standard Text Code" ;
+    schema:name "National Standard Text Code" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/nzggn>
-    rdfs:label "New Zealand gazetteer of place names" ;
+    schema:name "New Zealand gazetteer of place names" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/oalex>
-    rdfs:label "OpenAlex" ;
+    schema:name "OpenAlex" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/odnb>
-    rdfs:label "Oxford Dictionary of National Biography" ;
+    schema:name "Oxford Dictionary of National Biography" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ofdb>
-    rdfs:label "OFDb: Online-Filmdatenbank" ;
+    schema:name "OFDb: Online-Filmdatenbank" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/onix>
-    rdfs:label "ONIX (Online Information Exchange)" ;
+    schema:name "ONIX (Online Information Exchange)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/opensm>
-    rdfs:label "OpenStreetMap" ;
+    schema:name "OpenStreetMap" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/orcid>
-    rdfs:label "Open researcher and contributor identifier" ;
+    schema:name "Open researcher and contributor identifier" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/orgnr>
-    rdfs:label "Norwegian national organization number" ;
+    schema:name "Norwegian national organization number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/oxforddnb>
-    rdfs:label "Oxford biography index" ;
+    schema:name "Oxford biography index" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/pcadbu>
-    rdfs:label "Pacific Coast Architecture Database - buildings list" ;
+    schema:name "Pacific Coast Architecture Database - buildings list" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/pcadpe>
-    rdfs:label "Pacific Coast Architecture Database - persons list" ;
+    schema:name "Pacific Coast Architecture Database - persons list" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/pcadpf>
-    rdfs:label "Pacific Coast Architecture Database - practices and firms" ;
+    schema:name "Pacific Coast Architecture Database - practices and firms" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/permid>
-    rdfs:label "PermID" ;
+    schema:name "PermID" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/picnypl>
-    rdfs:label "PIC - Photographers' Identities Catalog" ;
+    schema:name "PIC - Photographers' Identities Catalog" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/pleiades>
-    rdfs:label "Pleiades: a gazetteer of past places" ;
+    schema:name "Pleiades: a gazetteer of past places" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/pmc>
-    rdfs:label "PubMed Central" ;
+    schema:name "PubMed Central" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/pmid>
-    rdfs:label "PubMed" ;
+    schema:name "PubMed" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/pnta>
-    rdfs:label "Personen uit de Nederlandse Thesaurus van Auteursnamen" ;
+    schema:name "Personen uit de Nederlandse Thesaurus van Auteursnamen" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/porthu>
-    rdfs:label "PORT.hu" ;
+    schema:name "PORT.hu" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/prabook>
-    rdfs:label "Prabook" ;
+    schema:name "Prabook" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/rid>
-    rdfs:label "ResearcherID" ;
+    schema:name "ResearcherID" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/rijkspid>
-    rdfs:label "Rijksmuseum persistent identifiers" ;
+    schema:name "Rijksmuseum persistent identifiers" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/rism>
-    rdfs:label "Repertoire International des Sources Musicale (RISM)" ;
+    schema:name "Repertoire International des Sources Musicale (RISM)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/rkda>
-    rdfs:label "RKDartists" ;
+    schema:name "RKDartists" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ror>
-    rdfs:label "Research Organization Registry" ;
+    schema:name "Research Organization Registry" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/s2a3bd>
-    rdfs:label "S2A3 biographical database of southern African science" ;
+    schema:name "S2A3 biographical database of southern African science" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/saam>
-    rdfs:label "Smithsonian American Art Museum" ;
+    schema:name "Smithsonian American Art Museum" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/scholaru>
-    rdfs:label "Scholar Universe" ;
+    schema:name "Scholar Universe" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/scope>
-    rdfs:label "Scope" ;
+    schema:name "Scope" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/scopus>
-    rdfs:label "Scopus author identifier" ;
+    schema:name "Scopus author identifier" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/sici>
-    rdfs:label "Serial item and contribution identifier" ;
+    schema:name "Serial item and contribution identifier" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/smgp>
-    rdfs:label "Science Museum Group People" ;
+    schema:name "Science Museum Group People" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/snac>
-    rdfs:label "Social Networks and Archival Context" ;
+    schema:name "Social Networks and Archival Context" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/spotify>
-    rdfs:label "Spotify" ;
+    schema:name "Spotify" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/sprfbsb>
-    rdfs:label "Sports Reference: Baseball" ;
+    schema:name "Sports Reference: Baseball" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/sprfbsk>
-    rdfs:label "Sports Reference: Basketball" ;
+    schema:name "Sports Reference: Basketball" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/sprfcbb>
-    rdfs:label "Sports Reference: College Basketball" ;
+    schema:name "Sports Reference: College Basketball" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/sprfcfb>
-    rdfs:label "Sports Reference: College Football" ;
+    schema:name "Sports Reference: College Football" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/sprfhoc>
-    rdfs:label "Sports Reference: Hockey" ;
+    schema:name "Sports Reference: Hockey" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/sprfoly>
-    rdfs:label "Sports Reference: Olympic Sports" ;
+    schema:name "Sports Reference: Olympic Sports" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/sprfpfb>
-    rdfs:label "Sports Reference: Pro Football" ;
+    schema:name "Sports Reference: Pro Football" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/ssaut>
-    rdfs:label "Semantic Scholar (Author)" ;
+    schema:name "Semantic Scholar (Author)" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/stock-number>
-    rdfs:label "Publisher, distributor, or vendor stock number" ;
+    schema:name "Publisher, distributor, or vendor stock number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/strn>
-    rdfs:label "Standard technical report number" ;
+    schema:name "Standard technical report number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/stw>
-    rdfs:label "Standard-Thesaurus Wirtschaft = STW thesaurus for economics" ;
+    schema:name "Standard-Thesaurus Wirtschaft = STW thesaurus for economics" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/svfilm>
-    rdfs:label "Svensk Filmdatabas" ;
+    schema:name "Svensk Filmdatabas" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/tatearid>
-    rdfs:label "Tate artist identifier" ;
+    schema:name "Tate artist identifier" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/theatr>
-    rdfs:label "Theatricalia" ;
+    schema:name "Theatricalia" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/tpce>
-    rdfs:label "Tesauros del Patrimonio Cultural de España" ;
+    schema:name "Tesauros del Patrimonio Cultural de España" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/trove>
-    rdfs:label "Trove" ;
+    schema:name "Trove" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/twnaf>
-    rdfs:label "Taiwan name authority file" ;
+    schema:name "Taiwan name authority file" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/unescot>
-    rdfs:label "UNESCO thesaurus = Thésaurus de l'UNESCO = Tesauro de la UNESCO" ;
+    schema:name "UNESCO thesaurus = Thésaurus de l'UNESCO = Tesauro de la UNESCO" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/upc>
-    rdfs:label "Universal product code" ;
+    schema:name "Universal product code" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/urbe>
-    rdfs:label "Parsifal" ;
+    schema:name "Parsifal" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/uri>
-    rdfs:label "Uniform resource identifier" ;
+    schema:name "Uniform resource identifier" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/urn>
-    rdfs:label "Uniform resource name" ;
+    schema:name "Uniform resource name" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/vd16>
-    rdfs:label "Verzeichnis der Drucke des 16. Jahrhunderts" ;
+    schema:name "Verzeichnis der Drucke des 16. Jahrhunderts" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/vd17>
-    rdfs:label "Verzeichnis der Drucke des 17. Jahrhunderts" ;
+    schema:name "Verzeichnis der Drucke des 17. Jahrhunderts" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/vd18>
-    rdfs:label "Verzeichnis der Drucke des 18. Jahrhunderts" ;
+    schema:name "Verzeichnis der Drucke des 18. Jahrhunderts" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/vera>
-    rdfs:label "Danish Authority File" ;
+    schema:name "Danish Authority File" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/vgmdb>
-    rdfs:label "VGMdb artists" ;
+    schema:name "VGMdb artists" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/viaf>
-    rdfs:label "Virtual International Authority File number" ;
+    schema:name "Virtual International Authority File number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/videorecording-identifer>
-    rdfs:label "Publisher-assigned videorecording number" ;
+    schema:name "Publisher-assigned videorecording number" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/wikidata>
-    rdfs:label "Wikidata" ;
+    schema:name "Wikidata" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/wndla>
-    rdfs:label "Web NDL authorities" ;
+    schema:name "Web NDL authorities" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/worldcat>
-    rdfs:label "WorldCat Entities" ;
+    schema:name "WorldCat Entities" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/xgamea>
-    rdfs:label "X Games athletes" ;
+    schema:name "X Games athletes" ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/zbaut>
-    rdfs:label "ZooBank" ;
+    schema:name "ZooBank" ;
 .

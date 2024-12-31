@@ -3,364 +3,364 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 
 <http://www.opengis.net/ont/geosparql>
-    rdfs:label "GeoSPARQL Ontology" ;
     rdfs:seeAlso <http://www.opengis.net/doc/IS/geosparql/1.1> ;
     schema:description "An RDF/OWL vocabulary for representing spatial information"@en ;
+    schema:name "GeoSPARQL Ontology" ;
 .
 
 geo:Feature
-    rdfs:label "Feature"@en ;
     schema:description "A discrete spatial phenomenon in a universe of discourse."@en ;
+    schema:name "Feature"@en ;
 .
 
 geo:FeatureCollection
-    rdfs:label "Feature Collection"@en ;
     schema:description "The class Feature Collection represents any collection of individual Features."@en ;
+    schema:name "Feature Collection"@en ;
 .
 
 geo:Geometry
-    rdfs:label "Geometry"@en ;
     schema:description "A coherent set of direct positions in Euclidian space. A direct position holds the coordinates for a position within a Coordinate Reference System (CRS)."@en ;
+    schema:name "Geometry"@en ;
 .
 
 geo:GeometryCollection
-    rdfs:label "Geometry Collection"@en ;
     schema:description "The class Geometry Collection represents any collection of individual Geometries."@en ;
+    schema:name "Geometry Collection"@en ;
 .
 
 geo:SpatialObject
-    rdfs:label "Spatial Object"@en ;
     schema:description "Anything spatial (having or being a shape, position or an extent)."@en ;
+    schema:name "Spatial Object"@en ;
 .
 
 geo:SpatialObjectCollection
-    rdfs:label "Spatial Object Collection"@en ;
     schema:description "The class Spatial Object Collection represents any collection of individual Spatial Objects. It is superclass of Feature Collection and Geometry Collection."@en ;
+    schema:name "Spatial Object Collection"@en ;
 .
 
 geo:asDGGS
-    rdfs:label "as DGGS"@en ;
     schema:description "The Discrete Global Grid System (DGGS) serialization of a Geometry"@en ;
+    schema:name "as DGGS"@en ;
 .
 
 geo:asGML
-    rdfs:label "as GML"@en ;
     schema:description "The GML serialization of a Geometry"@en ;
+    schema:name "as GML"@en ;
 .
 
 geo:asGeoJSON
-    rdfs:label "as GeoJSON"@en ;
     rdfs:seeAlso <https://tools.ietf.org/html/rfc7946> ;
     schema:description "The GeoJSON serialization of a Geometry"@en ;
+    schema:name "as GeoJSON"@en ;
 .
 
 geo:asKML
-    rdfs:label "as KML"@en ;
     rdfs:seeAlso <https://www.ogc.org/standards/kml> ;
     schema:description "The KML serialization of a Geometry"@en ;
+    schema:name "as KML"@en ;
 .
 
 geo:asWKT
-    rdfs:label "as WKT"@en ;
     schema:description "The WKT serialization of a Geometry"@en ;
+    schema:name "as WKT"@en ;
 .
 
 geo:coordinateDimension
-    rdfs:label "coordinate dimension"@en ;
     schema:description "The number of measurements or axes needed to describe the position of this Geometry in a coordinate system."@en ;
+    schema:name "coordinate dimension"@en ;
 .
 
 geo:defaultGeometry
-    rdfs:label "default geometry"@en ;
     schema:description "The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry."@en ;
+    schema:name "default geometry"@en ;
 .
 
 geo:dggsLiteral
-    rdfs:label "DGGS Literal"@en ;
     rdfs:seeAlso <http://www.opengis.net/doc/AS/dggs/2.0> ;
     schema:description "A textual serialization of a Discrete Global Grid (DGGS) Geometry object."@en ;
+    schema:name "DGGS Literal"@en ;
 .
 
 geo:dimension
-    rdfs:label "dimension"@en ;
     schema:description "The topological dimension of this geometric object, which must be less than or equal to the coordinate dimension. In non-homogeneous collections, this will return the largest topological dimension of the contained objects."@en ;
+    schema:name "dimension"@en ;
 .
 
 geo:ehContains
-    rdfs:label "contains"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*TFF*FF*"@en ;
+    schema:name "contains"@en ;
 .
 
 geo:ehCoveredBy
-    rdfs:label "covered by"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject is spatially covered by the object SpatialObject. DE-9IM: TFF*TFT**"@en ;
+    schema:name "covered by"@en ;
 .
 
 geo:ehCovers
-    rdfs:label "covers"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially covers the object SpatialObject. DE-9IM: T*TFT*FF*"@en ;
+    schema:name "covers"@en ;
 .
 
 geo:ehDisjoint
-    rdfs:label "disjoint"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FF*FF****"@en ;
+    schema:name "disjoint"@en ;
 .
 
 geo:ehEquals
-    rdfs:label "equals"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT"@en ;
+    schema:name "equals"@en ;
 .
 
 geo:ehInside
-    rdfs:label "inside"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject is spatially inside the object SpatialObject. DE-9IM: TFF*FFT**"@en ;
+    schema:name "inside"@en ;
 .
 
 geo:ehMeet
-    rdfs:label "meet"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially meets the object SpatialObject. DE-9IM: FT******* ^ F**T***** ^ F***T****"@en ;
+    schema:name "meet"@en ;
 .
 
 geo:ehOverlap
-    rdfs:label "overlap"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: T*T***T**"@en ;
+    schema:name "overlap"@en ;
 .
 
 geo:geoJSONLiteral
-    rdfs:label "GeoJSON Literal"@en ;
     rdfs:seeAlso <https://tools.ietf.org/html/rfc7946> ;
     schema:description "A GeoJSON serialization of a Geometry object."@en ;
+    schema:name "GeoJSON Literal"@en ;
 .
 
 geo:gmlLiteral
-    rdfs:label "GML Literal"@en ;
     rdfs:seeAlso <https://portal.ogc.org/files/?artifact_id=20509> ;
     schema:description "A GML serialization of a Geometry object."@en ;
+    schema:name "GML Literal"@en ;
 .
 
 geo:hasArea
-    rdfs:label "has area"@en ;
     schema:description "The area of a Spatial Object."@en ;
+    schema:name "has area"@en ;
 .
 
 geo:hasBoundingBox
-    rdfs:label "has bounding box"@en ;
     schema:description "The minimum or smallest bounding or enclosing box of a given Feature."@en ;
+    schema:name "has bounding box"@en ;
 .
 
 geo:hasCentroid
-    rdfs:label "has centroid"@en ;
     schema:description "The arithmetic mean position of all the Geometry points of a given Feature."@en ;
+    schema:name "has centroid"@en ;
 .
 
 geo:hasDefaultGeometry
-    rdfs:label "has default geometry"@en ;
     schema:description "The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry."@en ;
+    schema:name "has default geometry"@en ;
 .
 
 geo:hasGeometry
-    rdfs:label "has geometry"@en ;
     schema:description "A spatial representation for a given Feature."@en ;
+    schema:name "has geometry"@en ;
 .
 
 geo:hasLength
-    rdfs:label "has length"@en ;
     schema:description "The length of a Spatial Object."@en ;
+    schema:name "has length"@en ;
 .
 
 geo:hasMetricArea
-    rdfs:label "has area in square meters"@en ;
     schema:description "The area of a Spatial Object in square meters."@en ;
+    schema:name "has area in square meters"@en ;
 .
 
 geo:hasMetricLength
-    rdfs:label "has length in meters"@en ;
     schema:description "The length of a Spatial Object in meters."@en ;
+    schema:name "has length in meters"@en ;
 .
 
 geo:hasMetricPerimeterLength
-    rdfs:label "has perimeter length in meters"@en ;
     schema:description "The length of the perimeter of a Spatial Object in meters."@en ;
+    schema:name "has perimeter length in meters"@en ;
 .
 
 geo:hasMetricSize
-    rdfs:label "has metric size"@en ;
     schema:description "Subproperties of this property are used to indicate the size of a Spatial Object, as a measurement or estimate of one or more dimensions of the Spatial Object's spatial presence. Units are always metric (meter, square meter or cubic meter)."@en ;
+    schema:name "has metric size"@en ;
 .
 
 geo:hasMetricSpatialAccuracy
-    rdfs:label "has spatial accuracy in meters"@en ;
     schema:description "The positional accuracy of the coordinates of a Geometry in meters."@en ;
+    schema:name "has spatial accuracy in meters"@en ;
 .
 
 geo:hasMetricSpatialResolution
-    rdfs:label "has spatial resolution in meters"@en ;
     schema:description "The spatial resolution of a Geometry in meters."@en ;
+    schema:name "has spatial resolution in meters"@en ;
 .
 
 geo:hasMetricVolume
-    rdfs:label "has volume in cubic meters"@en ;
     schema:description "The volume of a Spatial Object in cubic meters."@en ;
+    schema:name "has volume in cubic meters"@en ;
 .
 
 geo:hasPerimeterLength
-    rdfs:label "has perimeter length"@en ;
     schema:description "The length of the perimeter of a Spatial Object."@en ;
+    schema:name "has perimeter length"@en ;
 .
 
 geo:hasSerialization
-    rdfs:label "has serialization"@en ;
     schema:description "Connects a Geometry object with its text-based serialization."@en ;
+    schema:name "has serialization"@en ;
 .
 
 geo:hasSize
-    rdfs:label "has size"@en ;
     schema:description "Subproperties of this property are used to indicate the size of a Spatial Object as a measurement or estimate of one or more dimensions of the Spatial Object's spatial presence."@en ;
+    schema:name "has size"@en ;
 .
 
 geo:hasSpatialAccuracy
-    rdfs:label "has spatial accuracy"@en ;
     schema:description "The positional accuracy of the coordinates of a Geometry."@en ;
+    schema:name "has spatial accuracy"@en ;
 .
 
 geo:hasSpatialResolution
-    rdfs:label "has spatial resolution"@en ;
     schema:description "The spatial resolution of a Geometry."@en ;
+    schema:name "has spatial resolution"@en ;
 .
 
 geo:hasVolume
-    rdfs:label "has volume"@en ;
     schema:description "The volume of a three-dimensional Spatial Object."@en ;
+    schema:name "has volume"@en ;
 .
 
 geo:isEmpty
-    rdfs:label "is empty"@en ;
     schema:description "(true) if this geometric object is the empty Geometry. If true, then this geometric object represents the empty point set for the coordinate space."@en ;
+    schema:name "is empty"@en ;
 .
 
 geo:isSimple
-    rdfs:label "is simple"@en ;
     rdfs:seeAlso <https://portal.ogc.org/files/?artifact_id=25355> ;
     schema:description "(true) if this geometric object has no anomalous geometric points, such as self intersection or self tangency."@en ;
+    schema:name "is simple"@en ;
 .
 
 geo:kmlLiteral
-    rdfs:label "KML Literal"@en ;
     rdfs:seeAlso <https://www.ogc.org/standards/kml/> ;
     schema:description "A KML serialization of a Geometry object."@en ;
+    schema:name "KML Literal"@en ;
 .
 
 geo:rcc8dc
-    rdfs:label "disconnected"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FFTFFTTTT"@en ;
+    schema:name "disconnected"@en ;
 .
 
 geo:rcc8ec
-    rdfs:label "externally connected"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially meets the object SpatialObject. DE-9IM: FFTFTTTTT"@en ;
+    schema:name "externally connected"@en ;
 .
 
 geo:rcc8eq
-    rdfs:label "equals"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT"@en ;
+    schema:name "equals"@en ;
 .
 
 geo:rcc8ntpp
-    rdfs:label "non-tangential proper part"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject is spatially inside the object SpatialObject. DE-9IM: TFFTFFTTT"@en ;
+    schema:name "non-tangential proper part"@en ;
 .
 
 geo:rcc8ntppi
-    rdfs:label "non-tangential proper part inverse"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: TTTFFTFFT"@en ;
+    schema:name "non-tangential proper part inverse"@en ;
 .
 
 geo:rcc8po
-    rdfs:label "partially overlapping"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: TTTTTTTTT"@en ;
+    schema:name "partially overlapping"@en ;
 .
 
 geo:rcc8tpp
-    rdfs:label "tangential proper part"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject is spatially covered by the object SpatialObject. DE-9IM: TFFTTFTTT"@en ;
+    schema:name "tangential proper part"@en ;
 .
 
 geo:rcc8tppi
-    rdfs:label "tangential proper part inverse"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially covers the object SpatialObject. DE-9IM: TTTFTTFFT"@en ;
+    schema:name "tangential proper part inverse"@en ;
 .
 
 geo:sfContains
-    rdfs:label "contains"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"@en ;
+    schema:name "contains"@en ;
 .
 
 geo:sfCrosses
-    rdfs:label "crosses"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially crosses the object SpatialObject. DE-9IM: T*T******"@en ;
+    schema:name "crosses"@en ;
 .
 
 geo:sfDisjoint
-    rdfs:label "disjoint"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FF*FF****"@en ;
+    schema:name "disjoint"@en ;
 .
 
 geo:sfEquals
-    rdfs:label "equals"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT"@en ;
+    schema:name "equals"@en ;
 .
 
 geo:sfIntersects
-    rdfs:label "intersects"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject is not spatially disjoint from the object SpatialObject. DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T****"@en ;
+    schema:name "intersects"@en ;
 .
 
 geo:sfOverlaps
-    rdfs:label "overlaps"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: T*T***T**"@en ;
+    schema:name "overlaps"@en ;
 .
 
 geo:sfTouches
-    rdfs:label "touches"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject spatially touches the object SpatialObject. DE-9IM: FT******* ^ F**T***** ^ F***T****"@en ;
+    schema:name "touches"@en ;
 .
 
 geo:sfWithin
-    rdfs:label "within"@en ;
     rdfs:seeAlso <http://dbpedia.org/resource/DE-9IM> ;
     schema:description "States that the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"@en ;
+    schema:name "within"@en ;
 .
 
 geo:spatialDimension
-    rdfs:label "spatial dimension"@en ;
     schema:description "The number of measurements or axes needed to describe the spatial position of this Geometry in a coordinate system."@en ;
+    schema:name "spatial dimension"@en ;
 .
 
 geo:wktLiteral
-    rdfs:label "Well-known Text Literal"@en ;
     rdfs:seeAlso <https://portal.ogc.org/files/?artifact_id=25355> ;
     schema:description "A Well-known Text serialization of a Geometry object."@en ;
+    schema:name "Well-known Text Literal"@en ;
 .

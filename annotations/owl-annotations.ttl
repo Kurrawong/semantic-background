@@ -27,386 +27,386 @@ PREFIX schema: <https://schema.org/>
 .
 
 owl:AllDifferent
-    rdfs:label "AllDifferent" ;
     schema:description "The class of collections of pairwise different individuals." ;
+    schema:name "AllDifferent" ;
 .
 
 owl:AllDisjointClasses
-    rdfs:label "AllDisjointClasses" ;
     schema:description "The class of collections of pairwise disjoint classes." ;
+    schema:name "AllDisjointClasses" ;
 .
 
 owl:AllDisjointProperties
-    rdfs:label "AllDisjointProperties" ;
     schema:description "The class of collections of pairwise disjoint properties." ;
+    schema:name "AllDisjointProperties" ;
 .
 
 owl:Annotation
-    rdfs:label "Annotation" ;
     schema:description "The class of annotated annotations for which the RDF serialization consists of an annotated subject, predicate and object." ;
+    schema:name "Annotation" ;
 .
 
 owl:AnnotationProperty
-    rdfs:label "AnnotationProperty" ;
     schema:description "The class of annotation properties." ;
+    schema:name "AnnotationProperty" ;
 .
 
 owl:AsymmetricProperty
-    rdfs:label "AsymmetricProperty" ;
     schema:description "The class of asymmetric properties." ;
+    schema:name "AsymmetricProperty" ;
 .
 
 owl:Axiom
-    rdfs:label "Axiom" ;
     schema:description "The class of annotated axioms for which the RDF serialization consists of an annotated subject, predicate and object." ;
+    schema:name "Axiom" ;
 .
 
 owl:Class
-    rdfs:label "Class" ;
     schema:description "The class of OWL classes." ;
+    schema:name "Class" ;
 .
 
 owl:DataRange
-    rdfs:label "DataRange" ;
     schema:description "The class of OWL data ranges, which are special kinds of datatypes. Note: The use of the IRI owl:DataRange has been deprecated as of OWL 2. The IRI rdfs:Datatype SHOULD be used instead." ;
+    schema:name "DataRange" ;
 .
 
 owl:DatatypeProperty
-    rdfs:label "DatatypeProperty" ;
     schema:description "The class of data properties." ;
+    schema:name "DatatypeProperty" ;
 .
 
 owl:DeprecatedClass
-    rdfs:label "DeprecatedClass" ;
     schema:description "The class of deprecated classes." ;
+    schema:name "DeprecatedClass" ;
 .
 
 owl:DeprecatedProperty
-    rdfs:label "DeprecatedProperty" ;
     schema:description "The class of deprecated properties." ;
+    schema:name "DeprecatedProperty" ;
 .
 
 owl:FunctionalProperty
-    rdfs:label "FunctionalProperty" ;
     schema:description "The class of functional properties." ;
+    schema:name "FunctionalProperty" ;
 .
 
 owl:InverseFunctionalProperty
-    rdfs:label "InverseFunctionalProperty" ;
     schema:description "The class of inverse-functional properties." ;
+    schema:name "InverseFunctionalProperty" ;
 .
 
 owl:IrreflexiveProperty
-    rdfs:label "IrreflexiveProperty" ;
     schema:description "The class of irreflexive properties." ;
+    schema:name "IrreflexiveProperty" ;
 .
 
 owl:NamedIndividual
-    rdfs:label "NamedIndividual" ;
     schema:description "The class of named individuals." ;
+    schema:name "NamedIndividual" ;
 .
 
 owl:NegativePropertyAssertion
-    rdfs:label "NegativePropertyAssertion" ;
     schema:description "The class of negative property assertions." ;
+    schema:name "NegativePropertyAssertion" ;
 .
 
 owl:Nothing
-    rdfs:label "Nothing" ;
     schema:description "This is the empty class." ;
+    schema:name "Nothing" ;
 .
 
 owl:ObjectProperty
-    rdfs:label "ObjectProperty" ;
     schema:description "The class of object properties." ;
+    schema:name "ObjectProperty" ;
 .
 
 owl:Ontology
-    rdfs:label "Ontology" ;
     schema:description "The class of ontologies." ;
+    schema:name "Ontology" ;
 .
 
 owl:OntologyProperty
-    rdfs:label "OntologyProperty" ;
     schema:description "The class of ontology properties." ;
+    schema:name "OntologyProperty" ;
 .
 
 owl:ReflexiveProperty
-    rdfs:label "ReflexiveProperty" ;
     schema:description "The class of reflexive properties." ;
+    schema:name "ReflexiveProperty" ;
 .
 
 owl:Restriction
-    rdfs:label "Restriction" ;
     schema:description "The class of property restrictions." ;
+    schema:name "Restriction" ;
 .
 
 owl:SymmetricProperty
-    rdfs:label "SymmetricProperty" ;
     schema:description "The class of symmetric properties." ;
+    schema:name "SymmetricProperty" ;
 .
 
 owl:Thing
-    rdfs:label "Thing" ;
     schema:description "The class of OWL individuals." ;
+    schema:name "Thing" ;
 .
 
 owl:TransitiveProperty
-    rdfs:label "TransitiveProperty" ;
     schema:description "The class of transitive properties." ;
+    schema:name "TransitiveProperty" ;
 .
 
 owl:allValuesFrom
-    rdfs:label "allValuesFrom" ;
     schema:description "The property that determines the class that a universal property restriction refers to." ;
+    schema:name "allValuesFrom" ;
 .
 
 owl:annotatedProperty
-    rdfs:label "annotatedProperty" ;
     schema:description "The property that determines the predicate of an annotated axiom or annotated annotation." ;
+    schema:name "annotatedProperty" ;
 .
 
 owl:annotatedSource
-    rdfs:label "annotatedSource" ;
     schema:description "The property that determines the subject of an annotated axiom or annotated annotation." ;
+    schema:name "annotatedSource" ;
 .
 
 owl:annotatedTarget
-    rdfs:label "annotatedTarget" ;
     schema:description "The property that determines the object of an annotated axiom or annotated annotation." ;
+    schema:name "annotatedTarget" ;
 .
 
 owl:assertionProperty
-    rdfs:label "assertionProperty" ;
     schema:description "The property that determines the predicate of a negative property assertion." ;
+    schema:name "assertionProperty" ;
 .
 
 owl:backwardCompatibleWith
-    rdfs:label "backwardCompatibleWith" ;
     schema:description "The annotation property that indicates that a given ontology is backward compatible with another ontology." ;
+    schema:name "backwardCompatibleWith" ;
 .
 
 owl:bottomDataProperty
-    rdfs:label "bottomDataProperty" ;
     schema:description "The data property that does not relate any individual to any data value." ;
+    schema:name "bottomDataProperty" ;
 .
 
 owl:bottomObjectProperty
-    rdfs:label "bottomObjectProperty" ;
     schema:description "The object property that does not relate any two individuals." ;
+    schema:name "bottomObjectProperty" ;
 .
 
 owl:cardinality
-    rdfs:label "cardinality" ;
     schema:description "The property that determines the cardinality of an exact cardinality restriction." ;
+    schema:name "cardinality" ;
 .
 
 owl:complementOf
-    rdfs:label "complementOf" ;
     schema:description "The property that determines that a given class is the complement of another class." ;
+    schema:name "complementOf" ;
 .
 
 owl:datatypeComplementOf
-    rdfs:label "datatypeComplementOf" ;
     schema:description "The property that determines that a given data range is the complement of another data range with respect to the data domain." ;
+    schema:name "datatypeComplementOf" ;
 .
 
 owl:deprecated
-    rdfs:label "deprecated" ;
     schema:description "The annotation property that indicates that a given entity has been deprecated." ;
+    schema:name "deprecated" ;
 .
 
 owl:differentFrom
-    rdfs:label "differentFrom" ;
     schema:description "The property that determines that two given individuals are different." ;
+    schema:name "differentFrom" ;
 .
 
 owl:disjointUnionOf
-    rdfs:label "disjointUnionOf" ;
     schema:description "The property that determines that a given class is equivalent to the disjoint union of a collection of other classes." ;
+    schema:name "disjointUnionOf" ;
 .
 
 owl:disjointWith
-    rdfs:label "disjointWith" ;
     schema:description "The property that determines that two given classes are disjoint." ;
+    schema:name "disjointWith" ;
 .
 
 owl:distinctMembers
-    rdfs:label "distinctMembers" ;
     schema:description "The property that determines the collection of pairwise different individuals in a owl:AllDifferent axiom." ;
+    schema:name "distinctMembers" ;
 .
 
 owl:equivalentClass
-    rdfs:label "equivalentClass" ;
     schema:description "The property that determines that two given classes are equivalent, and that is used to specify datatype definitions." ;
+    schema:name "equivalentClass" ;
 .
 
 owl:equivalentProperty
-    rdfs:label "equivalentProperty" ;
     schema:description "The property that determines that two given properties are equivalent." ;
+    schema:name "equivalentProperty" ;
 .
 
 owl:hasKey
-    rdfs:label "hasKey" ;
     schema:description "The property that determines the collection of properties that jointly build a key." ;
+    schema:name "hasKey" ;
 .
 
 owl:hasSelf
-    rdfs:label "hasSelf" ;
     schema:description "The property that determines the property that a self restriction refers to." ;
+    schema:name "hasSelf" ;
 .
 
 owl:hasValue
-    rdfs:label "hasValue" ;
     schema:description "The property that determines the individual that a has-value restriction refers to." ;
+    schema:name "hasValue" ;
 .
 
 owl:imports
-    rdfs:label "imports" ;
     schema:description "The property that is used for importing other ontologies into a given ontology." ;
+    schema:name "imports" ;
 .
 
 owl:incompatibleWith
-    rdfs:label "incompatibleWith" ;
     schema:description "The annotation property that indicates that a given ontology is incompatible with another ontology." ;
+    schema:name "incompatibleWith" ;
 .
 
 owl:intersectionOf
-    rdfs:label "intersectionOf" ;
     schema:description "The property that determines the collection of classes or data ranges that build an intersection." ;
+    schema:name "intersectionOf" ;
 .
 
 owl:inverseOf
-    rdfs:label "inverseOf" ;
     schema:description "The property that determines that two given properties are inverse." ;
+    schema:name "inverseOf" ;
 .
 
 owl:maxCardinality
-    rdfs:label "maxCardinality" ;
     schema:description "The property that determines the cardinality of a maximum cardinality restriction." ;
+    schema:name "maxCardinality" ;
 .
 
 owl:maxQualifiedCardinality
-    rdfs:label "maxQualifiedCardinality" ;
     schema:description "The property that determines the cardinality of a maximum qualified cardinality restriction." ;
+    schema:name "maxQualifiedCardinality" ;
 .
 
 owl:members
-    rdfs:label "members" ;
     schema:description "The property that determines the collection of members in either a owl:AllDifferent, owl:AllDisjointClasses or owl:AllDisjointProperties axiom." ;
+    schema:name "members" ;
 .
 
 owl:minCardinality
-    rdfs:label "minCardinality" ;
     schema:description "The property that determines the cardinality of a minimum cardinality restriction." ;
+    schema:name "minCardinality" ;
 .
 
 owl:minQualifiedCardinality
-    rdfs:label "minQualifiedCardinality" ;
     schema:description "The property that determines the cardinality of a minimum qualified cardinality restriction." ;
+    schema:name "minQualifiedCardinality" ;
 .
 
 owl:onClass
-    rdfs:label "onClass" ;
     schema:description "The property that determines the class that a qualified object cardinality restriction refers to." ;
+    schema:name "onClass" ;
 .
 
 owl:onDataRange
-    rdfs:label "onDataRange" ;
     schema:description "The property that determines the data range that a qualified data cardinality restriction refers to." ;
+    schema:name "onDataRange" ;
 .
 
 owl:onDatatype
-    rdfs:label "onDatatype" ;
     schema:description "The property that determines the datatype that a datatype restriction refers to." ;
+    schema:name "onDatatype" ;
 .
 
 owl:onProperties
-    rdfs:label "onProperties" ;
     schema:description "The property that determines the n-tuple of properties that a property restriction on an n-ary data range refers to." ;
+    schema:name "onProperties" ;
 .
 
 owl:onProperty
-    rdfs:label "onProperty" ;
     schema:description "The property that determines the property that a property restriction refers to." ;
+    schema:name "onProperty" ;
 .
 
 owl:oneOf
-    rdfs:label "oneOf" ;
     schema:description "The property that determines the collection of individuals or data values that build an enumeration." ;
+    schema:name "oneOf" ;
 .
 
 owl:priorVersion
-    rdfs:label "priorVersion" ;
     schema:description "The annotation property that indicates the predecessor ontology of a given ontology." ;
+    schema:name "priorVersion" ;
 .
 
 owl:propertyChainAxiom
-    rdfs:label "propertyChainAxiom" ;
     schema:description "The property that determines the n-tuple of properties that build a sub property chain of a given property." ;
+    schema:name "propertyChainAxiom" ;
 .
 
 owl:propertyDisjointWith
-    rdfs:label "propertyDisjointWith" ;
     schema:description "The property that determines that two given properties are disjoint." ;
+    schema:name "propertyDisjointWith" ;
 .
 
 owl:qualifiedCardinality
-    rdfs:label "qualifiedCardinality" ;
     schema:description "The property that determines the cardinality of an exact qualified cardinality restriction." ;
+    schema:name "qualifiedCardinality" ;
 .
 
 owl:sameAs
-    rdfs:label "sameAs" ;
     schema:description "The property that determines that two given individuals are equal." ;
+    schema:name "sameAs" ;
 .
 
 owl:someValuesFrom
-    rdfs:label "someValuesFrom" ;
     schema:description "The property that determines the class that an existential property restriction refers to." ;
+    schema:name "someValuesFrom" ;
 .
 
 owl:sourceIndividual
-    rdfs:label "sourceIndividual" ;
     schema:description "The property that determines the subject of a negative property assertion." ;
+    schema:name "sourceIndividual" ;
 .
 
 owl:targetIndividual
-    rdfs:label "targetIndividual" ;
     schema:description "The property that determines the object of a negative object property assertion." ;
+    schema:name "targetIndividual" ;
 .
 
 owl:targetValue
-    rdfs:label "targetValue" ;
     schema:description "The property that determines the value of a negative data property assertion." ;
+    schema:name "targetValue" ;
 .
 
 owl:topDataProperty
-    rdfs:label "topDataProperty" ;
     schema:description "The data property that relates every individual to every data value." ;
+    schema:name "topDataProperty" ;
 .
 
 owl:topObjectProperty
-    rdfs:label "topObjectProperty" ;
     schema:description "The object property that relates every two individuals." ;
+    schema:name "topObjectProperty" ;
 .
 
 owl:unionOf
-    rdfs:label "unionOf" ;
     schema:description "The property that determines the collection of classes or data ranges that build a union." ;
+    schema:name "unionOf" ;
 .
 
 owl:versionIRI
-    rdfs:label "versionIRI" ;
     schema:description "The property that identifies the version IRI of an ontology." ;
+    schema:name "versionIRI" ;
 .
 
 owl:versionInfo
-    rdfs:label "versionInfo" ;
     schema:description "The annotation property that provides version information for an ontology or another OWL construct." ;
+    schema:name "versionInfo" ;
 .
 
 owl:withRestrictions
-    rdfs:label "withRestrictions" ;
     schema:description "The property that determines the collection of facet-value pairs that define a datatype restriction." ;
+    schema:name "withRestrictions" ;
 .

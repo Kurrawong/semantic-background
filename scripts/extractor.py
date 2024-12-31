@@ -58,7 +58,10 @@ for f in Path(repo_root / "originals").glob("*.ttl"):
                 if type(o) == Literal:
                     if o.datatype == RDF.HTML:
                         o = Literal(str(o))
-            g2.add((s, RDFS.label, o))
+            # only extract English or non-lang labels
+            if isinstance(o, Literal):
+                if o.language in ["en", None]:
+                    g2.add((s, SDO.name, o))
 
     for s, o in g.subject_objects(
         SKOS.definition
@@ -72,7 +75,10 @@ for f in Path(repo_root / "originals").glob("*.ttl"):
                 if type(o) == Literal:
                     if o.datatype == RDF.HTML:
                         o = Literal(str(o))
-            g2.add((s, SDO.description, o))
+            # only extract English or non-lang labels
+            if isinstance(o, Literal):
+                if o.language in ["en", None]:
+                    g2.add((s, SDO.description, o))
 
     for s, o in g.subject_objects(RDFS.seeAlso):
         if not isinstance(s, BNode):

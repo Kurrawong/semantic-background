@@ -1,4 +1,3 @@
-PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -80,7 +79,6 @@ Renamed the property cito:hasCoAuthorCitationLevel in cito:hasCoAuthorshipCitati
 .
 
 <http://purl.org/spar/cito/AffilationSelfCitation>
-    rdfs:label "affilation self citation"@en ;
     schema:description """A citation in which at least one author from each of the citing and the cited entities is affiliated with the same academic institution.
 
 In particular, like the ancestor class cito:Citation, cito:AffiliationSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesAuthorInstitutionWith for linking the citing paper and the cited paper. 
@@ -96,17 +94,17 @@ can be alternatively described as follows
 
      :paperA cito:extends :paperB .
      :paperA cito:sharesAuthorInstitutionWith :paperB ."""@en ;
+    schema:name "affilation self citation"@en ;
 .
 
 <http://purl.org/spar/cito/AuthorNetworkSelfCitation>
-    rdfs:label "author network self citation"@en ;
     schema:description
         "A citation in which at least one author of the citing entity has direct or indirect co-authorship links with one of the authors of the cited entity."@en ,
         "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en ;
+    schema:name "author network self citation"@en ;
 .
 
 <http://purl.org/spar/cito/AuthorSelfCitation>
-    rdfs:label "author self citation"@en ;
     schema:description """A citation in which the citing and the cited entities have at least one author in common.
 
 In particular, like the ancestor class cito:Citation, cito:AuthorSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesAuthorWith for linking the citing paper and the cited paper. 
@@ -122,10 +120,10 @@ can be alternatively described as follows
 
      :paperA cito:extends :paperB .
      :paperA cito:sharesAuthorWith :paperB ."""@en ;
+    schema:name "author self citation"@en ;
 .
 
 <http://purl.org/spar/cito/Citation>
-    rdfs:label "citation"@en ;
     schema:description """A citation is a conceptual directional link from a citing entity to a cited entity, created by a human performative act of making a citation, typically instantiated by the inclusion of a bibliographic reference (biro:BibliographicReference) in the reference list of the citing entity, or by the inclusion within the citing entity of a link, in the form of an HTTP Uniform Resource Locator (URL), to a resource on the World Wide Web.
 
 The time span of a citation, i.e. the interval between the publication year of the citing entity and the publication year of the cited entity, can be recorded using the data property cito:hasCitationTimeSpan.
@@ -154,17 +152,17 @@ Using such OWL2 punning (described at http://www.w3.org/TR/2009/WD-owl2-new-feat
 Such reification of citation acts can be very useful, since it permits one to combine these CiTO properties with other vocabularies, or to handle situations in which none of the citation characterizations available in CiTO are applicable.
 
 Such situations can be resolved by the creation of a user-defined citation characterization, for example by using the Open Annotation Data Model, as explained at http://semanticpublishing.wordpress.com/2013/07/03/extending-cito-for-open-annotations/."""@en ;
+    schema:name "citation"@en ;
 .
 
 <http://purl.org/spar/cito/DistantCitation>
-    rdfs:label "distant citation"@en ;
     schema:description
         "A citation in which the citing and the cited entities have nothing significant in common with one another (for example authors, journal, institutional affiliation, or funding agency) over and beyond their subject matter."@en ,
         "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)."@en ;
+    schema:name "distant citation"@en ;
 .
 
 <http://purl.org/spar/cito/FunderSelfCitation>
-    rdfs:label "funder self citation"@en ;
     schema:description """A citation in which the works reported in the citing and the cited entities were funded by the same funding agency.
 
 In particular, like the ancestor class cito:Citation, cito:FunderSelfCitation and its accompanying object properties cito:hasCitingEntity, cito:hasCitedEntity and cito:hasCitationCharacterization can be employed to reify direct citation statements made using the CiTO citation object property cito:cites or one of its sub-properties, accompanied by an additional statement using cito:sharesFundingAgencyWith for linking the citing paper and the cited paper. 
@@ -180,17 +178,17 @@ can be alternatively described as follows
 
      :paperA cito:extends :paperB .
      :paperA cito:sharesFundingAgencyWith :paperB ."""@en ;
+    schema:name "funder self citation"@en ;
 .
 
 <http://purl.org/spar/cito/JournalCartelCitation>
-    rdfs:label "journal cartel citation"@en ;
     schema:description
         "A citation from one journal to another journal which forms one of a very large number of citations from the citing journal to recent articles in the cited journal, possibly undertaken as part of a citation cartel for the purpose of gaming the impact factor of the cited journal."@en ,
         "Derived from the blog post 'What do we know about journal citation cartels? A call for information' by Philippe Mongeon, Ludo Waltman and Sarah de Rijcke (https://www.cwts.nl/blog?article=n-q2w2b4)."@en ;
+    schema:name "journal cartel citation"@en ;
 .
 
 <http://purl.org/spar/cito/JournalSelfCitation>
-    rdfs:label "journal self citation"@en ;
     schema:description
         """A citation in which the citing and the cited entities are published in the same journal.
 
@@ -208,233 +206,233 @@ can be alternatively described as follows
      :paperA cito:extends :paperB .
      :paperA cito:sharesJournalWith :paperB ."""@en ,
         "Derived from the blog post 'Journal self-citations are increasingly biased toward impact factor years' by Ludo Waltman and Caspar Chorus (https://www.cwts.nl/blog?article=n-q2x264)."@en ;
+    schema:name "journal self citation"@en ;
 .
 
 <http://purl.org/spar/cito/SelfCitation>
-    rdfs:label "self citation"@en ;
     schema:description "A citation in which the citing and the cited entities have something significant in common with one another, over and beyond their subject matter, for example authors, journal, institutional affiliation, or funding agency."@en ;
+    schema:name "self citation"@en ;
 .
 
 <http://purl.org/spar/cito/agreesWith>
-    rdfs:label "agrees with"@en ;
     schema:description
         "Example: We share Galileo's opinion: the Earth moves [X]."@en ,
         "The citing entity agrees with statements, ideas or conclusions presented in the cited entity."@en ;
+    schema:name "agrees with"@en ;
 .
 
 <http://purl.org/spar/cito/cites>
-    rdfs:label "cites"@en ;
     schema:description "The citing entity cites the cited entity, either directly and explicitly (as in the reference list of a journal article), indirectly (e.g. by citing a more recent paper by the same group on the same topic), or implicitly (e.g. as in artistic quotations or parodies, or in cases of plagiarism)."@en ;
+    schema:name "cites"@en ;
 .
 
 <http://purl.org/spar/cito/citesAsAuthority>
-    rdfs:label "cites as authority"@en ;
     schema:description
         "Example: Newton asserted that we are like dwarfs standing on the shoulders of giants [X]."@en ,
         "The citing entity cites the cited entity as one that provides an authoritative description or definition of the subject under discussion."@en ;
+    schema:name "cites as authority"@en ;
 .
 
 <http://purl.org/spar/cito/citesAsDataSource>
-    rdfs:label "cites as data source"@en ;
     schema:description
         "Example: Italy has more than ten thousand kilometers of shoreline: see [X]."@en ,
         "The citing entity cites the cited entity as source of data."@en ;
+    schema:name "cites as data source"@en ;
 .
 
 <http://purl.org/spar/cito/citesAsEvidence>
-    rdfs:label "cites as evidence"@en ;
     schema:description
         "Example: We found an unquestionable demonstration of our hypothesis in [X]."@en ,
         "The citing entity cites the cited entity as source of factual evidence for statements it contains."@en ;
+    schema:name "cites as evidence"@en ;
 .
 
 <http://purl.org/spar/cito/citesAsMetadataDocument>
-    rdfs:label "cites as metadata document"@en ;
     schema:description
         "Example: Basic bibliographic, entity and project metadata relating to this article, recorded in a structured machine-readable form, is available as an additional file [X] accompanying this paper."@en ,
         "The citing entity cites the cited entity as being the container of metadata describing the citing entity."@en ;
+    schema:name "cites as metadata document"@en ;
 .
 
 <http://purl.org/spar/cito/citesAsPotentialSolution>
-    rdfs:label "cites as potential solution"@en ;
     schema:description
         "Example: This risk could be avoided using the approach shown in [X]."@en ,
         "The citing entity cites the cited entity as providing or containing a possible solution to the issues being discussed."@en ;
+    schema:name "cites as potential solution"@en ;
 .
 
 <http://purl.org/spar/cito/citesAsRecommendedReading>
-    rdfs:label "cites as recommended reading"@en ;
     schema:description
         "Example: To our knowledge, [X] is the best source of exercises about UML, making it a valuable proposal for beginners."@en ,
         "The citing entity cites the cited entity as an item of recommended reading.  This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture.  Similarly, it could be used to describe items in a 'Suggested further reading' list at the end of a book chapter."@en ;
+    schema:name "cites as recommended reading"@en ;
 .
 
 <http://purl.org/spar/cito/citesAsRelated>
-    rdfs:label "cites as related"@en ;
     schema:description
         "Example: An analysis similar to what we proposed here is presented in [X]."@en ,
         "The citing entity cites the cited entity as one that is related."@en ;
+    schema:name "cites as related"@en ;
 .
 
 <http://purl.org/spar/cito/citesAsSourceDocument>
-    rdfs:label "cites as source document"@en ;
     schema:description
         "Example: Several sections of this work are based on our literature review of the topic published as journal article [X]."@en ,
         "The citing entity cites the cited entity as being the entity from which the citing entity is derived, or about which the citing entity contains metadata."@en ;
+    schema:name "cites as source document"@en ;
 .
 
 <http://purl.org/spar/cito/citesForInformation>
-    rdfs:label "cites for information"@en ;
     schema:description
         "Example: The grammar of Pascal was introduced in [X]."@en ,
         "The citing entity cites the cited entity as a source of information on the subject under discussion."@en ;
+    schema:name "cites for information"@en ;
 .
 
 <http://purl.org/spar/cito/compiles>
-    rdfs:label "compiles"@en ;
     schema:description
         "Example: This book gathers interviews with academic researchers of several disciplines [X]."@en ,
         "Note: This property has been imported from the CiTO4Data ontology, usage of which has been deprecated."@en ,
         "The citing entity is used to create or compile the cited entity."@en ;
+    schema:name "compiles"@en ;
 .
 
 <http://purl.org/spar/cito/confirms>
-    rdfs:label "confirms"@en ;
     schema:description
         "Example: Our findings are similar to those published in [X]."@en ,
         "The citing entity confirms facts, ideas or statements presented in the cited entity."@en ;
+    schema:name "confirms"@en ;
 .
 
 <http://purl.org/spar/cito/containsAssertionFrom>
-    rdfs:label "contains assertion from"@en ;
     schema:description
         "Example: We think that to stand on the top of giants [X] is a valuable principle to follow for our own research."@en ,
         "The citing entity contains a statement of fact or a logical assertion (or a collection of such facts and/or assertions) originally present in the cited entity.   This object property is designed to be used to relate a separate abstract, summary or nanopublication to the cited entity upon which it is based."@en ;
+    schema:name "contains assertion from"@en ;
 .
 
 <http://purl.org/spar/cito/corrects>
-    rdfs:label "corrects"@en ;
     schema:description
         "Example: The result published in [X] is partially wrong, the correct result is 42."@en ,
         "The citing entity corrects statements, ideas or conclusions presented in the cited entity."@en ;
+    schema:name "corrects"@en ;
 .
 
 <http://purl.org/spar/cito/credits>
-    rdfs:label "credits"@en ;
     schema:description
         "Example: Galileo was the first to observe Jupiter's satellites [X]."@en ,
         "The citing entity acknowledges contributions made by the cited entity."@en ;
+    schema:name "credits"@en ;
 .
 
 <http://purl.org/spar/cito/critiques>
-    rdfs:label "critiques"@en ;
     schema:description
         "Example: The ideas presented in [X] are badly substantantiated."@en ,
         "The citing entity critiques statements, ideas or conclusions presented in the cited entity."@en ;
+    schema:name "critiques"@en ;
 .
 
 <http://purl.org/spar/cito/derides>
-    rdfs:label "derides"@en ;
     schema:description
         "Example: The ideas published in [X] are incredibly stupid."@en ,
         "The citing entity express derision for the cited entity, or for ideas or conclusions contained within it."@en ;
+    schema:name "derides"@en ;
 .
 
 <http://purl.org/spar/cito/describes>
-    rdfs:label "describes"@en ;
     schema:description
         "Example: Galileo's book [X] is a dialog among three scientists about Copernicus' eliocentric theory."@en ,
         "The citing entity describes the cited entity."@en ;
+    schema:name "describes"@en ;
 .
 
 <http://purl.org/spar/cito/disagreesWith>
-    rdfs:label "disagrees with"@en ;
     schema:description
         "Example: We do not share Galileo's opinion [X]: the Earth does not move."@en ,
         "The citing entity disagrees with statements, ideas or conclusions presented in the cited entity."@en ;
+    schema:name "disagrees with"@en ;
 .
 
 <http://purl.org/spar/cito/discusses>
-    rdfs:label "discusses"@en ;
     schema:description
         "Example: We now examine if Galileo is right when he writes [X] that the Earth moves."@en ,
         "The citing entity discusses statements, ideas or conclusions presented in the cited entity."@en ;
+    schema:name "discusses"@en ;
 .
 
 <http://purl.org/spar/cito/disputes>
-    rdfs:label "disputes"@en ;
     schema:description
         "Example: We doubt that Galileo is right when he writes [X] that the Earth moves."@en ,
         "The citing entity disputes statements, ideas or conclusions presented in the cited entity."@en ;
+    schema:name "disputes"@en ;
 .
 
 <http://purl.org/spar/cito/documents>
-    rdfs:label "documents"@en ;
     schema:description
         "The citing entity documents information about the cited entity." ,
         "Example: Herein we report in detail the complete set of ontological rules defined in the Overlapping Ontology [X]."@en ;
+    schema:name "documents"@en ;
 .
 
 <http://purl.org/spar/cito/extends>
-    rdfs:label "extends"@en ;
     schema:description
         "Example: We add to Galileo's findings concerning the Earth [X] that also the Moon moves."@en ,
         "The citing entity extends facts, ideas or understandings presented in the cited entity."@en ;
+    schema:name "extends"@en ;
 .
 
 <http://purl.org/spar/cito/givesBackgroundTo>
-    rdfs:label "gives background to"@en ;
     schema:description "The cited entity provides background information for the citing entity."@en ;
+    schema:name "gives background to"@en ;
 .
 
 <http://purl.org/spar/cito/givesSupportTo>
-    rdfs:label "gives support to"@en ;
     schema:description "The cited entity provides intellectual or factual support for the citing entity."@en ;
+    schema:name "gives support to"@en ;
 .
 
 <http://purl.org/spar/cito/hasCitationCharacterization>
-    rdfs:label "has citation characterization"@en ;
     schema:description """A property that links a citation to its characterization made by using a CiTO citation characterization property such as cito:extends. This usage involved OWL2 punning, whenby a CiTO object property, such as the aforementioned cito:extends, is used as the object of an OWL assertion:
 
      :thisCitation cito:hasCitationCharacterization cito:extends .
 
 In such cases of OWL punning, the CiTO object properties are simultaneously considered both as normal object properties and also as proper named individuals of the class owl:Thing."""@en ;
+    schema:name "has citation characterization"@en ;
 .
 
 <http://purl.org/spar/cito/hasCitationCreationDate>
-    rdfs:label "has citation creation date"@en ;
     schema:description "The date on which the citation was created. This has the same numerical value as the publication date of the citing bibliographic resource, but is a property of the citation itself.  When combined with the citation time span, it permits that citation to be located in history."@en ;
+    schema:name "has citation creation date"@en ;
 .
 
 <http://purl.org/spar/cito/hasCitationTimeSpan>
-    rdfs:label "has citation time span"@en ;
     schema:description "The temporal characteristic of a citation, namely the interval between the publication date of the cited entity and the publication date of the citing entity. Note that when one or both of the publication dates is given as just 'year', then the citation time span is rounded to the nearest year, and when one or both of the publication dates is given as just 'year and month', then the citation time span is rounded to the nearest month, with the inherent inaccuracies that such rounding involves."@en ;
+    schema:name "has citation time span"@en ;
 .
 
 <http://purl.org/spar/cito/hasCitedEntity>
-    rdfs:label "has cited entity"@en ;
     schema:description "A property that relates a citation to the cited entity."@en ;
+    schema:name "has cited entity"@en ;
 .
 
 <http://purl.org/spar/cito/hasCitingEntity>
-    rdfs:label "has citing entity"@en ;
     schema:description "A property that relates a citation to the citing entity."@en ;
+    schema:name "has citing entity"@en ;
 .
 
 <http://purl.org/spar/cito/hasCoAuthorshipCitationLevel>
-    rdfs:label "has co-authorship citation level"@en ;
     schema:description """This property specifies the minimal distance that one of the authors of the citing entity has with regards to one of the authors of the cited entity, according to their co-authorship network.
 
 For instance, a citation has a co-authorship citation level equal to 1 if at least one author of the citing entity has previously published as co-author with one of the authors of the cited entity. Similarly, we say that a citation has a co-authorship citation level equal to 2 if at least one author of the citing entity has previously published as co-author with someone who him/herself has previously published as co-author with one of the authors of the cited entity. And so on."""@en ;
+    schema:name "has co-authorship citation level"@en ;
 .
 
 <http://purl.org/spar/cito/hasReplyFrom>
-    rdfs:label "has reply from"@en ;
     schema:description "The cited entity evokes a reply from the citing entity."@en ;
+    schema:name "has reply from"@en ;
 .
 
 <http://purl.org/spar/cito/includesExcerptFrom>
-    rdfs:label "includes excerpt from"@en ;
     schema:description
         """An excerpt is more general than a quotation. It is generally used to indicate a re-published extract from a book, instruction manual, film, radio programme, etc, that need not be what someone said.  For example:
 
@@ -446,370 +444,371 @@ Oxton 01578
 is an excerpt from the UK Dialling Codes section of the Oxford Telephone Directory."""@en ,
         "Example: In her work, the author states that even though most Human Information Behaviour researchers are familiar with the literature related to their studies, it is not uncommon for investigators to fail to see the benefits they may gain from previous mistakes [X]."@en ,
         "The citing entity includes one or more excerpts from the cited entity."@en ;
+    schema:name "includes excerpt from"@en ;
 .
 
 <http://purl.org/spar/cito/includesQuotationFrom>
-    rdfs:label "includes quotation from"@en ;
     schema:description
         """A quotation is a repetition of what someone has said, and is presented "within quotation marks", for example:
 
 On June 4th 1940, Winston Churchill made a speech on the radio that has since become famous, that included the words: " . . . we shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender . . .\""""@en ,
         "Example: As Newton wrote in [X]: \"We are like dwarfs standing on the shoulders of giants\"."@en ,
         "The citing entity includes one or more quotations from the cited entity."@en ;
+    schema:name "includes quotation from"@en ;
 .
 
 <http://purl.org/spar/cito/isAgreedWithBy>
-    rdfs:label "is agreed with by"@en ;
     schema:description "The cited entity contains statements, ideas or conclusions with which the citing entity agrees."@en ;
+    schema:name "is agreed with by"@en ;
 .
 
 <http://purl.org/spar/cito/isCitedAsAuthorityBy>
-    rdfs:label "is cited as authority by"@en ;
     schema:description "The cited entity is cited as providing an authoritative description or definition of the subject under discussion in the citing entity."@en ;
+    schema:name "is cited as authority by"@en ;
 .
 
 <http://purl.org/spar/cito/isCitedAsDataSourceBy>
-    rdfs:label "is cited as data source by"@en ;
     schema:description "The cited entity is cited as a data source by the citing entity."@en ;
+    schema:name "is cited as data source by"@en ;
 .
 
 <http://purl.org/spar/cito/isCitedAsEvidenceBy>
-    rdfs:label "is cited as evidence by"@en ;
     schema:description "The cited entity is cited for providing factual evidence to the citing entity."@en ;
+    schema:name "is cited as evidence by"@en ;
 .
 
 <http://purl.org/spar/cito/isCitedAsMetadataDocumentBy>
-    rdfs:label "is cited as metadata document by"@en ;
     schema:description "The cited entity is cited as being the container of metadata relating to the citing entity."@en ;
+    schema:name "is cited as metadata document by"@en ;
 .
 
 <http://purl.org/spar/cito/isCitedAsPontentialSolutionBy>
-    rdfs:label "is cited as potential solution by"@en ;
     schema:description "The cited entity is cited as providing or containing a possible solution to the issues being discussed in the citing entity."@en ;
+    schema:name "is cited as potential solution by"@en ;
 .
 
 <http://purl.org/spar/cito/isCitedAsRecommendedReadingBy>
-    rdfs:label "is cited as recommended reading by"@en ;
     schema:description "The cited entity is cited by the citing entity as an item of recommended reading.  This property can be used, for example, to describe references in a lecture reading list, where the cited references are relevant to the general topic of the lecture, but might not be individually cited within the text of the lecture.  Similarly, it could be used to describe items in a 'Suggested further reading' list at the end of a book chapter."@en ;
+    schema:name "is cited as recommended reading by"@en ;
 .
 
 <http://purl.org/spar/cito/isCitedAsRelatedBy>
-    rdfs:label "is cited as related by"@en ;
     schema:description "The cited entity is cited as being related to the citing entity."@en ;
+    schema:name "is cited as related by"@en ;
 .
 
 <http://purl.org/spar/cito/isCitedAsSourceDocumentBy>
-    rdfs:label "is cited as source document by"@en ;
     schema:description "The cited entity is cited as being the entity from which the citing entity is derived, or about which the citing entity contains metadata."@en ;
+    schema:name "is cited as source document by"@en ;
 .
 
 <http://purl.org/spar/cito/isCitedBy>
-    rdfs:label "is cited by"@en ;
     schema:description "The cited entity (the subject of the RDF triple) is cited by the citing entity (the object of the triple)."@en ;
+    schema:name "is cited by"@en ;
 .
 
 <http://purl.org/spar/cito/isCitedForInformationBy>
-    rdfs:label "is cited for information by"@en ;
     schema:description "The cited entity is cited as a source of information on the subject under discussion in the citing entity."@en ;
+    schema:name "is cited for information by"@en ;
 .
 
 <http://purl.org/spar/cito/isCompiledBy>
-    rdfs:label "is compiled by"@en ;
     schema:description
         "Note: This property has been imported from the CiTO4Data ontology, usage of which has been deprecated."@en ,
         "The cited entity is the result of a compile or creation event using the citing entity."@en ;
+    schema:name "is compiled by"@en ;
 .
 
 <http://purl.org/spar/cito/isConfirmedBy>
-    rdfs:label "is confirmed by"@en ;
     schema:description "The cited entity presents facts, ideas or statements that are confirmed by the citing entity."@en ;
+    schema:name "is confirmed by"@en ;
 .
 
 <http://purl.org/spar/cito/isCorrectedBy>
-    rdfs:label "is corrected by"@en ;
     schema:description "The cited entity presents statements, ideas or conclusions that are corrected by the citing entity."@en ;
+    schema:name "is corrected by"@en ;
 .
 
 <http://purl.org/spar/cito/isCreditedBy>
-    rdfs:label "is credited by"@en ;
     schema:description "The cited entity makes contributions that are acknowledged by the citing entity."@en ;
+    schema:name "is credited by"@en ;
 .
 
 <http://purl.org/spar/cito/isCritiquedBy>
-    rdfs:label "is critiqued by"@en ;
     schema:description "The cited entity presents statements, ideas or conclusions that are critiqued by the citing entity."@en ;
+    schema:name "is critiqued by"@en ;
 .
 
 <http://purl.org/spar/cito/isDeridedBy>
-    rdfs:label "is derided by"@en ;
     schema:description "The cited entity contains ideas or conclusions for which the citing entity express derision."@en ;
+    schema:name "is derided by"@en ;
 .
 
 <http://purl.org/spar/cito/isDescribedBy>
-    rdfs:label "is described by"@en ;
     schema:description "The cited entity is described by the citing entity."@en ;
+    schema:name "is described by"@en ;
 .
 
 <http://purl.org/spar/cito/isDisagreedWithBy>
-    rdfs:label "is disagreed with by"@en ;
     schema:description "The cited entity presents statements, ideas or conclusions that are disagreed with by the citing entity."@en ;
+    schema:name "is disagreed with by"@en ;
 .
 
 <http://purl.org/spar/cito/isDiscussedBy>
-    rdfs:label "is discussed by"@en ;
     schema:description "The cited entity presents statements, ideas or conclusions that are discussed by the citing entity."@en ;
+    schema:name "is discussed by"@en ;
 .
 
 <http://purl.org/spar/cito/isDisputedBy>
-    rdfs:label "is disputed by"@en ;
     schema:description "The cited entity presents statements, ideas or conclusions that are disputed by the citing entity."@en ;
+    schema:name "is disputed by"@en ;
 .
 
 <http://purl.org/spar/cito/isDocumentedBy>
-    rdfs:label "is documented by"@en ;
     schema:description "Information about the cited entity is documented by the citing entity."@en ;
+    schema:name "is documented by"@en ;
 .
 
 <http://purl.org/spar/cito/isExtendedBy>
-    rdfs:label "is extended by"@en ;
     schema:description "The cited entity presents facts, ideas or understandings that are extended by the citing entity."@en ;
+    schema:name "is extended by"@en ;
 .
 
 <http://purl.org/spar/cito/isLinkedToBy>
-    rdfs:label "is linked to by"@en ;
     schema:description "The cited entity is the target for an HTTP Uniform Resource Locator (URL) link within the citing entity."@en ;
+    schema:name "is linked to by"@en ;
 .
 
 <http://purl.org/spar/cito/isParodiedBy>
-    rdfs:label "is parodied by"@en ;
     schema:description "The characteristic style or content of the cited entity is imitated by the citing entity for comic effect, usually without explicit citation."@en ;
+    schema:name "is parodied by"@en ;
 .
 
 <http://purl.org/spar/cito/isPlagiarizedBy>
-    rdfs:label "is plagiarized by"@en ;
     schema:description "The cited entity is plagiarized by the author of the citing entity, who includes within the citing entity textual or other elements from the cited entity without formal acknowledgement of their source. The cited entity is thus not explicitly cited from within the citing entity, according to the norms of scholarly practice, but is cited implicitly."@en ;
+    schema:name "is plagiarized by"@en ;
 .
 
 <http://purl.org/spar/cito/isQualifiedBy>
-    rdfs:label "is qualified by"@en ;
     schema:description "The cited entity presents statements, ideas or conclusions that are qualified or have conditions placed upon them by the citing entity."@en ;
+    schema:name "is qualified by"@en ;
 .
 
 <http://purl.org/spar/cito/isRefutedBy>
-    rdfs:label "is refuted by"@en ;
     schema:description "The cited entity presents statements, ideas or conclusions that are refuted by the citing entity."@en ;
+    schema:name "is refuted by"@en ;
 .
 
 <http://purl.org/spar/cito/isRetractedBy>
-    rdfs:label "is retracted by"@en ;
     schema:description "The cited entity is formally retracted by the citing entity."@en ;
+    schema:name "is retracted by"@en ;
 .
 
 <http://purl.org/spar/cito/isReviewedBy>
-    rdfs:label "is reviewed by"@en ;
     schema:description "The cited entity presents statements, ideas or conclusions that are reviewed by the citing entity."@en ;
+    schema:name "is reviewed by"@en ;
 .
 
 <http://purl.org/spar/cito/isRidiculedBy>
-    rdfs:label "is ridiculed by"@en ;
     schema:description "The cited entity or aspects of its contents are ridiculed by the citing entity."@en ;
+    schema:name "is ridiculed by"@en ;
 .
 
 <http://purl.org/spar/cito/isSpeculatedOnBy>
-    rdfs:label "is speculated on by"@en ;
     schema:description "The cited entity is cited because the citing article contains speculations on its content or ideas."@en ;
+    schema:name "is speculated on by"@en ;
 .
 
 <http://purl.org/spar/cito/isSupportedBy>
-    rdfs:label "is supported by"@en ;
     schema:description "The cited entity receives intellectual or factual support from the citing entity."@en ;
+    schema:name "is supported by"@en ;
 .
 
 <http://purl.org/spar/cito/isUpdatedBy>
-    rdfs:label "is updated by"@en ;
     schema:description "The cited entity presents statements, ideas, hypotheses or understanding that are updated by the cited entity."@en ;
+    schema:name "is updated by"@en ;
 .
 
 <http://purl.org/spar/cito/likes>
-    rdfs:label "likes"@en ;
     schema:description "A property that permits you to express appreciation of or interest in something that is the object of the RDF triple, or to express that it is worth thinking about even if you do not agree with its content, enabling social media 'likes' statements to be encoded in RDF.  Use of this property does NOT imply the existence of a formal citation of the entity that is 'liked'."@en ;
+    schema:name "likes"@en ;
 .
 
 <http://purl.org/spar/cito/linksTo>
-    rdfs:label "links to"@en ;
     schema:description
         "Example: The BioSharing registry (https://biosharing.org) can be of use as it describes the standards in detail, including versions where applicable."@en ,
         "The citing entity provides a link, in the form of an HTTP Uniform Resource Locator (URL), to the cited entity."@en ;
+    schema:name "links to"@en ;
 .
 
 <http://purl.org/spar/cito/obtainsBackgroundFrom>
-    rdfs:label "obtains background from"@en ;
     schema:description
         "Example: There is a need for more observational studies and studies using narrative causation to describe the potential contribution of information in problem-solving and decision-making [X]; our work addresses these needs."@en ,
         "The citing entity obtains background information from the cited entity."@en ;
+    schema:name "obtains background from"@en ;
 .
 
 <http://purl.org/spar/cito/obtainsSupportFrom>
-    rdfs:label "obtains support from"@en ;
     schema:description
         "Example: Our ideas were also shared by Doe et al. [X]."@en ,
         "The citing entity obtains intellectual or factual support from the cited entity."@en ;
+    schema:name "obtains support from"@en ;
 .
 
 <http://purl.org/spar/cito/parodies>
-    rdfs:label "parodies"@en ;
     schema:description
         "Example: We act as giants on the shoulders of dwarfs [X]!"@en ,
         "The citing entity imitates the characteristic style or content of the cited entity for comic effect, usually without explicit citation."@en ;
+    schema:name "parodies"@en ;
 .
 
 <http://purl.org/spar/cito/plagiarizes>
-    rdfs:label "plagiarizes"@en ;
     schema:description
         "A property indicating that the author of the citing entity plagiarizes the cited entity, by including textual or other elements from the cited entity without formal acknowledgement of their source.  The citing entity thus contains no explicit citation of the cited entity, according to the norms of scholarly practice, but cites it implicitly."@en ,
         "Example: The conclusion of our dissertation can be summarised by the following motto, we created specifically for this purpose: we are like dwarfs standing on the shoulders of giants."@en ;
+    schema:name "plagiarizes"@en ;
 .
 
 <http://purl.org/spar/cito/providesAssertionFor>
-    rdfs:label "provides assertion for"@en ;
     schema:description "The cited entity contains and is the original source of a statement of fact or a logical assertion (or a collection of such facts and/or assertions) that is to be found in the citing entity.   This inverse object property is designed to be used to relate a cited entity to a separate abstract, summary or nanopublication based upon it."@en ;
+    schema:name "provides assertion for"@en ;
 .
 
 <http://purl.org/spar/cito/providesConclusionsFor>
-    rdfs:label "provides conclusions for"@en ;
     schema:description "The cited entity presents conclusions that are used in work described in the citing entity."@en ;
+    schema:name "provides conclusions for"@en ;
 .
 
 <http://purl.org/spar/cito/providesDataFor>
-    rdfs:label "provides data for"@en ;
     schema:description "The cited entity presents data that are used in work described in the citing entity."@en ;
+    schema:name "provides data for"@en ;
 .
 
 <http://purl.org/spar/cito/providesExcerptFor>
-    rdfs:label "provides excerpt for"@en ;
     schema:description "The cited entity contains information, usually of a textual nature, that is excerpted by (used as an excerpt within) the citing entity."@en ;
+    schema:name "provides excerpt for"@en ;
 .
 
 <http://purl.org/spar/cito/providesMethodFor>
-    rdfs:label "provides method for"@en ;
     schema:description "The cited entity details a method that is used in work described by the citing entity."@en ;
+    schema:name "provides method for"@en ;
 .
 
 <http://purl.org/spar/cito/providesQuotationFor>
-    rdfs:label "provides quotation for"@en ;
     schema:description "The cited entity contains information, usually of a textual nature, that is quoted by (used as a quotation within) the citing entity."@en ;
+    schema:name "provides quotation for"@en ;
 .
 
 <http://purl.org/spar/cito/qualifies>
-    rdfs:label "qualifies"@en ;
     schema:description
         "Example: Galileo's masterpiece 'Dialogo sopra i due massimi sistemi del mondo' [X] is formally a dialog and substantially a scientific pamphlet."@en ,
         "The citing entity qualifies or places conditions or restrictions upon statements, ideas or conclusions presented in the cited entity."@en ;
+    schema:name "qualifies"@en ;
 .
 
 <http://purl.org/spar/cito/refutes>
-    rdfs:label "refutes"@en ;
     schema:description
         "Example: We do not think that all their arguments in favour of their own and against the other strategies are equally convincing [X]."@en ,
         "The citing entity refutes statements, ideas or conclusions presented in the cited entity."@en ;
+    schema:name "refutes"@en ;
 .
 
 <http://purl.org/spar/cito/repliesTo>
-    rdfs:label "replies to"@en ;
     schema:description
         "Example: We will not investigate the issues of the approach proposed in [X] here, but rather we introduce yet another alternative."@en ,
         "The citing entity replies to statements, ideas or criticisms presented in the cited entity."@en ;
+    schema:name "replies to"@en ;
 .
 
 <http://purl.org/spar/cito/retracts>
-    rdfs:label "retracts"@en ;
     schema:description
         "Example: We wrote that the Earth moves in [X]; we now retire such statement."@en ,
         "The citing entity constitutes a formal retraction of the cited entity."@en ;
+    schema:name "retracts"@en ;
 .
 
 <http://purl.org/spar/cito/reviews>
-    rdfs:label "reviews"@en ;
     schema:description
         "Example: This paper discusses Toulmin's methodology in modelling argumentation [X], focussing on highlighting advantages and drawbacks of the application of such a methodology in the Social Web."@en ,
         "The citing entity reviews statements, ideas or conclusions presented in the cited entity."@en ;
+    schema:name "reviews"@en ;
 .
 
 <http://purl.org/spar/cito/ridicules>
-    rdfs:label "ridicules"@en ;
     schema:description
         "Example: Galileo said that the Earth \"moves\" [X]; really? And where is it going?"@en ,
         "The citing entity ridicules the cited entity or aspects of its contents."@en ;
+    schema:name "ridicules"@en ;
 .
 
 <http://purl.org/spar/cito/sharesAuthorInstitutionWith>
-    rdfs:label "shares author institution with"@en ;
     schema:description "Each entity has at least one author that shares a common institutional affiliation with an author of the other entity."@en ;
+    schema:name "shares author institution with"@en ;
 .
 
 <http://purl.org/spar/cito/sharesAuthorWith>
-    rdfs:label "shares author with"@en ;
     schema:description "Each entity has at least one author in common with the other entity."@en ;
+    schema:name "shares author with"@en ;
 .
 
 <http://purl.org/spar/cito/sharesFundingAgencyWith>
-    rdfs:label "shares funding agency with"@en ;
     schema:description "The two entities result from activities that have been funded by the same funding agency."@en ;
+    schema:name "shares funding agency with"@en ;
 .
 
 <http://purl.org/spar/cito/sharesJournalWith>
-    rdfs:label "shares journal with"@en ;
     schema:description "The citing and cited bibliographic resources are published in the same journal."@en ;
+    schema:name "shares journal with"@en ;
 .
 
 <http://purl.org/spar/cito/sharesPublicationVenueWith>
-    rdfs:label "shares publication venue with"@en ;
     schema:description "The citing and cited bibliographic resources are published in same publication venue."@en ;
+    schema:name "shares publication venue with"@en ;
 .
 
 <http://purl.org/spar/cito/speculatesOn>
-    rdfs:label "speculates on"@en ;
     schema:description
         "Example: We believe that if Galileo believed that Earth goes around the Sun [X], he also should believe that Moon goes around Earth."@en ,
         "The citing entity speculates on something within or related to the cited entity, without firm evidence."@en ;
+    schema:name "speculates on"@en ;
 .
 
 <http://purl.org/spar/cito/supports>
-    rdfs:label "supports"@en ;
     schema:description
         "Example: We support Galileo's statement [X], that Earth moves."@en ,
         "The citing entity provides intellectual or factual support for statements, ideas or conclusions presented in the cited entity."@en ;
+    schema:name "supports"@en ;
 .
 
 <http://purl.org/spar/cito/updates>
-    rdfs:label "updates"@en ;
     schema:description
         "Example: Earth moves, said Galileo [X]; in addition, we can say now it moves very fast."@en ,
         "The citing entity updates statements, ideas, hypotheses or understanding presented in the cited entity."@en ;
+    schema:name "updates"@en ;
 .
 
 <http://purl.org/spar/cito/usesConclusionsFrom>
-    rdfs:label "uses conclusions from"@en ;
     schema:description
         "Example: Building upon Galileo's findings [X], we discovered that all the planets move."@en ,
         "The citing entity describes work that uses conclusions presented in the cited entity."@en ;
+    schema:name "uses conclusions from"@en ;
 .
 
 <http://purl.org/spar/cito/usesDataFrom>
-    rdfs:label "uses data from"@en ;
     schema:description
         "Example: Using the information collected from our recent study [X], we can estimate that there are tens of millions of HTML forms with potentially useful deep-web content."@en ,
         "The citing entity describes work that uses data presented in the cited entity."@en ;
+    schema:name "uses data from"@en ;
 .
 
 <http://purl.org/spar/cito/usesMethodIn>
-    rdfs:label "uses method in"@en ;
     schema:description
         "Example: We follow [X] in using design patterns for testing."@en ,
         "The citing entity describes work that uses a method detailed in the cited entity."@en ;
+    schema:name "uses method in"@en ;
 .
 
 <http://schema.org/citation>
-    rdfs:label "citation" ;
     schema:description "This property is defined in schema.org and has been added here to align schema.org with CiTO. The object property schema:citation expresses similar semantics to cito:cites except for the explicit definition of domain and range classes, that are schema:CreativeWork according to schema.org. For that reason, it is here defined as a subproperty of cito:cites."@en ;
+    schema:name "citation" ;
 .

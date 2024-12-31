@@ -1,5 +1,10 @@
 @prefix altr-ext: <http://www.w3.org/ns/dx/connegp/altr-ext#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<http://www.w3.org/ns/dx/connegp/altr-ext>
+    a owl:Ontology ;
+.
 
 altr-ext:hasDefaultResourceFormat rdfs:label "has default resource format" .
 altr-ext:hasResourceFormat rdfs:label "has resource format" .
