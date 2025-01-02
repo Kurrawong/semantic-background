@@ -76,6 +76,7 @@ Renamed the property cito:hasCoAuthorCitationLevel in cito:hasCoAuthorshipCitati
 **Website:** http://www.sparontologies.net/ontologies/cito
 
 **Cite as:** Peroni, S., Shotton, D. (2012). FaBiO and CiTO: ontologies for describing bibliographic resources and citations. In Journal of Web Semantics, 17: 33-43. https://doi.org/10.1016/j.websem.2012.08.001. Open Access at: http://speroni.web.cs.unibo.it/publications/peroni-2012-fabio-cito-ontologies.pdf"""@en ;
+    schema:name "CiTO, the Citation Typing Ontology"@en ;
 .
 
 <http://purl.org/spar/cito/AffilationSelfCitation>

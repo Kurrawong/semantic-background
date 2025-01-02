@@ -3878,7 +3878,10 @@ PREFIX schema: <https://schema.org/>
 <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes>
     schema:description """A vocabulary that provides URIs for describing documentary form
          types of RiC Records and Record Parts."""@en ;
-    schema:name "Documentary Form Types"@en ;
+    schema:name
+        "Documentary Form Types"@en ,
+        """International Council on Archives Records in Contexts Vocabulary for
+         Documentary Form Types"""@en ;
 .
 
 <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#AuthorityRecord>
@@ -3896,7 +3899,10 @@ PREFIX schema: <https://schema.org/>
 <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes>
     schema:description """A vocabulary that provides URIs for describing types of RiC
          Record Sets."""@en ;
-    schema:name "Record Set Types"@en ;
+    schema:name
+        """International Council on Archives Records in Contexts Vocabulary for
+         Record Set Types"""@en ,
+        "Record Set Types"@en ;
 .
 
 <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#Collection>

@@ -4,6 +4,7 @@ PREFIX schema: <https://schema.org/>
 
 rdf:
     schema:description "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts." ;
+    schema:name "The RDF Concepts Vocabulary (RDF)" ;
 .
 
 rdf:Alt

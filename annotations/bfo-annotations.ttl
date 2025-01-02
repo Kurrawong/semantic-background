@@ -1,5 +1,9 @@
 PREFIX schema: <https://schema.org/>
 
+<http://www.ifomis.org/bfo/1.1>
+    schema:name "Basic Formal Ontology (BFO)" ;
+.
+
 <http://www.ifomis.org/bfo/1.1#Entity>
     schema:name "entity" ;
 .

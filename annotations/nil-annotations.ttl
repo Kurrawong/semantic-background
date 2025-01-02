@@ -9,7 +9,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:description
         "OGC nils"^^xsd:string ,
         "The URIs for resources in this document were assigned in accordance with the OGC Naming policies, overseen by the OGC Naming Authority. They are not otherwise managed as part of a delegated governance via a specific artefact, such as CodeLists from a normative schema."^^xsd:string ;
-    schema:name "OGC nils"^^xsd:string ;
+    schema:name
+        "Nil reasons"^^xsd:string ,
+        "OGC nils"^^xsd:string ;
 .
 
 <http://www.opengis.net/def/nil/>

@@ -3,6 +3,7 @@ PREFIX schema: <https://schema.org/>
 
 rdfs:
     rdfs:seeAlso <http://www.w3.org/2000/01/rdf-schema-more> ;
+    schema:name "The RDF Schema vocabulary (RDFS)" ;
 .
 
 rdfs:Class

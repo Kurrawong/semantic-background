@@ -772,7 +772,7 @@ prov:wasUsedInDerivation
         prov: ;
     schema:description
         "0.2"^^xsd:string ,
-        """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
+        """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page).
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
     schema:name "PROV Access and Query Ontology"@en ;
@@ -820,7 +820,9 @@ prov:
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/
 Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
-    schema:name "W3C Provenance Ontology"@en ;
+    schema:name
+        "The PROV Namespace" ,
+        "W3C Provenance Ontology"@en ;
 .
 
 prov:activity

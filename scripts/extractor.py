@@ -6,12 +6,12 @@ This script will preference versions of originals in the `sources/overrides/` fo
 `sources/originals/` folder, if they exist. This allows for manually-edited versions of common originals to be used.
 """
 
-import os
 import shutil
+from itertools import chain
 from pathlib import Path
 
-from rdflib import Graph, Namespace, BNode, Literal
-from rdflib.namespace import DC, DCTERMS, RDF, RDFS, SDO, SKOS
+from rdflib import Graph, Namespace, BNode, Literal, Dataset, URIRef
+from rdflib.namespace import DC, DCTERMS, OWL, RDF, RDFS, SDO, SKOS
 
 MADS = Namespace("http://www.loc.gov/mads/rdf/v1#")
 
@@ -19,9 +19,11 @@ repo_root = Path(__file__).parent.parent.resolve()
 
 print(f"Working in {repo_root}")
 
+d = Dataset()
+
 # make annotations & copy originals
 for f in Path(repo_root / "originals").glob("*.ttl"):
-    print(f"Processing {f}")
+    print(f"{f}")
     if Path(str(f).replace("originals", "overrides")).is_file():
         f = Path(str(f).replace("originals", "overrides"))
 
@@ -31,7 +33,7 @@ for f in Path(repo_root / "originals").glob("*.ttl"):
         .replace("originals", "ontologies")
         .replace("overrides", "ontologies")
     )
-    print(f"Copying the original or overridden ontology to {new_ontology_file}")
+    print(f"Copying to {new_ontology_file}")
     shutil.copy(f, new_ontology_file)
 
     new_annotation_file = Path(
@@ -39,8 +41,7 @@ for f in Path(repo_root / "originals").glob("*.ttl"):
         .replace("ontologies", "annotations")
         .replace(".ttl", "-annotations.ttl")
     )
-    print(f"Copying annotations to {new_annotation_file}")
-
+    print(f"Annotations to {new_annotation_file}")
 
     g = Graph().parse(f)
 
@@ -50,6 +51,7 @@ for f in Path(repo_root / "originals").glob("*.ttl"):
         | SKOS.prefLabel
         | SDO.name
         | DCTERMS.title
+        | DC.title
         | MADS.authoritativeLabel
     ):
         if not isinstance(s, BNode):  # prevents creating labels for BNs like contributors to originals
@@ -84,4 +86,23 @@ for f in Path(repo_root / "originals").glob("*.ttl"):
         if not isinstance(s, BNode):
             g2.add((s, RDFS.seeAlso, o))
 
-    g2.serialize(destination=new_annotation_file, format="longturtle", )
+    g2.serialize(destination=new_annotation_file, format="longturtle")
+
+    # create a single Trig file of all content
+    # find the IRI of the Ontology/ConceptScheme
+    ont_iri = None
+    for s in g.subjects(RDF.type, OWL.Ontology):
+        ont_iri = str(s)
+        print(f"{s}")
+    if ont_iri is None:
+        for s in g.subjects(RDF.type, SKOS.ConceptScheme):
+            ont_iri = str(s)
+            print(f"{s}")
+
+    if ont_iri is not None:
+        g3 = Graph(identifier=ont_iri + "-annotations")
+        g3 += g2
+
+        d.add_graph(g3)
+
+    d.serialize(destination=repo_root / "annotations.trig", format="trig")

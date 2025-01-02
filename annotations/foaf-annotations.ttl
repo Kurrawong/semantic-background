@@ -17,6 +17,7 @@ skos:Concept
 
 foaf:
     schema:description "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language." ;
+    schema:name "Friend of a Friend (FOAF) vocabulary" ;
 .
 
 foaf:Agent

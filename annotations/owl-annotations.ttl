@@ -24,6 +24,7 @@ PREFIX schema: <https://schema.org/>
   will cause it to become an OWL 2 Full ontology and may have other,
   unexpected, consequences.
    """ ;
+    schema:name "The OWL 2 Schema vocabulary (OWL 2)" ;
 .
 
 owl:AllDifferent

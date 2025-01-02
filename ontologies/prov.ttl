@@ -6,7 +6,7 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.w3.org/ns/prov#>
-    a owl:Ontology ;
+    # a owl:Ontology ;
     rdfs:comment """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page).
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/
@@ -42,9 +42,6 @@ owl:Thing
 
 owl:versionInfo
     a owl:AnnotationProperty .
-
-<http://www.w3.org/ns/prov#>
-    a owl:Ontology .
 
 :Activity
     a owl:Class ;
@@ -1339,7 +1336,7 @@ http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 
 # The following was imported from http://www.w3.org/ns/prov-o-inverses#
 
 
-<#> a owl:Ontology;
+<#> # a owl:Ontology;
    owl:versionIRI        <http://www.w3.org/ns/prov-o-inverses-20130430>;
    prov:wasRevisionOf    <http://www.w3.org/ns/prov-o-inverses-20120312>;
    prov:specializationOf <http://www.w3.org/ns/prov-o-inverses>;
@@ -1706,8 +1703,8 @@ prov:wasStartedBy rdfs:isDefinedBy <http://www.w3.org/ns/prov-o#> .
 
 
 <http://www.w3.org/ns/prov-aq#>
-    a owl:Ontology ;
-    rdfs:comment "0.2"^^xsd:string, """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
+    # a owl:Ontology ;
+    rdfs:comment "0.2"^^xsd:string, """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page).
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
     rdfs:label "PROV Access and Query Ontology"@en ;
@@ -1816,7 +1813,9 @@ owl:versionInfo
     a owl:AnnotationProperty .
 
 <http://www.w3.org/ns/prov#>
-    a owl:Ontology .
+    # a owl:Ontology ;
+    rdfs:label "The PROV Namespace"
+.
 
 
 :SoftwareAgent
@@ -1953,7 +1952,7 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 
 @base <http://www.w3.org/ns/prov-dc#> .
 
-<http://www.w3.org/ns/prov-dc#> rdf:type owl:Ontology ;
+<http://www.w3.org/ns/prov-dc#> # rdf:type owl:Ontology ;
                                 
                                 rdfs:label "Dublin Core extensions of the W3C PROVenance Interchange Ontology (PROV-O) "@en ;
                                 
@@ -2154,16 +2153,13 @@ prov:Submit rdf:type owl:Class ;
 
 
 <http://www.w3.org/ns/prov-dictionary#>
-    a owl:Ontology ;
+    # a owl:Ontology ;
     rdfs:comment """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
     rdfs:label "W3C PROVenance Interchange Ontology (PROV-O) Dictionary Extension"@en ;
     rdfs:seeAlso <http://www.w3.org/TR/prov-dictionary/>, <http://www.w3.org/ns/prov> .
 	
-<http://www.w3.org/ns/prov#>
-    a owl:Ontology .
-
 :Dictionary
 	a owl:Class ;
 	rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
@@ -2415,11 +2411,8 @@ owl:Thing
 owl:versionInfo
     a owl:AnnotationProperty .
 
-<http://www.w3.org/ns/prov#>
-    a owl:Ontology .
-
 <http://www.w3.org/ns/prov-links#>
-    a owl:Ontology ;
+    # a owl:Ontology ;
     owl:imports <http://www.w3.org/ns/prov-o#>;
     rdfs:comment """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/
 ). All feedback is welcome."""@en ;
