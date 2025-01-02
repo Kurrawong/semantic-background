@@ -13,9 +13,17 @@ We maintain the currency of these artifacts as best we can, so this is a one-sto
 Most users of this repo will only need the `annotations/` & `ontologies/` folders.
 
 * `annotations/` - labels, descriptions and seeAlso links only from all ontologies
+  * `annotations.trig` - a trig (quads) file containing all the annotation RDF file contents
 * `ontologies/` - full ontologies, either originals or with annotation updates only (neater labels etc.)
 * `originals/` - the original ontologies, manual overrides and scripts needed to generate the content of the `annotations/` & `ontologies/` folders 
 * `overrides/` - manually edited versions of the original ontology files, only altering stylistic aspects of annotations
+
+There are two Catalogue declarations too:
+
+* `catalogue-annotations.ttl` - definition of the 'Semantic Background Ontologies' catalogue
+  * `manifest-annotations.ttl` - the manifest for the catalogue using `annotations.trig` for all Resources
+* `catalogue-ontologies.ttl` - definition of the 'Semantic Background Annotations' catalogue
+  * `manifest-ontologies.ttl` - the manifest for the catalogue using `annotations.trig` for all Resources
 
 ## License
 

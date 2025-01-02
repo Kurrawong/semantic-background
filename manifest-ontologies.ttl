@@ -3,7 +3,7 @@ PREFIX prez: <https://prez.dev/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX schema: <https://schema.org/>
 
-[]
+<https://kurrawong.ai/semantic-bankground/ontologies-manifest>
     a prez:Manifest ;
     prof:hasResource
         [

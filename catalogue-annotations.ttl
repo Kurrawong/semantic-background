@@ -2,6 +2,7 @@ PREFIX astatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX catns: <https://example.com/demo-vocabs/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX prez: <https://prez.dev/>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -66,4 +67,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Semantic Background Annotations" ;
     schema:publisher <https://kurrawong.ai> ;
     reg:status astatus:experimental ;
+    prez:hasManifest <https://kurrawong.ai/semantic-bankground/annotations-manifest> ;
 .
