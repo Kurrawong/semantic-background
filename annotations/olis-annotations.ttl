@@ -1,0 +1,44 @@
+PREFIX schema: <https://schema.org/>
+
+<https://kurrawong.ai>
+    schema:name "Kurrawong AI" ;
+.
+
+<https://olis.dev/NamedGraph>
+    schema:description "An RDF Named Graph"@en ;
+    schema:name "Named Graph"@en ;
+.
+
+<https://olis.dev/RealGraph>
+    schema:description "An RDF Named Graph that contains triples"@en ;
+    schema:name "Real Graph"@en ;
+.
+
+<https://olis.dev/VirtualGraph>
+    schema:description "An RDF Named Graph that is an alias for other Named Graphs and does not contain triples"@en ;
+    schema:name "Virtual Graph"@en ;
+.
+
+<https://olis.dev/isAliasFor>
+    schema:description "A Virtual Graph is an alias for one ore more other Named Graphs"@en ;
+    schema:name "is alias for"@en ;
+.
+
+<https://olis.dev/ont>
+    schema:description "A model of virtual and real RDF Named Graphs and relations between them"@en ;
+    schema:name "Olis Ontology"@en ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    schema:name "Nicholas J. Car"@en ;
+.
+
+schema:description
+    schema:description "A description of the item" ;
+    schema:name "description" ;
+.
+
+schema:name
+    schema:description "The name of the item" ;
+    schema:name "name" ;
+.
