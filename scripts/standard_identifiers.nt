@@ -1,0 +1,690 @@
+<http://id.loc.gov/vocabulary/identifiers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#MADSScheme> .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/morana> .
+<http://id.loc.gov/vocabulary/identifiers/morana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/morana> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Musée d'Orsay Répertoire des artistes notice artiste" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/local> .
+<http://id.loc.gov/vocabulary/identifiers/local> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/local> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Locally defined identifier" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/kinopo> .
+<http://id.loc.gov/vocabulary/identifiers/kinopo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/kinopo> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "KinoPoisk" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bhb> .
+<http://id.loc.gov/vocabulary/identifiers/bhb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bhb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Bibliography of the Hebrew book" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/scopus> .
+<http://id.loc.gov/vocabulary/identifiers/scopus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/scopus> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Scopus author identifier" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/conccc> .
+<http://id.loc.gov/vocabulary/identifiers/conccc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/conccc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Congress.gov congressional committee codes" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isbn> .
+<http://id.loc.gov/vocabulary/identifiers/isbn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isbn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International standard book number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bbrainzp> .
+<http://id.loc.gov/vocabulary/identifiers/bbrainzp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bbrainzp> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "BookBrainz publisher" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/muscl> .
+<http://id.loc.gov/vocabulary/identifiers/muscl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/muscl> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Music Sales Classical" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/odnb> .
+<http://id.loc.gov/vocabulary/identifiers/odnb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/odnb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Oxford Dictionary of National Biography" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/svfilm> .
+<http://id.loc.gov/vocabulary/identifiers/svfilm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/svfilm> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Svensk Filmdatabas" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/agorha> .
+<http://id.loc.gov/vocabulary/identifiers/agorha> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/agorha> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "AGORHA (Accès global et organisé aux ressources en histoire de l'art)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bdusc> .
+<http://id.loc.gov/vocabulary/identifiers/bdusc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bdusc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Biographical directory of the United States Congress" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/theatr> .
+<http://id.loc.gov/vocabulary/identifiers/theatr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/theatr> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Theatricalia" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/pcadbu> .
+<http://id.loc.gov/vocabulary/identifiers/pcadbu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/pcadbu> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Pacific Coast Architecture Database - buildings list" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isni> .
+<http://id.loc.gov/vocabulary/identifiers/isni> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isni> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International standard name identifier" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/hdl> .
+<http://id.loc.gov/vocabulary/identifiers/hdl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/hdl> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Handle" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/allmovie> .
+<http://id.loc.gov/vocabulary/identifiers/allmovie> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/allmovie> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "AllMovie" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/mesh> .
+<http://id.loc.gov/vocabulary/identifiers/mesh> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/mesh> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Medical Subject Headings" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/danacode> .
+<http://id.loc.gov/vocabulary/identifiers/danacode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/danacode> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Danacode" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bsi> .
+<http://id.loc.gov/vocabulary/identifiers/bsi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bsi> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "British Standards Institution" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/music-plate> .
+<http://id.loc.gov/vocabulary/identifiers/music-plate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/music-plate> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Publisher's music plate number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/kda> .
+<http://id.loc.gov/vocabulary/identifiers/kda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/kda> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Kunstindeks Danmark artist" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/unescot> .
+<http://id.loc.gov/vocabulary/identifiers/unescot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/unescot> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "UNESCO thesaurus = Thésaurus de l'UNESCO = Tesauro de la UNESCO" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/vd16> .
+<http://id.loc.gov/vocabulary/identifiers/vd16> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/vd16> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verzeichnis der Drucke des 16. Jahrhunderts" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ecli> .
+<http://id.loc.gov/vocabulary/identifiers/ecli> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ecli> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "European case law identifier" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/urn> .
+<http://id.loc.gov/vocabulary/identifiers/urn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/urn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Uniform resource name" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ilot> .
+<http://id.loc.gov/vocabulary/identifiers/ilot> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ilot> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ILO Thesaurus" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/pmc> .
+<http://id.loc.gov/vocabulary/identifiers/pmc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/pmc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "PubMed Central" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/sprfhoc> .
+<http://id.loc.gov/vocabulary/identifiers/sprfhoc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/sprfhoc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Sports Reference: Hockey" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/oxforddnb> .
+<http://id.loc.gov/vocabulary/identifiers/oxforddnb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/oxforddnb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Oxford biography index" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/auscn> .
+<http://id.loc.gov/vocabulary/identifiers/auscn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/auscn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Australian company number (ACN)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gettyobj> .
+<http://id.loc.gov/vocabulary/identifiers/gettyobj> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gettyobj> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "J. Paul Getty Museum objects" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/cantic> .
+<http://id.loc.gov/vocabulary/identifiers/cantic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/cantic> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "CANTIC (Catàleg d'autoritats de noms i títols de Catalunya)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/dpb> .
+<http://id.loc.gov/vocabulary/identifiers/dpb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/dpb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Dictionnaire des peintres belges" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/lccn> .
+<http://id.loc.gov/vocabulary/identifiers/lccn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/lccn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Library of Congress control number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/issn-l> .
+<http://id.loc.gov/vocabulary/identifiers/issn-l> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/issn-l> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Linking International standard serial number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/goodra> .
+<http://id.loc.gov/vocabulary/identifiers/goodra> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/goodra> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Goodreads authors" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/nacat> .
+<http://id.loc.gov/vocabulary/identifiers/nacat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/nacat> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "National Archives Catalog" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/scope> .
+<http://id.loc.gov/vocabulary/identifiers/scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/scope> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Scope" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/twnaf> .
+<http://id.loc.gov/vocabulary/identifiers/twnaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/twnaf> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Taiwan name authority file" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/emanus-vlid> .
+<http://id.loc.gov/vocabulary/identifiers/emanus-vlid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/emanus-vlid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Digital platform for manuscript material from Swiss libraries and archives" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gemet> .
+<http://id.loc.gov/vocabulary/identifiers/gemet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gemet> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "GEMET thesaurus" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/belvwrk> .
+<http://id.loc.gov/vocabulary/identifiers/belvwrk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/belvwrk> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Belvedere Werke" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ssaut> .
+<http://id.loc.gov/vocabulary/identifiers/ssaut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ssaut> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Semantic Scholar (Author)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/eidr> .
+<http://id.loc.gov/vocabulary/identifiers/eidr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/eidr> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "EIDR: entertainment identifier registry" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/margaz> .
+<http://id.loc.gov/vocabulary/identifiers/margaz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/margaz> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Marine Gazetteer" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/wikidata> .
+<http://id.loc.gov/vocabulary/identifiers/wikidata> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/wikidata> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Wikidata" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/fast> .
+<http://id.loc.gov/vocabulary/identifiers/fast> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/fast> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "FAST: faceted application of subject terminology" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bpn> .
+<http://id.loc.gov/vocabulary/identifiers/bpn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bpn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Biografisch Portaal van Nederland = Biography portal of the Netherlands" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/vera> .
+<http://id.loc.gov/vocabulary/identifiers/vera> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/vera> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Danish Authority File" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ausnzst> .
+<http://id.loc.gov/vocabulary/identifiers/ausnzst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ausnzst> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Australian/New Zealand standards" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/kulturnav> .
+<http://id.loc.gov/vocabulary/identifiers/kulturnav> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/kulturnav> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Kulturnav" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/artsy> .
+<http://id.loc.gov/vocabulary/identifiers/artsy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/artsy> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Artsy" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/itar> .
+<http://id.loc.gov/vocabulary/identifiers/itar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/itar> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ITAR (Importtjeneste og autoritetsregistre)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/cnbksy> .
+<http://id.loc.gov/vocabulary/identifiers/cnbksy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/cnbksy> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Quan guo bao kan suo yin (CNBKSY)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/emlo> .
+<http://id.loc.gov/vocabulary/identifiers/emlo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/emlo> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Early modern letters online" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ror> .
+<http://id.loc.gov/vocabulary/identifiers/ror> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ror> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Research Organization Registry" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/arxiv> .
+<http://id.loc.gov/vocabulary/identifiers/arxiv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/arxiv> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "arXiv" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isfdbma> .
+<http://id.loc.gov/vocabulary/identifiers/isfdbma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isfdbma> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ISFDB magazine directory" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/benezit> .
+<http://id.loc.gov/vocabulary/identifiers/benezit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/benezit> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Benezit dictionary of artists" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/cgndb> .
+<http://id.loc.gov/vocabulary/identifiers/cgndb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/cgndb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Canadian geographical names database" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bbrainzw> .
+<http://id.loc.gov/vocabulary/identifiers/bbrainzw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bbrainzw> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "BookBrainz work" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isfdbaw> .
+<http://id.loc.gov/vocabulary/identifiers/isfdbaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isfdbaw> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ISFDB award directory" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gettyart> .
+<http://id.loc.gov/vocabulary/identifiers/gettyart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gettyart> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "J. Paul Getty Museum artists" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/rid> .
+<http://id.loc.gov/vocabulary/identifiers/rid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/rid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ResearcherID" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/saam> .
+<http://id.loc.gov/vocabulary/identifiers/saam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/saam> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Smithsonian American Art Museum" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/atg> .
+<http://id.loc.gov/vocabulary/identifiers/atg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/atg> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Agricultural thesaurus and glossary" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/prabook> .
+<http://id.loc.gov/vocabulary/identifiers/prabook> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/prabook> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Prabook" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/discogs> .
+<http://id.loc.gov/vocabulary/identifiers/discogs> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/discogs> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Discogs" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bew> .
+<http://id.loc.gov/vocabulary/identifiers/bew> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bew> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Biographies of the entomologists of the world" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/sprfoly> .
+<http://id.loc.gov/vocabulary/identifiers/sprfoly> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/sprfoly> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Sports Reference: Olympic Sports" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isbnre> .
+<http://id.loc.gov/vocabulary/identifiers/isbnre> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isbnre> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ISBN (International Standard Book Number) registrant element" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/pcadpf> .
+<http://id.loc.gov/vocabulary/identifiers/pcadpf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/pcadpf> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Pacific Coast Architecture Database - practices and firms" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/picnypl> .
+<http://id.loc.gov/vocabulary/identifiers/picnypl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/picnypl> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "PIC - Photographers' Identities Catalog" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gtaa> .
+<http://id.loc.gov/vocabulary/identifiers/gtaa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gtaa> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Gemeenschappelijke Thesaurus voor Audiovisuele Archieven" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/filmport> .
+<http://id.loc.gov/vocabulary/identifiers/filmport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/filmport> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "filmportal.de" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/dkfilm> .
+<http://id.loc.gov/vocabulary/identifiers/dkfilm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/dkfilm> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Det Danske Filminstitut Filmdatabasen" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/famsea> .
+<http://id.loc.gov/vocabulary/identifiers/famsea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/famsea> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "FamilySearch" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/archna> .
+<http://id.loc.gov/vocabulary/identifiers/archna> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/archna> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Archnet authorities" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/smgp> .
+<http://id.loc.gov/vocabulary/identifiers/smgp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/smgp> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Science Museum Group People" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/datoses> .
+<http://id.loc.gov/vocabulary/identifiers/datoses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/datoses> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "datos.bne.es" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/upc> .
+<http://id.loc.gov/vocabulary/identifiers/upc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/upc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Universal product code" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/nstc> .
+<http://id.loc.gov/vocabulary/identifiers/nstc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/nstc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "National Standard Text Code" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/orgnr> .
+<http://id.loc.gov/vocabulary/identifiers/orgnr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/orgnr> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Norwegian national organization number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/nagv> .
+<http://id.loc.gov/vocabulary/identifiers/nagv> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/nagv> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "The National Archives (Great Britain)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/scholaru> .
+<http://id.loc.gov/vocabulary/identifiers/scholaru> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/scholaru> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Scholar Universe" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/cabt> .
+<http://id.loc.gov/vocabulary/identifiers/cabt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/cabt> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "CABI thesaurus" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/erara-vlid> .
+<http://id.loc.gov/vocabulary/identifiers/erara-vlid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/erara-vlid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "The platform for digitized rare books from Swiss institutions" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/sici> .
+<http://id.loc.gov/vocabulary/identifiers/sici> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/sici> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Serial item and contribution identifier" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ansi> .
+<http://id.loc.gov/vocabulary/identifiers/ansi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ansi> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "American National Standards Institute and National Information Standards Organisation number for an ANSI or ANSI/NISO standard" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ausst> .
+<http://id.loc.gov/vocabulary/identifiers/ausst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ausst> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Australian standards (Standards Australia)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bbrainza> .
+<http://id.loc.gov/vocabulary/identifiers/bbrainza> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bbrainza> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "BookBrainz author" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isan> .
+<http://id.loc.gov/vocabulary/identifiers/isan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isan> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International standard audiovisual number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/sprfcbb> .
+<http://id.loc.gov/vocabulary/identifiers/sprfcbb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/sprfcbb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Sports Reference: College Basketball" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bfi> .
+<http://id.loc.gov/vocabulary/identifiers/bfi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bfi> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "BFI - British Film Institute" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/nipo> .
+<http://id.loc.gov/vocabulary/identifiers/nipo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/nipo> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "NIPO (Número de Identificación de las Publicaciones Oficiales)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/artukart> .
+<http://id.loc.gov/vocabulary/identifiers/artukart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/artukart> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Art UK artists" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/pcadpe> .
+<http://id.loc.gov/vocabulary/identifiers/pcadpe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/pcadpe> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Pacific Coast Architecture Database - persons list" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/dma> .
+<http://id.loc.gov/vocabulary/identifiers/dma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/dma> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Digital musikkarkiv" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/sprfbsb> .
+<http://id.loc.gov/vocabulary/identifiers/sprfbsb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/sprfbsb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Sports Reference: Baseball" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gec> .
+<http://id.loc.gov/vocabulary/identifiers/gec> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gec> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Gran enciclopèdia catalana" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/imdb> .
+<http://id.loc.gov/vocabulary/identifiers/imdb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/imdb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "IMDB: Internet Movie Database" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/snac> .
+<http://id.loc.gov/vocabulary/identifiers/snac> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/snac> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Social Networks and Archival Context" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/inspire> .
+<http://id.loc.gov/vocabulary/identifiers/inspire> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/inspire> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "INSPIRE HEP" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/cana> .
+<http://id.loc.gov/vocabulary/identifiers/cana> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/cana> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Canadiana authorities" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/issue-number> .
+<http://id.loc.gov/vocabulary/identifiers/issue-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/issue-number> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Sound recording issue number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/freebase> .
+<http://id.loc.gov/vocabulary/identifiers/freebase> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/freebase> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Freebase" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/viaf> .
+<http://id.loc.gov/vocabulary/identifiers/viaf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/viaf> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Virtual International Authority File number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/sprfbsk> .
+<http://id.loc.gov/vocabulary/identifiers/sprfbsk> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/sprfbsk> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Sports Reference: Basketball" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/rism> .
+<http://id.loc.gov/vocabulary/identifiers/rism> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/rism> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Repertoire International des Sources Musicale (RISM)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/nii> .
+<http://id.loc.gov/vocabulary/identifiers/nii> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/nii> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Author Authority ID of NACSIS-CAT" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/geonames> .
+<http://id.loc.gov/vocabulary/identifiers/geonames> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/geonames> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "GeoNames" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/iconauth> .
+<http://id.loc.gov/vocabulary/identifiers/iconauth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/iconauth> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Iconography authority" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/nzggn> .
+<http://id.loc.gov/vocabulary/identifiers/nzggn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/nzggn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "New Zealand gazetteer of place names" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/stock-number> .
+<http://id.loc.gov/vocabulary/identifiers/stock-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/stock-number> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Publisher, distributor, or vendor stock number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/archinpe> .
+<http://id.loc.gov/vocabulary/identifiers/archinpe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/archinpe> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "archINFORM index of persons" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/moma> .
+<http://id.loc.gov/vocabulary/identifiers/moma> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/moma> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Museum of Modern Art" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bigenc> .
+<http://id.loc.gov/vocabulary/identifiers/bigenc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bigenc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Большая российская энциклопедия = Bolʹshai︠a︡ rossiĭskai︠a︡ ėnt︠s︡iklopedii︠a︡ (Great Russian Encyclopedia)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/onix> .
+<http://id.loc.gov/vocabulary/identifiers/onix> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/onix> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ONIX (Online Information Exchange)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/iaafa> .
+<http://id.loc.gov/vocabulary/identifiers/iaafa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/iaafa> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "World Athletics" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/allmusic> .
+<http://id.loc.gov/vocabulary/identifiers/allmusic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/allmusic> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "AllMusic" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/nlg> .
+<http://id.loc.gov/vocabulary/identifiers/nlg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/nlg> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "National Library of Greece" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/pnta> .
+<http://id.loc.gov/vocabulary/identifiers/pnta> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/pnta> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Personen uit de Nederlandse Thesaurus van Auteursnamen" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/permid> .
+<http://id.loc.gov/vocabulary/identifiers/permid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/permid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "PermID" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/npg> .
+<http://id.loc.gov/vocabulary/identifiers/npg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/npg> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "National Portrait Gallery" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/lei> .
+<http://id.loc.gov/vocabulary/identifiers/lei> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/lei> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Legal entity identifier system" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/oalex> .
+<http://id.loc.gov/vocabulary/identifiers/oalex> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/oalex> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "OpenAlex" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/rijkspid> .
+<http://id.loc.gov/vocabulary/identifiers/rijkspid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/rijkspid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Rijksmuseum persistent identifiers" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/natgazfid> .
+<http://id.loc.gov/vocabulary/identifiers/natgazfid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/natgazfid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "U.S. National Gazetteer Feature Name Identifier" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/fisa> .
+<http://id.loc.gov/vocabulary/identifiers/fisa> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/fisa> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "FIS athlete" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/clara> .
+<http://id.loc.gov/vocabulary/identifiers/clara> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/clara> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Clara: database of women artists" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/issn> .
+<http://id.loc.gov/vocabulary/identifiers/issn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/issn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International standard serial number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/trove> .
+<http://id.loc.gov/vocabulary/identifiers/trove> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/trove> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Trove" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bibbi> .
+<http://id.loc.gov/vocabulary/identifiers/bibbi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bibbi> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "BIBBI autoriteter" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/stw> .
+<http://id.loc.gov/vocabulary/identifiers/stw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/stw> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Standard-Thesaurus Wirtschaft = STW thesaurus for economics" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ktgw> .
+<http://id.loc.gov/vocabulary/identifiers/ktgw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ktgw> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Work ID of the Union Catalogue Database of Japanese Texts" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/filmaff> .
+<http://id.loc.gov/vocabulary/identifiers/filmaff> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/filmaff> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Film affinity" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/videorecording-identifer> .
+<http://id.loc.gov/vocabulary/identifiers/videorecording-identifer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/videorecording-identifer> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Publisher-assigned videorecording number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isfdbau> .
+<http://id.loc.gov/vocabulary/identifiers/isfdbau> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isfdbau> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ISFDB author directory" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/vd18> .
+<http://id.loc.gov/vocabulary/identifiers/vd18> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/vd18> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verzeichnis der Drucke des 18. Jahrhunderts" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ausbn> .
+<http://id.loc.gov/vocabulary/identifiers/ausbn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ausbn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Australian business number (ABN)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/zbaut> .
+<http://id.loc.gov/vocabulary/identifiers/zbaut> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/zbaut> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ZooBank" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/archinl> .
+<http://id.loc.gov/vocabulary/identifiers/archinl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/archinl> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "archINFORM index of locations" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/worldcat> .
+<http://id.loc.gov/vocabulary/identifiers/worldcat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/worldcat> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "WorldCat Entities" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/fidecp> .
+<http://id.loc.gov/vocabulary/identifiers/fidecp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/fidecp> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Fide chess profile" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gettyulan> .
+<http://id.loc.gov/vocabulary/identifiers/gettyulan> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gettyulan> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Union list of artist names online" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/archns> .
+<http://id.loc.gov/vocabulary/identifiers/archns> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/archns> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Archnet sites" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ark> .
+<http://id.loc.gov/vocabulary/identifiers/ark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ark> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Archival resource key (ARK) identifiers" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ean> .
+<http://id.loc.gov/vocabulary/identifiers/ean> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ean> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International article number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ktga> .
+<http://id.loc.gov/vocabulary/identifiers/ktga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ktga> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Author ID of the Union Catalogue Database of Japanese Texts" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/moviemetr> .
+<http://id.loc.gov/vocabulary/identifiers/moviemetr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/moviemetr> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "MovieMeter regisseurs" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/doi> .
+<http://id.loc.gov/vocabulary/identifiers/doi> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/doi> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Digital object identifier" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/artukaw> .
+<http://id.loc.gov/vocabulary/identifiers/artukaw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/artukaw> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Art UK artworks" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bbcth> .
+<http://id.loc.gov/vocabulary/identifiers/bbcth> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bbcth> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "BBC things" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/sprfpfb> .
+<http://id.loc.gov/vocabulary/identifiers/sprfpfb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/sprfpfb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Sports Reference: Pro Football" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/cerl> .
+<http://id.loc.gov/vocabulary/identifiers/cerl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/cerl> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "CERL thesaurus" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ibdb> .
+<http://id.loc.gov/vocabulary/identifiers/ibdb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ibdb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "IBDB: Internet Broadway database" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/opensm> .
+<http://id.loc.gov/vocabulary/identifiers/opensm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/opensm> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "OpenStreetMap" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isbnsbn> .
+<http://id.loc.gov/vocabulary/identifiers/isbnsbn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isbnsbn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Identificativo SBN" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/it-acnp> .
+<http://id.loc.gov/vocabulary/identifiers/it-acnp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/it-acnp> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Catalogo italiano dei periodici" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/sprfcfb> .
+<http://id.loc.gov/vocabulary/identifiers/sprfcfb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/sprfcfb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Sports Reference: College Football" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/geprishisp> .
+<http://id.loc.gov/vocabulary/identifiers/geprishisp> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/geprishisp> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "GEPRIS Historisch ID (Person)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/mocofo> .
+<http://id.loc.gov/vocabulary/identifiers/mocofo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/mocofo> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Musée d'Orsay Catalogue des oeuvres fiche oeuvre" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isbn-a> .
+<http://id.loc.gov/vocabulary/identifiers/isbn-a> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isbn-a> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International standard book number (the actionable ISBN)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gnd> .
+<http://id.loc.gov/vocabulary/identifiers/gnd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gnd> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Gemeinsame Normdatei" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/elsst> .
+<http://id.loc.gov/vocabulary/identifiers/elsst> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/elsst> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ELSST thesaurus - European language social science thesaurus" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/kaken> .
+<http://id.loc.gov/vocabulary/identifiers/kaken> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/kaken> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Researcher Number of the Grants-in-Aid for Scientific Research (KAKENHI) Program" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/amnbo> .
+<http://id.loc.gov/vocabulary/identifiers/amnbo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/amnbo> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "American National Biography Online" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/orcid> .
+<http://id.loc.gov/vocabulary/identifiers/orcid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/orcid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Open researcher and contributor identifier" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gettytgn> .
+<http://id.loc.gov/vocabulary/identifiers/gettytgn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gettytgn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Getty thesaurus of geographic names online" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/allocine> .
+<http://id.loc.gov/vocabulary/identifiers/allocine> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/allocine> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "AlloCiné" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/agrovoc> .
+<http://id.loc.gov/vocabulary/identifiers/agrovoc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/agrovoc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "AGROVOC multilingual agricultural thesaurus" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/rkda> .
+<http://id.loc.gov/vocabulary/identifiers/rkda> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/rkda> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "RKDartists" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/music-publisher> .
+<http://id.loc.gov/vocabulary/identifiers/music-publisher> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/music-publisher> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Publisher-assigned music number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gettyaat> .
+<http://id.loc.gov/vocabulary/identifiers/gettyaat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gettyaat> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Art & architecture theasurus online" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/idref> .
+<http://id.loc.gov/vocabulary/identifiers/idref> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/idref> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "IdRef: identifiants et référentiels" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/moviemetf> .
+<http://id.loc.gov/vocabulary/identifiers/moviemetf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/moviemetf> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "MovieMeter films" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isrc> .
+<http://id.loc.gov/vocabulary/identifiers/isrc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isrc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International standard recording code" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/nndb> .
+<http://id.loc.gov/vocabulary/identifiers/nndb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/nndb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "NNDB (Notable Names Database)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/tpce> .
+<http://id.loc.gov/vocabulary/identifiers/tpce> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/tpce> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Tesauros del Patrimonio Cultural de España" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gacsch> .
+<http://id.loc.gov/vocabulary/identifiers/gacsch> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gacsch> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Global agricultural concept space (GACS)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/pmid> .
+<http://id.loc.gov/vocabulary/identifiers/pmid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/pmid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "PubMed" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/balat> .
+<http://id.loc.gov/vocabulary/identifiers/balat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/balat> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "BALaT (Belgian art links and tools) People & institutions" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/cbwpid> .
+<http://id.loc.gov/vocabulary/identifiers/cbwpid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/cbwpid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Collective biographies of women" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/csfdcz> .
+<http://id.loc.gov/vocabulary/identifiers/csfdcz> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/csfdcz> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Česko-Slovenská filmová databáze" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/musicb> .
+<http://id.loc.gov/vocabulary/identifiers/musicb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/musicb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "MusicBrainz" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/xgamea> .
+<http://id.loc.gov/vocabulary/identifiers/xgamea> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/xgamea> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "X Games athletes" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/wndla> .
+<http://id.loc.gov/vocabulary/identifiers/wndla> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/wndla> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Web NDL authorities" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bnfcg> .
+<http://id.loc.gov/vocabulary/identifiers/bnfcg> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bnfcg> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "BnF catalogue général" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/kdw> .
+<http://id.loc.gov/vocabulary/identifiers/kdw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/kdw> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Kunstindeks Danmark work" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/lattes> .
+<http://id.loc.gov/vocabulary/identifiers/lattes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/lattes> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Curriculo Lattes" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ausrn> .
+<http://id.loc.gov/vocabulary/identifiers/ausrn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ausrn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Australian registered body number (ABRN)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/s2a3bd> .
+<http://id.loc.gov/vocabulary/identifiers/s2a3bd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/s2a3bd> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "S2A3 biographical database of southern African science" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/findagr> .
+<http://id.loc.gov/vocabulary/identifiers/findagr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/findagr> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Find a Grave" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/porthu> .
+<http://id.loc.gov/vocabulary/identifiers/porthu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/porthu> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "PORT.hu" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/tatearid> .
+<http://id.loc.gov/vocabulary/identifiers/tatearid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/tatearid> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Tate artist identifier" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/vgmdb> .
+<http://id.loc.gov/vocabulary/identifiers/vgmdb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/vgmdb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "VGMdb artists" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/knpam> .
+<http://id.loc.gov/vocabulary/identifiers/knpam> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/knpam> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Russian National Heritage Registry for Books" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/istc> .
+<http://id.loc.gov/vocabulary/identifiers/istc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/istc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International standard text code" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ngva> .
+<http://id.loc.gov/vocabulary/identifiers/ngva> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ngva> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "National Gallery of Victoria artist" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/strn> .
+<http://id.loc.gov/vocabulary/identifiers/strn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/strn> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Standard technical report number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ngvw> .
+<http://id.loc.gov/vocabulary/identifiers/ngvw> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ngvw> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "National Gallery of Victoria work" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/uri> .
+<http://id.loc.gov/vocabulary/identifiers/uri> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/uri> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Uniform resource identifier" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/nga> .
+<http://id.loc.gov/vocabulary/identifiers/nga> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/nga> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "National Gallery of Art" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/iso> .
+<http://id.loc.gov/vocabulary/identifiers/iso> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/iso> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International Organization for Standardization number for an ISO standard" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/munzing> .
+<http://id.loc.gov/vocabulary/identifiers/munzing> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/munzing> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Munzinger" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/urbe> .
+<http://id.loc.gov/vocabulary/identifiers/urbe> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/urbe> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Parsifal" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isil> .
+<http://id.loc.gov/vocabulary/identifiers/isil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isil> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ISIL (International standard identifier for libraries and related organizations)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/darome> .
+<http://id.loc.gov/vocabulary/identifiers/darome> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/darome> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Digital atlas of the Roman Empire" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gnis> .
+<http://id.loc.gov/vocabulary/identifiers/gnis> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gnis> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Geographic names information system (GNIS)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/bdrc> .
+<http://id.loc.gov/vocabulary/identifiers/bdrc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/bdrc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Buddhist Digital Resource Center" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/lcmd> .
+<http://id.loc.gov/vocabulary/identifiers/lcmd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/lcmd> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Library of Congress Manuscript Division field of history codes" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/geogndb> .
+<http://id.loc.gov/vocabulary/identifiers/geogndb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/geogndb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Geographic names database" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/archinpr> .
+<http://id.loc.gov/vocabulary/identifiers/archinpr> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/archinpr> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "archINFORM projects" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/iswc> .
+<http://id.loc.gov/vocabulary/identifiers/iswc> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/iswc> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International standard musical work code" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/pleiades> .
+<http://id.loc.gov/vocabulary/identifiers/pleiades> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/pleiades> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Pleiades: a gazetteer of past places" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/belvku> .
+<http://id.loc.gov/vocabulary/identifiers/belvku> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/belvku> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Belvedere Künstler" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/isfdbpu> .
+<http://id.loc.gov/vocabulary/identifiers/isfdbpu> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/isfdbpu> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "ISFDB publisher directory" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/libaus> .
+<http://id.loc.gov/vocabulary/identifiers/libaus> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/libaus> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Libraries Australia" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/iconclass> .
+<http://id.loc.gov/vocabulary/identifiers/iconclass> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/iconclass> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Iconclass" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/spotify> .
+<http://id.loc.gov/vocabulary/identifiers/spotify> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/spotify> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Spotify" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/vd17> .
+<http://id.loc.gov/vocabulary/identifiers/vd17> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/vd17> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Verzeichnis der Drucke des 17. Jahrhunderts" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/matrix-number> .
+<http://id.loc.gov/vocabulary/identifiers/matrix-number> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/matrix-number> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Sound recording matrix number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/gtin-14> .
+<http://id.loc.gov/vocabulary/identifiers/gtin-14> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/gtin-14> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "Global trade identification number 14 (EAN/UCC-128 or ITF-14)" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ismm> .
+<http://id.loc.gov/vocabulary/identifiers/ismm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ismm> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "International standard music number" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/manto> .
+<http://id.loc.gov/vocabulary/identifiers/manto> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/manto> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "MANTO" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#hasMADSSchemeMember> <http://id.loc.gov/vocabulary/identifiers/ofdb> .
+<http://id.loc.gov/vocabulary/identifiers/ofdb> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.loc.gov/mads/rdf/v1#Authority> .
+<http://id.loc.gov/vocabulary/identifiers/ofdb> <http://www.loc.gov/mads/rdf/v1#authoritativeLabel> "OFDb: Online-Filmdatenbank" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.w3.org/2000/01/rdf-schema#label> "Standard Identifiers"@en .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.w3.org/2000/01/rdf-schema#comment> "" .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.loc.gov/mads/rdf/v1#definitionNote> "The Standard Identifiers Scheme lists standard number or code systems and assigns a URI to each database or publication that defines or contains the identifiers. The purpose of these source codes is to enable the type of standard numbers or codes in resource descriptions to be indicated by URI."@en .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://id.loc.gov/vocabulary/identifiers> <http://www.w3.org/2004/02/skos/core#definition> "The Standard Identifiers Scheme lists standard number or code systems and assigns a URI to each database or publication that defines or contains the identifiers. The purpose of these source codes is to enable the type of standard numbers or codes in resource descriptions to be indicated by URI."@en .

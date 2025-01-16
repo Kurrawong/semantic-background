@@ -1,0 +1,2063 @@
+PREFIX : <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX cs: <http://id.loc.gov/vocabulary/identifiers>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+:agorha
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "AGORHA (Accès global et organisé aux ressources en histoire de l'art)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "AGORHA (Accès global et organisé aux ressources en histoire de l'art)" ;
+.
+
+:agrovoc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "AGROVOC multilingual agricultural thesaurus" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "AGROVOC multilingual agricultural thesaurus" ;
+.
+
+:allmovie
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "AllMovie" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "AllMovie" ;
+.
+
+:allmusic
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "AllMusic" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "AllMusic" ;
+.
+
+:allocine
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "AlloCiné" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "AlloCiné" ;
+.
+
+:amnbo
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "American National Biography Online" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "American National Biography Online" ;
+.
+
+:ansi
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "American National Standards Institute and National Information Standards Organisation number for an ANSI or ANSI/NISO standard" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "American National Standards Institute and National Information Standards Organisation number for an ANSI or ANSI/NISO standard" ;
+.
+
+:archinl
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "archINFORM index of locations" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "archINFORM index of locations" ;
+.
+
+:archinpe
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "archINFORM index of persons" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "archINFORM index of persons" ;
+.
+
+:archinpr
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "archINFORM projects" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "archINFORM projects" ;
+.
+
+:archna
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Archnet authorities" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Archnet authorities" ;
+.
+
+:archns
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Archnet sites" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Archnet sites" ;
+.
+
+:ark
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Archival resource key (ARK) identifiers" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Archival resource key (ARK) identifiers" ;
+.
+
+:artsy
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Artsy" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Artsy" ;
+.
+
+:artukart
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Art UK artists" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Art UK artists" ;
+.
+
+:artukaw
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Art UK artworks" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Art UK artworks" ;
+.
+
+:arxiv
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "arXiv" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "arXiv" ;
+.
+
+:atg
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Agricultural thesaurus and glossary" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Agricultural thesaurus and glossary" ;
+.
+
+:ausbn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Australian business number (ABN)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Australian business number (ABN)" ;
+.
+
+:auscn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Australian company number (ACN)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Australian company number (ACN)" ;
+.
+
+:ausnzst
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Australian/New Zealand standards" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Australian/New Zealand standards" ;
+.
+
+:ausrn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Australian registered body number (ABRN)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Australian registered body number (ABRN)" ;
+.
+
+:ausst
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Australian standards (Standards Australia)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Australian standards (Standards Australia)" ;
+.
+
+:balat
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "BALaT (Belgian art links and tools) People & institutions" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "BALaT (Belgian art links and tools) People & institutions" ;
+.
+
+:bbcth
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "BBC things" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "BBC things" ;
+.
+
+:bbrainza
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "BookBrainz author" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "BookBrainz author" ;
+.
+
+:bbrainzp
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "BookBrainz publisher" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "BookBrainz publisher" ;
+.
+
+:bbrainzw
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "BookBrainz work" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "BookBrainz work" ;
+.
+
+:bdrc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Buddhist Digital Resource Center" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Buddhist Digital Resource Center" ;
+.
+
+:bdusc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Biographical directory of the United States Congress" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Biographical directory of the United States Congress" ;
+.
+
+:belvku
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Belvedere Künstler" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Belvedere Künstler" ;
+.
+
+:belvwrk
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Belvedere Werke" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Belvedere Werke" ;
+.
+
+:benezit
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Benezit dictionary of artists" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Benezit dictionary of artists" ;
+.
+
+:bew
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Biographies of the entomologists of the world" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Biographies of the entomologists of the world" ;
+.
+
+:bfi
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "BFI - British Film Institute" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "BFI - British Film Institute" ;
+.
+
+:bhb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Bibliography of the Hebrew book" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Bibliography of the Hebrew book" ;
+.
+
+:bibbi
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "BIBBI autoriteter" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "BIBBI autoriteter" ;
+.
+
+:bigenc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Большая российская энциклопедия = Bolʹshai︠a︡ rossiĭskai︠a︡ ėnt︠s︡iklopedii︠a︡ (Great Russian Encyclopedia)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Большая российская энциклопедия = Bolʹshai︠a︡ rossiĭskai︠a︡ ėnt︠s︡iklopedii︠a︡ (Great Russian Encyclopedia)" ;
+.
+
+:bnfcg
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "BnF catalogue général" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "BnF catalogue général" ;
+.
+
+:bpn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Biografisch Portaal van Nederland = Biography portal of the Netherlands" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Biografisch Portaal van Nederland = Biography portal of the Netherlands" ;
+.
+
+:bsi
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "British Standards Institution" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "British Standards Institution" ;
+.
+
+:cabt
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "CABI thesaurus" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "CABI thesaurus" ;
+.
+
+:cana
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Canadiana authorities" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Canadiana authorities" ;
+.
+
+:cantic
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "CANTIC (Catàleg d'autoritats de noms i títols de Catalunya)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "CANTIC (Catàleg d'autoritats de noms i títols de Catalunya)" ;
+.
+
+:cbwpid
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Collective biographies of women" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Collective biographies of women" ;
+.
+
+:cerl
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "CERL thesaurus" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "CERL thesaurus" ;
+.
+
+:cgndb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Canadian geographical names database" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Canadian geographical names database" ;
+.
+
+:clara
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Clara: database of women artists" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Clara: database of women artists" ;
+.
+
+:cnbksy
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Quan guo bao kan suo yin (CNBKSY)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Quan guo bao kan suo yin (CNBKSY)" ;
+.
+
+:conccc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Congress.gov congressional committee codes" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Congress.gov congressional committee codes" ;
+.
+
+:csfdcz
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Česko-Slovenská filmová databáze" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Česko-Slovenská filmová databáze" ;
+.
+
+:danacode
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Danacode" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Danacode" ;
+.
+
+:darome
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Digital atlas of the Roman Empire" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Digital atlas of the Roman Empire" ;
+.
+
+:datoses
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "datos.bne.es" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "datos.bne.es" ;
+.
+
+:discogs
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Discogs" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Discogs" ;
+.
+
+:dkfilm
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Det Danske Filminstitut Filmdatabasen" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Det Danske Filminstitut Filmdatabasen" ;
+.
+
+:dma
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Digital musikkarkiv" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Digital musikkarkiv" ;
+.
+
+:doi
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Digital object identifier" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Digital object identifier" ;
+.
+
+:dpb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Dictionnaire des peintres belges" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Dictionnaire des peintres belges" ;
+.
+
+:ean
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International article number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International article number" ;
+.
+
+:ecli
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "European case law identifier" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "European case law identifier" ;
+.
+
+:eidr
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "EIDR: entertainment identifier registry" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "EIDR: entertainment identifier registry" ;
+.
+
+:elsst
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ELSST thesaurus - European language social science thesaurus" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ELSST thesaurus - European language social science thesaurus" ;
+.
+
+:emanus-vlid
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Digital platform for manuscript material from Swiss libraries and archives" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Digital platform for manuscript material from Swiss libraries and archives" ;
+.
+
+:emlo
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Early modern letters online" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Early modern letters online" ;
+.
+
+:erara-vlid
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The platform for digitized rare books from Swiss institutions" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "The platform for digitized rare books from Swiss institutions" ;
+.
+
+:famsea
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "FamilySearch" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "FamilySearch" ;
+.
+
+:fast
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "FAST: faceted application of subject terminology" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "FAST: faceted application of subject terminology" ;
+.
+
+:fidecp
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Fide chess profile" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Fide chess profile" ;
+.
+
+:filmaff
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Film affinity" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Film affinity" ;
+.
+
+:filmport
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "filmportal.de" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "filmportal.de" ;
+.
+
+:findagr
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Find a Grave" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Find a Grave" ;
+.
+
+:fisa
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "FIS athlete" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "FIS athlete" ;
+.
+
+:freebase
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Freebase" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Freebase" ;
+.
+
+:gacsch
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Global agricultural concept space (GACS)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Global agricultural concept space (GACS)" ;
+.
+
+:gec
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Gran enciclopèdia catalana" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gran enciclopèdia catalana" ;
+.
+
+:gemet
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "GEMET thesaurus" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "GEMET thesaurus" ;
+.
+
+:geogndb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Geographic names database" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Geographic names database" ;
+.
+
+:geonames
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "GeoNames" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "GeoNames" ;
+.
+
+:geprishisp
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "GEPRIS Historisch ID (Person)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "GEPRIS Historisch ID (Person)" ;
+.
+
+:gettyaat
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Art & architecture theasurus online" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Art & architecture theasurus online" ;
+.
+
+:gettyart
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "J. Paul Getty Museum artists" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "J. Paul Getty Museum artists" ;
+.
+
+:gettyobj
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "J. Paul Getty Museum objects" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "J. Paul Getty Museum objects" ;
+.
+
+:gettytgn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Getty thesaurus of geographic names online" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Getty thesaurus of geographic names online" ;
+.
+
+:gettyulan
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Union list of artist names online" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Union list of artist names online" ;
+.
+
+:gnd
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Gemeinsame Normdatei" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gemeinsame Normdatei" ;
+.
+
+:gnis
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Geographic names information system (GNIS)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Geographic names information system (GNIS)" ;
+.
+
+:goodra
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Goodreads authors" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Goodreads authors" ;
+.
+
+:gtaa
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Gemeenschappelijke Thesaurus voor Audiovisuele Archieven" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Gemeenschappelijke Thesaurus voor Audiovisuele Archieven" ;
+.
+
+:gtin-14
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Global trade identification number 14 (EAN/UCC-128 or ITF-14)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Global trade identification number 14 (EAN/UCC-128 or ITF-14)" ;
+.
+
+:hdl
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Handle" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Handle" ;
+.
+
+:iaafa
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "World Athletics" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "World Athletics" ;
+.
+
+:ibdb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "IBDB: Internet Broadway database" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "IBDB: Internet Broadway database" ;
+.
+
+:iconauth
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Iconography authority" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Iconography authority" ;
+.
+
+:iconclass
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Iconclass" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Iconclass" ;
+.
+
+:idref
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "IdRef: identifiants et référentiels" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "IdRef: identifiants et référentiels" ;
+.
+
+:ilot
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ILO Thesaurus" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ILO Thesaurus" ;
+.
+
+:imdb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "IMDB: Internet Movie Database" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "IMDB: Internet Movie Database" ;
+.
+
+:inspire
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "INSPIRE HEP" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "INSPIRE HEP" ;
+.
+
+:isan
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International standard audiovisual number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International standard audiovisual number" ;
+.
+
+:isbn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International standard book number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International standard book number" ;
+.
+
+:isbn-a
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International standard book number (the actionable ISBN)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International standard book number (the actionable ISBN)" ;
+.
+
+:isbnre
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ISBN (International Standard Book Number) registrant element" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ISBN (International Standard Book Number) registrant element" ;
+.
+
+:isbnsbn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Identificativo SBN" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Identificativo SBN" ;
+.
+
+:isfdbau
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ISFDB author directory" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ISFDB author directory" ;
+.
+
+:isfdbaw
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ISFDB award directory" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ISFDB award directory" ;
+.
+
+:isfdbma
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ISFDB magazine directory" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ISFDB magazine directory" ;
+.
+
+:isfdbpu
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ISFDB publisher directory" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ISFDB publisher directory" ;
+.
+
+:isil
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ISIL (International standard identifier for libraries and related organizations)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ISIL (International standard identifier for libraries and related organizations)" ;
+.
+
+:ismm
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International standard music number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International standard music number" ;
+.
+
+:isni
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International standard name identifier" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International standard name identifier" ;
+.
+
+:iso
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International Organization for Standardization number for an ISO standard" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International Organization for Standardization number for an ISO standard" ;
+.
+
+:isrc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International standard recording code" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International standard recording code" ;
+.
+
+:issn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International standard serial number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International standard serial number" ;
+.
+
+:issn-l
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Linking International standard serial number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Linking International standard serial number" ;
+.
+
+:issue-number
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Sound recording issue number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sound recording issue number" ;
+.
+
+:istc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International standard text code" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International standard text code" ;
+.
+
+:iswc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "International standard musical work code" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "International standard musical work code" ;
+.
+
+:it-acnp
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Catalogo italiano dei periodici" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Catalogo italiano dei periodici" ;
+.
+
+:itar
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ITAR (Importtjeneste og autoritetsregistre)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ITAR (Importtjeneste og autoritetsregistre)" ;
+.
+
+:kaken
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Researcher Number of the Grants-in-Aid for Scientific Research (KAKENHI) Program" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Researcher Number of the Grants-in-Aid for Scientific Research (KAKENHI) Program" ;
+.
+
+:kda
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Kunstindeks Danmark artist" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Kunstindeks Danmark artist" ;
+.
+
+:kdw
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Kunstindeks Danmark work" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Kunstindeks Danmark work" ;
+.
+
+:kinopo
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "KinoPoisk" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "KinoPoisk" ;
+.
+
+:knpam
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Russian National Heritage Registry for Books" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Russian National Heritage Registry for Books" ;
+.
+
+:ktga
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Author ID of the Union Catalogue Database of Japanese Texts" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Author ID of the Union Catalogue Database of Japanese Texts" ;
+.
+
+:ktgw
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Work ID of the Union Catalogue Database of Japanese Texts" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Work ID of the Union Catalogue Database of Japanese Texts" ;
+.
+
+:kulturnav
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Kulturnav" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Kulturnav" ;
+.
+
+:lattes
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Curriculo Lattes" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Curriculo Lattes" ;
+.
+
+:lccn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Library of Congress control number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Library of Congress control number" ;
+.
+
+:lcmd
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Library of Congress Manuscript Division field of history codes" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Library of Congress Manuscript Division field of history codes" ;
+.
+
+:lei
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Legal entity identifier system" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Legal entity identifier system" ;
+.
+
+:libaus
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Libraries Australia" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Libraries Australia" ;
+.
+
+:local
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Locally defined identifier" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Locally defined identifier" ;
+.
+
+:manto
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "MANTO" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "MANTO" ;
+.
+
+:margaz
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Marine Gazetteer" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Marine Gazetteer" ;
+.
+
+:matrix-number
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Sound recording matrix number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sound recording matrix number" ;
+.
+
+:mesh
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Medical Subject Headings" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Medical Subject Headings" ;
+.
+
+:mocofo
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Musée d'Orsay Catalogue des oeuvres fiche oeuvre" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Musée d'Orsay Catalogue des oeuvres fiche oeuvre" ;
+.
+
+:moma
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Museum of Modern Art" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Museum of Modern Art" ;
+.
+
+:morana
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Musée d'Orsay Répertoire des artistes notice artiste" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Musée d'Orsay Répertoire des artistes notice artiste" ;
+.
+
+:moviemetf
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "MovieMeter films" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "MovieMeter films" ;
+.
+
+:moviemetr
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "MovieMeter regisseurs" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "MovieMeter regisseurs" ;
+.
+
+:munzing
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Munzinger" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Munzinger" ;
+.
+
+:muscl
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Music Sales Classical" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Music Sales Classical" ;
+.
+
+:music-plate
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Publisher's music plate number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Publisher's music plate number" ;
+.
+
+:music-publisher
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Publisher-assigned music number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Publisher-assigned music number" ;
+.
+
+:musicb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "MusicBrainz" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "MusicBrainz" ;
+.
+
+:nacat
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "National Archives Catalog" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "National Archives Catalog" ;
+.
+
+:nagv
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The National Archives (Great Britain)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "The National Archives (Great Britain)" ;
+.
+
+:natgazfid
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "U.S. National Gazetteer Feature Name Identifier" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "U.S. National Gazetteer Feature Name Identifier" ;
+.
+
+:nga
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "National Gallery of Art" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "National Gallery of Art" ;
+.
+
+:ngva
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "National Gallery of Victoria artist" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "National Gallery of Victoria artist" ;
+.
+
+:ngvw
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "National Gallery of Victoria work" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "National Gallery of Victoria work" ;
+.
+
+:nii
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Author Authority ID of NACSIS-CAT" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Author Authority ID of NACSIS-CAT" ;
+.
+
+:nipo
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "NIPO (Número de Identificación de las Publicaciones Oficiales)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "NIPO (Número de Identificación de las Publicaciones Oficiales)" ;
+.
+
+:nlg
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "National Library of Greece" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "National Library of Greece" ;
+.
+
+:nndb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "NNDB (Notable Names Database)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "NNDB (Notable Names Database)" ;
+.
+
+:npg
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "National Portrait Gallery" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "National Portrait Gallery" ;
+.
+
+:nstc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "National Standard Text Code" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "National Standard Text Code" ;
+.
+
+:nzggn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "New Zealand gazetteer of place names" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "New Zealand gazetteer of place names" ;
+.
+
+:oalex
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "OpenAlex" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "OpenAlex" ;
+.
+
+:odnb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Oxford Dictionary of National Biography" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Oxford Dictionary of National Biography" ;
+.
+
+:ofdb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "OFDb: Online-Filmdatenbank" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "OFDb: Online-Filmdatenbank" ;
+.
+
+:onix
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ONIX (Online Information Exchange)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ONIX (Online Information Exchange)" ;
+.
+
+:opensm
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "OpenStreetMap" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "OpenStreetMap" ;
+.
+
+:orcid
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Open researcher and contributor identifier" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Open researcher and contributor identifier" ;
+.
+
+:orgnr
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Norwegian national organization number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Norwegian national organization number" ;
+.
+
+:oxforddnb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Oxford biography index" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Oxford biography index" ;
+.
+
+:pcadbu
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Pacific Coast Architecture Database - buildings list" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Pacific Coast Architecture Database - buildings list" ;
+.
+
+:pcadpe
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Pacific Coast Architecture Database - persons list" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Pacific Coast Architecture Database - persons list" ;
+.
+
+:pcadpf
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Pacific Coast Architecture Database - practices and firms" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Pacific Coast Architecture Database - practices and firms" ;
+.
+
+:permid
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "PermID" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "PermID" ;
+.
+
+:picnypl
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "PIC - Photographers' Identities Catalog" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "PIC - Photographers' Identities Catalog" ;
+.
+
+:pleiades
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Pleiades: a gazetteer of past places" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Pleiades: a gazetteer of past places" ;
+.
+
+:pmc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "PubMed Central" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "PubMed Central" ;
+.
+
+:pmid
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "PubMed" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "PubMed" ;
+.
+
+:pnta
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Personen uit de Nederlandse Thesaurus van Auteursnamen" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Personen uit de Nederlandse Thesaurus van Auteursnamen" ;
+.
+
+:porthu
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "PORT.hu" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "PORT.hu" ;
+.
+
+:prabook
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Prabook" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Prabook" ;
+.
+
+:rid
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ResearcherID" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ResearcherID" ;
+.
+
+:rijkspid
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Rijksmuseum persistent identifiers" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Rijksmuseum persistent identifiers" ;
+.
+
+:rism
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Repertoire International des Sources Musicale (RISM)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Repertoire International des Sources Musicale (RISM)" ;
+.
+
+:rkda
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "RKDartists" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "RKDartists" ;
+.
+
+:ror
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Research Organization Registry" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Research Organization Registry" ;
+.
+
+:s2a3bd
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "S2A3 biographical database of southern African science" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "S2A3 biographical database of southern African science" ;
+.
+
+:saam
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Smithsonian American Art Museum" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Smithsonian American Art Museum" ;
+.
+
+:scholaru
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Scholar Universe" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Scholar Universe" ;
+.
+
+:scope
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Scope" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Scope" ;
+.
+
+:scopus
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Scopus author identifier" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Scopus author identifier" ;
+.
+
+:sici
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Serial item and contribution identifier" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Serial item and contribution identifier" ;
+.
+
+:smgp
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Science Museum Group People" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Science Museum Group People" ;
+.
+
+:snac
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Social Networks and Archival Context" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Social Networks and Archival Context" ;
+.
+
+:spotify
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Spotify" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Spotify" ;
+.
+
+:sprfbsb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Sports Reference: Baseball" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sports Reference: Baseball" ;
+.
+
+:sprfbsk
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Sports Reference: Basketball" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sports Reference: Basketball" ;
+.
+
+:sprfcbb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Sports Reference: College Basketball" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sports Reference: College Basketball" ;
+.
+
+:sprfcfb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Sports Reference: College Football" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sports Reference: College Football" ;
+.
+
+:sprfhoc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Sports Reference: Hockey" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sports Reference: Hockey" ;
+.
+
+:sprfoly
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Sports Reference: Olympic Sports" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sports Reference: Olympic Sports" ;
+.
+
+:sprfpfb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Sports Reference: Pro Football" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Sports Reference: Pro Football" ;
+.
+
+:ssaut
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Semantic Scholar (Author)" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Semantic Scholar (Author)" ;
+.
+
+:stock-number
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Publisher, distributor, or vendor stock number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Publisher, distributor, or vendor stock number" ;
+.
+
+:strn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard technical report number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Standard technical report number" ;
+.
+
+:stw
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Standard-Thesaurus Wirtschaft = STW thesaurus for economics" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Standard-Thesaurus Wirtschaft = STW thesaurus for economics" ;
+.
+
+:svfilm
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Svensk Filmdatabas" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Svensk Filmdatabas" ;
+.
+
+:tatearid
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Tate artist identifier" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Tate artist identifier" ;
+.
+
+:theatr
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Theatricalia" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Theatricalia" ;
+.
+
+:tpce
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Tesauros del Patrimonio Cultural de España" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Tesauros del Patrimonio Cultural de España" ;
+.
+
+:trove
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Trove" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Trove" ;
+.
+
+:twnaf
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Taiwan name authority file" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Taiwan name authority file" ;
+.
+
+:unescot
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "UNESCO thesaurus = Thésaurus de l'UNESCO = Tesauro de la UNESCO" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "UNESCO thesaurus = Thésaurus de l'UNESCO = Tesauro de la UNESCO" ;
+.
+
+:upc
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Universal product code" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Universal product code" ;
+.
+
+:urbe
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Parsifal" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Parsifal" ;
+.
+
+:uri
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Uniform resource identifier" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Uniform resource identifier" ;
+.
+
+:urn
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Uniform resource name" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Uniform resource name" ;
+.
+
+:vd16
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Verzeichnis der Drucke des 16. Jahrhunderts" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Verzeichnis der Drucke des 16. Jahrhunderts" ;
+.
+
+:vd17
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Verzeichnis der Drucke des 17. Jahrhunderts" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Verzeichnis der Drucke des 17. Jahrhunderts" ;
+.
+
+:vd18
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Verzeichnis der Drucke des 18. Jahrhunderts" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Verzeichnis der Drucke des 18. Jahrhunderts" ;
+.
+
+:vera
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Danish Authority File" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Danish Authority File" ;
+.
+
+:vgmdb
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "VGMdb artists" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "VGMdb artists" ;
+.
+
+:viaf
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Virtual International Authority File number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Virtual International Authority File number" ;
+.
+
+:videorecording-identifer
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Publisher-assigned videorecording number" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Publisher-assigned videorecording number" ;
+.
+
+:wikidata
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Wikidata" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Wikidata" ;
+.
+
+:wndla
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Web NDL authorities" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Web NDL authorities" ;
+.
+
+:worldcat
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "WorldCat Entities" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "WorldCat Entities" ;
+.
+
+:xgamea
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "X Games athletes" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "X Games athletes" ;
+.
+
+:zbaut
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "ZooBank" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "ZooBank" ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    rdfs:label "Standard Identifiers"@en ;
+    skos:definition "The Standard Identifiers Scheme lists standard number or code systems and assigns a URI to each database or publication that defines or contains the identifiers. The purpose of these source codes is to enable the type of standard numbers or codes in resource descriptions to be indicated by URI."@en ;
+    skos:hasTopConcept
+        :agorha ,
+        :agrovoc ,
+        :allmovie ,
+        :allmusic ,
+        :allocine ,
+        :amnbo ,
+        :ansi ,
+        :archinl ,
+        :archinpe ,
+        :archinpr ,
+        :archna ,
+        :archns ,
+        :ark ,
+        :artsy ,
+        :artukart ,
+        :artukaw ,
+        :arxiv ,
+        :atg ,
+        :ausbn ,
+        :auscn ,
+        :ausnzst ,
+        :ausrn ,
+        :ausst ,
+        :balat ,
+        :bbcth ,
+        :bbrainza ,
+        :bbrainzp ,
+        :bbrainzw ,
+        :bdrc ,
+        :bdusc ,
+        :belvku ,
+        :belvwrk ,
+        :benezit ,
+        :bew ,
+        :bfi ,
+        :bhb ,
+        :bibbi ,
+        :bigenc ,
+        :bnfcg ,
+        :bpn ,
+        :bsi ,
+        :cabt ,
+        :cana ,
+        :cantic ,
+        :cbwpid ,
+        :cerl ,
+        :cgndb ,
+        :clara ,
+        :cnbksy ,
+        :conccc ,
+        :csfdcz ,
+        :danacode ,
+        :darome ,
+        :datoses ,
+        :discogs ,
+        :dkfilm ,
+        :dma ,
+        :doi ,
+        :dpb ,
+        :ean ,
+        :ecli ,
+        :eidr ,
+        :elsst ,
+        :emanus-vlid ,
+        :emlo ,
+        :erara-vlid ,
+        :famsea ,
+        :fast ,
+        :fidecp ,
+        :filmaff ,
+        :filmport ,
+        :findagr ,
+        :fisa ,
+        :freebase ,
+        :gacsch ,
+        :gec ,
+        :gemet ,
+        :geogndb ,
+        :geonames ,
+        :geprishisp ,
+        :gettyaat ,
+        :gettyart ,
+        :gettyobj ,
+        :gettytgn ,
+        :gettyulan ,
+        :gnd ,
+        :gnis ,
+        :goodra ,
+        :gtaa ,
+        :gtin-14 ,
+        :hdl ,
+        :iaafa ,
+        :ibdb ,
+        :iconauth ,
+        :iconclass ,
+        :idref ,
+        :ilot ,
+        :imdb ,
+        :inspire ,
+        :isan ,
+        :isbn ,
+        :isbn-a ,
+        :isbnre ,
+        :isbnsbn ,
+        :isfdbau ,
+        :isfdbaw ,
+        :isfdbma ,
+        :isfdbpu ,
+        :isil ,
+        :ismm ,
+        :isni ,
+        :iso ,
+        :isrc ,
+        :issn ,
+        :issn-l ,
+        :issue-number ,
+        :istc ,
+        :iswc ,
+        :it-acnp ,
+        :itar ,
+        :kaken ,
+        :kda ,
+        :kdw ,
+        :kinopo ,
+        :knpam ,
+        :ktga ,
+        :ktgw ,
+        :kulturnav ,
+        :lattes ,
+        :lccn ,
+        :lcmd ,
+        :lei ,
+        :libaus ,
+        :local ,
+        :manto ,
+        :margaz ,
+        :matrix-number ,
+        :mesh ,
+        :mocofo ,
+        :moma ,
+        :morana ,
+        :moviemetf ,
+        :moviemetr ,
+        :munzing ,
+        :muscl ,
+        :music-plate ,
+        :music-publisher ,
+        :musicb ,
+        :nacat ,
+        :nagv ,
+        :natgazfid ,
+        :nga ,
+        :ngva ,
+        :ngvw ,
+        :nii ,
+        :nipo ,
+        :nlg ,
+        :nndb ,
+        :npg ,
+        :nstc ,
+        :nzggn ,
+        :oalex ,
+        :odnb ,
+        :ofdb ,
+        :onix ,
+        :opensm ,
+        :orcid ,
+        :orgnr ,
+        :oxforddnb ,
+        :pcadbu ,
+        :pcadpe ,
+        :pcadpf ,
+        :permid ,
+        :picnypl ,
+        :pleiades ,
+        :pmc ,
+        :pmid ,
+        :pnta ,
+        :porthu ,
+        :prabook ,
+        :rid ,
+        :rijkspid ,
+        :rism ,
+        :rkda ,
+        :ror ,
+        :s2a3bd ,
+        :saam ,
+        :scholaru ,
+        :scope ,
+        :scopus ,
+        :sici ,
+        :smgp ,
+        :snac ,
+        :spotify ,
+        :sprfbsb ,
+        :sprfbsk ,
+        :sprfcbb ,
+        :sprfcfb ,
+        :sprfhoc ,
+        :sprfoly ,
+        :sprfpfb ,
+        :ssaut ,
+        :stock-number ,
+        :strn ,
+        :stw ,
+        :svfilm ,
+        :tatearid ,
+        :theatr ,
+        :tpce ,
+        :trove ,
+        :twnaf ,
+        :unescot ,
+        :upc ,
+        :urbe ,
+        :uri ,
+        :urn ,
+        :vd16 ,
+        :vd17 ,
+        :vd18 ,
+        :vera ,
+        :vgmdb ,
+        :viaf ,
+        :videorecording-identifer ,
+        :wikidata ,
+        :wndla ,
+        :worldcat ,
+        :xgamea ,
+        :zbaut ;
+.

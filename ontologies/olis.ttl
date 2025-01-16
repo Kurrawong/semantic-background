@@ -1,4 +1,4 @@
-PREFIX olis: <https://olis.dev/>
+PREFIX : <https://olis.dev/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX dwc: <http://rs.tdwg.org/dwc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
@@ -13,7 +13,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://olis.dev/ont>
     a owl:Ontology ;
-    owl:versionIRI olis:0.0.2 ;
+    owl:versionIRI :0.0.2 ;
     owl:versionInfo "0.0.2" ;
     sdo:codeRepository "https://github.com/Kurrawong/olis/"^^xsd:anyURI ;
     sdo:copyrightHolder <https://orcid.org/0000-0002-8742-7730> ;
@@ -43,7 +43,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sdo:url "https://kurrawong.net"^^xsd:anyURI ;
 .
 
-olis:NamedGraph
+:NamedGraph
     a owl:Class ;
     rdfs:isDefinedBy <https://olis.dev/ont> ;
     sdo:citation "https://www.w3.org/TR/rdf12-concepts/#section-rdf-graph"^^xsd:anyURI ;
@@ -53,51 +53,51 @@ olis:NamedGraph
     skos:example "See example for Real Graph" ;
 .
 
-olis:RealGraph
+:RealGraph
     a owl:Class ;
     rdfs:isDefinedBy <https://olis.dev/ont> ;
-    rdfs:subClassOf olis:NamedGraph ;
+    rdfs:subClassOf :NamedGraph ;
     skos:definition "An RDF Named Graph that contains triples"@en ;
     skos:historyNote "Defined in this ontology for the first time" ;
     skos:prefLabel "Real Graph"@en ;
     skos:example """
         PREFIX ex: <http://example.com>
-        PREFIX olis: <https://olis.dev/>
+        PREFIX : <https://olis.dev/>
         PREFIX prov: <http://www.w3.org/ns/prov#>
         PREFIX sdo: <https://schema.org/>
 
         ex:realGraphX
-            a olis:RealGraph ;
+            a :RealGraph ;
             sdo:name "Real Graph X" ;
             sdo:description "A real graph, containing triples about ..." ;
             prov:generatedAtTime "2023-12-22" ;
         .
 
         ex:virtualGraphY
-            a olis:VirtualGraph ;
+            a :VirtualGraph ;
             sdo:name "Virtual Graph Y" ;
             sdo:description "A Virtual Graph that is an alias for Real Graphs X & Z" ;
-            olis:isAliasFor ex:realGraphX , ex:realGraphZ ;
+            :isAliasFor ex:realGraphX , ex:realGraphZ ;
         .
     """ ;
 .
 
-olis:VirtualGraph
+:VirtualGraph
     a owl:Class ;
-    owl:disjointWith olis:RealGraph ;
+    owl:disjointWith :RealGraph ;
     rdfs:isDefinedBy <https://olis.dev/ont> ;
-    rdfs:subClassOf olis:NamedGraph ;
+    rdfs:subClassOf :NamedGraph ;
     skos:definition "An RDF Named Graph that is an alias for other Named Graphs and does not contain triples"@en ;
     skos:historyNote "Defined in this ontology for the first time" ;
     skos:prefLabel "Virtual Graph"@en ;
     skos:example "See example for Real Graph" ;
 .
 
-olis:isAliasFor
+:isAliasFor
     a owl:ObjectProperty ;
     rdfs:isDefinedBy <https://olis.dev/ont> ;
-    rdfs:domain olis:VirtualGraph ;
-    rdfs:range olis:NamedGraph ;
+    rdfs:domain :VirtualGraph ;
+    rdfs:range :NamedGraph ;
     skos:definition "A Virtual Graph is an alias for one ore more other Named Graphs"@en ;
     skos:historyNote "Defined in this ontology for the first time" ;
     skos:prefLabel "is alias for"@en ;
