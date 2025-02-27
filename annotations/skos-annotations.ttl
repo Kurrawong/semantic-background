@@ -29,10 +29,7 @@ skos:OrderedCollection
 .
 
 skos:altLabel
-    schema:description
-        "An alternative lexical label for a resource."@en ,
-        "The range of skos:altLabel is the class of RDF plain literals."@en ,
-        "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+    schema:description "An alternative lexical label for a resource."@en ;
     schema:name "alternative label"@en ;
 .
 
@@ -42,9 +39,7 @@ skos:broadMatch
 .
 
 skos:broader
-    schema:description
-        "Broader concepts are typically rendered as parents in a concept hierarchy (tree)."@en ,
-        "Relates a concept to a concept that is more general in meaning."@en ;
+    schema:description "Relates a concept to a concept that is more general in meaning."@en ;
     schema:name "has broader"@en ;
 .
 
@@ -74,9 +69,7 @@ skos:editorialNote
 .
 
 skos:exactMatch
-    schema:description
-        "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch."@en ,
-        "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch."@en ;
+    schema:description "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch."@en ;
     schema:name "has exact match"@en ;
 .
 
@@ -91,10 +84,7 @@ skos:hasTopConcept
 .
 
 skos:hiddenLabel
-    schema:description
-        "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en ,
-        "The range of skos:hiddenLabel is the class of RDF plain literals."@en ,
-        "skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise disjoint properties."@en ;
+    schema:description "A lexical label for a resource that should be hidden when generating visual displays of the resource, but should still be accessible to free text search operations."@en ;
     schema:name "hidden label"@en ;
 .
 
@@ -109,9 +99,7 @@ skos:inScheme
 .
 
 skos:mappingRelation
-    schema:description
-        "Relates two concepts coming, by convention, from different schemes, and that have comparable meanings"@en ,
-        "These concept mapping relations mirror semantic relations, and the data model defined below is similar (with the exception of skos:exactMatch) to the data model defined for semantic relations. A distinct vocabulary is provided for concept mapping relations, to provide a convenient way to differentiate links within a concept scheme from links between concept schemes. However, this pattern of usage is not a formal requirement of the SKOS data model, and relies on informal definitions of best practice."@en ;
+    schema:description "Relates two concepts coming, by convention, from different schemes, and that have comparable meanings"@en ;
     schema:name "is in mapping relation with"@en ;
 .
 
@@ -121,10 +109,7 @@ skos:member
 .
 
 skos:memberList
-    schema:description
-        """For any resource, every item in the list given as the value of the
-      skos:memberList property is also a value of the skos:member property."""@en ,
-        "Relates an ordered collection to the RDF list containing its members."@en ;
+    schema:description "Relates an ordered collection to the RDF list containing its members."@en ;
     schema:name "has member list"@en ;
 .
 
@@ -134,9 +119,7 @@ skos:narrowMatch
 .
 
 skos:narrower
-    schema:description
-        "Narrower concepts are typically rendered as children in a concept hierarchy (tree)."@en ,
-        "Relates a concept to a concept that is more specific in meaning."@en ;
+    schema:description "Relates a concept to a concept that is more specific in meaning."@en ;
     schema:name "has narrower"@en ;
 .
 
@@ -156,19 +139,12 @@ skos:note
 .
 
 skos:prefLabel
-    schema:description
-        "A resource has no more than one value of skos:prefLabel per language tag, and no more than one value of skos:prefLabel without language tag."@en ,
-        "The preferred lexical label for a resource, in a given language."@en ,
-        "The range of skos:prefLabel is the class of RDF plain literals."@en ,
-        """skos:prefLabel, skos:altLabel and skos:hiddenLabel are pairwise
-      disjoint properties."""@en ;
+    schema:description "The preferred lexical label for a resource, in a given language."@en ;
     schema:name "preferred label"@en ;
 .
 
 skos:related
-    schema:description
-        "Relates a concept to a concept with which there is an associative semantic relationship."@en ,
-        "skos:related is disjoint with skos:broaderTransitive"@en ;
+    schema:description "Relates a concept to a concept with which there is an associative semantic relationship."@en ;
     schema:name "has related"@en ;
 .
 
