@@ -1,0 +1,34 @@
+PREFIX schema: <https://schema.org/>
+PREFIX time: <http://www.w3.org/2006/time#>
+
+time:hasTime
+    schema:description "Supports the association of a temporal entity (instant or interval) to any thing."@en ;
+    schema:name "has time"@en ;
+.
+
+<https://linked.data.gov.au/def/lifecycle>
+    schema:name "Lifecycle Model"@en ;
+.
+
+<https://linked.data.gov.au/def/lifecycle/LifecycleStage>
+    schema:description "A distinct part of a resource's lifecycle"@en ;
+    schema:name "Lifecycle Stage"@en ;
+.
+
+<https://linked.data.gov.au/def/lifecycle/hasLifecycleStage>
+    schema:description "Indicates a Lifecycle Stage of a Resource"@en ;
+    schema:name "has Lifecycle Stage"@en ;
+.
+
+<https://linked.data.gov.au/org/agldwg>
+    schema:name "Australian Government Linked Data Working Group" ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    schema:name "Nicholas J. Car"@en ;
+.
+
+schema:additionalType
+    schema:description "An additional type for the item, typically used for adding more specific types from external vocabularies"@en ;
+    schema:name "additional type"@en ;
+.
