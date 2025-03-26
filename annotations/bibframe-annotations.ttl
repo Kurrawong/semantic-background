@@ -1,16 +1,6 @@
 PREFIX schema: <https://schema.org/>
 
 <http://id.loc.gov/ontologies/bibframe/>
-    schema:description """The Bibframe vocabulary consists of RDF classes and properties used for the description of 
-            items cataloged principally by libraries, but may also be used to describe items cataloged by museums and archives. 
-            Classes include the three core classes - Work, Instance, and Item - in addition to many more 
-            classes to support description. Properties describe characteristics of the resource being 
-            described as well as relationships among resources. For example: one Work
-            might be a "translation of" another Work; an Instance may be an 
-            "instance of" a particular Bibframe Work.  Other properties describe attributes of Works and Instances.  For
-            example: the Bibframe property "subject" expresses an important attribute of a Work 
-            (what the Work is about), and the property "extent" (e.g. number of pages) expresses an
-            attribute of an Instance."""@en ;
     schema:name "BIBFRAME vocabulary" ;
 .
 
@@ -1055,48 +1045,32 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/absorbed>
-    schema:description
-        "Resource that has been incorporated into another resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that has been incorporated into another resource." ;
     schema:name "Absorption of" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/absorbedBy>
-    schema:description
-        "Resource that incorporates another resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that incorporates another resource." ;
     schema:name "Absorbed by" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/accompaniedBy>
-    schema:description
-        "Resource that accompanies the described resource." ,
-        "Suggested use - With Work, Instance or Item" ,
-        "Suggested value - Work, Instance or Item" ;
+    schema:description "Resource that accompanies the described resource." ;
     schema:name "Accompanied by" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/accompanies>
-    schema:description
-        "Resource that adds to or is issued with the described resource." ,
-        "Suggested use - With Work, Instance or Item" ,
-        "Suggested value - Work, Instance or Item" ;
+    schema:description "Resource that adds to or is issued with the described resource." ;
     schema:name "Accompanies" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/acquisitionSource>
-    schema:description
-        "Information about an organization, person, etc., from which a resource may be obtained." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Information about an organization, person, etc., from which a resource may be obtained." ;
     schema:name "Source of acquisition" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/acquisitionTerms>
-    schema:description
-        "Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Conditions under which the publisher, distributor, etc., will normally supply a resource, e.g., price of a resource." ;
     schema:name "Terms of acquisition" ;
 .
 
@@ -1121,9 +1095,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/appliedMaterial>
-    schema:description
-        "Physical or chemical substance applied to a base material of a resource." ,
-        "Suggested use - With Work, Instance or Item" ;
+    schema:description "Physical or chemical substance applied to a base material of a resource." ;
     schema:name "Applied material" ;
 .
 
@@ -1148,9 +1120,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/aspectRatio>
-    schema:description
-        "Proportional relationship between an image's width and its height." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Proportional relationship between an image's width and its height." ;
     schema:name "Aspect ratio" ;
 .
 
@@ -1160,16 +1130,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/awards>
-    schema:description
-        "Information on awards associated with the described resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Information on awards associated with the described resource." ;
     schema:name "Award note" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/baseMaterial>
-    schema:description
-        "Suggested use - With Work, Instance or Item" ,
-        "Underlying physical material of a resource." ;
+    schema:description "Underlying physical material of a resource." ;
     schema:name "Base material" ;
 .
 
@@ -1189,9 +1155,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/capture>
-    schema:description
-        "Information about place and date associated with the capture (e.g., recording, filming) of the content of a resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Information about place and date associated with the capture (e.g., recording, filming) of the content of a resource." ;
     schema:name "Capture of content" ;
 .
 
@@ -1201,9 +1165,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/cartographicAttributes>
-    schema:description
-        "Cartographic data that identifies characteristics of the resource, such as coordinates, projection, etc." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Cartographic data that identifies characteristics of the resource, such as coordinates, projection, etc." ;
     schema:name "Cartographic data" ;
 .
 
@@ -1213,9 +1175,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/classification>
-    schema:description
-        "Classification number in any scheme." ,
-        "Suggested use - With Work, Instance or Item" ;
+    schema:description "Classification number in any scheme." ;
     schema:name "Classification" ;
 .
 
@@ -1230,16 +1190,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/collectionArrangement>
-    schema:description
-        "Information about the organization and arrangement of a collection of resources." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Information about the organization and arrangement of a collection of resources." ;
     schema:name "Collection Organization and arrangement" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/collectionArrangementOf>
-    schema:description
-        "Relates an Arrangement resource to that which it describes." ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Relates an Arrangement resource to that which it describes." ;
     schema:name "Organization and arrangement of Collection" ;
 .
 
@@ -1249,9 +1205,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/colorContent>
-    schema:description
-        "Color characteristics, e.g., black and white, multicolored." ,
-        "Suggested use - With Work, Instance or Item" ;
+    schema:description "Color characteristics, e.g., black and white, multicolored." ;
     schema:name "Color content" ;
 .
 
@@ -1261,55 +1215,37 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/contentAccessibility>
-    schema:description
-        "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Information that assists those with a sensory impairment for greater understanding of content, e.g., captions." ;
     schema:name "Content accessibility information" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/continuedBy>
-    schema:description
-        "Resource whose content continues an earlier resource under a new title." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource whose content continues an earlier resource under a new title." ;
     schema:name "Continued by" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/continuedInPartBy>
-    schema:description
-        "Resource part of whose content separated from an earlier resource to form a new resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource part of whose content separated from an earlier resource to form a new resource." ;
     schema:name "Continued in part by" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/continues>
-    schema:description
-        "Resource that is continued by the content of a later resource under a new title." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that is continued by the content of a later resource under a new title." ;
     schema:name "Continuation of" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/continuesInPart>
-    schema:description
-        "Resource that split into two or more separate resources with new titles." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that split into two or more separate resources with new titles." ;
     schema:name "Continuation in part of" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/contribution>
-    schema:description
-        "Agent and its role in relation to the resource." ,
-        "Suggested use - With Work, Instance or Item" ;
+    schema:description "Agent and its role in relation to the resource." ;
     schema:name "Contributor and role" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/contributionOf>
-    schema:description
-        "Relates a contribution resource, which associates an Agent and Role together, to the relevant resource." ,
-        "Suggested value - Work, Instance or Item" ;
+    schema:description "Relates a contribution resource, which associates an Agent and Role together, to the relevant resource." ;
     schema:name "Contribution of" ;
 .
 
@@ -1319,16 +1255,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/copyrightDate>
-    schema:description
-        "Date associated with a claim of protection under copyright or a similar regime." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Date associated with a claim of protection under copyright or a similar regime." ;
     schema:name "Copyright date" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/copyrightRegistration>
-    schema:description
-        "Copyright and Legal Deposit registration information" ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Copyright and Legal Deposit registration information" ;
     schema:name "Copyright registration information" ;
 .
 
@@ -1338,9 +1270,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/coverArt>
-    schema:description
-        "Cover art image of a resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Cover art image of a resource." ;
     schema:name "Cover art" ;
 .
 
@@ -1350,24 +1280,17 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/credits>
-    schema:description
-        "Information in note form of credits for persons or organizations who have participated in the creation and/or production of the resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Information in note form of credits for persons or organizations who have participated in the creation and/or production of the resource." ;
     schema:name "Credits note" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/custodialHistory>
-    schema:description
-        "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource." ,
-        "Suggested use - With Work, Instance or Item" ;
+    schema:description "Information about the provenance, such as origin, ownership and custodial history (chain of custody), of a resource." ;
     schema:name "Custodial history" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/dataSource>
-    schema:description
-        "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that is a data source to which the described resource is related. It may contain information about other files, printed sources, or collection procedures." ;
     schema:name "Data source" ;
 .
 
@@ -1382,10 +1305,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/derivativeOf>
-    schema:description
-        "Source work from which the described resource is derived." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Source work from which the described resource is derived." ;
     schema:name "Is derivative of" ;
 .
 
@@ -1430,16 +1350,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/dissertation>
-    schema:description
-        "Suggested use - With Work or Instance" ,
-        "Work presented as part of the formal requirements for an academic degree." ;
+    schema:description "Work presented as part of the formal requirements for an academic degree." ;
     schema:name "Dissertation Information" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/duration>
-    schema:description
-        "Information about the playing time, running time, etc. of a resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Information about the playing time, running time, etc. of a resource." ;
     schema:name "Duration" ;
 .
 
@@ -1504,10 +1420,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/expressionOf>
-    schema:description
-        "Suggested use - With Work or Hub" ,
-        "Suggested value - With Work or Hub" ,
-        "Work or Hub that the described Work or Hub is an expression of. Use to connect Works and/or Hubs under LRM/RDA guidelines or similar implementations." ;
+    schema:description "Work or Hub that the described Work or Hub is an expression of. Use to connect Works and/or Hubs under LRM/RDA guidelines or similar implementations." ;
     schema:name "Expression of" ;
 .
 
@@ -1517,18 +1430,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/findingAid>
-    schema:description
-        "Relationship for archival, visual, and manuscript resources to a finding aid or similar control materials." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Relationship for archival, visual, and manuscript resources to a finding aid or similar control materials." ;
     schema:name "Finding aid" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/findingAidOf>
-    schema:description
-        "Finding aid or similar control materials for archival, visual, and manuscript resources." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Finding aid or similar control materials for archival, visual, and manuscript resources." ;
     schema:name "Finding aid for" ;
 .
 
@@ -1563,9 +1470,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/genreForm>
-    schema:description
-        "Form category or genre to which a resource belongs" ,
-        "Suggested use - With Work, Instance or Item" ;
+    schema:description "Form category or genre to which a resource belongs" ;
     schema:name "Genre/form" ;
 .
 
@@ -1580,26 +1485,17 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/hasDerivative>
-    schema:description
-        "Resource that is a modification of the described work." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that is a modification of the described work." ;
     schema:name "Has derivative" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/hasEquivalent>
-    schema:description
-        "Resource embodies the same content as the described resource." ,
-        "Suggested use - With Work, Instance or Item" ,
-        "Suggested value - Work, Instance or Item" ;
+    schema:description "Resource embodies the same content as the described resource." ;
     schema:name "Equivalence" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/hasExpression>
-    schema:description
-        "Suggested use - With Work or Hub" ,
-        "Suggested value - With Work or Hub" ,
-        "Work or Hub that is an expression of a described Work or Hub. Use to relate Works and/or Hubs under LRM/RDA guidelines or similar implementations." ;
+    schema:description "Work or Hub that is an expression of a described Work or Hub. Use to relate Works and/or Hubs under LRM/RDA guidelines or similar implementations." ;
     schema:name "Expressed as" ;
 .
 
@@ -1614,10 +1510,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/hasPart>
-    schema:description
-        "Resource that is included either physically or logically in the described resource" ,
-        "Suggested use - With Work, Instance, Item or Event" ,
-        "Suggested value - Work, Instance, Item or Event" ;
+    schema:description "Resource that is included either physically or logically in the described resource" ;
     schema:name "Has part" ;
 .
 
@@ -1627,18 +1520,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/hasSeries>
-    schema:description
-        "Resource in which the part has been issued; the title of the larger resource appears on the part." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource in which the part has been issued; the title of the larger resource appears on the part." ;
     schema:name "In series" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/hasSubseries>
-    schema:description
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ,
-        "series resource that is part of another series." ;
+    schema:description "series resource that is part of another series." ;
     schema:name "Subseries" ;
 .
 
@@ -1668,9 +1555,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/illustrativeContent>
-    schema:description
-        "Information about content intended to illustrate a resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Information about content intended to illustrate a resource." ;
     schema:name "Illustrative content information" ;
 .
 
@@ -1680,18 +1565,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/index>
-    schema:description
-        "Resource has an accompanying index" ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource has an accompanying index" ;
     schema:name "Has index" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/indexOf>
-    schema:description
-        "Index that accompanies a resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Index that accompanies a resource." ;
     schema:name "Index to" ;
 .
 
@@ -1711,24 +1590,17 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/intendedAudience>
-    schema:description
-        "Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Information that identifies the specific audience or intellectual level for which the content of the resource is considered appropriate." ;
     schema:name "Intended audience" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/issuance>
-    schema:description
-        "Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Categorization reflecting whether a resource is issued in one or more parts, the way it is updated, and its intended termination." ;
     schema:name "Mode of issuance" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/issuedWith>
-    schema:description
-        "Resource that is issued on the same carrier as the resource being described." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that is issued on the same carrier as the resource being described." ;
     schema:name "Issued with" ;
 .
 
@@ -1768,39 +1640,27 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/material>
-    schema:description
-        "Resource uses, is composed of, integrates, etc. the related material." ,
-        "Suggested use - With Work, Instance or Item" ;
+    schema:description "Resource uses, is composed of, integrates, etc. the related material." ;
     schema:name "Material" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/materialOf>
-    schema:description
-        "Suggested use - With Work, Instance or Item" ,
-        "This material is related to a resource." ;
+    schema:description "This material is related to a resource." ;
     schema:name "Material of" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/media>
-    schema:description
-        "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Categorization reflecting the general type of intermediation device required to view, play, run, etc., the content of a resource." ;
     schema:name "Media type" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/mergedToForm>
-    schema:description
-        "One of two or more resources that come together to form a new resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "One of two or more resources that come together to form a new resource." ;
     schema:name "Merged to form" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/mergerOf>
-    schema:description
-        "One of two or more resources which came together to form a new resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "One of two or more resources which came together to form a new resource." ;
     schema:name "Merger of" ;
 .
 
@@ -1810,9 +1670,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/musicFormat>
-    schema:description
-        "Layout for content of a resource that is presented in the form of musical notation, such as full score, condensed score, vocal score, etc." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Layout for content of a resource that is presented in the form of musical notation, such as full score, condensed score, vocal score, etc." ;
     schema:name "Format of notated music" ;
 .
 
@@ -1842,16 +1700,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/natureOfContent>
-    schema:description
-        "Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Characterization that epitomizes the primary content of a resource, e.g., field recording of birdsong; combined time series analysis and graph plotting system." ;
     schema:name "Content nature" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/notation>
-    schema:description
-        "Alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Alphabet, script, or symbol system used to convey the content of the resource, including specialized scripts, typefaces, tactile notation, movement notation, and musical notation." ;
     schema:name "Notation system" ;
 .
 
@@ -1876,40 +1730,27 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/originPlace>
-    schema:description
-        "Place from which the creation of the resource originated." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Place from which the creation of the resource originated." ;
     schema:name "Origin place" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/originalVersion>
-    schema:description
-        "Resource is the original version of which this resource is a reproduction." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource is the original version of which this resource is a reproduction." ;
     schema:name "Original version" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/originalVersionOf>
-    schema:description
-        "Original version of a resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Original version of a resource." ;
     schema:name "Original version of" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/otherEdition>
-    schema:description
-        "Resource has other available editions, for example simultaneously published language editions or reprints." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource has other available editions, for example simultaneously published language editions or reprints." ;
     schema:name "Other edition" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/otherPhysicalFormat>
-    schema:description
-        "Resource that is manifested in another physical carrier." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Resource that is manifested in another physical carrier." ;
     schema:name "Has other physical format" ;
 .
 
@@ -1934,10 +1775,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/partOf>
-    schema:description
-        "Resource in which the described resource is physically or logically contained." ,
-        "Suggested use - With Work, Instance, Item or Event" ,
-        "Suggested value - Work, Instance, Item or Event" ;
+    schema:description "Resource in which the described resource is physically or logically contained." ;
     schema:name "Is part of" ;
 .
 
@@ -1962,17 +1800,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/precededBy>
-    schema:description
-        "Resource that precedes the resource being described, e.g., is earlier in time or before in narrative." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that precedes the resource being described, e.g., is earlier in time or before in narrative." ;
     schema:name "Preceded by" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/preferredCitation>
-    schema:description
-        "Citation to the resource preferred by its custodian of the resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Citation to the resource preferred by its custodian of the resource." ;
     schema:name "Preferred citation" ;
 .
 
@@ -2002,9 +1835,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/pubFrequency>
-    schema:description
-        "Relates a resource to a publication frequency resource to capture such details as first issue, last issue, status, etc." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Relates a resource to a publication frequency resource to capture such details as first issue, last issue, status, etc." ;
     schema:name "Publication frequency" ;
 .
 
@@ -2019,18 +1850,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/referencedBy>
-    schema:description
-        "Resource that references the described resource" ,
-        "Suggested use - With Work, Instance or Item" ,
-        "Suggested value - Work, Instance or Item" ;
+    schema:description "Resource that references the described resource" ;
     schema:name "Referenced by" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/references>
-    schema:description
-        "Resource that is referenced by the described resource." ,
-        "Suggested use - With Work, Instance or Item" ,
-        "Suggested value - Work, Instance or Item" ;
+    schema:description "Resource that is referenced by the described resource." ;
     schema:name "References" ;
 .
 
@@ -2045,18 +1870,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/replacedBy>
-    schema:description
-        "Later resource used in place of an earlier resource, usually because the later resource contains updated or new information." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Later resource used in place of an earlier resource, usually because the later resource contains updated or new information." ;
     schema:name "Replaced by" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/replacementOf>
-    schema:description
-        "Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Earlier resource whose content has been replaced by a later resource, usually because the later resource contains updated or new information." ;
     schema:name "Replacement of" ;
 .
 
@@ -2071,9 +1890,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/review>
-    schema:description
-        "Review of a resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Review of a resource." ;
     schema:name "Review content" ;
 .
 
@@ -2083,9 +1900,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/scale>
-    schema:description
-        "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Ratio of the dimensions of a form contained or embodied in a resource to the dimensions of the entity it represents, e.g., for images or cartographic resources." ;
     schema:name "Scale" ;
 .
 
@@ -2095,10 +1910,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/separatedFrom>
-    schema:description
-        "Resource that spun off a part of its content to form a new resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that spun off a part of its content to form a new resource." ;
     schema:name "Separated from" ;
 .
 
@@ -2108,10 +1920,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/seriesOf>
-    schema:description
-        "Resource that is a part of a larger resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that is a part of a larger resource." ;
     schema:name "Series container of" ;
 .
 
@@ -2131,9 +1940,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/soundContent>
-    schema:description
-        "Indication of whether the production of sound is an integral part of the resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Indication of whether the production of sound is an integral part of the resource." ;
     schema:name "Sound content" ;
 .
 
@@ -2148,10 +1955,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/splitInto>
-    schema:description
-        "One of two or more resources resulting from the division of an earlier resource into separate resources." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "One of two or more resources resulting from the division of an earlier resource into separate resources." ;
     schema:name "Split into" ;
 .
 
@@ -2161,16 +1965,12 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/subject>
-    schema:description
-        "Subject term(s) describing a resource." ,
-        "Suggested use - With Work, Instance, Item or Event" ;
+    schema:description "Subject term(s) describing a resource." ;
     schema:name "Subject" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/subjectOf>
-    schema:description
-        "Relates a subject to that which it describes." ,
-        "Suggested value - Work, Instance, Item or Event" ;
+    schema:description "Relates a subject to that which it describes." ;
     schema:name "Subject of" ;
 .
 
@@ -2185,10 +1985,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/subseriesOf>
-    schema:description
-        "Series resource of which the described resource is a part." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Series resource of which the described resource is a part." ;
     schema:name "Subseries of" ;
 .
 
@@ -2203,40 +2000,27 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/succeededBy>
-    schema:description
-        "Resource that succeeds the resource being described, e.g., later in time or after in a narrative." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that succeeds the resource being described, e.g., later in time or after in a narrative." ;
     schema:name "Succeeded by" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/summary>
-    schema:description
-        "Suggested use - With Work or Instance" ,
-        "Summary or abstract of the resource described." ;
+    schema:description "Summary or abstract of the resource described." ;
     schema:name "Summary content" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/supplement>
-    schema:description
-        "Resource that updates or otherwise complements the predominant resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that updates or otherwise complements the predominant resource." ;
     schema:name "Supplement" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/supplementTo>
-    schema:description
-        "Resource that is updated or otherwise complemented by the augmenting resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that is updated or otherwise complemented by the augmenting resource." ;
     schema:name "Supplement to" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/supplementaryContent>
-    schema:description
-        "Material such as an index, bibliography, appendix intended to supplement the primary content of a resource." ,
-        "Suggested use - With Work or Instance" ;
+    schema:description "Material such as an index, bibliography, appendix intended to supplement the primary content of a resource." ;
     schema:name "Supplementary material" ;
 .
 
@@ -2251,9 +2035,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/tableOfContents>
-    schema:description
-        "Suggested use - With Work or Instance" ,
-        "Table of contents of the described resource." ;
+    schema:description "Table of contents of the described resource." ;
     schema:name "Table of contents content" ;
 .
 
@@ -2268,32 +2050,22 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/title>
-    schema:description
-        "Name given to a resource." ,
-        "Suggested use - With Work, Instance, Item or Event" ;
+    schema:description "Name given to a resource." ;
     schema:name "Title resource" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/titleOf>
-    schema:description
-        "Relates a title resource to that which it is the title of." ,
-        "Suggested value - Work, Instance, Item or Event" ;
+    schema:description "Relates a title resource to that which it is the title of." ;
     schema:name "Title of" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/translation>
-    schema:description
-        "Resource that translates the text of the source entity into a language different from that of the original." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that translates the text of the source entity into a language different from that of the original." ;
     schema:name "Translation as" ;
 .
 
 <http://id.loc.gov/ontologies/bibframe/translationOf>
-    schema:description
-        "Resource that has been translated, i.e., the text is expressed in a language different from that of the original resource." ,
-        "Suggested use - With Work or Instance" ,
-        "Suggested value - Work or Instance" ;
+    schema:description "Resource that has been translated, i.e., the text is expressed in a language different from that of the original resource." ;
     schema:name "Translation of" ;
 .
 
@@ -2303,9 +2075,7 @@ PREFIX schema: <https://schema.org/>
 .
 
 <http://id.loc.gov/ontologies/bibframe/usageAndAccessPolicy>
-    schema:description
-        "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending." ,
-        "Suggested use - With Work, Instance or Item" ;
+    schema:description "General statement of allowances and restrictions on access to a resource, including retention, reproduction, access, and lending." ;
     schema:name "Use and access condition" ;
 .
 

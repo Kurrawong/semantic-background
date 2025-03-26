@@ -3,13 +3,6 @@ PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://purl.org/ontology/bibo>
-    schema:description """The Bibliographic Ontology describes
-bibliographic things on the semantic Web in RDF.  This ontology can be
-used as a citation ontology, as a document classification ontology, or
-simply as a way to describe any kind of document in RDF. It has been
-inspired by many existing document description metadata formats, and
-can be used as a common ground for converting other bibliographic data
-sources."""@en ;
     schema:name "The Bibliographic Ontology" ;
 .
 

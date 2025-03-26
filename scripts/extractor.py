@@ -73,28 +73,48 @@ def main(files: list[Path] = None):
                         g2.add((s, SDO.name, o))
 
         # deduplicate elements that have both definitions & comments
-        described = []
-        for s, o in g.subject_objects(SKOS.definition):
-            if not isinstance(s, BNode):
-                g2.add((s, SDO.description, o))
-                described.append(s)
+        q = """
+            PREFIX dc: <http://purl.org/dc/elements/1.1/>            
+            PREFIX dcterms: <http://purl.org/dc/terms/>
+            PREFIX schema: <https://schema.org/>
+            PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+            PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+        
+            CONSTRUCT {
+                ?x schema:description ?lbl
+            }
+            WHERE {
+                OPTIONAL { 
+                    ?x skos:definition ?l1 
+                    FILTER (lang(?l1) IN ("en", ""))
+                }
+                
+                OPTIONAL { 
+                    ?x rdfs:comment ?l5 
+                    FILTER (lang(?l5) IN ("en", ""))
+                }
+                
+                OPTIONAL { 
+                    ?x schema:description ?l2 
+                    FILTER (lang(?l2) IN ("en", ""))
+                }
+                
+                OPTIONAL { 
+                    ?x dcterms:description ?l3 
+                    FILTER (lang(?l3) IN ("en", ""))
+                }
+                
+                OPTIONAL { 
+                    ?x dc:description ?l4 
+                    FILTER (lang(?l4) IN ("en", ""))
+                }
+                
+                BIND (COALESCE(?l1, ?l5, ?l2, ?l3, ?l4) AS ?lbl)
+            }
+            """
 
-        for s, o in g.subject_objects(
-            SDO.description
-            | DCTERMS.description
-            | DC.description
-            | RDFS.comment
-        ):
-            if s not in described:
-                if not isinstance(s, BNode):
-                    if "qudt" in f.name:
-                        if type(o) == Literal:
-                            if o.datatype == RDF.HTML:
-                                o = Literal(str(o))
-                    # only extract English or non-lang labels
-                    if isinstance(o, Literal):
-                        if o.language in ["en", None]:
-                            g2.add((s, SDO.description, o))
+        for r in g.query(q):
+            g2.add(r)
 
         for s, o in g.subject_objects(RDFS.seeAlso):
             if not isinstance(s, BNode):

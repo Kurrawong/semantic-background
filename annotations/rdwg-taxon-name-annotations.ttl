@@ -6,7 +6,6 @@ PREFIX schema: <https://schema.org/>
         """ This vocabulary closely follows the structure of the ScientificName complex type that is part of the TDWG standard Taxon Concept Schema. The TCS structure was based
          on the name structures suggested by the LinneanCore and those found in schemas such as ABCD. 
          It reflects the contributions of many authors over a number of years."""^^rdf:XMLLiteral ,
-        "Ontology describing the metadata returned for LSIDs that are used for Taxon Names. " ,
         "Version 0.3 removed subclass declarations to classes outside of this ontology in accordance with Recommendation 2.9 of the VoMaG Report http://www.gbif.org/resource/80862" ;
     schema:name "TDWG Taxon Name LSID Ontology" ;
 .

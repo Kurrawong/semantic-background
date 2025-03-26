@@ -2,7 +2,6 @@ PREFIX schema: <https://schema.org/>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 
 sosa:
-    schema:description "This ontology is based on the SSN Ontology by the W3C Semantic Sensor Networks Incubator Group (SSN-XG), together with considerations from the W3C/OGC Spatial Data on the Web Working Group."@en ;
     schema:name "Sensor, Observation, Sample, and Actuator (SOSA) Ontology"@en ;
 .
 
@@ -52,13 +51,7 @@ sosa:Result
 .
 
 sosa:Sample
-    schema:description
-        "A Sample is the result from an act of Sampling."@en ,
-        "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made."@en ,
-        "Physical samples are sometimes known as 'specimens'."@en ,
-        """Samples are artifacts of an observational strategy, and have no significant function outside of their role in the observation process. The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign.
-
-A Sample is intended to sample some FatureOfInterest, so there is an expectation of at least one isSampleOf property. However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sampling features."""@en ;
+    schema:description "Feature which is intended to be representative of a FeatureOfInterest on which Observations may be made."@en ;
     schema:name "Sample"@en ;
 .
 

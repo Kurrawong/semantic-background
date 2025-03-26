@@ -163,9 +163,7 @@ The range of this property is not specified, so can be replaced by any specific 
 .
 
 time:dayOfWeek
-    schema:description
-        "El día de la semana, cuyo valor es un miembro de la clase 'día de la semana'." ,
-        "The day of week, whose value is a member of the class time:DayOfWeek"@en ;
+    schema:description "The day of week, whose value is a member of the class time:DayOfWeek"@en ;
     schema:name "day of week"@en ;
 .
 
@@ -198,9 +196,7 @@ Note that the value-space is not defined, so a generic OWL2 processor cannot com
 .
 
 time:hasBeginning
-    schema:description
-        "Beginning of a temporal entity"@en ,
-        "Beginning of a temporal entity."@en ;
+    schema:description "Beginning of a temporal entity."@en ;
     schema:name "has beginning"@en ;
 .
 
@@ -210,9 +206,7 @@ time:hasDateTimeDescription
 .
 
 time:hasDuration
-    schema:description
-        "Duration of a temporal entity, event or activity, or thing, expressed as a scaled value"@en ,
-        "Duration of a temporal entity, expressed as a scaled value or nominal value"@en ;
+    schema:description "Duration of a temporal entity, event or activity, or thing, expressed as a scaled value"@en ;
     schema:name "has duration"@en ;
 .
 
@@ -267,9 +261,7 @@ time:inTemporalPosition
 .
 
 time:inTimePosition
-    schema:description
-        "Position of a time instant expressed as a TimePosition"@en ,
-        "Position of an instant, expressed as a temporal coordinate or nominal value"@en ;
+    schema:description "Position of a time instant expressed as a TimePosition"@en ;
     schema:name "Time position"@en ;
 .
 
@@ -304,9 +296,7 @@ time:inside
 .
 
 time:intervalAfter
-    schema:description
-        "Si un intervalo propio T1 es posterior a otro intervalo propio T2, entonces el principio de T1 está después que el final de T2." ,
-        "If a proper interval T1 is intervalAfter another proper interval T2, then the beginning of T1 is after the end of T2."@en ;
+    schema:description "If a proper interval T1 is intervalAfter another proper interval T2, then the beginning of T1 is after the end of T2."@en ;
     schema:name "interval after"@en ;
 .
 
@@ -423,18 +413,15 @@ time:numericPosition
 .
 
 time:second
-    schema:description "Second position in a calendar-clock system."@en ;
     schema:name "second"@en ;
 .
 
 time:seconds
     rdfs:seeAlso <http://www.bipm.org/en/publications/si-brochure/second.html> ;
-    schema:description "length of, or element of the length of, a temporal extent expressed in seconds"@en ;
     schema:name "seconds duration"@en ;
 .
 
 time:timeZone
-    schema:description "The time zone for clock elements in the temporal position"@en ;
     schema:name "in time zone"@en ;
 .
 
@@ -470,7 +457,6 @@ time:unitSecond
 .
 
 time:unitType
-    schema:description "The temporal unit which provides the precision of a date-time value or scale of a temporal extent"@en ;
     schema:name "temporal unit type"@en ;
 .
 
@@ -487,28 +473,21 @@ time:unitYear
 .
 
 time:week
-    schema:description "Week number within the year."@en ;
     schema:name "week"@en ;
 .
 
 time:weeks
-    schema:description "length of, or element of the length of, a temporal extent expressed in weeks"@en ;
     schema:name "weeks duration"@en ;
 .
 
 time:xsdDateTime
-    schema:description "Value of DateTimeInterval expressed as a compact value."@en ;
     schema:name "has XSD date-time"@en ;
 .
 
 time:year
-    schema:description """Year position in a calendar-clock system.
-
-The range of this property is not specified, so can be replaced by any specific representation of a calendar year from any calendar. """@en ;
     schema:name "year"@en ;
 .
 
 time:years
-    schema:description "length of, or element of the length of, a temporal extent expressed in years"@en ;
     schema:name "years duration"@en ;
 .

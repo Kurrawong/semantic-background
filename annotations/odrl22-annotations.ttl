@@ -47,9 +47,6 @@ PREFIX schema: <https://schema.org/>
 .
 
 odrl:
-    schema:description
-        "The ODRL Vocabulary and Expression defines a set of concepts and terms (the vocabulary) and encoding mechanism (the expression) for permissions and obligations statements describing digital content usage based on the ODRL Information Model."@en ,
-        "This is the RDF ontology for ODRL Version 2.2."@en ;
     schema:name "ODRL Version 2.2"@en ;
 .
 

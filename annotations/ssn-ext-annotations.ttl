@@ -42,14 +42,7 @@ sosa:hasUltimateFeatureOfInterest
 .
 
 ssn:ext
-    schema:description
-        """Some extensions to the SSN Ontology, to support
-
-1. discovery and use of observation and sample data through links to an ultimate feature-of-interest, or sample
-2. observations are  made as part of a set or collection, in which one or more of the observation properties - hasFeatureOfInterest, observedProperty, madeBySensor, usedProcedure, phenomenonTime, resultTime - are shared by all members of the collection. 
-
-These extensions to the SSN Ontology are packaged in a separate RDF graph to enable loading and use if required. """ ,
-        """The classes, properties, and axioms in this RDF graph are described in https://www.w3.org/TR/vocab-ssn-ext/
+    schema:description """The classes, properties, and axioms in this RDF graph are described in https://www.w3.org/TR/vocab-ssn-ext/
 
 Their status is non-normative, and SSN applications are not required to recognize or support them. """ ;
     schema:name

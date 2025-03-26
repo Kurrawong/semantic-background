@@ -1,7 +1,6 @@
 PREFIX schema: <https://schema.org/>
 
 <http://purl.org/geojson/vocab#>
-    schema:description "A description of the RFC 7946 GeoJSON model. See https://github.com/geojson/geojson-ld for vocabulary developments." ;
     schema:name "GeoJSON-LD vocabulary" ;
 .
 

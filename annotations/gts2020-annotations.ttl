@@ -3,12 +3,7 @@ PREFIX schema: <https://schema.org/>
 
 <http://resource.geosciml.org/classifier/cgi/geologicage/bp>
     rdfs:seeAlso <https://en.wikipedia.org/wiki/Before_Present> ;
-    schema:description
-        "Positions in archeologic and 'recent' geologic time are conventionally denoted in years, measured backwards from the present, which is fixed to 1950 when the precision requires it"@en ,
-        "Temporal position expressed numerically scaled in years increasing backwards relative to 1950"@en ,
-        """Temporal position expressed numerically scaled in years increasing backwards relative to 1950.
-
-Positions in archeologic and 'recent' geologic time are conventionally denoted in years, measured backwards from the present, which is fixed to 1950 when the precision requires it."""@en ;
+    schema:description "Temporal position expressed numerically scaled in years increasing backwards relative to 1950"@en ;
     schema:name "Years before present (1950)"@en ;
 .
 
@@ -16,12 +11,7 @@ Positions in archeologic and 'recent' geologic time are conventionally denoted i
     rdfs:seeAlso
         <https://doi.org/10.1351%2FPAC-REC-09-01-22> ,
         <https://en.wikipedia.org/wiki/Year#SI_prefix_multipliers> ;
-    schema:description
-        "Positions in geologic time are conventionally denoted in millions of years, measured backwards from the present. "@en ,
-        "Temporal position expressed numerically scaled in millions of years increasing backwards from the present"@en ,
-        """Temporal position expressed numerically scaled in millions of years increasing backwards from the present.
-
-Positions in geologic time are conventionally denoted in millions of years, measured backwards from the present."""@en ;
+    schema:description "Temporal position expressed numerically scaled in millions of years increasing backwards from the present"@en ;
     schema:name "Millions of years ago"@en ;
 .
 
@@ -30,18 +20,12 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Aalenian>
-    schema:description
-        "older bound -174.1 +|-1.0 Ma"@en ,
-        "younger bound -170.3 +|-1.4 Ma"@en ;
     schema:name
         "Aalenian"@en ,
         "Aalenian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Aeronian>
-    schema:description
-        "older bound -440.8 +|-1.2 Ma"@en ,
-        "younger bound -438.5 +|-1.1 Ma"@en ;
     schema:name
         "Aeronian"@en ,
         "Aeronian Age"@en ;
@@ -52,90 +36,60 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Albian>
-    schema:description
-        "older bound -113.0 Ma"@en ,
-        "younger bound -100.5 Ma"@en ;
     schema:name
         "Albian"@en ,
         "Albian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Anisian>
-    schema:description
-        "older bound -247.2 Ma"@en ,
-        "younger bound -242 Ma"@en ;
     schema:name
         "Anisian"@en ,
         "Anisian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Aptian>
-    schema:description
-        "older bound -125.0 Ma"@en ,
-        "younger bound -113.0 Ma"@en ;
     schema:name
         "Aptian"@en ,
         "Aptian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Aquitanian>
-    schema:description
-        "older bound -23.03 Ma"@en ,
-        "younger bound -20.44 Ma"@en ;
     schema:name
         "Aquitanian"@en ,
         "Aquitanian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Archean>
-    schema:description
-        "older bound -4000 Ma"@en ,
-        "younger bound -2500 Ma"@en ;
     schema:name
         "Archean"@en ,
         "Archean Eon"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Artinskian>
-    schema:description
-        "older bound -290.1 +|-0.26 Ma"@en ,
-        "younger bound -283.5 +|-0.6 Ma"@en ;
     schema:name
         "Artinskian"@en ,
         "Artinskian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Asselian>
-    schema:description
-        "older bound -298.9 +|-0.15 Ma"@en ,
-        "younger bound -295.0 +|-0.18 Ma"@en ;
     schema:name
         "Asselian"@en ,
         "Asselian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Bajocian>
-    schema:description
-        "older bound -170.3 +|-1.4 Ma"@en ,
-        "younger bound -168.3 +|-1.3 Ma"@en ;
     schema:name
         "Bajocian"@en ,
         "Bajocian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Barremian>
-    schema:description
-        "older bound -129.4 Ma"@en ,
-        "younger bound -125.0 Ma"@en ;
     schema:name
         "Barremian"@en ,
         "Barremian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Bartonian>
-    schema:description
-        "older bound -41.2 Ma"@en ,
-        "younger bound -37.8 Ma"@en ;
     schema:name
         "Bartonian"@en ,
         "Bartonian Age"@en ;
@@ -155,7 +109,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Rhu-Tely&Pridoli.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=129&top_parentid=0&imageid=279> ;
-    schema:description "Trefawr Track Section, Wales, UK"@en ;
     schema:name "Stratotype Point Base of Aeronian"@en ;
 .
 
@@ -172,7 +125,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://dx.doi.org/10.18814/epiiugs/2017/v40i3/017021> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=45&top_parentid=0&imageid=351> ;
-    schema:description "Southeastern France"@en ;
     schema:name "Stratotype Point Base of Albian"@en ;
 .
 
@@ -182,7 +134,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseAptianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidate is Gorgo a Cerbara, Piobbico, Umbria-Marche, central Italy"@en ;
     schema:name "Stratotype Point Base of Aptian"@en ;
 .
 
@@ -200,7 +151,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseArtinskianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidate is Usolka section, Russia"@en ;
     schema:name "Stratotype Point Base of Artinskian"@en ;
 .
 
@@ -217,7 +167,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://stratigraphy.science.purdue.edu/references/Bajocian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=59&top_parentid=0&imageid=282> ;
-    schema:description "Murtinheira Section, Cabo Mondego, Portugal "@en ;
     schema:name "Stratotype Point Base of Bajocian"@en ;
 .
 
@@ -227,7 +176,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseBarremianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidate is Río Argos near Caravaca, Murcia Province, Spain"@en ;
     schema:name "Stratotype Point Base of Barremian"@en ;
 .
 
@@ -237,7 +185,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseBartonianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Contessa highway section near Gubio, Central Apennines, Italy"@en ;
     schema:name "Stratotype Point Base of Bartonian"@en ;
 .
 
@@ -255,7 +202,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Bathonian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=58&top_parentid=0&imageid=284> ;
-    schema:description "Ravin du Bes, Bas Auran area, Alpes de Haute Provence, France  "@en ;
     schema:name "Stratotype Point Base of Bathonian"@en ;
 .
 
@@ -265,7 +211,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseBurdigalianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Potentially in astronomically tuned ODP core"@en ;
     schema:name "Stratotype Point Base of Burdigalian"@en ;
 .
 
@@ -284,7 +229,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Calabrian2.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=9&top_parentid=0&imageid=285> ;
-    schema:description "Vrica, Italy"@en ;
     schema:name "Stratotype Point Base of Calabrian"@en ;
 .
 
@@ -294,7 +238,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseCallovianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidates are Pfeffingen (Swabian Alb, SW Germany) and in Russia"@en ;
     schema:name "Stratotype Point Base of Callovian"@en ;
 .
 
@@ -317,7 +260,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseCambrianStage10SP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidate section is Duibian (Zhejiang province, China)"@en ;
     schema:name "Stratotype Point Base of Cambrian Stage 10"@en ;
 .
 
@@ -345,7 +287,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseCampanianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidates are in Italy and in Texas"@en ;
     schema:name "Stratotype Point Base of Campanian"@en ;
 .
 
@@ -361,7 +302,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/images/combined/thumb/Capitanian_GSSP_web_June20121.jpg> ;
-    schema:description "Nipple Hill, SE Guadalupe Mountains, Texas, U.S.A"@en ;
     schema:name "Stratotype Point Base of Capitanian"@en ;
 .
 
@@ -378,7 +318,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Tournaisian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=106&top_parentid=0&imageid=333> ;
-    schema:description "La Serre, France"@en ;
     schema:name "Stratotype Point Base of Tournaisian"@en ;
 .
 
@@ -395,7 +334,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Danian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=34&top_parentid=0&imageid=290> ;
-    schema:description "Oued Djerfane, west of El Kef, Tunisia"@en ;
     schema:name "Stratotype Point Base of Danian"@en ;
 .
 
@@ -411,7 +349,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/Changhsiangian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Meishan, Zhejiang Province, China"@en ;
     schema:name "Stratotype Point Base of Changhsingian"@en ;
 .
 
@@ -428,12 +365,10 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://dx.doi.org/10.18814/epiiugs/2018/v41i1/018003> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=24&top_parentid=0&imageid=357> ;
-    schema:description "Monte Cagnero, Umbria-Marche region, Italy"@en ;
     schema:name "Stratotype Point Base of Chattian"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseChibanianSP>
-    schema:description "Chiba, Japan" ;
     schema:name "Stratotype Point Base of Chibanian"@en ;
 .
 
@@ -443,7 +378,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseConiacianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidates are in Poland (Slupia Nadbrzena), USA (Pueblo, Colorado), and Germany (Salzgitter-Salder Quarry)"@en ;
     schema:name "Stratotype Point Base of Coniaician"@en ;
 .
 
@@ -462,7 +396,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseCryogenianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Onset of the first global glaciation. First glacial episode occurred after 750 Ma"@en ;
     schema:name "Stratotype Point Base of Cryogenian"@en ;
 .
 
@@ -482,7 +415,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Darriwilian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=137&top_parentid=0&imageid=292> ;
-    schema:description "Huangnitang section, Changshan, Zhejiang Province, SE China"@en ;
     schema:name "Stratotype Point Base of Darriwilian"@en ;
 .
 
@@ -498,7 +430,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=117&top_parentid=0&imageid=313> ;
-    schema:description "Klonk, near Prague, Czech Republic"@en ;
     schema:name "Stratotype Point Base of Lochkovian"@en ;
 .
 
@@ -516,7 +447,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Drumian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=149&top_parentid=0&imageid=293> ;
-    schema:description "Drum Mountains, Millard County, Utah, USA"@en ;
     schema:name "Stratotype Point Base of Drumian"@en ;
 .
 
@@ -538,7 +468,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Ediacaran.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=159&top_parentid=0&imageid=294> ;
-    schema:description "Enorama Creek, Flinders Ranges, South Australia"@en ;
     schema:name "Stratotype Point Base of Ediacaran"@en ;
 .
 
@@ -556,7 +485,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Emsian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=115&top_parentid=0&imageid=296> ;
-    schema:description "Zinzil'ban Gorge in the Kitab State Geological Reserve, Uzbekistan"@en ;
     schema:name "Stratotype Point Base of Emsian"@en ;
 .
 
@@ -573,7 +501,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Ypresian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=30&top_parentid=0&imageid=339> ;
-    schema:description "Dababiya, near Luxor, Egypt"@en ;
     schema:name "Stratotype Point Base of Ypresian"@en ;
 .
 
@@ -591,7 +518,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Famennian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=109&top_parentid=0&imageid=297> ;
-    schema:description "Coumiac Quarry, near Cessenon, Montagne Noire, France"@en ;
     schema:name "Stratotype Point Base of Famennian"@en ;
 .
 
@@ -608,7 +534,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://stratigraphy.science.purdue.edu/references/Floian.pdf> ,
         <http://www.stratigraphy.org/GSSP/Floian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Diabasbrottet, Hunneberg, Sweden"@en ;
     schema:name "Stratotype Point Base of Floian"@en ;
 .
 
@@ -625,7 +550,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Paibian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=146&top_parentid=0&imageid=318> ;
-    schema:description "Wuling Mountains, Huayuan County, NW Hunan Province, China"@en ;
     schema:name "Stratotype Point Base of Paibian"@en ;
 .
 
@@ -643,7 +567,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Givetian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=112&top_parentid=0&imageid=302> ;
-    schema:description "Jebel Mech Irdane, Morocco"@en ;
     schema:name "Stratotype Point Base of Givetian"@en ;
 .
 
@@ -659,7 +582,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=85&top_parentid=0&imageid=323> ;
-    schema:description "Stratotype Canyon, Texas, U.S.A"@en ;
     schema:name
         "Stratotype Point Base of Guadalupian"@en ,
         "Stratotype Point Base of Roadian"@en ;
@@ -678,7 +600,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Guzhangian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=148&top_parentid=0&imageid=304> ;
-    schema:description "Louyixi, Guzhang County, NW Hunan Province, S. China"@en ;
     schema:name "Stratotype Point Base of Guzhangian "@en ;
 .
 
@@ -688,7 +609,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseGzhelianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidates are in southern Urals or Nashui (south China)."@en ;
     schema:name "Stratotype Point Base of Gzhelian"@en ;
 .
 
@@ -698,7 +618,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseHauterivianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "La Charce village, Drôme Province, southeast France"@en ;
     schema:name "Stratotype Point Base of Hauterivian"@en ;
 .
 
@@ -716,7 +635,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Hirnantian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=133&top_parentid=0&imageid=306> ;
-    schema:description "Wangjiawan North section, N of Yichang city, Western Hubei Province, China"@en ;
     schema:name "Stratotype Point Base of Hirnantian"@en ;
 .
 
@@ -736,7 +654,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Holocene.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=5&top_parentid=0&imageid=307> ;
-    schema:description "NorthGRIP2 ice core, central Greenland"@en ;
     schema:name "Stratotype Point Base of Greenlandian"@en ;
 .
 
@@ -754,7 +671,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Sheinwoodian-Ludfordian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=125&top_parentid=0&imageid=308> ;
-    schema:description "Sheinton Brook, Homer, UK"@en ;
     schema:name "Stratotype Point Base of Homerian"@en ;
 .
 
@@ -771,7 +687,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Jiangshanian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=145&top_parentid=0&imageid=310> ;
-    schema:description "Duibian B section, Zhejiang province, China"@en ;
     schema:name "Stratotype Point Base of Jiangshanian"@en ;
 .
 
@@ -787,7 +702,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/Hettangian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Kuhjoch section,Tyrol, Austria "@en ;
     schema:name "Stratotype Point Base of Hettangian"@en ;
 .
 
@@ -805,7 +719,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Katian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=134&top_parentid=0&imageid=311> ;
-    schema:description "Black Knob Ridge Section, Atoka, Oklahoma (USA)"@en ;
     schema:name "Stratotype Point Base of Katian"@en ;
 .
 
@@ -819,7 +732,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseKimmeridgianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidate is Flodigarry (Isle of Skye, NW Scotland)"@en ;
     schema:name "Stratotype Point Base of Kimmeridgian"@en ;
 .
 
@@ -829,7 +741,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseKungurianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidate Pequob Mtns., Nevada, USA."@en ;
     schema:name "Stratotype Point Base of Kungurian"@en ;
 .
 
@@ -846,7 +757,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://stratigraphy.science.purdue.edu/references/Ladinian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=72&top_parentid=0&imageid=312> ;
-    schema:description "Bagolino, Province of Brescia, Northern Italy"@en ;
     schema:name "Stratotype Point Base of Ladinian"@en ;
 .
 
@@ -856,9 +766,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseLanghianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description
-        "St. Peter's Pool, Malta or La Vedova,Italy" ,
-        "Potentially in astronomically tuned ODP core (Leg 154) or in Italy (Moria or La Vedova)"@en ;
     schema:name "Stratotype Point Base of Langhian"@en ;
 .
 
@@ -899,7 +806,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseLatePleistocene>
-    schema:description "The age sought is near the mid-point of Termination II in the marine isotope stratigraphy." ;
     schema:name "Base of Late Pleistocene"@en ;
 .
 
@@ -924,7 +830,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Wuchiapingian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/images/combined/thumb/Wuchiapingian_GSSP_web_June20121.jpg> ;
-    schema:description "Penglaitan, Guanxi Province, South China"@en ;
     schema:name "Stratotype Point Base of Wuchiapingian"@en ;
 .
 
@@ -942,7 +847,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Sheinwoodian-Ludfordian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=122&top_parentid=0&imageid=314> ;
-    schema:description "near Ludlow, UK"@en ;
     schema:name "Stratotype Point Base of Ludfordian"@en ;
 .
 
@@ -959,7 +863,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Sheinwoodian-Ludfordian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=123&top_parentid=0&imageid=303> ;
-    schema:description "near Ludlow, UK"@en ;
     schema:name "Stratotype Point Base of Gorstian"@en ;
 .
 
@@ -975,7 +878,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/Lutetian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Gorrondatxe sea-cliff section,Basque Country, northern Spain"@en ;
     schema:name "Stratotype Point Base of Lutetian"@en ;
 .
 
@@ -992,7 +894,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Maastrichtian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=38&top_parentid=0&imageid=278> ;
-    schema:description "Tercis les Bains, Landes, France"@en ;
     schema:name "Stratotype Point Base of Maastrichtian"@en ;
 .
 
@@ -1008,7 +909,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://stratigraphy.org/index.php/ics-news-and-meetings/125-formal-subdivision-of-the-holocene-series-epoch> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Global Auxiliary Stratotype, Mount Logan ice core, Canada"@en ;
     schema:name "Auxiliary Stratotype Point Base of Meghalayan"@en ;
 .
 
@@ -1018,7 +918,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://stratigraphy.org/index.php/ics-news-and-meetings/125-formal-subdivision-of-the-holocene-series-epoch> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=183&top_parentid=0&imageid=359> ;
-    schema:description "Mawmluh Cave, Meghalaya,India"@en ;
     schema:name "Stratotype Point Base of Meghalayan"@en ;
 .
 
@@ -1043,7 +942,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Induan.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=76&top_parentid=0&imageid=309> ;
-    schema:description "Meishan, Zhejiang Province, China"@en ;
     schema:name "Stratotype Point Base of Induan"@en ;
 .
 
@@ -1061,7 +959,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Messinian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=16&top_parentid=0&imageid=316> ;
-    schema:description "Oued Akrech, Morocco"@en ;
     schema:name "Stratotype Point Base of Messinian"@en ;
 .
 
@@ -1077,7 +974,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://doi.org/10.18814/epiiugs/2019/019013> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Wuliu-Zengjiayan (east Guizhou, China)"@en ;
     schema:name "Stratotype Point Base of Wuliuan"@en ;
 .
 
@@ -1094,7 +990,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Eifelian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=113&top_parentid=0&imageid=295> ;
-    schema:description "Wetteldorf, Eifel Hills, Germany"@en ;
     schema:name "Stratotype Point Base of Eifelian"@en ;
 .
 
@@ -1110,7 +1005,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/Aalenian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Fuentelsaz, Spain "@en ;
     schema:name "Stratotype Point Base of Aalenian"@en ;
 .
 
@@ -1129,7 +1023,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Visean.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=104&top_parentid=0&imageid=336> ;
-    schema:description "Pengchong, south China"@en ;
     schema:name "Stratotype Point Base of Visean"@en ;
 .
 
@@ -1147,7 +1040,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Dapingian2.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=138&top_parentid=0&imageid=291> ;
-    schema:description "Huanghuachang Section, NE of Yichang city, Hubei Province, S. China"@en ;
     schema:name "Stratotype Point Base of Dapingian"@en ;
 .
 
@@ -1157,7 +1049,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseMiddlePennsylvanianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidates are in southern Urals or Nashui (south China)."@en ;
     schema:name "Stratotype Point Base of Moscovian"@en ;
 .
 
@@ -1175,7 +1066,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseMiddleTriassicSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Candidate section at Desli Caira (Dobrogea, Romania); significant sections in Guizhou Province (China) and South Primorye (Russia)"@en ;
     schema:name "Stratotype Point Base of Anisian"@en ;
 .
 
@@ -1196,7 +1086,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Aquitanian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=21&top_parentid=0&imageid=343> ;
-    schema:description "Lemme Carrioso Section, Allessandria Province, Italy"@en ;
     schema:name "Stratotype Point Base of Aquitainian"@en ;
 .
 
@@ -1210,7 +1099,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseNorianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Candidates are Black Bear Ridge in British Columbia (Canada) and Pizzo Mondello, Sicily (Italy)"@en ;
     schema:name "Stratotype Point Base of Norian"@en ;
 .
 
@@ -1218,15 +1106,10 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     schema:name "Base of Northgrippian"@en ;
 .
 
-<http://resource.geosciml.org/classifier/ics/ischart/BaseNorthgrippian-location>
-    schema:description "Location of Stratotype Point Base of Northgrippian"@en ;
-.
-
 <http://resource.geosciml.org/classifier/ics/ischart/BaseNorthgrippianAuxSP>
     rdfs:seeAlso
         <http://stratigraphy.org/index.php/ics-news-and-meetings/125-formal-subdivision-of-the-holocene-series-epoch> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Global AuxiliaryStratotype: Gruta do Padre Cave speleothem, Brazil"@en ;
     schema:name "Auxiliary Stratotype Point Base of Northgrippian"@en ;
 .
 
@@ -1236,10 +1119,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://stratigraphy.org/index.php/ics-news-and-meetings/125-formal-subdivision-of-the-holocene-series-epoch> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=182&top_parentid=0&imageid=358> ;
-    schema:description
-        "Global AuxiliaryStratotype: Gruta do Padre Cave speleothem, Brazil"@en ,
-        "NorthGRIP1 ice core, Greenland"@en ,
-        "NorthGRIP1 ice core, Greenland."@en ;
     schema:name "Stratotype Point Base of Northgrippian"@en ;
 .
 
@@ -1253,7 +1132,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseOlenekianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Candidate Stratotype Point Mud (Muth) village, Spiti valley, northwest India"@en ;
     schema:name "Stratotype Point Base of Olenekian"@en ;
 .
 
@@ -1269,7 +1147,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/Rupelian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Massignano, near Ancona, Italy"@en ;
     schema:name "Stratotype Point Base of Rupelian"@en ;
 .
 
@@ -1286,7 +1163,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Tremadocian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=141&top_parentid=0&imageid=334> ;
-    schema:description "Green Point Section, western Newfoundland"@en ;
     schema:name "Stratotype Point Base of Tremadocian"@en ;
 .
 
@@ -1311,7 +1187,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Bashkirian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=99&top_parentid=0&imageid=283> ;
-    schema:description "Arrow Canyon, Nevada"@en ;
     schema:name
         "Stratotype Point Base of Bashkirian"@en ,
         "Stratotype Point Base of Pennsylvanian"@en ;
@@ -1330,7 +1205,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Asselian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=90&top_parentid=0&imageid=281> ;
-    schema:description "Aidaralash Creek, Kazakhstan"@en ;
     schema:name "Stratotype Point Base of Asselian"@en ;
 .
 
@@ -1347,7 +1221,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Fortunian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=156&top_parentid=0&imageid=341> ;
-    schema:description "Fortune Head, SE Newfoundland, Canada"@en ;
     schema:name "Stratotype Point Base of Fortunian"@en ;
 .
 
@@ -1363,7 +1236,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/Piacenzian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Punta Piccola, Sicily, Italy"@en ;
     schema:name "Stratotype Point Base of Piacenzian"@en ;
 .
 
@@ -1381,7 +1253,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Pliensbachian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=63&top_parentid=0&imageid=320> ;
-    schema:description "Wine Haven, Robin Hoods Bay, Yorkshire Coast, England "@en ;
     schema:name "Stratotype Point Base of Pliensbachian"@en ;
 .
 
@@ -1398,7 +1269,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Zanclean.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/images/combined/thumb/Zanclean_GSSP_web_June20121.jpg> ;
-    schema:description "Eraclea Minoa, Sicily, Italy"@en ;
     schema:name "Stratotype Point Base of Zanclean"@en ;
 .
 
@@ -1415,7 +1285,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Pragian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=116&top_parentid=0&imageid=321> ;
-    schema:description "Velka Chuchle, Prague, Czech Republic"@en ;
     schema:name "Stratotype Point Base of Pragian"@en ;
 .
 
@@ -1425,7 +1294,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BasePriabonianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Alano section, Piave River; Veneto Prealps, Belluno province, N. Italy"@en ;
     schema:name "Stratotype Point Base of Priabonian"@en ;
 .
 
@@ -1442,7 +1310,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Rhu-Tely&Pridoli.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=120&top_parentid=0&imageid=317> ;
-    schema:description "Požáry Section, Reporyje, Prague, Czech Republic"@en ;
     schema:name "Stratotype Point Base of Přídolí"@en ;
 .
 
@@ -1463,9 +1330,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Gelasian.pdf> ,
         <http://www.stratigraphy.org/GSSP/Quaternary&Pleistocene.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description
-        "Definition as base of Quaternary and Pleistocene ratified 2009" ,
-        "Monte San Nicola, Sicily, Italy"@en ;
     schema:name "Stratotype Point Base of Gelasian"@en ;
 .
 
@@ -1475,7 +1339,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseRhaetianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Candidates are Pizzo Mondello, Sicily (Italy) and Steinbergkogel, Austria"@en ;
     schema:name "Stratotype Point Base of Rhaetian"@en ;
 .
 
@@ -1489,7 +1352,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseSakmarianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Kondurovsky, Orenburg Province, Russia."@en ;
     schema:name "Stratotype Point Base of Sakmarian"@en ;
 .
 
@@ -1506,7 +1368,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.episodes.co.in/contents/2014/march/pp2-13.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=40&top_parentid=0&imageid=342> ;
-    schema:description "Olazagutia, Navarra, Spain"@en ;
     schema:name "Stratotype Point Base of Santonian"@en ;
 .
 
@@ -1523,7 +1384,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Selandian&Thanetian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/images/combined/thumb/Selandian_GSSP_web_June20121.jpg> ;
-    schema:description "Zumaia section, northern Spain"@en ;
     schema:name "Stratotype Point Base of Selandian"@en ;
 .
 
@@ -1540,7 +1400,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Serravallian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=17&top_parentid=0&imageid=332> ;
-    schema:description "Ras il Pellegrin section, Fomm Ir- Rih Bay, west coast of Malta"@en ;
     schema:name "Stratotype Point Base of Serravallian"@en ;
 .
 
@@ -1557,7 +1416,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Rhu-Tely&Pridoli.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=130&top_parentid=0&imageid=322> ;
-    schema:description "Dobs Linn, Scotland"@en ;
     schema:name "Stratotype Point Base of Rhuddanian"@en ;
 .
 
@@ -1574,7 +1432,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://stratigraphy.science.purdue.edu/references/Sinemurian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=64&top_parentid=0&imageid=329> ;
-    schema:description "East Quantoxhead, SW England "@en ;
     schema:name "Stratotype Point Base of Sinemurian"@en ;
 .
 
@@ -1588,7 +1445,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseTarentianSP>
     rdfs:seeAlso <http://www.episodes.org/index.php/epi/article/view/64299/50256> ;
-    schema:description "Taranto, Italy" ;
     schema:name "Stratotype Point Base of Tarentian"@en ;
 .
 
@@ -1606,7 +1462,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Rhu-Tely&Pridoli.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=128&top_parentid=0&imageid=330> ;
-    schema:description "Cefn-cerig Road Section, Wales, UK"@en ;
     schema:name "Stratotype Point Base of Telychian"@en ;
 .
 
@@ -1624,7 +1479,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Sinemurian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=32&top_parentid=0&imageid=331> ;
-    schema:description "Zumaia section, northern Spain"@en ;
     schema:name "Stratotype Point Base of Thanetian"@en ;
 .
 
@@ -1634,7 +1488,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseTithonianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidates are Mt. Crussol or Canjuers (SE France) and Fornazzo (Sicily, S. Italy)"@en ;
     schema:name "Stratotype Point Base of Tithonian"@en ;
 .
 
@@ -1650,7 +1503,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=62&top_parentid=0&imageid=348> ;
-    schema:description "Ponta do Trovao, Peniche (Portugal)"@en ;
     schema:name "Stratotype Point Base of Toarcian"@en ;
 .
 
@@ -1667,7 +1519,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://stratigraphy.science.purdue.edu/references/Tortonian.pdf> ,
         <http://www.stratigraphy.org/GSSP/Tortonian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Monte dei Corvi Beach, near Ancona, Italy"@en ;
     schema:name "Stratotype Point Base of Tortonian"@en ;
 .
 
@@ -1684,7 +1535,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Turonian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=42&top_parentid=0&imageid=335> ;
-    schema:description "Pueblo, Colorado, USA"@en ;
     schema:name "Stratotype Point Base of Turonian"@en ;
 .
 
@@ -1696,7 +1546,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/Cenomanian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Mount Risou, Hautes Alpes, France"@en ;
     schema:name "Stratotype Point Base of Cenomanian"@en ;
 .
 
@@ -1709,7 +1558,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Frasnian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=110&top_parentid=0&imageid=300> ;
-    schema:description "Col du Puech de la Suque, Montage Noire, France"@en ;
     schema:name "Stratotype Point Base of Frasnian"@en ;
 .
 
@@ -1719,7 +1567,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseUpperJurassicSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "Thuoux Section, SE France"@en ;
     schema:name "Stratotype Point Base of Oxfordian"@en ;
 .
 
@@ -1729,7 +1576,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseUpperMississippianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidates are Verkhnyaya Kardailovka (Urals) or Nashui (China)"@en ;
     schema:name "Stratotype Point Base of Serpukhovian"@en ;
 .
 
@@ -1742,7 +1588,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Sandbian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=135&top_parentid=0&imageid=325> ;
-    schema:description "Sularp Brook, Fagelsang, Sweden"@en ;
     schema:name "Stratotype Point Base of Sandbian"@en ;
 .
 
@@ -1752,7 +1597,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseUpperPennsylvanianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidates are in southern Urals, and Nashui (South China)."@en ;
     schema:name "Stratotype Point Base of Kasimovian"@en ;
 .
 
@@ -1769,7 +1613,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Carnian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=70&top_parentid=0&imageid=287> ;
-    schema:description "Prati di Stuores, Dolomites, Italy"@en ;
     schema:name "Stratotype Point Base of Carnian"@en ;
 .
 
@@ -1779,7 +1622,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 
 <http://resource.geosciml.org/classifier/ics/ischart/BaseValanginianSP>
     rdfs:seeAlso <http://www.stratigraphy.org/GSSP/index.html> ;
-    schema:description "candidates are near Montbrunles- Bains (Drôme province, SE France) and Cañada Luenga (Betic Cordillera, S. Spain)"@en ;
     schema:name "Stratotype Point Base of Valanginian"@en ;
 .
 
@@ -1796,7 +1638,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.stratigraphy.org/GSSP/Sheinwoodian-Ludfordian.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=126&top_parentid=0&imageid=328> ;
-    schema:description "Hughley Brook, UK"@en ;
     schema:name "Stratotype Point Base of Sheinwoodian"@en ;
 .
 
@@ -1812,32 +1653,22 @@ Positions in geologic time are conventionally denoted in millions of years, meas
     rdfs:seeAlso
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://timescalefoundation.org/gssp/image.php?periodid=84&top_parentid=0&imageid=337> ;
-    schema:description "Guadalupe Pass, Texas, U.S.A"@en ;
     schema:name "Stratotype Point Base of Wordian"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Bashkirian>
-    schema:description
-        "older bound -323.2 +|-0.4 Ma"@en ,
-        "younger bound -315.2 +|-0.2 Ma"@en ;
     schema:name
         "Bashkirian"@en ,
         "Bashkirian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Bathonian>
-    schema:description
-        "older bound -168.3 +|-1.3 Ma"@en ,
-        "younger bound -166.1 +|-1.2 Ma"@en ;
     schema:name
         "Bathonian"@en ,
         "Bathonian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Berriasian>
-    schema:description
-        "older bound -145.0 Ma"@en ,
-        "younger bound -139.8 Ma"@en ;
     schema:name
         "Berriasian"@en ,
         "Berriasian Age"@en ;
@@ -1848,61 +1679,41 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Boundary-unspecified>
-    schema:description
-        "Boundaries of intervals in the chronostratigraphic chart (unspecified)"@en ,
-        "This skos:Concept is included to spoof the Research Vocabularies Australia UI, which wants to show all top concepts."@en ;
+    schema:description "Boundaries of intervals in the chronostratigraphic chart (unspecified)"@en ;
     schema:name "Geochronologic Boundaries"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Burdigalian>
-    schema:description
-        "older bound -20.44 Ma"@en ,
-        "younger bound -15.97 Ma"@en ;
     schema:name
         "Burdigalian"@en ,
         "Burdigalian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Calabrian>
-    schema:description
-        "older bound -1.80 Ma"@en ,
-        "younger bound -0.781 Ma"@en ;
     schema:name
         "Calabrian"@en ,
         "Calabrian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Callovian>
-    schema:description
-        "older bound -166.1 +|-1.2 Ma"@en ,
-        "younger bound -163.5 +|-1.0 Ma"@en ;
     schema:name
         "Callovian"@en ,
         "Callovian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Calymmian>
-    schema:description
-        "older bound -1600 Ma"@en ,
-        "younger bound -1400 Ma"@en ;
     schema:name
         "Calymmian"@en ,
         "Calymmian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Cambrian>
-    schema:description
-        "older bound -541.0 +|-1.0 Ma"@en ,
-        "younger bound -485.4 +|-1.9 Ma"@en ;
     schema:name
         "Cambrian"@en ,
         "Cambrian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/CambrianSeries2>
-    schema:description
-        "older bound -521 Ma"@en ,
-        "younger bound -509 Ma"@en ;
     schema:name
         "Cambrian Series 2"@en ,
         "Cambrian Series 2 Epoch"@en ;
@@ -1915,36 +1726,24 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/CambrianStage10>
-    schema:description
-        "older bound -489.5 Ma"@en ,
-        "younger bound -485.4 +|-1.9 Ma"@en ;
     schema:name
         "Cambrian Stage 10 Age"@en ,
         "Cambrian-Stage 10"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/CambrianStage2>
-    schema:description
-        "older bound -529 Ma"@en ,
-        "younger bound -521 Ma"@en ;
     schema:name
         "Cambrian Stage 2 Age"@en ,
         "Cambrian-Stage 2"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/CambrianStage3>
-    schema:description
-        "older bound -521 Ma"@en ,
-        "younger bound -514 Ma"@en ;
     schema:name
         "Cambrian Stage 3 Age"@en ,
         "Cambrian-Stage 3"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/CambrianStage4>
-    schema:description
-        "older bound -514 Ma"@en ,
-        "younger bound -509 Ma"@en ;
     schema:name
         "Cambrian Stage 4 Age"@en ,
         "Cambrian-Stage 4"@en ;
@@ -1957,208 +1756,138 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Campanian>
-    schema:description
-        "older bound -83.6 +|-0.2 Ma"@en ,
-        "younger bound -72.1 +|-0.2 Ma"@en ;
     schema:name
         "Campanian"@en ,
         "Campanian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Capitanian>
-    schema:description
-        "older bound -265.1 +|-0.4 Ma"@en ,
-        "younger bound -259.1 +|-0.5 Ma"@en ;
     schema:name
         "Capitanian"@en ,
         "Capitanian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Carboniferous>
-    schema:description
-        "older bound -358.9 +|-0.4 Ma"@en ,
-        "younger bound -298.9 +|-0.15 Ma"@en ;
     schema:name
         "Carboniferous"@en ,
         "Carboniferous Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Carnian>
-    schema:description
-        "older bound -237 Ma"@en ,
-        "younger bound -227 Ma"@en ;
     schema:name
         "Carnian"@en ,
         "Carnian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Cenomanian>
-    schema:description
-        "older bound -100.5 Ma"@en ,
-        "younger bound -93.9 Ma"@en ;
     schema:name
         "Cenomanian"@en ,
         "Cenomanian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Cenozoic>
-    schema:description
-        "older bound -66.0 Ma"@en ,
-        "younger bound -0.0 Ma"@en ;
     schema:name
         "Cenozoic"@en ,
         "Cenozoic Era"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Changhsingian>
-    schema:description
-        "older bound -254.14 +|-0.07 Ma"@en ,
-        "younger bound -251.902 +|-0.024 Ma"@en ;
     schema:name
         "Changhsingian"@en ,
         "Changhsingian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Chattian>
-    schema:description
-        "older bound -27.82 Ma"@en ,
-        "younger bound -23.03 Ma"@en ;
     schema:name
         "Chattian"@en ,
         "Chattian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Cisuralian>
-    schema:description
-        "older bound -298.9 +|-0.15 Ma"@en ,
-        "younger bound -272.95 +|-0.11 Ma"@en ;
     schema:name
         "Cisuralian"@en ,
         "Cisuralian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Coniacian>
-    schema:description
-        "older bound -89.8 +|-0.3 Ma"@en ,
-        "younger bound -86.3 +|-0.5 Ma"@en ;
     schema:name
         "Coniacian"@en ,
         "Coniacian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Cretaceous>
-    schema:description
-        "older bound -145.0 Ma"@en ,
-        "younger bound -66.0 Ma"@en ;
     schema:name
         "Cretaceous"@en ,
         "Cretaceous Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Cryogenian>
-    schema:description
-        "older bound -720 Ma"@en ,
-        "younger bound -635 Ma"@en ;
     schema:name
         "Cryogenian"@en ,
         "Cryogenian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Danian>
-    schema:description
-        "older bound -66.0 Ma"@en ,
-        "younger bound -61.6 Ma"@en ;
     schema:name
         "Danian"@en ,
         "Danian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Dapingian>
-    schema:description
-        "older bound -470.0 +|-1.4 Ma"@en ,
-        "younger bound -467.3 +|-1.1 Ma"@en ;
     schema:name
         "Dapingian"@en ,
         "Dapingian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Darriwilian>
-    schema:description
-        "older bound -467.3 +|-1.1 Ma"@en ,
-        "younger bound -458.4 +|-0.9 Ma"@en ;
     schema:name
         "Darriwilian"@en ,
         "Darriwilian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Devonian>
-    schema:description
-        "older bound -419.2 +|-3.2 Ma"@en ,
-        "younger bound -358.9 +|-0.4 Ma"@en ;
     schema:name
         "Devonian"@en ,
         "Devonian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Drumian>
-    schema:description
-        "older bound -504.5 Ma"@en ,
-        "younger bound -500.5 Ma"@en ;
     schema:name
         "Drumian"@en ,
         "Drumian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Ectasian>
-    schema:description
-        "older bound -1400 Ma"@en ,
-        "younger bound -1200 Ma"@en ;
     schema:name
         "Ectasian"@en ,
         "Ectasian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Ediacaran>
-    schema:description
-        "Enorama Creek, Flinders Ranges, South Australia |  31.3314 S 138.6334 E |  Base of the Marinoan cap Carbonate |  (1) rapid decay of Marinoan ice sheets and onset of distinct cap carbonates throughout the world, and (2) the beginning of a distinctive pattern of secular changes in carbon isotopes. |  Ratified 1990 |  Lethaia 39, p.13 30, 2006 | http://stratigraphy.science.purdue.edu/references/EdiacaranGSSP_Lethaia060.pdf"@en ,
-        "older bound -635 Ma"@en ,
-        "younger bound -541.0 +|-1.0 Ma"@en ;
     schema:name
         "Ediacaran"@en ,
         "Ediacaran Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Eifelian>
-    schema:description
-        "older bound -393.3 +|-1.2 Ma"@en ,
-        "younger bound -387.7 +|-0.8 Ma"@en ;
     schema:name
         "Eifelian"@en ,
         "Eifelian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Emsian>
-    schema:description
-        "older bound -407.6 +|-2.6 Ma"@en ,
-        "younger bound -393.3 +|-1.2 Ma"@en ;
     schema:name
         "Emsian"@en ,
         "Emsian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Eoarchean>
-    schema:description
-        "older bound -4000 Ma"@en ,
-        "younger bound -3600 Ma"@en ;
     schema:name
         "Eoarchean"@en ,
         "Eoarchean Era"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Eocene>
-    schema:description
-        "older bound -56 Ma"@en ,
-        "younger bound -33.9 Ma"@en ;
     schema:name
         "Eocene"@en ,
         "Eocene Epoch"@en ;
@@ -2177,18 +1906,12 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Famennian>
-    schema:description
-        "older bound -372.2 +|-1.6 Ma"@en ,
-        "younger bound -358.9 +|-0.4 Ma"@en ;
     schema:name
         "Famennian"@en ,
         "Famennian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Floian>
-    schema:description
-        "older bound -477.7 +|-1.4 Ma"@en ,
-        "younger bound -470.0 +|-1.4 Ma"@en ;
     schema:name
         "Floian"@en ,
         "Floian Age"@en ;
@@ -2203,36 +1926,24 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Fortunian>
-    schema:description
-        "older bound -541.0 +|-1.0 Ma"@en ,
-        "younger bound -529 Ma"@en ;
     schema:name
         "Fortunian"@en ,
         "Fortunian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Frasnian>
-    schema:description
-        "older bound -382.7 +|-1.6 Ma"@en ,
-        "younger bound -372.2 +|-1.6 Ma"@en ;
     schema:name
         "Frasnian"@en ,
         "Frasnian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Furongian>
-    schema:description
-        "older bound -497 Ma"@en ,
-        "younger bound -485.4 +|-1.9 Ma"@en ;
     schema:name
         "Furongian"@en ,
         "Furongian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Gelasian>
-    schema:description
-        "older bound -2.58 Ma"@en ,
-        "younger bound -1.80 Ma"@en ;
     schema:name
         "Gelasian"@en ,
         "Gelasian Age"@en ;
@@ -2243,117 +1954,78 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Givetian>
-    schema:description
-        "older bound -387.7 +|-0.8 Ma"@en ,
-        "younger bound -382.7 +|-1.6 Ma"@en ;
     schema:name
         "Givetian"@en ,
         "Givetian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Gorstian>
-    schema:description
-        "older bound -427.4 +|-0.5 Ma"@en ,
-        "younger bound -425.6 +|-0.9 Ma"@en ;
     schema:name
         "Gorstian"@en ,
         "Gorstian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Greenlandian>
-    schema:description
-        "older bound -0.0117 Ma"@en ,
-        "younger bound -0.0082 Ma"@en ;
     schema:name
         "Greenlandian"@en ,
         "Greenlandian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Guadalupian>
-    schema:description
-        "older bound -272.95 +|-0.11 Ma"@en ,
-        "younger bound -259.1 +|-0.5 Ma"@en ;
     schema:name
         "Guadalupian"@en ,
         "Guadalupian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Guzhangian>
-    schema:description
-        "older bound -500.5 Ma"@en ,
-        "younger bound -497 Ma"@en ;
     schema:name
         "Guzhangian"@en ,
         "Guzhangian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Gzhelian>
-    schema:description
-        "older bound -303.7 +|-0.1 Ma"@en ,
-        "younger bound -298.9 +|-0.15 Ma"@en ;
     schema:name
         "Gzhelian"@en ,
         "Gzhelian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Hadean>
-    schema:description
-        "older bound -4567 +|-1 Ma"@en ,
-        "younger bound -4000 Ma"@en ;
     schema:name
         "Hadean"@en ,
         "Hadean Eon"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Hauterivian>
-    schema:description
-        "older bound -132.9 Ma"@en ,
-        "younger bound -129.4 Ma"@en ;
     schema:name
         "Hauterivian"@en ,
         "Hauterivian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Hettangian>
-    schema:description
-        "older bound -201.3 +|-0.2 Ma"@en ,
-        "younger bound -199.3 +|-0.3 Ma"@en ;
     schema:name
         "Hettangian"@en ,
         "Hettangian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Hirnantian>
-    schema:description
-        "older bound -445.2 +|-1.4 Ma"@en ,
-        "younger bound -443.8 +|-1.5 Ma"@en ;
     schema:name
         "Hirnantian"@en ,
         "Hirnantian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Holocene>
-    schema:description
-        "older bound -0.0117 Ma"@en ,
-        "younger bound -0.0 Ma"@en ;
     schema:name
         "Holocene"@en ,
         "Holocene Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Homerian>
-    schema:description
-        "older bound -430.5 +|-0.7 Ma"@en ,
-        "younger bound -427.4 +|-0.5 Ma"@en ;
     schema:name
         "Homerian"@en ,
         "Homerian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Induan>
-    schema:description
-        "older bound -251.902 +|-0.024 Ma"@en ,
-        "younger bound -251.2 Ma"@en ;
     schema:name
         "Induan"@en ,
         "Induan Age"@en ;
@@ -2364,495 +2036,330 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Jiangshanian>
-    schema:description
-        "older bound -494 Ma"@en ,
-        "younger bound -489.5 Ma"@en ;
     schema:name
         "Jiangshanian"@en ,
         "Jiangshanian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Jurassic>
-    schema:description
-        "older bound -201.3 +|-0.2 Ma"@en ,
-        "younger bound -145.0 Ma"@en ;
     schema:name
         "Jurassic"@en ,
         "Jurassic Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Kasimovian>
-    schema:description
-        "older bound -307 +|-0.1 Ma"@en ,
-        "younger bound -303.7 +|-0.1 Ma"@en ;
     schema:name
         "Kasimovian"@en ,
         "Kasimovian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Katian>
-    schema:description
-        "older bound -453 +|-0.7 Ma"@en ,
-        "younger bound -445.2 +|-1.4 Ma"@en ;
     schema:name
         "Katian"@en ,
         "Katian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Kimmeridgian>
-    schema:description
-        "older bound -157.3 +|-1.0 Ma"@en ,
-        "younger bound -152.1 +|-0.9 Ma"@en ;
     schema:name
         "Kimmeridgian"@en ,
         "Kimmeridgian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Kungurian>
-    schema:description
-        "older bound -283.5 +|-0.6 Ma"@en ,
-        "younger bound -272.95 +|-0.11 Ma"@en ;
     schema:name
         "Kungurian"@en ,
         "Kungurian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Ladinian>
-    schema:description
-        "older bound -242 Ma"@en ,
-        "younger bound -237 Ma"@en ;
     schema:name
         "Ladinian"@en ,
         "Ladinian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Langhian>
-    schema:description
-        "older bound -15.97 Ma"@en ,
-        "younger bound -13.82 Ma"@en ;
     schema:name
         "Langhian"@en ,
         "Langhian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Llandovery>
-    schema:description
-        "older bound -443.8 +|-1.5 Ma"@en ,
-        "younger bound -433.4 +|-0.8 Ma"@en ;
     schema:name
         "Llandovery"@en ,
         "Llandovery Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Lochkovian>
-    schema:description
-        "older bound -419.2 +|-3.2 Ma"@en ,
-        "younger bound -410.8 +|-2.8 Ma"@en ;
     schema:name
         "Lochkovian"@en ,
         "Lochkovian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Lopingian>
-    schema:description
-        "older bound -259.1 +|-0.5 Ma"@en ,
-        "younger bound -251.902 +|-0.024 Ma"@en ;
     schema:name
         "Lopingian"@en ,
         "Lopingian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/LowerCretaceous>
-    schema:description
-        "older bound -145.0 Ma"@en ,
-        "younger bound -100.5 Ma"@en ;
     schema:name
         "Early Cretaceous"@en ,
         "Early Cretaceous Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/LowerDevonian>
-    schema:description
-        "older bound -419.2 +|-3.2 Ma"@en ,
-        "younger bound -393.3 +|-1.2 Ma"@en ;
     schema:name
         "Early Devonian"@en ,
         "Early Devonian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/LowerJurassic>
-    schema:description
-        "older bound -201.3 +|-0.2 Ma"@en ,
-        "younger bound -174.1 +|-1.0 Ma"@en ;
     schema:name
         "Early Jurassic"@en ,
         "Early Jurassic Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/LowerMississippian>
-    schema:description
-        "older bound -358.9 +|-0.4 Ma"@en ,
-        "younger bound -346.7 +|-0.4 Ma"@en ;
     schema:name
         "Early Mississippian"@en ,
         "Early Mississippian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/LowerOrdovician>
-    schema:description
-        "older bound -485.4 +|-1.9 Ma"@en ,
-        "younger bound -470.0 +|-1.4 Ma"@en ;
     schema:name
         "Early Ordovician"@en ,
         "Early Ordovician Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/LowerPennsylvanian>
-    schema:description
-        "older bound -323.2 +|-0.4 Ma"@en ,
-        "younger bound -315.2 +|-0.2 Ma"@en ;
     schema:name
         "Early Pennsylvanian"@en ,
         "Early Pennsylvanian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/LowerTriassic>
-    schema:description
-        "older bound -251.902 +|-0.024 Ma"@en ,
-        "younger bound -247.2 Ma"@en ;
     schema:name
         "Early Triassic"@en ,
         "Early Triassic Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Ludfordian>
-    schema:description
-        "older bound -425.6 +|-0.9 Ma"@en ,
-        "younger bound -423 +|-2.3 Ma"@en ;
     schema:name
         "Ludfordian"@en ,
         "Ludfordian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Ludlow>
-    schema:description
-        "older bound -427.4 +|-0.5 Ma"@en ,
-        "younger bound -423 +|-2.3 Ma"@en ;
     schema:name
         "Ludlow"@en ,
         "Ludlow Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Lutetian>
-    schema:description
-        "older bound -47.8 Ma"@en ,
-        "younger bound -41.2 Ma"@en ;
     schema:name
         "Lutetian"@en ,
         "Lutetian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Maastrichtian>
-    schema:description
-        "older bound -72.1 +|-0.2 Ma"@en ,
-        "younger bound -66.0 Ma"@en ;
     schema:name
         "Maastrichtian"@en ,
         "Maastrichtian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Meghalayan>
-    schema:description
-        "older bound -0.0042 Ma"@en ,
-        "younger bound 0 Ma"@en ;
     schema:name
         "Meghalayan"@en ,
         "Meghalayan Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Mesoarchean>
-    schema:description
-        "older bound -3200 Ma"@en ,
-        "younger bound -2800 Ma"@en ;
     schema:name
         "Mesoarchean"@en ,
         "Mesoarchean Era"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Mesoproterozoic>
-    schema:description
-        "older bound -1600 Ma"@en ,
-        "younger bound -1000 Ma"@en ;
     schema:name
         "Mesoproterozoic"@en ,
         "Mesoproterozoic Era"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Mesozoic>
-    schema:description
-        "older bound -251.902 +|-0.024 Ma"@en ,
-        "younger bound -66.0 Ma"@en ;
     schema:name
         "Mesozoic"@en ,
         "Mesozoic Era"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Messinian>
-    schema:description
-        "older bound -7.246 Ma"@en ,
-        "younger bound -5.333 Ma"@en ;
     schema:name
         "Messinian"@en ,
         "Messinian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Miaolingian>
-    schema:description
-        "older bound -509 Ma"@en ,
-        "younger bound -497 Ma"@en ;
     schema:name
         "Miaolingian"@en ,
         "Miaolingian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/MiddleDevonian>
-    schema:description
-        "older bound -393.3 +|-1.2 Ma"@en ,
-        "younger bound -382.7 +|-1.6 Ma"@en ;
     schema:name
         "Middle Devonian"@en ,
         "Middle Devonian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/MiddleJurassic>
-    schema:description
-        "older bound -174.1 +|-1.0 Ma"@en ,
-        "younger bound -163.5 +|-1.0 Ma"@en ;
     schema:name
         "Middle Jurassic"@en ,
         "Middle Jurassic Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/MiddleMississippian>
-    schema:description
-        "older bound -346.7 +|-0.4 Ma"@en ,
-        "younger bound -330.9 +|-0.2 Ma"@en ;
     schema:name
         "Middle Mississippian"@en ,
         "Middle Mississippian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/MiddleOrdovician>
-    schema:description
-        "older bound -470.0 +|-1.4 Ma"@en ,
-        "younger bound -458.4 +|-0.9 Ma"@en ;
     schema:name
         "Middle Ordovician"@en ,
         "Middle Ordovician Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/MiddlePennsylvanian>
-    schema:description
-        "older bound -315.2 +|-0.2 Ma"@en ,
-        "younger bound -307 +|-0.1 Ma"@en ;
     schema:name
         "Middle Pennsylvanian"@en ,
         "Middle Pennsylvanian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/MiddlePleistocene>
-    schema:description
-        "older bound -0.781 Ma"@en ,
-        "younger bound -0.126 Ma"@en ;
     schema:name
         "Chibanian"@en ,
         "Chibanian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/MiddleTriassic>
-    schema:description
-        "older bound -247.2 Ma"@en ,
-        "younger bound -237 Ma"@en ;
     schema:name
         "Middle Triassic"@en ,
         "Middle Triassic Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Miocene>
-    schema:description
-        "older bound -23.03 Ma"@en ,
-        "younger bound -5.333 Ma"@en ;
     schema:name
         "Miocene"@en ,
         "Miocene Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Mississippian>
-    schema:description
-        "older bound -358.9 +|-0.4 Ma"@en ,
-        "younger bound -323.2 +|-0.4 Ma"@en ;
     schema:name
         "Mississippian"@en ,
         "Mississippian Sub-period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Moscovian>
-    schema:description
-        "older bound -315.2 +|-0.2 Ma"@en ,
-        "younger bound -307 +|-0.1 Ma"@en ;
     schema:name
         "Moscovian"@en ,
         "Moscovian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Neoarchean>
-    schema:description
-        "older bound -2800 Ma"@en ,
-        "younger bound -2500 Ma"@en ;
     schema:name
         "Neoarchean"@en ,
         "Neoarchean Era"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Neogene>
-    schema:description
-        "older bound -23.03 Ma"@en ,
-        "younger bound -2.58 Ma"@en ;
     schema:name
         "Neogene"@en ,
         "Neogene Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Neoproterozoic>
-    schema:description
-        "older bound -1000 Ma"@en ,
-        "younger bound -541.0 +|-1.0 Ma"@en ;
     schema:name
         "Neoproterozoic"@en ,
         "Neoproterozoic Era"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Norian>
-    schema:description
-        "older bound -227 Ma"@en ,
-        "younger bound -208.5 Ma"@en ;
     schema:name
         "Norian"@en ,
         "Norian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Northgrippian>
-    schema:description
-        "older bound -0.0082 Ma"@en ,
-        "younger bound -0.0042 Ma"@en ;
     schema:name
         "Northgrippian"@en ,
         "Northgrippian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Olenekian>
-    schema:description
-        "older bound -251.2 Ma"@en ,
-        "younger bound -247.2 Ma"@en ;
     schema:name
         "Olenekian"@en ,
         "Olenekian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Oligocene>
-    schema:description
-        "older bound -33.9 Ma"@en ,
-        "younger bound -23.03 Ma"@en ;
     schema:name
         "Oligocene"@en ,
         "Oligocene Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Ordovician>
-    schema:description
-        "older bound -485.4 +|-1.9 Ma"@en ,
-        "younger bound -443.8 +|-1.5 Ma"@en ;
     schema:name
         "Ordovician"@en ,
         "Ordovician Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Orosirian>
-    schema:description
-        "older bound -2050 Ma"@en ,
-        "younger bound -1800 Ma"@en ;
     schema:name
         "Orosirian"@en ,
         "Orosirian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Oxfordian>
-    schema:description
-        "older bound -163.5 +|-1.0 Ma"@en ,
-        "younger bound -157.3 +|-1.0 Ma"@en ;
     schema:name
         "Oxfordian"@en ,
         "Oxfordian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Paibian>
-    schema:description
-        "older bound -497 Ma"@en ,
-        "younger bound -494 Ma"@en ;
     schema:name
         "Paibian"@en ,
         "Paibian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Paleoarchean>
-    schema:description
-        "older bound -3600 Ma"@en ,
-        "younger bound -3200 Ma"@en ;
     schema:name
         "Paleoarchean"@en ,
         "Paleoarchean Era"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Paleocene>
-    schema:description
-        "older bound -66.0 Ma"@en ,
-        "younger bound -56 Ma"@en ;
     schema:name
         "Paleocene"@en ,
         "Paleocene Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Paleogene>
-    schema:description
-        "older bound -66.0 Ma"@en ,
-        "younger bound -23.03 Ma"@en ;
     schema:name
         "Paleogene"@en ,
         "Paleogene Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Paleoproterozoic>
-    schema:description
-        "older bound -2500 Ma"@en ,
-        "younger bound -1600 Ma"@en ;
     schema:name
         "Paleoproterozoic"@en ,
         "Paleoproterozoic Era"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Paleozoic>
-    schema:description
-        "older bound -541.0 +|-1.0 Ma"@en ,
-        "younger bound -251.902 +|-0.024 Ma"@en ;
     schema:name
         "Paleozoic"@en ,
         "Paleozoic Era"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Pennsylvanian>
-    schema:description
-        "older bound -323.2 +|-0.4 Ma"@en ,
-        "younger bound -298.9 +|-0.15 Ma"@en ;
     schema:name
         "Pennsylvanian"@en ,
         "Pennsylvanian Sub-period"@en ;
@@ -2863,72 +2370,48 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Permian>
-    schema:description
-        "older bound -298.9 +|-0.15 Ma"@en ,
-        "younger bound -251.902 +|-0.024 Ma"@en ;
     schema:name
         "Permian"@en ,
         "Permian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Phanerozoic>
-    schema:description
-        "older bound -541.0 +|-1.0 Ma"@en ,
-        "younger bound -0.0 Ma"@en ;
     schema:name
         "Phanerozoic"@en ,
         "Phanerozoic Eon"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Piacenzian>
-    schema:description
-        "older bound -3.6 Ma"@en ,
-        "younger bound -2.58 Ma"@en ;
     schema:name
         "Piacenzian"@en ,
         "Piacenzian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Pleistocene>
-    schema:description
-        "older bound -2.58 Ma"@en ,
-        "younger bound -0.0117 Ma"@en ;
     schema:name
         "Pleistocene"@en ,
         "Pleistocene Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Pliensbachian>
-    schema:description
-        "older bound -190.8 +|-1.0 Ma"@en ,
-        "younger bound -182.7 +|-0.7 Ma"@en ;
     schema:name
         "Pliensbachian"@en ,
         "Pliensbachian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Pliocene>
-    schema:description
-        "older bound -5.333 Ma"@en ,
-        "younger bound -2.58 Ma"@en ;
     schema:name
         "Pliocene"@en ,
         "Pliocene Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Pragian>
-    schema:description
-        "older bound -410.8 +|-2.8 Ma"@en ,
-        "younger bound -407.6 +|-2.6 Ma"@en ;
     schema:name
         "Pragian"@en ,
         "Pragian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Precambrian>
-    schema:description
-        "older bound -4567 +|-1 Ma"@en ,
-        "younger bound -541.0 +|-1.0 Ma"@en ;
     schema:name
         "Precambrian"@en ,
         "Precambrian Supereon"@en ;
@@ -2939,199 +2422,134 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Priabonian>
-    schema:description
-        "older bound -37.8 Ma"@en ,
-        "younger bound -33.9 Ma"@en ;
     schema:name
         "Priabonian"@en ,
         "Priabonian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Pridoli>
-    schema:description
-        "older bound -423 +|-2.3 Ma"@en ,
-        "younger bound -419.2 +|-3.2 Ma"@en ;
     schema:name
         "Pridoli"@en ,
         "Pridoli Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Proterozoic>
-    schema:description
-        "older bound -2500 Ma"@en ,
-        "younger bound -541.0 +|-1.0 Ma"@en ;
     schema:name
         "Proterozoic"@en ,
         "Proterozoic Eon"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Quaternary>
-    schema:description
-        "older bound -2.58 Ma"@en ,
-        "younger bound -0.0 Ma"@en ;
     schema:name
         "Quaternary"@en ,
         "Quaternary Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Rhaetian>
-    schema:description
-        "older bound -208.5 Ma"@en ,
-        "younger bound -201.3 +|-0.2 Ma"@en ;
     schema:name
         "Rhaetian"@en ,
         "Rhaetian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Rhuddanian>
-    schema:description
-        "older bound -443.8 +|-1.5 Ma"@en ,
-        "younger bound -440.8 +|-1.2 Ma"@en ;
     schema:name
         "Rhuddanian"@en ,
         "Rhuddanian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Rhyacian>
-    schema:description
-        "older bound -2300 Ma"@en ,
-        "younger bound -2050 Ma"@en ;
     schema:name
         "Rhyacian"@en ,
         "Rhyacian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Roadian>
-    schema:description
-        "older bound -272.95 +|-0.11 Ma"@en ,
-        "younger bound -268.8 +|-0.5 Ma"@en ;
     schema:name
         "Roadian"@en ,
         "Roadian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Rupelian>
-    schema:description
-        "older bound -33.9 Ma"@en ,
-        "younger bound -28.1 Ma"@en ;
     schema:name
         "Rupelian"@en ,
         "Rupelian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Sakmarian>
-    schema:description
-        "older bound -295.0 +|-0.18 Ma"@en ,
-        "younger bound -290.1 +|-0.26 Ma"@en ;
     schema:name
         "Sakmarian"@en ,
         "Sakmarian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Sandbian>
-    schema:description
-        "older bound -458.4 +|-0.9 Ma"@en ,
-        "younger bound -453.0 +|-0.7 Ma"@en ;
     schema:name
         "Sandbian"@en ,
         "Sandbian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Santonian>
-    schema:description
-        "older bound -86.3 +|-0.5 Ma"@en ,
-        "younger bound -83.6 +|-0.2 Ma"@en ;
     schema:name
         "Santonian"@en ,
         "Santonian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Selandian>
-    schema:description
-        "older bound -61.6 Ma"@en ,
-        "younger bound -59.2 Ma"@en ;
     schema:name
         "Selandian"@en ,
         "Selandian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Serpukhovian>
-    schema:description
-        "older bound -330.9 +|-0.2 Ma"@en ,
-        "younger bound -323.2 +|-0.4 Ma"@en ;
     schema:name
         "Serpukhovian"@en ,
         "Serpukhovian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Serravallian>
-    schema:description
-        "older bound -13.82 Ma"@en ,
-        "younger bound -11.63 Ma"@en ;
     schema:name
         "Serravallian"@en ,
         "Serravallian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Sheinwoodian>
-    schema:description
-        "older bound -433.4 +|-0.8 Ma"@en ,
-        "younger bound -430.5 +|-0.7 Ma"@en ;
     schema:name
         "Sheinwoodian"@en ,
         "Sheinwoodian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Siderian>
-    schema:description
-        "older bound -2500 Ma"@en ,
-        "younger bound -2300 Ma"@en ;
     schema:name
         "Siderian"@en ,
         "Siderian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Silurian>
-    schema:description
-        "The Silurian is a geologic period and system that extends from the end of the Ordovician Period, about 443.7 ± 1.5 million years ago (mya), to the beginning of the Devonian Period, about 416.0 ± 2.8 mya. As with other geologic periods, the rock beds that define the period's start and end are well identified, but the exact dates are uncertain by several million years. The Base of the Silurian is set at a major extinction event when 60% of marine species were wiped out."@en ,
-        "older bound -443.8 +|-1.5 Ma"@en ,
-        "younger bound -419.2 +|-3.2 Ma"@en ;
+    schema:description "The Silurian is a geologic period and system that extends from the end of the Ordovician Period, about 443.7 ± 1.5 million years ago (mya), to the beginning of the Devonian Period, about 416.0 ± 2.8 mya. As with other geologic periods, the rock beds that define the period's start and end are well identified, but the exact dates are uncertain by several million years. The Base of the Silurian is set at a major extinction event when 60% of marine species were wiped out."@en ;
     schema:name
         "Silurian"@en ,
         "Silurian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Sinemurian>
-    schema:description
-        "older bound -199.3 +|-0.3 Ma"@en ,
-        "younger bound -190.8 +|-1.0 Ma"@en ;
     schema:name
         "Sinemurian"@en ,
         "Sinemurian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Statherian>
-    schema:description
-        "older bound -1800 Ma"@en ,
-        "younger bound -1600 Ma"@en ;
     schema:name
         "Statherian"@en ,
         "Statherian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Stenian>
-    schema:description
-        "older bound -1200 Ma"@en ,
-        "younger bound -1000 Ma"@en ;
     schema:name
         "Stenian"@en ,
         "Stenian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Stratotype-unspecified>
-    schema:description
-        "Stratigraphic points providing stratotypes of boundaries in the chronostratigraphic chart (unspecified)"@en ,
-        "This skos:Concept is included to spoof the Research Vocabularies Australia UI, which wants to show all top concepts."@en ;
+    schema:description "Stratigraphic points providing stratotypes of boundaries in the chronostratigraphic chart (unspecified)"@en ;
     schema:name "Stratigraphic points"@en ;
 .
 
@@ -3148,243 +2566,162 @@ Positions in geologic time are conventionally denoted in millions of years, meas
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Telychian>
-    schema:description
-        "older bound -438.5 +|-1.1 Ma"@en ,
-        "younger bound -433.4 +|-0.8 Ma"@en ;
     schema:name
         "Telychian"@en ,
         "Telychian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Terreneuvian>
-    schema:description
-        "older bound -541.0 +|-1.0 Ma"@en ,
-        "younger bound -521 Ma"@en ;
     schema:name
         "Terreneuvian"@en ,
         "Terreneuvian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Thanetian>
-    schema:description
-        "older bound -59.2 Ma"@en ,
-        "younger bound -56 Ma"@en ;
     schema:name
         "Thanetian"@en ,
         "Thanetian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Tithonian>
-    schema:description
-        "older bound -152.1 +|-0.9 Ma"@en ,
-        "younger bound -145.0 Ma"@en ;
     schema:name
         "Tithonian"@en ,
         "Tithonian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Toarcian>
-    schema:description
-        "older bound -182.7 +|-0.7 Ma"@en ,
-        "younger bound -174.1 +|-1.0 Ma"@en ;
     schema:name
         "Toarcian"@en ,
         "Toarcian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Tonian>
-    schema:description
-        "older bound -1000 Ma"@en ,
-        "younger bound -720 Ma"@en ;
     schema:name
         "Tonian"@en ,
         "Tonian Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Tortonian>
-    schema:description
-        "older bound -11.63 Ma"@en ,
-        "younger bound -7.246 Ma"@en ;
     schema:name
         "Tortonian"@en ,
         "Tortonian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Tournaisian>
-    schema:description
-        "older bound -358.9 +|-0.4 Ma"@en ,
-        "younger bound -346.7 +|-0.4 Ma"@en ;
     schema:name
         "Tournaisian"@en ,
         "Tournaisian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Tremadocian>
-    schema:description
-        "older bound -485.4 +|-1.9 Ma"@en ,
-        "younger bound -477.7 +|-1.4 Ma"@en ;
     schema:name
         "Tremadocian"@en ,
         "Tremadocian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Triassic>
-    schema:description
-        "older bound -251.902 +|-0.024 Ma"@en ,
-        "younger bound -201.3 +|-0.2 Ma"@en ;
     schema:name
         "Triassic"@en ,
         "Triassic Period"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Turonian>
-    schema:description
-        "older bound -93.9 Ma"@en ,
-        "younger bound -89.8 +|-0.3 Ma"@en ;
     schema:name
         "Turonian"@en ,
         "Turonian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/UpperCretaceous>
-    schema:description
-        "older bound -100.5 Ma"@en ,
-        "younger bound -66.0 Ma"@en ;
     schema:name
         "Late Cretaceous"@en ,
         "Late Cretaceous Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/UpperDevonian>
-    schema:description
-        "older bound -382.7 +|-1.6 Ma"@en ,
-        "younger bound -358.9 +|-0.4 Ma"@en ;
     schema:name
         "Late Devonian"@en ,
         "Late Devonian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/UpperJurassic>
-    schema:description
-        "older bound -163.5 +|-1.0 Ma"@en ,
-        "younger bound -145.0 Ma"@en ;
     schema:name
         "Late Jurassic"@en ,
         "Late Jurassic Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/UpperMississippian>
-    schema:description
-        "older bound -330.9 +|-0.2 Ma"@en ,
-        "younger bound -298.9 +|-0.15 Ma"@en ;
     schema:name
         "Late Mississippian"@en ,
         "Late Mississippian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/UpperOrdovician>
-    schema:description
-        "older bound -458.4 +|-0.9 Ma"@en ,
-        "younger bound -443.8 +|-1.5 Ma"@en ;
     schema:name
         "Late Ordovician"@en ,
         "Late Ordovician Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/UpperPennsylvanian>
-    schema:description
-        "older bound -307 +|-0.1 Ma"@en ,
-        "younger bound -298.9 +|-0.15 Ma"@en ;
     schema:name
         "Late Pennsylvanian"@en ,
         "Late Pennsylvanian Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/UpperPleistocene>
-    schema:description
-        "older bound -0.126 Ma"@en ,
-        "younger bound -0.0117 Ma"@en ;
     schema:name
         "Late Pleistocene"@en ,
         "Late Pleistocene Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/UpperTriassic>
-    schema:description
-        "older bound -237 Ma"@en ,
-        "younger bound -201.3 +|-0.2 Ma"@en ;
     schema:name
         "Late Triassic"@en ,
         "Late Triassic Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Valanginian>
-    schema:description
-        "older bound -139.8 Ma"@en ,
-        "younger bound -132.9 Ma"@en ;
     schema:name
         "Valanginian"@en ,
         "Valanginian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Visean>
-    schema:description
-        "older bound -346.7 +|-0.4 Ma"@en ,
-        "younger bound -330.9 +|-0.2 Ma"@en ;
     schema:name
         "Visean"@en ,
         "Visean Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Wenlock>
-    schema:description
-        "older bound -433.4 +|-0.8 Ma"@en ,
-        "younger bound -427.4 +|-0.5 Ma"@en ;
     schema:name
         "Wenlock"@en ,
         "Wenlock Epoch"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Wordian>
-    schema:description
-        "older bound -268.8 +|-0.5 Ma"@en ,
-        "younger bound -265.1 +|-0.4 Ma"@en ;
     schema:name
         "Wordian"@en ,
         "Wordian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Wuchiapingian>
-    schema:description
-        "older bound -259.1 +|-0.5 Ma"@en ,
-        "younger bound -254.14 +|-0.07 Ma"@en ;
     schema:name
         "Wuchiapingian"@en ,
         "Wuchiapingian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Wuliuan>
-    schema:description
-        "older bound -509 Ma"@en ,
-        "younger bound -504.5 Ma"@en ;
     schema:name
         "Wuliuan"@en ,
         "Wuliuan Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Ypresian>
-    schema:description
-        "older bound -56 Ma"@en ,
-        "younger bound -47.8 Ma"@en ;
     schema:name
         "Ypresian"@en ,
         "Ypresian Age"@en ;
 .
 
 <http://resource.geosciml.org/classifier/ics/ischart/Zanclean>
-    schema:description
-        "older bound -5.333 Ma"@en ,
-        "younger bound -3.6 Ma"@en ;
     schema:name
         "Zanclean"@en ,
         "Zanclean Age"@en ;
@@ -3398,7 +2735,6 @@ Positions in geologic time are conventionally denoted in millions of years, meas
         <http://www.episodes.co.in/contents/2013/september/p199-204.pdf> ,
         <http://www.stratigraphy.org/GSSP/index.html> ,
         <https://stratigraphy.org/icschart/ChronostratChart2020-01.pdf> ;
-    schema:description "RDF representation of the Geologic Time Scale, as defined in the International Chronostratigraphic Chart (ICC) from the International Commission on Stratigraphy (ICS). The ICC embraces both chronostratigraphic (time-rock) units and their equivalent geochronologic (geologic-time) units, the former being related to the ‘Stratigraphic points’ referred to below, and the latter (geochronologic units) being employed in this RDF representation."@en ;
     schema:name
         "Geologic Time Scale (2020)"@en ,
         "Geological Timescale (2020)"@en ;

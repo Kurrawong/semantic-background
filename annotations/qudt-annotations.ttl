@@ -11,7 +11,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/AngleUnit>
-    schema:description "All units relating to specification of angles. " ;
     schema:name "Angle unit" ;
 .
 
@@ -44,7 +43,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/BitEncodingType>
-    schema:description "A bit encoding is a correspondence between the two possible values of a bit, 0 or 1, and some interpretation. For example, in a boolean encoding, a bit denotes a truth value, where 0 corresponds to False and 1 corresponds to True." ;
     schema:name "Bit Encoding" ;
 .
 
@@ -57,37 +55,30 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/ByteEncodingType>
-    schema:description "This class contains the various ways that information may be encoded into bytes." ;
     schema:name "Byte Encoding" ;
 .
 
 <http://qudt.org/schema/qudt/CT_COUNTABLY-INFINITE>
-    schema:description "A set of numbers is called countably infinite if there is a way to enumerate them.  Formally this is done with a bijection function that associates each number in the set with exactly one of the positive integers.  The set of all fractions is also countably infinite.  In other words, any set \\(X\\) that has the same cardinality as the set of the natural numbers, or \\(| X | \\; =  \\; | \\mathbb N | \\; = \\; \\aleph0\\), is said to be a countably infinite set."^^<http://qudt.org/schema/qudt/LatexString> ;
     schema:name "Countably Infinite Cardinality Type" ;
 .
 
 <http://qudt.org/schema/qudt/CT_FINITE>
-    schema:description "Any set \\(X\\) with cardinality less than that of the natural numbers, or \\(| X | \\\\; <  \\; | \\\\mathbb N | \\), is said to be a finite set."^^<http://qudt.org/schema/qudt/LatexString> ;
     schema:name "Finite Cardinality Type" ;
 .
 
 <http://qudt.org/schema/qudt/CT_UNCOUNTABLE>
-    schema:description "Any set with cardinality greater than that of the natural numbers, or \\(| X | \\; >  \\; | \\mathbb N | \\),  for example \\(| R| \\; =  \\;  c  \\; > |\\mathbb N |\\), is said to be uncountable."^^<http://qudt.org/schema/qudt/LatexString> ;
     schema:name "Uncountable Cardinality Type" ;
 .
 
 <http://qudt.org/schema/qudt/CardinalityType>
-    schema:description "In mathematics, the cardinality of a set is a measure of the number of elements of the set.  For example, the set \\(A = {2, 4, 6}\\) contains 3 elements, and therefore \\(A\\) has a cardinality of 3. There are two approaches to cardinality – one which compares sets directly using bijections and injections, and another which uses cardinal numbers."^^<http://qudt.org/schema/qudt/LatexString> ;
     schema:name "Cardinality Type" ;
 .
 
 <http://qudt.org/schema/qudt/CharEncoding>
-    schema:description "7 bits of 1 octet" ;
     schema:name "Char Encoding" ;
 .
 
 <http://qudt.org/schema/qudt/CharEncodingType>
-    schema:description "The class of all character encoding schemes, each of which defines a rule or algorithm for encoding character data as a sequence of bits or bytes." ;
     schema:name "Char Encoding Type" ;
 .
 
@@ -128,12 +119,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/Datatype>
-    schema:description "A data type is a definition of a set of values (for example, \"all integers between 0 and 10\"), and the allowable operations on those values; the meaning of the data; and the way values of that type can be stored. Some types are primitive - built-in to the language, with no visible internal structure - e.g. Boolean; others are composite - constructed from one or more other types (of either kind) - e.g. lists, arrays, structures, unions. Object-oriented programming extends this with classes which encapsulate both the structure of a type and the operations that can be performed on it. Some languages provide strong typing, others allow implicit type conversion and/or explicit type conversion." ;
     schema:name "QUDT Datatype" ;
 .
 
 <http://qudt.org/schema/qudt/DateTimeStringEncodingType>
-    schema:description "Date Time encodings are logical encodings for expressing date/time quantities as strings by applying unambiguous formatting and parsing rules." ;
     schema:name "Date Time String Encoding Type" ;
 .
 
@@ -161,7 +150,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/Encoding>
-    schema:description "An encoding is a rule or algorithm that is used to convert data from a native, or unspecified form into a specific form that satisfies the encoding rules. Examples of encodings include character encodings, such as UTF-8." ;
     schema:name "Encoding" ;
 .
 
@@ -174,11 +162,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/EnumeratedValue>
-    schema:description """<p>This class is for all enumerated and/or coded values.  For example, it contains the dimension objects that are the basis elements in some abstract vector space associated with a quantity kind system. Another use is for the base dimensions for quantity systems. Each quantity kind system that defines a base set has a corresponding ordered enumeration whose elements are the dimension objects for the base quantity kinds. The order of the dimensions in the enumeration determines the canonical order of the basis elements in the corresponding abstract vector space.</p>
-
-<p>An enumeration is a set of literals from which a single value is selected. Each literal can have a tag as an integer within a standard encoding appropriate to the range of integer values. Consistency of enumeration types will allow them, and the enumerated values, to be referred to unambiguously either through symbolic name or encoding. Enumerated values are also controlled vocabularies and as such need to be standardized. Without this consistency enumeration literals can be stated differently and result in  data conflicts and misinterpretations.</p>
-
-<p>The tags are a set of positive whole numbers, not necessarily contiguous and having no numerical significance, each corresponding to the associated literal identifier. An order attribute can also be given on the enumeration elements. An enumeration can itself be a member of an enumeration. This allows enumerations to be enumerated in a selection. Enumerations are also subclasses of Scalar Datatype. This allows them to be used as the reference of a datatype specification.</p>""" ;
     schema:name "Enumerated Value" ;
 .
 
@@ -198,7 +181,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/FloatingPointEncodingType>
-    schema:description "A \"Encoding\" with the following instance(s): \"Double Precision Encoding\", \"Single Precision Real Encoding\"." ;
     schema:name "Floating Point Encoding" ;
 .
 
@@ -211,7 +193,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/IntegerEncodingType>
-    schema:description "The encoding scheme for integer types" ;
     schema:name "Integer Encoding" ;
 .
 
@@ -238,7 +219,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/NIST_SP811_Comment>
-    schema:description "National Institute of Standards and Technology (NIST) Special Publication 811 Comments on some quantities and their units" ;
     schema:name "NIST SP~811 Comment" ;
 .
 
@@ -251,7 +231,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/OrderedType>
-    schema:description "Describes how a data or information structure is ordered." ;
     schema:name "Ordered type" ;
 .
 
@@ -343,7 +322,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/QuantityType>
-    schema:description "\\(\\textit{Quantity Type}\\) is an enumeration of quanity kinds. It specializes \\(\\boxed{dtype:EnumeratedValue}\\) by constrinaing \\(\\boxed{dtype:value}\\) to instances of \\(\\boxed{qudt:QuantityKind}\\)."^^<http://qudt.org/schema/qudt/LatexString> ;
     schema:name "Quantity type" ;
 .
 
@@ -365,7 +343,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/ScalarDatatype>
-    schema:description "Scalar data types are those that have a single value. The permissible values are defined over a domain that may be integers, float, character or boolean. Often a scalar data type is referred to as a primitive data type." ;
     schema:name "Scalar Datatype" ;
 .
 
@@ -391,7 +368,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/SignednessType>
-    schema:description "Specifics whether a value should be signed or unsigned." ;
     schema:name "Signedness type" ;
 .
 
@@ -400,7 +376,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/SolidAngleUnit>
-    schema:description "The solid angle subtended by a surface S is defined as the surface area of a unit sphere covered by the surface S's projection onto the sphere. A solid angle is related to the surface of a sphere in the same way an ordinary angle is related to the circumference of a circle. Since the total surface area of the unit sphere is 4*pi, the measure of solid angle will always be between 0 and 4*pi." ;
     schema:name "Solid Angle Unit" ;
 .
 
@@ -409,12 +384,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/StringEncodingType>
-    schema:description "A \"Encoding\" with the following instance(s): \"UTF-16 String\", \"UTF-8 Encoding\"." ;
     schema:name "String Encoding Type" ;
 .
 
 <http://qudt.org/schema/qudt/StructuredDatatype>
-    schema:description "A \"Structured Datatype\", in contrast to scalar data types, is used to characterize classes of more complex data structures, such as linked or indexed lists, trees, ordered trees, and multi-dimensional file formats." ;
     schema:name "Structured Data Type" ;
 .
 
@@ -475,7 +448,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/Unit>
-    schema:description "A unit of measure, or unit, is a particular quantity value that has been chosen as a scale for measuring other quantities the same kind (more generally of equivalent dimension). For example, the meter is a quantity of length that has been rigorously defined and standardized by the BIPM (International Board of Weights and Measures). Any measurement of the length can be expressed as a number multiplied by the unit meter. More formally, the value of a physical quantity Q with respect to a unit (U) is expressed as the scalar multiple of a real number (n) and U, as  \\(Q = nU\\)."^^<http://qudt.org/schema/qudt/LatexString> ;
     schema:name "Unit" ;
 .
 
@@ -501,7 +473,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/abbreviation>
-    schema:description "An abbreviation for a unit is a short ASCII string that is used in place of the full name for the unit in contexts where non-ASCII characters would be problematic, or where using the abbreviation will enhance readability. When a power of abase unit needs to be expressed, such as squares this can be done using abbreviations rather than symbols. For example, <em>sq ft</em> means <em>square foot</em>, and <em>cu ft</em> means <em>cubic foot</em>." ;
     schema:name "abbreviation" ;
 .
 
@@ -514,7 +485,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/allowedUnitOfSystem>
-    schema:description "This property relates a unit of measure with a unit system that does not define the unit, but allows its use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system." ;
     schema:name "allowed unit of system" ;
 .
 
@@ -547,7 +517,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/applicableSystem>
-    schema:description "This property relates a unit of measure with a unit system that may or may not define the unit, but within which the unit is compatible." ;
     schema:name "applicable system" ;
 .
 
@@ -560,12 +529,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/baseDimensionEnumeration>
-    schema:description "This property associates a system of quantities with an enumeration that enumerates the base dimensions of the system in canonical order." ;
     schema:name "base dimension enumeration" ;
 .
 
 <http://qudt.org/schema/qudt/baseUnitOfSystem>
-    schema:description "This property relates a unit of measure to the system of units in which it is defined as a base unit for the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power." ;
     schema:name "is base unit of system" ;
 .
 
@@ -590,7 +557,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/byteOrder>
-    schema:description "Byte order is an enumeration of two values: 'Big Endian' and 'Little Endian' and is used to denote whether the most signiticant byte is either first or last, respectively." ;
     schema:name "byte order" ;
 .
 
@@ -616,17 +582,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/code>
-    schema:description "A code is a string that uniquely identifies a QUDT concept. The use of this property has been deprecated." ;
     schema:name "code" ;
 .
 
 <http://qudt.org/schema/qudt/coherentUnitOfSystem>
-    schema:description "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one. A system of units is coherent with respect to a system of quantities and equations if the system of units is chosen in such a way that the equations between numerical values have exactly the same form (including the numerical factors) as the corresponding equations between the quantities. For example, the 'newton' and the 'joule'. These two are, respectively, the force that causes one kilogram to be accelerated at 1 metre per second per  second, and the work done by 1 newton acting over 1 metre. Being coherent refers to this consistent use of 1. In the old c.g.s. system , with its base units the centimetre and the gram, the corresponding coherent units were the dyne and the erg, respectively the force that causes 1 gram to be accelerated at 1 centimetre per second per second, and the work done by 1 dyne acting over 1 centimetre. So \\(1 newton = 10^5\\,dyne\\), \\(1 joule = 10^7\\,erg\\), making each of the four compatible in a decimal sense within its respective other system, but not coherent therein."^^<http://qudt.org/schema/qudt/LatexString> ;
     schema:name "is coherent unit of system" ;
 .
 
 <http://qudt.org/schema/qudt/coherentUnitSystem>
-    schema:description "<p>A system of units is coherent with respect to a system of quantities and equations if the system of units is chosen in such a way that the equations between numerical values have exactly the same form (including the numerical factors) as the corresponding equations between the quantities. In such a coherent system, no numerical factor other than the number 1 ever occurs in the expressions for the derived units in terms of the base units. For example, the \\(newton\\) and the \\(joule\\). These two are, respectively, the force that causes one kilogram to be accelerated at 1 metre per (1) second per (1) second, and the work done by 1 newton acting over 1 metre. Being coherent refers to this consistent use of 1. In the old c.g.s. system , with its base units the centimetre and the gram, the corresponding coherent units were the dyne and the erg, respectively the force that causes 1 gram to be accelerated at 1 centimetre per (1) second per (1) second, and the work done by 1 dyne acting over 1 centimetre. So \\(1\\,newton = 10^5 dyne\\), \\(1 joule = 10^7 erg\\), making each of the four compatible in a decimal sense within its respective other system, but not coherent therein.</p>"^^<http://qudt.org/schema/qudt/LatexString> ;
     schema:name "coherent unit system" ;
 .
 
@@ -644,18 +607,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <http://qudt.org/schema/qudt/currencyCode>
     rdfs:seeAlso "https://en.wikipedia.org/wiki/ISO_4217"^^xsd:anyURI ;
-    schema:description "Alphabetic Currency Code as defined by ISO 4217. For example, US Dollar has the code 'USD'." ;
     schema:name "currency code" ;
 .
 
 <http://qudt.org/schema/qudt/currencyExponent>
-    schema:description "The currency exponent indicates the number of decimal places between a major currency unit and its minor currency unit. For example, the US dollar is the major currency unit of the United States, and the US cent is the minor currency unit. Since one cent is 1/100 of a dollar, the US dollar has a currency exponent of 2. However, the Japanese Yen has no minor currency units, so the yen has a currency exponent of 0." ;
     schema:name "currency exponent" ;
 .
 
 <http://qudt.org/schema/qudt/currencyNumber>
     rdfs:seeAlso "https://en.wikipedia.org/wiki/ISO_4217"^^xsd:anyURI ;
-    schema:description "Numeric currency Code as defined by ISO 4217. For example, US Dollar has the number 840." ;
     schema:name "currency number" ;
 .
 
@@ -676,12 +636,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/default>
-    schema:description "The default element in an enumeration" ;
     schema:name "default" ;
 .
 
 <http://qudt.org/schema/qudt/definedUnitOfSystem>
-    schema:description "This property relates a unit of measure with the unit system that defines the unit." ;
     schema:name "defined unit of system" ;
 .
 
@@ -694,12 +652,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/derivedCoherentUnitOfSystem>
-    schema:description "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units with a proportionality constant of one." ;
     schema:name "is coherent derived unit of system" ;
 .
 
 <http://qudt.org/schema/qudt/derivedNonCoherentUnitOfSystem>
-    schema:description "This property relates a unit of measure to the unit system in which the unit is derived from the system's base units without proportionality constant of one." ;
     schema:name "is non-coherent derived unit of system" ;
 .
 
@@ -708,7 +664,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/derivedUnitOfSystem>
-    schema:description "This property relates a unit of measure to the system of units in which it is defined as a derived unit. That is, the derived unit is defined as a product of the base units for the system raised to some rational power." ;
     schema:name "is derived unit of system" ;
 .
 
@@ -757,7 +712,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/element>
-    schema:description "An element of an enumeration" ;
     schema:name "element" ;
 .
 
@@ -795,7 +749,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/expression>
-    schema:description "An 'expression' is a finite combination of symbols that are well-formed according to rules that apply to units of measure, quantity kinds and their dimensions." ;
     schema:name "expression" ;
 .
 
@@ -804,7 +757,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/figure>
-    schema:description "Provides a link to an image." ;
     schema:name "figure" ;
 .
 
@@ -821,10 +773,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/generalization>
-    schema:description """This property relates a quantity kind to its generalization. A quantity kind, PARENT, is a generalization of the quantity kind CHILD only if:
-
-1. PARENT and CHILD have the same dimensions in every system of quantities;
-2. Every unit that is a measure of quantities of kind CHILD is also a valid measure of quantities of kind PARENT.""" ;
     schema:name "generalization" ;
 .
 
@@ -833,7 +781,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/hasAllowedUnit>
-    schema:description "This property relates a unit system with a unit of measure that is not defined by or part of the system, but is allowed for use within the system. An allowed unit must be convertible to some dimensionally eqiuvalent unit that is defined by the system." ;
     schema:name "allowed unit" ;
 .
 
@@ -842,17 +789,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/hasBaseUnit>
-    schema:description "This property relates a system of units to a base unit defined within the system. The base units of a system are used to define the derived units of the system by expressing the derived units as products of the base units raised to a rational power." ;
     schema:name "base unit" ;
 .
 
 <http://qudt.org/schema/qudt/hasCoherentUnit>
-    schema:description "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one." ;
     schema:name "coherent unit" ;
 .
 
 <http://qudt.org/schema/qudt/hasDefinedUnit>
-    schema:description "This property relates a unit system with a unit of measure that is defined by the system." ;
     schema:name "defined unit" ;
 .
 
@@ -869,7 +813,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/hasDerivedUnit>
-    schema:description "This property relates a system of units to a unit of measure that is defined within the system in terms of the base units for the system. That is, the derived unit is defined as a product of the base units for the system raised to some rational power." ;
     schema:name "derived unit" ;
 .
 
@@ -886,7 +829,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/hasNonCoherentUnit>
-    schema:description "A coherent unit of measurement for a unit system is a defined unit that may be expressed as a product of powers of the system's base units with the proportionality factor of one." ;
     schema:name "has non-coherent unit" ;
 .
 
@@ -915,7 +857,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/hasUnit>
-    schema:description "This property relates a system of units with a unit of measure that is either a) defined by the system, or b) accepted for use by the system and is convertible to a unit of equivalent dimension that is defined by the system. Systems of units may distinguish between base and derived units. Base units are the units which measure the base quantities for the corresponding system of quantities. The base units are used to define units for all other quantities as products of powers of the base units. Such units are called derived units for the system." ;
     schema:name "has unit" ;
 .
 
@@ -932,7 +873,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/id>
-    schema:description "The \"qudt:id\" is an identifier string that uniquely identifies a QUDT concept.  The identifier is constructed using a prefix. For example, units are coded using the pattern: \"UCCCENNNN\", where \"CCC\" is a numeric code or a category and \"NNNN\" is a digit string for a member element of that category. For scaled units there may be an addition field that has the format \"QNN\" where \"NN\" is a digit string representing an exponent power, and \"Q\" is a qualifier that indicates with the code \"P\" that the power is a positive decimal exponent, or the code \"N\" for a negative decimal exponent, or the code \"B\" for binary positive exponents." ;
     schema:name "qudt id" ;
 .
 
@@ -949,7 +889,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/informativeReference>
-    schema:description "Provides a way to reference a source that provided useful but non-normative information." ;
     schema:name "informative reference" ;
 .
 
@@ -979,12 +918,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/isUnitOfSystem>
-    schema:description "This property relates a unit of measure with a system of units that either a) defines the unit or b) allows the unit to be used within the system." ;
     schema:name "is unit of system" ;
 .
 
 <http://qudt.org/schema/qudt/isoNormativeReference>
-    schema:description "Provides a way to reference the ISO unit definition." ;
     schema:name "normative reference (ISO)" ;
 .
 
@@ -1005,7 +942,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/latexSymbol>
-    schema:description "The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form. For example, the symbol for an Ohm is \\(ohm\\). This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm."^^<http://qudt.org/schema/qudt/LatexString> ;
     schema:name "latex symbol" ;
 .
 
@@ -1034,12 +970,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/maxExclusive>
-    schema:description "maxExclusive is the exclusive upper bound of the value space for a datatype with the ordered property. The value of maxExclusive must be in the value space of the base type or be equal to {value} in {base type definition}." ;
     schema:name "max exclusive" ;
 .
 
 <http://qudt.org/schema/qudt/maxInclusive>
-    schema:description "maxInclusive is the inclusive upper bound of the value space for a datatype with the ordered property. The value of maxInclusive must be in the value space of the base type." ;
     schema:name "max inclusive" ;
 .
 
@@ -1048,12 +982,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/minExclusive>
-    schema:description "minExclusive is the exclusive lower bound of the value space for a datatype with the ordered property. The value of minExclusive must be in the value space of the base type or be equal to {value} in {base type definition}." ;
     schema:name "min exclusive" ;
 .
 
 <http://qudt.org/schema/qudt/minInclusive>
-    schema:description "minInclusive is the inclusive lower bound of the value space for a datatype with the ordered property. The value of minInclusive must be in the value space of the base type." ;
     schema:name "min inclusive" ;
 .
 
@@ -1062,12 +994,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/negativeDeltaLimit>
-    schema:description "A negative change limit between consecutive sample values for a parameter. The Negative Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined." ;
     schema:name "negative delta limit" ;
 .
 
 <http://qudt.org/schema/qudt/normativeReference>
-    schema:description "Provides a way to reference information that is an authorative source providing a standard definition" ;
     schema:name "normative reference" ;
 .
 
@@ -1084,7 +1014,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/oleDBName>
-    schema:description "OLE DB (Object Linking and Embedding, Database, sometimes written as OLEDB or OLE-DB), an API designed by Microsoft, allows accessing data from a variety of sources in a uniform manner. The API provides a set of interfaces implemented using the Component Object Model (COM); it is otherwise unrelated to OLE. " ;
     schema:name "OLE DB name" ;
 .
 
@@ -1121,12 +1050,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/plainTextDescription>
-    schema:description "A plain text description is used to provide a description with only simple ASCII characters for cases where LaTeX , HTML or other markup would not be appropriate." ;
     schema:name "description (plain text)" ;
 .
 
 <http://qudt.org/schema/qudt/positiveDeltaLimit>
-    schema:description "A positive change limit between consecutive sample values for a parameter. The Positive Delta may be the encoded value or engineering units value depending on whether or not a Calibrator is defined." ;
     schema:name "Positive delta limit" ;
 .
 
@@ -1156,7 +1083,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/quantity>
-    schema:description "a property to relate an observable thing with a quantity (qud:Quantity)" ;
     schema:name "quantity" ;
 .
 
@@ -1181,7 +1107,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/relativeStandardUncertainty>
-    schema:description "The relative standard uncertainty of a measurement is the (absolute) standard uncertainty divided by the magnitude of the exact value." ;
     schema:name "relative standard uncertainty" ;
 .
 
@@ -1207,17 +1132,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/specialization>
-    schema:description "This property relates a quantity kind to its specialization(s). For example, linear velocity and angular velocity are both specializations of velocity." ;
     schema:name "specialization" ;
 .
 
 <http://qudt.org/schema/qudt/standardUncertainty>
-    schema:description "The standard uncertainty of a quantity is the estimated standard deviation of the mean taken from a series of measurements." ;
     schema:name "standard uncertainty" ;
 .
 
 <http://qudt.org/schema/qudt/symbol>
-    schema:description "The symbol is a glyph that is used to represent some concept, typically a unit or a quantity, in a compact form. For example, the symbol for an Ohm is \\(ohm\\). This contrasts with 'unit:abbreviation', which gives a short alphanumeric abbreviation for the unit, 'ohm' for Ohm."^^<http://qudt.org/schema/qudt/LatexString> ;
     schema:name "symbol" ;
 .
 
@@ -1234,33 +1156,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/ucumCaseInsensitiveCode>
-    schema:description "<em>ucumCode</em> associates a QUDT unit with a UCUM case-insensitive code." ;
     schema:name "ucum case-insensitive code" ;
 .
 
 <http://qudt.org/schema/qudt/ucumCaseSensitiveCode>
-    schema:description "<em>ucumCode</em> associates a QUDT unit with with a UCUM case-sensitive code." ;
     schema:name "ucum case-sensitive code" ;
 .
 
 <http://qudt.org/schema/qudt/ucumCode>
     rdfs:seeAlso <https://ucum.org/ucum.html> ;
-    schema:description "<p><em>ucumCode</em> associates a QUDT unit with its UCUM code (case-sensitive). </p><p>In SHACL the values are derived from specific ucum properties using 'sh:values'.</p>" ;
     schema:name "ucum code" ;
 .
 
 <http://qudt.org/schema/qudt/udunitsCode>
-    schema:description "The UDUNITS package supports units of physical quantities. Its C library provides for arithmetic manipulation of units and for conversion of numeric values between compatible units. The package contains an extensive unit database, which is in XML format and user-extendable. The package also contains a command-line utility for investigating units and converting values." ;
     schema:name "udunits code" ;
 .
 
 <http://qudt.org/schema/qudt/uneceCommonCode>
-    schema:description "The UN/CEFACT Recommendation 20 provides three character alphabetic and alphanumeric codes for representing units of measurement for length, area, volume/capacity, mass (weight), time, and other quantities used in international trade. The codes are intended for use in manual and/or automated systems for the exchange of information between participants in international trade." ;
     schema:name "unece common code" ;
 .
 
 <http://qudt.org/schema/qudt/unit>
-    schema:description "A reference to the unit of measure of a quantity (variable or constant) of interest." ;
     schema:name "unit" ;
 .
 
@@ -1277,7 +1193,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/value>
-    schema:description "A property to relate an observable thing with a value of any kind" ;
     schema:name "value" ;
 .
 
@@ -1286,7 +1201,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://qudt.org/schema/qudt/valueUnion>
-    schema:description "A datatype that is the union of numeric xsd data types. \"numericUnion\" is equivalent to the xsd specification that uses an xsd:union of memberTypes=\"xsd:decimal xsd:double xsd:float xsd:integer\"." ;
     schema:name "value union" ;
 .
 
@@ -1311,16 +1225,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://www.linkedmodel.org/schema/vaem#GMD_QUDT-SCHEMA>
-    schema:description """<p class="lm-para">The QUDT, or "Quantity, Unit, Dimension and Type" schema defines the base classes properties, and restrictions used for modeling physical quantities, units of measure, and their dimensions in various measurement systems. The goal of the QUDT ontology is to provide a unified model of, measurable quantities, units for measuring different kinds of quantities, the numerical values of quantities in different units of measure and the data structures and data types used to store and manipulate these objects in software.</p>
-
-<p class="lm-para">Except for unit prefixes, all units are specified in separate vocabularies. Descriptions are provided in both HTML and LaTeX formats. A quantity is a measure of an observable phenomenon, that, when associated with something, becomes a property of that thing; a particular object, event, or physical system. </p>
-
-<p class="lm-para">A quantity has meaning in the context of a measurement (i.e. the thing measured, the measured value, the accuracy of measurement, etc.) whereas the underlying quantity kind is independent of any particular measurement. Thus, length is a quantity kind while the height of a rocket is a specific quantity of length; its magnitude that may be expressed in meters, feet, inches, etc.  Or, as stated at Wikipedia, in the language of measurement, quantities are quantifiable aspects of the world, such as time, distance, velocity, mass, momentum, energy, and weight, and units are used to describe their measure. Many of these quantities are related to each other by various physical laws, and as a result the units of some of the quantities can be expressed as products (or ratios) of powers of other units (e.g., momentum is mass times velocity and velocity is measured in distance divided by time).</p>""" ;
     schema:name "QUDT Schema - Version 2.1.27" ;
 .
 
 <http://www.linkedmodel.org/schema/vaem#QUDT>
-    schema:description "QUDT is a non-profit organization that governs the QUDT ontologies." ;
     schema:name "QUDT" ;
 .
 

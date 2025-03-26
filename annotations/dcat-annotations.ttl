@@ -1,10 +1,8 @@
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 
 <http://www.w3.org/ns/dcat>
-    schema:description "DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema."@en ;
     schema:name "The data catalog vocabulary"@en ;
 .
 
@@ -24,9 +22,7 @@ dcat:DataService
 .
 
 dcat:Dataset
-    schema:description
-        "A collection of data, published or curated by a single source, and available for access or download in one or more represenations."@en ,
-        "A collection of data, published or curated by a single source, and available for access or download in one or more representations."@en ;
+    schema:description "A collection of data, published or curated by a single source, and available for access or download in one or more represenations."@en ;
     schema:name "Dataset"@en ;
 .
 
@@ -132,9 +128,7 @@ dcat:landingPage
 .
 
 dcat:mediaType
-    schema:description
-        "The media type of the distribution as defined by IANA"@en ,
-        "The media type of the distribution as defined by IANA."@en ;
+    schema:description "The media type of the distribution as defined by IANA."@en ;
     schema:name "media type"@en ;
 .
 
@@ -181,14 +175,6 @@ dcat:theme
 dcat:themeTaxonomy
     schema:description "The knowledge organization system (KOS) used to classify catalog's datasets."@en ;
     schema:name "theme taxonomy"@en ;
-.
-
-foaf:homepage
-    schema:description "This axiom needed so that Protege loads DCAT2 without errors." ;
-.
-
-foaf:primaryTopic
-    schema:description "This axiom needed so that Protege loads DCAT2 without errors." ;
 .
 
 dcat:hadRole

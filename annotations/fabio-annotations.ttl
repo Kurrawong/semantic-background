@@ -63,13 +63,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 <http://prismstandard.org/namespaces/basic/2.0/publicationDate>
-    schema:description
-        """The date on which a document or entity is published.
-The date can be expressed in three different formats:
-- yyyy-mm-dd (i.e., xsd:date)
-- yyyy-mm (i.e., xsd:gYearMonth)
-- yyyy (i.e., xsd:gYear)"""@en ,
-        "The date on which a resource is published or disclosed."@en ;
+    schema:description "The date on which a resource is published or disclosed."@en ;
     schema:name "has publication date"@en ;
 .
 
@@ -198,11 +192,7 @@ dcterms:valid
 .
 
 <http://purl.org/spar/fabio>
-    schema:description
-        """FaBiO, the FRBR-aligned Bibliographic Ontology, is an ontology for recording and publishing on the Semantic Web descriptions of entities that are published or potentially publishable, and that contain or are referred to by bibliographic references, or entities used to define such bibliographic references. FaBiO entities are primarily textual publications such as books, magazines, newspapers and journals, and items of their content such as poems, conference papers and editorials.  However, they also include blogs, web pages, datasets, computer algorithms, experimental protocols, formal specifications and vocabularies, legal records, governmental papers, technical and commercial reports and similar publications, and also anthologies, catalogues and similar collections.
-
-FaBiO classes are structured according to the FRBR schema of Works, Expressions, Manifestations and Items. Additional properties have been added to extends the FRBR data model by linking Works and Manifestations (fabio:hasManifestation and fabio:isManifestationOf), Works and Items (fabio:hasPortrayal and fabio:isPortrayedBy), and Expressions and Items  (fabio:hasRepresentation and fabio:isRepresentedBy)."""^^xsd:string ,
-        """The FRBR-aligned Bibliographic Ontology (FaBiO) is an ontology for describing entities that are published or potentially publishable (e.g., journal articles, conference papers, books), and that contain or are referred to by bibliographic references.
+    schema:description """The FRBR-aligned Bibliographic Ontology (FaBiO) is an ontology for describing entities that are published or potentially publishable (e.g., journal articles, conference papers, books), and that contain or are referred to by bibliographic references.
 
 **URL:** http://purl.org/spar/fabio
 
@@ -234,9 +224,7 @@ FaBiO classes are structured according to the FRBR schema of Works, Expressions,
 .
 
 <http://purl.org/spar/fabio/AnalogItem>
-    schema:description
-        "A real object that is an exemplar of a fabio:Manifestation, such as a particular copy of the book 'Alice's adventures in Wonderland', that a person may own."@en ,
-        "An analog item is an exemplar of an analog manifestation only and it is always stored in a storage medium suitable for analog objects, such as paper, vinyl discs and films."@en ;
+    schema:description "A real object that is an exemplar of a fabio:Manifestation, such as a particular copy of the book 'Alice's adventures in Wonderland', that a person may own."@en ;
     schema:name "analog item"@en ;
 .
 
@@ -548,9 +536,7 @@ FaBiO classes are structured according to the FRBR schema of Works, Expressions,
 .
 
 <http://purl.org/spar/fabio/DigitalItem>
-    schema:description
-        "A digital item is an exemplar of a digital manifestation only and it is always stored in a storage medium suitable for digital objects, such as CDs, DVDs, HDs and the Web."@en ,
-        "A digital object, such as a computer file."@en ;
+    schema:description "A digital object, such as a computer file."@en ;
     schema:name "digital item"@en ;
 .
 
@@ -635,9 +621,7 @@ FaBiO classes are structured according to the FRBR schema of Works, Expressions,
 .
 
 <http://purl.org/spar/fabio/Expression>
-    schema:description
-        "A fabio:Expression can only have part or be part of another fabio:Expression.  Moreover, it can be a representation only of a fabio:Work, and  it can be embodied only in fabio:Manifestation(s)."@en ,
-        "A subclass of FRBR expression, restricted to expressions of fabio:Works.  For your latest research paper, the preprint submitted to the publisher, and the final published version to which the publisher assigned a unique digital object identifier, are both expressions of the same work.  "@en ;
+    schema:description "A subclass of FRBR expression, restricted to expressions of fabio:Works.  For your latest research paper, the preprint submitted to the publisher, and the final published version to which the publisher assigned a unique digital object identifier, are both expressions of the same work.  "@en ;
     schema:name "expression"@en ;
 .
 
@@ -714,9 +698,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-in-use-track-papers/."""@en ;
 .
 
 <http://purl.org/spar/fabio/Item>
-    schema:description
-        "A fabio:Item can only have part or be part of another fabio:Item. Moreover, it can be an exemplar only of a fabio:Manifestation."@en ,
-        "A subclass of FRBR item, restricted to exemplars of fabio:Manifestations.  An example of a fabio:Item is a printed copy of a journal article on your desk, or a PDF file of that article that you purchased from a publisher and that now resides in digital form on your computer hard drive.  "@en ;
+    schema:description "A subclass of FRBR item, restricted to exemplars of fabio:Manifestations.  An example of a fabio:Item is a printed copy of a journal article on your desk, or a PDF file of that article that you purchased from a publisher and that now resides in digital form on your computer hard drive.  "@en ;
     schema:name "item"@en ;
 .
 
@@ -811,9 +793,7 @@ E.g. see http://iswc2018.semanticweb.org/call-for-in-use-track-papers/."""@en ;
 .
 
 <http://purl.org/spar/fabio/Manifestation>
-    schema:description
-        "A fabio:Manifestation can only have part or be part of another fabio:Manifestation.  Moreover, it can be an embodiment only of a fabio:Expression and it can be exemplified only by fabio:Item(s)."@en ,
-        """A subclass of FRBR manifestation, restricted to manifestations of fabio:Expressions. fabio:Manifestation specifically applies to electronic (digital) as well as to physical manifestations of expressions.
+    schema:description """A subclass of FRBR manifestation, restricted to manifestations of fabio:Expressions. fabio:Manifestation specifically applies to electronic (digital) as well as to physical manifestations of expressions.
 
 Examples of different manifestations of a single 'version of record' expression of a scholarly work include an article in a print journal or the on-line version of that article as a web page."""@en ;
     schema:name "manifestation"@en ;
@@ -1351,9 +1331,7 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
 .
 
 <http://purl.org/spar/fabio/TermDictionary>
-    schema:description
-        "A controlled vocabulary, usually referring to terms within a particular classification system, such as the ACM Computing Classification System or MeSH, the Medical Subject Headings, or a controlled vocabulary of disciplines."@en ,
-        "A term dictionary is a collection of subject terms."@en ;
+    schema:description "A controlled vocabulary, usually referring to terms within a particular classification system, such as the ACM Computing Classification System or MeSH, the Medical Subject Headings, or a controlled vocabulary of disciplines."@en ;
     schema:name "term dictionary"@en ;
 .
 
@@ -1464,9 +1442,7 @@ E.g. see http://www.emeraldgrouppublishing.com/products/journals/author_guidelin
 .
 
 <http://purl.org/spar/fabio/Work>
-    schema:description
-        "A fabio:Work can only have part or be part of another fabio:Work. Moreover, it can be realized only by fabio:Expression(s)."@en ,
-        "A subclass of FRBR work, restricted to works that are published or potentially publishable, and that contain or are referred to by bibliographic references, or entities used to define bibliographic references. FaBiO works, and their expressions and manifestations, are primarily textual publications such as books, magazines, newspapers and journals, and items of their content.  However, they also include datasets, computer algorithms, experimental protocols, formal specifications and vocabularies, legal records, governmental papers, technical and commercial reports and similar publications, and also bibliographies, reference lists, library catalogues and similar collections. For this reason, fabio:Work is not an equivalent class to frbr:ScholarlyWork.  An example of a fabio:Work is your latest research paper."@en ;
+    schema:description "A subclass of FRBR work, restricted to works that are published or potentially publishable, and that contain or are referred to by bibliographic references, or entities used to define bibliographic references. FaBiO works, and their expressions and manifestations, are primarily textual publications such as books, magazines, newspapers and journals, and items of their content.  However, they also include datasets, computer algorithms, experimental protocols, formal specifications and vocabularies, legal records, governmental papers, technical and commercial reports and similar publications, and also bibliographies, reference lists, library catalogues and similar collections. For this reason, fabio:Work is not an equivalent class to frbr:ScholarlyWork.  An example of a fabio:Work is your latest research paper."@en ;
     schema:name "work"@en ;
 .
 
@@ -1929,40 +1905,17 @@ skos:inScheme
 
 <http://purl.org/spar/fabio/Excerpt>
     rdfs:seeAlso <http://purl.org/spar/fabio/Quotation> ;
-    schema:description
-        """A segment or passage selected from a larger expression for use in another expression, usually with specific attribution to its original source.
+    schema:description """A segment or passage selected from a larger expression for use in another expression, usually with specific attribution to its original source.
 
-[Note: Use fabio:Excerpt to indicate a segment or passage selected from another expression that is not a passage of speech, and fabio:Quotation to indicate a segment or passage selected from another expression that is a passage of speech.]"""@en ,
-        """An excerpt is more general than a quotation, and is generally used to indicate a re-published extract from a book, instruction manual, film, radio programme, etc, that need not be what someone said.
-
-For example:
-     Oxford    01865
-     Oxshott   01372
-     Oxted      01883
-     Oxton      01578
-is an excerpt from the UK Dialling Codes section of the Oxford Telephone Directory.
-
-Similarly, the following concluding passage from William Wordsworth's poem Lines written a Few Miles above Tintern Abbey is an excerpt rather than a quotation:
-                                           Nor wilt thou then forget,
-    That after many wanderings, many years
-    Of absence, these steep woods and lofty cliffs,
-    And this green pastoral landscape, were to me
-    More dear, both for themselves and for thy sake."""@en ;
+[Note: Use fabio:Excerpt to indicate a segment or passage selected from another expression that is not a passage of speech, and fabio:Quotation to indicate a segment or passage selected from another expression that is a passage of speech.]"""@en ;
     schema:name "excerpt"@en ;
 .
 
 <http://purl.org/spar/fabio/Quotation>
     rdfs:seeAlso <http://purl.org/spar/fabio/Excerpt> ;
-    schema:description
-        """A passage of speech selected from a larger verbal or written expression for use in another expression, with specific attribution to its original source, and usually demarcated by quotation marks and / or by placing it in a separate indented paragraph.
+    schema:description """A passage of speech selected from a larger verbal or written expression for use in another expression, with specific attribution to its original source, and usually demarcated by quotation marks and / or by placing it in a separate indented paragraph.
 
-[Note: Use fabio:Quotation to indicate a segment or passage selected from another expression that is a passage of speech, and fabio:Excerpt to indicate a segment or passage selected from another expression that is not a passage of speech.]"""@en ,
-        """A quotation is a repetition of what someone has said, and is presented "within quotation marks", for example:
-
-On June 4th 1940, Winston Churchill made a speech on the radio that has since become famous, that included the words:
-       " . . . we shall fight on the beaches, we shall fight on the landing grounds, we shall fight in the fields and in the streets, we shall fight in the hills; we shall never surrender . . ."
-
-Similarly, the words "but Brutus is an honourable man" from Mark Antony's funeral speech in Shakespeare's play Julius Caesar is a quotation, since Mark Antony says these words in the play."""@en ;
+[Note: Use fabio:Quotation to indicate a segment or passage selected from another expression that is a passage of speech, and fabio:Excerpt to indicate a segment or passage selected from another expression that is not a passage of speech.]"""@en ;
     schema:name "quotation"@en ;
 .
 

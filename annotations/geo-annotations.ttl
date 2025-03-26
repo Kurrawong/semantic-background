@@ -4,7 +4,6 @@ PREFIX schema: <https://schema.org/>
 
 <http://www.opengis.net/ont/geosparql>
     rdfs:seeAlso <http://www.opengis.net/doc/IS/geosparql/1.1> ;
-    schema:description "An RDF/OWL vocabulary for representing spatial information"@en ;
     schema:name "GeoSPARQL Ontology" ;
 .
 
