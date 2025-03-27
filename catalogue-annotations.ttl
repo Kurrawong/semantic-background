@@ -2,7 +2,6 @@ PREFIX astatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX catns: <https://example.com/demo-vocabs/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX prez: <https://prez.dev/>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -11,65 +10,70 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://kurrawong.ai/semantic-bankground/annotations>
     a dcat:Catalog ;
     dcterms:hasPart
-        <http://example.com/shacl-extension-annotations> ,
-        <http://id.loc.gov/ontologies/bibframe/-annotations> ,
-        <http://id.loc.gov/vocabulary/identifiers-annotations> ,
-        <http://purl.obolibrary.org/obo/bfo.owl-annotations> ,
-        <http://purl.org/NET/rdflicense-annotations> ,
-        <http://purl.org/dc/elements/1.1/-annotations> ,
-        <http://purl.org/dc/terms/-annotations> ,
-        <http://purl.org/geojson/vocab#-annotations> ,
-        <http://purl.org/linked-data/cube-annotations> ,
-        <http://purl.org/linked-data/registry#StatusScheme-annotations> ,
-        <http://purl.org/ontology/bibo-annotations> ,
-        <http://purl.org/pav/-annotations> ,
-        <http://purl.org/spar/cito-annotations> ,
-        <http://qudt.org/2.1/schema/qudt-annotations> ,
-        <http://qudt.org/2.1/vocab/quantitykind-annotations> ,
-        <http://resource.geosciml.org/vocabulary/timescale/gts2020-annotations> ,
-        <http://rs.tdwg.org/dwc/terms/-annotations> ,
-        <http://rs.tdwg.org/ontology/voc/TaxonName-annotations> ,
-        <http://vocab.deri.ie/void-annotations> ,
-        <http://www.ifomis.org/bfo/1.1-annotations> ,
-        <http://www.opengis.net/def/nil-annotations> ,
-        <http://www.opengis.net/ont/geosparql-annotations> ,
-        <http://www.opengis.net/ont/gml-annotations> ,
-        <http://www.w3.org/1999/02/22-rdf-syntax-ns#-annotations> ,
-        <http://www.w3.org/2000/01/rdf-schema#-annotations> ,
-        <http://www.w3.org/2002/07/owl-annotations> ,
-        <http://www.w3.org/2003/06/sw-vocab-status/ns-annotations> ,
-        <http://www.w3.org/2004/02/skos/core-annotations> ,
-        <http://www.w3.org/2006/time-annotations> ,
-        <http://www.w3.org/2008/05/skos-xl-annotations> ,
-        <http://www.w3.org/ns/dcat-annotations> ,
-        <http://www.w3.org/ns/dx/connegp/altr-ext-annotations> ,
-        <http://www.w3.org/ns/dx/prof-annotations> ,
-        <http://www.w3.org/ns/odrl/2/-annotations> ,
-        <http://www.w3.org/ns/prov#-annotations> ,
-        <http://www.w3.org/ns/shacl#-annotations> ,
-        <http://www.w3.org/ns/sosa/-annotations> ,
-        <http://www.w3.org/ns/ssn/ext-annotations> ,
-        <http://xmlns.com/foaf/0.1/-annotations> ,
-        <https://linked.data.gov.au/def/addr-annotations> ,
-        <https://linked.data.gov.au/def/cn-annotations> ,
-        <https://linked.data.gov.au/def/data-roles-annotations> ,
-        <https://linked.data.gov.au/def/fsdf/themes-annotations> ,
-        <https://linked.data.gov.au/def/gn-annotations> ,
-        <https://linked.data.gov.au/def/lifecycle-annotations> ,
-        <https://linked.data.gov.au/def/reg-statuses-annotations> ,
-        <https://linked.data.gov.au/def/unggim-themes-annotations> ,
-        <https://linked.data.gov.au/def/vocdermods-annotations> ,
-        <https://prez.dev/ont/-annotations> ,
-        <https://schema.org-annotations> ,
-        <https://w3id.org/tern/ontologies/tern/-annotations> ,
-        <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes-annotations>  ;
-    schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
+        <http://example.com/shacl-extension> ,
+		<http://id.loc.gov/ontologies/bibframe/> ,
+		<http://id.loc.gov/vocabulary/identifiers> ,
+		<http://id.loc.gov/vocabulary/identifiers> ,
+		<http://purl.obolibrary.org/obo/bfo.owl> ,
+		<http://purl.org/NET/rdflicense> ,
+		<http://purl.org/dc/elements/1.1/> ,
+		<http://purl.org/dc/terms/> ,
+		<http://purl.org/geojson/vocab#> ,
+		<http://purl.org/linked-data/cube> ,
+		<http://purl.org/linked-data/registry#StatusScheme> ,
+		<http://purl.org/ontology/bibo> ,
+		<http://purl.org/pav/> ,
+		<http://purl.org/spar/cito> ,
+		<http://purl.org/spar/fabio> ,
+		<http://qudt.org/2.1/schema/qudt> ,
+		<http://qudt.org/2.1/vocab/quantitykind> ,
+		<http://resource.geosciml.org/vocabulary/timescale/gts2020> ,
+		<http://rs.tdwg.org/dwc/terms/> ,
+		<http://rs.tdwg.org/ontology/voc/TaxonName> ,
+		<http://vocab.deri.ie/void> ,
+		<http://www.ifomis.org/bfo/1.1> ,
+		<http://www.opengis.net/def/nil> ,
+		<http://www.opengis.net/ont/geosparql> ,
+		<http://www.opengis.net/ont/gml> ,
+		<http://www.w3.org/1999/02/22-rdf-syntax-ns#> ,
+		<http://www.w3.org/2000/01/rdf-schema#> ,
+		<http://www.w3.org/2002/07/owl> ,
+		<http://www.w3.org/2003/06/sw-vocab-status/ns> ,
+		<http://www.w3.org/2004/02/skos/core> ,
+		<http://www.w3.org/2006/time> ,
+		<http://www.w3.org/2008/05/skos-xl> ,
+		<http://www.w3.org/ns/dcat> ,
+		<http://www.w3.org/ns/dx/connegp/altr-ext> ,
+		<http://www.w3.org/ns/dx/prof> ,
+		<http://www.w3.org/ns/odrl/2/> ,
+		<http://www.w3.org/ns/prov-o#> ,
+		<http://www.w3.org/ns/shacl#> ,
+		<http://www.w3.org/ns/sosa/> ,
+		<http://www.w3.org/ns/ssn/ext> ,
+		<http://xmlns.com/foaf/0.1/> ,
+		<https://linked.data.gov.au/def/addr> ,
+		<https://linked.data.gov.au/def/anzsrc-for/2020> ,
+		<https://linked.data.gov.au/def/cn> ,
+		<https://linked.data.gov.au/def/data-roles> ,
+		<https://linked.data.gov.au/def/fsdf/themes> ,
+		<https://linked.data.gov.au/def/lifecycle> ,
+		<https://linked.data.gov.au/def/reg-statuses> ,
+		<https://linked.data.gov.au/def/roads> ,
+		<https://linked.data.gov.au/def/unggim-themes> ,
+		<https://linked.data.gov.au/def/vocdermods> ,
+		<https://olis.dev/ont> ,
+		<https://prez.dev/ManifestResourceRoles> ,
+		<https://prez.dev/ont> ,
+		<https://prez.dev/ont/> ,
+		<https://schema.org> ,
+		<https://w3id.org/tern/ontologies/tern/> ,
+		<https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes> ;
+    schema:codeRepository "https://github.com/kurrawong/demo-vocabs" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2023"^^xsd:gYear ;
-    schema:dateModified "2025-01-02"^^xsd:date ;
-    schema:description "A catalogue of annotations - names, descriptions & seeAlso links - extracted from ontologies used by KurrawongAI. The original ontologies are in the 'Semantic Background Ontologies' catalogue" ;
-    schema:name "Semantic Background Annotations" ;
+    schema:dateModified "2025-03-27"^^xsd:date ;
+    schema:description "A testing catalogue for the Prez Manifest Loader tool" ;
+    schema:name "Demo Vocabularies" ;
     schema:publisher <https://kurrawong.ai> ;
     reg:status astatus:experimental ;
-    prez:hasManifest <https://kurrawong.ai/semantic-bankground/annotations-manifest> ;
 .

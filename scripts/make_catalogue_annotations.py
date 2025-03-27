@@ -1,7 +1,9 @@
+# maked the catalogue-annotations.ttl file
 from pathlib import Path
 from rdflib import Graph
 from rdflib.namespace import OWL, RDF, SKOS
 from textwrap import dedent
+from datetime import datetime
 
 FILES_DIR = Path(__file__).parent.parent.resolve() / "ontologies"
 
@@ -17,7 +19,7 @@ for f in sorted(FILES_DIR.glob("*.ttl")):
 
     iris.append(iri)
 
-hasParts = "<" + "> ,\n    \t\t<".join(iris) + "> ;"
+hasParts = "<" + "> ,\n    \t\t<".join(sorted(iris)) + "> ;"
 
 template = \
     f"""\
@@ -37,11 +39,11 @@ template = \
         schema:codeRepository "https://github.com/kurrawong/demo-vocabs" ;
         schema:creator <https://kurrawong.ai> ;
         schema:dateCreated "2023"^^xsd:gYear ;
-        schema:dateModified "2024-10-16"^^xsd:date ;
+        schema:dateModified "{datetime.now().strftime('%Y-%m-%d')}"^^xsd:date ;
         schema:description "A testing catalogue for the Prez Manifest Loader tool" ;
         schema:name "Demo Vocabularies" ;
         schema:publisher <https://kurrawong.ai> ;
         reg:status astatus:experimental ;
     ."""
 
-print(dedent(template))
+open(Path(__file__).parent.parent / "catalogue-annotations.ttl", "w").write(dedent(template))
