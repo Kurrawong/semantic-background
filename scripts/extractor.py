@@ -90,26 +90,26 @@ def main(files: list[Path] = None):
                 }
                 
                 OPTIONAL { 
-                    ?x rdfs:comment ?l5 
-                    FILTER (lang(?l5) IN ("en", ""))
-                }
-                
-                OPTIONAL { 
-                    ?x schema:description ?l2 
+                    ?x rdfs:comment ?l2
                     FILTER (lang(?l2) IN ("en", ""))
                 }
                 
                 OPTIONAL { 
-                    ?x dcterms:description ?l3 
+                    ?x schema:description ?l3 
                     FILTER (lang(?l3) IN ("en", ""))
                 }
                 
                 OPTIONAL { 
-                    ?x dc:description ?l4 
+                    ?x dcterms:description ?l4
                     FILTER (lang(?l4) IN ("en", ""))
                 }
                 
-                BIND (COALESCE(?l1, ?l5, ?l2, ?l3, ?l4) AS ?lbl)
+                OPTIONAL { 
+                    ?x dc:description ?l5 
+                    FILTER (lang(?l5) IN ("en", ""))
+                }
+                
+                BIND (COALESCE(?l1, ?l2, ?l3, ?l4, ?l5) AS ?lbl)
             }
             """
 
@@ -139,7 +139,10 @@ def main(files: list[Path] = None):
 
             d.add_graph(g3)
 
+    # only rewrite the trig file if multiple (all) files are being processed
+    if len(list(d.graphs())) > 2:
         d.serialize(destination=repo_root / "annotations.trig", format="trig")
+
 
 
 if __name__ == "__main__":

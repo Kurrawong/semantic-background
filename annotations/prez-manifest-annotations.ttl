@@ -1,6 +1,43 @@
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX schema: <https://schema.org/>
+
+prof:ResourceDescriptor
+    schema:name "Resource Descriptor"@en ;
+.
+
+prof:hasArtifact
+    schema:name "has artifact" ;
+.
+
+prof:hasResource
+    schema:name "has resource"@en ;
+.
+
+prof:hasRole
+    schema:name "has role" ;
+.
+
+<https://kurrawong.ai>
+    schema:name "KurrawongAI" ;
+.
+
+<https://prez.dev/Manifest>
+    schema:name "Manifest" ;
+.
 
 <https://prez.dev/manifest-model>
     schema:description "This ontology describes a formulation of a content manifest for catalogues of RDF data to be loaded into instances of the PRez tool"@en ;
     schema:name "Prez Manifest Model" ;
+.
+
+<https://prez.dev/ont/1.0.0>
+    schema:name "1.0.0" ;
+.
+
+schema:description
+    schema:name "description" ;
+.
+
+schema:name
+    schema:name "name" ;
 .
