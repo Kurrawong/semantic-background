@@ -63,8 +63,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		<https://linked.data.gov.au/def/vocdermods> ,
 		<https://olis.dev/ont> ,
 		<https://prez.dev/ManifestResourceRoles> ,
+		<https://prez.dev/manifest-model> ,
 		<https://prez.dev/ont> ,
-		<https://prez.dev/ont/> ,
 		<https://schema.org> ,
 		<https://w3id.org/tern/ontologies/tern/> ,
 		<https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes> ;

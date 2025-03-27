@@ -1,6 +1,6 @@
 PREFIX schema: <https://schema.org/>
 
-<https://prez.dev/ont>
+<https://prez.dev/manifest-model>
     schema:description "This ontology describes a formulation of a content manifest for catalogues of RDF data to be loaded into instances of the PRez tool"@en ;
     schema:name "Prez Manifest Model" ;
 .

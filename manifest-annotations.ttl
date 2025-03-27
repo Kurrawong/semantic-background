@@ -28,236 +28,236 @@ PREFIX ssn: <http://www.w3.org/ns/ssn/>
 ex:label-resources
     prof:hasArtifact
         [
-            schema:contentLocation "annotations/time-annotations.ttl" ;
-            schema:mainEntity <http://www.w3.org/2006/time> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/anzsrc-for-2020-annotations.ttl" ;
-            schema:mainEntity <https://linked.data.gov.au/def/anzsrc-for/2020> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/dcat-annotations.ttl" ;
-            schema:mainEntity <http://www.w3.org/ns/dcat> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/addr-annotations.ttl" ;
-            schema:mainEntity <https://linked.data.gov.au/def/addr> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/prof-annotations.ttl" ;
-            schema:mainEntity <http://www.w3.org/ns/dx/prof> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/unggim-themes-annotations.ttl" ;
-            schema:mainEntity <https://linked.data.gov.au/def/unggim-themes> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/foaf-annotations.ttl" ;
-            schema:mainEntity foaf: ;
-        ] ,
-        [
-            schema:contentLocation "annotations/prezmanifest-annotations.ttl" ;
-            schema:mainEntity prez:ont ;
-        ] ,
-        [
-            schema:contentLocation "annotations/rdfs-annotations.ttl" ;
-            schema:mainEntity rdfs: ;
-        ] ,
-        [
             schema:contentLocation "annotations/dwc-annotations.ttl" ;
             schema:mainEntity <http://rs.tdwg.org/dwc/terms/> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/quantitykinds-annotations.ttl" ;
-            schema:mainEntity <http://qudt.org/2.1/vocab/quantitykind> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/pav-annotations.ttl" ;
-            schema:mainEntity <http://purl.org/pav/> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/reg-annotations.ttl" ;
-            schema:mainEntity <http://purl.org/linked-data/registry#StatusScheme> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/lifecycle-annotations.ttl" ;
-            schema:mainEntity <https://linked.data.gov.au/def/lifecycle> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/bibframe-annotations.ttl" ;
-            schema:mainEntity <http://id.loc.gov/ontologies/bibframe/> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/gml-annotations.ttl" ;
-            schema:mainEntity <http://www.opengis.net/ont/gml> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/geojson-annotations.ttl" ;
-            schema:mainEntity <http://purl.org/geojson/vocab#> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/shacl-annotations.ttl" ;
-            schema:mainEntity sh: ;
-        ] ,
-        [
-            schema:contentLocation "annotations/void-annotations.ttl" ;
-            schema:mainEntity <http://vocab.deri.ie/void> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/rdf-annotations.ttl" ;
-            schema:mainEntity rdf: ;
-        ] ,
-        [
-            schema:contentLocation "annotations/vs-annotations.ttl" ;
-            schema:mainEntity <http://www.w3.org/2003/06/sw-vocab-status/ns> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/qudt-annotations.ttl" ;
-            schema:mainEntity <http://qudt.org/2.1/schema/qudt> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/tern-annotations.ttl" ;
-            schema:mainEntity <https://w3id.org/tern/ontologies/tern/> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/shacl-ext-annotations.ttl" ;
-            schema:mainEntity ex:shacl-extension ;
         ] ,
         [
             schema:contentLocation "annotations/olis-annotations.ttl" ;
             schema:mainEntity <https://olis.dev/ont> ;
         ] ,
         [
-            schema:contentLocation "annotations/gts2020-annotations.ttl" ;
-            schema:mainEntity <http://resource.geosciml.org/vocabulary/timescale/gts2020> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/nil-annotations.ttl" ;
-            schema:mainEntity <http://www.opengis.net/def/nil> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/prez-annotations.ttl" ;
-            schema:mainEntity <https://prez.dev/ont/> ;
-        ] ,
-        [
             schema:contentLocation "annotations/mrr-annotations.ttl" ;
             schema:mainEntity prez:ManifestResourceRoles ;
         ] ,
         [
-            schema:contentLocation "annotations/rdwg-taxon-name-annotations.ttl" ;
-            schema:mainEntity <http://rs.tdwg.org/ontology/voc/TaxonName> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/cito-annotations.ttl" ;
-            schema:mainEntity <http://purl.org/spar/cito> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/odrl22-annotations.ttl" ;
-            schema:mainEntity odrl: ;
-        ] ,
-        [
-            schema:contentLocation "annotations/vocdermods-annotations.ttl" ;
-            schema:mainEntity <https://linked.data.gov.au/def/vocdermods> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/gn-annotations.ttl" ;
-            schema:mainEntity <https://linked.data.gov.au/def/roads> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/fabio-annotations.ttl" ;
-            schema:mainEntity <http://purl.org/spar/fabio> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/rico-annotations.ttl" ;
-            schema:mainEntity <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/prov-annotations.ttl" ;
-            schema:mainEntity <http://www.w3.org/ns/prov-o#> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/owl-annotations.ttl" ;
-            schema:mainEntity <http://www.w3.org/2002/07/owl> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/sosa-annotations.ttl" ;
-            schema:mainEntity sosa: ;
-        ] ,
-        [
-            schema:contentLocation "annotations/loc-identifiers-annotations.ttl" ;
-            schema:mainEntity <http://id.loc.gov/vocabulary/identifiers> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/sdo-annotations.ttl" ;
-            schema:mainEntity <https://schema.org> ;
+            schema:contentLocation "annotations/prez-ont-annotations.ttl" ;
+            schema:mainEntity prez:ont ;
         ] ,
         [
             schema:contentLocation "annotations/data-roles-annotations.ttl" ;
             schema:mainEntity <https://linked.data.gov.au/def/data-roles> ;
         ] ,
         [
-            schema:contentLocation "annotations/dc_elements-annotations.ttl" ;
-            schema:mainEntity dc: ;
-        ] ,
-        [
-            schema:contentLocation "annotations/fsdf-themes-annotations.ttl" ;
-            schema:mainEntity <https://linked.data.gov.au/def/fsdf/themes> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/cn-annotations.ttl" ;
-            schema:mainEntity <https://linked.data.gov.au/def/cn> ;
+            schema:contentLocation "annotations/sosa-annotations.ttl" ;
+            schema:mainEntity sosa: ;
         ] ,
         [
             schema:contentLocation "annotations/bfo-annotations.ttl" ;
             schema:mainEntity <http://www.ifomis.org/bfo/1.1> ;
         ] ,
         [
-            schema:contentLocation "annotations/geo-annotations.ttl" ;
-            schema:mainEntity <http://www.opengis.net/ont/geosparql> ;
-        ] ,
-        [
             schema:contentLocation "annotations/ssn-ext-annotations.ttl" ;
             schema:mainEntity ssn:ext ;
+        ] ,
+        [
+            schema:contentLocation "annotations/shacl-ext-annotations.ttl" ;
+            schema:mainEntity ex:shacl-extension ;
+        ] ,
+        [
+            schema:contentLocation "annotations/loc-identifiers-annotations.ttl" ;
+            schema:mainEntity <http://id.loc.gov/vocabulary/identifiers> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/void-annotations.ttl" ;
+            schema:mainEntity <http://vocab.deri.ie/void> ;
         ] ,
         [
             schema:contentLocation "annotations/skos-annotations.ttl" ;
             schema:mainEntity <http://www.w3.org/2004/02/skos/core> ;
         ] ,
         [
-            schema:contentLocation "annotations/bibo-annotations.ttl" ;
-            schema:mainEntity <http://purl.org/ontology/bibo> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/standard_identifiers-annotations.ttl" ;
-            schema:mainEntity <http://id.loc.gov/vocabulary/identifiers> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/skos-xl-annotations.ttl" ;
-            schema:mainEntity <http://www.w3.org/2008/05/skos-xl> ;
-        ] ,
-        [
-            schema:contentLocation "annotations/qb-annotations.ttl" ;
-            schema:mainEntity <http://purl.org/linked-data/cube> ;
+            schema:contentLocation "annotations/rico-annotations.ttl" ;
+            schema:mainEntity <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes> ;
         ] ,
         [
             schema:contentLocation "annotations/bfo2020-annotations.ttl" ;
             schema:mainEntity <http://purl.obolibrary.org/obo/bfo.owl> ;
         ] ,
         [
-            schema:contentLocation "annotations/altr-ext-annotations.ttl" ;
-            schema:mainEntity <http://www.w3.org/ns/dx/connegp/altr-ext> ;
+            schema:contentLocation "annotations/rdwg-taxon-name-annotations.ttl" ;
+            schema:mainEntity <http://rs.tdwg.org/ontology/voc/TaxonName> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/cn-annotations.ttl" ;
+            schema:mainEntity <https://linked.data.gov.au/def/cn> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/tern-annotations.ttl" ;
+            schema:mainEntity <https://w3id.org/tern/ontologies/tern/> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/qudt-annotations.ttl" ;
+            schema:mainEntity <http://qudt.org/2.1/schema/qudt> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/fabio-annotations.ttl" ;
+            schema:mainEntity <http://purl.org/spar/fabio> ;
         ] ,
         [
             schema:contentLocation "annotations/reg-statuses-annotations.ttl" ;
             schema:mainEntity <https://linked.data.gov.au/def/reg-statuses> ;
         ] ,
         [
-            schema:contentLocation "annotations/dcterms-annotations.ttl" ;
-            schema:mainEntity dcterms: ;
+            schema:contentLocation "annotations/odrl22-annotations.ttl" ;
+            schema:mainEntity odrl: ;
+        ] ,
+        [
+            schema:contentLocation "annotations/geo-annotations.ttl" ;
+            schema:mainEntity <http://www.opengis.net/ont/geosparql> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/prez-manifest-annotations.ttl" ;
+            schema:mainEntity prez:manifest-model ;
         ] ,
         [
             schema:contentLocation "annotations/rdflicenses-annotations.ttl" ;
             schema:mainEntity <http://purl.org/NET/rdflicense> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/bibo-annotations.ttl" ;
+            schema:mainEntity <http://purl.org/ontology/bibo> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/nil-annotations.ttl" ;
+            schema:mainEntity <http://www.opengis.net/def/nil> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/bibframe-annotations.ttl" ;
+            schema:mainEntity <http://id.loc.gov/ontologies/bibframe/> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/unggim-themes-annotations.ttl" ;
+            schema:mainEntity <https://linked.data.gov.au/def/unggim-themes> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/rdf-annotations.ttl" ;
+            schema:mainEntity rdf: ;
+        ] ,
+        [
+            schema:contentLocation "annotations/reg-annotations.ttl" ;
+            schema:mainEntity <http://purl.org/linked-data/registry#StatusScheme> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/standard_identifiers-annotations.ttl" ;
+            schema:mainEntity <http://id.loc.gov/vocabulary/identifiers> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/gml-annotations.ttl" ;
+            schema:mainEntity <http://www.opengis.net/ont/gml> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/foaf-annotations.ttl" ;
+            schema:mainEntity foaf: ;
+        ] ,
+        [
+            schema:contentLocation "annotations/geojson-annotations.ttl" ;
+            schema:mainEntity <http://purl.org/geojson/vocab#> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/gts2020-annotations.ttl" ;
+            schema:mainEntity <http://resource.geosciml.org/vocabulary/timescale/gts2020> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/vs-annotations.ttl" ;
+            schema:mainEntity <http://www.w3.org/2003/06/sw-vocab-status/ns> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/quantitykinds-annotations.ttl" ;
+            schema:mainEntity <http://qudt.org/2.1/vocab/quantitykind> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/gn-annotations.ttl" ;
+            schema:mainEntity <https://linked.data.gov.au/def/roads> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/shacl-annotations.ttl" ;
+            schema:mainEntity sh: ;
+        ] ,
+        [
+            schema:contentLocation "annotations/lifecycle-annotations.ttl" ;
+            schema:mainEntity <https://linked.data.gov.au/def/lifecycle> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/owl-annotations.ttl" ;
+            schema:mainEntity <http://www.w3.org/2002/07/owl> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/dc_elements-annotations.ttl" ;
+            schema:mainEntity dc: ;
+        ] ,
+        [
+            schema:contentLocation "annotations/prof-annotations.ttl" ;
+            schema:mainEntity <http://www.w3.org/ns/dx/prof> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/rdfs-annotations.ttl" ;
+            schema:mainEntity rdfs: ;
+        ] ,
+        [
+            schema:contentLocation "annotations/dcat-annotations.ttl" ;
+            schema:mainEntity <http://www.w3.org/ns/dcat> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/pav-annotations.ttl" ;
+            schema:mainEntity <http://purl.org/pav/> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/dcterms-annotations.ttl" ;
+            schema:mainEntity dcterms: ;
+        ] ,
+        [
+            schema:contentLocation "annotations/altr-ext-annotations.ttl" ;
+            schema:mainEntity <http://www.w3.org/ns/dx/connegp/altr-ext> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/qb-annotations.ttl" ;
+            schema:mainEntity <http://purl.org/linked-data/cube> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/sdo-annotations.ttl" ;
+            schema:mainEntity <https://schema.org> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/vocdermods-annotations.ttl" ;
+            schema:mainEntity <https://linked.data.gov.au/def/vocdermods> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/skos-xl-annotations.ttl" ;
+            schema:mainEntity <http://www.w3.org/2008/05/skos-xl> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/fsdf-themes-annotations.ttl" ;
+            schema:mainEntity <https://linked.data.gov.au/def/fsdf/themes> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/addr-annotations.ttl" ;
+            schema:mainEntity <https://linked.data.gov.au/def/addr> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/cito-annotations.ttl" ;
+            schema:mainEntity <http://purl.org/spar/cito> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/time-annotations.ttl" ;
+            schema:mainEntity <http://www.w3.org/2006/time> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/prov-annotations.ttl" ;
+            schema:mainEntity <http://www.w3.org/ns/prov-o#> ;
+        ] ,
+        [
+            schema:contentLocation "annotations/anzsrc-for-2020-annotations.ttl" ;
+            schema:mainEntity <https://linked.data.gov.au/def/anzsrc-for/2020> ;
         ] ;
     prof:hasRole mrr:ResourceData ;
     schema:description "Collections of labels for ontologies and vocabularies" ;

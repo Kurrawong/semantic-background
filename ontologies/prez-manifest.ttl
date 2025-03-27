@@ -6,12 +6,12 @@ PREFIX schema: <https://schema.org>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://prez.dev/ont>
+<https://prez.dev/manifest-model>
     a owl:Ontology ;
     owl:versionIRI <https://prez.dev/ont/1.0.0> ;
     owl:versionInfo "1.0.0: First public version" ;
     skos:definition "This ontology describes a formulation of a content manifest for catalogues of RDF data to be loaded into instances of the PRez tool"@en ;
-    skos:historyNote "Create in 2024 for Prez data loading" ;
+    skos:historyNote "Created in 2024 for Prez data loading" ;
     skos:prefLabel "Prez Manifest Model" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2024-11-29"^^xsd:date ;
