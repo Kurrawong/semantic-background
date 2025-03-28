@@ -25,6 +25,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		<http://purl.org/pav/> ,
 		<http://purl.org/spar/cito> ,
 		<http://purl.org/spar/fabio> ,
+		<http://purl.org/vocab/vann/> ,
 		<http://qudt.org/2.1/schema/qudt> ,
 		<http://qudt.org/2.1/vocab/quantitykind> ,
 		<http://resource.geosciml.org/vocabulary/timescale/gts2020> ,
@@ -71,7 +72,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/kurrawong/demo-vocabs" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2023"^^xsd:gYear ;
-    schema:dateModified "2025-03-27"^^xsd:date ;
+    schema:dateModified "2025-03-28"^^xsd:date ;
     schema:description "A testing catalogue for the Prez Manifest Loader tool" ;
     schema:name "Demo Vocabularies" ;
     schema:publisher <https://kurrawong.ai> ;
