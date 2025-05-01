@@ -4,23 +4,23 @@ PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 
 rdf:value
-    schema:description "Idiomatic property used for structured values"@en ;
-    schema:name "value"@en ;
+    schema:description "Idiomatic property used for structured values" ;
+    schema:name "value" ;
 .
 
 rdfs:Literal
-    schema:description "The class of literal values, eg. textual strings and integer"@en ;
-    schema:name "Literal"@en ;
+    schema:description "The class of literal values, eg. textual strings and integer" ;
+    schema:name "Literal" ;
 .
 
 rdfs:Resource
-    schema:description "The class resource, everything"@en ;
-    schema:name "Resource"@en ;
+    schema:description "The class resource, everything" ;
+    schema:name "Resource" ;
 .
 
 skos:Concept
-    schema:description "An idea or notion; a unit of thought"@en ;
-    schema:name "Concept"@en ;
+    schema:description "An idea or notion; a unit of thought" ;
+    schema:name "Concept" ;
 .
 
 <https://linked.data.gov.au/def/cn>
@@ -41,20 +41,20 @@ skos:Concept
 .
 
 <https://orcid.org/0000-0002-8742-7730>
-    schema:name "Nicholas J. Car"@en ;
+    schema:name "Nicholas J. Car" ;
 .
 
 schema:additionalType
-    schema:description "An additional type for the item, typically used for adding more specific types from external vocabularies"@en ;
-    schema:name "additional type"@en ;
+    schema:description "An additional type for the item, typically used for adding more specific types from external vocabularies" ;
+    schema:name "additional type" ;
 .
 
 schema:hasPart
-    schema:description "Indicates a Resource that is part of this item"@en ;
-    schema:name "member"@en ;
+    schema:description "Indicates a Resource that is part of this item" ;
+    schema:name "member" ;
 .
 
 schema:name
-    schema:description "The name of the item"@en ;
-    schema:name "name"@en ;
+    schema:description "The name of the item" ;
+    schema:name "name" ;
 .

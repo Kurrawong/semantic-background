@@ -40,7 +40,7 @@ This model has been made with the FSDF Supermodel in mind (https://linked.data.g
     a sdo:Person ;
     sdo:email "nick@kurrawong.ai"^^xsd:anyURI ;
     sdo:memberOf <https://www.linked.data.gov.au/org/agldwg> ;
-    sdo:name "Nicholas J. Car"@en ;
+    sdo:name "Nicholas J. Car" ;
 .
 
 :CompoundName
@@ -112,32 +112,32 @@ ex:moreton
         rdf:value ex:Island ;
         sdo:name "Island" ;
     ] ;
-."""@en ;
+.""" ;
     skos:prefLabel "Compound Name"@en ;
 .
 
 rdfs:Resource
     a owl:Class ;
     rdfs:isDefinedBy rdfs: ;
-    skos:definition "The class resource, everything"@en ;
+    skos:definition "The class resource, everything" ;
     skos:example """See the non-literal values for rdf:value in the CompoundName example""" ;
-    skos:prefLabel "Resource"@en ;
-    skos:scopeNote "This class is used to represent both the things to which CompoundNames can be assigned and also the range value of the property rdf:value. It is not expected to be used directly but instead specialised types of Resource are expected"@en ;
+    skos:prefLabel "Resource" ;
+    skos:scopeNote "This class is used to represent both the things to which CompoundNames can be assigned and also the range value of the property rdf:value. It is not expected to be used directly but instead specialised types of Resource are expected" ;
 .
 
 rdfs:Literal
     a owl:Class ;
     rdfs:isDefinedBy rdfs: ;
-    skos:definition "The class of literal values, eg. textual strings and integer"@en ;
+    skos:definition "The class of literal values, eg. textual strings and integer" ;
     skos:example """See the literals values of '72' and 'Yundah' in the CompoundName example""" ;
-    skos:prefLabel "Literal"@en ;
-    skos:scopeNote "This class is used to represent the range value of the property :asLiteral. It is not expected to be used directly but instead specialised types of Literal are expected"@en ;
+    skos:prefLabel "Literal" ;
+    skos:scopeNote "This class is used to represent the range value of the property :asLiteral. It is not expected to be used directly but instead specialised types of Literal are expected" ;
 .
 
 skos:Concept
     a owl:Class ;
     rdfs:isDefinedBy skos: ;
-    skos:definition "An idea or notion; a unit of thought"@en ;
+    skos:definition "An idea or notion; a unit of thought" ;
     skos:example """# See the example for CompoundName and add the following
 #
 PREFIX ex: <http://example.com/>
@@ -149,8 +149,8 @@ ex:Island
     skos:prefLabel "Island" ;
     skos:altLabel "Is." ;
 .""" ;
-    skos:prefLabel "Concept"@en ;
-    skos:scopeNote "This class is the type of the expected values for the property sdo:additionalType when used within this model. Concepts are typically controlled terms within ConceptSchemes. Literal representations of Concepts should easily be obtainable"@en ;
+    skos:prefLabel "Concept" ;
+    skos:scopeNote "This class is the type of the expected values for the property sdo:additionalType when used within this model. Concepts are typically controlled terms within ConceptSchemes. Literal representations of Concepts should easily be obtainable" ;
 .
 
 :isNameFor
@@ -172,36 +172,36 @@ ex:moreton
 ex:feature-x
     a geo:Feature ;
     sdo:name ex:moreton ;
-."""@en ;
+.""" ;
     skos:prefLabel "is name for"@en ;
 .
 
 sdo:name
     a owl:DatatypeProperty ;
     rdfs:isDefinedBy sdo: ;
-    skos:definition "The name of the item"@en ;
-    skos:example """See example for isNameFor"""@en ;
-    skos:prefLabel "name"@en ;
+    skos:definition "The name of the item" ;
+    skos:example """See example for isNameFor""" ;
+    skos:prefLabel "name" ;
     skos:usageNote "In this model, name is used to indicate both a literal form of a resource`s name or a CompoundName object"
 .
 
 sdo:hasPart
     a owl:ObjectProperty ;
     rdfs:isDefinedBy sdo: ;
-    skos:definition "Indicates a Resource that is part of this item"@en ;
-    skos:example """See the example for CompoundName"""@en ;
-    skos:prefLabel "member"@en ;
-    skos:scopeNote "Use this property to indicate the individual parts of a Compound Name"@en ;
+    skos:definition "Indicates a Resource that is part of this item" ;
+    skos:example """See the example for CompoundName""" ;
+    skos:prefLabel "member" ;
+    skos:scopeNote "Use this property to indicate the individual parts of a Compound Name" ;
 .
 
 rdf:value
     a owl:ObjectProperty ;
     rdfs:isDefinedBy rdf: ;
     rdfs:range rdfs:Resource ;
-    skos:definition "Idiomatic property used for structured values"@en ;
-    skos:example """See the example for CompoundLiteral"""@en ;
-    skos:prefLabel "value"@en ;
-    skos:scopeNote "Use this property to indicate the value of a CompoundName, whether it's a literal or a complex object"@en ;
+    skos:definition "Idiomatic property used for structured values" ;
+    skos:example """See the example for CompoundLiteral""" ;
+    skos:prefLabel "value" ;
+    skos:scopeNote "Use this property to indicate the value of a CompoundName, whether it's a literal or a complex object" ;
 .
 
 sdo:additionalType
@@ -209,8 +209,8 @@ sdo:additionalType
     rdfs:domain rdfs:Resource ;
     rdfs:isDefinedBy sdo: ;
     rdfs:range rdfs:Resource ;
-    skos:definition "An additional type for the item, typically used for adding more specific types from external vocabularies"@en ;
-    skos:example """See the example for CompoundLiteral"""@en ;
-    skos:prefLabel "additional type"@en ;
-    skos:scopeNote "Use this property to indicate the specialised type of a part of a CompoundName"@en ;
+    skos:definition "An additional type for the item, typically used for adding more specific types from external vocabularies" ;
+    skos:example """See the example for CompoundLiteral""" ;
+    skos:prefLabel "additional type" ;
+    skos:scopeNote "Use this property to indicate the specialised type of a part of a CompoundName" ;
 .
