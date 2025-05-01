@@ -13,7 +13,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://example.com/shacl-extension> ,
 		<http://id.loc.gov/ontologies/bibframe/> ,
 		<http://id.loc.gov/vocabulary/identifiers> ,
-		<http://id.loc.gov/vocabulary/identifiers> ,
 		<http://purl.obolibrary.org/obo/bfo.owl> ,
 		<http://purl.org/NET/rdflicense> ,
 		<http://purl.org/dc/elements/1.1/> ,
