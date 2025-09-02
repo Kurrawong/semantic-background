@@ -1,0 +1,121 @@
+@prefix mmon: <http://www.opengis.net/def/metamodel/ogc-na/> .
+@prefix nil: <http://www.opengis.net/def/nil/OGC/0/> .
+@prefix ogc: <http://www.opengis.net/def/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix status: <http://www.opengis.net/def/status/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+nil:AboveDetectionRange a skos:Concept ;
+    mmon:status status:valid ;
+    skos:altLabel "Above Detection Range"@en ;
+    skos:definition "Value was above the detection range of the instrument used to estimate it."@en ;
+    skos:inScheme ogc:nil ;
+    skos:prefLabel "above detection range"@en ;
+    schema:citation "OGC 07-036 Clause 8.2.3" ;
+    schema:creator "GMLJP2 SWG" ;
+    schema:dateCreated "2010-03-23"^^xsd:date ;
+    schema:dateModified "2012-02-14"^^xsd:date .
+
+nil:BelowDetectionRange a skos:Concept ;
+    mmon:status status:valid ;
+    skos:altLabel "Below Detection Range"@en ;
+    skos:definition "Value was below the detection range of the instrument used to estimate it."@en ;
+    skos:inScheme ogc:nil ;
+    skos:prefLabel "below detection range"@en ;
+    schema:citation "OGC 07-036 Clause 8.2.3" ;
+    schema:creator "GMLJP2 SWG" ;
+    schema:dateCreated "2010-03-23"^^xsd:date ;
+    schema:dateModified "2012-02-14"^^xsd:date .
+
+nil:inapplicable a skos:Concept ;
+    mmon:status status:valid ;
+    skos:altLabel "Inapplicable"@en ;
+    skos:definition "There is no value"@en ;
+    skos:inScheme ogc:nil ;
+    skos:prefLabel "inapplicable"@en ;
+    schema:citation "OGC 07-036 Clause 8.2.3" ;
+    schema:creator "GML SWG" ;
+    schema:dateCreated "2010-03-23"^^xsd:date ;
+    schema:dateModified "2012-02-14"^^xsd:date .
+
+nil:template a skos:Concept ;
+    mmon:status status:valid ;
+    skos:altLabel "Template"@en ;
+    skos:definition "The value will be available later"@en ;
+    skos:inScheme ogc:nil ;
+    skos:prefLabel "template"@en ;
+    schema:citation "OGC 07-036 Clause 8.2.3" ;
+    schema:creator "GML SWG" ;
+    schema:dateCreated "2010-03-23"^^xsd:date ;
+    schema:dateModified "2012-02-14"^^xsd:date .
+
+nil:withheld a skos:Concept ;
+    mmon:status status:valid ;
+    skos:altLabel "Withheld"@en ;
+    skos:definition "The value is not divulged."@en ;
+    skos:inScheme ogc:nil ;
+    skos:prefLabel "withheld"@en ;
+    schema:citation "OGC 07-036 Clause 8.2.3" ;
+    schema:creator "GML SWG" ;
+    schema:dateCreated "2010-03-23"^^xsd:date ;
+    schema:dateModified "2012-02-14"^^xsd:date .
+
+<https://orcid.org/0000-0002-7878-2693> a schema:Person ;
+    schema:name "Robert Atkinson" .
+
+<http://www.opengis.net/def/entities/bodies/ogcna> a schema:Organization .
+
+nil:missing a skos:Concept ;
+    mmon:status status:valid ;
+    rdfs:comment "More details are available via the exactMatch reference, which should be used for citation by preference"@en ;
+    skos:altLabel "Missing"@en ;
+    skos:definition "The correct value is not readily available to the sender of this data. Furthermore, a correct value may not exist"@en ;
+    skos:exactMatch <http://www.opengis.net/def/waterml/2.0/quality/missing> ;
+    skos:inScheme ogc:nil,
+        ogc:waterml ;
+    skos:prefLabel "missing"@en ;
+    schema:citation "OGC 07-036 Clause 8.2.3" ;
+    schema:creator "GML SWG" ;
+    schema:dateCreated "2010-03-23"^^xsd:date ;
+    schema:dateModified "2012-02-14"^^xsd:date .
+
+nil:unknown a skos:Concept ;
+    mmon:status status:valid ;
+    rdfs:comment "More details are available via the exactMatch reference, which should be used for citation by preference"@en ;
+    skos:altLabel "Unknown"@en ;
+    skos:definition "The correct value is not known to, or not computable by, the sender of this data. However, the correct value probably exists"@en ;
+    skos:exactMatch <http://www.opengis.net/def/waterml/2.0/medium/Unknown> ;
+    skos:inScheme ogc:nil,
+        ogc:waterml ;
+    skos:prefLabel "unknown"@en ;
+    schema:citation "OGC 07-036 Clause 8.2.3" ;
+    schema:creator "GML SWG" ;
+    schema:dateCreated "2010-03-23"^^xsd:date ;
+    schema:dateModified "2012-02-14"^^xsd:date .
+
+ogc:waterml skos:hasTopConcept nil:missing,
+        nil:unknown .
+
+ogc:nil a skos:ConceptScheme ;
+    rdfs:comment "The URIs for resources in this document were assigned in accordance with the OGC Naming policies, overseen by the OGC Naming Authority. They are not otherwise managed as part of a delegated governance via a specific artefact, such as CodeLists from a normative schema." ;
+    skos:definition "OGC nils" ;
+    skos:hasTopConcept nil:AboveDetectionRange,
+        nil:BelowDetectionRange,
+        nil:inapplicable,
+        nil:missing,
+        nil:template,
+        nil:unknown,
+        nil:withheld ;
+    skos:historyNote "refactored from original omnibus concept scheme into a separate scheme for reuse" ;
+    skos:prefLabel "OGC nils" ;
+    schema:citation <http://www.opengis.net/def/entities/bodies/ogcna>,
+        "8.2.3.1 in OGC 07-036 (GML)" ;
+    schema:copyrightNotice "Copyright © 2012 Open Geospatial Consortium, Inc. All Rights Reserved." ;
+    schema:creator <https://orcid.org/0000-0002-7878-2693> ;
+    schema:dateCreated "2012-02-15"^^xsd:date ;
+    schema:dateModified "2023-03-23"^^xsd:date ;
+    schema:license <http://www.opengeospatial.org/ogc/software> ;
+    schema:publisher <http://www.opengis.net/def/entities/bodies/ogcna> .
+
