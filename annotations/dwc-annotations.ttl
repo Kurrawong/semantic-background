@@ -4,3 +4,819 @@ PREFIX schema: <https://schema.org/>
     schema:description "This term list includes all currently valid terms that have been defined in the core Darwin Core namespace dwc:.  To comment on this schema, please create a new issue in https://github.com/tdwg/dwc/issues"@en ;
     schema:name "Core terms defined by Darwin Core"@en ;
 .
+
+<http://rs.tdwg.org/dwc/terms/Event>
+    schema:name "Event" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/FossilSpecimen>
+    schema:name "Fossil specimen" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/GeologicalContext>
+    schema:name "Geological context" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/HumanObservation>
+    schema:name "Human observation" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/Identification>
+    schema:name "Identification" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/LivingSpecimen>
+    schema:name "Living specimen" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/MachineObservation>
+    schema:name "Machine observation" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/MaterialCitation>
+    schema:name "Material citation" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/MaterialSample>
+    schema:name "Material sample" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/MeasurementOrFact>
+    schema:name "Measurement or fact" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/Occurrence>
+    schema:name "Occurrence" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/Organism>
+    schema:name "Organism" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/PreservedSpecimen>
+    schema:name "Preserved specimen" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/ResourceRelationship>
+    schema:name "Resource relationship" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/Taxon>
+    schema:name "Taxon" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/acceptedNameUsage>
+    schema:name "accepted name usage" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/acceptedNameUsageID>
+    schema:name "accepted name usage ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/accordingTo>
+    schema:name "according to" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/associatedMedia>
+    schema:name "associated media" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/associatedOccurrences>
+    schema:name "associated occurrences" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/associatedOrganisms>
+    schema:name "associated organisms" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/associatedReferences>
+    schema:name "associated references" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/associatedSequences>
+    schema:name "associated sequences" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/associatedTaxa>
+    schema:name "associated taxa" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/basisOfRecord>
+    schema:name "basis of record" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/bed>
+    schema:name "bed" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/behavior>
+    schema:name "behavior" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/catalogNumber>
+    schema:name "catalog number" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/class>
+    schema:name "class" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/collectionCode>
+    schema:name "collection code" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/collectionID>
+    schema:name "collection ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/continent>
+    schema:name "continent" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/coordinatePrecision>
+    schema:name "coordinate precision" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/coordinateUncertaintyInMeters>
+    schema:name "coordinate uncertainty in meters" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/country>
+    schema:name "country" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/countryCode>
+    schema:name "country code" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/county>
+    schema:name "county" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/cultivarEpithet>
+    schema:name "cultivar epithet" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/dataGeneralizations>
+    schema:name "data generalizations" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/datasetID>
+    schema:name "dataset ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/datasetName>
+    schema:name "dataset name" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/dateIdentified>
+    schema:name "date identified" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/day>
+    schema:name "day" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/decimalLatitude>
+    schema:name "decimal latitude" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/decimalLongitude>
+    schema:name "decimal longitude" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/degreeOfEstablishment>
+    schema:name "degree of establishment" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/disposition>
+    schema:name "disposition" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/dynamicProperties>
+    schema:name "dynamic properties" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/earliestAgeOrLowestStage>
+    schema:name "earliest age or lowest stage" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/earliestEonOrLowestEonothem>
+    schema:name "earliest eon or lowest eonothem" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/earliestEpochOrLowestSeries>
+    schema:name "earliest epoch or lowest series" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/earliestEraOrLowestErathem>
+    schema:name "earliest era or lowest erathem" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/earliestPeriodOrLowestSystem>
+    schema:name "earliest period or lowest system" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/endDayOfYear>
+    schema:name "end day of year" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/establishmentMeans>
+    schema:name "establishment means" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/eventDate>
+    schema:name "event date" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/eventID>
+    schema:name "event ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/eventRemarks>
+    schema:name "event remarks" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/eventTime>
+    schema:name "event time" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/family>
+    schema:name "family" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/fieldNotes>
+    schema:name "field notes" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/fieldNumber>
+    schema:name "field number" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/footprintSRS>
+    schema:name "footprint sRS" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/footprintSpatialFit>
+    schema:name "footprint spatial fit" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/footprintWKT>
+    schema:name "footprint wKT" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/formation>
+    schema:name "formation" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/genericName>
+    schema:name "generic name" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/genus>
+    schema:name "genus" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/geodeticDatum>
+    schema:name "geodetic datum" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/geologicalContextID>
+    schema:name "geological context ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/georeferenceProtocol>
+    schema:name "georeference protocol" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/georeferenceRemarks>
+    schema:name "georeference remarks" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/georeferenceSources>
+    schema:name "georeference sources" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/georeferenceVerificationStatus>
+    schema:name "georeference verification status" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/georeferencedBy>
+    schema:name "georeferenced by" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/georeferencedDate>
+    schema:name "georeferenced date" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/group>
+    schema:name "group" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/habitat>
+    schema:name "habitat" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/higherClassification>
+    schema:name "higher classification" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/higherGeography>
+    schema:name "higher geography" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/higherGeographyID>
+    schema:name "higher geography ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/highestBiostratigraphicZone>
+    schema:name "highest biostratigraphic zone" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/identificationID>
+    schema:name "identification ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/identificationQualifier>
+    schema:name "identification qualifier" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/identificationReferences>
+    schema:name "identification references" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/identificationRemarks>
+    schema:name "identification remarks" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/identificationVerificationStatus>
+    schema:name "identification verification status" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/identifiedBy>
+    schema:name "identified by" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/identifiedByID>
+    schema:name "identified by ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/individualCount>
+    schema:name "individual count" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/informationWithheld>
+    schema:name "information withheld" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/infragenericEpithet>
+    schema:name "infrageneric epithet" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/infraspecificEpithet>
+    schema:name "infraspecific epithet" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/institutionCode>
+    schema:name "institution code" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/institutionID>
+    schema:name "institution ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/island>
+    schema:name "island" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/islandGroup>
+    schema:name "island group" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/kingdom>
+    schema:name "kingdom" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/latestAgeOrHighestStage>
+    schema:name "latest age or highest stage" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/latestEonOrHighestEonothem>
+    schema:name "latest eon or highest eonothem" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/latestEpochOrHighestSeries>
+    schema:name "latest epoch or highest series" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/latestEraOrHighestErathem>
+    schema:name "latest era or highest erathem" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/latestPeriodOrHighestSystem>
+    schema:name "latest period or highest system" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/lifeStage>
+    schema:name "life stage" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/lithostratigraphicTerms>
+    schema:name "lithostratigraphic terms" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/locality>
+    schema:name "locality" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/locationAccordingTo>
+    schema:name "location according to" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/locationID>
+    schema:name "location ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/locationRemarks>
+    schema:name "location remarks" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/lowestBiostratigraphicZone>
+    schema:name "lowest biostratigraphic zone" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/materialSampleID>
+    schema:name "material sample ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/maximumDepthInMeters>
+    schema:name "maximum depth in meters" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/maximumDistanceAboveSurfaceInMeters>
+    schema:name "maximum distance above surface in meters" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/maximumElevationInMeters>
+    schema:name "maximum elevation in meters" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/measurementAccuracy>
+    schema:name "measurement accuracy" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/measurementDeterminedBy>
+    schema:name "measurement determined by" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/measurementDeterminedDate>
+    schema:name "measurement determined date" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/measurementID>
+    schema:name "measurement ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/measurementMethod>
+    schema:name "measurement method" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/measurementRemarks>
+    schema:name "measurement remarks" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/measurementType>
+    schema:name "measurement type" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/measurementUnit>
+    schema:name "measurement unit" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/measurementValue>
+    schema:name "measurement value" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/member>
+    schema:name "member" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/minimumDepthInMeters>
+    schema:name "minimum depth in meters" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/minimumDistanceAboveSurfaceInMeters>
+    schema:name "minimum distance above surface in meters" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/minimumElevationInMeters>
+    schema:name "minimum elevation in meters" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/month>
+    schema:name "month" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/municipality>
+    schema:name "municipality" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/nameAccordingTo>
+    schema:name "name according to" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/nameAccordingToID>
+    schema:name "name according to ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/namePublishedIn>
+    schema:name "name published in" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/namePublishedInID>
+    schema:name "name published in ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/namePublishedInYear>
+    schema:name "name published in year" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/nomenclaturalCode>
+    schema:name "nomenclatural code" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/nomenclaturalStatus>
+    schema:name "nomenclatural status" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/occurrenceID>
+    schema:name "occurrence ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/occurrenceRemarks>
+    schema:name "occurrence remarks" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/occurrenceStatus>
+    schema:name "occurrence status" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/order>
+    schema:name "order" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/organismID>
+    schema:name "organism ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/organismName>
+    schema:name "organism name" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/organismQuantity>
+    schema:name "organism quantity" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/organismQuantityType>
+    schema:name "organism quantity type" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/organismRemarks>
+    schema:name "organism remarks" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/organismScope>
+    schema:name "organism scope" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/originalNameUsage>
+    schema:name "original name usage" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/originalNameUsageID>
+    schema:name "original name usage ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/otherCatalogNumbers>
+    schema:name "other catalog numbers" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/ownerInstitutionCode>
+    schema:name "owner institution code" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/parentEventID>
+    schema:name "parent event ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/parentNameUsage>
+    schema:name "parent name usage" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/parentNameUsageID>
+    schema:name "parent name usage ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/pathway>
+    schema:name "pathway" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/phylum>
+    schema:name "phylum" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/pointRadiusSpatialFit>
+    schema:name "point radius spatial fit" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/preparations>
+    schema:name "preparations" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/previousIdentifications>
+    schema:name "previous identifications" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/recordNumber>
+    schema:name "record number" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/recordedBy>
+    schema:name "recorded by" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/recordedByID>
+    schema:name "recorded by ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/relatedResourceID>
+    schema:name "related resource ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/relationshipAccordingTo>
+    schema:name "relationship according to" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/relationshipEstablishedDate>
+    schema:name "relationship established date" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/relationshipOfResource>
+    schema:name "relationship of resource" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/relationshipOfResourceID>
+    schema:name "relationship of resource ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/relationshipRemarks>
+    schema:name "relationship remarks" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/reproductiveCondition>
+    schema:name "reproductive condition" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/resourceID>
+    schema:name "resource ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/resourceRelationshipID>
+    schema:name "resource relationship ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/sampleSizeUnit>
+    schema:name "sample size unit" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/sampleSizeValue>
+    schema:name "sample size value" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/samplingEffort>
+    schema:name "sampling effort" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/samplingProtocol>
+    schema:name "sampling protocol" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/scientificName>
+    schema:name "scientific name" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/scientificNameAuthorship>
+    schema:name "scientific name authorship" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/scientificNameID>
+    schema:name "scientific name ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/sex>
+    schema:name "sex" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/specificEpithet>
+    schema:name "specific epithet" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/startDayOfYear>
+    schema:name "start day of year" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/stateProvince>
+    schema:name "state province" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/subfamily>
+    schema:name "subfamily" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/subgenus>
+    schema:name "subgenus" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/taxonConceptID>
+    schema:name "taxon concept ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/taxonID>
+    schema:name "taxon ID" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/taxonRank>
+    schema:name "taxon rank" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/taxonRemarks>
+    schema:name "taxon remarks" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/taxonomicStatus>
+    schema:name "taxonomic status" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/typeStatus>
+    schema:name "type status" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimCoordinateSystem>
+    schema:name "verbatim coordinate system" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimCoordinates>
+    schema:name "verbatim coordinates" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimDepth>
+    schema:name "verbatim depth" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimElevation>
+    schema:name "verbatim elevation" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimEventDate>
+    schema:name "verbatim event date" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimIdentification>
+    schema:name "verbatim identification" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimLatitude>
+    schema:name "verbatim latitude" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimLocality>
+    schema:name "verbatim locality" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimLongitude>
+    schema:name "verbatim longitude" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimSRS>
+    schema:name "verbatim sRS" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verbatimTaxonRank>
+    schema:name "verbatim taxon rank" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/vernacularName>
+    schema:name "vernacular name" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/verticalDatum>
+    schema:name "vertical datum" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/waterBody>
+    schema:name "water body" ;
+.
+
+<http://rs.tdwg.org/dwc/terms/year>
+    schema:name "year" ;
+.
