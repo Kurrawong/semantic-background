@@ -70,7 +70,7 @@ def main(files: list[Path] = None):
                 # only extract English or non-lang labels
                 if isinstance(o, Literal):
                     if o.language in ["en", None]:
-                        g2.add((s, SDO.name, o))
+                        g2.add((s, SDO.name, Literal(str(o))))
 
         # deduplicate elements that have both definitions & comments
         q = """
