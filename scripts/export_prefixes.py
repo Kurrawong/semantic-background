@@ -3,7 +3,7 @@ from pathlib import Path
 from rdflib import Graph
 import re
 
-parent_dir = Path(__file__).parent.parent.parent
+parent_dir = Path(__file__).parent.parent
 output_dir = parent_dir / "gh-pages/ns"
 output_dir.mkdir(parents=True, exist_ok=True)
 
