@@ -27,11 +27,11 @@ jobs:
 
       - name: run script
         run: |
-          pushd ./sources/scripts
+          pushd ./scripts
           poetry run python export_prefixes.py
           popd
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: ./sources/gh-pages
+          folder: ./gh-pages
