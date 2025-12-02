@@ -1,0 +1,185 @@
+PREFIX : <https://linked.data.gov.au/def/supermodel/roles/>
+PREFIX astatus: <https://def.isotc211.org/common/RoleCode/>
+PREFIX cs: <https://linked.data.gov.au/def/supermodel/roles>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:dataset
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Acting as a managed aggregation of foreground or reference Data."@en ;
+    skos:inScheme cs: ;
+    skos:narrower
+        :foreground-dataset ,
+        :reference-dataset ;
+    skos:prefLabel "Dataset"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:foreground-dataset
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :dataset ;
+    skos:definition "Acting as a collection of foreground Data."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Foreground Dataset"@en ;
+.
+
+:reference-dataset
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :dataset ;
+    skos:definition "Acting as a Dataset that is used as an integration point by one or more Datasets."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Reference Dataset"@en ;
+.
+
+:vocabulary
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :reference-dataset ;
+    skos:definition "Acting as a controlled collection of terms, usually with a hierarchy but sometimes just a list, used as Reference Dataset by Datasets."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Vocabulary"@en ;
+.
+
+:model
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Acting as an abstract information object that organises elements of data and standardises how they relate to one another and to the properties of real-world entities."@en ;
+    skos:inScheme cs: ;
+    skos:narrower
+        :supermodel-definition ,
+        :foreground-model ,
+        :background-model ,
+        :validator ;
+    skos:prefLabel "Model"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:supermodel-definition
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :model ;
+    skos:definition "Acting as the definitional object of the Supermodel and container of all its elements."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Supermodel Definition"@en ;
+.
+
+:foreground-model
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :model ;
+    skos:definition "Acting as a Model for a Dataset of Foreground Data."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Foreground Model"@en ;
+.
+
+:background-model
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :model ;
+    skos:definition "Acting as a Model for a Dataset of Reference Dataset."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Background Model"@en ;
+.
+
+:validator
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :model ;
+    skos:definition "Acting as resource to validate the conformance of Datasets to Profiles."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Validator"@en ;
+.
+
+:data
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Acting as a collection of discrete or continuous values that convey information, describing the quantity, quality, fact, statistics, other basic units of meaning."@en ;
+    skos:inScheme cs: ;
+    skos:narrower
+        :foreground-data ,
+        :reference-data ;
+    skos:prefLabel "Data"@en ;
+    skos:topConceptOf cs: ;
+.
+
+:foreground-data
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :data ;
+    skos:definition "Acting as Data that is the main subject of the supermodel that may or may not also be used as Reference Data."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Foreground Data"@en ;
+.
+
+:reference-data
+    a skos:Concept ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    reg:status astatus:original ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader :data ;
+    skos:definition "Acting as Data that is not the main subject of the supermodel but is linked to by such data."@en ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Reference Data"@en ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    schema:contributor <http://def.isotc211.org/org/tc211> ;
+    schema:dateCreated "2025-11-28"^^xsd:date ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:dateIssued "2025-11-28"^^xsd:date ;
+    schema:dateModified "2025-11-28"^^xsd:date ;
+    skos:historyNote "Created for the original Supermodel document release in late 2025"@en ;
+    schema:publisher <https://kurrawong.ai> ;
+    reg:status astatus:stable ;
+    skos:definition "The roles that major elements of a Supermodel play in that Supermodel's context"@en ;
+    skos:hasTopConcept
+        :supermodel-definition ,
+        :dataset ,
+        :foreground-dataset ,
+        :reference-dataset ,
+        :model ,
+        :foreground-model ,
+        :background-model ,
+        :vocabulary ,
+        :validator ,
+        :data ,
+        :foreground-data ,
+        :reference-data ;
+    skos:prefLabel "Supermodel Element Roles"@en ;
+    skos:usageNote "A supermodel element may play more than one role and may play different roles in different Supermodel contexts"@en ;
+.

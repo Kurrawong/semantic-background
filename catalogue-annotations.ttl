@@ -13,6 +13,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://example.com/shacl-extension> ,
 		<http://id.loc.gov/ontologies/bibframe/> ,
 		<http://id.loc.gov/vocabulary/identifiers> ,
+		<http://id.loc.gov/vocabulary/identifiers> ,
 		<http://purl.obolibrary.org/obo/bfo.owl> ,
 		<http://purl.org/NET/rdflicense> ,
 		<http://purl.org/dc/elements/1.1/> ,
@@ -51,6 +52,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		<http://www.w3.org/ns/sosa/> ,
 		<http://www.w3.org/ns/ssn/ext> ,
 		<http://xmlns.com/foaf/0.1/> ,
+		<https://kurrawong.ai/orgs> ,
 		<https://linked.data.gov.au/def/addr> ,
 		<https://linked.data.gov.au/def/anzsrc-for/2020> ,
 		<https://linked.data.gov.au/def/cn> ,
@@ -59,6 +61,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		<https://linked.data.gov.au/def/lifecycle> ,
 		<https://linked.data.gov.au/def/reg-statuses> ,
 		<https://linked.data.gov.au/def/roads> ,
+		<https://linked.data.gov.au/def/supermodel/roles> ,
 		<https://linked.data.gov.au/def/unggim-themes> ,
 		<https://linked.data.gov.au/def/vocdermods> ,
 		<https://olis.dev/ont> ,
@@ -71,7 +74,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/kurrawong/demo-vocabs" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2023"^^xsd:gYear ;
-    schema:dateModified "2025-03-28"^^xsd:date ;
+    schema:dateModified "2025-12-02"^^xsd:date ;
     schema:description "A testing catalogue for the Prez Manifest Loader tool" ;
     schema:name "Demo Vocabularies" ;
     schema:publisher <https://kurrawong.ai> ;

@@ -10,6 +10,7 @@ FILES_DIR = Path(__file__).parent.parent.resolve() / "ontologies"
 iris = []
 
 for f in sorted(FILES_DIR.glob("*.ttl")):
+    print(f)
     g = Graph()
     g.parse(f)
     iri = g.value(predicate=RDF.type, object=SKOS.ConceptScheme) or g.value(predicate=RDF.type, object=OWL.Ontology)
