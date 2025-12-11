@@ -1,0 +1,78 @@
+PREFIX : <http://www.w3.org/2001/XMLSchema#>
+PREFIX schema: <https://schema.org/>
+
+:ENTITIES schema:name "Entities" .
+:ENTITY schema:name "Entity" .
+:ID schema:name "ID" .
+:IDREF schema:name "IDREF" .
+:IDREFS schema:name "IDREFS" .
+:NCName schema:name "NC Name" .
+:NMTOKEN schema:name "NM Token" .
+:NMTOKENS schema:name "NM Tokens" .
+:NOTATION schema:name "Notation" .
+:Name schema:name "Name" .
+:QName schema:name "Q Name" .
+:anyURI schema:name "any URI" .
+:base64Binary schema:name "base 64 binary" .
+:boolean schema:name "boolean" .
+:byte schema:name "byte" .
+:date schema:name "date" .
+:dateTime schema:name "date time" .
+:dateTimeStamp schema:name "date time stamp" .
+:dayTimeDuration schema:name "day time duration" .
+:decimal schema:name "decimal" .
+:double schema:name "double" .
+:duration schema:name "duration" .
+:float schema:name "float" .
+:gDay schema:name "day" .
+:gMonth schema:name "month" .
+:gMonthDay schema:name "month/day" .
+:gYear schema:name "year" .
+:gYearMonth schema:name "year/month" .
+:hexBinary schema:name "hex binary" .
+:int schema:name "int" .
+:integer schema:name "integer" .
+:language schema:name "language" .
+:long schema:name "long" .
+:negativeInteger schema:name "negative integer" .
+:nonNegativeInteger schema:name "non-negative integer" .
+:nonPositiveInteger schema:name "non-positive integer" .
+:normalizedString schema:name "normalized string" .
+:positiveInteger schema:name "positive integer" .
+:short schema:name "short" .
+:string schema:name "string" .
+:time schema:name "time" .
+:token schema:name "token" .
+:unsignedByte schema:name "unsigned byte" .
+:unsignedInt schema:name "unsigned int" .
+:unsignedLong schema:name "unsigned long" .
+:unsignedShort schema:name "unsigned short" .
+:yearMonthDuration schema:name "year/month duration" .
+
+:ordered schema:name "ordered" .
+:bounded schema:name "bounded" .
+:cardinality schema:name "cardinality" .
+:numeric schema:name "numeric" .
+
+:length schema:name "length" .
+:minLength schema:name "minimum length" .
+:maxLength schema:name "maximum length" .
+:pattern schema:name "pattern" .
+:enumeration schema:name "enumeration" .
+:whiteSpace schema:name "white space" .
+:maxExclusive schema:name "maximum exclusive" .
+:maxInclusive schema:name "maximum inclusive" .
+:minExclusive schema:name "minimum exclusive" .
+:minInclusive schema:name "minimum inclusive" .
+:totalDigits schema:name "total digits" .
+:fractionDigits schema:name "fraction digits" .
+:Assertions schema:name "assertions" .
+:explicitTimezone schema:name "explicit timezone" .
+
+:year schema:name "year" .
+:month schema:name "month" .
+:day schema:name "day" .
+:hour schema:name "hour" .
+:minute schema:name "minute" .
+:second schema:name "second" .
+:timezoneOffset schema:name "timezone offset" .

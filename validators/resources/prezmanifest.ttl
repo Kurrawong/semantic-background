@@ -1,0 +1,176 @@
+PREFIX : <https://prez.dev/manifest-validator/>
+PREFIX ont: <https://prez.dev/manifest-validator>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prez: <https://prez.dev/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:ShapeN01
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property :ShapeP01 ;
+    sh:targetClass prez:Manifest ;
+.
+
+:ShapeN02
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        :ShapeP02 ,
+        :ShapeP03 ,
+        :ShapeP04 ,
+        :ShapeP05 ;
+    sh:targetObjectsOf prof:hasResource ;
+.
+
+:ShapeN03
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            a sh:PropertyShape ;
+            rdfs:isDefinedBy ont: ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path skos:inScheme ;
+        ] ;
+    sh:targetObjectsOf prof:hasRole ;
+.
+
+:ShapeN04
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "ShapeN04: If you supplied a prof:hasArtifact for a prez:Manifest's Resource Descriptors that indicated a Blank Node, the Blank Node must contain exactly one schema:contentLocation and exactly one schema:mainEntity predicates" ;
+    sh:or (
+        [
+            sh:nodeKind sh:Literal ;
+        ]
+        
+        [
+            sh:nodeKind sh:BlankNode ;
+            sh:property 
+                [
+                    sh:maxCount 1 ;
+                    sh:message "ShapeN04 P01: You supplied a prof:hasArtifact value as Blank Node, the Blank Node so it must contain exactly exactly one schema:contentLocation predicate" ;
+                    sh:minCount 1 ;
+                    sh:nodeKind sh:Literal ;
+                    sh:path schema:contentLocation ;
+                ] ,
+                [
+                    sh:maxCount 1 ;
+                    sh:message "ShapeN04 P02: You supplied a prof:hasArtifact value as Blank Node, the Blank Node so it must contain exactly exactly one schema:mainEntity predicate" ;
+                    sh:minCount 1 ;
+                    sh:nodeKind sh:IRI ;
+                    sh:path schema:mainEntity ;
+                ] ;
+        ]
+    ) ;
+    sh:targetObjectsOf prof:hasArtifact ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+    schema:memberOf <https://kurrawong.ai> ;
+    schema:name "Nicholas J. Car" ;
+.
+
+:0.5.0
+    schema:name "0.5.0" ;
+.
+
+:ShapeP01
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "ShapeP01: You must supply at least one value for prof:hasResource for a prez:Manifest and it must be either a Blank Node or an IRI" ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path prof:hasResource ;
+.
+
+:ShapeP02
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "ShapeP02: You must supply at least one value for prof:hasArtifact for a prez:Manifest's Resource Descriptors and each must be a string that can be interpreted as a file path, either relative to the manifest file, or an absolute system path or a URL or a Blank Node with a schema:contentLocation and schema:mainEntity predicates" ;
+    sh:minCount 1 ;
+    sh:or (
+        [
+            sh:nodeKind sh:Literal ;
+        ]
+        
+        [
+            sh:nodeKind sh:BlankNode ;
+        ]
+    ) ;
+    sh:path prof:hasArtifact ;
+.
+
+:ShapeP03
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "ShapeP03: You must supply exactly one value for prof:hasRole for a prez:Manifest's Resource Descriptors with the value selected from the Prez Manifest Resource Roles Vocabulary" ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path prof:hasRole ;
+.
+
+:ShapeP04
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "ShapeP04: If you supply a schema:description for a prez:Manifest's Resource Descriptors, it must be either a plain string or a langString literal" ;
+    sh:or (
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path schema:description ;
+.
+
+:ShapeP05
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "ShapeP05: If you supply a schema:name for a prez:Manifest's Resource Descriptors, it must be either a plain string or a langString literal" ;
+    sh:or (
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path schema:name ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :0.5.0 ;
+    owl:versionInfo """0.5.0: Handles artifacts as objects with predicates, not just literals (file paths)
+
+0.4.0: First public version""" ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2024-11-29"^^xsd:date ;
+    schema:dateModified "2025-01-26"^^xsd:date ;
+    schema:definition "The SHACL Shapes Validator for the Prez Ontology Manifest Model"@en ;
+    schema:name "Prez Manifest Validator" ;
+    schema:publisher <https://kurrawong.ai> ;
+.

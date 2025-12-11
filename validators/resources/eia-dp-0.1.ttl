@@ -1,0 +1,65 @@
+PREFIX : <https://linked.data.gov.au/def/eia-dp/validator/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX ont: <https://linked.data.gov.au/def/eia-dp/validator>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ont:
+    a owl:Ontology ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:dateCreated "2021-04-19"^^xsd:date ;
+    schema:dateModified "2025-05-19"^^xsd:date ;
+    schema:description "The EIA Data Profile SHACL validator" ;
+    schema:hasPart
+        :Requirement-D-boundingbox ,
+        :Requirement-D-keywords-envthes ;
+    schema:name "EIA Data Profile Validator" ;
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:version "0.1" ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+:Requirement-D-boundingbox
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:class geo:Geometry ;
+            sh:maxCount 1 ;
+            sh:message "Each Dataset must indicate exactly one bounding box showing the area of Earth it's data is relevant to" ;
+            sh:minCount 1 ;
+            sh:path geo:hasBoundingBox ;
+        ] ;
+    sh:targetClass schema:Dataset ;
+.
+
+:Requirement-D-keywords-envthes
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:message "At least one keyword for the dataset must be a Concept from the EnvThes vocabulary" ;
+            sh:path skos:inScheme ;
+            sh:qualifiedMinCount 1 ;
+            sh:qualifiedValueShape
+                [
+                    sh:value <http://vocabs.lter-europe.net/EnvThes> ;
+                ] ;
+        ] ;
+    sh:targetObjectsOf schema:keywords ;
+.
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
+.

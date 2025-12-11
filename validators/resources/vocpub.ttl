@@ -1,0 +1,818 @@
+PREFIX : <https://linked.data.gov.au/def/vocpub/validator/>
+PREFIX dash: <http://datashapes.org/dash#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ont: <https://linked.data.gov.au/def/vocpub/validator>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :5.2 ;
+    owl:versionInfo """5.2 Implement Shape 2.1.2+3 using qualified shape pattern as this is supported by pySHACL
+
+5.1 Remove targetNode -> ConceptScheme shape, use schema:, not schema:
+
+5.0 Change IRI to linked.data.gov.au
+
+4.11 Add VocEdit SHACL UI shapes and RDF statements
+
+4.10 move all warning from PropertyShapes to NodeShapes
+
+4.9 Fixed RDF syntax errors
+
+4.8 Fixed Warning/Violation error for PropertyShapes
+
+4.7 Fixed modified date alternate path listing bug
+
+4.6 Fixed schema:historyNote->skos:historyNote bug
+
+4.5 Added suggested predicates of license & copyrightHolder
+
+4.4 Fixed versions across multiple Resources
+
+4.3 Improved validator error messages by using more named Property Shapes
+
+4.2: Included CONSTRUCT-based pre-validation inference in validator. First Git tagged version
+
+4.1: Added Requirements 2.1.10, 2.1.11 & 2.1.12 and example RDF
+
+4.0: Added a SPARQL function to allow for the inferencing of skos:inScheme predicates, skos:broader / skos:narrower and skos:topConceptOf/skos:hasTopConcept pairs of inverse predicates
+
+3.3: Converted validator metadata to schema.org, enabled bibliographic references for Concepts, enabled DCTERMS or schema.org for many ConceptScheme predicates; simplified 2.1.6 from two Requirements to one; included skos:topConceptOf in 2.1.8 for Concepts at the top of the hierarchy; collapsed title & definition requirement pairs to single requirements
+
+3.2: Allowed dcterms:provenance and skos:historyNote; removed max restriction on dcterms:source & prov:wasDerivedFrom
+
+3.1: Changed dcterms:provenance to skos:historyNote
+
+3.0: Removed Requirement-2.3.5 (identifiers) as these are auto-generated in systems like VocPrez; Added Requirement-2.1.10 & 2.1.11 and sub parts to test for qualifiedDerivation and status of a ConceptScheme""" ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2020-06-14"^^xsd:date ;
+    schema:dateModified "2025-07-21"^^xsd:date ;
+    schema:definition "SHACL validator for the VocPub Profile"@en ;
+    schema:name "VocPub Validator"@en ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+.
+
+:Requirement-2.1.10
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement 2.1.10 The status of the vocabulary as a whole, according to the Registry Status standard, SHOULD be given with the predicate reg:status indicating a Concept from the Registry Statuses vocabulary (https://linked.data.gov.au/def/reg-statuses)" ;
+            sh:nodeKind sh:IRI ;
+            sh:path reg:status ;
+        ] ;
+    sh:severity sh:Warning ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+:Requirement-2.1.11
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:message "Requirement 2.1.11 The derivation status of the vocabulary SHOULD be given should be given with the predicate prov:qualifiedDerivation indicating a Blank Node that contains the predicated prov:entity, to indicate the vocabulary derived from and prov:hadRole to indicate the mode of derivation which SHOULD be taken from the Vocabulary Derivation Modes vocabulary (https://linked.data.gov.au/def/vocdermods)" ;
+            sh:nodeKind sh:BlankNodeOrIRI ;
+            sh:path prov:qualifiedDerivation ;
+        ] ;
+    sh:severity sh:Warning ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+:Requirement-2.1.11b
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement 2.1.11 If a vocabulary has a qualified derivation given, it MUST then give a prove:entity predicate within the derivation" ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:entity ;
+        ] ;
+    sh:targetObjectsOf prov:qualifiedDerivation ;
+.
+
+:Requirement-2.1.11c
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement 2.1.11 If a vocabulary has a qualified derivation given, it MUST then give a prove:hadRole predicate within the derivation" ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path prov:hadRole ;
+        ] ;
+    sh:targetObjectsOf prov:qualifiedDerivation ;
+.
+
+:Requirement-2.1.12
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:message "Requirement 2.1.12 High-level theming of a vocabulary SHOULD be given by using the schema:keywords predicate indicating Concepts from another vocabulary. Alternatively, dcat:theme MAY be used. Text literal values for either predicate SHOULD NOT be used" ;
+            sh:nodeKind sh:IRI ;
+            sh:path
+                [
+                    sh:alternativePath (
+                        schema:keywords
+                        dcat:theme
+                    ) ;
+                ] ;
+        ] ;
+    sh:severity sh:Warning ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+:Requirement-2.1.13
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:message "Requirement 2.1.13 Any licence pertaining to the reuse of a vocabulary's content SHOULD be given using the schema:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in text, a literal text field may be indicated" ;
+            sh:nodeKind sh:IRI ;
+            sh:or (
+                
+                [
+                    sh:nodeKind sh:IRI ;
+                ]
+                
+                [
+                    sh:datatype xsd:anyURI ;
+                ]
+                
+                [
+                    sh:datatype xsd:string ;
+                ]
+            ) ;
+            sh:path schema:license ;
+            sh:severity sh:Warning ;
+        ] ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+:Requirement-2.1.14
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:message "Requirement 2.1.14 The copyright holder for the vocabulary SHOULD be given using the schema:copyrightHolder predicate preferentially indicating the IRI of an Agent or a Blank Node instance of an Agent containing details as per Agent requirements. A prov:qualifiedAttribution predicate indicating an Agent with the prov:hadRole predicate indicating the value isorole:rightsHolder may be used instead of schema:copyrightHolder" ;
+            sh:nodeKind sh:IRI ;
+            sh:path schema:copyrightHolder ;
+        ] ;
+    sh:severity sh:Warning ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+<https://linked.data.gov.au/def/vocpub/validator/Requirement-2.1.2+3>
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property :ConceptSchemeType ;
+    sh:targetNode skos:ConceptScheme ;
+.
+
+:Requirement-2.1.4
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.4 Each vocabulary MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
+    sh:property
+        :definition ,
+        :prefLabel ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+:Requirement-2.1.5
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.5 Each vocabulary MUST have exactly one created date and exactly one modified date indicated using the schema:dateCreated and schema:dateModified or dcterms:created and dcterms:modified predicates respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal value" ;
+    sh:property
+        :created ,
+        :modified ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+:Requirement-2.1.6
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.6 Each vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization" ;
+    sh:property
+        :creator ,
+        :publisher ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+:Requirement-2.1.7
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.7 The origins of a Concept Scheme MUST be indicated by at least one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of schema:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
+    sh:or (
+        :provenance-properties-01
+        :provenance-properties-02
+        :provenance-properties-03
+        :provenance-properties-04
+        :provenance-properties-05
+    ) ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+:Requirement-2.1.8
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:class skos:ConceptScheme ;
+            sh:maxCount 1 ;
+            sh:message "Requirement 2.1.8 All Concept instances within a Concept Scheme MUST be contained in a single term hierarchy using skos:hasTopConcept / skos:topConceptOf predicates indicating the broadest Concepts in the vocabulary and then skos:broader and/or skos:narrower predicates for all non-broadest Concepts in a hierarchy that contains no cycles" ;
+            sh:minCount 1 ;
+            sh:path skos:inScheme ;
+        ] ;
+    sh:targetClass skos:Concept ;
+.
+
+:Requirement-2.1.9
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            dash:editor dash:AutoCompleteEditor ;
+            sh:class skos:Concept ;
+            sh:group :Group-concept-relationships ;
+            sh:message "Requirement 2.1.9 Each vocabulary's Concept Scheme MUST link to at least one Concept within the vocabulary with the skos:hasTopConcept predicate" ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:hasTopConcept ;
+        ] ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+:Requirement-2.2.1
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message
+        "Requirement 2.1.4 Each Collection MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ,
+        "Requirement 2.1.4 Each Concept MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
+    sh:property
+        :definition ,
+        :prefLabel ;
+    sh:targetClass
+        skos:Collection ,
+        skos:Concept ;
+.
+
+:Requirement-2.2.2
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.2.2 The origins of a Collection, if different from its containing Concept Scheme, SHOULD be indicated by at least one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of schema:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
+    sh:or (
+        :provenance-properties-01
+        :provenance-properties-02
+        :provenance-properties-03
+        :provenance-properties-04
+        :provenance-properties-05
+    ) ;
+    sh:severity sh:Warning ;
+    sh:targetClass skos:Collection ;
+.
+
+:Requirement-2.2.3
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property 
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement 2.2.3 A Collection exists within a vocabulary SHOULD indicate that it is within the vocabulary by use of the skos:inScheme predicate. If it is defined for the first time in the vocabulary, it should also indicate this with the rdfs:isDefinedBy predicate. This message is about rdfs:isDefinedBy" ;
+            sh:minCount 1 ;
+            sh:path rdfs:isDefinedBy ;
+        ] ,
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement 2.2.3 A Collection exists within a vocabulary SHOULD indicate that it is within the vocabulary by use of the skos:inScheme predicate. If it is defined for the first time in the vocabulary, it should also indicate this with the rdfs:isDefinedBy predicate. This message is about skos:inScheme" ;
+            sh:minCount 1 ;
+            sh:path skos:inScheme ;
+        ] ;
+    sh:severity sh:Warning ;
+    sh:targetClass skos:Collection ;
+.
+
+:Requirement-2.2.4
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:message "Requirement 2.2.4 A Collection MUST indicate at least one Concept instance that is within the collection with use of the skos:member predicate. The Concept need not be defined by the Concept Scheme that defines the Collection" ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:member ;
+        ] ;
+    sh:targetClass skos:Collection ;
+.
+
+:Requirement-2.3.2
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.3.2 Each Concept in a vocabulary MAY indicate the vocabulary that defines it by use of the rdfs:isDefinedBy predicate indicating a Concept Scheme instance. If no such predicate is given, the Concept Scheme in the file that a Concept is provided in is understood to be the defining Concept Scheme" ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 0 ;
+            sh:nodeKind sh:IRI ;
+            sh:path rdfs:isDefinedBy ;
+            sh:severity sh:Warning ;
+        ] ;
+    sh:targetClass skos:Concept ;
+.
+
+:Requirement-2.3.3
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:message "Requirement 2.3.3 Each Concept in a vocabulary MUST indicate that it appears within that vocabulary's hierarchy of Concepts either directly by use of the skos:topConceptOf predicate indicating the vocabulary or indirectly by use of one or more skos:broader / skos:narrower predicates placing the Concept within a chain of other Concepts, the top concept of which uses the skos:topConceptOf predicate to indicate the vocabulary" ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ;
+        ] ;
+    sh:targetClass skos:Concept ;
+.
+
+:Requirement-2.3.4
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.2.2 The origins of a Concept, if different from its containing Concept Scheme, SHOULD be indicated by at least one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of schema:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
+    sh:or (
+        :provenance-properties-01
+        :provenance-properties-02
+        :provenance-properties-03
+        :provenance-properties-04
+        :provenance-properties-05
+    ) ;
+    sh:severity sh:Warning ;
+    sh:targetClass skos:Concept ;
+.
+
+:Requirement-2.4.2
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:datatype xsd:string ;
+            sh:maxCount 1 ;
+            sh:message "Requirement 2.4.2 Each Agent MUST give exactly one name with the schema:name predicate indicating a literal text value" ;
+            sh:minCount 1 ;
+            sh:path schema:name ;
+        ] ;
+    sh:targetClass
+        schema:Organization ,
+        schema:Person ;
+.
+
+:Requirement-2.4.3a
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:datatype xsd:anyURI ;
+            sh:message "Requirement 2.4.3 Each Agent MUST indicate either a schema:url (for organizations) or a schema:email (for people) predicate with a URL or email value. This error message is for Organizations" ;
+            sh:minCount 1 ;
+            sh:path schema:url ;
+        ] ;
+    sh:targetClass schema:Organization ;
+.
+
+:Requirement-2.4.3b
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:datatype xsd:anyURI ;
+            sh:message "Requirement 2.4.3 Each Agent MUST indicate either a schema:url (for organizations) or a schema:email (for people) predicate with a URL or email value. This error message is for Persons" ;
+            sh:minCount 1 ;
+            sh:path schema:email ;
+        ] ;
+    sh:targetClass schema:Person ;
+.
+
+:Shui-Concept
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    dash:defaultViewForRole dash:all ;
+    sh:property 
+        [
+            sh:group :Group-concept-scheme-relationships ;
+            sh:nodeKind sh:IRI ;
+            sh:path rdfs:isDefinedBy ;
+        ] ,
+        [
+            sh:class skos:ConceptScheme ;
+            sh:group :Group-concept-scheme-relationships ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:topConceptOf ;
+        ] ,
+        [
+            sh:class skos:ConceptScheme ;
+            sh:group :Group-concept-scheme-relationships ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:inScheme ;
+        ] ,
+        [
+            sh:class skos:Concept ;
+            sh:group :Group-concept-relationships ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:narrower ;
+        ] ,
+        [
+            sh:class skos:Concept ;
+            sh:group :Group-concept-relationships ;
+            sh:nodeKind sh:IRI ;
+            sh:path skos:broader ;
+        ] ,
+        :definition ,
+        :prefLabel ;
+    sh:targetClass skos:Concept ;
+.
+
+:Shui-ConceptScheme
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    dash:defaultViewForRole dash:all ;
+    sh:property 
+        [
+            dash:editor dash:DetailsEditor ;
+            sh:group :Group-metadata ;
+            sh:node
+                [
+                    sh:property 
+                        [
+                            sh:node
+                                [
+                                    sh:property 
+                                        [
+                                            sh:datatype xsd:anyURI ;
+                                            sh:path schema:email ;
+                                        ] ,
+                                        [
+                                            sh:datatype xsd:string ;
+                                            sh:path schema:name ;
+                                        ] ;
+                                ] ;
+                            sh:path prov:agent ;
+                        ] ,
+                        [
+                            sh:nodeKind sh:IRI ;
+                            sh:path prov:hadRole ;
+                        ] ;
+                ] ;
+            sh:path prov:qualifiedAttribution ;
+        ] ,
+        [
+            sh:group :Group-metadata ;
+            sh:nodeKind sh:Literal ;
+            sh:order 2 ;
+            sh:path schema:version ;
+        ] ,
+        [
+            dash:editor dash:DetailsEditor ;
+            sh:group :Group-metadata ;
+            sh:node
+                [
+                    sh:property 
+                        [
+                            sh:datatype xsd:string ;
+                            sh:path schema:name ;
+                        ] ,
+                        [
+                            sh:datatype xsd:anyURI ;
+                            sh:path schema:url ;
+                        ] ;
+                ] ;
+            sh:path schema:creator ;
+        ] ,
+        [
+            dash:editor dash:DetailsEditor ;
+            sh:group :Group-metadata ;
+            sh:node
+                [
+                    sh:property 
+                        [
+                            sh:datatype xsd:string ;
+                            sh:path schema:name ;
+                        ] ,
+                        [
+                            sh:datatype xsd:anyURI ;
+                            sh:path schema:url ;
+                        ] ;
+                ] ;
+            sh:path schema:publisher ;
+        ] ,
+        [
+            sh:datatype xsd:date ;
+            sh:group :Group-metadata ;
+            sh:order 0 ;
+            sh:path schema:dateCreated ;
+        ] ,
+        [
+            sh:datatype xsd:date ;
+            sh:group :Group-metadata ;
+            sh:order 1 ;
+            sh:path schema:dateModified ;
+        ] ,
+        [
+            sh:group :Group-metadata ;
+            sh:nodeKind sh:IRI ;
+            sh:order 3 ;
+            sh:path owl:versionIRI ;
+        ] ,
+        :definition ,
+        :prefLabel ,
+        :provenance-properties-04 ;
+    sh:targetClass skos:ConceptScheme ;
+.
+
+:ConceptSchemeType
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.2 Each vocabulary MUST be presented as a single Concept Scheme object & Requirement 2.1.3 Each vocabulary MUST be presented in a single RDF file which does not contain information other than that which is directly part of the vocabulary" ;
+    sh:path
+        [
+            sh:inversePath rdf:type ;
+        ] ;
+    sh:qualifiedMaxCount 2 ;
+    sh:qualifiedMinCount 1 ;
+    sh:qualifiedValueShape
+        [
+            sh:hasValue skos:ConceptScheme ;
+            sh:path rdf:type ;
+        ] ;
+.
+
+:created
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.15 - created date - violated" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:dateTime ;
+        ]
+        
+        [
+            sh:datatype xsd:date ;
+        ]
+        
+        [
+            sh:datatype xsd:dateTimeStamp ;
+        ]
+    ) ;
+    sh:path
+        [
+            sh:alternativePath (
+                schema:dateCreated
+                dcterms:created
+            ) ;
+        ] ;
+.
+
+:creator
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.6 Each vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization. This error message is for creator" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path
+        [
+            sh:alternativePath (
+                schema:creator
+                dcterms:creator
+            ) ;
+        ] ;
+.
+
+:modified
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.15 - modified date - violated" ;
+    sh:minCount 1 ;
+    sh:or (
+        [
+            sh:datatype xsd:dateTime ;
+        ]
+        
+        [
+            sh:datatype xsd:date ;
+        ]
+        
+        [
+            sh:datatype xsd:dateTimeStamp ;
+        ]
+    ) ;
+    sh:path
+        [
+            sh:alternativePath (
+                schema:dateModified
+                dcterms:modified
+            ) ;
+        ] ;
+.
+
+:publisher
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.6 Each vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization. This error message is for publisher" ;
+    sh:minCount 1 ;
+    sh:or (
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path
+        [
+            sh:alternativePath (
+                schema:publisher
+                dcterms:publisher
+            ) ;
+        ] ;
+.
+
+<https://linked.data.gov.au/org/agldwg>
+    a schema:Organization ;
+    schema:name "Australian Government Linked Data Working Group" ;
+    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
+    schema:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+    schema:name "Nicholas J. Car" ;
+.
+
+:Group-annotations
+    a sh:PropertyGroup ;
+    rdfs:label "Annotations" ;
+    sh:order 0 ;
+.
+
+:Group-concept-relationships
+    a sh:PropertyGroup ;
+    rdfs:label "Concept relationships" ;
+    sh:order 2 ;
+.
+
+:Group-concept-scheme-relationships
+    a sh:PropertyGroup ;
+    rdfs:label "Concept Scheme relationships" ;
+    sh:order 1 ;
+.
+
+:provenance-properties-01
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path prov:wasDerivedFrom ;
+    sh:severity sh:Warning ;
+.
+
+:provenance-properties-02
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:minCount 1 ;
+    sh:or (
+        [
+            sh:datatype xsd:anyURI ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path schema:citation ;
+    sh:severity sh:Warning ;
+.
+
+:provenance-properties-03
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:minCount 1 ;
+    sh:or (
+        [
+            sh:datatype xsd:anyURI ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path dcterms:source ;
+    sh:severity sh:Warning ;
+.
+
+:provenance-properties-05
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:minCount 1 ;
+    sh:or (
+        [
+            sh:datatype rdf:langString ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path dcterms:provenance ;
+    sh:severity sh:Warning ;
+.
+
+:definition
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    dash:singleLine false ;
+    sh:group :Group-annotations ;
+    sh:message "Requirement 2.1.4, 2.2.1 or 2.3.1 Each vocabulary, Collection or Concept MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
+    sh:minCount 1 ;
+    sh:or (
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path skos:definition ;
+    sh:uniqueLang true ;
+.
+
+:prefLabel
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:group :Group-annotations ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.4, 2.2.1 or 2.3.1 Each vocabulary, Collection or Concept MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
+    sh:minCount 1 ;
+    sh:or (
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path skos:prefLabel ;
+    sh:uniqueLang true ;
+.
+
+:provenance-properties-04
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    dash:singleLine false ;
+    sh:group :Group-annotations ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path skos:historyNote ;
+    sh:severity sh:Warning ;
+.
+
+:Group-metadata
+    a sh:PropertyGroup ;
+    rdfs:label "Metadata" ;
+    sh:order 1 ;
+.

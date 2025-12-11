@@ -1,0 +1,510 @@
+PREFIX : <https://linked.data.gov.au/def/loci-dp/validator/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX ont: <https://linked.data.gov.au/def/loci-dp/validator>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ont:
+    a owl:Ontology ;
+    skos:historyNote """2025-06 2.2: fixed Dataset class targeting & allowed more temporal object types
+
+2025-06: Added a requirement for geometry representation as WKT; removed ID requirements
+
+2025-05: Update for maintenance by DCCEEW
+
+2022: Initial release for the Loc-I project""" ;
+    schema:creator <http://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2021-04-01"^^xsd:date ;
+    schema:dateModified "2025-06-11"^^xsd:date ;
+    schema:description "The Loc-I Data Profile SHACL validator." ;
+    schema:hasPart
+        :Requirement-D-created ,
+        :Requirement-D-creator ,
+        :Requirement-D-desc ,
+        :Requirement-D-exists ,
+        :Requirement-D-history ,
+        :Requirement-D-license ,
+        :Requirement-D-modified ,
+        :Requirement-D-name ,
+        :Requirement-D-publisher ,
+        :Requirement-D-spatial ,
+        :Requirement-F-part-of ,
+        :Requirement-F-spatial ,
+        :Requirement-FC-name ,
+        :Requirement-FC-part-of ,
+        :Requirement-FC-spatial ,
+        :Requirement-FC-temporal ,
+        :Requirement-G-representation ;
+    schema:name "Loc-I Data Profile Validator" ;
+    schema:publisher <https://linked.data.gov.au/org/ga> ;
+    schema:version "2.2" ;
+.
+
+:Requirement-D-temporal
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement-D-temporal: A Dataset MAY indicate the total temporal range that the features within it occupy by using the time:hasTime predicate" ;
+            sh:or (
+                
+                [
+                    sh:class time:TemporalEntity ;
+                ]
+                
+                [
+                    sh:class time:ProperInterval ;
+                ]
+                
+                [
+                    sh:class time:Instant ;
+                ]
+            ) ;
+            sh:path time:hasTime ;
+        ] ;
+    sh:targetClass schema:Dataset ;
+.
+
+<http://orcid.org/0000-0002-8742-7730>
+    schema:affiliation <https://kurrawong.ai> ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:name "Nicholas J Car" ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+:Requirement-D-created
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement-D-created: Each Dataset MUST have exactly one created date indicated using the schema:dateCreated predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
+            sh:minCount 1 ;
+            sh:or (
+                
+                [
+                    sh:datatype xsd:dateTime ;
+                ]
+                
+                [
+                    sh:datatype xsd:date ;
+                ]
+                
+                [
+                    sh:datatype xsd:dateTimeStamp ;
+                ]
+                
+                [
+                    sh:datatype xsd:gYear ;
+                ]
+            ) ;
+            sh:path schema:dateCreated ;
+        ] ;
+    sh:targetClass schema:Dataset ;
+.
+
+:Requirement-D-creator
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:description "Requirement-D-creator: Each Dataset MUST indicate one or more agents with the schema:creator predicate, typed as an schema:Person or schema:Organization" ;
+            sh:minCount 1 ;
+            sh:or (
+                
+                [
+                    sh:class schema:Organization ;
+                ]
+                
+                [
+                    sh:class schema:Person ;
+                ]
+            ) ;
+            sh:path schema:creator ;
+        ] ;
+    sh:targetClass schema:Dataset ;
+.
+
+:Requirement-D-desc
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement-D-desc: Each Dataset MUST have one and description which is to be a text literal, indicated using the schema:description predicate" ;
+            sh:minCount 1 ;
+            sh:or (
+                
+                [
+                    sh:datatype rdf:langString ;
+                ]
+                
+                [
+                    sh:datatype xsd:string ;
+                ]
+            ) ;
+            sh:path schema:description ;
+        ] ;
+    sh:targetClass schema:Dataset ;
+.
+
+:Requirement-D-exists
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:message "Requirement-D-exists: Each graph MUST contain at least one Dataset instance" ;
+            sh:minCount 1 ;
+            sh:path
+                [
+                    sh:inversePath rdf:type ;
+                ] ;
+        ] ;
+    sh:targetNode schema:Dataset ;
+.
+
+:Requirement-D-history
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement-D-history: Each Dataset SHOULD indicate how it was produced or its origin by use of one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom" ;
+    sh:or (
+        :provenance-properties-01
+        :provenance-properties-02
+        :provenance-properties-04
+    ) ;
+    sh:severity sh:Warning ;
+    sh:targetClass schema:Dataset ;
+.
+
+:Requirement-D-license
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement-D-license: Each Dataset MUST indicate a license that defines conditions for its use with the schema:license predicate with the value indicated coming from either the RDF Licenses dataset or being locally-defined odrl:Policy instance" ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path schema:license ;
+        ] ;
+    sh:targetClass schema:Dataset ;
+.
+
+:Requirement-D-modified
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement-D-modified: Each Dataset MUST have exactly one created date indicated using the schema:dateModified predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
+            sh:minCount 1 ;
+            sh:or (
+                
+                [
+                    sh:datatype xsd:dateTime ;
+                ]
+                
+                [
+                    sh:datatype xsd:date ;
+                ]
+                
+                [
+                    sh:datatype xsd:dateTimeStamp ;
+                ]
+            ) ;
+            sh:path schema:dateModified ;
+        ] ;
+    sh:targetClass schema:Dataset ;
+.
+
+:Requirement-D-name
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement-D-name: Each Dataset MUST have one and only one name which is to be a text literal, indicated using the schema:name predicate" ;
+            sh:minCount 1 ;
+            sh:or (
+                
+                [
+                    sh:datatype rdf:langString ;
+                ]
+                
+                [
+                    sh:datatype xsd:string ;
+                ]
+            ) ;
+            sh:path schema:name ;
+        ] ;
+    sh:targetClass schema:Dataset ;
+.
+
+:Requirement-D-publisher
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:description "Requirement-D-publisher: Each Dataset MUST indicate one or more agents with the schema:publisher predicate, typed as an schema:Person or schema:Organization" ;
+            sh:minCount 1 ;
+            sh:or (
+                
+                [
+                    sh:class schema:Organization ;
+                ]
+                
+                [
+                    sh:class schema:Person ;
+                ]
+            ) ;
+            sh:path schema:publisher ;
+        ] ;
+    sh:targetClass schema:Dataset ;
+.
+
+:Requirement-D-spatial
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:class geo:Geometry ;
+            sh:maxCount 1 ;
+            sh:message "Requirement-D-spatial: A Dataset MAY indicate the total region that the features within it occupy by using the geo:hasGeometry predicate or a sub property of it such as geo:hasBoundingBox and if it does, it must do so with a geo:Geometry objects" ;
+            sh:path (
+                geo:hasGeometry
+                geo:hasBoundingBox
+                geo:hasCentroid
+            ) ;
+        ] ;
+    sh:targetClass geo:FeatureCollection ;
+.
+
+:Requirement-F-part-of
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement-F-part-of: Each Feature MUST indicate that it is part of exactly one geo:FeatureCollection instance with use of the schema:isPartOf predicate or Feature Collection must indicate the Feature Collection is a part of it with rdfs:member" ;
+    sh:or (
+        
+        [
+            sh:property
+                [
+                    sh:class geo:FeatureCollection ;
+                    sh:maxCount 1 ;
+                    sh:minCount 1 ;
+                    sh:path schema:isPartOf ;
+                ] ;
+        ]
+        
+        [
+            sh:property
+                [
+                    sh:class geo:FeatureCollection ;
+                    sh:maxCount 1 ;
+                    sh:minCount 1 ;
+                    sh:path
+                        [
+                            sh:inversePath rdfs:member ;
+                        ] ;
+                ] ;
+        ]
+    ) ;
+    sh:targetClass geo:Feature ;
+.
+
+:Requirement-F-spatial
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:message "Requirement-F-spatial: If a Feature indicates a geometry, MUST do so using the geo:hasGeometry predicate or sub properties of it" ;
+            sh:minCount 1 ;
+            sh:path
+                [
+                    sh:alternativePath (
+                        geo:hasGeometry
+                        geo:hasDefaultGeometry
+                        geo:hasBoundingBox
+                        geo:hasCentroid
+                    ) ;
+                ] ;
+        ] ;
+    sh:targetClass geo:Feature ;
+.
+
+:Requirement-FC-name
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement-FC-name: Each Feature Collection MUST have one and only one name which is to be a text literal, indicated using the schema:name predicate" ;
+            sh:minCount 1 ;
+            sh:or (
+                
+                [
+                    sh:datatype rdf:langString ;
+                ]
+                
+                [
+                    sh:datatype xsd:string ;
+                ]
+            ) ;
+            sh:path schema:name ;
+        ] ;
+    sh:targetClass geo:FeatureCollection ;
+.
+
+:Requirement-FC-part-of
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement-FC-part-of: Each Feature Collection MUST indicate that it is part of exactly one schema:Dataset instance with use of the schema:isPartOf predicate or the Dataset must indicate the Feature Collection is a part of it with rdfs:member" ;
+    sh:or (
+        
+        [
+            sh:property
+                [
+                    sh:class schema:Dataset ;
+                    sh:maxCount 1 ;
+                    sh:minCount 1 ;
+                    sh:path schema:isPartOf ;
+                ] ;
+        ]
+        
+        [
+            sh:property
+                [
+                    sh:class schema:Dataset ;
+                    sh:maxCount 1 ;
+                    sh:minCount 1 ;
+                    sh:path
+                        [
+                            sh:inversePath rdfs:member ;
+                        ] ;
+                ] ;
+        ]
+    ) ;
+    sh:targetClass geo:FeatureCollection ;
+.
+
+:Requirement-FC-spatial
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:class geo:Geometry ;
+            sh:maxCount 1 ;
+            sh:message "Requirement-FC-spatial: A Feature Collection MAY indicate the total region that the features within it occupy by using the geo:hasGeometry predicate or a sub property of it such as geo:hasBoundingBox and if it does, it must do so with a geo:Geometry objects" ;
+            sh:path (
+                geo:hasGeometry
+                geo:hasBoundingBox
+                geo:hasCentroid
+            ) ;
+        ] ;
+    sh:targetClass geo:FeatureCollection ;
+.
+
+:Requirement-FC-temporal
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement-FC-temporal: A Feature Collection MAY indicate the total temporal range that the features within it occupy by using the time:hasTime predicate" ;
+            sh:or (
+                
+                [
+                    sh:class time:TemporalEntity ;
+                ]
+                
+                [
+                    sh:class time:ProperInterval ;
+                ]
+                
+                [
+                    sh:class time:Instant ;
+                ]
+            ) ;
+            sh:path time:hasTime ;
+        ] ;
+    sh:targetClass geo:FeatureCollection ;
+.
+
+:Requirement-G-representation
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        [
+            a sh:PropertyShape ;
+            rdfs:isDefinedBy ont: ;
+            sh:datatype geo:wktLiteral ;
+            sh:maxCount 1 ;
+            sh:message "Requirement-G-representation: Geometry instances MUST indicate their spatial extent with exactly one geo:asWKT predicate with a geo:wktLiteral datatype" ;
+            sh:minCount 1 ;
+            sh:path geo:asWKT ;
+        ] ;
+    sh:targetObjectsOf
+        geo:hasBoundingBox ,
+        geo:hasCentroid ,
+        geo:hasDefaultGeometry ,
+        geo:hasGeometry ;
+.
+
+:provenance-properties-01
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path prov:wasDerivedFrom ;
+.
+
+:provenance-properties-02
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:anyURI ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path schema:citation ;
+.
+
+:provenance-properties-04
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:minCount 1 ;
+    sh:or (
+        [
+            sh:datatype rdf:langString ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path skos:historyNote ;
+.
+
+<https://linked.data.gov.au/org/ga>
+    a schema:Organization ;
+    schema:name "Geoscience Australia" ;
+    schema:url "https://www.ga.gov.au"^^xsd:anyURI ;
+.

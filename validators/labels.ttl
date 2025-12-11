@@ -1,0 +1,840 @@
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+dcterms:created
+    schema:description "Date of creation of the resource."@en ;
+    schema:name "Date Created"@en ;
+.
+
+dcterms:creator
+    schema:description "An entity responsible for making the resource."@en ;
+    schema:name "Creator"@en ;
+.
+
+dcterms:hasPart
+    schema:description "A related resource that is included either physically or logically in the described resource."@en ;
+    schema:name "Has Part"@en ;
+.
+
+dcterms:license
+    schema:description "A legal document giving official permission to do something with the resource."@en ;
+    schema:name "License"@en ;
+.
+
+dcterms:modified
+    schema:description "Date on which the resource was changed."@en ;
+    schema:name "Date Modified"@en ;
+.
+
+dcterms:provenance
+    schema:description "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
+    schema:name "Provenance"@en ;
+.
+
+dcterms:publisher
+    schema:description "An entity responsible for making the resource available."@en ;
+    schema:name "Publisher"@en ;
+.
+
+dcterms:rights
+    schema:description "Information about rights held in and over the resource."@en ;
+    schema:name "Rights"@en ;
+.
+
+dcterms:source
+    schema:description "A related resource from which the described resource is derived."@en ;
+    schema:name "Source"@en ;
+.
+
+reg:status
+    schema:description "The status of this register entry"@en ;
+    schema:name "status"@en ;
+.
+
+geo:Feature
+    schema:description "A discrete spatial phenomenon in a universe of discourse" ;
+    schema:name "Feature" ;
+.
+
+geo:FeatureCollection
+    schema:description "The class Feature Collection represents any collection of individual Features."@en ;
+    schema:name "Feature Collection"@en ;
+.
+
+geo:Geometry
+    schema:description "A coherent set of direct positions in Euclidian space. A direct position holds the coordinates for a position within a Coordinate Reference System (CRS)."@en ;
+    schema:name "Geometry"@en ;
+.
+
+geo:GeometryCollection
+    schema:description "The class Geometry Collection represents any collection of individual Geometries."@en ;
+    schema:name "Geometry Collection"@en ;
+.
+
+geo:SpatialObjectCollection
+    schema:description "The class Spatial Object Collection represents any collection of individual Spatial Objects. It is superclass of Feature Collection and Geometry Collection."@en ;
+    schema:name "Spatial Object Collection"@en ;
+.
+
+geo:asDGGS
+    schema:description "The Discrete Global Grid System (DGGS) serialization of a Geometry"@en ;
+    schema:name "as DGGS"@en ;
+.
+
+geo:asGML
+    schema:description "The GML serialization of a Geometry"@en ;
+    schema:name "as GML"@en ;
+.
+
+geo:asGeoJSON
+    schema:description "The GeoJSON serialization of a Geometry"@en ;
+    schema:name "as GeoJSON"@en ;
+    schema:url "https://tools.ietf.org/html/rfc7946"^^xsd:anyURI ;
+.
+
+geo:asKML
+    schema:description "The KML serialization of a Geometry"@en ;
+    schema:name "as KML"@en ;
+    schema:url "https://www.ogc.org/standards/kml"^^xsd:anyURI ;
+.
+
+geo:asWKT
+    schema:description "The WKT serialization of a Geometry"@en ;
+    schema:name "as WKT"@en ;
+.
+
+geo:coordinateDimension
+    schema:description "The number of measurements or axes needed to describe the position of this Geometry in a coordinate system."@en ;
+    schema:name "coordinate dimension"@en ;
+.
+
+geo:defaultGeometry
+    schema:description "The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry."@en ;
+    schema:name "default geometry"@en ;
+.
+
+geo:dggsLiteral
+    schema:description "A textual serialization of a Discrete Global Grid (DGGS) Geometry object."@en ;
+    schema:name "DGGS Literal"@en ;
+    schema:url "http://www.opengis.net/doc/AS/dggs/2.0"^^xsd:anyURI ;
+.
+
+geo:dimension
+    schema:description "The topological dimension of this geometric object, which must be less than or equal to the coordinate dimension. In non-homogeneous collections, this will return the largest topological dimension of the contained objects."@en ;
+    schema:name "dimension"@en ;
+.
+
+geo:geoJSONLiteral
+    schema:description "A GeoJSON serialization of a Geometry object."@en ;
+    schema:name "GeoJSON Literal"@en ;
+    schema:url "https://tools.ietf.org/html/rfc7946"^^xsd:anyURI ;
+.
+
+geo:gmlLiteral
+    schema:description "A GML serialization of a Geometry object."@en ;
+    schema:name "GML Literal"@en ;
+    schema:url "https://portal.ogc.org/files/?artifact_id=20509"^^xsd:anyURI ;
+.
+
+geo:hasBoundingBox
+    schema:description "The minimum or smallest bounding or enclosing box of a given Feature."@en ;
+    schema:name "has bounding box"@en ;
+.
+
+geo:hasCentroid
+    schema:description "The arithmetic mean position of all the Geometry points of a given Feature."@en ;
+    schema:name "has centroid"@en ;
+.
+
+geo:hasDefaultGeometry
+    schema:description "The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry."@en ;
+    schema:name "has default geometry"@en ;
+.
+
+geo:hasGeometry
+    schema:description "A spatial representation for a given Feature."@en ;
+    schema:name "has geometry"@en ;
+.
+
+geo:hasMetricSpatialAccuracy
+    schema:description "The positional accuracy of the coordinates of a Geometry in meters."@en ;
+    schema:name "has spatial accuracy in meters"@en ;
+.
+
+geo:hasMetricSpatialResolution
+    schema:description "The spatial resolution of a Geometry in meters."@en ;
+    schema:name "has spatial resolution in meters"@en ;
+.
+
+geo:hasSerialization
+    schema:description "Connects a Geometry object with its text-based serialization."@en ;
+    schema:name "has serialization"@en ;
+.
+
+geo:hasSpatialAccuracy
+    schema:description "The positional accuracy of the coordinates of a Geometry."@en ;
+    schema:name "has spatial accuracy"@en ;
+.
+
+geo:hasSpatialResolution
+    schema:description "The spatial resolution of a Geometry."@en ;
+    schema:name "has spatial resolution"@en ;
+.
+
+geo:isEmpty
+    schema:description "(true) if this geometric object is the empty Geometry. If true, then this geometric object represents the empty point set for the coordinate space."@en ;
+    schema:name "is empty"@en ;
+.
+
+geo:isSimple
+    schema:description "(true) if this geometric object has no anomalous geometric points, such as self intersection or self tangency."@en ;
+    schema:name "is simple"@en ;
+    schema:url "https://portal.ogc.org/files/?artifact_id=25355"^^xsd:anyURI ;
+.
+
+geo:kmlLiteral
+    schema:description "A KML serialization of a Geometry object."@en ;
+    schema:name "KML Literal"@en ;
+    schema:url "https://www.ogc.org/standards/kml/"^^xsd:anyURI ;
+.
+
+geo:spatialDimension
+    schema:description "The number of measurements or axes needed to describe the spatial position of this Geometry in a coordinate system."@en ;
+    schema:name "spatial dimension"@en ;
+.
+
+geo:wktLiteral
+    schema:description "A Well-known Text serialization of a Geometry object."@en ;
+    schema:name "Well-known Text Literal"@en ;
+    schema:url "https://portal.ogc.org/files/?artifact_id=25355"^^xsd:anyURI ;
+.
+
+rdf:first
+    schema:description "The first item in the subject RDF list." ;
+    schema:name "first" ;
+.
+
+rdf:langString
+    schema:description "The datatype of language-tagged string values" ;
+    schema:name "Lang String" ;
+    schema:url "http://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal"^^xsd:anyURI ;
+.
+
+()
+    schema:description "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it." ;
+    schema:name "nil" ;
+.
+
+rdf:rest
+    schema:description "The rest of the subject RDF list after the first item." ;
+    schema:name "rest" ;
+.
+
+rdfs:comment
+    schema:description "A description of the subject resource." ;
+    schema:name "comment" ;
+.
+
+rdfs:isDefinedBy
+    schema:description "The defininition of the subject resource." ;
+    schema:name "is defined by" ;
+.
+
+rdfs:member
+    schema:description "A member of the subject resource." ;
+    schema:name "member" ;
+.
+
+owl:AnnotationProperty
+    schema:description "The class of annotation properties." ;
+    schema:name "AnnotationProperty" ;
+.
+
+owl:Axiom
+    schema:description "The class of annotated axioms for which the RDF serialization consists of an annotated subject, predicate and object." ;
+    schema:name "Axiom" ;
+.
+
+owl:Class
+    schema:description "The class of OWL classes." ;
+    schema:name "Class" ;
+.
+
+owl:DatatypeProperty
+    schema:description "The class of data properties." ;
+    schema:name "DatatypeProperty" ;
+.
+
+owl:FunctionalProperty
+    schema:description "The class of functional properties." ;
+    schema:name "FunctionalProperty" ;
+.
+
+owl:NamedIndividual
+    schema:description "The class of named individuals." ;
+    schema:name "NamedIndividual" ;
+.
+
+owl:ObjectProperty
+    schema:description "The class of object properties." ;
+    schema:name "ObjectProperty" ;
+.
+
+owl:Ontology
+    schema:description "The class of ontologies." ;
+    schema:name "Ontology" ;
+.
+
+owl:versionIRI
+    schema:description "The property that identifies the version IRI of an ontology." ;
+    schema:name "versionIRI" ;
+.
+
+owl:versionInfo
+    schema:description "The annotation property that provides version information for an ontology or another OWL construct." ;
+    schema:name "versionInfo" ;
+.
+
+skos:Collection
+    schema:description "A meaningful collection of concepts"@en ;
+    schema:name "Collection"@en ;
+.
+
+skos:Concept
+    schema:description "An idea or notion; a unit of thought" ;
+    schema:name "Concept" ;
+.
+
+skos:ConceptScheme
+    schema:description "A set of concepts, optionally including statements about semantic relationships between those concepts"@en ;
+    schema:name "Concept Scheme"@en ;
+.
+
+skos:broader
+    schema:description "Relates a concept to a concept that is more general in meaning"@en ;
+    schema:name "has broader"@en ;
+.
+
+skos:definition
+    schema:description "A statement or formal explanation of the meaning of a concept"@en ;
+    schema:name "definition"@en ;
+.
+
+skos:example
+    schema:description "An example of the use of a concept"@en ;
+    schema:name "example"@en ;
+.
+
+skos:hasTopConcept
+    schema:description "Relates, by convention, a concept scheme to a concept which is topmost in the broader/narrower concept hierarchies for that scheme, providing an entry point to these hierarchies"@en ;
+    schema:name "has top concept"@en ;
+.
+
+skos:historyNote
+    schema:description "A note about the past state/use/meaning of a concept"@en ;
+    schema:name "history note"@en ;
+.
+
+skos:inScheme
+    schema:description "Relates a resource (for example a concept) to a concept scheme in which it is included"@en ;
+    schema:name "is in scheme"@en ;
+.
+
+skos:member
+    schema:description "Relates a collection to one of its members"@en ;
+    schema:name "has member"@en ;
+.
+
+skos:narrower
+    schema:description "Relates a concept to a concept that is more specific in meaning"@en ;
+    schema:name "has narrower"@en ;
+.
+
+skos:prefLabel
+    schema:description "The preferred lexical label for a resource, in a given language"@en ;
+    schema:name "preferred label"@en ;
+.
+
+skos:topConceptOf
+    schema:description "Relates a concept to the concept scheme that it is a top level concept of"@en ;
+    schema:name "is top concept in scheme"@en ;
+.
+
+time:Instant
+    schema:description "A temporal entity with zero extent or duration"@en ;
+    schema:name "Time instant"@en ;
+.
+
+time:ProperInterval
+    schema:description "A temporal entity with non-zero extent or duration, i.e. for which the value of the beginning and end are different"@en ;
+    schema:name "Proper interval"@en ;
+.
+
+time:TemporalEntity
+    schema:description "A temporal interval or instant."@en ;
+    schema:name "Temporal entity"@en ;
+.
+
+time:hasTime
+    schema:description "Supports the association of a temporal entity (instant or interval) to any thing" ;
+    schema:name "has time"@en ;
+.
+
+dcat:Catalog
+    schema:description "A curated collection of metadata about resources (e.g., datasets and data services in the context of a data catalog)."@en ;
+    schema:name "Catalog"@en ;
+.
+
+dcat:theme
+    schema:description "A main category of the resource. A resource can have multiple themes."@en ;
+    schema:name "theme"@en ;
+.
+
+prof:hasArtifact
+    schema:description "The URL of a downloadable file with particulars such as its format and role indicated by the Resource Descriptor"@en ;
+    schema:name "has artifact" ;
+.
+
+prof:hasResource
+    schema:description "A resource which describes the nature of an artifact and the role it plays in relation to the Profile"@en ;
+    schema:name "has resource"@en ;
+.
+
+prof:hasRole
+    schema:description "The function of an artifact described by a Resource Descriptor, such as specification, guidance etc."@en ;
+    schema:name "has role" ;
+.
+
+prov:agent
+    schema:name "agent" ;
+.
+
+prov:entity
+    schema:name "entity" ;
+.
+
+prov:hadRole
+    schema:description "The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ]." ;
+    schema:name "had role" ;
+.
+
+prov:qualifiedAttribution
+    schema:description "If this Entity prov:wasAttributedTo Agent :ag, then it can qualify how it was influenced using prov:qualifiedAttribution [ a prov:Attribution;  prov:agent :ag; :foo :bar ]."@en ;
+    schema:name "qualified attribution" ;
+.
+
+prov:qualifiedDerivation
+    schema:description "If this Entity prov:wasDerivedFrom Entity :e, then it can qualify how it was derived using prov:qualifiedDerivation [ a prov:Derivation;  prov:entity :e; :foo :bar ]."@en ;
+    schema:name "qualified derivation" ;
+.
+
+prov:wasDerivedFrom
+    schema:description "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
+    schema:name "was derived from" ;
+.
+
+sh:BlankNode
+    schema:description "The node kind of all blank nodes."@en ;
+    schema:name "Blank node"@en ;
+.
+
+sh:BlankNodeOrIRI
+    schema:description "The node kind of all blank nodes or IRIs."@en ;
+    schema:name "Blank node or IRI"@en ;
+.
+
+sh:IRI
+    schema:description "The node kind of all IRIs."@en ;
+    schema:name "IRI"@en ;
+.
+
+sh:Literal
+    schema:description "The node kind of all literals."@en ;
+    schema:name "Literal"@en ;
+.
+
+sh:NodeShape
+    schema:description "A node shape is a shape that specifies constraint that need to be met with respect to focus nodes."@en ;
+    schema:name "Node shape"@en ;
+.
+
+sh:PropertyGroup
+    schema:description "Instances of this class represent groups of property shapes that belong together."@en ;
+    schema:name "Property group"@en ;
+.
+
+sh:PropertyShape
+    schema:description "A property shape is a shape that specifies constraints on the values of a focus node for a given property or path."@en ;
+    schema:name "Property shape"@en ;
+.
+
+sh:Warning
+    schema:description "The severity for a warning validation result."@en ;
+    schema:name "Warning"@en ;
+.
+
+sh:alternativePath
+    schema:description "The (single) value of this property must be a list of path elements, representing the elements of alternative paths."@en ;
+    schema:name "alternative path"@en ;
+.
+
+sh:class
+    schema:description "The type that all value nodes must have."@en ;
+    schema:name "class"@en ;
+.
+
+sh:datatype
+    schema:description "Specifies an RDF datatype that all value nodes must have."@en ;
+    schema:name "datatype"@en ;
+.
+
+sh:deactivated
+    schema:description "If set to true then all nodes conform to this."@en ;
+    schema:name "deactivated"@en ;
+.
+
+sh:description
+    schema:description "Human-readable descriptions for the property in the context of the surrounding shape."@en ;
+    schema:name "description"@en ;
+.
+
+sh:flags
+    schema:description "An optional flag to be used with regular expression pattern matching."@en ;
+    schema:name "flags"@en ;
+.
+
+sh:group
+    schema:description "Can be used to link to a property group to indicate that a property shape belongs to a group of related property shapes."@en ;
+    schema:name "group"@en ;
+.
+
+sh:hasValue
+    schema:description "Specifies a value that must be among the value nodes."@en ;
+    schema:name "has value"@en ;
+.
+
+sh:inversePath
+    schema:description "The (single) value of this property represents an inverse path (object to subject)."@en ;
+    schema:name "inverse path"@en ;
+.
+
+sh:maxCount
+    schema:description "Specifies the maximum number of values in the set of value nodes."@en ;
+    schema:name "max count"@en ;
+.
+
+sh:message
+    schema:description "A human-readable message (possibly with placeholders for variables) explaining the cause of the result."@en ;
+    schema:name "message"@en ;
+.
+
+sh:minCount
+    schema:description "Specifies the minimum number of values in the set of value nodes."@en ;
+    schema:name "min count"@en ;
+.
+
+sh:node
+    schema:description "Specifies the node shape that all value nodes must conform to."@en ;
+    schema:name "node"@en ;
+.
+
+sh:nodeKind
+    schema:description "Specifies the node kind (e.g. IRI or literal) each value node."@en ;
+    schema:name "node kind"@en ;
+.
+
+sh:or
+    schema:description "Specifies a list of shapes so that the value nodes must conform to at least one of the shapes."@en ;
+    schema:name "or"@en ;
+.
+
+sh:order
+    schema:description "Specifies the relative order of this compared to its siblings. For example use 0 for the first, 1 for the second."@en ;
+    schema:name "order"@en ;
+.
+
+sh:path
+    schema:description "Specifies the property path of a property shape."@en ;
+    schema:name "path"@en ;
+.
+
+sh:pattern
+    schema:description "Specifies a regular expression pattern that the string representations of the value nodes must match."@en ;
+    schema:name "pattern"@en ;
+.
+
+sh:property
+    schema:description "Links a shape to its property shapes."@en ;
+    schema:name "property"@en ;
+.
+
+sh:qualifiedMaxCount
+    schema:description "The maximum number of value nodes that can conform to the shape."@en ;
+    schema:name "qualified max count"@en ;
+.
+
+sh:qualifiedMinCount
+    schema:description "The minimum number of value nodes that must conform to the shape."@en ;
+    schema:name "qualified min count"@en ;
+.
+
+sh:qualifiedValueShape
+    schema:description "The shape that a specified number of values must conform to."@en ;
+    schema:name "qualified value shape"@en ;
+.
+
+sh:select
+    schema:description "The SPARQL SELECT query to execute."@en ;
+    schema:name "select"@en ;
+.
+
+sh:severity
+    schema:description "Defines the severity that validation results produced by a shape must have. Defaults to sh:Violation."@en ;
+    schema:name "severity"@en ;
+.
+
+sh:sparql
+    schema:description "Links a shape with SPARQL constraints."@en ;
+    schema:name "constraint (in SPARQL)"@en ;
+.
+
+sh:targetClass
+    schema:description "Links a shape to a class, indicating that all instances of the class must conform to the shape."@en ;
+    schema:name "target class"@en ;
+.
+
+sh:targetNode
+    schema:description "Links a shape to individual nodes, indicating that these nodes must conform to the shape."@en ;
+    schema:name "target node"@en ;
+.
+
+sh:targetObjectsOf
+    schema:description "Links a shape to a property, indicating that all all objects of triples that have the given property as their predicate must conform to the shape."@en ;
+    schema:name "target objects of"@en ;
+.
+
+sh:targetSubjectsOf
+    schema:description "Links a shape to a property, indicating that all subjects of triples that have the given property as their predicate must conform to the shape."@en ;
+    schema:name "target subjects of"@en ;
+.
+
+sh:uniqueLang
+    schema:description "Specifies whether all node values must have a unique (or no) language tag."@en ;
+    schema:name "unique languages"@en ;
+.
+
+sh:value
+    schema:description "An RDF node that has caused the result."@en ;
+    schema:name "value"@en ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/stable>
+    schema:description "An entry that is seen as having a reasonable measure of stability, may be used to mark the full adoption of a previously 'experimental' entry."@en ;
+    schema:name "stable"@en ;
+.
+
+<https://prez.dev/Manifest>
+    schema:name "Manifest" ;
+.
+
+<https://prez.dev/ManifestResourceRoles/CatalogueData>
+    schema:description "Data for the container, usually a Catalogue, including the identity of it and each item fo content" ;
+    schema:name "Catalogue Data" ;
+.
+
+<https://prez.dev/ManifestResourceRoles/CompleteCatalogueAndResourceLabels>
+    schema:description "All the labels - possibly including names, descriptions & seeAlso links - for the Catalogue and Resource objects" ;
+    schema:name "Complete Catalogue and Resource Labels" ;
+.
+
+<https://prez.dev/ManifestResourceRoles/ResourceData>
+    schema:description "Data for the content of the container" ;
+    schema:name "Resource Data" ;
+.
+
+schema:CreativeWork
+    schema:description "The most generic kind of creative work, including books, movies, photographs, software programs, etc" ;
+    schema:name "Creative work" ;
+.
+
+schema:Dataset
+    schema:description "A body of structured information describing some topic(s) of interest" ;
+    schema:name "Dataset" ;
+.
+
+schema:Organization
+    schema:description "An organization such as a school, NGO, corporation, club, etc" ;
+    schema:name "Organization" ;
+.
+
+schema:Person
+    schema:description "A person (alive, dead, undead, or fictional)" ;
+    schema:name "Person" ;
+.
+
+schema:affiliation
+    schema:description "An organization that this person is affiliated with. For example, a school/university, a club, or a team" ;
+    schema:name "affiliation" ;
+.
+
+schema:citation
+    schema:description "A citation or reference to another creative work, such as another publication, web page, scholarly article, etc" ;
+    schema:name "citation" ;
+.
+
+schema:codeRepository
+    schema:description "Link to the repository where the un-compiled, human readable code and related code is located (SVN, GitHub, CodePlex)" ;
+    schema:name "code repository" ;
+.
+
+schema:contentLocation
+    schema:description "The location depicted or described in the content. For example, the location in a photograph or painting" ;
+    schema:name "content location" ;
+.
+
+schema:contributor
+    schema:description "A secondary contributor to the CreativeWork or Event" ;
+    schema:name "contributor" ;
+.
+
+schema:copyrightHolder
+    schema:description "The party holding the legal copyright to the CreativeWork" ;
+    schema:name "copyright holder" ;
+.
+
+schema:copyrightYear
+    schema:description "The year during which the claimed copyright for the CreativeWork was first asserted" ;
+    schema:name "copyright year" ;
+.
+
+schema:creator
+    schema:description "The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork" ;
+    schema:name "creator" ;
+.
+
+schema:dateCreated
+    schema:description "The date on which the CreativeWork was created or the item was added to a DataFeed" ;
+    schema:name "date created" ;
+.
+
+schema:dateIssued
+    schema:description "The date the ticket was issued" ;
+    schema:name "date issued" ;
+.
+
+schema:dateModified
+    schema:description "The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed" ;
+    schema:name "date modified" ;
+.
+
+schema:description
+    schema:description "A description of the item" ;
+    schema:name "description" ;
+.
+
+schema:email
+    schema:description "Email address" ;
+    schema:name "email" ;
+.
+
+schema:hasPart
+    schema:description "Indicates a Resource that is part of this item" ;
+    schema:name "has part" ;
+.
+
+schema:identifier
+    schema:description """The identifier property represents any kind of identifier for any kind of [[Thing]], such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](/docs/datamodel.html#identifierBg) for more details.""" ;
+    schema:name "identifier" ;
+.
+
+schema:isPartOf
+    schema:description "Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of" ;
+    schema:name "is part of" ;
+.
+
+schema:keywords
+    schema:description "Keywords or tags used to describe some item. Multiple textual entries in a keywords list are typically delimited by commas, or by repeating the property" ;
+    schema:name "keywords" ;
+.
+
+schema:license
+    schema:description "A license document that applies to this content, typically indicated by URL" ;
+    schema:name "license" ;
+.
+
+schema:memberOf
+    schema:description "An Organization (or ProgramMembership) to which this Person or Organization belongs" ;
+    schema:name "member of" ;
+.
+
+schema:name
+    schema:description "The name of the item" ;
+    schema:name "name" ;
+.
+
+schema:parentOrganization
+    schema:description "The larger organization that this organization is a [[subOrganization]] of, if any" ;
+    schema:name "parent organization" ;
+.
+
+schema:publisher
+    schema:description "The publisher of the creative work" ;
+    schema:name "publisher" ;
+.
+
+schema:subOrganization
+    schema:description "A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property" ;
+    schema:name "sub organization" ;
+.
+
+schema:url
+    schema:description "URL of the item" ;
+    schema:name "url" ;
+.
+
+schema:usageInfo
+    schema:description """The schema.org [[usageInfo]] property indicates further information about a [[CreativeWork]]. This property is applicable both to works that are freely available and to those that require payment or other transactions. It can reference additional information, e.g. community expectations on preferred linking and citation conventions, as well as purchasing details. For something that can be commercially licensed, usageInfo can provide detailed, resource-specific information about licensing options.
+
+This property can be used alongside the license property which indicates license(s) applicable to some piece of content. The usageInfo property can provide information about other licensing options, e.g. acquiring commercial usage rights for an image that is also available under non-commercial creative commons licenses.""" ;
+    schema:name "usage info" ;
+.
+
+schema:version
+    schema:description "The version of the CreativeWork embodied by a specified resource" ;
+    schema:name "version" ;
+.
+
+<http://www.w3.org/2000/01/rdf-schema#Property> schema:name "Property" .
+<http://www.w3.org/2001/XMLSchema#anyURI> schema:name "any URI" .
+<http://www.w3.org/2001/XMLSchema#date> schema:name "date" .
+<http://www.w3.org/2001/XMLSchema#dateTime> schema:name "date time" .
+<http://www.w3.org/2001/XMLSchema#dateTimeStamp> schema:name "date timestamp" .
+<http://www.w3.org/2001/XMLSchema#gYear> schema:name "year" .
+<http://www.w3.org/2001/XMLSchema#string> schema:name "string" .
+
+
+<http://datashapes.org/dash#AutoCompleteEditor> schema:name "Autocomplete Editor" .
+<http://datashapes.org/dash#DetailsEditor> schema:name "Details Editor" .
+<http://datashapes.org/dash#all> schema:name "all" .
+<http://datashapes.org/dash#defaultViewForRole> schema:name "default view for role" .
+<http://datashapes.org/dash#editor> schema:name "editor" .
+<http://datashapes.org/dash#singleLine> schema:name "single line" .
+
+<http://vocabs.lter-europe.net/EnvThes> schema:name "Environmental Thesaurus (EnvThes)" .
+
+<https://schema.org/definition> schema:name "definition" .
+<https://schema.org/mainEntity> schema:name "main entity" .
+
+<http://www.w3.org/2002/07/owl#InverseProperty> schema:name "Inverse Property" .

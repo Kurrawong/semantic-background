@@ -71,7 +71,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		<https://schema.org> ,
 		<https://w3id.org/tern/ontologies/tern/> ,
 		<https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes> ;
-    schema:codeRepository "https://github.com/kurrawong/demo-vocabs" ;
+    schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2023"^^xsd:gYear ;
     schema:dateModified "2025-12-02"^^xsd:date ;

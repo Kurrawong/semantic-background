@@ -1,0 +1,28 @@
+PREFIX astatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX catns: <https://example.com/demo-vocabs/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://kurrawong.ai/semantic-bankground/validators>
+    a dcat:Catalog ;
+    dcterms:hasPart
+        <https://linked.data.gov.au/def/bcp/validator> ,
+        <https://linked.data.gov.au/def/eia-dp/validator> ,
+        <http://www.opengis.net/def/geosparql/validator> ,
+        <https://linked.data.gov.au/def/loci-dp/validator> ,
+        <https://linked.data.gov.au/def/ontpub/validator> ,
+        <https://prez.dev/manifest-validator> ,
+        <https://linked.data.gov.au/def/vocpub/validator> ;
+    schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:dateCreated "2025-12-11"^^xsd:gYear ;
+    schema:dateModified "2025-12-11"^^xsd:date ;
+    schema:description "KurrawongAI's list of SHACL validators" ;
+    schema:name "KurrawongAI's Commonly Used SHACL Validators" ;
+    schema:publisher <https://kurrawong.ai> ;
+    reg:status astatus:stable ;
+.

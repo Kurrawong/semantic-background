@@ -1,4 +1,4 @@
-[tool.poetry]
+[project]
 name = "semantic-background"
 version = "0.1.0"
 description = "Semantic Web ontologies and vocabularies frequently used by members of KurrawongAI"
@@ -6,11 +6,11 @@ authors = ["Nicholas Car <nick@kurrawong.ai>"]
 license = "BSD 3-Clause"
 readme = "README.md"
 packages = [{include = "semantic_background"}]
-
-[tool.poetry.dependencies]
-python = "^3.12"
-rdflib = "^7.0.0"
-pytest = "^8.3.3"
+dependencies = [
+    "rdflib>=7.5.0",
+    "pytest>=8.3.3",
+    "prezmanifest>=1.1.0",
+]
 
 
 [build-system]
