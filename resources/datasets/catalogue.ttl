@@ -13,6 +13,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://id.loc.gov/vocabulary/identifiers> ,
         <http://purl.org/NET/rdflicense/> ,
         <http://qudt.org/2.1/vocab/quantitykind> ,
+        <http://qudt.org/vocab/unit> ,
         <http://resource.geosciml.org/vocabulary/timescale/gts2020> ;
     schema:name "Semantic Background Datasets" ;
     schema:publisher <https://kurrawong.ai> ;
