@@ -1,0 +1,73 @@
+PREFIX astatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX odrl: <http://www.w3.org/ns/odrl/2/>
+PREFIX prez: <https://prez.dev/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX ssn: <http://www.w3.org/ns/ssn/>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://data.kurrawong.ai/sb/ontologies>
+    a schema:DataCatalog ;
+    schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:dateCreated "2023"^^xsd:gYear ;
+    schema:dateModified "2025-12-12"^^xsd:date ;
+    schema:description "A catalogue of reference Semantic Web ontologies used by KurrawongAI" ;
+    schema:hasPart
+        <http://datashapes.org/dash> ,
+        <http://id.loc.gov/ontologies/bibframe/> ,
+        <http://purl.obolibrary.org/obo/bfo.owl> ,
+        dc: ,
+        dcterms: ,
+        <http://purl.org/geojson/vocab#> ,
+        <http://purl.org/linked-data/cube> ,
+        <http://purl.org/linked-data/registry> ,
+        <http://purl.org/ontology/bibo> ,
+        <http://purl.org/pav/> ,
+        <http://purl.org/spar/cito> ,
+        <http://purl.org/spar/fabio> ,
+        vann: ,
+        <http://qudt.org/2.1/schema/qudt> ,
+        <http://rs.tdwg.org/ontology/voc/TaxonName> ,
+        <http://vocab.deri.ie/void> ,
+        <http://www.ifomis.org/bfo/1.1> ,
+        <http://www.opengis.net/ont/geosparql> ,
+        <http://www.opengis.net/ont/gml> ,
+        rdf: ,
+        rdfs: ,
+        <http://www.w3.org/2002/07/owl> ,
+        <http://www.w3.org/2003/06/sw-vocab-status/ns> ,
+        <http://www.w3.org/2004/02/skos/core> ,
+        <http://www.w3.org/2006/time> ,
+        <http://www.w3.org/2008/05/skos-xl> ,
+        <http://www.w3.org/ns/dcat> ,
+        <http://www.w3.org/ns/dx/prof> ,
+        odrl: ,
+        prov: ,
+        sh: ,
+        sosa: ,
+        ssn:ext ,
+        foaf: ,
+        <https://linked.data.gov.au/def/addr> ,
+        <https://linked.data.gov.au/def/cn> ,
+        <https://linked.data.gov.au/def/gn> ,
+        <https://linked.data.gov.au/def/lifecycle> ,
+        <https://linked.data.gov.au/def/roads> ,
+        <https://olis.dev/ont> ,
+        prez:manifest-model ,
+        prez:ont ,
+        <https://schema.org> ,
+        <https://w3id.org/tern/ontologies/tern/> ,
+        <https://www.ica.org/standards/RiC/ontology> ;
+    schema:name "Semantic Background Ontologies" ;
+    schema:publisher <https://kurrawong.ai> ;
+    schema:status astatus:experimental ;
+.

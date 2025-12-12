@@ -1,4 +1,4 @@
-PREFIX : <https://linked.data.gov.au/def/gn/>
+PREFIX : <https://linked.data.gov.au/def/roads/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>

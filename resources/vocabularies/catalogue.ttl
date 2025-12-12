@@ -1,0 +1,26 @@
+PREFIX astatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://kurrawong.ai/semantic-bankground/vocabularies>
+    a schema:DataCatalog ;
+    schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:dateCreated "2023"^^xsd:gYear ;
+    schema:dateModified "2025-12-12"^^xsd:date ;
+    schema:description "A catalogue of reference Semantic Web vocabularies used by KurrawongAI" ;
+    schema:hasPart
+        <http://id.loc.gov/vocabulary/identifiers> ,
+        <http://www.opengis.net/def/nil> ,
+        <https://linked.data.gov.au/def/anzsrc-for/2020> ,
+        <https://linked.data.gov.au/def/data-roles> ,
+        <https://linked.data.gov.au/def/fsdf/themes> ,
+        <https://linked.data.gov.au/def/reg-statuses> ,
+        <https://linked.data.gov.au/def/supermodel/roles> ,
+        <https://linked.data.gov.au/def/unggim-themes> ,
+        <https://linked.data.gov.au/def/vocdermods> ,
+        <https://prez.dev/ManifestResourceRoles> ;
+    schema:name "Semantic Background" ;
+    schema:publisher <https://kurrawong.ai> ;
+    schema:status astatus:experimental ;
+.
