@@ -35,6 +35,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://purl.org/spar/cito> ,
         <http://purl.org/spar/fabio> ,
         vann: ,
+        <http://purl.org/wf4ever/wfdesc> ,
+        <http://purl.org/wf4ever/wfprov> ,
         <http://qudt.org/2.1/schema/qudt> ,
         <http://rs.tdwg.org/ontology/voc/TaxonName> ,
         <http://vocab.deri.ie/void> ,

@@ -1,6 +1,6 @@
-PREFIX : <https://linked.data.gov.au/def/ontpub/validator/>
+PREFIX : <https://linked.data.gov.au/def/valpub/validator/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX ont: <https://linked.data.gov.au/def/ontpub/validator>
+PREFIX ont: <https://linked.data.gov.au/def/valpub/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -17,7 +17,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         [
             a sh:PropertyShape ;
             rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.1.10: OWL ontologies SHOULD indicate a version using the property owl:versionIRI with an IRI object." ;
+            sh:message "Requirement 2.1.10: SHACL ontologies SHOULD indicate a version using the property owl:versionIRI with an IRI object." ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path owl:versionIRI ;
@@ -34,7 +34,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a sh:PropertyShape ;
             rdfs:isDefinedBy ont: ;
             sh:datatype xsd:anyURI ;
-            sh:message "Requirement 2.1.11: OWL ontologies SHOULD indicate any online version controlled source code repository storing the ontology and related content with the schema:codeRepository with a xsd:anyURI object." ;
+            sh:message "Requirement 2.1.11: SHACL ontologies SHOULD indicate any online version controlled source code repository storing the ontology and related content with the schema:codeRepository with a xsd:anyURI object." ;
             sh:minCount 1 ;
             sh:path schema:codeRepository ;
             sh:severity sh:Warning ;
@@ -51,8 +51,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sh:property
                 [
                     a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-                    sh:message "Requirement 2.1.12a: Ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
+                    rdfs:isDefinedBy ont: ;
+                    sh:message "Requirement 2.1.12a: SHACL ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
                     sh:minCount 1 ;
                     sh:nodeKind sh:Literal ;
                     sh:or (
@@ -74,7 +74,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sh:property
                 [
                     a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
+                    rdfs:isDefinedBy ont: ;
                     sh:minCount 1 ;
                     sh:nodeKind sh:IRI ;
                     sh:path schema:license ;
@@ -92,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         [
             a sh:PropertyShape ;
             rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.1.13: Ontologies MAY present usage information alongside license information using the schema:usageInfo property indicating literal text." ;
+            sh:message "Requirement 2.1.13: SHACL ontologies MAY present usage information alongside license information using the schema:usageInfo property indicating literal text." ;
             sh:nodeKind sh:Literal ;
             sh:path schema:usageInfo ;
         ] ;
@@ -106,7 +106,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         [
             a sh:PropertyShape ;
             rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.1.14: Ontologies SHOULD present a copyright information for it indicated with properties schema:copyrightHolder, schema:copyrightNotice and schema:copyrightYear. schema:copyrightHolder may be used with a text object or, preferably, an schema:Person or schema:Organization object." ;
+            sh:message "Requirement 2.1.14: SHACL ontologies SHOULD present a copyright information for it indicated with properties schema:copyrightHolder, schema:copyrightNotice and schema:copyrightYear. schema:copyrightHolder may be used with a text object or, preferably, an schema:Person or schema:Organization object." ;
             sh:minCount 1 ;
             sh:or (
                 
@@ -129,7 +129,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property
         [
-            sh:message "Requirement 2.1.15: Ontologies MUST present at least one owl:Class or rdfs:Property or owl:NamedIndividual or owl:Axiom within the ontology file" ;
+            sh:message "Requirement 2.1.15: SHACL ontologies MUST present at least one sh:NodeShape or sh:PropertyShape within the ontology file" ;
             sh:nodeKind sh:BlankNodeOrIRI ;
             sh:path
                 [
@@ -137,15 +137,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 ] ;
         ] ;
     sh:targetNode
-        rdfs:Property ,
-        owl:AnnotationProperty ,
-        owl:Axiom ,
-        owl:Class ,
-        owl:DatatypeProperty ,
-        owl:FunctionalProperty ,
-        owl:InverseProperty ,
-        owl:NamedIndividual ,
-        owl:ObjectProperty ;
+        sh:NodeShape ,
+        sh:PropertyShape ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.1.16>
@@ -155,7 +148,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         [
             a sh:PropertyShape ;
             rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.1.16: All owl:Class, rdfs:Property and specialised OWL property types, owl:NamedIndividual and owl:Axiom instances MUST indicate the ontology that defines then with the rdfs:isDefinedBy property." ;
+            sh:message "Requirement 2.1.16: All sh:NodeShape and sh:PropertyShape instances MUST indicate the ontology that defines then with the rdfs:isDefinedBy property." ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path rdfs:isDefinedBy ;
@@ -178,7 +171,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:property
         [
             sh:maxCount 1 ;
-            sh:message "Requirement 2.1.2 Each ontology MUST be presented as a single owl:Ontology object & Requirement 2.1.3 Each ontology MUST be presented in a single file which does not contain information other than that which is directly part of the ontology and the file is considered the point-of-truth" ;
+            sh:message "Requirement 2.1.2 SHACL ontologies MUST be presented as a single owl:Ontology object & Requirement 2.1.3 Each SHACL ontology MUST be presented in a single file which does not contain information other than that which is directly part of the ontology and the file is considered the point-of-truth" ;
             sh:minCount 1 ;
             sh:path rdf:type ;
         ] ;
@@ -188,7 +181,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.4>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.4 Each ontology MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
     sh:or (
         
         [
@@ -220,7 +213,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.5>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.4 Each ontology MUST have exactly one definition, a text literal text, indicated using either the skos:definition or schema:description property" ;
+    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one definition, a text literal text, indicated using either the skos:definition or schema:description property" ;
     sh:or (
         
         [
@@ -264,27 +257,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:property 
         [
             sh:maxCount 1 ;
-            sh:message "Requirement 2.1.5 Each ontology MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:dateTime ;
-                ]
-                
-                [
-                    sh:datatype xsd:date ;
-                ]
-                
-                [
-                    sh:datatype xsd:dateTimeStamp ;
-                ]
-            ) ;
-            sh:path schema:dateCreated ;
-        ] ,
-        [
-            sh:maxCount 1 ;
-            sh:message "Requirement 2.1.5 Each ontology MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+            sh:message "Requirement 2.1.5: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
             sh:minCount 1 ;
             sh:or (
                 
@@ -304,7 +277,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ,
         [
             sh:maxCount 1 ;
-            sh:message "Requirement 2.1.5 Each ontology MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+            sh:message "Requirement 2.1.5: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+            sh:minCount 1 ;
+            sh:or (
+                
+                [
+                    sh:datatype xsd:dateTime ;
+                ]
+                
+                [
+                    sh:datatype xsd:date ;
+                ]
+                
+                [
+                    sh:datatype xsd:dateTimeStamp ;
+                ]
+            ) ;
+            sh:path schema:dateCreated ;
+        ] ,
+        [
+            sh:maxCount 1 ;
+            sh:message "Requirement 2.1.5: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
             sh:minCount 1 ;
             sh:or (
                 
@@ -330,7 +323,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property 
         [
-            sh:description "Requirement 2.1.7 Each ontology MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
+            sh:description "Requirement 2.1.7: SHACL ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
             sh:minCount 1 ;
             sh:or (
                 
@@ -345,7 +338,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sh:path schema:creator ;
         ] ,
         [
-            sh:description "Requirement 2.1.7 Each ontology MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
+            sh:description "Requirement 2.1.7: SHACL ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
             sh:minCount 1 ;
             sh:or (
                 
@@ -367,7 +360,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property
         [
-            sh:description "Requirement 2.1.8 Each ontology MAY have at least any number of contributors, indicated using schema:contributor property that must be a IRI value indicating an agent, that is an instance of schema:Person, schema:Organization or a subclass of either" ;
+            sh:description "Requirement 2.1.8: SHACL ontologies MAY have at least any number of contributors, indicated using schema:contributor property that must be a IRI value indicating an agent, that is an instance of schema:Person, schema:Organization or a subclass of either" ;
             sh:or (
                 
                 [
@@ -386,7 +379,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.9>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.9 Provenance for an owl:Ontology MUST be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+    sh:message "Requirement 2.1.9: SHACL ontologies MUST indicate provenance with at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
     sh:or (
         
         [
@@ -424,7 +417,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             a sh:PropertyShape ;
             rdfs:isDefinedBy ont: ;
             sh:maxCount 1 ;
-            sh:message "Requirement 2.1.9b: You MUST NOT use skos:historyNote property more than once on any object." ;
+            sh:message "Requirement 2.1.9b: SHACL ontologies MUST NOT use skos:historyNote property more than once on any object." ;
             sh:path skos:historyNote ;
         ] ;
     sh:targetSubjectsOf skos:historyNote ;
@@ -512,7 +505,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.2.1>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.1: Each element instance MUST have at least one title indicated using either the skos:prefLabel or schema:name property that must be either a string or a language-typed text literal value. Only one value per language is allowed if languages are used." ;
+    sh:message "Requirement 2.2.1: SHACL Shapes MUST have at least one title indicated using either the skos:prefLabel or schema:name property that must be either a string or a language-typed text literal value. Only one value per language is allowed if languages are used." ;
     sh:or (
         
         [
@@ -552,32 +545,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ]
     ) ;
     sh:targetClass
-        rdfs:Property ,
-        owl:AnnotationProperty ,
-        owl:Axiom ,
-        owl:Class ,
-        owl:DatatypeProperty ,
-        owl:FunctionalProperty ,
-        owl:InverseProperty ,
-        owl:NamedIndividual ,
-        owl:ObjectProperty ;
+        sh:NodeShape ,
+        sh:PropertyShape ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.2.2>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.2: Each element instance MUST have at least one definition indicated using the skos:definition or schema:description property that must be either string or a language-typed text literal value. Only one value per language is allowed if languages are used." ;
-    sh:or (
-        
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:datatype rdf:langString ;
-            sh:minCount 1 ;
-            sh:path skos:definition ;
-            sh:uniqueLang true ;
-        ]
-        
+    sh:message "Requirement 2.2.2: SHACL Shapes MUST have at message value, indicated using sh:message" ;
+    sh:property
         [
             a sh:PropertyShape ;
             rdfs:isDefinedBy ont: ;
@@ -585,27 +561,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sh:or (
                 
                 [
-                    sh:datatype xsd:string ;
+                    sh:datatype rdf:langString ;
                 ]
                 
                 [
-                    sh:datatype rdf:langString ;
+                    sh:datatype xsd:string ;
                 ]
             ) ;
-            sh:path schema:description ;
-            sh:uniqueLang true ;
-        ]
-    ) ;
+            sh:path sh:message ;
+        ] ;
     sh:targetClass
-        rdfs:Property ,
-        owl:AnnotationProperty ,
-        owl:Axiom ,
-        owl:Class ,
-        owl:DatatypeProperty ,
-        owl:FunctionalProperty ,
-        owl:InverseProperty ,
-        owl:NamedIndividual ,
-        owl:ObjectProperty ;
+        sh:NodeShape ,
+        sh:PropertyShape ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.2.3>
@@ -614,81 +581,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:or (
         
         [
-            sh:message "Requirement 2.2.3: Provenance for a element, if different from that of the owl:Ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+            sh:message "Requirement 2.2.3: SHACL Shapes provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
             sh:minCount 1 ;
             sh:path prov:wasDerivedFrom ;
         ]
         
         [
-            sh:message "Requirement 2.2.3: Provenance for a element, if different from that of the owl:Ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+            sh:message "Requirement 2.2.3: SHACL Shapes provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
             sh:minCount 1 ;
             sh:path dcterms:source ;
         ]
         
         [
-            sh:message "Requirement 2.2.3: Provenance for a element, if different from that of the owl:Ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+            sh:message "Requirement 2.2.3: SHACL Shapes provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
             sh:minCount 1 ;
             sh:path skos:historyNote ;
         ]
     ) ;
     sh:severity sh:Warning ;
     sh:targetClass
-        rdfs:Property ,
-        owl:AnnotationProperty ,
-        owl:Axiom ,
-        owl:Class ,
-        owl:DatatypeProperty ,
-        owl:FunctionalProperty ,
-        owl:InverseProperty ,
-        owl:NamedIndividual ,
-        owl:ObjectProperty ;
-.
-
-<https://linked.data.gov.au/def/ontpub/req/2.2.4>
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.2.4: Each element in an ontology SHOULD have at least one example of use indicated with a skos:example property that should be a text literal, preferably showing RDF source code." ;
-            sh:minCount 1 ;
-            sh:path skos:example ;
-            sh:severity sh:Warning ;
-        ] ;
-    sh:targetClass
-        rdfs:Property ,
-        owl:AnnotationProperty ,
-        owl:Axiom ,
-        owl:Class ,
-        owl:DatatypeProperty ,
-        owl:FunctionalProperty ,
-        owl:InverseProperty ,
-        owl:NamedIndividual ,
-        owl:ObjectProperty ;
-.
-
-<https://linked.data.gov.au/def/ontpub/req/2.2.5>
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.2.5: Each element in an ontology SHOULD indicate any non-IRI persistent identifiers with schema:identifier properties. Custom datatypes may be implemented for identifiers, in line with the advice for the use of skos:notation." ;
-            sh:nodeKind sh:Literal ;
-            sh:path schema:identifier ;
-        ] ;
-    sh:targetClass
-        rdfs:Property ,
-        owl:AnnotationProperty ,
-        owl:Axiom ,
-        owl:Class ,
-        owl:DatatypeProperty ,
-        owl:FunctionalProperty ,
-        owl:InverseProperty ,
-        owl:NamedIndividual ,
-        owl:ObjectProperty ;
+        sh:NodeShape ,
+        sh:PropertyShape ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.7.2>
@@ -793,30 +706,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         schema:Person ;
 .
 
-ont:
-    a owl:Ontology ;
-    owl:versionIRI :1.2 ;
-    owl:versionInfo """1.4 2025-07: Changed to linked.data.gov.au IRI
-
-1.3 2025-07: Alignment to VocPub, Own use of schema.org as much as possible
-
-1.2 2025-06: Added schema:citation to allowed history properties
-
-1.1 2023-05: This validator was updated in July 2023 to conform to itself & dcterms:provenance changed to skos:historyNote""" ;
-    skos:historyNote "This validator was made to improve teh consistency of Australian ontology formulation, initially by CSIRO and then handed to the AGLDWG" ;
-    schema:codeRepository "https://github.com/agldwg/ontpub-profile"^^xsd:anyURI ;
-    schema:copyrightHolder <https://linked.data.gov.au/org/agldwg> ;
-    schema:copyrightYear "2023"^^xsd:gYear ;
-    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
-    schema:dateCreated "2022-03-19"^^xsd:date ;
-    schema:dateIssued "2023-09-21"^^xsd:date ;
-    schema:dateModified "2025-07-26"^^xsd:date ;
-    schema:description "SHACL Shapes to validate RDF data according to the Ontology Publications Profile" ;
-    schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    schema:name "Ontology Publication Profile Validator" ;
-    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
-.
-
 <https://orcid.org/0000-0002-8742-7730>
     a schema:Person ;
     schema:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
@@ -824,8 +713,20 @@ ont:
     schema:name "Nicholas J. Car" ;
 .
 
-<https://linked.data.gov.au/org/agldwg>
-    a schema:Organization ;
-    schema:name "Australian Government Linked Data Working Group" ;
-    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0 2025-12: Created based on OntPub Validator & the SHACL Profiling deaft recommendation" ;
+    skos:historyNote "This validator was made to improve teh consistency of Australian ontology formulation, initially by CSIRO and then handed to the AGLDWG" ;
+    schema:codeRepository "https://github.com/agldwg/ontpub-profile"^^xsd:anyURI ;
+    schema:copyrightHolder <https://kurrawong.ai> ;
+    schema:copyrightYear "2025"^^xsd:gYear ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2025-12-15"^^xsd:date ;
+    schema:dateIssued "2025-12-15"^^xsd:date ;
+    schema:dateModified "2025-12-15"^^xsd:date ;
+    schema:description "SHACL Shapes to validate ontologies of SHACL shapes according to the Validator Publications Profile" ;
+    schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    schema:name "Validator Publication Profile Validator" ;
+    schema:publisher <https://kurrawong.ai> ;
 .

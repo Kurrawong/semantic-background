@@ -1,0 +1,80 @@
+PREFIX : <https://linked.data.gov.au/dataset/bdr/validator/>
+PREFIX dash: <http://datashapes.org/dash#>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<https://linked.data.gov.au/def/bdr-pr/cats/validator>
+    a owl:Ontology ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0 First version" ;
+    schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/tree/main/resources/validators/bdr/items"^^xsd:anyURI ;
+    schema:creator <https://linked.data.gov.au/org/dcceew> ;
+    schema:dateCreated "2025-08-01"^^xsd:date ;
+    schema:dateModified "2025-08-15"^^xsd:date ;
+    schema:definition "SHACL validator for catalogues used by the Biodiversity Data Repository"@en ;
+    schema:name "BDR Catalogues Validator"@en ;
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+.
+
+:ns-01
+    a sh:NodeShape ;
+    sh:targetClass schema:DataCatalog ;
+    sh:property
+        :p-01 ,
+        :p-02 ,
+        :p-03 ,
+        :p-04 ,
+        :item-classes ;
+.
+
+:p-01
+    a sh:PropertyShape ;
+    sh:path schema:name ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+.
+
+:p-02
+    a sh:PropertyShape ;
+    sh:path schema:description ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:string ;
+.
+
+:p-03
+    a sh:PropertyShape ;
+    sh:path schema:dateCreated ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:date ;
+.
+
+:p-04
+    a sh:PropertyShape ;
+    sh:path schema:dateModified ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype xsd:date ;
+.
+
+:item-classes
+    a sh:PropertyShape ;
+    sh:path schema:hasPart ;
+    #sh:or (
+    #    [ sh:class schema:DataCatalog ]
+    #    [ sh:class schema:Dataset ]
+    #    [ sh:class owl:Ontology ]
+    #) ;
+.

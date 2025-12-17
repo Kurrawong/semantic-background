@@ -7,17 +7,22 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2025-12-11"^^xsd:gYear ;
-    schema:dateModified "2025-12-11"^^xsd:date ;
-    schema:description  "A catalogue of reference SHACL validators used by KurrawongAI" ;
+    schema:dateModified "2025-12-15"^^xsd:date ;
+    schema:description "A catalogue of reference SHACL validators used by KurrawongAI" ;
     schema:hasPart
         <http://www.opengis.net/def/geosparql/validator> ,
+        <http://www.w3.org/ns/shacl-shacl#> ,
         <https://linked.data.gov.au/def/bcp/validator> ,
+        <https://linked.data.gov.au/def/bdr-pr/cats/validator> ,
         <https://linked.data.gov.au/def/eia-dp/validator> ,
         <https://linked.data.gov.au/def/loci-dp/validator> ,
         <https://linked.data.gov.au/def/ontpub/validator> ,
+        <https://linked.data.gov.au/def/valpub/validator> ,
         <https://linked.data.gov.au/def/vocpub/validator> ,
-        <https://prez.dev/manifest-validator> ;
+        <https://prez.dev/manifest-validator> ,
+        <https://w3id.org/tern/shapes/tern/> ;
     schema:name "Semantic Background Validators" ;
     schema:publisher <https://kurrawong.ai> ;
     schema:status astatus:stable ;
+    schema:version "1" ;
 .
