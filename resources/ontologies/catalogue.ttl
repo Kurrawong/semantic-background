@@ -67,6 +67,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         prez:manifest-model ,
         prez:ont ,
         <https://schema.org> ,
+        <https://w3id.org/ogc/stac/core/> ,
         <https://w3id.org/tern/ontologies/tern/> ,
         <https://www.ica.org/standards/RiC/ontology> ;
     schema:name "Semantic Background Ontologies" ;

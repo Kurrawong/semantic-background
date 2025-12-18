@@ -7,3 +7,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "KurrawongAI" ;
     schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
+
+<https://wf4ever.github.io>
+    a schema:Organization ;
+    schema:name "Workflow 4Ever Project Team" ;
+    schema:url "https://wf4ever.github.io/"^^xsd:anyURI ;
+.

@@ -1,0 +1,159 @@
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX stac: <https://w3id.org/ogc/stac/core/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+stac:
+    a owl:Ontology ;
+    dct:creator "Rob Atkinson, OGC" ;
+    dct:description "Ontology for the SpatioTemporal Asset Catalog (STAC) Core 1.0.0 specification" ;
+    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    dct:title "STAC Core Ontology" ;
+.
+
+stac:datetime
+    a owl:DatatypeProperty ;
+    rdfs:label "datetime" ;
+    rdfs:comment "Datetime associated with the Item (typically acquisition time)." ;
+    rdfs:domain stac:Item ;
+    rdfs:range xsd:dateTime ;
+.
+
+stac:description
+    a owl:DatatypeProperty ;
+    rdfs:label "description" ;
+    rdfs:domain
+        [
+            owl:unionOf (
+                stac:Catalog
+                stac:Collection
+            ) ;
+        ] ;
+    rdfs:range xsd:string ;
+.
+
+stac:end_datetime
+    a owl:DatatypeProperty ;
+    rdfs:label "end datetime" ;
+    rdfs:domain stac:Item ;
+    rdfs:range xsd:dateTime ;
+.
+
+stac:extent
+    a owl:ObjectProperty ;
+    rdfs:label "extent" ;
+    rdfs:comment "The spatiotemporal extent of a Collection." ;
+    rdfs:domain stac:Collection ;
+.
+
+stac:hasAsset
+    a owl:ObjectProperty ;
+    rdfs:label "has asset" ;
+    rdfs:comment "Links an Item to one of its Assets." ;
+    rdfs:domain stac:Item ;
+    rdfs:range stac:Asset ;
+.
+
+stac:href
+    a owl:DatatypeProperty ;
+    rdfs:label "href" ;
+    rdfs:comment "The link reference (URL)." ;
+    rdfs:domain stac:Link ;
+    rdfs:range xsd:anyURI ;
+.
+
+stac:id
+    a owl:DatatypeProperty ;
+    rdfs:label "id" ;
+    rdfs:comment "Unique identifier for a STAC entity." ;
+    rdfs:domain
+        [
+            owl:unionOf (
+                stac:Catalog
+                stac:Collection
+                stac:Item
+            ) ;
+        ] ;
+    rdfs:range xsd:string ;
+.
+
+stac:license
+    a owl:DatatypeProperty ;
+    rdfs:label "license" ;
+    rdfs:comment "Collection-wide license applying to Items unless overridden by an Item." ;
+    rdfs:domain stac:Collection ;
+    rdfs:range xsd:string ;
+.
+
+stac:links
+    a owl:ObjectProperty ;
+    rdfs:label "links" ;
+    rdfs:comment "Associates a STAC entity with its links." ;
+    rdfs:domain
+        [
+            owl:unionOf (
+                stac:Catalog
+                stac:Collection
+                stac:Item
+            ) ;
+        ] ;
+    rdfs:range stac:Link ;
+.
+
+stac:mediaType
+    a owl:DatatypeProperty ;
+    rdfs:label "media type" ;
+    rdfs:comment "The media type of an Asset." ;
+    rdfs:domain stac:Asset ;
+    rdfs:range xsd:string ;
+.
+
+stac:rel
+    a owl:DatatypeProperty ;
+    rdfs:label "rel" ;
+    rdfs:comment "The relationship type of the link." ;
+    rdfs:domain stac:Link ;
+    rdfs:range xsd:string ;
+.
+
+stac:start_datetime
+    a owl:DatatypeProperty ;
+    rdfs:label "start datetime" ;
+    rdfs:domain stac:Item ;
+    rdfs:range xsd:dateTime ;
+.
+
+stac:Asset
+    a owl:Class ;
+    rdfs:label "STAC Asset" ;
+    rdfs:comment "An Asset represents a file associated with a STAC Item, such as an image, data file, or metadata file." ;
+.
+
+stac:Link
+    a owl:Class ;
+    rdfs:label "STAC Link" ;
+    rdfs:comment "A Link describes a relationship between STAC entities using rel values and hrefs." ;
+.
+
+stac:Catalog
+    a owl:Class ;
+    rdfs:label "STAC Catalog" ;
+    rdfs:comment "A STAC Catalog is a JSON object that provides links to other STAC entities." ;
+.
+
+stac:Collection
+    a owl:Class ;
+    rdfs:label "STAC Collection" ;
+    rdfs:comment "A Collection extends Catalog with additional metadata and describes a group of related STAC Items." ;
+    rdfs:subClassOf stac:Catalog ;
+.
+
+stac:Item
+    a owl:Class ;
+    rdfs:label "STAC Item" ;
+    rdfs:comment "A STAC Item is a GeoJSON Feature augmented with STAC metadata fields and links." ;
+    rdfs:subClassOf geo:Feature ;
+.
