@@ -19,6 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://linked.data.gov.au/def/supermodel/roles> ,
         <https://linked.data.gov.au/def/unggim-themes> ,
         <https://linked.data.gov.au/def/vocdermods> ,
+        <https://olis.dev/GraphRoles> ,
         <https://prez.dev/ManifestResourceRoles> ;
     schema:name "Semantic Background" ;
     schema:publisher <https://kurrawong.ai> ;
