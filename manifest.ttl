@@ -18,7 +18,7 @@ PREFIX vann: <http://purl.org/vocab/vann/>
     a prez:Manifest ;
     prof:hasResource
         [
-            prof:hasArtifact "resources/catalogue.ttl" ;
+            prof:hasArtifact "resources/validators/catalogue.ttl" ;
             prof:hasRole mrr:CatalogueData ;
             schema:name "SemBack main Catalogue" ;
         ] ,
