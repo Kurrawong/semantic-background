@@ -20,9 +20,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://linked.data.gov.au/def/valpub/validator> ,
         <https://linked.data.gov.au/def/vocpub/validator> ,
         <https://prez.dev/manifest-validator> ,
+        <https://olis.dev/sg-validator> ,
         <https://w3id.org/tern/shapes/tern/> ;
     schema:name "Semantic Background Validators" ;
     schema:publisher <https://kurrawong.ai> ;
     schema:status astatus:stable ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
