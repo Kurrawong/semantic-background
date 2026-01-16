@@ -11,15 +11,18 @@
 @prefix shsh: <http://www.w3.org/ns/shacl-shacl#> .
 
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
 
 shsh:
     a owl:Ontology ;
-	rdfs:label "SHACL for SHACL"@en ;
-	rdfs:comment "This shapes graph can be used to validate SHACL shapes graphs against a subset of the syntax rules."@en ;
+	schema:name "SHACL for SHACL"@en ;
+	schema:description "This shapes graph can be used to validate SHACL shapes graphs against a subset of the syntax rules."@en ;
 	sh:declare [
 		sh:prefix "shsh" ;
 		sh:namespace "http://www.w3.org/ns/shacl-shacl#" ;
-	] .
+	] ;
+	schema:version 1 ;
+.
 
 
 shsh:ListShape
