@@ -2,6 +2,7 @@ PREFIX : <https://kurrawong.ai/validator/rico#>
 PREFIX ont: <https://kurrawong.ai/validator/rico>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX rico: <https://www.ica.org/standards/RiC/ontology#>
 PREFIX schema: <https://schema.org/>
@@ -15,7 +16,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "AccumulationRelation Shape" ;
     prov:wasDerivedFrom rico:AccumulationRelation ;
     sh:message "AccumulationRelation validation" ;
-    sh:property :accumulationRelation_role-Shape ;
+    sh:property
+        :AccumulationRelationrelationHasSource-Shape ,
+        :AccumulationRelationrelationHasTarget-Shape ,
+        :accumulationRelation_role-Shape ;
     sh:targetClass rico:AccumulationRelation ;
 .
 
@@ -39,7 +43,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "ActivityDocumentationRelation Shape" ;
     prov:wasDerivedFrom rico:ActivityDocumentationRelation ;
     sh:message "ActivityDocumentationRelation validation" ;
-    sh:property :activityDocumentationRelation_role-Shape ;
+    sh:property
+        :ActivityDocumentationRelationrelationHasSource-Shape ,
+        :ActivityDocumentationRelationrelationHasTarget-Shape ,
+        :activityDocumentationRelation_role-Shape ;
     sh:targetClass rico:ActivityDocumentationRelation ;
 .
 
@@ -103,7 +110,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "AgentControlRelation Shape" ;
     prov:wasDerivedFrom rico:AgentControlRelation ;
     sh:message "AgentControlRelation validation" ;
-    sh:property :agentControlRelation_role-Shape ;
+    sh:property
+        :AgentControlRelationrelationHasSource-Shape ,
+        :AgentControlRelationrelationHasTarget-Shape ,
+        :agentControlRelation_role-Shape ;
     sh:targetClass rico:AgentControlRelation ;
 .
 
@@ -113,7 +123,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "AgentHierarchicalRelation Shape" ;
     prov:wasDerivedFrom rico:AgentHierarchicalRelation ;
     sh:message "AgentHierarchicalRelation validation" ;
-    sh:property :agentHierarchicalRelation_role-Shape ;
+    sh:property
+        :AgentHierarchicalRelationrelationHasSource-Shape ,
+        :AgentHierarchicalRelationrelationHasTarget-Shape ,
+        :agentHierarchicalRelation_role-Shape ;
     sh:targetClass rico:AgentHierarchicalRelation ;
 .
 
@@ -133,7 +146,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "AgentTemporalRelation Shape" ;
     prov:wasDerivedFrom rico:AgentTemporalRelation ;
     sh:message "AgentTemporalRelation validation" ;
-    sh:property :agentTemporalRelation_role-Shape ;
+    sh:property
+        :AgentTemporalRelationrelationHasSource-Shape ,
+        :AgentTemporalRelationrelationHasTarget-Shape ,
+        :agentTemporalRelation_role-Shape ;
     sh:targetClass rico:AgentTemporalRelation ;
 .
 
@@ -143,7 +159,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "AgentToAgentRelation Shape" ;
     prov:wasDerivedFrom rico:AgentToAgentRelation ;
     sh:message "AgentToAgentRelation validation" ;
-    sh:property :agentToAgentRelation_role-Shape ;
+    sh:property
+        :AgentToAgentRelationrelationConnects-Shape ,
+        :agentToAgentRelation_role-Shape ;
     sh:targetClass rico:AgentToAgentRelation ;
 .
 
@@ -166,7 +184,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "AppellationRelation Shape" ;
     prov:wasDerivedFrom rico:AppellationRelation ;
     sh:message "AppellationRelation validation" ;
-    sh:property :appellationRelation_role-Shape ;
+    sh:property
+        :AppellationRelationrelationHasSource-Shape ,
+        :AppellationRelationrelationHasTarget-Shape ,
+        :appellationRelation_role-Shape ;
     sh:targetClass rico:AppellationRelation ;
 .
 
@@ -176,7 +197,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "AuthorityRelation Shape" ;
     prov:wasDerivedFrom rico:AuthorityRelation ;
     sh:message "AuthorityRelation validation" ;
-    sh:property :authorityRelation_role-Shape ;
+    sh:property
+        :AuthorityRelationrelationHasSource-Shape ,
+        :AuthorityRelationrelationHasTarget-Shape ,
+        :authorityRelation_role-Shape ;
     sh:targetClass rico:AuthorityRelation ;
 .
 
@@ -186,7 +210,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "AuthorshipRelation Shape" ;
     prov:wasDerivedFrom rico:AuthorshipRelation ;
     sh:message "AuthorshipRelation validation" ;
-    sh:property :authorshipRelation_role-Shape ;
+    sh:property
+        :AuthorshipRelationrelationHasSource-Shape ,
+        :AuthorshipRelationrelationHasTarget-Shape ,
+        :authorshipRelation_role-Shape ;
     sh:targetClass rico:AuthorshipRelation ;
 .
 
@@ -206,7 +233,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "ChildRelation Shape" ;
     prov:wasDerivedFrom rico:ChildRelation ;
     sh:message "ChildRelation validation" ;
-    sh:property :childRelation_role-Shape ;
+    sh:property
+        :ChildRelationrelationHasSource-Shape ,
+        :ChildRelationrelationHasTarget-Shape ,
+        :childRelation_role-Shape ;
     sh:targetClass rico:ChildRelation ;
 .
 
@@ -264,7 +294,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "CorrespondenceRelation Shape" ;
     prov:wasDerivedFrom rico:CorrespondenceRelation ;
     sh:message "CorrespondenceRelation validation" ;
-    sh:property :correspondenceRelation_role-Shape ;
+    sh:property
+        :CorrespondenceRelationrelationConnects-Shape ,
+        :correspondenceRelation_role-Shape ;
     sh:targetClass rico:CorrespondenceRelation ;
 .
 
@@ -275,6 +307,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     prov:wasDerivedFrom rico:CreationRelation ;
     sh:message "CreationRelation validation" ;
     sh:property
+        :CreationRelationrelationHasSource-Shape ,
+        :CreationRelationrelationHasTarget-Shape ,
         :creationRelation_role-Shape ,
         :creationWithRole-Shape ;
     sh:targetClass rico:CreationRelation ;
@@ -336,7 +370,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "DerivationRelation Shape" ;
     prov:wasDerivedFrom rico:DerivationRelation ;
     sh:message "DerivationRelation validation" ;
-    sh:property :derivationRelation_role-Shape ;
+    sh:property
+        :DerivationRelationrelationHasSource-Shape ,
+        :DerivationRelationrelationHasTarget-Shape ,
+        :derivationRelation_role-Shape ;
     sh:targetClass rico:DerivationRelation ;
 .
 
@@ -346,7 +383,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "DescendanceRelation Shape" ;
     prov:wasDerivedFrom rico:DescendanceRelation ;
     sh:message "DescendanceRelation validation" ;
-    sh:property :descendanceRelation_role-Shape ;
+    sh:property
+        :DescendanceRelationrelationHasSource-Shape ,
+        :DescendanceRelationrelationHasTarget-Shape ,
+        :descendanceRelation_role-Shape ;
     sh:targetClass rico:DescendanceRelation ;
 .
 
@@ -393,7 +433,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "EventRelation Shape" ;
     prov:wasDerivedFrom rico:EventRelation ;
     sh:message "EventRelation validation" ;
-    sh:property :eventRelation_role-Shape ;
+    sh:property
+        :EventRelationrelationHasSource-Shape ,
+        :EventRelationrelationHasTarget-Shape ,
+        :eventRelation_role-Shape ;
     sh:targetClass rico:EventRelation ;
 .
 
@@ -446,7 +489,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "FamilyRelation Shape" ;
     prov:wasDerivedFrom rico:FamilyRelation ;
     sh:message "FamilyRelation validation" ;
-    sh:property :familyRelation_role-Shape ;
+    sh:property
+        :FamilyRelationrelationConnects-Shape ,
+        :familyRelation_role-Shape ;
     sh:targetClass rico:FamilyRelation ;
 .
 
@@ -466,7 +511,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "FunctionalEquivalenceRelation Shape" ;
     prov:wasDerivedFrom rico:FunctionalEquivalenceRelation ;
     sh:message "FunctionalEquivalenceRelation validation" ;
-    sh:property :functionalEquivalenceRelation_role-Shape ;
+    sh:property
+        :FunctionalEquivalenceRelationrelationConnects-Shape ,
+        :functionalEquivalenceRelation_role-Shape ;
     sh:targetClass rico:FunctionalEquivalenceRelation ;
 .
 
@@ -497,7 +544,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "GroupSubdivisionRelation Shape" ;
     prov:wasDerivedFrom rico:GroupSubdivisionRelation ;
     sh:message "GroupSubdivisionRelation validation" ;
-    sh:property :groupSubdivisionRelation_role-Shape ;
+    sh:property
+        :GroupSubdivisionRelationrelationHasSource-Shape ,
+        :GroupSubdivisionRelationrelationHasTarget-Shape ,
+        :groupSubdivisionRelation_role-Shape ;
     sh:targetClass rico:GroupSubdivisionRelation ;
 .
 
@@ -559,7 +609,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "InstantiationToInstantiationRelation Shape" ;
     prov:wasDerivedFrom rico:InstantiationToInstantiationRelation ;
     sh:message "InstantiationToInstantiationRelation validation" ;
-    sh:property :instantiationToInstantiationRelation_role-Shape ;
+    sh:property
+        :InstantiationToInstantiationRelationrelationConnects-Shape ,
+        :instantiationToInstantiationRelation_role-Shape ;
     sh:targetClass rico:InstantiationToInstantiationRelation ;
 .
 
@@ -569,7 +621,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "IntellectualPropertyRightsRelation Shape" ;
     prov:wasDerivedFrom rico:IntellectualPropertyRightsRelation ;
     sh:message "IntellectualPropertyRightsRelation validation" ;
-    sh:property :intellectualPropertyRightsRelation_role-Shape ;
+    sh:property
+        :IntellectualPropertyRightsRelationrelationHasSource-Shape ,
+        :IntellectualPropertyRightsRelationrelationHasTarget-Shape ,
+        :intellectualPropertyRightsRelation_role-Shape ;
     sh:targetClass rico:IntellectualPropertyRightsRelation ;
 .
 
@@ -579,7 +634,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "KnowingOfRelation Shape" ;
     prov:wasDerivedFrom rico:KnowingOfRelation ;
     sh:message "KnowingOfRelation validation" ;
-    sh:property :knowingOfRelation_role-Shape ;
+    sh:property
+        :KnowingOfRelationrelationHasSource-Shape ,
+        :KnowingOfRelationrelationHasTarget-Shape ,
+        :knowingOfRelation_role-Shape ;
     sh:targetClass rico:KnowingOfRelation ;
 .
 
@@ -589,7 +647,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "KnowingRelation Shape" ;
     prov:wasDerivedFrom rico:KnowingRelation ;
     sh:message "KnowingRelation validation" ;
-    sh:property :knowingRelation_role-Shape ;
+    sh:property
+        :KnowingRelationrelationConnects-Shape ,
+        :knowingRelation_role-Shape ;
     sh:targetClass rico:KnowingRelation ;
 .
 
@@ -613,6 +673,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     prov:wasDerivedFrom rico:LeadershipRelation ;
     sh:message "LeadershipRelation validation" ;
     sh:property
+        :LeadershipRelationleadershipWithPosition-Shape ,
+        :LeadershipRelationrelationHasSource-Shape ,
+        :LeadershipRelationrelationHasTarget-Shape ,
         :leadershipRelation_role-Shape ,
         :leadershipWithPosition-Shape ;
     sh:targetClass rico:LeadershipRelation ;
@@ -637,7 +700,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "ManagementRelation Shape" ;
     prov:wasDerivedFrom rico:ManagementRelation ;
     sh:message "ManagementRelation validation" ;
-    sh:property :managementRelation_role-Shape ;
+    sh:property
+        :ManagementRelationrelationHasSource-Shape ,
+        :ManagementRelationrelationHasTarget-Shape ,
+        :managementRelation_role-Shape ;
     sh:targetClass rico:ManagementRelation ;
 .
 
@@ -660,6 +726,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     prov:wasDerivedFrom rico:MandateRelation ;
     sh:message "MandateRelation validation" ;
     sh:property
+        :MandateRelationasConcernsActivity-Shape ,
+        :MandateRelationrelationHasSource-Shape ,
+        :MandateRelationrelationHasTarget-Shape ,
         :authorizingAgent-Shape ,
         :mandateRelation_role-Shape ;
     sh:targetClass rico:MandateRelation ;
@@ -682,6 +751,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     prov:wasDerivedFrom rico:MembershipRelation ;
     sh:message "MembershipRelation validation" ;
     sh:property
+        :MembershipRelationmembershipWithPosition-Shape ,
+        :MembershipRelationrelationHasSource-Shape ,
+        :MembershipRelationrelationHasTarget-Shape ,
         :membershipRelation_role-Shape ,
         :membershipWithPosition-Shape ;
     sh:targetClass rico:MembershipRelation ;
@@ -693,7 +765,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "MigrationRelation Shape" ;
     prov:wasDerivedFrom rico:MigrationRelation ;
     sh:message "MigrationRelation validation" ;
-    sh:property :migrationRelation_role-Shape ;
+    sh:property
+        :MigrationRelationrelationHasSource-Shape ,
+        :MigrationRelationrelationHasTarget-Shape ,
+        :migrationRelation_role-Shape ;
     sh:targetClass rico:MigrationRelation ;
 .
 
@@ -723,7 +798,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "OrganicOrFunctionalProvenanceRelation Shape" ;
     prov:wasDerivedFrom rico:OrganicOrFunctionalProvenanceRelation ;
     sh:message "OrganicOrFunctionalProvenanceRelation validation" ;
-    sh:property :organicOrFunctionalProvenanceRelation_role-Shape ;
+    sh:property
+        :OrganicOrFunctionalProvenanceRelationrelationHasSource-Shape ,
+        :OrganicOrFunctionalProvenanceRelationrelationHasTarget-Shape ,
+        :organicOrFunctionalProvenanceRelation_role-Shape ;
     sh:targetClass rico:OrganicOrFunctionalProvenanceRelation ;
 .
 
@@ -733,7 +811,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "OrganicProvenanceRelation Shape" ;
     prov:wasDerivedFrom rico:OrganicProvenanceRelation ;
     sh:message "OrganicProvenanceRelation validation" ;
-    sh:property :organicProvenanceRelation_role-Shape ;
+    sh:property
+        :OrganicProvenanceRelationrelationHasSource-Shape ,
+        :OrganicProvenanceRelationrelationHasTarget-Shape ,
+        :organicProvenanceRelation_role-Shape ;
     sh:targetClass rico:OrganicProvenanceRelation ;
 .
 
@@ -743,7 +824,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "OwnershipRelation Shape" ;
     prov:wasDerivedFrom rico:OwnershipRelation ;
     sh:message "OwnershipRelation validation" ;
-    sh:property :ownershipRelation_role-Shape ;
+    sh:property
+        :OwnershipRelationrelationHasSource-Shape ,
+        :OwnershipRelationrelationHasTarget-Shape ,
+        :ownershipRelation_role-Shape ;
     sh:targetClass rico:OwnershipRelation ;
 .
 
@@ -753,7 +837,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "PerformanceRelation Shape" ;
     prov:wasDerivedFrom rico:PerformanceRelation ;
     sh:message "PerformanceRelation validation" ;
-    sh:property :performanceRelation_role-Shape ;
+    sh:property
+        :PerformanceRelationrelationHasSource-Shape ,
+        :PerformanceRelationrelationHasTarget-Shape ,
+        :performanceRelation_role-Shape ;
     sh:targetClass rico:PerformanceRelation ;
 .
 
@@ -847,7 +934,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "PlaceRelation Shape" ;
     prov:wasDerivedFrom rico:PlaceRelation ;
     sh:message "PlaceRelation validation" ;
-    sh:property :placeRelation_role-Shape ;
+    sh:property
+        :PlaceRelationrelationHasSource-Shape ,
+        :PlaceRelationrelationHasTarget-Shape ,
+        :placeRelation_role-Shape ;
     sh:targetClass rico:PlaceRelation ;
 .
 
@@ -881,7 +971,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "PositionHoldingRelation Shape" ;
     prov:wasDerivedFrom rico:PositionHoldingRelation ;
     sh:message "PositionHoldingRelation validation" ;
-    sh:property :positionHoldingRelation_role-Shape ;
+    sh:property
+        :PositionHoldingRelationrelationHasSource-Shape ,
+        :PositionHoldingRelationrelationHasTarget-Shape ,
+        :positionHoldingRelation_role-Shape ;
     sh:targetClass rico:PositionHoldingRelation ;
 .
 
@@ -891,7 +984,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "PositionToGroupRelation Shape" ;
     prov:wasDerivedFrom rico:PositionToGroupRelation ;
     sh:message "PositionToGroupRelation validation" ;
-    sh:property :positionToGroupRelation_role-Shape ;
+    sh:property
+        :PositionToGroupRelationrelationHasSource-Shape ,
+        :PositionToGroupRelationrelationHasTarget-Shape ,
+        :positionToGroupRelation_role-Shape ;
     sh:targetClass rico:PositionToGroupRelation ;
 .
 
@@ -912,6 +1008,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     prov:wasDerivedFrom rico:Proxy ;
     sh:message "Proxy validation" ;
     sh:property
+        :ProxyproxyFor-Shape ,
+        :ProxyproxyIn-Shape ,
         :proxyFor-Shape ,
         :proxyIn-Shape ;
     sh:targetClass rico:Proxy ;
@@ -959,7 +1057,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "RecordResourceGeneticRelation Shape" ;
     prov:wasDerivedFrom rico:RecordResourceGeneticRelation ;
     sh:message "RecordResourceGeneticRelation validation" ;
-    sh:property :recordResourceGeneticRelation_role-Shape ;
+    sh:property
+        :RecordResourceGeneticRelationrelationConnects-Shape ,
+        :recordResourceGeneticRelation_role-Shape ;
     sh:targetClass rico:RecordResourceGeneticRelation ;
 .
 
@@ -969,7 +1069,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "RecordResourceHoldingRelation Shape" ;
     prov:wasDerivedFrom rico:RecordResourceHoldingRelation ;
     sh:message "RecordResourceHoldingRelation validation" ;
-    sh:property :recordResourceHoldingRelation_role-Shape ;
+    sh:property
+        :RecordResourceHoldingRelationrelationHasSource-Shape ,
+        :RecordResourceHoldingRelationrelationHasTarget-Shape ,
+        :recordResourceHoldingRelation_role-Shape ;
     sh:targetClass rico:RecordResourceHoldingRelation ;
 .
 
@@ -979,7 +1082,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "RecordResourceToInstantiationRelation Shape" ;
     prov:wasDerivedFrom rico:RecordResourceToInstantiationRelation ;
     sh:message "RecordResourceToInstantiationRelation validation" ;
-    sh:property :recordResourceToInstantiationRelation_role-Shape ;
+    sh:property
+        :RecordResourceToInstantiationRelationrelationHasSource-Shape ,
+        :RecordResourceToInstantiationRelationrelationHasTarget-Shape ,
+        :recordResourceToInstantiationRelation_role-Shape ;
     sh:targetClass rico:RecordResourceToInstantiationRelation ;
 .
 
@@ -989,7 +1095,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "RecordResourceToRecordResourceRelation Shape" ;
     prov:wasDerivedFrom rico:RecordResourceToRecordResourceRelation ;
     sh:message "RecordResourceToRecordResourceRelation validation" ;
-    sh:property :recordResourceToRecordResourceRelation_role-Shape ;
+    sh:property
+        :RecordResourceToRecordResourceRelationrelationConnects-Shape ,
+        :recordResourceToRecordResourceRelation_role-Shape ;
     sh:targetClass rico:RecordResourceToRecordResourceRelation ;
 .
 
@@ -1104,7 +1212,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "RuleRelation Shape" ;
     prov:wasDerivedFrom rico:RuleRelation ;
     sh:message "RuleRelation validation" ;
-    sh:property :ruleRelation_role-Shape ;
+    sh:property
+        :RuleRelationrelationHasSource-Shape ,
+        :RuleRelationrelationHasTarget-Shape ,
+        :ruleRelation_role-Shape ;
     sh:targetClass rico:RuleRelation ;
 .
 
@@ -1124,7 +1235,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "SequentialRelation Shape" ;
     prov:wasDerivedFrom rico:SequentialRelation ;
     sh:message "SequentialRelation validation" ;
-    sh:property :sequentialRelation_role-Shape ;
+    sh:property
+        :SequentialRelationrelationHasSource-Shape ,
+        :SequentialRelationrelationHasTarget-Shape ,
+        :sequentialRelation_role-Shape ;
     sh:targetClass rico:SequentialRelation ;
 .
 
@@ -1134,7 +1248,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "SiblingRelation Shape" ;
     prov:wasDerivedFrom rico:SiblingRelation ;
     sh:message "SiblingRelation validation" ;
-    sh:property :siblingRelation_role-Shape ;
+    sh:property
+        :SiblingRelationrelationConnects-Shape ,
+        :siblingRelation_role-Shape ;
     sh:targetClass rico:SiblingRelation ;
 .
 
@@ -1144,7 +1260,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "SpouseRelation Shape" ;
     prov:wasDerivedFrom rico:SpouseRelation ;
     sh:message "SpouseRelation validation" ;
-    sh:property :spouseRelation_role-Shape ;
+    sh:property
+        :SpouseRelationrelationConnects-Shape ,
+        :spouseRelation_role-Shape ;
     sh:targetClass rico:SpouseRelation ;
 .
 
@@ -1154,7 +1272,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "TeachingRelation Shape" ;
     prov:wasDerivedFrom rico:TeachingRelation ;
     sh:message "TeachingRelation validation" ;
-    sh:property :teachingRelation_role-Shape ;
+    sh:property
+        :TeachingRelationrelationHasSource-Shape ,
+        :TeachingRelationrelationHasTarget-Shape ,
+        :teachingRelation_role-Shape ;
     sh:targetClass rico:TeachingRelation ;
 .
 
@@ -1164,7 +1285,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "TemporalRelation Shape" ;
     prov:wasDerivedFrom rico:TemporalRelation ;
     sh:message "TemporalRelation validation" ;
-    sh:property :temporalRelation_role-Shape ;
+    sh:property
+        :TemporalRelationrelationHasSource-Shape ,
+        :TemporalRelationrelationHasTarget-Shape ,
+        :temporalRelation_role-Shape ;
     sh:targetClass rico:TemporalRelation ;
 .
 
@@ -1255,7 +1379,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "TypeRelation Shape" ;
     prov:wasDerivedFrom rico:TypeRelation ;
     sh:message "TypeRelation validation" ;
-    sh:property :typeRelation_role-Shape ;
+    sh:property
+        :TypeRelationrelationHasSource-Shape ,
+        :TypeRelationrelationHasTarget-Shape ,
+        :typeRelation_role-Shape ;
     sh:targetClass rico:TypeRelation ;
 .
 
@@ -1275,7 +1402,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "WholePartRelation Shape" ;
     prov:wasDerivedFrom rico:WholePartRelation ;
     sh:message "WholePartRelation validation" ;
-    sh:property :wholePartRelation_role-Shape ;
+    sh:property
+        :WholePartRelationrelationHasSource-Shape ,
+        :WholePartRelationrelationHasTarget-Shape ,
+        :wholePartRelation_role-Shape ;
     sh:targetClass rico:WholePartRelation ;
 .
 
@@ -1285,175 +1415,177 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:prefLabel "WorkRelation Shape" ;
     prov:wasDerivedFrom rico:WorkRelation ;
     sh:message "WorkRelation validation" ;
-    sh:property :workRelation_role-Shape ;
+    sh:property
+        :WorkRelationrelationConnects-Shape ,
+        :workRelation_role-Shape ;
     sh:targetClass rico:WorkRelation ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1013-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1013-Shape
     sh:property :isOrWasOwnerOf-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1060-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1060-Shape
     sh:property :isOriginalOf-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1202-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1202-Shape
     sh:property :wasConstituentOf-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1215-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1215-Shape
     sh:property :wasIncludedIn-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1532-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1532-Shape
     sh:property :asConcernsActivity-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1560-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1560-Shape
     sh:property :hasConstituentTransitive-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1570-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1570-Shape
     sh:property :hasCreator-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1594-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1594-Shape
     sh:property :hasOrHadDemographicGroup-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1610-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1610-Shape
     sh:property :hasOrHadManager-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1644-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1644-Shape
     sh:property :isConstituentOfTransitive-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1670-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1670-Shape
     sh:property :isIncludedInTransitive-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1845-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1845-Shape
     sh:property :hasAccumulator-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1865-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1865-Shape
     sh:property :hasOrHadConstituent-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1909-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1909-Shape
     sh:property :hasOrganicOrFunctionalProvenance-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1952-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1952-Shape
     sh:property :isOrWasConstituentOf-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb1973-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b1973-Shape
     sh:property :isOrWasIncludedIn-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb2004-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b2004-Shape
     sh:property :isOrganicOrFunctionalProvenanceOf-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb2266-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b2266-Shape
     sh:property :hasOrganicProvenance-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb308-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b308-Shape
     sh:property :documents-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb344-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b344-Shape
     sh:property :hadConstituent-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb363-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b363-Shape
     sh:property :hasAddressee-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb397-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b397-Shape
     sh:property :hasCollector-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb404-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b404-Shape
     sh:property :hasContentOfType-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb413-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b413-Shape
     sh:property :hasCreationDate-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb434-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b434-Shape
     sh:property :hasDirectConstituent-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb450-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b450-Shape
     sh:property :hasDocumentaryFormType-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb457-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b457-Shape
     sh:property :hasDraft-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb522-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b522-Shape
     sh:property :hasOrHadHolder-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb535-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b535-Shape
     sh:property :hasOrHadIntellectualPropertyRightsHolder-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb553-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b553-Shape
     sh:property :hasOrHadLanguage-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb568-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b568-Shape
     sh:property :hasOrHadLegalStatus-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb654-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b654-Shape
     sh:property :hasOrHadTitle-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb661-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b661-Shape
     sh:property :hasOriginal-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb678-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b678-Shape
     sh:property :hasReceiver-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb689-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b689-Shape
     sh:property :hasRecordState-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb701-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b701-Shape
     sh:property :hasSender-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb727-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b727-Shape
     sh:property :isAuthorOf-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb798-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b798-Shape
     sh:property :isDirectConstituentOf-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb817-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b817-Shape
     sh:property :isDirectlyIncludedIn-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb829-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b829-Shape
     sh:property :isDraftOf-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb911-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b911-Shape
     sh:property :isOrWasEmployerOf-Shape ;
 .
 
-:n0665a1a3b583462e840c35d0993ccfdbb933-Shape
+:n659bfbb6d70e4bbdb6de3567758f06b3b933-Shape
     sh:property :isOrWasHolderOfIntellectualPropertyRightsOf-Shape ;
 .
 
@@ -1461,6 +1593,1777 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a schema:Person ;
     schema:email "lawson@kurrawong.ai"^^xsd:anyURI ;
     schema:name "Lawson Lewis" ;
+.
+
+:AccumulationRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:AccumulationRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:RecordResource
+	- rico:Instantiation
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:RecordResource ;
+        ]
+        
+        [
+            sh:class rico:Instantiation ;
+        ]
+    ) ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:AccumulationRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:AccumulationRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Agent
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:ActivityDocumentationRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:ActivityDocumentationRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:RecordResource
+	- rico:Instantiation
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:RecordResource ;
+        ]
+        
+        [
+            sh:class rico:Instantiation ;
+        ]
+    ) ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:ActivityDocumentationRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Activity ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:ActivityDocumentationRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Activity
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:AgentControlRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:AgentControlRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Agent
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:AgentControlRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:AgentControlRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Agent
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:AgentHierarchicalRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:AgentHierarchicalRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Agent
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:AgentHierarchicalRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:AgentHierarchicalRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Agent
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:AgentTemporalRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:AgentTemporalRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Agent
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:AgentTemporalRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:AgentTemporalRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Agent
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:AgentToAgentRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:AgentToAgentRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:Agent
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
+.
+
+:AppellationRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Appellation ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:AppellationRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Appellation
+""" ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:AppellationRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:AppellationRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Thing
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:AuthorityRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:AuthorityRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Agent
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:AuthorityRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:AuthorityRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Thing
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:AuthorshipRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Record ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:AuthorshipRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Record
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:AuthorshipRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:AuthorshipRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Person
+	- rico:Group
+	- rico:Position
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:Person ;
+        ]
+        
+        [
+            sh:class rico:Group ;
+        ]
+        
+        [
+            sh:class rico:Position ;
+        ]
+    ) ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:ChildRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:ChildRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Person
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:ChildRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:ChildRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Person
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:CorrespondenceRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:CorrespondenceRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:Person
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
+.
+
+:CreationRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:CreationRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:RecordResource
+	- rico:Instantiation
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:RecordResource ;
+        ]
+        
+        [
+            sh:class rico:Instantiation ;
+        ]
+    ) ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:CreationRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:CreationRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Agent
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:DerivationRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Instantiation ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:DerivationRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Instantiation
+""" ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:DerivationRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Instantiation ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:DerivationRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Instantiation
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:DescendanceRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:DescendanceRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Person
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:DescendanceRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:DescendanceRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Person
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:EventRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Event ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:EventRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Event
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:EventRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:EventRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Thing
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:FamilyRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:FamilyRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:Person
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
+.
+
+:FunctionalEquivalenceRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:Instantiation ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:FunctionalEquivalenceRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:Instantiation
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
+.
+
+:GroupSubdivisionRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Group ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:GroupSubdivisionRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Group
+""" ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:GroupSubdivisionRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Group ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:GroupSubdivisionRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Group
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:InstantiationToInstantiationRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:Instantiation ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:InstantiationToInstantiationRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:Instantiation
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
+.
+
+:IntellectualPropertyRightsRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:IntellectualPropertyRightsRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Position
+	- rico:Person
+	- rico:Group
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:Position ;
+        ]
+        
+        [
+            sh:class rico:Person ;
+        ]
+        
+        [
+            sh:class rico:Group ;
+        ]
+    ) ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:IntellectualPropertyRightsRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:IntellectualPropertyRightsRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:RecordResource
+	- rico:Instantiation
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:RecordResource ;
+        ]
+        
+        [
+            sh:class rico:Instantiation ;
+        ]
+    ) ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:KnowingOfRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:KnowingOfRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Person
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:KnowingOfRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:KnowingOfRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Person
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:KnowingRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:KnowingRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:Person
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
+.
+
+:LeadershipRelationleadershipWithPosition-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "leadershipWithPosition Shape" ;
+    prov:wasDerivedFrom rico:leadershipWithPosition ;
+    sh:class rico:Position ;
+    sh:maxCount 1 ;
+    sh:message """
+The subject of a rico:leadershipWithPosition statement must be one of:
+	- rico:LeadershipRelation
+
+The object of a rico:leadershipWithPosition statement must be one of:
+	- rico:Position
+
+The rico:leadershipWithPosition property MUST:
+	- Appear no more than 0 times""" ;
+    sh:path rico:leadershipWithPosition ;
+    sh:severity sh:Violation ;
+.
+
+:LeadershipRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:LeadershipRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Person
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:LeadershipRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Group ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:LeadershipRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Group
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:ManagementRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:ManagementRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Agent
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:ManagementRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:ManagementRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Instantiation
+	- rico:RecordResource
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:Instantiation ;
+        ]
+        
+        [
+            sh:class rico:RecordResource ;
+        ]
+    ) ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:MandateRelationasConcernsActivity-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "asConcernsActivity Shape" ;
+    prov:wasDerivedFrom rico:asConcernsActivity ;
+    sh:class rico:Activity ;
+    sh:message """
+The subject of a rico:asConcernsActivity statement must be one of:
+	- rico:MandateRelation
+
+The object of a rico:asConcernsActivity statement must be one of:
+	- rico:Activity
+
+The rico:asConcernsActivity property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:asConcernsActivity ;
+    sh:severity sh:Violation ;
+.
+
+:MandateRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Mandate ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:MandateRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Mandate
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:MandateRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:MandateRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Agent
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:MembershipRelationmembershipWithPosition-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "membershipWithPosition Shape" ;
+    prov:wasDerivedFrom rico:membershipWithPosition ;
+    sh:class rico:Position ;
+    sh:maxCount 1 ;
+    sh:message """
+The subject of a rico:membershipWithPosition statement must be one of:
+	- rico:MembershipRelation
+
+The object of a rico:membershipWithPosition statement must be one of:
+	- rico:Position
+
+The rico:membershipWithPosition property MUST:
+	- Appear no more than 0 times""" ;
+    sh:path rico:membershipWithPosition ;
+    sh:severity sh:Violation ;
+.
+
+:MembershipRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Group ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:MembershipRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Group
+""" ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:MembershipRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:MembershipRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Person
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:MigrationRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Instantiation ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:MigrationRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Instantiation
+""" ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:MigrationRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Instantiation ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:MigrationRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Instantiation
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:OrganicOrFunctionalProvenanceRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:OrganicOrFunctionalProvenanceRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Instantiation
+	- rico:RecordResource
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:Instantiation ;
+        ]
+        
+        [
+            sh:class rico:RecordResource ;
+        ]
+    ) ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:OrganicOrFunctionalProvenanceRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:OrganicOrFunctionalProvenanceRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Agent
+	- rico:Activity
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:Agent ;
+        ]
+        
+        [
+            sh:class rico:Activity ;
+        ]
+    ) ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:OrganicProvenanceRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:OrganicProvenanceRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Instantiation
+	- rico:RecordResource
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:Instantiation ;
+        ]
+        
+        [
+            sh:class rico:RecordResource ;
+        ]
+    ) ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:OrganicProvenanceRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:OrganicProvenanceRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Agent
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:OwnershipRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:OwnershipRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Position
+	- rico:Group
+	- rico:Person
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:Position ;
+        ]
+        
+        [
+            sh:class rico:Group ;
+        ]
+        
+        [
+            sh:class rico:Person ;
+        ]
+    ) ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:OwnershipRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:OwnershipRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Thing
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:PerformanceRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Activity ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:PerformanceRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Activity
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:PerformanceRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:PerformanceRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Agent
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:PlaceRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Place ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:PlaceRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Place
+""" ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:PlaceRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:PlaceRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Thing
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:PositionHoldingRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:PositionHoldingRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Person
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:PositionHoldingRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Position ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:PositionHoldingRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Position
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:PositionToGroupRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Position ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:PositionToGroupRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Position
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:PositionToGroupRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Group ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:PositionToGroupRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Group
+""" ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:ProxyproxyFor-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "proxyFor Shape" ;
+    prov:wasDerivedFrom rico:proxyFor ;
+    sh:class rico:RecordResource ;
+    sh:message """
+The subject of a rico:proxyFor statement must be one of:
+	- rico:Proxy
+
+The object of a rico:proxyFor statement must be one of:
+	- rico:RecordResource
+""" ;
+    sh:path rico:proxyFor ;
+    sh:severity sh:Violation ;
+.
+
+:ProxyproxyIn-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "proxyIn Shape" ;
+    prov:wasDerivedFrom rico:proxyIn ;
+    sh:class rico:RecordSet ;
+    sh:message """
+The subject of a rico:proxyIn statement must be one of:
+	- rico:Proxy
+
+The object of a rico:proxyIn statement must be one of:
+	- rico:RecordSet
+""" ;
+    sh:path rico:proxyIn ;
+    sh:severity sh:Violation ;
+.
+
+:RecordResourceGeneticRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:RecordResource ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:RecordResourceGeneticRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:RecordResource
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
+.
+
+:RecordResourceHoldingRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:RecordResourceHoldingRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Agent
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:RecordResourceHoldingRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:RecordResourceHoldingRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:RecordResource
+	- rico:Instantiation
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class rico:RecordResource ;
+        ]
+        
+        [
+            sh:class rico:Instantiation ;
+        ]
+    ) ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:RecordResourceToInstantiationRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:RecordResource ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:RecordResourceToInstantiationRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:RecordResource
+""" ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:RecordResourceToInstantiationRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Instantiation ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:RecordResourceToInstantiationRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Instantiation
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:RecordResourceToRecordResourceRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:RecordResource ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:RecordResourceToRecordResourceRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:RecordResource
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
+.
+
+:RuleRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Rule ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:RuleRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Rule
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:RuleRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:RuleRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Thing
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:SequentialRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:SequentialRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Thing
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:SequentialRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:SequentialRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Thing
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:SiblingRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:SiblingRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:Person
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
+.
+
+:SpouseRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:SpouseRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:Person
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
+.
+
+:TeachingRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:TeachingRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Person
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:TeachingRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Person ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:TeachingRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Person
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:TemporalRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:TemporalRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Thing
+
+The rico:relationHasSource property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:TemporalRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:TemporalRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Thing
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:TypeRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Type ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:TypeRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Type
+""" ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:TypeRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:TypeRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Thing
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:WholePartRelationrelationHasSource-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasSource Shape" ;
+    prov:wasDerivedFrom rico:relationHasSource ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasSource statement must be one of:
+	- rico:WholePartRelation
+
+The object of a rico:relationHasSource statement must be one of:
+	- rico:Thing
+""" ;
+    sh:path rico:relationHasSource ;
+    sh:severity sh:Violation ;
+.
+
+:WholePartRelationrelationHasTarget-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationHasTarget Shape" ;
+    prov:wasDerivedFrom rico:relationHasTarget ;
+    sh:class rico:Thing ;
+    sh:message """
+The subject of a rico:relationHasTarget statement must be one of:
+	- rico:WholePartRelation
+
+The object of a rico:relationHasTarget statement must be one of:
+	- rico:Thing
+
+The rico:relationHasTarget property MUST:
+	- Appear at least 1 times""" ;
+    sh:minCount 1 ;
+    sh:path rico:relationHasTarget ;
+    sh:severity sh:Violation ;
+.
+
+:WorkRelationrelationConnects-Shape
+    a sh:PropertyShape ;
+    skos:prefLabel "relationConnects Shape" ;
+    prov:wasDerivedFrom rico:relationConnects ;
+    sh:class rico:Agent ;
+    sh:message """
+The subject of a rico:relationConnects statement must be one of:
+	- rico:WorkRelation
+
+The object of a rico:relationConnects statement must be one of:
+	- rico:Agent
+
+The rico:relationConnects property MUST:
+	- Appear at least 2 times""" ;
+    sh:minCount 2 ;
+    sh:path rico:relationConnects ;
+    sh:severity sh:Violation ;
 .
 
 :accumulationRelation_role-Shape
@@ -1508,7 +3411,7 @@ The subject of a rico:activityIsContextOfRelation statement must be one of:
 	- rico:Activity
 
 The object of a rico:activityIsContextOfRelation statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb244
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b244
 """ ;
     sh:path rico:activityIsContextOfRelation ;
     sh:severity sh:Warning ;
@@ -1633,7 +3536,7 @@ The object of a rico:appellationRelation_role statement must be one of:
     sh:class rico:Activity ;
     sh:message """
 The subject of a rico:asConcernsActivity statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1532
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1532
 
 The object of a rico:asConcernsActivity statement must be one of:
 	- rico:Activity
@@ -1927,7 +3830,7 @@ The subject of a rico:directlyIncludes statement must be one of:
 	- rico:RecordSet
 
 The object of a rico:directlyIncludes statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb287
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b287
 """ ;
     sh:path rico:directlyIncludes ;
     sh:severity sh:Warning ;
@@ -1962,7 +3865,7 @@ The subject of a rico:documentedBy statement must be one of:
 	- rico:Activity
 
 The object of a rico:documentedBy statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb297
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b297
 """ ;
     sh:path rico:documentedBy ;
     sh:severity sh:Warning ;
@@ -1975,7 +3878,7 @@ The object of a rico:documentedBy statement must be one of:
     sh:class rico:Activity ;
     sh:message """
 The subject of a rico:documents statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb308
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b308
 
 The object of a rico:documents statement must be one of:
 	- rico:Activity
@@ -2186,10 +4089,10 @@ The object of a rico:hadComponent statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:hadConstituent statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb344
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b344
 
 The object of a rico:hadConstituent statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb347
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b347
 """ ;
     sh:path rico:hadConstituent ;
     sh:severity sh:Warning ;
@@ -2266,7 +4169,7 @@ The object of a rico:hadSubordinate statement must be one of:
     sh:class rico:Agent ;
     sh:message """
 The subject of a rico:hasAccumulator statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1845
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1845
 
 The object of a rico:hasAccumulator statement must be one of:
 	- rico:Agent
@@ -2298,7 +4201,7 @@ The object of a rico:hasActivityType statement must be one of:
     sh:class rico:Agent ;
     sh:message """
 The subject of a rico:hasAddressee statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb363
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b363
 
 The object of a rico:hasAddressee statement must be one of:
 	- rico:Agent
@@ -2336,7 +4239,7 @@ The subject of a rico:hasAuthor statement must be one of:
 	- rico:Record
 
 The object of a rico:hasAuthor statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb369
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b369
 """ ;
     sh:path rico:hasAuthor ;
     sh:severity sh:Warning ;
@@ -2429,7 +4332,7 @@ The object of a rico:hasChild statement must be one of:
     sh:class rico:Agent ;
     sh:message """
 The subject of a rico:hasCollector statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb397
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b397
 
 The object of a rico:hasCollector statement must be one of:
 	- rico:Agent
@@ -2464,10 +4367,10 @@ The object of a rico:hasComponentTransitive statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:hasConstituentTransitive statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1560
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1560
 
 The object of a rico:hasConstituentTransitive statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1563
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1563
 """ ;
     sh:path rico:hasConstituentTransitive ;
     sh:severity sh:Warning ;
@@ -2480,7 +4383,7 @@ The object of a rico:hasConstituentTransitive statement must be one of:
     sh:class rico:ContentType ;
     sh:message """
 The subject of a rico:hasContentOfType statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb404
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b404
 
 The object of a rico:hasContentOfType statement must be one of:
 	- rico:ContentType
@@ -2512,7 +4415,7 @@ The object of a rico:hasCopy statement must be one of:
     sh:class rico:Date ;
     sh:message """
 The subject of a rico:hasCreationDate statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb413
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b413
 
 The object of a rico:hasCreationDate statement must be one of:
 	- rico:Date
@@ -2528,7 +4431,7 @@ The object of a rico:hasCreationDate statement must be one of:
     sh:class rico:Agent ;
     sh:message """
 The subject of a rico:hasCreator statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1570
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1570
 
 The object of a rico:hasCreator statement must be one of:
 	- rico:Agent
@@ -2643,10 +4546,10 @@ The object of a rico:hasDirectComponent statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:hasDirectConstituent statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb434
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b434
 
 The object of a rico:hasDirectConstituent statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb437
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b437
 """ ;
     sh:path rico:hasDirectConstituent ;
     sh:severity sh:Warning ;
@@ -2723,7 +4626,7 @@ The object of a rico:hasDirectSubordinate statement must be one of:
     sh:class rico:DocumentaryFormType ;
     sh:message """
 The subject of a rico:hasDocumentaryFormType statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb450
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b450
 
 The object of a rico:hasDocumentaryFormType statement must be one of:
 	- rico:DocumentaryFormType
@@ -2742,10 +4645,10 @@ The object of a rico:hasDocumentaryFormType statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:hasDraft statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb457
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b457
 
 The object of a rico:hasDraft statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb460
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b460
 """ ;
     sh:path rico:hasDraft ;
     sh:severity sh:Warning ;
@@ -3113,10 +5016,10 @@ The object of a rico:hasOrHadComponent statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:hasOrHadConstituent statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1865
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1865
 
 The object of a rico:hasOrHadConstituent statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1868
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1868
 """ ;
     sh:path rico:hasOrHadConstituent ;
     sh:severity sh:Warning ;
@@ -3193,7 +5096,7 @@ The object of a rico:hasOrHadCorrespondent statement must be one of:
     sh:class rico:DemographicGroup ;
     sh:message """
 The subject of a rico:hasOrHadDemographicGroup statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1594
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1594
 
 The object of a rico:hasOrHadDemographicGroup statement must be one of:
 	- rico:DemographicGroup
@@ -3247,7 +5150,7 @@ The subject of a rico:hasOrHadEmployer statement must be one of:
 	- rico:Person
 
 The object of a rico:hasOrHadEmployer statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb515
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b515
 """ ;
     sh:path rico:hasOrHadEmployer ;
     sh:severity sh:Warning ;
@@ -3260,7 +5163,7 @@ The object of a rico:hasOrHadEmployer statement must be one of:
     sh:class rico:Agent ;
     sh:message """
 The subject of a rico:hasOrHadHolder statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb522
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b522
 
 The object of a rico:hasOrHadHolder statement must be one of:
 	- rico:Agent
@@ -3311,10 +5214,10 @@ The object of a rico:hasOrHadInstantiation statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:hasOrHadIntellectualPropertyRightsHolder statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb535
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b535
 
 The object of a rico:hasOrHadIntellectualPropertyRightsHolder statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb538
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b538
 """ ;
     sh:path rico:hasOrHadIntellectualPropertyRightsHolder ;
     sh:severity sh:Warning ;
@@ -3343,7 +5246,7 @@ The object of a rico:hasOrHadJurisdiction statement must be one of:
     sh:class rico:Language ;
     sh:message """
 The subject of a rico:hasOrHadLanguage statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb553
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b553
 
 The object of a rico:hasOrHadLanguage statement must be one of:
 	- rico:Language
@@ -3375,7 +5278,7 @@ The object of a rico:hasOrHadLeader statement must be one of:
     sh:class rico:LegalStatus ;
     sh:message """
 The subject of a rico:hasOrHadLegalStatus statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb568
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b568
 
 The object of a rico:hasOrHadLegalStatus statement must be one of:
 	- rico:LegalStatus
@@ -3423,7 +5326,7 @@ The object of a rico:hasOrHadMainSubject statement must be one of:
     sh:class rico:Agent ;
     sh:message """
 The subject of a rico:hasOrHadManager statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1610
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1610
 
 The object of a rico:hasOrHadManager statement must be one of:
 	- rico:Agent
@@ -3525,7 +5428,7 @@ The subject of a rico:hasOrHadOwner statement must be one of:
 	- rico:Thing
 
 The object of a rico:hasOrHadOwner statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb594
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b594
 """ ;
     sh:path rico:hasOrHadOwner ;
     sh:severity sh:Warning ;
@@ -3874,7 +5777,7 @@ The object of a rico:hasOrHadTeacher statement must be one of:
     sh:class rico:Title ;
     sh:message """
 The subject of a rico:hasOrHadTitle statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb654
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b654
 
 The object of a rico:hasOrHadTitle statement must be one of:
 	- rico:Title
@@ -3909,10 +5812,10 @@ The object of a rico:hasOrHadWorkRelationWith statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:hasOrganicOrFunctionalProvenance statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1909
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1909
 
 The object of a rico:hasOrganicOrFunctionalProvenance statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1912
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1912
 """ ;
     sh:path rico:hasOrganicOrFunctionalProvenance ;
     sh:severity sh:Warning ;
@@ -3925,7 +5828,7 @@ The object of a rico:hasOrganicOrFunctionalProvenance statement must be one of:
     sh:class rico:Agent ;
     sh:message """
 The subject of a rico:hasOrganicProvenance statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb2266
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b2266
 
 The object of a rico:hasOrganicProvenance statement must be one of:
 	- rico:Agent
@@ -3944,10 +5847,10 @@ The object of a rico:hasOrganicProvenance statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:hasOriginal statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb661
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b661
 
 The object of a rico:hasOriginal statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb664
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b664
 """ ;
     sh:path rico:hasOriginal ;
     sh:severity sh:Warning ;
@@ -4024,7 +5927,7 @@ The object of a rico:hasPublisher statement must be one of:
     sh:class rico:Agent ;
     sh:message """
 The subject of a rico:hasReceiver statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb678
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b678
 
 The object of a rico:hasReceiver statement must be one of:
 	- rico:Agent
@@ -4056,7 +5959,7 @@ The object of a rico:hasRecordSetType statement must be one of:
     sh:class rico:RecordState ;
     sh:message """
 The subject of a rico:hasRecordState statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb689
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b689
 
 The object of a rico:hasRecordState statement must be one of:
 	- rico:RecordState
@@ -4104,7 +6007,7 @@ The object of a rico:hasRepresentationType statement must be one of:
     sh:class rico:Agent ;
     sh:message """
 The subject of a rico:hasSender statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb701
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b701
 
 The object of a rico:hasSender statement must be one of:
 	- rico:Agent
@@ -4238,7 +6141,7 @@ The subject of a rico:included statement must be one of:
 	- rico:RecordSet
 
 The object of a rico:included statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb713
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b713
 """ ;
     sh:path rico:included ;
     sh:severity sh:Warning ;
@@ -4257,7 +6160,7 @@ The subject of a rico:includesOrIncluded statement must be one of:
 	- rico:RecordSet
 
 The object of a rico:includesOrIncluded statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1923
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1923
 """ ;
     sh:path rico:includesOrIncluded ;
     sh:severity sh:Warning ;
@@ -4276,7 +6179,7 @@ The subject of a rico:includesTransitive statement must be one of:
 	- rico:RecordSet
 
 The object of a rico:includesTransitive statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1635
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1635
 """ ;
     sh:path rico:includesTransitive ;
     sh:severity sh:Warning ;
@@ -4343,7 +6246,7 @@ The subject of a rico:isAccumulatorOf statement must be one of:
 	- rico:Agent
 
 The object of a rico:isAccumulatorOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1931
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1931
 """ ;
     sh:path rico:isAccumulatorOf ;
     sh:severity sh:Warning ;
@@ -4378,7 +6281,7 @@ The subject of a rico:isAddresseeOf statement must be one of:
 	- rico:Agent
 
 The object of a rico:isAddresseeOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb722
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b722
 """ ;
     sh:path rico:isAddresseeOf ;
     sh:severity sh:Warning ;
@@ -4487,7 +6390,7 @@ The object of a rico:isAssociatedWithRule statement must be one of:
     sh:class rico:Record ;
     sh:message """
 The subject of a rico:isAuthorOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb727
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b727
 
 The object of a rico:isAuthorOf statement must be one of:
 	- rico:Record
@@ -4605,7 +6508,7 @@ The subject of a rico:isCollectorOf statement must be one of:
 	- rico:Agent
 
 The object of a rico:isCollectorOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb757
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b757
 """ ;
     sh:path rico:isCollectorOf ;
     sh:severity sh:Warning ;
@@ -4637,10 +6540,10 @@ The object of a rico:isComponentOfTransitive statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:isConstituentOfTransitive statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1644
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1644
 
 The object of a rico:isConstituentOfTransitive statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1647
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1647
 """ ;
     sh:path rico:isConstituentOfTransitive ;
     sh:severity sh:Warning ;
@@ -4675,7 +6578,7 @@ The subject of a rico:isContentTypeOf statement must be one of:
 	- rico:ContentType
 
 The object of a rico:isContentTypeOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb763
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b763
 """ ;
     sh:path rico:isContentTypeOf ;
     sh:severity sh:Warning ;
@@ -4710,7 +6613,7 @@ The subject of a rico:isCreationDateOf statement must be one of:
 	- rico:Date
 
 The object of a rico:isCreationDateOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb771
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b771
 """ ;
     sh:path rico:isCreationDateOf ;
     sh:severity sh:Warning ;
@@ -4729,7 +6632,7 @@ The subject of a rico:isCreatorOf statement must be one of:
 	- rico:Agent
 
 The object of a rico:isCreatorOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1657
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1657
 """ ;
     sh:path rico:isCreatorOf ;
     sh:severity sh:Warning ;
@@ -4857,10 +6760,10 @@ The object of a rico:isDirectComponentOf statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:isDirectConstituentOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb798
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b798
 
 The object of a rico:isDirectConstituentOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb801
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b801
 """ ;
     sh:path rico:isDirectConstituentOf ;
     sh:severity sh:Warning ;
@@ -4953,7 +6856,7 @@ The object of a rico:isDirectlyContainedBy statement must be one of:
     sh:class rico:RecordSet ;
     sh:message """
 The subject of a rico:isDirectlyIncludedIn statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb817
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b817
 
 The object of a rico:isDirectlyIncludedIn statement must be one of:
 	- rico:RecordSet
@@ -4975,7 +6878,7 @@ The subject of a rico:isDocumentaryFormTypeOf statement must be one of:
 	- rico:DocumentaryFormType
 
 The object of a rico:isDocumentaryFormTypeOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb823
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b823
 """ ;
     sh:path rico:isDocumentaryFormTypeOf ;
     sh:severity sh:Warning ;
@@ -4991,10 +6894,10 @@ The object of a rico:isDocumentaryFormTypeOf statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:isDraftOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb829
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b829
 
 The object of a rico:isDraftOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb832
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b832
 """ ;
     sh:path rico:isDraftOf ;
     sh:severity sh:Warning ;
@@ -5183,7 +7086,7 @@ The object of a rico:isIdentifierTypeOf statement must be one of:
     sh:class rico:RecordSet ;
     sh:message """
 The subject of a rico:isIncludedInTransitive statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1670
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1670
 
 The object of a rico:isIncludedInTransitive statement must be one of:
 	- rico:RecordSet
@@ -5394,10 +7297,10 @@ The object of a rico:isOrWasComponentOf statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:isOrWasConstituentOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1952
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1952
 
 The object of a rico:isOrWasConstituentOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1955
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1955
 """ ;
     sh:path rico:isOrWasConstituentOf ;
     sh:severity sh:Warning ;
@@ -5560,7 +7463,7 @@ The subject of a rico:isOrWasDemographicGroupOf statement must be one of:
 	- rico:DemographicGroup
 
 The object of a rico:isOrWasDemographicGroupOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1682
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1682
 """ ;
     sh:path rico:isOrWasDemographicGroupOf ;
     sh:severity sh:Warning ;
@@ -5653,7 +7556,7 @@ The object of a rico:isOrWasDocumentaryFormTypeOfSomeMembersOf statement must be
     sh:class rico:Person ;
     sh:message """
 The subject of a rico:isOrWasEmployerOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb911
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b911
 
 The object of a rico:isOrWasEmployerOf statement must be one of:
 	- rico:Person
@@ -5707,7 +7610,7 @@ The subject of a rico:isOrWasHolderOf statement must be one of:
 	- rico:Agent
 
 The object of a rico:isOrWasHolderOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb923
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b923
 """ ;
     sh:path rico:isOrWasHolderOf ;
     sh:severity sh:Warning ;
@@ -5723,10 +7626,10 @@ The object of a rico:isOrWasHolderOf statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:isOrWasHolderOfIntellectualPropertyRightsOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb933
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b933
 
 The object of a rico:isOrWasHolderOfIntellectualPropertyRightsOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb937
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b937
 """ ;
     sh:path rico:isOrWasHolderOfIntellectualPropertyRightsOf ;
     sh:severity sh:Warning ;
@@ -5755,7 +7658,7 @@ The object of a rico:isOrWasIdentifierOf statement must be one of:
     sh:class rico:RecordSet ;
     sh:message """
 The subject of a rico:isOrWasIncludedIn statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1973
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1973
 
 The object of a rico:isOrWasIncludedIn statement must be one of:
 	- rico:RecordSet
@@ -5809,7 +7712,7 @@ The subject of a rico:isOrWasLanguageOf statement must be one of:
 	- rico:Language
 
 The object of a rico:isOrWasLanguageOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb955
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b955
 """ ;
     sh:path rico:isOrWasLanguageOf ;
     sh:severity sh:Warning ;
@@ -5876,7 +7779,7 @@ The subject of a rico:isOrWasLegalStatusOf statement must be one of:
 	- rico:LegalStatus
 
 The object of a rico:isOrWasLegalStatusOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb975
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b975
 """ ;
     sh:path rico:isOrWasLegalStatusOf ;
     sh:severity sh:Warning ;
@@ -5975,7 +7878,7 @@ The subject of a rico:isOrWasManagerOf statement must be one of:
 	- rico:Agent
 
 The object of a rico:isOrWasManagerOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1699
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1699
 """ ;
     sh:path rico:isOrWasManagerOf ;
     sh:severity sh:Warning ;
@@ -6068,7 +7971,7 @@ The object of a rico:isOrWasOccupiedBy statement must be one of:
     sh:class rico:Thing ;
     sh:message """
 The subject of a rico:isOrWasOwnerOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1013
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1013
 
 The object of a rico:isOrWasOwnerOf statement must be one of:
 	- rico:Thing
@@ -6330,7 +8233,7 @@ The subject of a rico:isOrWasTitleOf statement must be one of:
 	- rico:Title
 
 The object of a rico:isOrWasTitleOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1053
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1053
 """ ;
     sh:path rico:isOrWasTitleOf ;
     sh:severity sh:Warning ;
@@ -6362,10 +8265,10 @@ The object of a rico:isOrWasUnderAuthorityOf statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:isOrganicOrFunctionalProvenanceOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb2004
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b2004
 
 The object of a rico:isOrganicOrFunctionalProvenanceOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb2007
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b2007
 """ ;
     sh:path rico:isOrganicOrFunctionalProvenanceOf ;
     sh:severity sh:Warning ;
@@ -6384,7 +8287,7 @@ The subject of a rico:isOrganicProvenanceOf statement must be one of:
 	- rico:Agent
 
 The object of a rico:isOrganicProvenanceOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb2307
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b2307
 """ ;
     sh:path rico:isOrganicProvenanceOf ;
     sh:severity sh:Warning ;
@@ -6400,10 +8303,10 @@ The object of a rico:isOrganicProvenanceOf statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:isOriginalOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1060
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1060
 
 The object of a rico:isOriginalOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1063
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1063
 """ ;
     sh:path rico:isOriginalOf ;
     sh:severity sh:Warning ;
@@ -6518,7 +8421,7 @@ The subject of a rico:isReceiverOf statement must be one of:
 	- rico:Agent
 
 The object of a rico:isReceiverOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1077
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1077
 """ ;
     sh:path rico:isReceiverOf ;
     sh:severity sh:Warning ;
@@ -6569,7 +8472,7 @@ The subject of a rico:isRecordStateOf statement must be one of:
 	- rico:RecordState
 
 The object of a rico:isRecordStateOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1086
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1086
 """ ;
     sh:path rico:isRecordStateOf ;
     sh:severity sh:Warning ;
@@ -6668,7 +8571,7 @@ The subject of a rico:isSenderOf statement must be one of:
 	- rico:Agent
 
 The object of a rico:isSenderOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1100
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1100
 """ ;
     sh:path rico:isSenderOf ;
     sh:severity sh:Warning ;
@@ -7772,10 +9675,10 @@ The object of a rico:wasComponentOf statement must be one of:
         ] ;
     sh:message """
 The subject of a rico:wasConstituentOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1202
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1202
 
 The object of a rico:wasConstituentOf statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1205
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1205
 """ ;
     sh:path rico:wasConstituentOf ;
     sh:severity sh:Warning ;
@@ -7804,7 +9707,7 @@ The object of a rico:wasContainedBy statement must be one of:
     sh:class rico:RecordSet ;
     sh:message """
 The subject of a rico:wasIncludedIn statement must be one of:
-	- _:n0665a1a3b583462e840c35d0993ccfdbb1215
+	- _:n659bfbb6d70e4bbdb6de3567758f06b3b1215
 
 The object of a rico:wasIncludedIn statement must be one of:
 	- rico:RecordSet
@@ -7999,15 +9902,15 @@ ont:
     a owl:Ontology ;
     owl:versionIRI :0.0.1 ;
     owl:versionInfo ":0.0.1 Generated by OntoShacl:v0.1.0 <https://github.com/Kurrawong/ontoshacl>" ;
-    skos:historyNote "Automatically generated by OntoShacl on 2026-02-02" ;
+    skos:historyNote "Automatically generated by OntoShacl on 2026-02-03" ;
     prov:wasDerivedFrom rico: ;
     schema:codeRepository "https://github.com/kurrawong/ontoshacl"^^xsd:anyURI ;
     schema:copyrightHolder <https://kurrawong.ai> ;
     schema:copyrightYear 2026 ;
     schema:creator <https://kurrawong.ai/people#lawson-lewis> ;
-    schema:dateCreated "2026-02-02"^^xsd:date ;
-    schema:dateIssued "2026-02-02"^^xsd:date ;
-    schema:dateModified "2026-02-02"^^xsd:date ;
+    schema:dateCreated "2026-02-03"^^xsd:date ;
+    schema:dateIssued "2026-02-03"^^xsd:date ;
+    schema:dateModified "2026-02-03"^^xsd:date ;
     schema:description "OntoShacl generated validator for https://www.ica.org/standards/RiC/ontology#" ;
     schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
     schema:name "RiC-O Validator" ;
