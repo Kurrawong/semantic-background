@@ -141,7 +141,6 @@ ont:
     sh:property
         [
             sh:message "Requirement 2.1.13 Any licence pertaining to the reuse of a vocabulary's content SHOULD be given using the schema:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in text, a literal text field may be indicated" ;
-            sh:nodeKind sh:IRI ;
             sh:or (
                 
                 [
