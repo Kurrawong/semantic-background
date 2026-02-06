@@ -45,43 +45,26 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.12>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:or (
-        
+    sh:property
         [
-            sh:property
+            sh:message "Requirement 2.1.13 Any licence pertaining to the reuse of a ontology's content SHOULD be given using the schema:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in text, a literal text field may be indicated" ;
+            sh:or (
+                
                 [
-                    a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-                    sh:message "Requirement 2.1.12a: Ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
-                    sh:minCount 1 ;
-                    sh:nodeKind sh:Literal ;
-                    sh:or (
-                        
-                        [
-                            sh:datatype xsd:anyURI ;
-                        ]
-                        
-                        [
-                            sh:nodeKind sh:Literal ;
-                        ]
-                    ) ;
-                    sh:path schema:license ;
-                    sh:severity sh:Warning ;
-                ] ;
-        ]
-        
-        [
-            sh:property
-                [
-                    a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-                    sh:minCount 1 ;
                     sh:nodeKind sh:IRI ;
-                    sh:path schema:license ;
-                    sh:severity sh:Warning ;
-                ] ;
-        ]
-    ) ;
+                ]
+                
+                [
+                    sh:datatype xsd:anyURI ;
+                ]
+                
+                [
+                    sh:datatype xsd:string ;
+                ]
+            ) ;
+            sh:path schema:license ;
+            sh:severity sh:Warning ;
+        ] ;
     sh:targetClass owl:Ontology ;
 .
 
@@ -99,7 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass owl:Ontology ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.14a>
+<https://linked.data.gov.au/def/ontpub/req/2.1.14>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
     sh:property
@@ -793,30 +776,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         schema:Person ;
 .
 
-ont:
-    a owl:Ontology ;
-    owl:versionIRI :1.2 ;
-    owl:versionInfo """1.4 2025-07: Changed to linked.data.gov.au IRI
-
-1.3 2025-07: Alignment to VocPub, Own use of schema.org as much as possible
-
-1.2 2025-06: Added schema:citation to allowed history properties
-
-1.1 2023-05: This validator was updated in July 2023 to conform to itself & dcterms:provenance changed to skos:historyNote""" ;
-    skos:historyNote "This validator was made to improve teh consistency of Australian ontology formulation, initially by CSIRO and then handed to the AGLDWG" ;
-    schema:codeRepository "https://github.com/agldwg/ontpub-profile"^^xsd:anyURI ;
-    schema:copyrightHolder <https://linked.data.gov.au/org/agldwg> ;
-    schema:copyrightYear "2023"^^xsd:gYear ;
-    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
-    schema:dateCreated "2022-03-19"^^xsd:date ;
-    schema:dateIssued "2023-09-21"^^xsd:date ;
-    schema:dateModified "2025-07-26"^^xsd:date ;
-    schema:description "SHACL Shapes to validate RDF data according to the Ontology Publications Profile" ;
-    schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    schema:name "Ontology Publication Profile Validator" ;
-    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
-.
-
 <https://orcid.org/0000-0002-8742-7730>
     a schema:Person ;
     schema:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
@@ -828,4 +787,31 @@ ont:
     a schema:Organization ;
     schema:name "Australian Government Linked Data Working Group" ;
     schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :1.5 ;
+    owl:versionInfo """1.5 2026-01: allow schema:licese to indicate an IRI
+
+1.4 2025-07: Changed to linked.data.gov.au IRI
+
+1.3 2025-07: Alignment to VocPub, Own use of schema.org as much as possible
+
+1.2 2025-06: Added schema:citation to allowed history properties
+
+1.1 2023-05: This validator was updated in July 2023 to conform to itself & dcterms:provenance changed to skos:historyNote""" ;
+    skos:historyNote "This validator was made to improve teh consistency of Australian ontology formulation, initially by CSIRO and then handed to the AGLDWG" ;
+    schema:codeRepository "https://github.com/agldwg/ontpub-profile"^^xsd:anyURI ;
+    schema:copyrightHolder <https://linked.data.gov.au/org/agldwg> ;
+    schema:copyrightYear "2026"^^xsd:gYear ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2022-03-19"^^xsd:date ;
+    schema:dateIssued "2023-09-21"^^xsd:date ;
+    schema:dateModified "2026-02-06"^^xsd:date ;
+    schema:description "SHACL Shapes to validate RDF data according to the Ontology Publications Profile" ;
+    schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    schema:name "Ontology Publication Profile Validator" ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+    schema:version "1.5" ;
 .
