@@ -11,6 +11,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:description "A catalogue of reference SHACL validators used by KurrawongAI" ;
     schema:hasPart
         <http://www.opengis.net/def/geosparql/validator> ,
+        <http://www.w3.org/ns/dx/prof/validator> ,
         <http://www.w3.org/ns/shacl-shacl#> ,
         <https://linked.data.gov.au/def/bcp/validator> ,
         <https://linked.data.gov.au/def/bdr-pr/cats/validator> ,
