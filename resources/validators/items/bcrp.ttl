@@ -1,5 +1,5 @@
-PREFIX : <https://linked.data.gov.au/def/bcp/validator/>
-PREFIX ont: <https://linked.data.gov.au/def/bcp/validator>
+PREFIX : <https://linked.data.gov.au/def/bcrp/validator/>
+PREFIX ont: <https://linked.data.gov.au/def/bcrp/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -14,21 +14,21 @@ ont:
     schema:creator <http://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2025-05-30"^^xsd:date ;
     schema:dateModified "2026-02-06"^^xsd:date ;
-    schema:description "The Basic Catalogue Profile validator" ;
+    schema:description "The Basic Catalogue Resource Profile validator" ;
     schema:hasPart
-        :Requirement-DC-created ,
-        :Requirement-DC-creator ,
-        :Requirement-DC-desc ,
-        :Requirement-DC-exists ,
-        :Requirement-DC-history ,
-        :Requirement-DC-license ,
-        :Requirement-DC-modified ,
-        :Requirement-DC-name ,
-        :Requirement-DC-publisher ;
+        :Requirement-CW-created ,
+        :Requirement-CW-creator ,
+        :Requirement-CW-desc ,
+        :Requirement-CW-exists ,
+        :Requirement-CW-history ,
+        :Requirement-CW-license ,
+        :Requirement-CW-modified ,
+        :Requirement-CW-name ,
+        :Requirement-CW-publisher ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "Basic Catalogue Profile Validator" ;
+    schema:name "Basic Catalogue Resource Profile Validator" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
-    schema:version "5" ;
+    schema:version "3" ;
 .
 
 <http://orcid.org/0000-0002-8742-7730>
@@ -43,9 +43,9 @@ ont:
     schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
 
-:Requirement-DC-created
+:Requirement-CW-created
     a sh:NodeShape ;
-    sh:message "Requirement D-created: Each catalogue MUST have exactly one created date indicated using the schema:dateCreated predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
+    sh:message "Requirement D-created: Each catalogued resource MUST have exactly one created date indicated using the schema:dateCreated predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
     sh:property
         [
             sh:maxCount 1 ;
@@ -70,14 +70,14 @@ ont:
             ) ;
             sh:path schema:dateCreated ;
         ] ;
-    sh:targetClass schema:DataCatalog ;
+    sh:targetClass schema:CreativeWork ;
 .
 
-:Requirement-DC-creator
+:Requirement-CW-creator
     a sh:NodeShape ;
     sh:property
         [
-            sh:description "Requirement D-creator: Each catalogue MUST indicate one or more agents with the schema:creator predicate, typed as an schema:Person or schema:Organization" ;
+            sh:description "Requirement D-creator: Each catalogued resource MUST indicate one or more agents with the schema:creator predicate, typed as an schema:Person or schema:Organization" ;
             sh:minCount 1 ;
             sh:or (
                 
@@ -91,12 +91,12 @@ ont:
             ) ;
             sh:path schema:creator ;
         ] ;
-    sh:targetClass schema:DataCatalog ;
+    sh:targetClass schema:CreativeWork ;
 .
 
-:Requirement-DC-desc
+:Requirement-CW-desc
     a sh:NodeShape ;
-    sh:message "Each catalogue MUST have one and description which is to be a text literal, indicated using the schema:description predicate" ;
+    sh:message "Each catalogued resource MUST have one and description which is to be a text literal, indicated using the schema:description predicate" ;
     sh:property
         [
             sh:maxCount 1 ;
@@ -113,38 +113,38 @@ ont:
             ) ;
             sh:path schema:description ;
         ] ;
-    sh:targetClass schema:DataCatalog ;
+    sh:targetClass schema:CreativeWork ;
 .
 
-:Requirement-DC-exists
+:Requirement-CW-exists
     a sh:NodeShape ;
     sh:property
         [
-            sh:message "Each graph MUST have at least one catalogue instance" ;
+            sh:message "Each graph MUST have at least one catalogued resource instance" ;
             sh:minCount 1 ;
             sh:path
                 [
                     sh:inversePath rdf:type ;
                 ] ;
         ] ;
-    sh:targetNode schema:DataCatalog ;
+    sh:targetNode schema:CreativeWork ;
 .
 
-:Requirement-DC-history
+:Requirement-CW-history
     a sh:NodeShape ;
-    sh:message "Requirement D-history: Each catalogue SHOULD indicate how it was produced or its origin by use of one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom" ;
+    sh:message "Requirement D-history: Each catalogued resource SHOULD indicate how it was produced or its origin by use of one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom" ;
     sh:or (
         :provenance-properties-01
         :provenance-properties-02
         :provenance-properties-04
     ) ;
     sh:severity sh:Warning ;
-    sh:targetClass schema:DataCatalog ;
+    sh:targetClass schema:CreativeWork ;
 .
 
-:Requirement-DC-license
+:Requirement-CW-license
     a sh:NodeShape ;
-    sh:message "Requirement D-license: Each catalogue MUST indicate a license that defines conditions for its use with the schema:license predicate with the value indicated coming from either the RDF Licenses dataset or being locally-defined odrl:Policy instance" ;
+    sh:message "Requirement D-license: Each catalogued resource MUST indicate a license that defines conditions for its use with the schema:license predicate with the value indicated coming from either the RDF Licenses dataset or being locally-defined odrl:Policy instance" ;
     sh:property
         [
             sh:maxCount 1 ;
@@ -152,12 +152,12 @@ ont:
             sh:nodeKind sh:IRI ;
             sh:path schema:license ;
         ] ;
-    sh:targetClass schema:DataCatalog ;
+    sh:targetClass schema:CreativeWork ;
 .
 
-:Requirement-DC-modified
+:Requirement-CW-modified
     a sh:NodeShape ;
-    sh:message "Requirement D-modified: Each catalogue MUST have exactly one created date indicated using the schema:dateModified predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
+    sh:message "Requirement D-modified: Each catalogued resource MUST have exactly one created date indicated using the schema:dateModified predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
     sh:property
         [
             sh:maxCount 1 ;
@@ -178,12 +178,12 @@ ont:
             ) ;
             sh:path schema:dateModified ;
         ] ;
-    sh:targetClass schema:DataCatalog ;
+    sh:targetClass schema:CreativeWork ;
 .
 
-:Requirement-DC-name
+:Requirement-CW-name
     a sh:NodeShape ;
-    sh:message "Each catalogue MUST have one and only one name which is to be a text literal, indicated using the schema:name predicate" ;
+    sh:message "Each catalogued resource MUST have one and only one name which is to be a text literal, indicated using the schema:name predicate" ;
     sh:property
         [
             sh:maxCount 1 ;
@@ -200,14 +200,14 @@ ont:
             ) ;
             sh:path schema:name ;
         ] ;
-    sh:targetClass schema:DataCatalog ;
+    sh:targetClass schema:CreativeWork ;
 .
 
-:Requirement-DC-publisher
+:Requirement-CW-publisher
     a sh:NodeShape ;
     sh:property
         [
-            sh:description "Requirement D-publisher: Each catalogue MUST indicate one or more agents with the schema:publisher predicate, typed as an schema:Person or schema:Organization" ;
+            sh:description "Requirement D-publisher: Each catalogued resource MUST indicate one or more agents with the schema:publisher predicate, typed as an schema:Person or schema:Organization" ;
             sh:minCount 1 ;
             sh:or (
                 
@@ -221,7 +221,7 @@ ont:
             ) ;
             sh:path schema:publisher ;
         ] ;
-    sh:targetClass schema:DataCatalog ;
+    sh:targetClass schema:CreativeWork ;
 .
 
 :provenance-properties-01

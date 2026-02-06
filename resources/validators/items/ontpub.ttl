@@ -810,7 +810,7 @@ ont:
     schema:dateIssued "2023-09-21"^^xsd:date ;
     schema:dateModified "2026-02-06"^^xsd:date ;
     schema:description "SHACL Shapes to validate RDF data according to the Ontology Publications Profile" ;
-    schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Ontology Publication Profile Validator" ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
     schema:version "1.5" ;

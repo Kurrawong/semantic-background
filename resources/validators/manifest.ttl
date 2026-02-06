@@ -4,8 +4,8 @@ PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX schema: <https://schema.org/>
 
 <https://kurrawong.ai/semantic-bankground/annotations-manifest>
-    a prez:Manifest ;
-    prof:hasResource
+    a <https://prez.dev/Manifest> ;
+    prof:hasResource 
         [
             prof:hasArtifact "catalogue.ttl" ;
             prof:hasRole mrr:CatalogueData ;
