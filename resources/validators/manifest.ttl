@@ -9,12 +9,12 @@ PREFIX schema: <https://schema.org/>
         [
             prof:hasArtifact "catalogue.ttl" ;
             prof:hasRole mrr:CatalogueData ;
-            schema:name "SemBack main Catalogue" ;
+            schema:name "SemBack Validators Catalogue" ;
         ] ,
         [
             prof:hasArtifact "items/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
-            schema:name "SemBack Resources Catalogue" ;
+            schema:name "SemBack Validator Resources" ;
         ] ,
         [
             prof:hasArtifact "../_background/*.ttl" ;
