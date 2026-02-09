@@ -13,3 +13,72 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Workflow 4Ever Project Team" ;
     schema:url "https://wf4ever.github.io/"^^xsd:anyURI ;
 .
+
+<http://www.opengis.net/def/entities/bodies/ogc>
+    a schema:Organization ;
+    schema:name "Open Geospatial Consortium" ;
+    schema:url "https://www.ogc.org"^^xsd:anyURI ;
+.
+
+<http://www.opengis.net/def/entities/bodies/ogcna>
+    a schema:Organization ;
+    schema:name "OGC Naming Authority" ;
+    schema:url "https://www.ogc.org/about/policies/naming-authority/"^^xsd:anyURI ;
+    schema:parentOrganization <http://www.opengis.net/def/entities/bodies/ogc> ;
+.
+
+<https://orcid.org/0000-0002-7878-2693>
+    a schema:Person ;
+    schema:name "Robert Atkinson" ;
+    schema:email "ratkinson@ogc.org"^^xsd:anyURI ;
+.
+
+<https://orcid.org/0000-0003-2130-0312>
+    a schema:Person ;
+    schema:name "Beyza Yaman" ;
+    schema:email "beyza.yaman@dibris.unige.it"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a schema:Organization ;
+    schema:name "Intergovernmental Committee on Surveying & Mapping" ;
+    schema:url "https://icsm.gov.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/abs>
+    a schema:Organization ;
+    schema:name "Australian Bureau of Statistics" ;
+    schema:url "https://www.abs.gov.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/ardc>
+    a schema:Organization ;
+    schema:name "Australian Research Data Commons" ;
+    schema:url "https://www.ardc.edu.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/loc>
+    a schema:Organization ;
+    schema:name "USA Library of Congress" ;
+    schema:url "https://www.loc.gov/"^^xsd:anyURI ;
+.
+
+<https://www.epimorphics.com>
+    a schema:Organization ;
+    schema:name "Epimorphics" ;
+    schema:url "https://www.epimorphics.com"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/agldwg>
+    a schema:Organization ;
+    schema:name "Australian Government Linked Data Working Group" ;
+    schema:url "http://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:honorificPrefix "Dr" ;
+    schema:name "Nicholas J. Car" ;
+    schema:email "nicholas.car@surroundaustralia.com"^^xsd:anyURI ;
+    schema:affiliation <https://kurrawong.ai> ;
+.
