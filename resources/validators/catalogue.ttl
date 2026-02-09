@@ -6,6 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://data.kurrawong.ai/sb/validators>
     a schema:DataCatalog ;
+    skos:historyNote "This catalogue was initially produced in late 2025 as the first new wave catalogue of resources within the Semantic Background" ;
     schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2025-12-11"^^xsd:gYear ;
@@ -30,6 +31,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Semantic Background Validators" ;
     schema:publisher <https://kurrawong.ai> ;
     schema:status astatus:stable ;
-    schema:version "4" ;
-    skos:historyNote "This catalogue was initially produced in late 2025 as the first new way catalogue of resources within the Semantic Background" ;
+    schema:version "5" ;
 .

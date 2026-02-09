@@ -10,721 +10,918 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.10>
+<https://linked.data.gov.au/def/valpub/req/2.1.10>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.1.10: SHACL ontologies SHOULD indicate a version using the property owl:versionIRI with an IRI object." ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path owl:versionIRI ;
-            sh:severity sh:Warning ;
-        ] ;
+    sh:message "Requirement 2.1.10" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.10-property-shape> ;
     sh:targetClass owl:Ontology ;
+    schema:name "Ontology version" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.11>
+<https://linked.data.gov.au/def/valpub/req/2.1.11>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:datatype xsd:anyURI ;
-            sh:message "Requirement 2.1.11: SHACL ontologies SHOULD indicate any online version controlled source code repository storing the ontology and related content with the schema:codeRepository with a xsd:anyURI object." ;
-            sh:minCount 1 ;
-            sh:path schema:codeRepository ;
-            sh:severity sh:Warning ;
-        ] ;
+    sh:message "Requirement 2.1.11" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.11-property-shape> ;
     sh:targetClass owl:Ontology ;
+    schema:name "Ontology repo" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.12>
+<https://linked.data.gov.au/def/valpub/req/2.1.12>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.12" ;
     sh:or (
-        
-        [
-            sh:property
-                [
-                    a sh:PropertyShape ;
-                    rdfs:isDefinedBy ont: ;
-                    sh:message "Requirement 2.1.12a: SHACL ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
-                    sh:minCount 1 ;
-                    sh:nodeKind sh:Literal ;
-                    sh:or (
-                        
-                        [
-                            sh:datatype xsd:anyURI ;
-                        ]
-                        
-                        [
-                            sh:nodeKind sh:Literal ;
-                        ]
-                    ) ;
-                    sh:path schema:license ;
-                    sh:severity sh:Warning ;
-                ] ;
-        ]
-        
-        [
-            sh:property
-                [
-                    a sh:PropertyShape ;
-                    rdfs:isDefinedBy ont: ;
-                    sh:minCount 1 ;
-                    sh:nodeKind sh:IRI ;
-                    sh:path schema:license ;
-                    sh:severity sh:Warning ;
-                ] ;
-        ]
+        <https://linked.data.gov.au/def/valpub/req/2.1.12-property-shape-01>
+        <https://linked.data.gov.au/def/valpub/req/2.1.12-property-shape-02>
     ) ;
     sh:targetClass owl:Ontology ;
+    schema:name "Ontology license" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.13>
+<https://linked.data.gov.au/def/valpub/req/2.1.13>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.1.13: SHACL ontologies MAY present usage information alongside license information using the schema:usageInfo property indicating literal text." ;
-            sh:nodeKind sh:Literal ;
-            sh:path schema:usageInfo ;
-        ] ;
+    sh:message "Requirement 2.1.13" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.13-property-shape> ;
     sh:targetClass owl:Ontology ;
+    schema:name "Ontology usage info" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.14a>
+<https://linked.data.gov.au/def/valpub/req/2.1.14a>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.1.14: SHACL ontologies SHOULD present a copyright information for it indicated with properties schema:copyrightHolder, schema:copyrightNotice and schema:copyrightYear. schema:copyrightHolder may be used with a text object or, preferably, an schema:Person or schema:Organization object." ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:class schema:Organization ;
-                ]
-                
-                [
-                    sh:class schema:Person ;
-                ]
-            ) ;
-            sh:path schema:copyrightHolder ;
-            sh:severity sh:Warning ;
-        ] ;
+    sh:message "Requirement 2.1.14a" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.14a-property-shape> ;
     sh:targetClass owl:Ontology ;
+    schema:name "Ontology copyright info" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.15>
+<https://linked.data.gov.au/def/valpub/req/2.1.15>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            sh:message "Requirement 2.1.15: SHACL ontologies MUST present at least one sh:NodeShape or sh:PropertyShape within the ontology file" ;
-            sh:nodeKind sh:BlankNodeOrIRI ;
-            sh:path
-                [
-                    sh:inversePath rdf:type ;
-                ] ;
-        ] ;
+    sh:message "Requirement 2.1.15" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.15-property-shape> ;
     sh:targetNode
         sh:NodeShape ,
         sh:PropertyShape ;
+    schema:name "Shape presence" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.16>
+<https://linked.data.gov.au/def/valpub/req/2.1.16>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.1.16: All sh:NodeShape and sh:PropertyShape instances MUST indicate the ontology that defines then with the rdfs:isDefinedBy property." ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path rdfs:isDefinedBy ;
-        ] ;
+    sh:message "Requirement 2.1.16" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.16-property-shape> ;
     sh:targetClass
-        rdfs:Property ,
-        owl:AnnotationProperty ,
-        owl:Axiom ,
-        owl:Class ,
-        owl:DatatypeProperty ,
-        owl:FunctionalProperty ,
-        owl:InverseProperty ,
-        owl:NamedIndividual ,
-        owl:ObjectProperty ;
+        sh:NodeShape ,
+        sh:PropertyShape ;
+    schema:name "Shape's defining ontology" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.2+3>
+<https://linked.data.gov.au/def/valpub/req/2.1.2+3>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            sh:maxCount 1 ;
-            sh:message "Requirement 2.1.2 SHACL ontologies MUST be presented as a single owl:Ontology object & Requirement 2.1.3 Each SHACL ontology MUST be presented in a single file which does not contain information other than that which is directly part of the ontology and the file is considered the point-of-truth" ;
-            sh:minCount 1 ;
-            sh:path rdf:type ;
-        ] ;
+    sh:message "Requirement 2.1.2+3" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.2+3-property-shape> ;
     sh:targetClass owl:Ontology ;
+    schema:name "Single ontology" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.4>
+<https://linked.data.gov.au/def/valpub/req/2.1.4>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:message
+        "Requirement 2.1.4" ,
+        "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
     sh:or (
-        
-        [
-            sh:datatype rdf:langString ;
-            sh:minCount 1 ;
-            sh:path skos:prefLabel ;
-            sh:uniqueLang true ;
-        ]
-        
-        [
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:string ;
-                ]
-                
-                [
-                    sh:datatype rdf:langString ;
-                ]
-            ) ;
-            sh:path schema:name ;
-            sh:uniqueLang true ;
-        ]
+        <https://linked.data.gov.au/def/valpub/req/2.1.4-property-shape-01>
+        <https://linked.data.gov.au/def/valpub/req/2.1.4-property-shape-02>
     ) ;
     sh:targetClass owl:Ontology ;
+    schema:name "Ontology name" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.5>
+<https://linked.data.gov.au/def/valpub/req/2.1.5>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one definition, a text literal text, indicated using either the skos:definition or schema:description property" ;
+    sh:message "Requirement 2.1.5: SHACL ontologies MUST have exactly one definition, a text literal text, indicated using either the skos:definition or schema:description property" ;
     sh:or (
-        
-        [
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:string ;
-                ]
-                
-                [
-                    sh:datatype rdf:langString ;
-                ]
-            ) ;
-            sh:path skos:definition ;
-        ]
-        
-        [
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:string ;
-                ]
-                
-                [
-                    sh:datatype rdf:langString ;
-                ]
-            ) ;
-            sh:path schema:description ;
-        ]
+        <https://linked.data.gov.au/def/valpub/req/2.1.5-property-shape-01>
+        <https://linked.data.gov.au/def/valpub/req/2.1.5-property-shape-02>
     ) ;
     sh:targetClass owl:Ontology ;
+    schema:name "Ontology description" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.6>
+<https://linked.data.gov.au/def/valpub/req/2.1.6>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property 
-        [
-            sh:maxCount 1 ;
-            sh:message "Requirement 2.1.5: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:dateTime ;
-                ]
-                
-                [
-                    sh:datatype xsd:date ;
-                ]
-                
-                [
-                    sh:datatype xsd:dateTimeStamp ;
-                ]
-            ) ;
-            sh:path schema:dateModified ;
-        ] ,
-        [
-            sh:maxCount 1 ;
-            sh:message "Requirement 2.1.5: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:dateTime ;
-                ]
-                
-                [
-                    sh:datatype xsd:date ;
-                ]
-                
-                [
-                    sh:datatype xsd:dateTimeStamp ;
-                ]
-            ) ;
-            sh:path schema:dateCreated ;
-        ] ,
-        [
-            sh:maxCount 1 ;
-            sh:message "Requirement 2.1.5: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:dateTime ;
-                ]
-                
-                [
-                    sh:datatype xsd:date ;
-                ]
-                
-                [
-                    sh:datatype xsd:dateTimeStamp ;
-                ]
-            ) ;
-            sh:path schema:dateIssued ;
-        ] ;
-    sh:targetClass owl:Ontology ;
-.
-
-<https://linked.data.gov.au/def/ontpub/req/2.1.7>
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property 
-        [
-            sh:description "Requirement 2.1.7: SHACL ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:class schema:Organization ;
-                ]
-                
-                [
-                    sh:class schema:Person ;
-                ]
-            ) ;
-            sh:path schema:creator ;
-        ] ,
-        [
-            sh:description "Requirement 2.1.7: SHACL ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:class schema:Organization ;
-                ]
-                
-                [
-                    sh:class schema:Person ;
-                ]
-            ) ;
-            sh:path schema:publisher ;
-        ] ;
-    sh:targetClass owl:Ontology ;
-.
-
-<https://linked.data.gov.au/def/ontpub/req/2.1.8>
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.6" ;
     sh:property
-        [
-            sh:description "Requirement 2.1.8: SHACL ontologies MAY have at least any number of contributors, indicated using schema:contributor property that must be a IRI value indicating an agent, that is an instance of schema:Person, schema:Organization or a subclass of either" ;
-            sh:or (
-                
-                [
-                    sh:class schema:Organization ;
-                ]
-                
-                [
-                    sh:class schema:Person ;
-                ]
-            ) ;
-            sh:path schema:contributor ;
-        ] ;
+        <https://linked.data.gov.au/def/valpub/req/2.1.6-property-shape-01> ,
+        <https://linked.data.gov.au/def/valpub/req/2.1.6-property-shape-02> ,
+        <https://linked.data.gov.au/def/valpub/req/2.1.6-property-shape-03> ;
     sh:targetClass owl:Ontology ;
+    schema:name "Ontology dates" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.9>
+<https://linked.data.gov.au/def/valpub/req/2.1.7>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.9: SHACL ontologies MUST indicate provenance with at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+    sh:message "Requirement 2.1.7" ;
+    sh:property
+        <https://linked.data.gov.au/def/valpub/req/2.1.7-property-shape-01> ,
+        <https://linked.data.gov.au/def/valpub/req/2.1.7-property-shape-02> ;
+    sh:targetClass owl:Ontology ;
+    schema:name "Ontology agents" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.8>
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.8" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.8-property-shape> ;
+    sh:targetClass owl:Ontology ;
+    schema:name "Ontology contributors" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9>
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message
+        "Requirement 2.1.9" ,
+        "Requirement 2.1.9: SHACL ontologies MUST indicate provenance with at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
     sh:or (
-        
-        [
-            sh:message "This is a message about prov:wasDerivedFrom" ;
-            sh:minCount 1 ;
-            sh:path prov:wasDerivedFrom ;
-        ]
-        
-        [
-            sh:message "This is a message about dcterms:source" ;
-            sh:minCount 1 ;
-            sh:path dcterms:source ;
-        ]
-        
-        [
-            sh:message "This is a message about skos:historyNote" ;
-            sh:minCount 1 ;
-            sh:path skos:historyNote ;
-        ]
-        
-        [
-            sh:message "This is a message about schema:citation" ;
-            sh:minCount 1 ;
-            sh:path schema:citation ;
-        ]
+        <https://linked.data.gov.au/def/valpub/req/2.1.9-property-shape-01>
+        <https://linked.data.gov.au/def/valpub/req/2.1.9-property-shape-02>
+        <https://linked.data.gov.au/def/valpub/req/2.1.9-property-shape-03>
+        <https://linked.data.gov.au/def/valpub/req/2.1.9-property-shape-04>
     ) ;
     sh:targetClass owl:Ontology ;
+    schema:name "Ontology provenance" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.9b>
+<https://linked.data.gov.au/def/valpub/req/2.1.9b>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:maxCount 1 ;
-            sh:message "Requirement 2.1.9b: SHACL ontologies MUST NOT use skos:historyNote property more than once on any object." ;
-            sh:path skos:historyNote ;
-        ] ;
+    sh:message "Requirement 2.1.9b" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.9b-property-shape> ;
     sh:targetSubjectsOf skos:historyNote ;
+    schema:name "Single history note predicate" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.9c>
+<https://linked.data.gov.au/def/valpub/req/2.1.9c>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:maxCount 1 ;
-            sh:message "Requirement 2.1.9c: You MUST NOT use dcterms:source property more than once on any object." ;
-            sh:path dcterms:source ;
-        ] ;
+    sh:message "Requirement 2.1.9c" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.9c-property-shape> ;
     sh:targetSubjectsOf dcterms:source ;
+    schema:name "Single source predicate" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.9d>
+<https://linked.data.gov.au/def/valpub/req/2.1.9d>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:maxCount 1 ;
-            sh:message "Requirement 2.1.9d: You MUST NOT use prov:wasDerivedFrom property more than once on any object." ;
-            sh:path prov:wasDerivedFrom ;
-        ] ;
+    sh:message "Requirement 2.1.9d" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.9d-property-shape> ;
     sh:targetSubjectsOf prov:wasDerivedFrom ;
+    schema:name "Single was derived from predicate" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.9e>
+<https://linked.data.gov.au/def/valpub/req/2.1.9e>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:datatype xsd:anyURI ;
-            sh:message "Requirement 2.1.9e: Whenever dcterms:source is used, it must be a datatype property indicating an object of type xsd:anyURI" ;
-            sh:path dcterms:source ;
-        ] ;
+    sh:message "Requirement 2.1.9e" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.9e-property-shape> ;
     sh:targetSubjectsOf dcterms:source ;
+    schema:name "Source predicate range type" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.9f>
+<https://linked.data.gov.au/def/valpub/req/2.1.9f>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.1.9f: Whenever skos:historyNote is used, it must be a datatype property indicating an object of type xsd:string or rdf:LangString" ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:string ;
-                ]
-                
-                [
-                    sh:datatype rdf:langString ;
-                ]
-            ) ;
-            sh:path skos:historyNote ;
-        ] ;
+    sh:message "Requirement 2.1.9f" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.9f-property-shape> ;
     sh:targetSubjectsOf skos:historyNote ;
+    schema:name "History node range type" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.1.9g>
+<https://linked.data.gov.au/def/valpub/req/2.1.9g>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:message "Requirement 2.1.9g: Whenever prov:wasDerivedFrom is used, it must be an object property indicating an IRI" ;
-            sh:nodeKind sh:IRI ;
-            sh:path prov:wasDerivedFrom ;
-        ] ;
+    sh:message "Requirement 2.1.9g" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.1.9g-property-shape> ;
     sh:targetSubjectsOf prov:wasDerivedFrom ;
+    schema:name "Was derived from range type" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.2.1>
+<https://linked.data.gov.au/def/valpub/req/2.2.1>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.1: SHACL Shapes MUST have at least one title indicated using either the skos:prefLabel or schema:name property that must be either a string or a language-typed text literal value. Only one value per language is allowed if languages are used." ;
+    sh:message "Requirement 2.2.1: SHACL Shapes MUST have at least one name indicated using either the skos:prefLabel or schema:name property that must be either a string or a language-typed text literal value. Only one value per language is allowed if languages are used." ;
     sh:or (
-        
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:string ;
-                ]
-                
-                [
-                    sh:datatype rdf:langString ;
-                ]
-            ) ;
-            sh:path skos:prefLabel ;
-            sh:uniqueLang true ;
-        ]
-        
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:string ;
-                ]
-                
-                [
-                    sh:datatype rdf:langString ;
-                ]
-            ) ;
-            sh:path schema:name ;
-            sh:uniqueLang true ;
-        ]
+        <https://linked.data.gov.au/def/valpub/req/2.2.1-prefLabel>
+        <https://linked.data.gov.au/def/valpub/req/2.2.1-name>
     ) ;
     sh:targetClass
         sh:NodeShape ,
         sh:PropertyShape ;
+    schema:name "Shape name" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.2.2>
+<https://linked.data.gov.au/def/valpub/req/2.2.2>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.2: SHACL Shapes MUST have at message value, indicated using sh:message" ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype rdf:langString ;
-                ]
-                
-                [
-                    sh:datatype xsd:string ;
-                ]
-            ) ;
-            sh:path sh:message ;
-        ] ;
+    sh:message
+        "Requirement 2.2.2" ,
+        "Requirement 2.2.2: SHACL Shapes MUST have at message value, indicated using sh:message" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.2.2-property-shape> ;
     sh:targetClass
         sh:NodeShape ,
         sh:PropertyShape ;
+    schema:name "Shape message" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.2.3>
+<https://linked.data.gov.au/def/valpub/req/2.2.3>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.2.3" ;
     sh:or (
-        
-        [
-            sh:message "Requirement 2.2.3: SHACL Shapes provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
-            sh:minCount 1 ;
-            sh:path prov:wasDerivedFrom ;
-        ]
-        
-        [
-            sh:message "Requirement 2.2.3: SHACL Shapes provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
-            sh:minCount 1 ;
-            sh:path dcterms:source ;
-        ]
-        
-        [
-            sh:message "Requirement 2.2.3: SHACL Shapes provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
-            sh:minCount 1 ;
-            sh:path skos:historyNote ;
-        ]
+        <https://linked.data.gov.au/def/valpub/req/2.2.3-property-shape-01>
+        <https://linked.data.gov.au/def/valpub/req/2.2.3-property-shape-02>
+        <https://linked.data.gov.au/def/valpub/req/2.2.3-property-shape-03>
     ) ;
     sh:severity sh:Warning ;
     sh:targetClass
         sh:NodeShape ,
         sh:PropertyShape ;
+    schema:name "Shape provenance" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.7.2>
+<https://linked.data.gov.au/def/valpub/req/2.7.2>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            sh:maxCount 1 ;
-            sh:message "Requirement 2.7.2: Each agent MUST indicate at exactly one name property with the schema:name property that must be a text literal value" ;
-            sh:minCount 1 ;
-            sh:or (
-                
-                [
-                    sh:datatype xsd:string ;
-                ]
-                
-                [
-                    sh:datatype rdf:langString ;
-                ]
-            ) ;
-            sh:path schema:name ;
-        ] ;
+    sh:message "Requirement 2.7.2" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.7.2-property-shape> ;
     sh:targetClass
         schema:Organization ,
         schema:Person ;
+    schema:name "Agent name" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.7.3a>
+<https://linked.data.gov.au/def/valpub/req/2.7.3a>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            sh:datatype xsd:anyURI ;
-            sh:message "Requirement 2.7.3: Each organisation MUST indicate an schema:url property with a URL value" ;
-            sh:minCount 1 ;
-            sh:path schema:url ;
-        ] ;
+    sh:message "Requirement 2.7.3a" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.7.3a-property-shape> ;
     sh:targetClass schema:Organization ;
+    schema:name "Org URL" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.7.3b>
+<https://linked.data.gov.au/def/valpub/req/2.7.3b>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            sh:datatype xsd:anyURI ;
-            sh:message "Requirement 2.7.3: Each person MUST indicate an schema:email property with an email value" ;
-            sh:minCount 1 ;
-            sh:path schema:email ;
-        ] ;
+    sh:message "Requirement 2.7.3b" ;
+    sh:property <https://linked.data.gov.au/def/valpub/req/2.7.3b-property-shape> ;
     sh:targetClass schema:Person ;
+    schema:name "Person email" ;
 .
 
-<https://linked.data.gov.au/def/ontpub/req/2.7.4>
+<https://linked.data.gov.au/def/valpub/req/2.7.4>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property 
-        [
-            sh:message "Requirement 2.7.4: One agent MAY be affiliated with another using schema.org agent/agent linking properties, such as schema:affiliation between persons and organisations or schema:parentOrganization and similar between organizations." ;
-            sh:or (
-                
-                [
-                    sh:class schema:Organization ;
-                ]
-                
-                [
-                    sh:class schema:Person ;
-                ]
-            ) ;
-            sh:path schema:parentOrganization ;
-        ] ,
-        [
-            sh:message "Requirement 2.7.4: One agent MAY be affiliated with another using schema.org agent/agent linking properties, such as schema:affiliation between persons and organisations or schema:parentOrganization and similar between organizations." ;
-            sh:or (
-                
-                [
-                    sh:class schema:Organization ;
-                ]
-                
-                [
-                    sh:class schema:Person ;
-                ]
-            ) ;
-            sh:path schema:affiliation ;
-        ] ,
-        [
-            sh:message "Requirement 2.7.4: One agent MAY be affiliated with another using schema.org agent/agent linking properties, such as schema:affiliation between persons and organisations or schema:parentOrganization and similar between organizations." ;
-            sh:or (
-                
-                [
-                    sh:class schema:Organization ;
-                ]
-                
-                [
-                    sh:class schema:Person ;
-                ]
-            ) ;
-            sh:path schema:subOrganization ;
-        ] ;
+    sh:message "Requirement 2.7.4" ;
+    sh:property
+        <https://linked.data.gov.au/def/valpub/req/2.7.4-property-shape-01> ,
+        <https://linked.data.gov.au/def/valpub/req/2.7.4-property-shape-02> ,
+        <https://linked.data.gov.au/def/valpub/req/2.7.4-property-shape-03> ;
     sh:targetClass
         schema:Organization ,
         schema:Person ;
+    schema:name "Agent affiliation" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.10-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.10: SHACL ontologies SHOULD indicate a version using the property owl:versionIRI with an IRI object." ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path owl:versionIRI ;
+    sh:severity sh:Warning ;
+    schema:name "Ontology version - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.11-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:datatype xsd:anyURI ;
+    sh:message "Requirement 2.1.11: SHACL ontologies SHOULD indicate any online version controlled source code repository storing the ontology and related content with the schema:codeRepository with a xsd:anyURI object." ;
+    sh:minCount 1 ;
+    sh:path schema:codeRepository ;
+    sh:severity sh:Warning ;
+    schema:name "Ontology repo - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.12-property-shape-01>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.12a: SHACL ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:anyURI ;
+        ]
+        
+        [
+            sh:nodeKind sh:Literal ;
+        ]
+    ) ;
+    sh:path schema:license ;
+    sh:severity sh:Warning ;
+    schema:name "Ontology license - literal" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.12-property-shape-02>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.12a: SHACL ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path schema:license ;
+    sh:severity sh:Warning ;
+    schema:name "Ontology license - IRI" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.13-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.13: SHACL ontologies MAY present usage information alongside license information using the schema:usageInfo property indicating literal text." ;
+    sh:nodeKind sh:Literal ;
+    sh:path schema:usageInfo ;
+    schema:name "Ontology usage info - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.14a-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.14: SHACL ontologies SHOULD present a copyright information for it indicated with properties schema:copyrightHolder, schema:copyrightNotice and schema:copyrightYear. schema:copyrightHolder may be used with a text object or, preferably, an schema:Person or schema:Organization object." ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path schema:copyrightHolder ;
+    sh:severity sh:Warning ;
+    schema:name "Ontology copyright info - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.15-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.15: SHACL ontologies MUST present at least one sh:NodeShape or sh:PropertyShape within the ontology file" ;
+    sh:nodeKind sh:BlankNodeOrIRI ;
+    sh:path
+        [
+            sh:inversePath rdf:type ;
+        ] ;
+    schema:name "Shape presence - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.16-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.16: All sh:NodeShape and sh:PropertyShape instances MUST indicate the ontology that defines then with the rdfs:isDefinedBy property." ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path rdfs:isDefinedBy ;
+    schema:name "Shape's defining ontology - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.2+3-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.2 SHACL ontologies MUST be presented as a single owl:Ontology object & Requirement 2.1.3 Each SHACL ontology MUST be presented in a single file which does not contain information other than that which is directly part of the ontology and the file is considered the point-of-truth" ;
+    sh:minCount 1 ;
+    sh:path rdf:type ;
+    schema:name "Single ontology - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.4-property-shape-01>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:datatype rdf:langString ;
+    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:minCount 1 ;
+    sh:path skos:prefLabel ;
+    sh:uniqueLang true ;
+    schema:name "Ontology name - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.4-property-shape-02>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path schema:name ;
+    sh:uniqueLang true ;
+    schema:name "Ontology name - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.5-property-shape-01>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.5: SHACL ontologies MUST have exactly one definition, a text literal text, indicated using either the skos:definition or schema:description property" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path skos:definition ;
+    schema:name "Ontology description - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.5-property-shape-02>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.5: SHACL ontologies MUST have exactly one definition, a text literal text, indicated using either the skos:definition or schema:description property" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path schema:description ;
+    schema:name "Ontology description - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.6-property-shape-01>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.6: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:dateTime ;
+        ]
+        
+        [
+            sh:datatype xsd:date ;
+        ]
+        
+        [
+            sh:datatype xsd:dateTimeStamp ;
+        ]
+    ) ;
+    sh:path schema:dateModified ;
+    schema:name "Ontology dates - modified" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.6-property-shape-02>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.6: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:dateTime ;
+        ]
+        
+        [
+            sh:datatype xsd:date ;
+        ]
+        
+        [
+            sh:datatype xsd:dateTimeStamp ;
+        ]
+    ) ;
+    sh:path schema:dateCreated ;
+    schema:name "Ontology dates - created" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.6-property-shape-03>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.6: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated, schema:dateModified & schema:dateIssued properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:dateTime ;
+        ]
+        
+        [
+            sh:datatype xsd:date ;
+        ]
+        
+        [
+            sh:datatype xsd:dateTimeStamp ;
+        ]
+    ) ;
+    sh:path schema:dateIssued ;
+    schema:name "Ontology dates - issued" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.7-property-shape-01>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.7: SHACL ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path schema:creator ;
+    schema:name "Ontology agents - creator" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.7-property-shape-02>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.7: SHACL ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path schema:publisher ;
+    schema:name "Ontology agents - publisher" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.8-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.8: SHACL ontologies MAY have at least any number of contributors, indicated using schema:contributor property that must be a IRI value indicating an agent, that is an instance of schema:Person, schema:Organization or a subclass of either" ;
+    sh:or (
+        
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path schema:contributor ;
+    schema:name "Ontology contributors - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9-property-shape-01>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "This is a message about prov:wasDerivedFrom" ;
+    sh:minCount 1 ;
+    sh:path prov:wasDerivedFrom ;
+    schema:name "Ontology provenance - wasDerivedFrom" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9-property-shape-02>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "This is a message about dcterms:source" ;
+    sh:minCount 1 ;
+    sh:path dcterms:source ;
+    schema:name "Ontology provenance - source" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9-property-shape-03>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "This is a message about skos:historyNote" ;
+    sh:minCount 1 ;
+    sh:path skos:historyNote ;
+    schema:name "Ontology provenance - historyNote" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9-property-shape-04>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "This is a message about schema:citation" ;
+    sh:minCount 1 ;
+    sh:path schema:citation ;
+    schema:name "Ontology provenance - citation" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9b-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.9b: SHACL ontologies MUST NOT use skos:historyNote property more than once on any object." ;
+    sh:path skos:historyNote ;
+    schema:name "Single history note predicate - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9c-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.9c: You MUST NOT use dcterms:source property more than once on any object." ;
+    sh:path dcterms:source ;
+    schema:name "Single source predicate - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9d-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.9d: You MUST NOT use prov:wasDerivedFrom property more than once on any object." ;
+    sh:path prov:wasDerivedFrom ;
+    schema:name "Single was derived from predicate - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9e-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:datatype xsd:anyURI ;
+    sh:message "Requirement 2.1.9e: Whenever dcterms:source is used, it must be a datatype property indicating an object of type xsd:anyURI" ;
+    sh:path dcterms:source ;
+    schema:name "Source predicate range type - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9f-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.9f: Whenever skos:historyNote is used, it must be a datatype property indicating an object of type xsd:string or rdf:LangString" ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path skos:historyNote ;
+    schema:name "History node range type - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.1.9g-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.1.9g: Whenever prov:wasDerivedFrom is used, it must be an object property indicating an IRI" ;
+    sh:nodeKind sh:IRI ;
+    sh:path prov:wasDerivedFrom ;
+    schema:name "Was derived from range type - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.2.1-name>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.2.1: SHACL Shapes MUST have at least one name indicated using either the skos:prefLabel or schema:name property that must be either a string or a language-typed text literal value. Only one value per language is allowed if languages are used." ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path schema:name ;
+    sh:uniqueLang true ;
+    schema:name "Shape name - schema:name" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.2.1-prefLabel>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.2.1: SHACL Shapes MUST have at least one name indicated using either the skos:prefLabel or schema:name property that must be either a string or a language-typed text literal value. Only one value per language is allowed if languages are used." ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path skos:prefLabel ;
+    sh:uniqueLang true ;
+    schema:name "Shape name - skos:prefLabel" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.2.2-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.2.2: SHACL Shapes MUST have at message value, indicated using sh:message" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path sh:message ;
+    schema:name "Shape message" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.2.3-property-shape-01>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.2.3: SHACL Shapes provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+    sh:minCount 1 ;
+    sh:path prov:wasDerivedFrom ;
+    schema:name "Shape provenance - wasDerivedFrom" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.2.3-property-shape-02>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.2.3: SHACL Shapes provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+    sh:minCount 1 ;
+    sh:path dcterms:source ;
+    schema:name "Shape provenance - source" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.2.3-property-shape-03>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.2.3: SHACL Shapes provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+    sh:minCount 1 ;
+    sh:path skos:historyNote ;
+    schema:name "Shape provenance - historyNote" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.7.2-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.7.2: Each agent MUST indicate at exactly one name property with the schema:name property that must be a text literal value" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path schema:name ;
+    schema:name "Agent name - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.7.3a-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:datatype xsd:anyURI ;
+    sh:message "Requirement 2.7.3: Each organisation MUST indicate an schema:url property with a URL value" ;
+    sh:minCount 1 ;
+    sh:path schema:url ;
+    schema:name "Org URL - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.7.3b-property-shape>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:datatype xsd:anyURI ;
+    sh:message "Requirement 2.7.3: Each person MUST indicate an schema:email property with an email value" ;
+    sh:minCount 1 ;
+    sh:path schema:email ;
+    schema:name "Person email - property shape" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.7.4-property-shape-01>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.7.4: One agent MAY be affiliated with another using schema.org agent/agent linking properties, such as schema:affiliation between persons and organisations or schema:parentOrganization and similar between organizations." ;
+    sh:or (
+        
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path schema:parentOrganization ;
+    schema:name "Agent affiliation - parent org" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.7.4-property-shape-02>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.7.4: One agent MAY be affiliated with another using schema.org agent/agent linking properties, such as schema:affiliation between persons and organisations or schema:parentOrganization and similar between organizations." ;
+    sh:or (
+        
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path schema:affiliation ;
+    schema:name "Agent affiliation - affiliation" ;
+.
+
+<https://linked.data.gov.au/def/valpub/req/2.7.4-property-shape-03>
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.7.4: One agent MAY be affiliated with another using schema.org agent/agent linking properties, such as schema:affiliation between persons and organisations or schema:parentOrganization and similar between organizations." ;
+    sh:or (
+        
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path schema:subOrganization ;
+    schema:name "Agent affiliation - sub org" ;
 .
 
 <https://orcid.org/0000-0002-8742-7730>
     a schema:Person ;
-    schema:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
-    schema:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
     schema:name "Nicholas J. Car" ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
 
 ont:
     a owl:Ontology ;
-    owl:versionIRI :1.0 ;
-    owl:versionInfo "1.0 2025-12: Created based on OntPub Validator & the SHACL Profiling deaft recommendation" ;
+    owl:versionIRI :1.1 ;
+    owl:versionInfo """1.1 2026-09: Made ValPub compliant; move all Property Shapes to IRIs, not BNs
+
+1.0 2025-12: Created based on OntPub Validator & the SHACL Profiling deaft recommendation""" ;
     skos:historyNote "This validator was made to improve teh consistency of Australian ontology formulation, initially by CSIRO and then handed to the AGLDWG" ;
-    schema:codeRepository "https://github.com/agldwg/ontpub-profile"^^xsd:anyURI ;
+    schema:codeRepository "https://github.com/agldwg/valpub-profile"^^xsd:anyURI ;
     schema:copyrightHolder <https://kurrawong.ai> ;
     schema:copyrightYear "2025"^^xsd:gYear ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2025-12-15"^^xsd:date ;
-    schema:dateIssued "2025-12-15"^^xsd:date ;
-    schema:dateModified "2026-02-06"^^xsd:date ;
+    schema:dateIssued "2026-02-09"^^xsd:date ;
+    schema:dateModified "2026-02-09"^^xsd:date ;
     schema:description "SHACL Shapes to validate ontologies of SHACL shapes according to the Validator Publications Profile" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Validator Publication Profile Validator" ;
