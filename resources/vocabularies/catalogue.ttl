@@ -2,7 +2,7 @@ PREFIX astatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX schema: <https://schema.org/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<https://kurrawong.ai/semantic-bankground/vocabularies>
+<https://data.kurrawong.ai/sb/vocabularies>
     a schema:DataCatalog ;
     schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
     schema:creator <https://kurrawong.ai> ;
