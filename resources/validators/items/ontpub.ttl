@@ -549,7 +549,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.2.2>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.2: Each element instance MUST have at least one definition indicated using the skos:definition or schema:description property that must be either string or a language-typed text literal value. Only one value per language is allowed if languages are used." ;
+    #sh:message "Requirement 2.2.2: Each element instance MUST have at least one definition indicated using the skos:definition or schema:description property that must be either string or a language-typed text literal value. Only one value per language is allowed if languages are used." ;
     sh:or (
         
         [
