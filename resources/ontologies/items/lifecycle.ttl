@@ -2,48 +2,45 @@ PREFIX : <https://linked.data.gov.au/def/lifecycle/>
 PREFIX model: <https://linked.data.gov.au/def/lifecycle>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX sdo: <https://schema.org/>
+PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-model:
-    a owl:Ontology ;
-    owl:versionIRI :0.0.1 ;
-    owl:versionInfo "0.0.1" ;
-    sdo:codeRepository "https://github.com/AGLDWG/lifecycle-model/"^^xsd:anyURI ;
-    sdo:copyrightHolder <https://orcid.org/0000-0002-8742-7730> ;
-    sdo:copyrightNotice "(c) Nicholas J. Car, 2023" ;
-    sdo:creator <https://orcid.org/0000-0002-8742-7730> ;
-    sdo:dateCreated "2023-05-30"^^xsd:date ;
-    sdo:dateIssued "2023-05-30"^^xsd:date ;
-    sdo:dateModified "2023-11-04"^^xsd:date ;
-    sdo:description "This model allows for the representation of lifecycle stages for any Resource. The specific stages are expected to be taken from vocabularies relevant to the Resource."@en ;
-    sdo:license
-        <https://rdflicense.linkeddata.es/rdflicense/cc-by4.0> ,
-        "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    sdo:name "Lifecycle Model"@en ;
-    sdo:publisher <https://linked.data.gov.au/org/agldwg> ;
-    skos:historyNote "This model was made for the Queensland Department of Resources, Spatial Information unit in 2023 to assist with the lifecylcing of components within multiple ontologies."@en ;
+time:hasTime
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
+    rdfs:range time:TemporalEntity ;
+    skos:example "See example for LifecycleStage" ;
+    skos:scopeNote "This property is defined by the Time Ontology in OWL and is a general purpose property for indicating that something has a temporality. It should be used in this model to indicate the timespan of a Lifecycle Stage" ;
+    schema:description "Supports the association of a temporal entity (instant or interval) to any thing." ;
+    schema:name "has time" ;
 .
 
-<https://linked.data.gov.au/org/agldwg>
-    a sdo:Organization ;
-    sdo:name "Australian Government Linked Data Working Group" ;
-    sdo:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+:hasLifecycleStage
+    a owl:ObjectProperty ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:isDefinedBy model: ;
+    rdfs:range :LifecycleStage ;
+    skos:example "See example for LifecycleStage" ;
+    schema:description "Indicates a Lifecycle Stage of a Resource" ;
+    schema:name "has Lifecycle Stage" ;
 .
 
-<https://orcid.org/0000-0002-8742-7730>
-    a sdo:Person ;
-    sdo:email "nick@kurrawong.ai"^^xsd:anyURI ;
-    sdo:memberOf <https://linked.data.gov.au/org/agldwg> ;
-    sdo:name "Nicholas J. Car"@en ;
+schema:additionalType
+    a owl:ObjectProperty ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:isDefinedBy schema: ;
+    rdfs:range rdfs:Resource ;
+    skos:example "See the example for :LifecycleStage" ;
+    skos:scopeNote "Use this property to indicate the specialised type of a Lifeycle Stage which is likely selected from a controlled vocabulary" ;
+    schema:description "An additional type for the item, typically used for adding more specific types from external vocabularies" ;
+    schema:name "additional type" ;
 .
 
 :LifecycleStage
     a owl:Class ;
     rdfs:isDefinedBy model: ;
-    skos:definition "A distinct part of a resource's lifecycle"@en ;
     skos:example """
 # showing lifecycle stages for a Geographical Name
 ex:name-1
@@ -63,38 +60,40 @@ ex:name-1
     ] ;
     sdo:additionalType <http://example.com/stage/gazetted> ;
   ] ,
-."""@en ;
-    skos:prefLabel "Lifecycle Stage"@en ;
+.""" ;
+    schema:description "A distinct part of a resource's lifecycle" ;
+    schema:name "Lifecycle Stage" ;
 .
 
-sdo:additionalType
-    a owl:ObjectProperty ;
-    rdfs:domain rdfs:Resource ;
-    rdfs:isDefinedBy sdo: ;
-    rdfs:range rdfs:Resource ;
-    skos:definition "An additional type for the item, typically used for adding more specific types from external vocabularies"@en ;
-    skos:example """See the example for :LifecycleStage"""@en ;
-    skos:prefLabel "additional type"@en ;
-    skos:scopeNote "Use this property to indicate the specialised type of a Lifeycle Stage which is likely selected from a controlled vocabulary"@en ;
+model:
+    a owl:Ontology ;
+    owl:versionIRI :0.0.1 ;
+    owl:versionInfo "0.0.1" ;
+    skos:historyNote "This model was made for the Queensland Department of Resources, Spatial Information unit in 2023 to assist with the lifecylcing of components within multiple ontologies." ;
+    schema:codeRepository "https://github.com/AGLDWG/lifecycle-model/"^^xsd:anyURI ;
+    schema:copyrightHolder <https://orcid.org/0000-0002-8742-7730> ;
+    schema:copyrightNotice "(c) Nicholas J. Car, 2023" ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2023-05-30"^^xsd:date ;
+    schema:dateIssued "2023-05-30"^^xsd:date ;
+    schema:dateModified "2023-11-04"^^xsd:date ;
+    schema:description "This model allows for the representation of lifecycle stages for any Resource. The specific stages are expected to be taken from vocabularies relevant to the Resource." ;
+    schema:license
+        <https://rdflicense.linkeddata.es/rdflicense/cc-by4.0> ,
+        "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    schema:name "Lifecycle Model" ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
 .
 
-
-time:hasTime
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy <http://www.w3.org/2006/time> ;
-    rdfs:range time:TemporalEntity ;
-    skos:definition "Supports the association of a temporal entity (instant or interval) to any thing."@en ;
-    skos:example "See example for LifecycleStage"@en ;
-    skos:prefLabel "has time"@en ;
-    skos:scopeNote "This property is defined by the Time Ontology in OWL and is a general purpose property for indicating that something has a temporality. It should be used in this model to indicate the timespan of a Lifecycle Stage" ;
+<https://linked.data.gov.au/org/agldwg>
+    a schema:Organization ;
+    schema:name "Australian Government Linked Data Working Group" ;
+    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
 .
 
-:hasLifecycleStage
-    a owl:ObjectProperty ;
-    rdfs:domain rdfs:Resource ;
-    rdfs:isDefinedBy model: ;
-    rdfs:range :LifecycleStage ;
-    skos:definition "Indicates a Lifecycle Stage of a Resource"@en ;
-    skos:example "See example for LifecycleStage"@en ;
-    skos:prefLabel "has Lifecycle Stage"@en ;
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:memberOf <https://linked.data.gov.au/org/agldwg> ;
+    schema:name "Nicholas J. Car" ;
 .

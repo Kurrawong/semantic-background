@@ -601,36 +601,6 @@ schema:citation
     schema:name "citation" ;
 .
 
-<http://example.com/person/David-Shotton>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "David Shotton" ;
-.
-
-<http://example.com/person/Paolo-Ciccarese>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Paolo Ciccarese" ;
-.
-
-<http://example.com/person/Silvio-Peroni>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Silvio Peroni" ;
-.
-
-<http://example.com/person/Tim-Clark>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Tim Clark" ;
-.
-
-<http://purl.org/spar>
-    a schema:Organization ;
-    schema:name "SPAR Ontologies" ;
-    schema:url "https://sparontologies.github.io/"^^xsd:anyURI ;
-.
-
 :AuthorNetworkSelfCitation
     a owl:Class ;
     dc:description "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)." ;

@@ -33,6 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://purl.org/ontology/bibo> ,
         <http://purl.org/pav/> ,
         <http://purl.org/spar/cito> ,
+        <http://www.opengis.net/ont/sf> ,
         <http://purl.org/spar/fabio> ,
         vann: ,
         <http://purl.org/wf4ever/wfdesc> ,

@@ -8,7 +8,7 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
-<https://linked.data.gov.au/def/gn>
+<https://linked.data.gov.au/def/roads>
     a owl:Ontology ;
     dcterms:provenance "This model was created for Queensland Spatial Information's CAM (Cadastre & Addressing Modernisation) project in 2023." ;
     owl:versionIRI :0.0.1 ;
@@ -16,15 +16,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/spatial-information-qld/geographical-names-model/"^^xsd:anyURI ;
     schema:copyrightHolder <https://linked.data.gov.au/org/qld-resources> ;
     schema:copyrightNotice "(c) The State of Queensland (Department of Resources) 2023" ;
-    schema:copyrightYear "2025"^^xsd:gYear ;
+    schema:copyrightYear "2023"^^xsd:gYear ;
     schema:dateCreated "2023-04-26"^^xsd:date ;
     schema:dateIssued "2023-04-26"^^xsd:date ;
-    schema:dateModified "2025-12-12"^^xsd:date ;
-    schema:description """This model is for the names of geographical objects' name information in Queensland, however it is a candidate ANZ model also, and may, in the near future, be expanded with feedback form other jurisdictions and a process through the Inter Governmental Committee on Surveying & Mapping (ICSM) to ensure it covers all ANZ jurisdictions' needs.
+    schema:dateModified "2023-04-26"^^xsd:date ;
+    schema:description """This model is for roads information in Queensland, however it is a candidate ANZ model also, and may, in the near future, be expanded with feedback form other jurisdictions and a process through the Inter Governmental Committee on Surveying & Mapping (ICSM) to ensure it covers all ANZ jurisdictions' needs.
 
-This model is a stand-alone model for geographical (place) names information, however it is also designed to work as a Component Model part of an integrative multi-model regime for Spatial Information Queensland known as a Supermodel (see https://linked.data.gov.au/def/qsi-supermodel). The QSI Supermodel aims to integrate cadastre, address, place name, roads and other information."""@en ;
+This model is a stand-alone model for roads information, however it is also designed to work as a Component Model part of an integrative multi-model regime for Spatial Information Queensland known as a Supermodel (see https://linked.data.gov.au/def/qsi-supermodel). The QSI Supermodel aims to integrate cadastre, address, place name, roads and other information.
+    """@en ;
     schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    schema:name "Geographical Names Model" ;
+    schema:name "Roads Model" ;
+    schema:publisher <https://linked.data.gov.au/org/qsi> ;
+    schema:creator <https://kurrawong.ai> ;
+    skos:historyNote "taken as-is from home repo" ;
 .
 
 geo:Feature
