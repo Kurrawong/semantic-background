@@ -1,154 +1,208 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
+PREFIX ont: <http://www.w3.org/1999/02/22-rdf-syntax-ns>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://www.w3.org/1999/02/22-rdf-syntax-ns#> a owl:Ontology ;
-	dc:title "The RDF Concepts Vocabulary (RDF)" ;
-	dc:date "2019-12-16" ;
-	dc:description "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts." .
+rdf:Alt
+    a rdfs:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf rdfs:Container ;
+    schema:description "The class of containers of alternatives." ;
+    schema:name "Alternatives" ;
+.
 
-rdf:HTML a rdfs:Datatype ;
-	rdfs:subClassOf rdfs:Literal ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:seeAlso <http://www.w3.org/TR/rdf11-concepts/#section-html> ;
-	rdfs:label "HTML" ;
-	rdfs:comment "The datatype of RDF literals storing fragments of HTML content" .
+rdf:Bag
+    a rdfs:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf rdfs:Container ;
+    schema:description "The class of unordered containers." ;
+    schema:name "Bag" ;
+.
 
-rdf:langString a rdfs:Datatype ;
-	rdfs:subClassOf rdfs:Literal ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:seeAlso <http://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal> ;
-	rdfs:label "Lang String" ;
-	rdfs:comment "The datatype of language-tagged string values" .
+rdf:CompoundLiteral
+    a rdfs:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> ;
+    rdfs:subClassOf rdfs:Resource ;
+    schema:description "A class representing a compound literal." ;
+    schema:name "Compound Literal" ;
+.
 
-rdf:PlainLiteral a rdfs:Datatype ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:subClassOf rdfs:Literal ;
-	rdfs:seeAlso <http://www.w3.org/TR/rdf-plain-literal/> ;
-	rdfs:label "Plain Literal" ;
-	rdfs:comment "The class of plain (i.e. untyped) literal values, as used in RIF and OWL 2" .
+rdf:List
+    a rdfs:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf rdfs:Resource ;
+    schema:description "The class of RDF Lists." ;
+    schema:name "List" ;
+.
 
-rdf:type a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "type" ;
-	rdfs:comment "The subject is an instance of a class." ;
-	rdfs:range rdfs:Class ;
-	rdfs:domain rdfs:Resource .
+rdf:Property
+    a rdfs:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf rdfs:Resource ;
+    schema:description "The class of RDF properties." ;
+    schema:name "Property" ;
+.
 
-rdf:Property a rdfs:Class ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Property" ;
-	rdfs:comment "The class of RDF properties." ;
-	rdfs:subClassOf rdfs:Resource .
+rdf:Seq
+    a rdfs:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf rdfs:Container ;
+    schema:description "The class of ordered containers." ;
+    schema:name "Sequence" ;
+.
 
-rdf:Statement a rdfs:Class ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Statement" ;
-	rdfs:subClassOf rdfs:Resource ;
-	rdfs:comment "The class of RDF statements." .
+rdf:Statement
+    a rdfs:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf rdfs:Resource ;
+    schema:description "The class of RDF statements." ;
+    schema:name "Statement" ;
+.
 
-rdf:subject a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "subject" ;
-	rdfs:comment "The subject of the subject RDF statement." ;
-	rdfs:domain rdf:Statement ;
-	rdfs:range rdfs:Resource .
+rdf:HTML
+    a rdfs:Datatype ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:seeAlso <http://www.w3.org/TR/rdf11-concepts/#section-html> ;
+    rdfs:subClassOf rdfs:Literal ;
+    schema:description "The datatype of RDF literals storing fragments of HTML content" ;
+    schema:name "HTML" ;
+.
 
-rdf:predicate a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "predicate" ;
-	rdfs:comment "The predicate of the subject RDF statement." ;
-	rdfs:domain rdf:Statement ;
-	rdfs:range rdfs:Resource .
+rdf:JSON
+    a rdfs:Datatype ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-json-datatype> ;
+    rdfs:subClassOf rdfs:Literal ;
+    schema:description "The datatype of RDF literals storing JSON content." ;
+    schema:name "JSON" ;
+.
 
-rdf:object a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "object" ;
-	rdfs:comment "The object of the subject RDF statement." ;
-	rdfs:domain rdf:Statement ;
-	rdfs:range rdfs:Resource .
+rdf:PlainLiteral
+    a rdfs:Datatype ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:seeAlso <http://www.w3.org/TR/rdf-plain-literal/> ;
+    rdfs:subClassOf rdfs:Literal ;
+    schema:description "The class of plain (i.e. untyped) literal values, as used in RIF and OWL 2" ;
+    schema:name "Plain Literal" ;
+.
 
-rdf:Bag a rdfs:Class ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Bag" ;
-	rdfs:comment "The class of unordered containers." ;
-	rdfs:subClassOf rdfs:Container .
+rdf:XMLLiteral
+    a rdfs:Datatype ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf rdfs:Literal ;
+    schema:description "The datatype of XML literal values." ;
+    schema:name "XML Literal" ;
+.
 
-rdf:Seq a rdfs:Class ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Sequence" ;
-	rdfs:comment "The class of ordered containers." ;
-	rdfs:subClassOf rdfs:Container .
+rdf:direction
+    a rdf:Property ;
+    rdfs:domain rdf:CompoundLiteral ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> ;
+    schema:description "The base direction component of a CompoundLiteral." ;
+    schema:name "direction" ;
+.
 
-rdf:Alt a rdfs:Class ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "Alternatives" ;
-	rdfs:comment "The class of containers of alternatives." ;
-	rdfs:subClassOf rdfs:Container .
+rdf:first
+    a rdf:Property ;
+    rdfs:domain rdf:List ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdfs:Resource ;
+    schema:description "The first item in the subject RDF list." ;
+    schema:name "first" ;
+.
 
-rdf:value a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "value" ;
-	rdfs:comment "Idiomatic property used for structured values." ;
-	rdfs:domain rdfs:Resource ;
-	rdfs:range rdfs:Resource .
+rdf:langString
+    a rdfs:Datatype ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:seeAlso <http://www.w3.org/TR/rdf11-concepts/#section-Graph-Literal> ;
+    rdfs:subClassOf rdfs:Literal ;
+    schema:description "The datatype of language-tagged string values" ;
+    schema:name "Lang String" ;
+.
 
-rdf:List a rdfs:Class ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "List" ;
-	rdfs:comment "The class of RDF Lists." ;
-	rdfs:subClassOf rdfs:Resource .
+rdf:language
+    a rdf:Property ;
+    rdfs:domain rdf:CompoundLiteral ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> ;
+    schema:description "The language component of a CompoundLiteral." ;
+    schema:name "language" ;
+.
 
-rdf:nil a rdf:List ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "nil" ;
-	rdfs:comment "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it." .
+()
+    a rdf:List ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "The empty list, with no items in it. If the rest of a list is nil then the list has no more items in it." ;
+    schema:name "nil" ;
+.
 
-rdf:first a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "first" ;
-	rdfs:comment "The first item in the subject RDF list." ;
-	rdfs:domain rdf:List ;
-	rdfs:range rdfs:Resource .
+rdf:object
+    a rdf:Property ;
+    rdfs:domain rdf:Statement ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdfs:Resource ;
+    schema:description "The object of the subject RDF statement." ;
+    schema:name "object" ;
+.
 
-rdf:rest a rdf:Property ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "rest" ;
-	rdfs:comment "The rest of the subject RDF list after the first item." ;
-	rdfs:domain rdf:List ;
-	rdfs:range rdf:List .
+rdf:predicate
+    a rdf:Property ;
+    rdfs:domain rdf:Statement ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdfs:Resource ;
+    schema:description "The predicate of the subject RDF statement." ;
+    schema:name "predicate" ;
+.
 
-rdf:XMLLiteral a rdfs:Datatype ;
-	rdfs:subClassOf rdfs:Literal ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:label "XML Literal" ;
-	rdfs:comment "The datatype of XML literal values." .
+rdf:rest
+    a rdf:Property ;
+    rdfs:domain rdf:List ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdf:List ;
+    schema:description "The rest of the subject RDF list after the first item." ;
+    schema:name "rest" ;
+.
 
-rdf:JSON a rdfs:Datatype ;
-	rdfs:label "JSON" ;
-	rdfs:comment "The datatype of RDF literals storing JSON content." ;
-	rdfs:subClassOf rdfs:Literal ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-json-datatype> .
+rdf:subject
+    a rdf:Property ;
+    rdfs:domain rdf:Statement ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdfs:Resource ;
+    schema:description "The subject of the subject RDF statement." ;
+    schema:name "subject" ;
+.
 
-rdf:CompoundLiteral a rdfs:Class ;
-	rdfs:label "Compound Literal" ;
-	rdfs:comment "A class representing a compound literal." ;
-	rdfs:subClassOf rdfs:Resource ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> .
+rdf:type
+    a rdf:Property ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdfs:Class ;
+    schema:description "The subject is an instance of a class." ;
+    schema:name "type" ;
+.
 
-rdf:language a rdf:Property ;
-	rdfs:label "language" ;
-	rdfs:comment "The language component of a CompoundLiteral." ;
-	rdfs:domain rdf:CompoundLiteral ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> .
+rdf:value
+    a rdf:Property ;
+    rdfs:domain rdfs:Resource ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdfs:Resource ;
+    schema:description "Idiomatic property used for structured values." ;
+    schema:name "value" ;
+.
 
-rdf:direction a rdf:Property ;
-	rdfs:label "direction" ;
-	rdfs:comment "The base direction component of a CompoundLiteral." ;
-	rdfs:domain rdf:CompoundLiteral ;
-	rdfs:isDefinedBy <http://www.w3.org/1999/02/22-rdf-syntax-ns#> ;
-	rdfs:seeAlso <https://www.w3.org/TR/json-ld11/#the-rdf-compoundliteral-class-and-the-rdf-language-and-rdf-direction-properties> .
+ont:
+    a owl:Ontology ;
+    skos:historyNote "2026-01 NJC: added OntPub elements, including the Ontology class definition" ;
+    schema:creator <https://www.w3.org> ;
+    schema:dateCreated "2014-02-25"^^xsd:date ;
+    schema:dateIssued "2014-02-25"^^xsd:date ;
+    schema:dateModified "2019-12-16"^^xsd:date ;
+    schema:description "This is the RDF Schema for the RDF vocabulary terms in the RDF Namespace, defined in RDF 1.1 Concepts." ;
+    schema:name "The RDF Concepts Vocabulary (RDF)" ;
+    schema:publisher <https://www.w3.org> ;
+.

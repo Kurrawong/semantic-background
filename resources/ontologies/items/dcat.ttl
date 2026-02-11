@@ -7,7 +7,6 @@ PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
-PREFIX sdo: <http://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX vcard: <http://www.w3.org/2006/vcard/ns#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -302,7 +301,7 @@ dcat:theme
 
 dcat:themeTaxonomy
     a owl:ObjectProperty ;
-    sdo:rangeIncludes
+    schema:rangeIncludes
         owl:Ontology ,
         skos:Collection ,
         skos:ConceptScheme ;
@@ -492,7 +491,7 @@ dcat:Distribution
         ] ,
         [
             a foaf:Person ;
-            sdo:affiliation
+            schema:affiliation
                 [
                     foaf:homepage <https://csiro.au> ;
                     foaf:name "Commonwealth Scientific and Industrial Research Organisation" ;
@@ -518,13 +517,13 @@ dcat:Distribution
             foaf:name "Makx Dekkers" ;
         ] ,
         [
-            sdo:affiliation <http://www.w3.org/data#W3C> ;
+            schema:affiliation <http://www.w3.org/data#W3C> ;
             rdfs:seeAlso <http://philarcher.org/foaf.rdf#me> ;
             foaf:homepage <http://www.w3.org/People/all#phila> ;
             foaf:name "Phil Archer" ;
         ] ,
         [
-            sdo:affiliation
+            schema:affiliation
                 [
                     foaf:homepage <http://ec.europa.eu/dgs/informatics/> ;
                     foaf:name "European Commission, DG DIGIT" ;
@@ -532,7 +531,7 @@ dcat:Distribution
             foaf:name "Vassilios Peristeras" ;
         ] ,
         [
-            sdo:affiliation
+            schema:affiliation
                 [
                     foaf:homepage <http://www.refinitiv.com> ;
                     foaf:name "Refinitiv" ;
@@ -551,7 +550,7 @@ dcat:Distribution
             foaf:name "Marios Meimaris" ;
         ] ,
         [
-            sdo:affiliation
+            schema:affiliation
                 [
                     foaf:homepage <http://okfn.org> ;
                     foaf:name "Open Knowledge Foundation" ;
@@ -559,7 +558,7 @@ dcat:Distribution
             foaf:name "Rufus Pollock" ;
         ] ,
         [
-            sdo:affiliation
+            schema:affiliation
                 [
                     foaf:homepage <http://stfc.ac.uk> ;
                     foaf:name "Science and Technology Facilities Council, UK" ;
