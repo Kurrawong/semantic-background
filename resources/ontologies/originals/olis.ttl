@@ -1,0 +1,131 @@
+PREFIX : <https://olis.dev/>
+PREFIX ont: <https://olis.dev/ont>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:contains
+    a owl:ObjectProperty ;
+    rdfs:domain :VirtualGraph ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :NamedGraph ;
+    skos:example "See example for Real Graph" ;
+    skos:historyNote "Defined in this ontology for the first time" ;
+    schema:description "The subject Virtual Graph contains the object Named Graph" ;
+    schema:name "contains" ;
+.
+
+:hasBaseGraph
+    a owl:ObjectProperty ;
+    rdfs:domain :RealGraph ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :NamedGraph ;
+    skos:example "See example for Real Graph" ;
+    skos:historyNote "Defined in this ontology for the first time" ;
+    schema:description "The subject Real Graph is derived from, or to be added to, the object Named Graph" ;
+    schema:name "has base graph" ;
+.
+
+:hasGraphRole
+    a owl:ObjectProperty ;
+    rdfs:domain :VirtualGraph ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :NamedGraph ;
+    skos:example "See example for Real Graph" ;
+    skos:historyNote "Defined in this ontology for the first time" ;
+    schema:description "The subject Real Graph plays the object Olis Graph Role" ;
+    schema:name "has graph role" ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+:RealGraph
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :NamedGraph ;
+    skos:example """
+        PREFIX : <https://olis.dev/>
+        PREFIX ex: <http://example.com>
+        PREFIX gr: <http://olis.dev/GraphRoles/>
+        PREFIX schema: <https://schema.org/>
+
+        ex:realGraphX
+            a :RealGraph ;
+            :hasGraphRole gr:Original ;
+            schema:name "Real Graph X" ;
+            schema:description "A real graph, containing triples about ..." ;
+        .
+
+        ex:realGraphY
+            a :RealGraph ;
+            :hasGraphRole gr:Inferred ;
+            :hasBaseGraph ex:realGraphX ;
+            schema:name "Real Graph Y" ;
+            schema:description "A real graph, containing triples inferred from Real Graph X" ;
+        .
+
+        ex:virtualGraphZ
+            a :VirtualGraph ;
+            schema:name "Virtual Graph Z" ;
+            schema:description "A Virtual Graph that contains Real Graphs X & Y" ;
+            :contains ex:realGraphX , ex:realGraphY ;
+        .
+    """ ;
+    skos:historyNote "Defined in this ontology for the first time" ;
+    schema:description "A Named Graph that contains triples" ;
+    schema:name "Real Graph" ;
+.
+
+:VirtualGraph
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :NamedGraph ;
+    owl:disjointWith :RealGraph ;
+    skos:example "See example for Real Graph" ;
+    skos:historyNote "Defined in this ontology for the first time" ;
+    schema:description "A Named Graph that does not and cannot contain triples but which may be related to Real Graphs" ;
+    schema:name "Virtual Graph" ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:affiliation <https://kurrawong.ai> ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:name "Nicholas J. Car" ;
+.
+
+:NamedGraph
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:example "See example for Real Graph" ;
+    skos:scopeNote "This class is not expected to be instantiated, instead Real Graph and Virtual Graph should be used" ;
+    schema:citation "https://www.w3.org/TR/rdf12-concepts/#section-rdf-graph"^^xsd:anyURI ;
+    schema:description "An RDF Named Graph, as per RDF 1.2's definition" ;
+    schema:name "Named Graph" ;
+.
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :1.0.0 ;
+    owl:versionInfo "1.0.0" ;
+    skos:historyNote """2025-12: Altered isAliasFor to contains. Added hasBaseGraph & hasGraphRole
+    
+2023-12: First public version""" ;
+    schema:codeRepository "https://github.com/Kurrawong/olis.dev"^^xsd:anyURI ;
+    schema:copyrightHolder <https://orcid.org/0000-0002-8742-7730> ;
+    schema:copyrightNotice "(c) KurrawongAI, 2022-2025" ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2022-07-01"^^xsd:date ;
+    schema:dateIssued "2022-07-01"^^xsd:date ;
+    schema:dateModified "2025-12-23"^^xsd:date ;
+    schema:description "A model of RDF graphs and relations between them" ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "Olis Ontology" ;
+    schema:publisher <https://orcid.org/0000-0002-8742-7730> ;
+.
