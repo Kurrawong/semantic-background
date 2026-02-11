@@ -1,0 +1,17 @@
+PREFIX ont: <http://www.w3.org/ns/prov>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<http://www.w3.org/ns/prov-dc#>
+    a owl:Ontology ;
+    owl:imports <http://www.w3.org/ns/prov-o#> ;
+    schema:description """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page).
+
+If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome.""" ;
+    schema:name "Dublin Core extensions of the W3C PROVenance Interchange Ontology (PROV-O)" ;
+.
