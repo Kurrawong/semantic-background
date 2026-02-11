@@ -57,6 +57,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://www.ardc.edu.au"^^xsd:anyURI ;
 .
 
+<https://www.w3.org>
+    a schema:Organization ;
+    schema:url "https://www.w3.org"^^xsd:anyURI ;
+.
+
 <https://linked.data.gov.au/org/loc>
     a schema:Organization ;
     schema:name "USA Library of Congress" ;
