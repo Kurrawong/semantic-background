@@ -19,21 +19,23 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2023"^^xsd:gYear ;
-    schema:dateModified "2025-12-12"^^xsd:date ;
+    schema:dateModified "2026-02-13"^^xsd:date ;
     schema:description "A catalogue of reference Semantic Web ontologies used by KurrawongAI" ;
     schema:hasPart
         <http://datashapes.org/dash> ,
         <http://id.loc.gov/ontologies/bibframe/> ,
+        <http://purl.obolibrary.org/obo/bfo> ,
         <http://purl.obolibrary.org/obo/bfo.owl> ,
         dc: ,
         dcterms: ,
         <http://purl.org/geojson/vocab#> ,
         <http://purl.org/linked-data/cube> ,
         <http://purl.org/linked-data/registry> ,
+        <http://purl.org/linked-data/registry#StatusScheme> ,
         <http://purl.org/ontology/bibo> ,
+        <http://purl.org/pav> ,
         <http://purl.org/pav/> ,
         <http://purl.org/spar/cito> ,
-        <http://www.opengis.net/ont/sf> ,
         <http://purl.org/spar/fabio> ,
         vann: ,
         <http://purl.org/wf4ever/wfdesc> ,
@@ -44,7 +46,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://www.ifomis.org/bfo/1.1> ,
         <http://www.opengis.net/ont/geosparql> ,
         <http://www.opengis.net/ont/gml> ,
+        <http://www.opengis.net/ont/sf> ,
+        <http://www.w3.org/1999/02/22-rdf-syntax-ns> ,
         rdf: ,
+        <http://www.w3.org/2000/01/rdf-schema> ,
         rdfs: ,
         <http://www.w3.org/2002/07/owl> ,
         <http://www.w3.org/2003/06/sw-vocab-status/ns> ,
@@ -53,9 +58,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://www.w3.org/2008/05/skos-xl> ,
         <http://www.w3.org/ns/dcat> ,
         <http://www.w3.org/ns/dx/prof> ,
+        <http://www.w3.org/ns/odrl/2> ,
         odrl: ,
+        <http://www.w3.org/ns/prov> ,
         prov: ,
         sh: ,
+        <http://www.w3.org/ns/sosa> ,
         sosa: ,
         ssn:ext ,
         foaf: ,
@@ -68,7 +76,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         prez:manifest-model ,
         prez:ont ,
         <https://schema.org> ,
+        <https://w3id.org/ogc/stac/core> ,
         <https://w3id.org/ogc/stac/core/> ,
+        <https://w3id.org/tern/ontologies/tern> ,
         <https://w3id.org/tern/ontologies/tern/> ,
         <https://www.ica.org/standards/RiC/ontology> ;
     schema:name "Semantic Background Ontologies" ;
