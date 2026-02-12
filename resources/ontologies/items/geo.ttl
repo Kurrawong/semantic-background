@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     vann:preferredNamespacePrefix "geo"^^xsd:string ;
     vann:preferredNamespaceUri "http://www.opengis.net/ont/geosparql#"^^xsd:anyURI ;
 	schema:creator <https://defs.opengis.net/org/geosparql-swg> ;
-	schema:publisher <https://defs.opengis.net/org/ogc> ;
+	schema:publisher <http://www.opengis.net/def/entities/bodies/ogc> ;
 	schema:contributor
         <https://orcid.org/0000-0003-1988-462X> ,
         <mailto:john.herring@oracle.com> ,

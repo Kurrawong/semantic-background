@@ -183,14 +183,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a schema:Organization ;
     schema:description "The Open Geospatial Consortium's Geosemantics Domain Working Group" ;
     schema:name "Geosemantics DWG" ;
-    schema:parentOrganization <https://defs.opengis.net/org/ogc> ;
+    schema:parentOrganization <http://www.opengis.net/def/entities/bodies/ogc> ;
     schema:url "https://www.ogc.org/domain-working-groups/"^^xsd:anyURI ;
-.
-
-<https://defs.opengis.net/org/ogc>
-    a schema:Organization ;
-    schema:name "Open Geospatial Consortium" ;
-    schema:url "https://www.ogc.org/"^^xsd:anyURI ;
 .
 
 <https://geoscape.com.au>

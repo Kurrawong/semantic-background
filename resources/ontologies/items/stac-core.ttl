@@ -1,30 +1,24 @@
-PREFIX dct: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX ont: <https://w3id.org/ogc/stac/core>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX stac: <https://w3id.org/ogc/stac/core/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-stac:
-    a owl:Ontology ;
-    dct:creator "Rob Atkinson, OGC" ;
-    dct:description "Ontology for the SpatioTemporal Asset Catalog (STAC) Core 1.0.0 specification" ;
-    dct:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
-    dct:title "STAC Core Ontology" ;
-.
-
 stac:datetime
     a owl:DatatypeProperty ;
-    rdfs:label "datetime" ;
-    rdfs:comment "Datetime associated with the Item (typically acquisition time)." ;
     rdfs:domain stac:Item ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range xsd:dateTime ;
+    schema:description "Datetime associated with the Item (typically acquisition time)." ;
+    schema:name "datetime" ;
 .
 
 stac:description
     a owl:DatatypeProperty ;
-    rdfs:label "description" ;
     rdfs:domain
         [
             owl:unionOf (
@@ -32,43 +26,49 @@ stac:description
                 stac:Collection
             ) ;
         ] ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range xsd:string ;
+    schema:description "description" ;
+    schema:name "description" ;
 .
 
 stac:end_datetime
     a owl:DatatypeProperty ;
-    rdfs:label "end datetime" ;
     rdfs:domain stac:Item ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range xsd:dateTime ;
+    schema:description "end datetime" ;
+    schema:name "end datetime" ;
 .
 
 stac:extent
     a owl:ObjectProperty ;
-    rdfs:label "extent" ;
-    rdfs:comment "The spatiotemporal extent of a Collection." ;
     rdfs:domain stac:Collection ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "The spatiotemporal extent of a Collection." ;
+    schema:name "extent" ;
 .
 
 stac:hasAsset
     a owl:ObjectProperty ;
-    rdfs:label "has asset" ;
-    rdfs:comment "Links an Item to one of its Assets." ;
     rdfs:domain stac:Item ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range stac:Asset ;
+    schema:description "Links an Item to one of its Assets." ;
+    schema:name "has asset" ;
 .
 
 stac:href
     a owl:DatatypeProperty ;
-    rdfs:label "href" ;
-    rdfs:comment "The link reference (URL)." ;
     rdfs:domain stac:Link ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range xsd:anyURI ;
+    schema:description "The link reference (URL)." ;
+    schema:name "href" ;
 .
 
 stac:id
     a owl:DatatypeProperty ;
-    rdfs:label "id" ;
-    rdfs:comment "Unique identifier for a STAC entity." ;
     rdfs:domain
         [
             owl:unionOf (
@@ -77,21 +77,23 @@ stac:id
                 stac:Item
             ) ;
         ] ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range xsd:string ;
+    schema:description "Unique identifier for a STAC entity." ;
+    schema:name "id" ;
 .
 
 stac:license
     a owl:DatatypeProperty ;
-    rdfs:label "license" ;
-    rdfs:comment "Collection-wide license applying to Items unless overridden by an Item." ;
     rdfs:domain stac:Collection ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range xsd:string ;
+    schema:description "Collection-wide license applying to Items unless overridden by an Item." ;
+    schema:name "license" ;
 .
 
 stac:links
     a owl:ObjectProperty ;
-    rdfs:label "links" ;
-    rdfs:comment "Associates a STAC entity with its links." ;
     rdfs:domain
         [
             owl:unionOf (
@@ -100,60 +102,87 @@ stac:links
                 stac:Item
             ) ;
         ] ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range stac:Link ;
+    schema:description "Associates a STAC entity with its links." ;
+    schema:name "links" ;
 .
 
 stac:mediaType
     a owl:DatatypeProperty ;
-    rdfs:label "media type" ;
-    rdfs:comment "The media type of an Asset." ;
     rdfs:domain stac:Asset ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range xsd:string ;
+    schema:description "The media type of an Asset." ;
+    schema:name "media type" ;
 .
 
 stac:rel
     a owl:DatatypeProperty ;
-    rdfs:label "rel" ;
-    rdfs:comment "The relationship type of the link." ;
     rdfs:domain stac:Link ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range xsd:string ;
+    schema:description "The relationship type of the link." ;
+    schema:name "rel" ;
 .
 
 stac:start_datetime
     a owl:DatatypeProperty ;
-    rdfs:label "start datetime" ;
     rdfs:domain stac:Item ;
+    rdfs:isDefinedBy ont: ;
     rdfs:range xsd:dateTime ;
+    schema:description "start datetime" ;
+    schema:name "start datetime" ;
 .
 
 stac:Asset
     a owl:Class ;
-    rdfs:label "STAC Asset" ;
-    rdfs:comment "An Asset represents a file associated with a STAC Item, such as an image, data file, or metadata file." ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "An Asset represents a file associated with a STAC Item, such as an image, data file, or metadata file." ;
+    schema:name "STAC Asset" ;
 .
 
 stac:Link
     a owl:Class ;
-    rdfs:label "STAC Link" ;
-    rdfs:comment "A Link describes a relationship between STAC entities using rel values and hrefs." ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A Link describes a relationship between STAC entities using rel values and hrefs." ;
+    schema:name "STAC Link" ;
 .
 
 stac:Catalog
     a owl:Class ;
-    rdfs:label "STAC Catalog" ;
-    rdfs:comment "A STAC Catalog is a JSON object that provides links to other STAC entities." ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A STAC Catalog is a JSON object that provides links to other STAC entities." ;
+    schema:name "STAC Catalog" ;
 .
 
 stac:Collection
     a owl:Class ;
-    rdfs:label "STAC Collection" ;
-    rdfs:comment "A Collection extends Catalog with additional metadata and describes a group of related STAC Items." ;
+    rdfs:isDefinedBy ont: ;
     rdfs:subClassOf stac:Catalog ;
+    schema:description "A Collection extends Catalog with additional metadata and describes a group of related STAC Items." ;
+    schema:name "STAC Collection" ;
 .
 
 stac:Item
     a owl:Class ;
-    rdfs:label "STAC Item" ;
-    rdfs:comment "A STAC Item is a GeoJSON Feature augmented with STAC metadata fields and links." ;
+    rdfs:isDefinedBy ont: ;
     rdfs:subClassOf geo:Feature ;
+    schema:description "A STAC Item is a GeoJSON Feature augmented with STAC metadata fields and links." ;
+    schema:name "STAC Item" ;
+.
+
+ont:
+    a owl:Ontology ;
+    skos:historyNote "Created during the OGC's Open Science Persistent Demonstrator 2025 project" ;
+    schema:copyrightHolder <http://www.opengis.net/def/entities/bodies/ogc> ;
+    schema:copyrightNotice "(c) Open Geospatial Consortium, 2025" ;
+    schema:creator <https://orcid.org/0000-0002-7878-2693> ;
+    schema:dateCreated "2025-11-01"^^xsd:date ;
+    schema:dateIssued "2025-11-01"^^xsd:date ;
+    schema:dateModified "2025-11-01"^^xsd:date ;
+    schema:description "Ontology for the SpatioTemporal Asset Catalog (STAC) Core 1.0.0 specification" ;
+    schema:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
+    schema:name "STAC Core Ontology" ;
+    schema:publisher <http://www.opengis.net/def/entities/bodies/ogc> ;
 .
