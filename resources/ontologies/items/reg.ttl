@@ -147,88 +147,6 @@ reg:sourceDataset
     schema:name "source dataset"@en ;
 .
 
-reg:statusAny
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:prefLabel "any"@en ;
-    skos:topConceptOf reg:StatusScheme ;
-    schema:description "Placeholder denoting any registry status."@en ;
-.
-
-reg:statusExperimental
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:altlabel "provisional"@en ;
-    skos:broader reg:statusValid ;
-    skos:inScheme reg:StatusScheme ;
-    skos:prefLabel "experimental"@en ;
-    schema:description "An entry that has been accepted into the register temporarily and may be subject to change or withdrawal."@en ;
-.
-
-reg:statusInvalid
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:broader reg:statusNotAccepted ;
-    skos:inScheme reg:StatusScheme ;
-    skos:prefLabel "invalid"@en ;
-    schema:description "An entry which has been invalidated due to serious flaws, distinct from retrirement. Corresponds to ISO 19135(redraft) 'invalid'"@en ;
-.
-
-reg:statusReserved
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:broader reg:statusNotAccepted ;
-    skos:inScheme reg:StatusScheme ;
-    skos:prefLabel "reserved"@en ;
-    schema:description "A reserved entry allocated for some as yet undetermined future use."@en ;
-.
-
-reg:statusRetired
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:altlabel "withdrawn"@en ;
-    skos:broader reg:statusDeprecated ;
-    skos:inScheme reg:StatusScheme ;
-    skos:prefLabel "retired"@en ;
-    schema:description "An entry that has been withdrawn from use.  Corresponds to ISO 19135:2005 'retired'"@en ;
-.
-
-reg:statusStable
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:broader reg:statusValid ;
-    skos:inScheme reg:StatusScheme ;
-    skos:prefLabel "stable"@en ;
-    schema:description "An entry that is seen as having a reasonable measure of stability, may be used to mark the full adoption of a previously 'experimental' entry."@en ;
-.
-
-reg:statusSubmitted
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:broader reg:statusNotAccepted ;
-    skos:inScheme reg:StatusScheme ;
-    skos:prefLabel "submitted"@en ;
-    schema:description "A proposed entry which is not yet approved for use for use. Corresponds to ISO 19135:(redraft) 'submitted'"@en ;
-.
-
-reg:statusSuperseded
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:altlabel "replaced"@en ;
-    skos:broader reg:statusDeprecated ;
-    skos:inScheme reg:StatusScheme ;
-    skos:prefLabel "superseded"@en ;
-    schema:description "An entry that has been replaced by a new alternative which should be used instead.  Corresponds to ISO 19135:2005 'superseded'."@en ;
-.
-
 reg:subregister
     a owl:ObjectProperty ;
     rdfs:domain reg:Register ;
@@ -505,35 +423,6 @@ reg:notation
     schema:name "notation"@en ;
 .
 
-reg:statusAccepted
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:prefLabel "accepted"@en ;
-    skos:topConceptOf reg:StatusScheme ;
-    schema:description "An entry that has been accepted for use and is visible in the default register listing. Includes entries that have seen been retired or superseded."@en ;
-.
-
-reg:statusDeprecated
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:broader reg:statusAccepted ;
-    skos:inScheme reg:StatusScheme ;
-    skos:prefLabel "deprecated"@en ;
-    schema:description "An entry that has been retired or replaced and is no longer to be used."@en ;
-.
-
-reg:statusValid
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:broader reg:statusAccepted ;
-    skos:inScheme reg:StatusScheme ;
-    skos:prefLabel "valid"@en ;
-    schema:description "An entry that has been accepted into the register and is deemed fit for use. Corresponds to ISO 19135:2005 'valid'."@en ;
-.
-
 reg:submitter
     a owl:ObjectProperty ;
     rdfs:domain reg:RegisterItem ;
@@ -594,15 +483,6 @@ reg:predecessor
     schema:name "predecessor"@en ;
 .
 
-reg:statusNotAccepted
-    a
-        reg:Status ,
-        skos:Concept ;
-    skos:prefLabel "notAccepted"@en ;
-    skos:topConceptOf reg:StatusScheme ;
-    schema:description "An entry that should not be visible in the default register listing. Corresponds to ISO 19135:2005 'notValid'"@en ;
-.
-
 reg:Delegated
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
@@ -613,6 +493,14 @@ reg:Delegated
         ] ;
     schema:description "A registerable entity which represents some form of delegation"@en ;
     schema:name "Delegated"@en ;
+.
+
+reg:Status
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf skos:Concept ;
+    schema:description "Open set of status code for entries in a register"@en ;
+    schema:name "Status"@en ;
 .
 
 reg:EntityReference
@@ -633,12 +521,6 @@ reg:EntityReference
         ] ;
     schema:description "A reference to some internal or external Linked Data resource. The reg:entity gives the URI of the resource being referenced. If a reg:sourceGraph value is present then it is the URI for a named graph within the Registry containing the properties of the referenced entity. If reg:entityVersion is present it gives URI for the particular version:Version of the entity being referenced. Normally only one of reg:sourceGraph and reg:entityVersion is needed since versioned entities are normally stored in the default graph."@en ;
     schema:name "Entity Reference"@en ;
-.
-
-reg:StatusScheme
-    a skos:ConceptScheme ;
-    schema:description "Concept scheme containing registry status codes"@en ;
-    schema:name "Status Scheme"@en ;
 .
 
 reg:Register
@@ -787,17 +669,9 @@ reg:RegisterItem
     schema:name "RegisterItem"@en ;
 .
 
-reg:Status
-    a owl:Class ;
-    rdfs:isDefinedBy ont: ;
-    rdfs:subClassOf skos:Concept ;
-    schema:description "Open set of status code for entries in a register"@en ;
-    schema:name "Status"@en ;
-.
-
 ont:
     a owl:Ontology ;
-    skos:historyNote "2026-01 NJC: added OntPub elements, including the Ontology class definition" ;
+    skos:historyNote "2026-01 NJC: added OntPub elements. Removed RegStatus vocab as found elsewhere" ;
     schema:copyrightNotice "# (c) Epimorphics Ltd, 2012" ;
     schema:creator reg:Dave-Reynolds ;
     schema:dateCreated "2012-11-11"^^xsd:date ;

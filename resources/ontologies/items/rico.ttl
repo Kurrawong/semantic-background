@@ -1,11 +1,8 @@
 PREFIX : <https://www.ica.org/standards/RiC/ontology#>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX ont: <https://www.ica.org/standards/RiC/ontology>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX ric-dft: <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes#>
-PREFIX ric-rst: <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -4100,79 +4097,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "was used to date" ;
 .
 
-ric-dft:AuthorityRecord
-    a
-        owl:NamedIndividual ,
-        skos:Concept ,
-        :DocumentaryFormType ;
-    skos:inScheme <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes> ;
-    skos:topConceptOf <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes> ;
-    schema:description "This category can be used for records that describe an entity." ;
-    schema:name "authority record" ;
-    rdfs:isDefinedBy ont: ;
-.
-
-ric-dft:FindingAid
-    a
-        owl:NamedIndividual ,
-        skos:Concept ,
-        :DocumentaryFormType ;
-    skos:inScheme <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes> ;
-    skos:topConceptOf <https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes> ;
-    schema:description "This documentary form type can be used for records that aggregate and organizes metadata on some record(s) or record set(s)." ;
-    schema:name "finding aid" ;
-    rdfs:isDefinedBy ont: ;
-.
-
-ric-rst:Collection
-    a
-        owl:NamedIndividual ,
-        skos:Concept ,
-        :RecordSetType ;
-    skos:inScheme <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes> ;
-    skos:topConceptOf <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes> ;
-    schema:description "An artificial assemblage of documents accumulated on the basis of some common characteristic without regard to the provenance of those documents. Not to be confused  with an archival fonds. (From ICA ISAD(G))" ;
-    schema:name "collection" ;
-    rdfs:isDefinedBy ont: ;
-.
-
-ric-rst:File
-    a
-        owl:NamedIndividual ,
-        skos:Concept ,
-        :RecordSetType ;
-    skos:inScheme <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes> ;
-    skos:topConceptOf <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes> ;
-    schema:description "An organized unit of documents grouped together either for current use by the creator or in the process of archival arrangement, because they relate to the same  subject, activity, or transaction. A file is usually the basic unit within a record series. (From ICA ISAD(G))" ;
-    schema:name "file" ;
-
-    rdfs:isDefinedBy ont: ;
-.
-
-ric-rst:Fonds
-    a
-        owl:NamedIndividual ,
-        skos:Concept ,
-        :RecordSetType ;
-    skos:inScheme <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes> ;
-    skos:topConceptOf <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes> ;
-    schema:description "The whole of the records, regardless of form or medium, organically created and/or accumulated and used by a particular person, family, or corporate body in the  course of that creator's activities and functions. (From ICA ISAD(G))" ;
-    schema:name "fonds" ;
-    rdfs:isDefinedBy ont: ;
-.
-
-ric-rst:Series
-    a
-        owl:NamedIndividual ,
-        skos:Concept ,
-        :RecordSetType ;
-    skos:inScheme <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes> ;
-    skos:topConceptOf <https://www.ica.org/standards/RiC/vocabularies/recordSetTypes> ;
-    schema:description "Documents arranged in accordance with a filing system or maintained as a unit because they result from the same accumulation or filing process, or the same activity; have a particular form; or because of some other relationship arising out of their creation, receipt, or use. A series is also known as a records series. (From ICA ISAD(G))" ;
-    schema:name "series" ;
-    rdfs:isDefinedBy ont: ;
-.
-
 <http://www.wikidata.org/entity/Q1421986>
     a schema:Organization ;
     schema:name "International Council on Archives" ;
@@ -4186,12 +4110,6 @@ ric-rst:Series
         [
             a owl:Restriction ;
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Agent ;
-            owl:onProperty :relationHasTarget ;
-        ] ,
-        [
-            a owl:Restriction ;
-            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
                     owl:unionOf (
@@ -4200,6 +4118,12 @@ ric-rst:Series
                     ) ;
                 ] ;
             owl:onProperty :relationHasSource ;
+        ] ,
+        [
+            a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Agent ;
+            owl:onProperty :relationHasTarget ;
         ] ,
         :OrganicProvenanceRelation ;
     owl:equivalentClass
@@ -4228,7 +4152,6 @@ ric-rst:Series
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
-                    
                     owl:unionOf (
                         :Instantiation
                         :RecordResource
@@ -4292,9 +4215,14 @@ ric-rst:Series
         [
             a owl:Restriction ;
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Record ;
+            owl:onProperty :relationHasSource ;
+        ] ,
+        [
+            a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
-                    
                     owl:unionOf (
                         :Group
                         :Person
@@ -4302,12 +4230,6 @@ ric-rst:Series
                     ) ;
                 ] ;
             owl:onProperty :relationHasTarget ;
-        ] ,
-        [
-            a owl:Restriction ;
-            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Record ;
-            owl:onProperty :relationHasSource ;
         ] ,
         :CreationRelation ;
     owl:equivalentClass
@@ -4509,20 +4431,6 @@ ric-rst:Series
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
-                    
-                    owl:unionOf (
-                        :Instantiation
-                        :RecordResource
-                    ) ;
-                ] ;
-            owl:onProperty :relationHasTarget ;
-        ] ,
-        [
-            a owl:Restriction ;
-            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass
-                [
-                    
                     owl:unionOf (
                         :Group
                         :Person
@@ -4530,6 +4438,18 @@ ric-rst:Series
                     ) ;
                 ] ;
             owl:onProperty :relationHasSource ;
+        ] ,
+        [
+            a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass
+                [
+                    owl:unionOf (
+                        :Instantiation
+                        :RecordResource
+                    ) ;
+                ] ;
+            owl:onProperty :relationHasTarget ;
         ] ,
         :AuthorityRelation ;
     owl:equivalentClass
@@ -4652,7 +4572,6 @@ ric-rst:Series
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
-                    
                     owl:unionOf (
                         :Group
                         :Person
@@ -4868,7 +4787,6 @@ ric-rst:Series
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
-                    
                     owl:unionOf (
                         :Instantiation
                         :RecordResource
@@ -4924,6 +4842,16 @@ ric-rst:Series
     schema:description "Connects a Record Resource to one or more Instantiations that instantiate it, and which either may exist or may have been lost or destroyed. The Record Resource  is the source of the Relation and the Instantiation(s) is the target." ;
     schema:name "Record Resource to Instantiation Relation" ;
     :RiCCMCorrespondingComponent "Class implementation of RiC-R025 and RiC-R025i relations" ;
+.
+
+:RecordSetType
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :Type ;
+    skos:scopeNote "Four instances of Record Set Type are included for now in RiC-O; they also are instances of skos:Concept and, as such, part of a SKOS vocabulary. Record Set Type may  also be used (or extended) to categorize types of Record Set that have not traditionally been considered archival, e.g. search result list." ;
+    schema:description "A broad categorization of the type of Record Set." ;
+    schema:name "Record Set Type" ;
+    :RiCCMCorrespondingComponent "Corresponds to RiC-A36 (Record Set Type attribute)" ;
 .
 
 :RepresentationType
@@ -6005,7 +5933,6 @@ ric-rst:Series
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
-                    
                     owl:unionOf (
                         :Instantiation
                         :RecordResource
@@ -7241,7 +7168,6 @@ ric-rst:Series
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
-                    
                     owl:unionOf (
                         :Instantiation
                         :RecordResource
@@ -7254,7 +7180,6 @@ ric-rst:Series
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
-                    
                     owl:unionOf (
                         :Activity
                         :Agent
@@ -7281,21 +7206,20 @@ ric-rst:Series
         [
             a owl:Restriction ;
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onClass :Agent ;
+            owl:onProperty :relationHasTarget ;
+        ] ,
+        [
+            a owl:Restriction ;
+            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
-                    
                     owl:unionOf (
                         :Instantiation
                         :RecordResource
                     ) ;
                 ] ;
             owl:onProperty :relationHasSource ;
-        ] ,
-        [
-            a owl:Restriction ;
-            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onClass :Agent ;
-            owl:onProperty :relationHasTarget ;
         ] ,
         :OrganicOrFunctionalProvenanceRelation ;
     owl:equivalentClass
@@ -7659,25 +7583,6 @@ ric-rst:Series
     schema:name "has the role of the Whole Part Relation" ;
 .
 
-<https://www.ica.org/standards/RiC/vocabularies/documentaryFormTypes>
-    a
-        skos:ConceptScheme ;
-    dc:creator "International Coucil on Archives Expert Group on Archival Description (ICA EGAD)" ;
-    dc:language
-        "en" ,
-        "es" ,
-        "fr" ;
-    dc:title "International Council on Archives Records in Contexts Vocabulary for Documentary Form Types" ;
-    rdfs:isDefinedBy ont: ;
-    skos:hasTopConcept
-        ric-dft:AuthorityRecord ,
-        ric-dft:FindingAid ;
-    skos:historyNote "This vocabulary was created within the Records in Contexts Ontology. When the ICA/EGAD developed RiC-O 1.0, it was decided that two versions of RiC-O would be  released. The first one, consisting of a unique large OWL file, would remain the reference one. RiC-0 1.0 would also be provided as a set of files, in order to address specific needs,  e.g. using only the core of the ontology, or using only the individuals it defined and defining new individuals. So from December 2023, you can find the vocabulary on Documentary Form  Types, either in the unique large OWL RiC-O file, or as a separate file. " ;
-    skos:scopeNote "For now this vocabulary only defines two top concepts; it should hopefully be completed later. The concepts defined in this vocabulary can be used in combination  with RiC-O classes and properties, whenever necessary and appropriate, to assign a documentary form type to a Record or a Record Part, using the rico:hasDocumentaryFormType object  property, or its inverse one. They also can be used to specify that a rico:RecordSet included or includes members whose some (rico:hasOrHadSomeMembersWithDocumentaryFormType) or all (rico:hasOrHadAllMembersWithDocumentaryFormType) have some Documentary Form Type. Each concept is both defined as a skos:Concept and a rico:DocumentaryFormType, so that it is  possible to extend the classic definition of such concepts using RiC-O properties. For example, you can use rico:history, rico:date, or rico:isAssociatedWithPlace, rico:precedesInTime,  if you consider a documentary form type as being a historical entity, known and used in some known space or time region." ;
-    schema:description "A vocabulary that provides URIs for describing documentary form types of RiC Records and Record Parts." ;
-    schema:name "Documentary Form Types" ;
-.
-
 :AgentTemporalRelation
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
@@ -7731,7 +7636,6 @@ ric-rst:Series
             owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onClass
                 [
-                    
                     owl:unionOf (
                         :Instantiation
                         :RecordResource
@@ -8126,6 +8030,16 @@ ric-rst:Series
     :RiCCMCorrespondingComponent "Corresponds to RiC-A10 (Content Type attribute)" ;
 .
 
+:DocumentaryFormType
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :Type ;
+    skos:scopeNote "Documentary Form Type plays an important role in determining the type of information a Record may comprise, its status of perfection, and its authenticity and  reliability. Documentary form types exist in a specific social and cultural context, and within that context, are subject to change over time." ;
+    schema:description "Categorization of a Record or Record Part with respect to its extrinsic and intrinsic elements that together communicate its content, administrative and  documentary context, and authority." ;
+    schema:name "Documentary Form Type" ;
+    :RiCCMCorrespondingComponent "Corresponds to RiC-A17 (Documentary Form Type attribute)" ;
+.
+
 :Language
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
@@ -8176,16 +8090,6 @@ ric-rst:Series
     schema:description "Connects at least one Mandate and at least one Agent, when the first gives or gave the second one the authority or competencies to act. May also involve one to  many Activities that the Mandate(s) assign(s) or assigned to the Agent(s). The Mandate(s) is the source of the Relation and the Agent(s) is the target." ;
     schema:name "Mandate Relation" ;
     :RiCCMCorrespondingComponent "Class implementation of RiC-R067 and RiC-R067i relations" ;
-.
-
-:RecordSetType
-    a owl:Class ;
-    rdfs:isDefinedBy ont: ;
-    rdfs:subClassOf :Type ;
-    skos:scopeNote "Four instances of Record Set Type are included for now in RiC-O; they also are instances of skos:Concept and, as such, part of a SKOS vocabulary. Record Set Type may  also be used (or extended) to categorize types of Record Set that have not traditionally been considered archival, e.g. search result list." ;
-    schema:description "A broad categorization of the type of Record Set." ;
-    schema:name "Record Set Type" ;
-    :RiCCMCorrespondingComponent "Corresponds to RiC-A36 (Record Set Type attribute)" ;
 .
 
 :RecordState
@@ -8478,16 +8382,6 @@ ric-rst:Series
     schema:name "was part of" ;
 .
 
-:DocumentaryFormType
-    a owl:Class ;
-    rdfs:isDefinedBy ont: ;
-    rdfs:subClassOf :Type ;
-    skos:scopeNote "Documentary Form Type plays an important role in determining the type of information a Record may comprise, its status of perfection, and its authenticity and  reliability. Documentary form types exist in a specific social and cultural context, and within that context, are subject to change over time." ;
-    schema:description "Categorization of a Record or Record Part with respect to its extrinsic and intrinsic elements that together communicate its content, administrative and  documentary context, and authority." ;
-    schema:name "Documentary Form Type" ;
-    :RiCCMCorrespondingComponent "Corresponds to RiC-A17 (Documentary Form Type attribute)" ;
-.
-
 :hasPartTransitive
     a
         owl:ObjectProperty ,
@@ -8562,21 +8456,6 @@ ric-rst:Series
     schema:description "Connects a Place to a Thing with whose existence and lifecycle the Place is associated." ;
     schema:name "is place associated with" ;
     :RiCCMCorrespondingComponent "RiC-R074 ('is place associated with' relation)" ;
-.
-
-<https://www.ica.org/standards/RiC/vocabularies/recordSetTypes>
-    a
-        skos:ConceptScheme ;
-        rdfs:isDefinedBy ont: ;
-    skos:hasTopConcept
-        ric-rst:Collection ,
-        ric-rst:File ,
-        ric-rst:Fonds ,
-        ric-rst:Series ;
-    skos:historyNote "This vocabulary was created within the Records in Contexts Ontology. When the ICA/EGAD developed RiC-O 1.0, it was decided that two versions of RiC-O would be  released. The first one, consisting of a unique large OWL file, would remain the reference one. RiC-0 1.0 would also be provided as a set of files, in order to address specific needs,  e.g. using only the core of the ontology, or using only the individuals it defined and defining new individuals. So from December 2023, you can find the vocabulary on Record Set Types,  either in the unique large OWL RiC-O file, or as a separate file. " ;
-    skos:scopeNote "For now this vocabulary only defines four top concepts; it should hopefully be completed later. The concepts defined in this vocabulary can be used in combination  with RiC-O classes and properties, whenever necessary and appropriate, to assign a record set type to a Record Set, using the rico:hasRecordSetType object property, or its inverse one.  Each concept is both defined as a skos:Concept and a rico:RecordSetType, so that it is possible to extend the classic definition of such concepts using RiC-O properties. For example, you can use rico:history, rico:date, or rico:isAssociatedWithPlace, rico:precedesInTime, if you consider a record set type as being a historical entity, known and used in some known space or time region." ;
-    schema:description "A vocabulary that provides URIs for describing types of RiC Record Sets." ;
-    schema:name "Record Set Types" ;
 .
 
 :isAssociatedWithDate
@@ -9022,6 +8901,7 @@ ont:
         <https://raw.githubusercontent.com/ICA-EGAD/RiC-O/master/ontology/previous-versions/RiC-O_v0-2_release/RiC-O_v0-2.rdf> ,
         <https://raw.githubusercontent.com/ICA-EGAD/RiC-O/master/ontology/previous-versions/RiC-O_v1-0-beta_release/RiC-O_1-0-beta.rdf> ,
         <https://raw.githubusercontent.com/ICA-EGAD/RiC-O/master/ontology/previous-versions/RiC-O_v1-0_release/RiC-O_1-0.rdf> ;
+    skos:historyNote "2026-02 NJC: removed multi-language tags and all things imported, not defined here" ;
     schema:contributor
         <https://orcid.org/0000-0001-6743-9622> ,
         <https://orcid.org/0000-0001-9375-2102> ,
@@ -9040,5 +8920,4 @@ ont:
     schema:name "International Council on Archives Records in Contexts Ontology (ICA RiC-O) version 1.0.1" ;
     schema:publisher <http://www.wikidata.org/entity/Q1421986> ;
     schema:version "Version 1.0.1 - 2024-05-13" ;
-    skos:historyNote "2026-02 NJC: removed multi-language tags and all things imported, not defined here" ;
 .
