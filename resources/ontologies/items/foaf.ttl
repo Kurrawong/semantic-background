@@ -825,12 +825,11 @@ foaf:
     schema:creator
         <http://example.com/person/danbri> ,
         <http://example.com/person/libby-miller> ;
-    schema:dateCreated "2000"^^xsd:gYear ;
+    schema:dateCreated "2000-01-01"^^xsd:date ;
     schema:dateIssued "2014-01-14"^^xsd:date ;
     schema:dateModified "2014-01-14"^^xsd:date ;
     schema:description "The Friend of a Friend (FOAF) RDF vocabulary, described using W3C RDF Schema and the Web Ontology Language." ;
     schema:name "Friend of a Friend (FOAF) vocabulary" ;
     schema:publisher
-        <http://example.com/person/danbri> ,
-        <http://example.com/person/libby-miller> ;
+        <http://example.com/person/danbri> ;
 .

@@ -89,12 +89,6 @@ wfprov:wasOutputFrom
     schema:name "was output from" ;
 .
 
-<https://wf4ever.github.io>
-    a schema:Organization ;
-    schema:name "Workflow 4 Ever Consortium" ;
-    schema:url "https://wf4ever.github.io"^^xsd:anyURI ;
-.
-
 wfprov:Artifact
     a owl:Class ;
     rdfs:isDefinedBy ont: ;

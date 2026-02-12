@@ -3307,7 +3307,7 @@ cc:SourceCode
 odrl:
     a owl:Ontology ;
     skos:historyNote "2026-01 NJC: added OntPub elements, including the Ontology class definition" ;
-    schema:contributor "W3C Permissions & Obligations Expression Working Group" ;
+    rdfs:comment "Contributor: W3C Permissions & Obligations Expression Working Group" ;
     schema:creator
         <http://example.com/person/Michael-Steidl> ,
         <http://example.com/person/Renato-Iannella> ,

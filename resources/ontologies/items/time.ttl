@@ -1360,7 +1360,7 @@ Ontology engineering by Simon J D Cox""" ;
         <mailto:chris.little@metoffice.gov.uk> ;
     schema:copyrightNotice "Copyright © 2006-2017 W3C, OGC. W3C and OGC liability, trademark and document use rules apply." ;
     schema:creator
-        <http://orcid.org/0000-0002-3884-3420> ,
+        <https://orcid.org/0000-0002-3884-3420> ,
         <https://en.wikipedia.org/wiki/Jerry_Hobbs> ,
         <mailto:panfeng66@gmail.com> ;
     schema:dateCreated "2006-09-27"^^xsd:date ;

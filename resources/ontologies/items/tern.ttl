@@ -1673,16 +1673,6 @@ tern:scope
     rdfs:range xsd:string ;
 .
 
-<https://orcid.org/0000-0002-3884-3420>
-    a schema:Person ;
-    schema:description "Simon J.D.Cox" ;
-    schema:email "simon.cox@csiro.au"^^xsd:anyURI ;
-    schema:identifier <https://orcid.org/0000-0002-3884-3420> ;
-    schema:memberOf <https://w3id.org/tern/resources/276dd611-5d74-4555-b20f-12f0f0b618a1> ;
-    schema:name "Simon J.D.Cox" ;
-    rdfs:isDefinedBy ont: ;
-.
-
 <https://orcid.org/0000-0002-3903-254X>
     a schema:Person ;
     schema:affiliation <https://w3id.org/tern/resources/a083902d-d821-41be-b663-1d7cb33eea66> ;

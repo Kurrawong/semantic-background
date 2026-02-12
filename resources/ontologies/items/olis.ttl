@@ -93,13 +93,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Virtual Graph" ;
 .
 
-<https://orcid.org/0000-0002-8742-7730>
-    a schema:Person ;
-    schema:affiliation <https://kurrawong.ai> ;
-    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
-    schema:name "Nicholas J. Car" ;
-.
-
 :NamedGraph
     a owl:Class ;
     rdfs:isDefinedBy ont: ;

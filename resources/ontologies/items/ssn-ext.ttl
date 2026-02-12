@@ -139,7 +139,7 @@ ssn:ext
 
 Their status is non-normative, and SSN applications are not required to recognize or support them. """ ;
     schema:copyrightNotice "Copyright 2019 W3C/OGC." ;
-    schema:creator <http://orcid.org/0000-0002-3884-3420> ;
+    schema:creator <https://orcid.org/0000-0002-3884-3420> ;
     schema:dateCreated "2018-03-08"^^xsd:date ;
     schema:dateIssued "2019-12-24"^^xsd:date ;
     schema:dateModified "2019-12-24"^^xsd:date ;

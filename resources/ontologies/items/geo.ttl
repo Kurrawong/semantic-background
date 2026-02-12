@@ -26,7 +26,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://orcid.org/0000-0002-8742-7730> ,
         <mailto:joseph.abhayaratna@geoscape.com.au> ,
         <https://orcid.org/0000-0002-9499-5840> ,
-        <ttps://orcid.org/0000-0002-3884-3420> ,
+        <https://orcid.org/0000-0002-3884-3420> ,
         <https://orcid.org/0000-0003-3789-2260> ,
         <https://orcid.org/0000-0002-3313-924X> ;
 	schema:dateCreated "2020-09-09"^^xsd:date ;

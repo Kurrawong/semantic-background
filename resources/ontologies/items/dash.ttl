@@ -2738,9 +2738,9 @@ ont:
         ] ;
     schema:citation "https://datashapes.org/"^^xsd:anyURI ;
     schema:creator <http://example.com/person/Holger-Knublauch> ;
-    schema:dateCreated "2015"^^xsd:gYear ;
-    schema:dateIssued "2015"^^xsd:gYear ;
-    schema:dateModified "2024"^^xsd:gYear ;
+    schema:dateCreated "2015-01-01"^^xsd:date ;
+    schema:dateIssued "2015-01-01"^^xsd:date ;
+    schema:dateModified "2024-01-01"^^xsd:date ;
     schema:description "DASH is a SHACL library for frequently needed features and design patterns. The constraint components in this library are 100% standards compliant and will work on any engine that fully supports SHACL." ;
     schema:name "DASH Data Shapes Vocabulary" ;
     schema:publisher <https://www.topquadrant.com> ;

@@ -1801,8 +1801,8 @@ event:Event
     schema:creator
         :bdarcus ,
         :fgiasson ;
-    schema:dateCreated "2008"^^xsd:gYear ;
-    schema:dateIssued "2008"^^xsd:gYear ;
+    schema:dateCreated "2008-01-01"^^xsd:date ;
+    schema:dateIssued "2008-01-01"^^xsd:date ;
     schema:dateModified "2016-05-11"^^xsd:date ;
     schema:description """The Bibliographic Ontology describes
 bibliographic things on the semantic Web in RDF.  This ontology can be

@@ -72,33 +72,33 @@ The provider might not coincide with the dct:publisher, which would describe the
     schema:name "Provided by" ;
 .
 
-<http://orcid.org/0000-0001-6938-0820>
+<https://orcid.org/0000-0001-6938-0820>
     a schema:Person ;
     schema:email ""^^xsd:anyURI ;
     schema:name "Khalid Belhajjame" ;
 .
 
-<http://orcid.org/0000-0001-9842-9718>
+<https://orcid.org/0000-0001-9842-9718>
     a schema:Person ;
     owl:sameAs <http://soiland-reyes.com/stian/#me> ;
     schema:email ""^^xsd:anyURI ;
     schema:name "Stian Soiland-Reyes" ;
 .
 
-<http://orcid.org/0000-0002-0643-3144>
+<https://orcid.org/0000-0002-0643-3144>
     a schema:Person ;
     schema:email ""^^xsd:anyURI ;
     schema:name "Simon Jupp" ;
 .
 
-<http://orcid.org/0000-0002-5156-2703>
+<https://orcid.org/0000-0002-5156-2703>
     a schema:Person ;
     owl:sameAs <http://www.hcklab.org/foaf.rdf#me> ;
     schema:email ""^^xsd:anyURI ;
     schema:name "Paolo Ciccarese" ;
 .
 
-<http://orcid.org/0000-0002-5711-4872>
+<https://orcid.org/0000-0002-5711-4872>
     a schema:Person ;
     schema:email ""^^xsd:anyURI ;
     schema:name "Alasdair J G Gray" ;
@@ -664,13 +664,13 @@ Unless required by applicable law or agreed to in writing, software distributed 
         <http://arxiv.org/abs/1304.7224> ,
         <http://dx.doi.org/10.1186/2041-1480-4-37> ;
     schema:contributor
-        <http://orcid.org/0000-0001-6938-0820> ,
-        <http://orcid.org/0000-0002-0643-3144> ,
-        <http://orcid.org/0000-0002-5711-4872> ,
+        <https://orcid.org/0000-0001-6938-0820> ,
+        <https://orcid.org/0000-0002-0643-3144> ,
+        <https://orcid.org/0000-0002-5711-4872> ,
         <http://www.paolociccarese.info/foaf.rdf#marco-ocana> ;
     schema:creator
-        <http://orcid.org/0000-0001-9842-9718> ,
-        <http://orcid.org/0000-0002-5156-2703> ;
+        <https://orcid.org/0000-0001-9842-9718> ,
+        <https://orcid.org/0000-0002-5156-2703> ;
     schema:dateCreated "2014-08-28"^^xsd:date ;
     schema:dateIssued "2014-08-28"^^xsd:date ;
     schema:dateModified "2014-08-28"^^xsd:date ;

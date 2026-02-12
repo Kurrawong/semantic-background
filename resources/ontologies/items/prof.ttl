@@ -117,8 +117,8 @@ ont:
     owl:versionInfo "1.0" ;
     skos:historyNote "2026-01 NJC: added OntPub elements, including the Ontology class definition" ;
     schema:creator
-        <http://orcid.org/0000-0002-7878-2693> ,
-        <http://orcid.org/0000-0002-8742-7730> ;
+        <https://orcid.org/0000-0002-7878-2693> ,
+        <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2018-02-16"^^xsd:date ;
     schema:dateIssued "2019-12-18"^^xsd:date ;
     schema:dateModified "2019-10-25"^^xsd:date ;

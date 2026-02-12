@@ -16,7 +16,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/spatial-information-qld/geographical-names-model/"^^xsd:anyURI ;
     schema:copyrightHolder <https://linked.data.gov.au/org/qld-resources> ;
     schema:copyrightNotice "(c) The State of Queensland (Department of Resources) 2023" ;
-    schema:copyrightYear "2023"^^xsd:gYear ;
+    schema:copyrightYear "2023-01-01"^^xsd:date ;
     schema:dateCreated "2023-04-26"^^xsd:date ;
     schema:dateIssued "2023-04-26"^^xsd:date ;
     schema:dateModified "2023-04-26"^^xsd:date ;

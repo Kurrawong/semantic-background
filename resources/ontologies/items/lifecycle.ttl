@@ -85,15 +85,4 @@ model:
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
 .
 
-<https://linked.data.gov.au/org/agldwg>
-    a schema:Organization ;
-    schema:name "Australian Government Linked Data Working Group" ;
-    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
-.
 
-<https://orcid.org/0000-0002-8742-7730>
-    a schema:Person ;
-    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
-    schema:memberOf <https://linked.data.gov.au/org/agldwg> ;
-    schema:name "Nicholas J. Car" ;
-.

@@ -445,9 +445,9 @@ gml:AbstractCurveSegment
     owl:imports <http://www.opengis.net/ont/geosparql> ;
     skos:historyNote "2026-01 NJC: added OntPub elements, including the Ontology class definition" ;
     schema:creator <http://www.opengis.net/def/entities/bodies/ogc> ;
-    schema:dateCreated "2012"^^xsd:gYear ;
-    schema:dateIssued "2012"^^xsd:gYear ;
-    schema:dateModified "2012"^^xsd:gYear ;
+    schema:dateCreated "2012-01-01"^^xsd:date ;
+    schema:dateIssued "2012-01-01"^^xsd:date ;
+    schema:dateModified "2012-01-01"^^xsd:date ;
     schema:description "An RDF/OWL vocabulary defining GML geometry types"^^xsd:string ;
     schema:name "GML Geometry Types Vocabulary" ;
     schema:publisher <http://www.opengis.net/def/entities/bodies/ogc> ;

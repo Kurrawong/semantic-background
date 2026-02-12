@@ -577,8 +577,8 @@ dcat:Distribution
     schema:creator
         <http://example.com/person/John-Erickson> ,
         <http://fadmaa.me/foaf.ttl> ;
-    schema:dateCreated "2014"^^xsd:gYear ;
-    schema:dateIssued "2021"^^xsd:gYear ;
+    schema:dateCreated "2014-01-01"^^xsd:date ;
+    schema:dateIssued "2021-01-01"^^xsd:date ;
     schema:dateModified "2021-09-14"^^xsd:date ;
     schema:description "DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web. By using DCAT to describe datasets in data catalogs, publishers increase discoverability and enable applications easily to consume metadata from multiple catalogs. It further enables decentralized publishing of catalogs and facilitates federated dataset search across sites. Aggregated DCAT metadata can serve as a manifest file to facilitate digital preservation. DCAT is defined at http://www.w3.org/TR/vocab-dcat/. Any variance between that normative document and this schema is an error in this schema." ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;

@@ -269,29 +269,7 @@ skos:topConceptOf
     schema:name "is top concept in scheme" ;
 .
 
-<https://example.com/person/Alistair-Miles>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Alistair Miles" ;
-.
 
-<https://example.com/person/Dave-Beckett>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Dave Beckett" ;
-.
-
-<https://example.com/person/Nikki-Rogers>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Nikki Rogers" ;
-.
-
-<https://example.com/person/Sean-Bechhofer>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Sean Bechhofer" ;
-.
 
 skos:broader
     a
