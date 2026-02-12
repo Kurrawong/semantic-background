@@ -1,0 +1,799 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX ont: <http://rs.tdwg.org/ontology/voc/TaxonName>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX tcom: <http://rs.tdwg.org/ontology/voc/Common#>
+PREFIX tn: <http://rs.tdwg.org/ontology/voc/TaxonName#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+tn:Allolectotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A paralectotype specimen that is the opposite sex of the lectotype. The term is not regulated by the ICZN. [Zoo.]" ;
+    schema:name "Allolectotype" ;
+.
+
+tn:Alloneotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A paraneotype specimen that is the opposite sex of the neotype. The term is not regulated by the ICZN. [Zoo.]" ;
+    schema:name "Alloneotype" ;
+.
+
+tn:Allotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A paratype specimen designated from the type series by the original author that is the opposite sex of the holotype. The term is not regulated by the ICZN. [Zoo.]" ;
+    schema:name "Allotype" ;
+.
+
+tn:Bacteriological
+    a tn:NomenclaturalCodeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "Rules that govern the naming of bacteria species" ;
+    schema:name "Bacteriological" ;
+.
+
+tn:BasedOn
+    a tn:NomenclaturalNoteTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description " The current or subject name is the validation of a name that was not fully published before. Covers the use of ex in botanical author strings. ICBN Art. 46.4: e.g. if this name object represents G. tomentosum Nutt. ex Seem. then the pointer should point to G. tomentosum Nutt." ;
+    schema:name "based on" ;
+.
+
+tn:ConservedAgainst
+    a tn:NomenclaturalNoteTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description " The current or subject name is conserved against the name pointed to. ICBN: Conservation is covered under Article 14 and Appendix II and Appendix III (this name is nomina conservanda). ICZN: Conservation is covered under Article 23.9 (this name is nomen protectum and the target name is nomen oblitum)" ;
+    schema:name "conserved against" ;
+.
+
+tn:Cotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A deprecated term no longer recognized in the ICZN; formerly used for either syntype or paratype . [Zoo.]" ;
+    schema:name "Cotype" ;
+.
+
+tn:Epitype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description """An epitype is a specimen or illustration selected to serve as an interpretative type when any kind of holotype, lectotype, etc. is demonstrably ambiguous and cannot be
+         critically identified for purposes of the precise application of the name of a taxon (see Art. ICBN 9.7, 9.18). An epitype supplements, rather than replaces existing types.
+      [Bot./Bio.]""" ;
+    schema:name "Epitype" ;
+.
+
+tn:ExEpitype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A strain or cultivation derived from epitype material. Ex-types are not regulated by the botanical or zoological code. [Bot.]" ;
+    schema:name "Ex-Epitype" ;
+.
+
+tn:ExHolotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A strain or cultivation derived from holotype material. Ex-types are not regulated by the botanical or zoological code. [Zoo./Bot.]" ;
+    schema:name "Ex-Holotype" ;
+.
+
+tn:ExIsotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A strain or cultivation derived from isotype material. Ex-types are not regulated by the botanical or zoological code. [Zoo./Bot.]" ;
+    schema:name "Ex-Isotype" ;
+.
+
+tn:ExLectotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A strain or cultivation derived from lectotype material. Ex-types are not regulated by the botanical or zoological code. [Zoo./Bot.]" ;
+    schema:name "Ex-Lectotype" ;
+.
+
+tn:ExNeotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A strain or cultivation derived from neotype material. Ex-types are not regulated by the botanical or zoological code. [Zoo./Bot.]" ;
+    schema:name "Ex-Neotype" ;
+.
+
+tn:ExParatype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A strain or cultivation derived from paratype material. Ex-types are not regulated by the botanical or zoological code. [Zoo./Bot.]" ;
+    schema:name "Ex-Paratype" ;
+.
+
+tn:ExSyntype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A strain or cultivation derived from neotype material. Ex-types are not regulated by the botanical or zoological code. [Zoo./Bot.]" ;
+    schema:name "Ex-Syntype" ;
+.
+
+tn:ExType
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A strain or cultivation derived from some kind of type material. Ex-types are not regulated by the botanical or zoological code. [Zoo./Bot.]" ;
+    schema:name "Ex-Type" ;
+.
+
+tn:Hapantotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "One or more preparations of directly related individuals representing distinct stages in the life cycle, which together form the type in an extant species of protistan [ICZN Article 72.5.4]. A hapantotype, while a series of individuals, is a holotype that must not be restricted by lectotype selection. If an hapantotype is found to contain individuals of more than one species, however, components may be excluded until it contains individuals of only one species [ICZN  Article 73.3.2]. [Zoo.]" ;
+    schema:name "Hapantotype" ;
+.
+
+tn:Holotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "The one specimen or other element used or designated by the original author at the time of publication of the original description as the nomenclatural type of a species or infraspecific taxon. A holotype may be 'explicit' if it is clearly stated in the originating publication or 'implicit' if it is the single specimen proved to have been in the hands of the originating author when the description was published. [Zoo./Bot./Bio.]" ;
+    schema:name "Holotype" ;
+.
+
+tn:ICBN
+    a tn:NomenclaturalCodeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "International Code of Botanical Nomenclature" ;
+    schema:name "ICBN" ;
+.
+
+tn:ICNCP
+    a tn:NomenclaturalCodeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "International Code of Cultivated Plants" ;
+    schema:name "ICNCP" ;
+.
+
+tn:ICZN
+    a tn:NomenclaturalCodeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "International Code of Zoological Nomenclature" ;
+    schema:name "ICZN" ;
+.
+
+tn:Iconotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A drawing or photograph (also called 'phototype') of a type specimen. Note: the term \"iconotype\" is not used in the ICBN, but implicit in, e. g., ICBN Art. 7 and 38. [Zoo./Bot.]" ;
+    schema:name "Iconotype" ;
+.
+
+tn:Isolectotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A duplicate of a lectotype, compare lectotype. [Bot.]" ;
+    schema:name "Isolectotype" ;
+.
+
+tn:Isoneotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A duplicate of a neotype, compare neotype. [Bot.]" ;
+    schema:name "Isoneotype" ;
+.
+
+tn:Isosyntype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A duplicate of a syntype, compare isotype = duplicate of holotype. [Bot.]" ;
+    schema:name "Isosyntype" ;
+.
+
+tn:Isotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "An isotype is any duplicate of the holotype (i. e. part of a single gathering made by a collector at one time, from which the holotype was derived); it is always a specimen (ICBN Art. 7). [Bot.]" ;
+    schema:name "Isotype" ;
+.
+
+tn:LaterHomonymOf
+    a tn:NomenclaturalNoteTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description " Current or subject name has the same spelling as target name but was published later and has priority over it (unless conserved or sanctioned). See ICBN: Article 53, ICZN: Chapter 12, Article 52. " ;
+    schema:name "later homonym of" ;
+.
+
+tn:Lectotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A specimen or other element designated subsequent to the publication of the original description from the original material (syntypes or paratypes) to serve as nomenclatural type. Lectotype designation can occur only where no holotype was designated at the time of publication or if it is missing (ICBN Art. 7, ICZN Art. 74). [Zoo./Bot.] -- Note: the BioCode defines lectotype as selection from holotype material in cases where the holotype material contains more than one taxon [Bio.]." ;
+    schema:name "Lectotype" ;
+.
+
+tn:Neotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A specimen designated as nomenclatural type subsequent to the publication of the original description in cases where the original holotype, lectotype, all paratypes and syntypes are lost or destroyed, or suppressed by the (botanical or zoological) commission on nomenclature. In zoology also called \"Standard specimen\" or \"Representative specimen\". [Zoo./Bot./Bio.]" ;
+    schema:name "Neotype" ;
+.
+
+tn:NotAType
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "For specimens erroneously labelled as types an explicit negative statement may be desirable. [General]" ;
+    schema:name "NotAType" ;
+.
+
+tn:Paralectotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "All of the specimens in the syntype series of a species or infraspecific taxon other than the lectotype itself. Also called \"lectoparatype\". [Zoo.]" ;
+    schema:name "Paralectotype" ;
+.
+
+tn:Paraneotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "All of the specimens in the syntype series of a species or infraspecific taxon other than the neotype itself. Also called \"neoparatype\". [Zoo.]" ;
+    schema:name "Paraneotype" ;
+.
+
+tn:Paratype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "All of the specimens in the type series of a species or infraspecific taxon other than the holotype (and, in botany, isotypes). Paratypes must have been at the disposition of the author at the time when the original description was created and must have been designated and indicated in the publication. Judgment must be exercised on paratype status, for only rarely are specimens explicitly cited as paratypes, but usually as \"specimens examined,\" \"other material seen\", etc. [Zoo./Bot.]" ;
+    schema:name "Paratype" ;
+.
+
+tn:Plastoholotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A copy or cast of holotype material (compare Plastotype)." ;
+    schema:name "Plastoholotype" ;
+.
+
+tn:Plastoisotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A copy or cast of isotype material (compare Plastotype)." ;
+    schema:name "Plastoisotype" ;
+.
+
+tn:Plastolectotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A copy or cast of lectotype material (compare Plastotype)." ;
+    schema:name "Plastolectotype" ;
+.
+
+tn:Plastoneotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A copy or cast of neotype material (compare Plastotype)." ;
+    schema:name "Plastoneotype" ;
+.
+
+tn:Plastoparatype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A copy or cast of paratype material (compare Plastotype)." ;
+    schema:name "Plastoparatype" ;
+.
+
+tn:Plastosyntype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A copy or cast of syntype material (compare Plastotype)." ;
+    schema:name "Plastosyntype" ;
+.
+
+tn:Plastotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A copy or cast of type material, esp. relevant for fossil types. Not regulated by the botanical or zoological code (?). [Zoo./Bot.]" ;
+    schema:name "Plastotype" ;
+.
+
+tn:PublicationStatus
+    a tn:NomenclaturalNoteTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description " Note concerning the nomenclatural status of the name. e.g. whether it is validly published or not. THIS SHOULD NOT BE USED TO IMPLY WHETHER THE NAME IS CONSIDERED TO REPRESENT AN ACCEPTED TAXON. An accepted taxon can only be represented as a TaxonConcept. " ;
+    schema:name "publication status" ;
+.
+
+tn:ReplacementNameFor
+    a tn:NomenclaturalNoteTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description " Current or subject name is replacement for target name. Also called 'Nomen Novum' or 'avowed substitute' ICBN: Article 7.3 ICZN: Article 60.3." ;
+    schema:name "replacement name for" ;
+.
+
+tn:Sanctioned
+    a tn:NomenclaturalNoteTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description " With reference to fungi. ICBN: Articles 13.1d and 15. ICZN: No equivalent term for animals " ;
+    schema:name "sanctioned" ;
+.
+
+tn:SecondaryType
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A referred, described, measured or figured specimen in the original publication (including a neo/lectotypification publication) that is not a primary type. [Zoo.]" ;
+    schema:name "Secondary Type" ;
+.
+
+tn:SpellingCorrection
+    a tn:NomenclaturalNoteTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description " The current or subject name is a spelling correction of the name that is pointed to. " ;
+    schema:name "spelling correction" ;
+.
+
+tn:SupplementaryType
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A referred, described, measured or figured specimen in a revision of a previously described taxon. [Zoo.]" ;
+    schema:name "Supplementary Type" ;
+.
+
+tn:Syntype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "One of the series of specimens used to describe a species or infraspecific taxon when neither a single holotype nor a lectotype has been designated. The syntypes collectively constitute the name-bearing type. [Zoo./Bot.]" ;
+    schema:name "Syntype" ;
+.
+
+tn:Topotype
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "One or more specimens collected at the same location as the type series (type locality), regardless of whether they are part of the type series. Topotypes are not regulated by the botanical or zoological code. Also called \"locotype\". [Zoo./Bot.]" ;
+    schema:name "Topotype" ;
+.
+
+tn:Type
+    a tn:NomenclaturalTypeTypeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "a) A specimen designated or indicated any kind of type of a species or infraspecific taxon. If possible more specific type terms (holotype, syntype, etc.) should be applied. b) the type name of a name of higher rank for taxa above the species rank. [General]" ;
+    schema:name "Type" ;
+.
+
+tn:Viral
+    a tn:NomenclaturalCodeTerm ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "Rules that govern the names of viral species" ;
+    schema:name "Viral" ;
+.
+
+tn:authorship
+    a owl:DatatypeProperty ;
+    dc:relation
+        tn:authorTeam ,
+        tn:basionymAuthorship ,
+        tn:combinationAuthorship ;
+    tcom:abcdEquivalence """ ScientificName/NameAtomised/Bacterial/AuthorTeamAndYear or ScientificName/NameAtomised/Botanical/AuthorTeam (FIXME: Does this include the AuthorTeamParenthesis?) or
+         [ScientificName/NameAtomised/Zoological/AuthorTeamOriginalAndYear and ScientificName/NameAtomised/Zoological/AuthorTeamParenthesisAndYear and
+         ScientificName/NameAtomised/Zoological/CombinationAuthorTeamAndYear (FIXME: need clarification as to which of these occur))]""" ;
+    tcom:berlinModelEquivalence "Name:AuthorTeamFk -> AuthorTeam::AuthorTeamCache" ;
+    tcom:darwinCoreEquivalence "AuthorYearOfScientificName" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalAuthorship/Simple" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "The full author string used for this name. The full code-appropriate author team string for this name at this rank. Use this property for all names including both original combinations and new combinations of bi and trinomial names (where some of the authors may be in brackets). If the TaxonName instance contains any details about authorship a representation of them should be included in this property." ;
+    schema:name "Authorship" ;
+.
+
+tn:code
+    a owl:ObjectProperty ;
+    rdfs:domain tn:NomenclaturalNote ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:NomenclaturalCodeTerm ;
+    schema:description " The nomenclatural code under which this note should be interpreted." ;
+    schema:name "Code" ;
+.
+
+tn:cultivarNameGroup
+    a owl:DatatypeProperty ;
+    tcom:abcdEquivalence " ScientificName/NameAtomised/Botanical/CultivarGroupName and ScientificName/NameAtomised/Botanical/CultivarName " ;
+    tcom:berlinModelEquivalence "Name::CultivarGroupName and Name::CultivarName" ;
+    tcom:darwinCoreEquivalence "InfraspecificEpithet" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalName/CultivarNameGroup" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "The cultivar or related name governed by ICNCP. The name of the Cultivar, Cultivar Group, grex, convar or graft chimera under the International Code for the Nomenclature of Cultivated Plants. Only include here the string of the name. i.e. omit the single quotes around cultivar names, the word Group that denotes cultivar group and the + sign used in chimeras. These symbols can be added in later on the basis of the rank of the name. For example the use of the word 'Group' is language dependent." ;
+    schema:name "Cultivar Name or Cultivar Group Name" ;
+.
+
+tn:genusPart
+    a owl:DatatypeProperty ;
+    tcom:abcdEquivalence "ScientificName/NameAtomised/*/GenusOrMonomial (but only when representing a genus name) " ;
+    tcom:berlinModelEquivalence "Name::Genus" ;
+    tcom:darwinCoreEquivalence "Genus (though this is used of taxonomic placement in DwC)" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalName/Genus" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "The genus part of a bi or trinomial name. The name of the genus for names below the rank of genus. This property should not be used for names at and above the rank of genus. For names at and above genus rank the uninomial property should be used." ;
+    schema:name "Genus Part" ;
+.
+
+tn:hasAnnotation
+    a owl:ObjectProperty ;
+    tcom:abcdEquivalence "No equivalent" ;
+    tcom:berlinModelEquivalence "RelName, NomStatus and NomStatusRel tables" ;
+    tcom:darwinCoreEquivalence "No equivalent" ;
+    tcom:tcsEquivalence "complexType NomenclaturalNoteType" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:NomenclaturalNote ;
+    schema:description " Association between a name and the notes that it may have. Often notes relate to other names such as replacement names." ;
+    schema:name "Has Annotation" ;
+.
+
+tn:infragenericEpithet
+    a owl:DatatypeProperty ;
+    tcom:abcdEquivalence "ScientificName/NameAtomised/botanical/FirstEpithet (but not in names at rank of species and below) or ScientificName/NameAtomised/Zoological/Subgenus or ScientificName/NameAtomised/Bacterial/Subgenus" ;
+    tcom:berlinModelEquivalence "Name::GenusSubdivisionEpi" ;
+    tcom:darwinCoreEquivalence "No equivalent" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalName/InfragenericEpithet" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "The infrageneric part of a binomial name at ranks above species but below genus. Names at ranks between species and genus are composed of two words; the genus and this infrageneric epithet. This property should therefore always be accompanied by the genusPart property. If the infragenericEpithet property is present the uninomial, infraspecificEpithet, specificEpithet and subspecificEpithet properties should be absent." ;
+    schema:name "Infrageneric Epithet" ;
+.
+
+tn:infraspecificEpithet
+    a owl:DatatypeProperty ;
+    tcom:abcdEquivalence """ ScientificName/NameAtomised/Bacterial/SubspeciesEpithet or ScientificName/NameAtomised/Botanical/InfraspecificEpithet or
+         ScientificName/NameAtomised/Zoological/SubSpeciesEpithet""" ;
+    tcom:berlinModelEquivalence "Name::InfraSpeciesEpi" ;
+    tcom:darwinCoreEquivalence "InfraspecificEpithet" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalName/InfraspecificEpithet" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "The infraspecific epithet part of a trinomial name below the rank of species. Names at ranks below species are composed of three words; the genus epithet, the specific epithet and an infraspecific epithet. This property should therefore always be accompanied by the genusPart property and a specificEpithet property. If the specificEpithet property is present the uninomial and infragenusPart properties should be absent." ;
+    schema:name "Infraspecific Epithet" ;
+.
+
+tn:nameComplete
+    a owl:DatatypeProperty ;
+    tcom:abcdEquivalence "ScientificName/FullScientificNameString" ;
+    tcom:berlinModelEquivalence "Name::FullNameCache" ;
+    tcom:darwinCoreEquivalence "ScientificName" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalName/Simple" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "The complete uninomial, binomial or trinomial name without any authority or year components. Every TaxonName should have a DublinCore:title property that contains the complete name string including authors and year (where appropriate)." ;
+    schema:name "Name Complete" ;
+.
+
+tn:nomenclaturalCode
+    a owl:ObjectProperty ;
+    tcom:abcdEquivalence "Indicated by whether bacterial, botanical, zoological or viral name constructs are used." ;
+    tcom:berlinModelEquivalence "No equivalent" ;
+    tcom:darwinCoreEquivalence "Indicated by Kingdom field" ;
+    tcom:tcsEquivalence "ScientificName@nomenclaturalCode" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:NomenclaturalCodeTerm ;
+    schema:description " The nomenclatural code that governs this name. By definition all taxon names are governed by one of the codes of nomenclature. These include ICBN, ICZN, ICNCP and others." ;
+    schema:name "Nomenclatural Code" ;
+.
+
+tn:note
+    a owl:DatatypeProperty ;
+    rdfs:domain tn:NomenclaturalNote ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description " The text of the nomenclatural note. Text describing the nomenclatural event/fact that is represented by this Nomenclatural Note. " ;
+    schema:name "Note" ;
+.
+
+tn:objectTaxonName
+    a owl:ObjectProperty ;
+    rdfs:domain tn:NomenclaturalNote ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:TaxonName ;
+    schema:description " The Taxon Name that is the target for this note. The TO side of the note relationship. The Taxon Name that this note refers to." ;
+    schema:name "Object Taxon Name" ;
+.
+
+tn:ruleConsidered
+    a owl:DatatypeProperty ;
+    rdfs:domain tn:NomenclaturalNote ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description " The nomenclatural code rule considered. The article/note/recommendation in the code in question that is commented on in the note property." ;
+    schema:name "Rule Considered" ;
+.
+
+tn:specificEpithet
+    a owl:DatatypeProperty ;
+    tcom:abcdEquivalence "ScientificName/NameAtomised/botanical/FirstEpithet (but not in names above the rank of species) or ScientificName/NameAtomised/Zoological/SpeciesEpithet or ScientificName/NameAtomised/Bacterial/SpeciesEpithet or ScientificName/NameAtomised/Viral/ViralSpeciesDesignation" ;
+    tcom:berlinModelEquivalence "Name::SpeciesEpi" ;
+    tcom:darwinCoreEquivalence "SpecificEpithet" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalName/SpecificEpithet" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "The specific epithet part of a binomial or trinomial name at or below the rank of species. Names at ranks of species and below are composed of two or three words; the genus epithet, the specific epithet and possibly an infraspecific epithet. This property should therefore always be accompanied by the genusPart property. If the specificEpithet property is present the uninomial and infragenericEpithet properties should be absent." ;
+    schema:name "Specific Epithet" ;
+.
+
+tn:subjectTaxonName
+    a owl:ObjectProperty ;
+    rdfs:domain tn:NomenclaturalNote ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:TaxonName ;
+    schema:description " The Taxon Name that is the subject of this note. The FROM side of the note relationship. The Taxon Name that this note is qualifying." ;
+    schema:name "Subject Taxon Name" ;
+.
+
+tn:type
+    a owl:ObjectProperty ;
+    rdfs:domain tn:NomenclaturalNote ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:NomenclaturalNoteTypeTerm ;
+    schema:description " The kind of nomenclatural note this is, e.g. sanctioning of name. " ;
+    schema:name "Type" ;
+.
+
+tn:typeName
+    a owl:ObjectProperty ;
+    rdfs:domain tn:NomenclaturalType ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:TaxonName ;
+    schema:description "The name that is the type. TaxonNames at ranks above species level are typified by the NAME of a lower taxon. Ultimately, by following the chain of type names, all names resolve to a type species and so a type specimen. This property is mutually exclusive with typeSpecimen. A name can't have both. Equivalent to TCS ScientificName/Typification/TypeName." ;
+    schema:name "Type Name" ;
+.
+
+tn:typeOfType
+    a owl:ObjectProperty ;
+    rdfs:domain tn:NomenclaturalType ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:NomencalturalTypeTypeTerm ;
+    schema:description "The kind of type this specimen is e.g. paratype, isotype, holotype etc. Types can be of different kinds. Equivalent to TCS ScientificName/Typification/TypeVouchers/TypeVoucher@typeOfType" ;
+    schema:name "Type of Type" ;
+.
+
+tn:typeSpecimen
+    a owl:ObjectProperty ;
+    rdfs:domain tn:NomenclaturalType ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range <http://rs.tdwg.org/ontology/voc/Specimen#Specimen> ;
+    schema:description "The specimen that is the type. TaxonNames at ranks of family and below are typified by a specimen. This property is mutually exclusive with typeName. Equivalent to TCS ScientificName/Typification/TypeVouchers/TypeVoucher" ;
+    schema:name "Type Specimen" ;
+.
+
+tn:uninomial
+    a owl:DatatypeProperty ;
+    tcom:abcdEquivalence "ScientificName/NameAtomised/*/GenusOrMonomial (but only when NOT representing a genus name)" ;
+    tcom:berlinModelEquivalence "Name::SupragenericName (but not used for names at the rank of Genus)" ;
+    tcom:darwinCoreEquivalence "ScientificName" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalName/Uninomial" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "Family, genus, infrafamilial, suprafamilial or other uninomial name. This property should be used for any 'single word' names. These include Family, genus, infrafamilial, and suprafamilial names. Note that this property should be used for Genus names. The genus field should only be used for names below rank of genus." ;
+    schema:name "Uninomial" ;
+.
+
+tn:year
+    a owl:DatatypeProperty ;
+    tcom:abcdEquivalence "No equivalent." ;
+    tcom:berlinModelEquivalence "No equivalent other than through publication." ;
+    tcom:darwinCoreEquivalence "No equivalent." ;
+    tcom:tcsEquivalence "ScientificName/Year" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "The year of publication of this name. This is the year this name was published. If it is a new combination of the name then it is the year of publication of the combination not the basionym. It should be the same as the year given in the publishedIn property. In zoology the place of first publication of a new combination is rarely given as it is not considered a nomenclatural act unless it leads to homonymy. For new combinations of names in zoology it may therefore be inappropriate to supply this property or the publishedIn, combintationAuthorship or combintationAuthorTeam properties. The main role of this property is to aid disambiguation where author strings may be confusing. This property is not restricted to a date type as feedback from TCS suggested that this restriction was inappropriate." ;
+    schema:name "Publication Year" ;
+.
+
+tn:basionymFor
+    a owl:ObjectProperty ;
+    tcom:abcdEquivalence "No equivalent" ;
+    tcom:berlinModelEquivalence "No direct equivalent. May be indicated in RelName table." ;
+    tcom:darwinCoreEquivalence "No equivalent" ;
+    tcom:tcsEquivalence "No equivalent in TCS but is inverse of ScientificName/Basionym " ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:TaxonName ;
+    owl:inverseOf tn:hasBasionym ;
+    schema:description " Relationship between a basionym and a new combination of the name. " ;
+    schema:name "Basionym For" ;
+.
+
+tn:hasBasionym
+    a owl:ObjectProperty ;
+    tcom:abcdEquivalence "No equivalent" ;
+    tcom:berlinModelEquivalence "No direct equivalent. May be indicated in RelName table." ;
+    tcom:darwinCoreEquivalence "No equivalent" ;
+    tcom:tcsEquivalence "ScientificName/Basionym" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:TaxonName ;
+    owl:inverseOf tn:basionymFor ;
+    schema:description "The basionym of this name if it is a new combination. The current name is a recombination (comb. nov.) of the name pointed to and the name pointed to is not, itself, a recombination." ;
+    schema:name "Has Basionym" ;
+.
+
+tn:rank
+    a owl:ObjectProperty ;
+    dc:relation tn:rankString ;
+    tcom:abcdEquivalence "No equivalent??" ;
+    tcom:berlinModelEquivalence "Name::RankFk" ;
+    tcom:darwinCoreEquivalence "No direct equivalent but see rankString" ;
+    tcom:tcsEquivalence "ScientificName/Rank/@code" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range <http://rs.tdwg.org/ontology/voc/TaxonRank#TaxonRankTerm> ;
+    schema:description "The taxonomic rank of this name. This is a link to an instance of TaxonomicRank. Compare with the rankString property." ;
+    schema:name "Rank" ;
+.
+
+tn:rankString
+    a owl:DatatypeProperty ;
+    dc:relation tn:rank ;
+    tcom:abcdEquivalence "No equivalent??" ;
+    tcom:berlinModelEquivalence "Name::RankFk -> Rank::Rank" ;
+    tcom:darwinCoreEquivalence "Only below species with InfraspecificRank" ;
+    tcom:tcsEquivalence "ScientificName/Rank" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "The taxonomic rank of this name as a string. A string representation of the rank of this name. It is highly recommended that the rank property be used along with this one unless the correct rank is not available in the rank vocabulary." ;
+    schema:name "Rank String" ;
+.
+
+tn:typificationString
+    a owl:DatatypeProperty ;
+    dc:relation tn:typifiedBy ;
+    tcom:abcdEquivalence "NomenclaturalTypeDesignations/NomenclaturalTypeDesignation/TypeStatus" ;
+    tcom:berlinModelEquivalence "No equivalent other than through Facts tables?" ;
+    tcom:darwinCoreEquivalence "No equivalent" ;
+    tcom:tcsEquivalence "ScientificName/Typification/Simple" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "A string representing the typification of this name. See also the typifiedBy property." ;
+    schema:name "Typified String" ;
+.
+
+tn:typifiedBy
+    a owl:ObjectProperty ;
+    dc:relation tn:typificationString ;
+    tcom:abcdEquivalence "NomenclaturalTypeDesignations/NomenclaturalTypeDesignation" ;
+    tcom:berlinModelEquivalence "No equivalent other than through Facts tables?" ;
+    tcom:darwinCoreEquivalence "No equivalent" ;
+    tcom:tcsEquivalence "ScientificName/Typification" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range tn:NomenclaturalType ;
+    schema:description "A NomenclaturalType that typifies this name. An instance of NomenclaturalType that contains a type specimen or name for this name. See also note with NomenclaturalType class. See also the typificationString property." ;
+    schema:name "Typified By" ;
+.
+
+tn:authorTeam
+    a owl:ObjectProperty ;
+    dc:relation
+        tn:basionymAuthorship ,
+        tn:combinationAuthorship ,
+        <http://rs.tdwg.org/ontology/voc/authorship> ;
+    tcom:abcdEquivalence " No equivalent of an author team break down. " ;
+    tcom:berlinModelEquivalence "Name:AuthorTeamFk and Name:BasAuthorTeamFk " ;
+    tcom:darwinCoreEquivalence "No equivalent" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalAuthorship/" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range <http://rs.tdwg.org/ontology/voc/Team#Team> ;
+    schema:description "A breakdown of the authors who published this name including both basionym and combination authors (if any)." ;
+    schema:name "Author Team" ;
+.
+
+tn:basionymAuthorship
+    a owl:DatatypeProperty ;
+    dc:relation
+        tn:authorTeam ,
+        tn:combinationAuthorship ,
+        <http://rs.tdwg.org/ontology/voc/authorship> ;
+    tcom:abcdEquivalence " ScientificName/NameAtomised/Botanical/AuthorTeamParenthesis or ScientificName/NameAtomised/Zoological/AuthorTeamParenthesisAndYear " ;
+    tcom:berlinModelEquivalence "Name:BasAuthorTeamFk -> AuthorTeam::AuthorTeamCache" ;
+    tcom:darwinCoreEquivalence "No equivalent" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalAuthorship/BasionymAuthorship/Simple" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "A string representing the authors of the basionym of this name. This represents the authors of the basionym. It is the part of authorship that is typically included in brackets. The brackets should be omitted. A year may be included as is common in citing names governed by the ICZN. This property is only used for names that are new combinations." ;
+    schema:name "Basionym Authorship" ;
+.
+
+tn:combinationAuthorship
+    a owl:DatatypeProperty ;
+    dc:relation
+        tn:authorTeam ,
+        tn:basionymAuthorship ,
+        <http://rs.tdwg.org/ontology/voc/authorship> ;
+    tcom:abcdEquivalence " ScientificName/NameAtomised/Botanical/AuthorTeam (when AuthorTeamParenthesis present?) ScientificName/NameAtomised/Zoological/CombinationAuthorTeamAndYear " ;
+    tcom:berlinModelEquivalence "Name:AuthorTeamFk -> AuthorTeam::AuthorTeamCache (only when Name:BasAuthorTeamFk is present?)" ;
+    tcom:darwinCoreEquivalence "No equivalent" ;
+    tcom:tcsEquivalence "ScientificName/CanonicalAuthorship/CombinationAuthorship/Simple" ;
+    rdfs:domain tn:TaxonName ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:string ;
+    schema:description "A string representing the authors of this combination of the name. This represents the authors of the new combination of this name. The authors who come after the brackets in the traditional way of citing botanical names. These authors are not usually cited in zoology though the ICZN recommends that they should be included (Art.51G). A year may be included. See also note under year property. This property is only used for names that are new combinations." ;
+    schema:name "Combination Authorship" ;
+.
+
+tn:NomenclaturalType
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A type name or specimen. Typification can be complex to represent. On the one hand a type is a property of a TaxonName that is created at the time the name is published. But it needs to exist as a structure so that the type of type can be indicated. On the other hand a type can be the result of a later typification event - almost like a nomenclatural note. This object can therefore be used in two ways. It can be the target of the 'type' property in a TaxonName object (in which case the typeOf property may be omitted) or it can be used as a free standing object with its own ID and the typeOf property used to indicate which TaxonName this is a type of - this is more likely scenario in a the case of a leptotypification event. Equivalent to TCS ScientificName/Typification" ;
+    schema:name "Nomenclatural Type" ;
+.
+
+tn:NomenclaturalCodeTerm
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    schema:description " A class for which instances can be defined to create a controlled vocabulary for the nomenclatural codes. Equivalent to TCS NomenclaturalCodesEnum " ;
+    schema:name "Nomenclatural Code Term" ;
+.
+
+tn:NomenclaturalNote
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    schema:description " A note on a Taxon Name. An object representing a comment or addition to a Taxon Name beyond it's original publication. Equivalent to TCS NomenclaturalNoteType " ;
+    schema:name "Nomenclatural Note" ;
+.
+
+tn:NomenclaturalNoteTypeTerm
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "The different types of Nomenclatural Note. An object used to represent the different types of Nomenclatural Note. No direct equivalent in TCS but used to represents different elements of type NomenclaturalNoteType." ;
+    schema:name "Nomenclatural Note Type Term" ;
+.
+
+tn:TaxonName
+    a owl:Class ;
+    tcom:abcdEquivalence "ScientificName complexType" ;
+    tcom:berlinModelEquivalence "Name table" ;
+    tcom:darwinCoreEquivalence "ScientificName (as string only)" ;
+    tcom:tcsEquivalence "ScientificName complexType" ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A scientific biological name. An object that represents a single scientific biological name that either is governed by or appears to be governed by one of the biological codes of nomenclature. These are not taxa. Taxa, whether accepted or not, are represented by TaxonConcept objects." ;
+    schema:name "Taxon Name" ;
+.
+
+tn:NomenclaturalTypeTypeTerm
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A kind of nomenclatural type. Nomenclatural types can be of different kinds (or types) to indicate whether they are duplicates, replacements, related specimens etc. Instances of this class describe kinds of nomenclatural types. Equivalent to TCS NomenclaturalTypeStatusOfUnitsEnum" ;
+    schema:name "Nomenclatural Type Type" ;
+.
+
+ont:
+    a owl:Ontology ;
+    skos:historyNote "Version 0.3 removed subclass declarations to classes outside of this ontology in accordance with Recommendation 2.9 of the VoMaG Report http://www.gbif.org/resource/80862" ;
+    skos:scopeNote "This vocabulary closely follows the structure of the ScientificName complex type that is part of the TDWG standard Taxon Concept Schema. The TCS structure was based on the name structures suggested by the LinneanCore and those found in schemas such as ABCD.  It reflects the contributions of many authors over a number of years." ;
+    schema:creator tn:Roger-Hyam ;
+    schema:dateCreated "2006-11-15"^^xsd:date ;
+    schema:dateIssued "2006-11-15"^^xsd:date ;
+    schema:dateModified "2015-07-01"^^xsd:date ;
+    schema:description "Ontology describing the metadata returned for LSIDs that are used for Taxon Names. " ;
+    schema:name "TDWG Taxon Name LSID Ontology" ;
+    schema:publisher tn:TDWG-BIS ;
+    schema:version "0.3" ;
+.
+
+tn:Roger-Hyam
+    a schema:Person ;
+    schema:email ""^^xsd:anyURI ;
+    schema:name "Roger Hyam" ;
+.
+
+tn:TDWG-BIS
+    a schema:Person ;
+    schema:email ""^^xsd:anyURI ;
+    schema:name "TDWG Biodiversity Information Standards" ;
+.

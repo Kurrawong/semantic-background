@@ -1,37 +1,36 @@
 PREFIX : <https://linked.data.gov.au/def/roads/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX sdo: <https://schema.org/>
+PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-
-<https://linked.data.gov.au/def/roads>
-    a owl:Ontology ;
-    dcterms:provenance "This model was created for Queensland Spatial Information's CAM (Cadastre & Addressing Modernisation) project in 2023." ;
-    owl:versionIRI :0.0.1 ;
-    owl:versionInfo "0.0.1" ;
-    sdo:codeRepository "https://github.com/spatial-information-qld/roads-model/"^^xsd:anyURI ;
-    sdo:copyrightHolder <https://linked.data.gov.au/org/qld-resources> ;
-    sdo:copyrightNotice "(c) The State of Queensland (Department of Resources) 2023" ;
-    sdo:copyrightYear "2023"^^xsd:gYear ;
-    sdo:dateCreated "2023-04-26"^^xsd:date ;
-    sdo:dateIssued "2023-04-26"^^xsd:date ;
-    sdo:dateModified "2023-04-26"^^xsd:date ;
-    sdo:description """This model is for roads information in Queensland, however it is a candidate ANZ model also, and may, in the near future, be expanded with feedback form other jurisdictions and a process through the Inter Governmental Committee on Surveying & Mapping (ICSM) to ensure it covers all ANZ jurisdictions' needs.
-
-This model is a stand-alone model for roads information, however it is also designed to work as a Component Model part of an integrative multi-model regime for Spatial Information Queensland known as a Supermodel (see https://linked.data.gov.au/def/qsi-supermodel). The QSI Supermodel aims to integrate cadastre, address, place name, roads and other information.
-    """@en ;
-    sdo:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    sdo:name "Roads Model" ;
-.
 
 geo:Feature
     a owl:Class ;
     rdfs:isDefinedBy <https://linked.data.gov.au/def/cad> ;
-    sdo:name "Feature" ;
-    sdo:description "A discrete spatial phenomenon in a universe of discourse"@en ;
-    dcterms:provenance "Taken, unchanged, from the GeoSPARQL 1.1 Ontology" ;
+    skos:historyNote "Taken, unchanged, from the GeoSPARQL 1.1 Ontology" ;
+    schema:description "A discrete spatial phenomenon in a universe of discourse"@en ;
+    schema:name "Feature" ;
+.
+
+<https://linked.data.gov.au/def/roads>
+    a owl:Ontology ;
+    owl:versionIRI :0.0.1 ;
+    owl:versionInfo "0.0.1" ;
+    skos:historyNote "This model was created for Queensland Spatial Information's CAM (Cadastre & Addressing Modernisation) project in 2023." ;
+    schema:codeRepository "https://github.com/spatial-information-qld/roads-model/"^^xsd:anyURI ;
+    schema:copyrightHolder <https://linked.data.gov.au/org/qld-resources> ;
+    schema:copyrightNotice "(c) The State of Queensland (Department of Resources) 2023" ;
+    schema:copyrightYear "2023"^^xsd:gYear ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2023-04-26"^^xsd:date ;
+    schema:dateIssued "2023-04-26"^^xsd:date ;
+    schema:dateModified "2023-04-26"^^xsd:date ;
+    schema:description """This model is for roads information in Queensland, however it is a candidate ANZ model also, and may, in the near future, be expanded with feedback form other jurisdictions and a process through the Inter Governmental Committee on Surveying & Mapping (ICSM) to ensure it covers all ANZ jurisdictions' needs.
+
+This model is a stand-alone model for roads information, however it is also designed to work as a Component Model part of an integrative multi-model regime for Spatial Information Queensland known as a Supermodel (see https://linked.data.gov.au/def/qsi-supermodel). The QSI Supermodel aims to integrate cadastre, address, place name, roads and other information."""@en ;
+    schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    schema:name "Roads Model" ;
+    schema:publisher <https://linked.data.gov.au/org/qsi> ;
 .
