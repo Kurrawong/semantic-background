@@ -8,6 +8,9 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
+:0.0.1 schema:name "0.0.1" .
+
+
 <https://linked.data.gov.au/def/roads>
     a owl:Ontology ;
     dcterms:provenance "This model was created for Queensland Spatial Information's CAM (Cadastre & Addressing Modernisation) project in 2023." ;
@@ -33,7 +36,7 @@ This model is a stand-alone model for roads information, however it is also desi
 
 geo:Feature
     a owl:Class ;
-    rdfs:isDefinedBy <https://linked.data.gov.au/def/cad> ;
+    rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
     schema:name "Feature" ;
     schema:description "A discrete spatial phenomenon in a universe of discourse"@en ;
     dcterms:provenance "Taken, unchanged, from the GeoSPARQL 1.1 Ontology" ;

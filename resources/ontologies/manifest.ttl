@@ -10,7 +10,7 @@ PREFIX schema: <https://schema.org/>
         [
             prof:hasArtifact "catalogue.ttl" ;
             prof:hasRole mrr:CatalogueData ;
-            schema:name "SemBack Vocabularies Catalogue" ;
+            schema:name "SemBack Ontologies Catalogue" ;
         ] ,
         [
             dcterms:conformsTo <https://linked.data.gov.au/def/ontpub/validator> ;

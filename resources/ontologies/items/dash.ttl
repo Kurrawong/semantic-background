@@ -1958,6 +1958,7 @@ WHERE {
 
 dash:ClosedByTypesConstraintComponent-closedByTypes
     a sh:Parameter ;
+    schema:name "ClosedByTypesConstraintComponent closedByTypes" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:datatype xsd:boolean ;
     sh:description "True to indicate that the focus nodes are closed by their types. A constraint violation is reported for each property value of the focus node where the property is not among those that are explicitly declared via sh:property/sh:path in any of the rdf:types of the focus node (and their superclasses). The property rdf:type is always permitted." ;
@@ -1967,6 +1968,7 @@ dash:ClosedByTypesConstraintComponent-closedByTypes
 
 dash:CoExistsWithConstraintComponent-coExistsWith
     a sh:Parameter ;
+    schema:name "CoExistsWithConstraintComponent coExistsWith" ;
     dash:editor dash:PropertyAutoCompleteEditor ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     dash:viewer dash:PropertyLabelViewer ;
@@ -2004,6 +2006,7 @@ dash:GraphValidationTestCase
 
 dash:HasValueInConstraintComponent-hasValueIn
     a sh:Parameter ;
+    schema:name "HasValueInConstraintComponent hasValueIn" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:description "At least one of the value nodes must be a member of the given list." ;
     sh:name "has value in" ;
@@ -2013,6 +2016,7 @@ dash:HasValueInConstraintComponent-hasValueIn
 
 dash:HasValueWithClassConstraintComponent-hasValueWithClass
     a sh:Parameter ;
+    schema:name "HasValueWithClassConstraintComponent hasValueWithClass" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:class rdfs:Class ;
     sh:description "One of the values of the property path must be an instance of the given class." ;
@@ -2023,6 +2027,7 @@ dash:HasValueWithClassConstraintComponent-hasValueWithClass
 
 dash:IndexedConstraintComponent-indexed
     a sh:Parameter ;
+    schema:name "IndexedConstraintComponent indexed" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:datatype xsd:boolean ;
     sh:description "True to activate indexing for this property." ;
@@ -2116,6 +2121,7 @@ The focus node must either be rdf:nil or not recursive. Furthermore, this shape 
 
 dash:NonRecursiveConstraintComponent-nonRecursive
     a sh:Parameter ;
+    schema:name "NonRecursiveConstraintComponent nonRecursive" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:datatype xsd:boolean ;
     sh:description """Used to state that a property or path must not point back to itself.
@@ -2130,11 +2136,13 @@ To express that a person cannot have itself among any of its (recursive) parents
 
 dash:ParameterConstraintComponent-parameter
     a sh:Parameter ;
+    schema:name "ParameterConstraintComponent parameter" ;
     sh:path sh:parameter ;
 .
 
 dash:PrimaryKeyConstraintComponent-uriStart
     a sh:Parameter ;
+    schema:name "PrimaryKeyConstraintComponent uriStart" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:datatype xsd:string ;
     sh:description "The start of the URIs of well-formed resources. If specified then the associated property/path serves as \"primary key\" for all target nodes (instances). All such target nodes need to have a URI that starts with the given string, followed by the URI-encoded value of the primary key property." ;
@@ -2145,6 +2153,7 @@ dash:PrimaryKeyConstraintComponent-uriStart
 
 dash:ReifiableByConstraintComponent-reifiableBy
     a sh:Parameter ;
+    schema:name "ReifiableByConstraintComponent reifiableBy" ;
     sh:class sh:NodeShape ;
     sh:description "Can be used to specify the node shape that may be applied to reified statements produced by a property shape. The property shape must have a URI resource as its sh:path. The values of this property must be node shapes. User interfaces can use this information to determine which properties to present to users when reified statements are explored or edited. Also, SHACL validators can use it to determine how to validate reified triples. Use dash:None to indicate that no reification should be permitted." ;
     sh:maxCount 1 ;
@@ -2155,6 +2164,7 @@ dash:ReifiableByConstraintComponent-reifiableBy
 
 dash:RootClassConstraintComponent-rootClass
     a sh:Parameter ;
+    schema:name "RootClassConstraintComponent rootClass" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:class rdfs:Class ;
     sh:description "The root class." ;
@@ -2217,6 +2227,7 @@ Unless another sh:message has been directly returned, the sh:message of the dash
 
 dash:ScriptConstraintComponent-scriptConstraint
     a sh:Parameter ;
+    schema:name "ScriptConstraintComponent scriptConstraint" ;
     sh:class dash:ScriptConstraint ;
     sh:description "The Script constraint(s) to apply." ;
     sh:name "script constraint" ;
@@ -2225,6 +2236,7 @@ dash:ScriptConstraintComponent-scriptConstraint
 
 dash:SingleLineConstraintComponent-singleLine
     a sh:Parameter ;
+    schema:name "SingleLineConstraintComponent singleLine" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:datatype xsd:boolean ;
     sh:description "True to state that the lexical form of literal value nodes must not contain any line breaks. False to state that line breaks are explicitly permitted." ;
@@ -2235,6 +2247,7 @@ dash:SingleLineConstraintComponent-singleLine
 
 dash:StemConstraintComponent-stem
     a sh:Parameter ;
+    schema:name "StemConstraintComponent stem" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:datatype xsd:string ;
     sh:description "If specified then every value node must be an IRI and the IRI must start with the given string value." ;
@@ -2261,6 +2274,7 @@ dash:StringOrLangString
 
 dash:SubSetOfConstraintComponent-subSetOf
     a sh:Parameter ;
+    schema:name "SubSetOfConstraintComponent subSetOf" ;
     dash:editor dash:PropertyAutoCompleteEditor ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     dash:viewer dash:PropertyLabelViewer ;
@@ -2272,6 +2286,7 @@ dash:SubSetOfConstraintComponent-subSetOf
 
 dash:SymmetricConstraintComponent-symmetric
     a sh:Parameter ;
+    schema:name "SymmetricConstraintComponent symmetric" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:datatype xsd:boolean ;
     sh:description "If set to true then if A relates to B then B must relate to A." ;
@@ -2282,6 +2297,7 @@ dash:SymmetricConstraintComponent-symmetric
 
 dash:UniqueValueForClassConstraintComponent-uniqueValueForClass
     a sh:Parameter ;
+    schema:name "UniqueValueForClassConstraintComponent uniqueValueForClass" ;
     dash:reifiableBy dash:ConstraintReificationShape ;
     sh:class rdfs:Class ;
     sh:description "States that the values of the property must be unique for all instances of a given class (and its subclasses)." ;
@@ -2469,6 +2485,7 @@ dash:isLanguageIn
 
 dash:isSubClassOf-subclass
     a sh:Parameter ;
+    schema:name "isSubClassOf-subclass" ;
     sh:class rdfs:Class ;
     sh:description "The (potential) subclass." ;
     sh:name "subclass" ;
@@ -2477,6 +2494,7 @@ dash:isSubClassOf-subclass
 
 dash:isSubClassOf-superclass
     a sh:Parameter ;
+    schema:name "isSubClassOf-superclass" ;
     sh:class rdfs:Class ;
     sh:description "The (potential) superclass." ;
     sh:name "superclass" ;

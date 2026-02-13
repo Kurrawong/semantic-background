@@ -10,6 +10,8 @@ PREFIX skosxl: <http://www.w3.org/2008/05/skos-xl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 
+addr:0.0.1 schema:name "0.0.1" .
+
 <https://linked.data.gov.au/def/addr>
     a owl:Ontology ;
     skos:historyNote "This ontology was made for the Queensland Department of Resources, Spatial Information unit to assist with future Address database design. It is informed by the ICSM's Addressing 2035: Addressing Reform and Innovation for Australia and New Zealand, published in late 2021 and is based primarilty on the ISO19160-1 Addressing Part 1: Conceptual model with additional elements from a small set of well-regarded Semantic Web models such as GeoSPARQL and SKOS. It is also informed by the relational databalse model used for the G-NAF, Australia's Geocoded National Address File, and CSIRO work in 2018 to characterise the GNAF in Sematic Web form, the ontlogy for which is online at https:linked.data.gov.au/def/gnaf."@en ;

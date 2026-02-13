@@ -171,6 +171,8 @@ schema:name
     schema:name "name" ;
 .
 
+:0.0.1 schema:name "0.0.1" .
+
 ont:
     a owl:Ontology ;
     owl:versionIRI :0.0.1 ;

@@ -1202,6 +1202,7 @@ sh:zeroOrOnePath
 
 sh:AndConstraintComponent-and
     a sh:Parameter ;
+    schema:name "AndConstraintComponent and" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:and ;
 .
@@ -1229,6 +1230,7 @@ sh:BlankNodeOrLiteral
 
 sh:ClassConstraintComponent-class
     a sh:Parameter ;
+    schema:name "ClassConstraintComponent class" ;
     rdfs:isDefinedBy sh: ;
     sh:nodeKind sh:IRI ;
     sh:path sh:class ;
@@ -1236,6 +1238,7 @@ sh:ClassConstraintComponent-class
 
 sh:ClosedConstraintComponent-closed
     a sh:Parameter ;
+    schema:name "ClosedConstraintComponent closed" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:boolean ;
     sh:path sh:closed ;
@@ -1243,6 +1246,7 @@ sh:ClosedConstraintComponent-closed
 
 sh:ClosedConstraintComponent-ignoredProperties
     a sh:Parameter ;
+    schema:name "ClosedConstraintComponent ignoredProperties" ;
     rdfs:isDefinedBy sh: ;
     sh:optional true ;
     sh:path sh:ignoredProperties ;
@@ -1250,6 +1254,7 @@ sh:ClosedConstraintComponent-ignoredProperties
 
 sh:DatatypeConstraintComponent-datatype
     a sh:Parameter ;
+    schema:name "DatatypeConstraintComponent datatype" ;
     rdfs:isDefinedBy sh: ;
     sh:maxCount 1 ;
     sh:nodeKind sh:IRI ;
@@ -1258,6 +1263,7 @@ sh:DatatypeConstraintComponent-datatype
 
 sh:DisjointConstraintComponent-disjoint
     a sh:Parameter ;
+    schema:name "DisjointConstraintComponent disjoint" ;
     rdfs:isDefinedBy sh: ;
     sh:nodeKind sh:IRI ;
     sh:path sh:disjoint ;
@@ -1265,6 +1271,7 @@ sh:DisjointConstraintComponent-disjoint
 
 sh:EqualsConstraintComponent-equals
     a sh:Parameter ;
+    schema:name "EqualsConstraintComponent equals" ;
     rdfs:isDefinedBy sh: ;
     sh:nodeKind sh:IRI ;
     sh:path sh:equals ;
@@ -1272,12 +1279,14 @@ sh:EqualsConstraintComponent-equals
 
 sh:ExpressionConstraintComponent-expression
     a sh:Parameter ;
+    schema:name "ExpressionConstraintComponent expression" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:expression ;
 .
 
 sh:HasValueConstraintComponent-hasValue
     a sh:Parameter ;
+    schema:name "HasValueConstraintComponent hasValue" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:hasValue ;
 .
@@ -1291,6 +1300,7 @@ sh:IRIOrLiteral
 
 sh:InConstraintComponent-in
     a sh:Parameter ;
+    schema:name "InConstraintComponent in" ;
     rdfs:isDefinedBy sh: ;
     sh:maxCount 1 ;
     sh:path sh:in ;
@@ -1298,12 +1308,14 @@ sh:InConstraintComponent-in
 
 sh:JSConstraint-js
     a sh:Parameter ;
+    schema:name "JSConstraint js" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:js ;
 .
 
 sh:LanguageInConstraintComponent-languageIn
     a sh:Parameter ;
+    schema:name "LanguageInConstraintComponent languageIn" ;
     rdfs:isDefinedBy sh: ;
     sh:maxCount 1 ;
     sh:path sh:languageIn ;
@@ -1311,6 +1323,7 @@ sh:LanguageInConstraintComponent-languageIn
 
 sh:LessThanConstraintComponent-lessThan
     a sh:Parameter ;
+    schema:name "LessThanConstraintComponent lessThan" ;
     rdfs:isDefinedBy sh: ;
     sh:nodeKind sh:IRI ;
     sh:path sh:lessThan ;
@@ -1318,6 +1331,7 @@ sh:LessThanConstraintComponent-lessThan
 
 sh:LessThanOrEqualsConstraintComponent-lessThanOrEquals
     a sh:Parameter ;
+    schema:name "LessThanOrEqualsConstraintComponent lessThanOrEquals" ;
     rdfs:isDefinedBy sh: ;
     sh:nodeKind sh:IRI ;
     sh:path sh:lessThanOrEquals ;
@@ -1325,6 +1339,7 @@ sh:LessThanOrEqualsConstraintComponent-lessThanOrEquals
 
 sh:MaxCountConstraintComponent-maxCount
     a sh:Parameter ;
+    schema:name "MaxCountConstraintComponent maxCount" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
@@ -1333,6 +1348,7 @@ sh:MaxCountConstraintComponent-maxCount
 
 sh:MaxExclusiveConstraintComponent-maxExclusive
     a sh:Parameter ;
+    schema:name "MaxExclusiveConstraintComponent maxExclusive" ;
     rdfs:isDefinedBy sh: ;
     sh:maxCount 1 ;
     sh:nodeKind sh:Literal ;
@@ -1341,6 +1357,7 @@ sh:MaxExclusiveConstraintComponent-maxExclusive
 
 sh:MaxInclusiveConstraintComponent-maxInclusive
     a sh:Parameter ;
+    schema:name "MaxInclusiveConstraintComponent maxInclusive" ;
     rdfs:isDefinedBy sh: ;
     sh:maxCount 1 ;
     sh:nodeKind sh:Literal ;
@@ -1349,6 +1366,7 @@ sh:MaxInclusiveConstraintComponent-maxInclusive
 
 sh:MaxLengthConstraintComponent-maxLength
     a sh:Parameter ;
+    schema:name "MaxLengthConstraintComponent maxLength" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
@@ -1357,6 +1375,7 @@ sh:MaxLengthConstraintComponent-maxLength
 
 sh:MinCountConstraintComponent-minCount
     a sh:Parameter ;
+    schema:name "MinCountConstraintComponent minCount" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
@@ -1365,6 +1384,7 @@ sh:MinCountConstraintComponent-minCount
 
 sh:MinExclusiveConstraintComponent-minExclusive
     a sh:Parameter ;
+    schema:name "MinExclusiveConstraintComponent minExclusive" ;
     rdfs:isDefinedBy sh: ;
     sh:maxCount 1 ;
     sh:nodeKind sh:Literal ;
@@ -1373,6 +1393,7 @@ sh:MinExclusiveConstraintComponent-minExclusive
 
 sh:MinInclusiveConstraintComponent-minInclusive
     a sh:Parameter ;
+    schema:name "MinInclusiveConstraintComponent minInclusive" ;
     rdfs:isDefinedBy sh: ;
     sh:maxCount 1 ;
     sh:nodeKind sh:Literal ;
@@ -1381,6 +1402,7 @@ sh:MinInclusiveConstraintComponent-minInclusive
 
 sh:MinLengthConstraintComponent-minLength
     a sh:Parameter ;
+    schema:name "MinLengthConstraintComponent minLength" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:integer ;
     sh:maxCount 1 ;
@@ -1389,12 +1411,14 @@ sh:MinLengthConstraintComponent-minLength
 
 sh:NodeConstraintComponent-node
     a sh:Parameter ;
+    schema:name "NodeConstraintComponent node" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:node ;
 .
 
 sh:NodeKindConstraintComponent-nodeKind
     a sh:Parameter ;
+    schema:name "NodeKindConstraintComponent nodeKind" ;
     rdfs:isDefinedBy sh: ;
     sh:in (
         sh:BlankNode
@@ -1410,18 +1434,21 @@ sh:NodeKindConstraintComponent-nodeKind
 
 sh:NotConstraintComponent-not
     a sh:Parameter ;
+    schema:name "NotConstraintComponent not" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:not ;
 .
 
 sh:OrConstraintComponent-or
     a sh:Parameter ;
+    schema:name "OrConstraintComponent or" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:or ;
 .
 
 sh:PatternConstraintComponent-flags
     a sh:Parameter ;
+    schema:name "PatternConstraintComponent flags" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:string ;
     sh:optional true ;
@@ -1430,6 +1457,7 @@ sh:PatternConstraintComponent-flags
 
 sh:PatternConstraintComponent-pattern
     a sh:Parameter ;
+    schema:name "PatternConstraintComponent pattern" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:string ;
     sh:path sh:pattern ;
@@ -1437,12 +1465,14 @@ sh:PatternConstraintComponent-pattern
 
 sh:PropertyConstraintComponent-property
     a sh:Parameter ;
+    schema:name "PropertyConstraintComponent property" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:property ;
 .
 
 sh:QualifiedMaxCountConstraintComponent-qualifiedMaxCount
     a sh:Parameter ;
+    schema:name "QualifiedMaxCountConstraintComponent qualifiedMaxCount" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:integer ;
     sh:path sh:qualifiedMaxCount ;
@@ -1450,12 +1480,14 @@ sh:QualifiedMaxCountConstraintComponent-qualifiedMaxCount
 
 sh:QualifiedMaxCountConstraintComponent-qualifiedValueShape
     a sh:Parameter ;
+    schema:name "QualifiedMaxCountConstraintComponent qualifiedValueShape" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:qualifiedValueShape ;
 .
 
 sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint
     a sh:Parameter ;
+    schema:name "QualifiedMaxCountConstraintComponent qualifiedValueShapesDisjoint" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:boolean ;
     sh:optional true ;
@@ -1464,6 +1496,7 @@ sh:QualifiedMaxCountConstraintComponent-qualifiedValueShapesDisjoint
 
 sh:QualifiedMinCountConstraintComponent-qualifiedMinCount
     a sh:Parameter ;
+    schema:name "QualifiedMinCountConstraintComponent qualifiedMinCount" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:integer ;
     sh:path sh:qualifiedMinCount ;
@@ -1471,12 +1504,14 @@ sh:QualifiedMinCountConstraintComponent-qualifiedMinCount
 
 sh:QualifiedMinCountConstraintComponent-qualifiedValueShape
     a sh:Parameter ;
+    schema:name "QualifiedMinCountConstraintComponent qualifiedValueShape" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:qualifiedValueShape ;
 .
 
 sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint
     a sh:Parameter ;
+    schema:name "QualifiedMinCountConstraintComponent qualifiedValueShapesDisjoint" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:boolean ;
     sh:optional true ;
@@ -1485,12 +1520,14 @@ sh:QualifiedMinCountConstraintComponent-qualifiedValueShapesDisjoint
 
 sh:SPARQLConstraintComponent-sparql
     a sh:Parameter ;
+    schema:name "SPARQLConstraintComponent sparql" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:sparql ;
 .
 
 sh:UniqueLangConstraintComponent-uniqueLang
     a sh:Parameter ;
+    schema:name "UniqueLangConstraintComponent uniqueLang" ;
     rdfs:isDefinedBy sh: ;
     sh:datatype xsd:boolean ;
     sh:maxCount 1 ;
@@ -1499,6 +1536,7 @@ sh:UniqueLangConstraintComponent-uniqueLang
 
 sh:XoneConstraintComponent-xone
     a sh:Parameter ;
+    schema:name "XoneConstraintComponent xone" ;
     rdfs:isDefinedBy sh: ;
     sh:path sh:xone ;
 .

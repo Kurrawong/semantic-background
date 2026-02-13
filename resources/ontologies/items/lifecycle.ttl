@@ -65,6 +65,8 @@ ex:name-1
     schema:name "Lifecycle Stage" ;
 .
 
+:0.0.1 schema:name "0.0.1" .
+
 model:
     a owl:Ontology ;
     owl:versionIRI :0.0.1 ;

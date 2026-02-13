@@ -1,14 +1,20 @@
+PREFIX dataset: <http://id.loc.gov/vocabulary/identifiers>
 PREFIX mads: <http://www.loc.gov/mads/rdf/v1#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://id.loc.gov/vocabulary/identifiers>
+dataset:
     a
-        mads:MADSScheme ,
-        skos:ConceptScheme ;
-    rdfs:label "Standard Identifiers"@en ;
-    mads:definitionNote "The Standard Identifiers Scheme lists standard number or code systems and assigns a URI to each database or publication that defines or contains the identifiers. The purpose of these source codes is to enable the type of standard numbers or codes in resource descriptions to be indicated by URI."@en ;
-    mads:hasMADSSchemeMember
+        schema:CreativeWork ,
+        schema:Dataset ;
+    schema:citation "https://id.loc.gov/vocabulary/identifiers.html"^^xsd:anyURI ;
+    schema:creator <https://linked.data.gov.au/org/loc> ;
+    schema:dateCreated "2025-12-11"^^xsd:date ;
+    schema:dateIssued "2025-12-11"^^xsd:date ;
+    schema:dateModified "2025-12-11"^^xsd:date ;
+    schema:description "The Standard Identifiers Scheme lists standard number or code systems and assigns a URI to each database or publication that defines or contains the identifiers. The purpose of these source codes is to enable the type of standard numbers or codes in resource descriptions to be indicated by URI." ;
+    schema:hasPart
         <http://id.loc.gov/vocabulary/identifiers/agorha> ,
         <http://id.loc.gov/vocabulary/identifiers/agrovoc> ,
         <http://id.loc.gov/vocabulary/identifiers/allmovie> ,
@@ -237,7 +243,9 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         <http://id.loc.gov/vocabulary/identifiers/worldcat> ,
         <http://id.loc.gov/vocabulary/identifiers/xgamea> ,
         <http://id.loc.gov/vocabulary/identifiers/zbaut> ;
-    skos:definition "The Standard Identifiers Scheme lists standard number or code systems and assigns a URI to each database or publication that defines or contains the identifiers. The purpose of these source codes is to enable the type of standard numbers or codes in resource descriptions to be indicated by URI."@en ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "Standard Identifiers" ;
+    schema:publisher <https://linked.data.gov.au/org/loc> ;
 .
 
 <http://id.loc.gov/vocabulary/identifiers/agorha>

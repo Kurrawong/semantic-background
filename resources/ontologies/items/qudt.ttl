@@ -2574,12 +2574,6 @@ vaem:QUDT
     schema:name "QUDT" ;
 .
 
-<https://www.QUDT.org>
-    a schema:Organization ;
-    schema:name "QUDT.org" ;
-    schema:url "https://www.QUDT.org"^^xsd:anyURI ;
-.
-
 qudt:Aspect
     a qudt:AspectClass ;
     rdfs:isDefinedBy ont: ;

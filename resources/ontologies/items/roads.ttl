@@ -14,6 +14,8 @@ geo:Feature
     schema:name "Feature" ;
 .
 
+:0.0.1 schema:name "0.0.1" .
+
 <https://linked.data.gov.au/def/roads>
     a owl:Ontology ;
     owl:versionIRI :0.0.1 ;

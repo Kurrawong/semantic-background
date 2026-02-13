@@ -1,0 +1,85 @@
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ont: <http://www.w3.org/ns/ssn>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX sosa-act: <http://www.w3.org/ns/sosa/act/>
+PREFIX sosa-obs: <http://www.w3.org/ns/sosa/obs/>
+PREFIX sosa-sam: <http://www.w3.org/ns/sosa/sam/>
+PREFIX ssn-act: <http://www.w3.org/ns/ssn/act/>
+PREFIX ssn-dep: <http://www.w3.org/ns/ssn/dep/>
+PREFIX ssn-obs: <http://www.w3.org/ns/ssn/obs/>
+PREFIX ssn-sam: <http://www.w3.org/ns/ssn/sam/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ont:
+    a owl:Ontology ;
+    rdfs:seeAlso "https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology"^^xsd:anyURI ;
+    owl:imports
+        sosa: ,
+        ssn-act: ,
+        ssn-dep: ,
+        ssn-obs: ,
+        ssn-sam: ;
+    owl:priorVersion <http://www.w3.org/ns/ssn/2017/> ;
+    owl:versionIRI <http://www.w3.org/ns/ssn/2023/> ;
+    skos:historyNote """Terms in the ssn: namespace have equivalence axioms to terms declared in the sosa: namespace, and are marked 'deprecated'.
+  The axiomatization from the 2017 version of the standard is preserved.
+
+  Terms in the sosa: namespace do not carry symmetric equivalent axioms.
+  Axiomatization only uses sosa: terms.""" ;
+    skos:scopeNote "The SSN module contains an axiomatization of the core terms from the SOSA module (serialized in the sosa:ttl file) plus some deprecated terms in the ssn: namespace. " ;
+    skos:usageNote
+        "Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org"@en ,
+        "This module imports all the axiomatizations of the SOSA terms, and adds cross-module axioms."@en ;
+    schema:coyrightNotice "Copyright 2025 W3C/OGC." ;
+    schema:creator <https://www.w3.org> ;
+    schema:dateCreated "2017-04-17"^^xsd:date ;
+    schema:dateIssued "2024-02-03"^^xsd:date ;
+    schema:dateModified "2024-02-03"^^xsd:date ;
+    schema:description "This ontology describes sensors, actuators and observations, and related concepts. It does not describe domain concepts, time, locations, etc. these are intended to be included from other ontologies via OWL imports."@en ;
+    schema:license
+        <http://www.opengeospatial.org/ogc/Software> ,
+        <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
+    schema:name "Semantic Sensor Network Ontology"@en ;
+    schema:publisher <https://www.w3.org> ;
+    schema:version """New modular version of the SSN ontology.
+
+This ontology was originally developed in 2009-2011 by the W3C Semantic Sensor Networks Incubator Group (SSN-XG). For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/. The ontology was revised and modularized in 2015-2017 by the W3C/OGC Spatial Data on the Web Working Group, see: https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology.
+
+In particular, (a) the scope is extended to include actuation and sampling; (b) the core concepts and properties are factored out into the SOSA ontology. The SSN ontology imports SOSA and adds formal axiomatization consistent with the text definitions in SOSA, and adds classes and properties to accommodate the scope of the original SSN ontology. """@en ;
+.
+
+sosa:ActuationCollection
+    rdfs:isDefinedBy sosa-act: ;
+    owl:disjointWith
+        sosa:ObservationCollection ,
+        sosa:SampleCollection ,
+        sosa:SamplingCollection ;
+.
+
+sosa:ObservationCollection
+    rdfs:isDefinedBy sosa-obs: ;
+    owl:disjointWith
+        sosa:ActuationCollection ,
+        sosa:SampleCollection ,
+        sosa:SamplingCollection ;
+.
+
+sosa:SampleCollection
+    rdfs:isDefinedBy sosa-sam: ;
+    owl:disjointWith
+        sosa:ActuationCollection ,
+        sosa:ObservationCollection ,
+        sosa:SamplingCollection ;
+.
+
+sosa:SamplingCollection
+    rdfs:isDefinedBy sosa-sam: ;
+    owl:disjointWith
+        sosa:ActuationCollection ,
+        sosa:ObservationCollection ,
+        sosa:SampleCollection ;
+.
