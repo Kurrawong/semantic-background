@@ -19,7 +19,7 @@ PREFIX schema: <https://schema.org/>
 PREFIX dataset: <http://qudt.org/vocab/unit>
 
 <http://qudt.org/vocab/unit>
-  a schema:Dataset , schema:CreativeWork ;
+  a schema:CreativeWork ;
     schema:creator <https://www.QUDT.org> ;
     schema:dateCreated "2019-08-01"^^xsd:date ;
     schema:dateIssued "2024-10-26"^^xsd:date ;

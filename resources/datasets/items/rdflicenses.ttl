@@ -16,8 +16,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 dataset:
     a
-        schema:CreativeWork ,
-        schema:Dataset ;
+        schema:CreativeWork ;
     schema:citation "https://rdflicense.linkeddata.es"^^xsd:anyURI ;
     schema:creator <http://example.com/person/Víctor-Rodriguez-Doncel> ;
     schema:dateCreated "2021-07-28"^^xsd:date ;

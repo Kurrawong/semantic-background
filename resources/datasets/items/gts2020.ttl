@@ -16999,8 +16999,7 @@ ts:gts2020
         void:Dataset ,
         gts:GeologicTimescale ,
         time:TRS ,
-        schema:CreativeWork ,
-        schema:Dataset ;
+        schema:CreativeWork ;
     dct:contributor
         "Chinese and Japanese preferred labels from SKOS by Xiaogang Ma, adopted from Asian Multilingual Thesaurus of Geosciences."@en ,
         "International Commission on Stratigraphy"@en ,

@@ -25750,8 +25750,7 @@ quantitykind:Length
 
 dataset:
     a
-        schema:CreativeWork ,
-        schema:Dataset ;
+        schema:CreativeWork ;
     vaem:hasGraphMetadata vaem:GMD_QUDT-QUANTITY-KINDS-ALL ;
     owl:imports
         <http://qudt.org/2.1/schema/facade/qudt> ,

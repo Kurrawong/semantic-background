@@ -6,8 +6,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 dataset:
     a
-        schema:CreativeWork ,
-        schema:Dataset ;
+        schema:CreativeWork ;
     schema:citation "https://id.loc.gov/vocabulary/identifiers.html"^^xsd:anyURI ;
     schema:creator <https://linked.data.gov.au/org/loc> ;
     schema:dateCreated "2025-12-11"^^xsd:date ;
