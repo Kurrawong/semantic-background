@@ -25,6 +25,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Tim Clark" ;
 .
 
+<http://purl.org/dc/aboutdcmi#DCMI>
+    a schema:Organization ;
+    schema:name "Dublin Core Metadata Initiative" ;
+    schema:url "http://purl.org/dc/aboutdcmi#DCMI"^^xsd:anyURI ;
+.
+
 <http://purl.org/spar>
     a schema:Organization ;
     schema:name "SPAR Ontologies" ;
@@ -46,6 +52,30 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://www.ogc.org/standards-working-groups/"^^xsd:anyURI ;
 .
 
+<https://example.com/person/Alistair-Miles>
+    a schema:Person ;
+    schema:email ""^^xsd:anyURI ;
+    schema:name "Alistair Miles" ;
+.
+
+<https://example.com/person/Dave-Beckett>
+    a schema:Person ;
+    schema:email ""^^xsd:anyURI ;
+    schema:name "Dave Beckett" ;
+.
+
+<https://example.com/person/Nikki-Rogers>
+    a schema:Person ;
+    schema:email ""^^xsd:anyURI ;
+    schema:name "Nikki Rogers" ;
+.
+
+<https://example.com/person/Sean-Bechhofer>
+    a schema:Person ;
+    schema:email ""^^xsd:anyURI ;
+    schema:name "Sean Bechhofer" ;
+.
+
 <https://linked.data.gov.au/org/abs>
     a schema:Organization ;
     schema:name "Australian Bureau of Statistics" ;
@@ -64,6 +94,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://www.ardc.edu.au"^^xsd:anyURI ;
 .
 
+<https://linked.data.gov.au/org/cgi>
+    a schema:Organization ;
+    schema:name "Commission for Geoscience Information" ;
+    schema:url "https://cgi-iugs.org/"^^xsd:anyURI ;
+.
+
 <https://linked.data.gov.au/org/icsm>
     a schema:Organization ;
     schema:name "Intergovernmental Committee on Surveying & Mapping" ;
@@ -76,6 +112,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://www.loc.gov/"^^xsd:anyURI ;
 .
 
+<https://linked.data.gov.au/org/qld-resources>
+    a schema:Organization ;
+    schema:name "Queensland Department of Resources" ;
+    schema:url "https://www.resources.qld.gov.au"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/qsi>
+    a schema:Organization ;
+    schema:name "Queensland Spatial Information" ;
+    schema:url "https://qldspatial.information.qld.gov.au"^^xsd:anyURI ;
+.
+
 <https://orcid.org/0000-0002-3313-924X>
     a schema:Person ;
     schema:affiliation
@@ -86,6 +134,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://orcid.org/0000-0002-3313-924X"^^xsd:anyURI ;
 .
 
+<https://orcid.org/0000-0002-3884-3420>
+    a schema:Person ;
+    schema:affiliation <https://ror.org/03qn8fb07> ;
+    schema:email "simon.cox@csiro.au"^^xsd:anyURI ;
+    schema:name "Simon J D Cox" ;
+    schema:url "https://orcid.org/0000-0002-3884-3420"^^xsd:anyURI ;
+.
+
 <https://orcid.org/0000-0002-7878-2693>
     a schema:Person ;
     schema:email "ratkinson@ogc.org"^^xsd:anyURI ;
@@ -94,10 +150,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://orcid.org/0000-0002-8742-7730>
     a schema:Person ;
-    schema:affiliation
-        <https://kurrawong.ai> ;
-    schema:email
-        "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:affiliation <https://kurrawong.ai> ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
     schema:honorificPrefix "Dr" ;
     schema:name "Nicholas J. Car" ;
     schema:url "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
@@ -132,48 +186,100 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://orcid.org/0000-0003-3789-2260"^^xsd:anyURI ;
 .
 
+<https://ror.org/019wvm592>
+    a schema:Organization ;
+    schema:name "Australian National University" ;
+    schema:url "https://www.anu.edu.au"^^xsd:anyURI ;
+.
+
+<https://schema.org/docs/collab//rNews>
+    schema:name "rNews schema.org group" ;
+.
+
+<https://schema.org/docs/collab/ActionCollabClass>
+    schema:name "Action Collab Class schema.org group" ;
+.
+
+<https://schema.org/docs/collab/Automotive_Ontology_Working_Group>
+    schema:name "Automotive Ontology Working Group schema.org group" ;
+.
+
+<https://schema.org/docs/collab/DatasetClass>
+    schema:name "DatasetClass schema.org group" ;
+.
+
+<https://schema.org/docs/collab/ELI>
+    schema:name "ELI schema.org group" ;
+.
+
+<https://schema.org/docs/collab/FIBO>
+    schema:name "FIBO schema.org group" ;
+.
+
+<https://schema.org/docs/collab/GLEIF>
+    schema:name "GLEIF schema.org group" ;
+.
+
+<https://schema.org/docs/collab/GoodRelationsClass>
+    schema:name "Good Relations Class schema.org group" ;
+.
+
+<https://schema.org/docs/collab/GoodRelationsTerms>
+    schema:name "Good Relations Terms schema.org group" ;
+.
+
+<https://schema.org/docs/collab/IIT-CNR.it>
+    schema:name "IIT-CNR.it schema.org group" ;
+.
+
+<https://schema.org/docs/collab/LRMIClass>
+    schema:name "LRMIClass schema.org group" ;
+.
+
+<https://schema.org/docs/collab/MBZ>
+    schema:name "MBZ schema.org group" ;
+.
+
+<https://schema.org/docs/collab/QAStackExchange>
+    schema:name "QA Stack Exchange schema.org group" ;
+.
+
+<https://schema.org/docs/collab/STI_Accommodation_Ontology>
+    schema:name "STI Accommodation Ontology schema.org group" ;
+.
+
+<https://schema.org/docs/collab/TP>
+    schema:name "TP schema.org group" ;
+.
+
+<https://schema.org/docs/collab/Tourism>
+    schema:name "Tourism schema.org group" ;
+.
+
+<https://schema.org/docs/collab/WikiDoc>
+    schema:name "WikiDoc schema.org group" ;
+.
+
+<https://schema.org/docs/collab/bibex>
+    schema:name "bibex schema.org group" ;
+.
+
+<https://wf4ever.github.io>
+    a schema:Organization ;
+    schema:name "Workflow 4Ever Project Team" ;
+    schema:url "https://wf4ever.github.io/"^^xsd:anyURI ;
+.
+
+<https://www.QUDT.org>
+    a schema:Organization ;
+    schema:name "QUDT.org" ;
+    schema:url "https://www.QUDT.org"^^xsd:anyURI ;
+.
+
 <https://www.epimorphics.com>
     a schema:Organization ;
     schema:name "Epimorphics" ;
     schema:url "https://www.epimorphics.com"^^xsd:anyURI ;
-.
-
-
-<http://purl.org/dc/aboutdcmi#DCMI>
-    a schema:Organization ;
-    schema:name "Dublin Core Metadata Initiative" ;
-    schema:url "http://purl.org/dc/aboutdcmi#DCMI"^^xsd:anyURI ;
-.
-
-<https://example.com/person/Alistair-Miles>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Alistair Miles" ;
-.
-
-<https://example.com/person/Sean-Bechhofer>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Sean Bechhofer" ;
-.
-
-
-<https://example.com/person/Dave-Beckett>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Dave Beckett" ;
-.
-
-<https://example.com/person/Nikki-Rogers>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Nikki Rogers" ;
-.
-
-<https://example.com/person/Sean-Bechhofer>
-    a schema:Person ;
-    schema:email ""^^xsd:anyURI ;
-    schema:name "Sean Bechhofer" ;
 .
 
 <https://www.w3.org>
@@ -196,27 +302,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Joseph Abhayaratna" ;
 .
 
-<https://wf4ever.github.io>
-    a schema:Organization ;
-    schema:name "Workflow 4Ever Project Team" ;
-    schema:url "https://wf4ever.github.io/"^^xsd:anyURI ;
-.
-
-
-<https://orcid.org/0000-0002-3884-3420>
-    a schema:Person ;
-    schema:affiliation <https://ror.org/03qn8fb07> ;
-    schema:email "simon.cox@csiro.au"^^xsd:anyURI ;
-    schema:name "Simon J D Cox" ;
-    schema:url "https://orcid.org/0000-0002-3884-3420"^^xsd:anyURI ;
-.
-
-<http://www.opengis.net/def/entities/bodies/ogc>
-    a schema:Organization ;
-    schema:name "Open Geospatial Consortium" ;
-    schema:url "https://www.ogc.org"^^xsd:anyURI ;
-.
-
 <https://defs.opengis.net/org/geosemantics-dwg>
     a schema:Organization ;
     schema:description "The Open Geospatial Consortium's Geosemantics Domain Working Group" ;
@@ -237,12 +322,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
 
-<https://ror.org/019wvm592>
-    a schema:Organization ;
-    schema:name "Australian National University" ;
-    schema:url "https://www.anu.edu.au"^^xsd:anyURI ;
-.
-
 <https://ror.org/02re32a17>
     a schema:Organization ;
     schema:name "University of Applied Sciences Mainz" ;
@@ -255,12 +334,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://www.csiro.au"^^xsd:anyURI ;
 .
 
-<https://linked.data.gov.au/org/qsi>
-    a schema:Organization ;
-    schema:name "Queensland Spatial Information" ;
-    schema:url "https://qldspatial.information.qld.gov.au"^^xsd:anyURI ;
-.
-
 <https://ror.org/05f950310>
     a schema:Organization ;
     schema:name "Katholieke Universiteit Leuven" ;
@@ -271,6 +344,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a schema:Organization ;
     schema:name "Neanex Technologies" ;
     schema:url "https://www.neanex.com"^^xsd:anyURI ;
+.
+
+<http://www.opengis.net/def/entities/bodies/ogc>
+    a schema:Organization ;
+    schema:name "Open Geospatial Consortium" ;
+    schema:url "https://www.ogc.org"^^xsd:anyURI ;
 .
 
 <https://ror.org/006c77m33>

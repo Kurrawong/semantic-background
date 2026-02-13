@@ -1,0 +1,100 @@
+PREFIX schema: <https://schema.org/>
+PREFIX ssn: <http://www.w3.org/ns/ssn/>
+
+<http://purl.org/wf4ever/wfdesc#Artifact>
+    schema:description """wfdesc:Artifact is used to provide information about a class of artifacts. For example, it can be used to specify the datatype of a dataset or the structure of a document.
+
+An wfdesc:Artifact is associated with a wfdesc:Parameter using wfdesc:hasArtifact.
+
+The distinction between a parameter and artifact is that the parameter can be customized to describe the particular role the artifact plays with regards to the process (and can be linked using wfdesc:DataLink) - while the wfdesc:Artifact can describe the syntactic and semantic datatype."""@en ;
+    schema:name "" ;
+.
+
+<http://purl.org/wf4ever/wfdesc#Parameter>
+    schema:description """This class represent a parameter of a wfdesc:Process. A wfdesc:Parameter must be a wfdesc:Input, a wfdesc:Output, or both.
+
+A parameter is both an wfdesc:Input and wfdesc:Output when it is used on both sides of a subworkflow - see wfdesc:Workflow and wfdesc:DataLink for details."""@en ;
+    schema:name "" ;
+.
+
+<http://www.w3.org/ns/shacl-shacl#>
+    schema:description "This shapes graph can be used to validate SHACL shapes graphs against a subset of the syntax rules."@en ;
+    schema:name "SHACL for SHACL"@en ;
+.
+
+ssn:Deployment
+    schema:name "Deployment" ;
+.
+
+ssn:Input
+    schema:name "Input" ;
+.
+
+ssn:Property
+    schema:name "Property" ;
+.
+
+ssn:Stimulus
+    schema:name "Stimulus" ;
+.
+
+ssn:System
+    schema:name "System" ;
+.
+
+ssn:deployedOnPlatform
+    schema:name "deployed on platform" ;
+.
+
+ssn:deployedSystem
+    schema:name "deployed system" ;
+.
+
+ssn:hasDeployment
+    schema:name "has deployment" ;
+.
+
+ssn:hasInput
+    schema:name "has input" ;
+.
+
+ssn:hasProperty
+    schema:name "has property" ;
+.
+
+ssn:implements
+    schema:name "implements" ;
+.
+
+ssn:wasOriginatedBy
+    schema:name "was originated by" ;
+.
+
+<https://linked.data.gov.au/def/ontpub/validator>
+    schema:description "SHACL Shapes to validate RDF data according to the Ontology Publications Profile" ;
+    schema:name "Ontology Publication Profile Validator" ;
+.
+
+<https://linked.data.gov.au/def/reg-statuses/experimental>
+    schema:description "An entry that has been accepted into the register temporarily and may be subject to change or withdrawal."@en ;
+    schema:name "experimental"@en ;
+.
+
+<https://prez.dev/ManifestResourceRoles/CatalogueData>
+    schema:description "Data for the container, usually a Catalogue, including the identity of it and each item fo content" ;
+    schema:name "Catalogue Data" ;
+.
+
+<https://prez.dev/ManifestResourceRoles/IncompleteCatalogueAndResourceLabels>
+    schema:description "Some of the labels - possibly including names, descriptions & seeAlso links - for the Catalogue and Resource objects" ;
+    schema:name "Incomplete Catalogue and Resource Labels" ;
+.
+
+<https://prez.dev/ManifestResourceRoles/ResourceData>
+    schema:description "Data for the content of the container" ;
+    schema:name "Resource Data" ;
+.
+
+schema:source
+    schema:name "source" ;
+.

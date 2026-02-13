@@ -1,3 +1,4 @@
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX mrr: <https://prez.dev/ManifestResourceRoles/>
 PREFIX prez: <https://prez.dev/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
@@ -5,11 +6,11 @@ PREFIX schema: <https://schema.org/>
 
 <https://kurrawong.ai/semantic-bankground/annotations-manifest>
     a prez:Manifest ;
-    prof:hasResource
+    prof:hasResource 
         [
             prof:hasArtifact "catalogue.ttl" ;
             prof:hasRole mrr:CatalogueData ;
-            schema:name "SemBack main Catalogue" ;
+            schema:name "SemBack Datasets Catalogue" ;
         ] ,
         [
             prof:hasArtifact "../_background/*.ttl" ;
@@ -17,14 +18,9 @@ PREFIX schema: <https://schema.org/>
             schema:name "SemBack Background Resources" ;
         ] ,
         [
+            dcterms:conformsTo <https://linked.data.gov.au/def/bcrp/validator> ;
             prof:hasArtifact "items/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
             schema:name "SemBack Resources Catalogue" ;
-        ] ,
-        [
-            prof:hasArtifact "../_background/*.ttl" ;
-            prof:hasRole mrr:IncompleteCatalogueAndResourceLabels ;
-            schema:name "SemBack Background Resources" ;
         ] ;
-
 .
