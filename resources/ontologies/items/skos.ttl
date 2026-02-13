@@ -118,8 +118,7 @@ skos:memberList
         rdf:Property ,
         owl:FunctionalProperty ,
         owl:ObjectProperty ;
-    rdfs:comment """For any resource, every item in the list given as the value of the
-      skos:memberList property is also a value of the skos:member property.""" ;
+    rdfs:comment """For any resource, every item in the list given as the value of the skos:memberList property is also a value of the skos:member property.""" ;
     rdfs:domain skos:OrderedCollection ;
     rdfs:isDefinedBy ont: ;
     rdfs:range rdf:List ;
@@ -397,7 +396,7 @@ ont:
         <https://example.com/person/Sean-Bechhofer> ;
     schema:dateCreated "2009-08-19"^^xsd:date ;
     schema:dateIssued "2009-08-19"^^xsd:date ;
-    schema:dateModified "2009-08-19"^^xsd:date ;
+    schema:dateModified "2026-02-13"^^xsd:date ;
     schema:description "An RDF vocabulary for describing the basic structure and content of concept schemes such as thesauri, classification schemes, subject heading lists, taxonomies, 'folksonomies', other types of controlled vocabulary, and also concept schemes embedded in glossaries and terminologies." ;
     schema:name "SKOS Vocabulary" ;
     schema:publisher <https://www.w3.org> ;

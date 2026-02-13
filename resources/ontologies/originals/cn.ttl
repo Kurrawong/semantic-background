@@ -30,19 +30,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 This model has been made with the FSDF Supermodel in mind (https://linked.data.gov.au/def/fsdf-supermodel) so that is compatible with that, and the Locaiton Index (Loc-I) projects' modelling and goals."""@en ;
 .
 
-<https://linked.data.gov.au/org/agldwg>
-    a sdo:Organization ;
-    sdo:name "Australian Government Linked Data Working Group" ;
-    sdo:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
-.
-
-<https://orcid.org/0000-0002-8742-7730>
-    a sdo:Person ;
-    sdo:email "nick@kurrawong.ai"^^xsd:anyURI ;
-    sdo:memberOf <https://www.linked.data.gov.au/org/agldwg> ;
-    sdo:name "Nicholas J. Car" ;
-.
-
 :CompoundName
     a owl:Class ;
     rdfs:isDefinedBy model: ;
@@ -117,20 +104,12 @@ ex:moreton
 .
 
 rdfs:Resource
-    a owl:Class ;
-    rdfs:isDefinedBy rdfs: ;
-    skos:definition "The class resource, everything" ;
     skos:example """See the non-literal values for rdf:value in the CompoundName example""" ;
-    skos:prefLabel "Resource" ;
     skos:scopeNote "This class is used to represent both the things to which CompoundNames can be assigned and also the range value of the property rdf:value. It is not expected to be used directly but instead specialised types of Resource are expected" ;
 .
 
 rdfs:Literal
-    a owl:Class ;
-    rdfs:isDefinedBy rdfs: ;
-    skos:definition "The class of literal values, eg. textual strings and integer" ;
     skos:example """See the literals values of '72' and 'Yundah' in the CompoundName example""" ;
-    skos:prefLabel "Literal" ;
     skos:scopeNote "This class is used to represent the range value of the property :asLiteral. It is not expected to be used directly but instead specialised types of Literal are expected" ;
 .
 
@@ -177,40 +156,21 @@ ex:feature-x
 .
 
 sdo:name
-    a owl:DatatypeProperty ;
-    rdfs:isDefinedBy sdo: ;
-    skos:definition "The name of the item" ;
     skos:example """See example for isNameFor""" ;
-    skos:prefLabel "name" ;
     skos:usageNote "In this model, name is used to indicate both a literal form of a resource`s name or a CompoundName object"
 .
 
 sdo:hasPart
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy sdo: ;
-    skos:definition "Indicates a Resource that is part of this item" ;
     skos:example """See the example for CompoundName""" ;
-    skos:prefLabel "member" ;
     skos:scopeNote "Use this property to indicate the individual parts of a Compound Name" ;
 .
 
 rdf:value
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy rdf: ;
-    rdfs:range rdfs:Resource ;
-    skos:definition "Idiomatic property used for structured values" ;
     skos:example """See the example for CompoundLiteral""" ;
-    skos:prefLabel "value" ;
     skos:scopeNote "Use this property to indicate the value of a CompoundName, whether it's a literal or a complex object" ;
 .
 
 sdo:additionalType
-    a owl:ObjectProperty ;
-    rdfs:domain rdfs:Resource ;
-    rdfs:isDefinedBy sdo: ;
-    rdfs:range rdfs:Resource ;
-    skos:definition "An additional type for the item, typically used for adding more specific types from external vocabularies" ;
     skos:example """See the example for CompoundLiteral""" ;
-    skos:prefLabel "additional type" ;
     skos:scopeNote "Use this property to indicate the specialised type of a part of a CompoundName" ;
 .

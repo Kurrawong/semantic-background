@@ -91,7 +91,7 @@ wfdesc:Artifact
 An wfdesc:Artifact is associated with a wfdesc:Parameter using wfdesc:hasArtifact.
 
 The distinction between a parameter and artifact is that the parameter can be customized to describe the particular role the artifact plays with regards to the process (and can be linked using wfdesc:DataLink) - while the wfdesc:Artifact can describe the syntactic and semantic datatype."""@en ;
-    schema:name "" ;
+    schema:name "Artifact" ;
 .
 
 wfdesc:hasSubProcess
@@ -152,7 +152,7 @@ wfdesc:Parameter
     schema:description """This class represent a parameter of a wfdesc:Process. A wfdesc:Parameter must be a wfdesc:Input, a wfdesc:Output, or both.
 
 A parameter is both an wfdesc:Input and wfdesc:Output when it is used on both sides of a subworkflow - see wfdesc:Workflow and wfdesc:DataLink for details."""@en ;
-    schema:name "" ;
+    schema:name "Parameter" ;
 .
 
 wfdesc:Process
@@ -229,7 +229,7 @@ ont:
     schema:creator <https://wf4ever.github.io> ;
     schema:dateCreated "2025-12-19"^^xsd:date ;
     schema:dateIssued "2025-12-19"^^xsd:date ;
-    schema:dateModified "2025-12-19"^^xsd:date ;
+    schema:dateModified "2026-02-13"^^xsd:date ;
     schema:description """This ontology ("wfdesc") describes an abstract workflow description structure, which on the top level is defined as a wfdesc:Workflow.
 
 A wfdesc:Workflow contains several wfdesc:Process instances, associated using the wfdesc:hasSubProcess property. Each of these (and the workflow itself) wfdesc:hasInput and wfdesc:hasOutput some wfdesc:Parameter (wfdesc:Input or wfdesc:Output). An wfdesc:Artifact is associated with a wfdesc:Parameter using wfdesc:hasArtifact. The wfdesc:Workflow also wfdesc:hasDataLink several wfdesc:DataLink instances, which forms the connection between parameters.

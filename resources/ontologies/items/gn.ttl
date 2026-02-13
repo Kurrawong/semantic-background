@@ -22,7 +22,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:copyrightYear "2023-01-01"^^xsd:date ;
     schema:dateCreated "2023-04-26"^^xsd:date ;
     schema:dateIssued "2023-04-26"^^xsd:date ;
-    schema:dateModified "2023-04-26"^^xsd:date ;
+    schema:dateModified "2026-02-13"^^xsd:date ;
     schema:description """This model is for roads information in Queensland, however it is a candidate ANZ model also, and may, in the near future, be expanded with feedback form other jurisdictions and a process through the Inter Governmental Committee on Surveying & Mapping (ICSM) to ensure it covers all ANZ jurisdictions' needs.
 
 This model is a stand-alone model for roads information, however it is also designed to work as a Component Model part of an integrative multi-model regime for Spatial Information Queensland known as a Supermodel (see https://linked.data.gov.au/def/qsi-supermodel). The QSI Supermodel aims to integrate cadastre, address, place name, roads and other information.
@@ -32,12 +32,4 @@ This model is a stand-alone model for roads information, however it is also desi
     schema:publisher <https://linked.data.gov.au/org/qsi> ;
     schema:creator <https://kurrawong.ai> ;
     skos:historyNote "taken as-is from home repo" ;
-.
-
-geo:Feature
-    a owl:Class ;
-    rdfs:isDefinedBy <http://www.opengis.net/ont/geosparql> ;
-    schema:name "Feature" ;
-    schema:description "A discrete spatial phenomenon in a universe of discourse"@en ;
-    dcterms:provenance "Taken, unchanged, from the GeoSPARQL 1.1 Ontology" ;
 .

@@ -593,14 +593,6 @@ On June 4th 1940, Winston Churchill made a speech on the radio that has since be
     schema:name "shares journal with" ;
 .
 
-schema:citation
-    a owl:ObjectProperty ;
-    rdfs:isDefinedBy ont: ;
-    rdfs:subPropertyOf :cites ;
-    schema:description "This property is defined in schema.org and has been added here to align schema.org with CiTO. The object property schema:citation expresses similar semantics to cito:cites except for the explicit definition of domain and range classes, that are schema:CreativeWork according to schema.org. For that reason, it is here defined as a subproperty of cito:cites." ;
-    schema:name "citation" ;
-.
-
 :AuthorNetworkSelfCitation
     a owl:Class ;
     dc:description "Derived from the article 'A Small World of Citations? The Influence of Collaboration Networks on Citation Practices' by Matthew L. Wallace, Vincent Larivière and Yves Gingras, published in PLOS One (https://doi.org/10.1371/journal.pone.0033339)." ;
@@ -1176,7 +1168,7 @@ Renamed the property cito:hasCoAuthorCitationLevel in cito:hasCoAuthorshipCitati
         <http://example.com/person/Silvio-Peroni> ;
     schema:dateCreated "2018-02-16"^^xsd:date ;
     schema:dateIssued "2018-02-16"^^xsd:date ;
-    schema:dateModified "2018-02-16"^^xsd:date ;
+    schema:dateModified "2026-02-13"^^xsd:date ;
     schema:description """The Citation Typing Ontology (CiTO) is an ontology that enables characterization of the nature or type of citations, both factually and rhetorically.
 
 **URL:** http://purl.org/spar/cito

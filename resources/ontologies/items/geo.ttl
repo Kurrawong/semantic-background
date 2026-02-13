@@ -30,10 +30,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://orcid.org/0000-0003-3789-2260> ,
         <https://orcid.org/0000-0002-3313-924X> ;
 	schema:dateCreated "2020-09-09"^^xsd:date ;
-	schema:dateModified "2021-10-27"^^xsd:date ;
+	schema:dateModified "2026-02-13"^^xsd:date ;
 	schema:dateIssued "2025-11-19"^^xsd:date ;
 	dcterms:replaces <http://www.opengis.net/ont/geosparql/1.0> ;
-	schema:description "An RDF/OWL vocabulary for representing spatial information"@en ;
+	schema:description "An RDF/OWL vocabulary for representing spatial information" ;
 	schema:license "https://www.ogc.org/license"^^xsd:anyURI ;
 	schema:copyrightNotice "(c) 2021 Open Geospatial Consortium" ;
 	schema:citation "http://www.opengis.net/doc/IS/geosparql/1.1"^^xsd:anyURI ;
@@ -55,9 +55,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/gml-literal> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/gml-literal> ;
-	schema:description """A GML serialization of a Geometry object."""@en ;
+	schema:description """A GML serialization of a Geometry object.""" ;
 	rdfs:seeAlso spec11:c-1-2-4-%C2%A0-geometry-serializations ;
-	schema:name "GML Literal"@en ;
+	schema:name "GML Literal" ;
 	skos:example
 		spec11:c-1-2-4-%C2%A0-geometry-serializations ;
 .
@@ -68,9 +68,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/wkt-literal> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/wkt-literal> ;
-	schema:description """A Well-known Text serialization of a Geometry object."""@en ;
+	schema:description """A Well-known Text serialization of a Geometry object.""" ;
 	rdfs:seeAlso spec11:c-1-2-4-%C2%A0-geometry-serializations ;
-	schema:name "Well-known Text Literal"@en ;
+	schema:name "Well-known Text Literal" ;
 	skos:example
 		spec11:c-1-2-4-%C2%A0-geometry-serializations ;
 .
@@ -81,8 +81,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geojson-literal> ;
-	schema:description """A GeoJSON serialization of a Geometry object."""@en ;
-	schema:name "GeoJSON Literal"@en ;
+	schema:description """A GeoJSON serialization of a Geometry object.""" ;
+	schema:name "GeoJSON Literal" ;
 	skos:example
 		spec11:c-1-2-4-%C2%A0-geometry-serializations ;
 .
@@ -93,8 +93,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/kml-literal> ;
-	schema:description """A KML serialization of a Geometry object."""@en ;
-	schema:name "KML Literal"@en ;
+	schema:description """A KML serialization of a Geometry object.""" ;
+	schema:name "KML Literal" ;
 	skos:example
 		spec11:c-1-2-4-%C2%A0-geometry-serializations ;
 .
@@ -104,13 +104,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/dggs-literal> ;
-	schema:description """A textual serialization of a Discrete Global Grid (DGGS) Geometry object."""@en ;
+	schema:description """A textual serialization of a Discrete Global Grid (DGGS) Geometry object.""" ;
 	skos:example
 		""" "<https://w3id.org/dggs/auspix> OrdinateList (R3234)"^^<http://www.opengis.net/ont/geosparql#dggsLiteral>""" ,
 		spec11:c-1-2-4-%C2%A0-geometry-serializations ;
   rdfs:seeAlso "http://www.opengis.net/doc/AS/dggs/2.0"^^xsd:anyURI ;
-	schema:name "DGGS Literal"@en ;
-	skos:scopeNote "This datatype is not expected to be used directly but to serve as an abstract datatype for a series of specific DGGS literal types, for specific DGGS implementations"@en ;
+	schema:name "DGGS Literal" ;
+	skos:scopeNote "This datatype is not expected to be used directly but to serve as an abstract datatype for a series of specific DGGS literal types, for specific DGGS implementations" ;
 .
 
 # #################################################################
@@ -127,10 +127,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties> ;
-	schema:description """The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry."""@en ;
+	schema:description """The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry.""" ;
 	owl:equivalentProperty :hasDefaultGeometry ;
-	skos:note """Duplicate properties defaultGeometry and hasDefaultGeometry exist because of an inconsistency between ontology and documentation in GeoSPARQL 1.0. Only hasDefaultGeometry is described in the documention."""@en ;
-	schema:name "default geometry"@en ;
+	skos:note """Duplicate properties defaultGeometry and hasDefaultGeometry exist because of an inconsistency between ontology and documentation in GeoSPARQL 1.0. Only hasDefaultGeometry is described in the documention.""" ;
+	schema:name "default geometry" ;
 	skos:example
 		spec11:B.1.2.2 ,
 		spec11:B.2.1 ;
@@ -145,10 +145,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/feature-properties> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties> ;
-	schema:description """The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry."""@en ;
+	schema:description """The default Geometry to be used in spatial calculations. It is usually the most detailed Geometry.""" ;
 	owl:equivalentProperty :defaultGeometry ;
-	skos:note """Duplicate properties defaultGeometry and hasDefaultGeometry exist because of an inconsistency between ontology and documentation in GeoSPARQL 1.0. Only hasDefaultGeometry is described in the documention."""@en ;
-	schema:name "has default geometry"@en ;
+	skos:note """Duplicate properties defaultGeometry and hasDefaultGeometry exist because of an inconsistency between ontology and documentation in GeoSPARQL 1.0. Only hasDefaultGeometry is described in the documention.""" ;
+	schema:name "has default geometry" ;
 .
 
 :ehContains
@@ -159,9 +159,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*TFF*FF*"""@en ;
+	schema:description """States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*TFF*FF*""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "contains"@en ;
+	schema:name "contains" ;
 .
 
 :ehCoveredBy
@@ -172,9 +172,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations> ;
-	schema:description """States that the subject SpatialObject is spatially covered by the object SpatialObject. DE-9IM: TFF*TFT**"""@en ;
+	schema:description """States that the subject SpatialObject is spatially covered by the object SpatialObject. DE-9IM: TFF*TFT**""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "covered by"@en ;
+	schema:name "covered by" ;
 .
 
 :ehCovers
@@ -185,9 +185,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially covers the object SpatialObject. DE-9IM: T*TFT*FF*"""@en ;
+	schema:description """States that the subject SpatialObject spatially covers the object SpatialObject. DE-9IM: T*TFT*FF*""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "covers"@en ;
+	schema:name "covers" ;
 .
 
 :ehDisjoint
@@ -199,9 +199,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations> ;
-	schema:description """States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FF*FF****"""@en ;
+	schema:description """States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FF*FF****""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "disjoint"@en ;
+	schema:name "disjoint" ;
 .
 
 :ehEquals
@@ -213,9 +213,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT"""@en ;
+	schema:description """States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "equals"@en ;
+	schema:name "equals" ;
 .
 
 :ehInside
@@ -226,9 +226,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations> ;
-	schema:description """States that the subject SpatialObject is spatially inside the object SpatialObject. DE-9IM: TFF*FFT**"""@en ;
+	schema:description """States that the subject SpatialObject is spatially inside the object SpatialObject. DE-9IM: TFF*FFT**""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "inside"@en ;
+	schema:name "inside" ;
 .
 
 :ehMeet
@@ -240,9 +240,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially meets the object SpatialObject. DE-9IM: FT******* ^ F**T***** ^ F***T****"""@en ;
+	schema:description """States that the subject SpatialObject spatially meets the object SpatialObject. DE-9IM: FT******* ^ F**T***** ^ F***T****""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "meet"@en ;
+	schema:name "meet" ;
 .
 
 :ehOverlap
@@ -253,9 +253,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/eh-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/eh-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: T*T***T**"""@en ;
+	schema:description """States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: T*T***T**""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "overlap"@en ;
+	schema:name "overlap" ;
 .
 
 :hasGeometry
@@ -266,8 +266,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/feature-properties> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties> ;
-	schema:description """A spatial representation for a given Feature."""@en ;
-	schema:name "has geometry"@en ;
+	schema:description """A spatial representation for a given Feature.""" ;
+	schema:name "has geometry" ;
 	skos:example
 		spec11:B.1.1.2.2 ,
 		spec11:B.1.1.2.3 ,
@@ -291,9 +291,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties> ;
-	schema:description """The minimum or smallest bounding or enclosing box of a given Feature."""@en ;
-	schema:name "has bounding box"@en ;
-	skos:scopeNote "The target is a Geometry that defines a rectilinear region whose edges are aligned with the axes of the coordinate reference system, which exactly contains the Feature, for example an instance of http://www.opengis.net/ont/sf#envelope."@en ;
+	schema:description """The minimum or smallest bounding or enclosing box of a given Feature.""" ;
+	schema:name "has bounding box" ;
+	skos:scopeNote "The target is a Geometry that defines a rectilinear region whose edges are aligned with the axes of the coordinate reference system, which exactly contains the Feature, for example an instance of http://www.opengis.net/ont/sf#envelope." ;
 	skos:example
 		spec11:B.1.2.2 ;
 .
@@ -306,9 +306,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties> ;
-	schema:description """The arithmetic mean position of all the Geometry points of a given Feature."""@en ;
-	schema:name "has centroid"@en ;
-	skos:scopeNote "The target Geometry shall describe a point, for example an instance of http://www.opengis.net/ont/sf#Point."@en ;
+	schema:description """The arithmetic mean position of all the Geometry points of a given Feature.""" ;
+	schema:name "has centroid" ;
+	skos:scopeNote "The target Geometry shall describe a point, for example an instance of http://www.opengis.net/ont/sf#Point." ;
 	skos:example
 		spec11:B.1.2.2 ;
 .
@@ -320,8 +320,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties> ;
-	schema:description """The length of a Spatial Object."""@en ;
-	schema:name "has length"@en ;
+	schema:description """The length of a Spatial Object.""" ;
+	schema:name "has length" ;
 	skos:example
 		spec11:B.1.1.2.7 ,
 		spec11:B.1.2.2 ;
@@ -334,8 +334,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties> ;
-	schema:description """The length of the perimeter of a Spatial Object."""@en ;
-	schema:name "has perimeter length"@en ;
+	schema:description """The length of the perimeter of a Spatial Object.""" ;
+	schema:name "has perimeter length" ;
 	skos:example
 		spec11:B.1.1.1.2 ;
 .
@@ -347,8 +347,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties> ;
-	schema:description """The area of a Spatial Object."""@en ;
-	schema:name "has area"@en ;
+	schema:description """The area of a Spatial Object.""" ;
+	schema:name "has area" ;
 	skos:example
 		spec11:B.1.1.2.4 ,
 		spec11:B.1.2.2 ;
@@ -361,8 +361,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties> ;
-	schema:description """The volume of a three-dimensional Spatial Object."""@en ;
-	schema:name "has volume"@en ;
+	schema:description """The volume of a three-dimensional Spatial Object.""" ;
+	schema:name "has volume" ;
 	skos:example
 		spec11:B.1.2.2 ;
 .
@@ -373,9 +373,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/feature-properties> ;
-	schema:description """The spatial resolution of a Geometry."""@en ;
-	skos:note """Spatial resolution specifies the level of detail of a Geometry. It the smallest distinguishable distance between spatially adjacent coordinates."""@en;
-	schema:name "has spatial resolution"@en ;
+	schema:description """The spatial resolution of a Geometry.""" ;
+	skos:note """Spatial resolution specifies the level of detail of a Geometry. It the smallest distinguishable distance between spatially adjacent coordinates.""";
+	schema:name "has spatial resolution" ;
 	skos:example
 		spec11:B.1.2.2 ;
 .
@@ -386,9 +386,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties> ;
-	schema:description """The positional accuracy of the coordinates of a Geometry."""@en ;
-	skos:note """Spatial accuracy is applicable when a Geometry is used to represent a Feature. It is expressed as a distance that indicates the truthfullness of the positions (coordinates) that define the Geometry. In this case accuracy defines a zone surrounding each coordinate within wich the real positions are known to be. The accuracy value defines this zone as a distance from the coordinate(s) in all directions (e.g. a line, a circle or a sphere, depending on spatial dimension)."""@en;
-	schema:name "has spatial accuracy"@en ;
+	schema:description """The positional accuracy of the coordinates of a Geometry.""" ;
+	skos:note """Spatial accuracy is applicable when a Geometry is used to represent a Feature. It is expressed as a distance that indicates the truthfullness of the positions (coordinates) that define the Geometry. In this case accuracy defines a zone surrounding each coordinate within wich the real positions are known to be. The accuracy value defines this zone as a distance from the coordinate(s) in all directions (e.g. a line, a circle or a sphere, depending on spatial dimension).""";
+	schema:name "has spatial accuracy" ;
 	skos:example
 		spec11:B.1.2.3 ;
 .
@@ -401,9 +401,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		:  ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations> ;
-	schema:description """States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FFTFFTTTT"""@en ;
+	schema:description """States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FFTFFTTTT""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "disconnected"@en ;
+	schema:name "disconnected" ;
 .
 
 :rcc8ec
@@ -414,9 +414,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		:  ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially meets the object SpatialObject. DE-9IM: FFTFTTTTT"""@en ;
+	schema:description """States that the subject SpatialObject spatially meets the object SpatialObject. DE-9IM: FFTFTTTTT""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "externally connected"@en ;
+	schema:name "externally connected" ;
 .
 
 :rcc8eq
@@ -427,9 +427,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		:  ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT"""@en ;
+	schema:description """States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "equals"@en ;
+	schema:name "equals" ;
 .
 
 :rcc8ntpp
@@ -440,9 +440,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		:  ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations> ;
-	schema:description """States that the subject SpatialObject is spatially inside the object SpatialObject. DE-9IM: TFFTFFTTT"""@en ;
+	schema:description """States that the subject SpatialObject is spatially inside the object SpatialObject. DE-9IM: TFFTFFTTT""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "non-tangential proper part"@en ;
+	schema:name "non-tangential proper part" ;
 .
 
 :rcc8ntppi
@@ -453,9 +453,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		:  ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: TTTFFTFFT"""@en ;
+	schema:description """States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: TTTFFTFFT""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "non-tangential proper part inverse"@en ;
+	schema:name "non-tangential proper part inverse" ;
 .
 
 :rcc8po
@@ -466,9 +466,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		:  ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: TTTTTTTTT"""@en ;
+	schema:description """States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: TTTTTTTTT""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "partially overlapping"@en ;
+	schema:name "partially overlapping" ;
 .
 
 :rcc8tpp
@@ -479,9 +479,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		:  ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations> ;
-	schema:description """States that the subject SpatialObject is spatially covered by the object SpatialObject. DE-9IM: TFFTTFTTT"""@en ;
+	schema:description """States that the subject SpatialObject is spatially covered by the object SpatialObject. DE-9IM: TFFTTFTTT""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "tangential proper part"@en ;
+	schema:name "tangential proper part" ;
 .
 
 :rcc8tppi
@@ -492,9 +492,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		:  ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially covers the object SpatialObject. DE-9IM: TTTFTTFFT"""@en ;
+	schema:description """States that the subject SpatialObject spatially covers the object SpatialObject. DE-9IM: TTTFTTFFT""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "tangential proper part inverse"@en ;
+	schema:name "tangential proper part inverse" ;
 .
 
 :sfContains
@@ -505,9 +505,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		:  ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/rcc8-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/rcc8-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*"""@en ;
+	schema:description """States that the subject SpatialObject spatially contains the object SpatialObject. DE-9IM: T*****FF*""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "contains"@en ;
+	schema:name "contains" ;
 .
 
 :sfCrosses
@@ -518,9 +518,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially crosses the object SpatialObject. DE-9IM: T*T******"""@en ;
+	schema:description """States that the subject SpatialObject spatially crosses the object SpatialObject. DE-9IM: T*T******""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "crosses"@en ;
+	schema:name "crosses" ;
 .
 
 :sfDisjoint
@@ -532,9 +532,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations> ;
-	schema:description """States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FF*FF****"""@en ;
+	schema:description """States that the subject SpatialObject is spatially disjoint from the object SpatialObject. DE-9IM: FF*FF****""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "disjoint"@en ;
+	schema:name "disjoint" ;
 .
 
 :sfEquals
@@ -546,9 +546,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT"""@en ;
+	schema:description """States that the subject SpatialObject spatially equals the object SpatialObject. DE-9IM: TFFFTFFFT""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "equals"@en ;
+	schema:name "equals" ;
 .
 
 :sfIntersects
@@ -559,9 +559,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations> ;
-	schema:description """States that the subject SpatialObject is not spatially disjoint from the object SpatialObject. DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T****"""@en ;
+	schema:description """States that the subject SpatialObject is not spatially disjoint from the object SpatialObject. DE-9IM: T******** ^ *T******* ^ ***T***** ^ ****T****""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "intersects"@en ;
+	schema:name "intersects" ;
 .
 
 :sfOverlaps
@@ -572,9 +572,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: T*T***T**"""@en ;
+	schema:description """States that the subject SpatialObject spatially overlaps the object SpatialObject. DE-9IM: T*T***T**""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "overlaps"@en ;
+	schema:name "overlaps" ;
 .
 
 :sfTouches
@@ -586,9 +586,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations> ;
-	schema:description """States that the subject SpatialObject spatially touches the object SpatialObject. DE-9IM: FT******* ^ F**T***** ^ F***T****"""@en ;
+	schema:description """States that the subject SpatialObject spatially touches the object SpatialObject. DE-9IM: FT******* ^ F**T***** ^ F***T****""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "touches"@en ;
+	schema:name "touches" ;
 .
 
 :sfWithin
@@ -599,9 +599,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/sf-spatial-relations> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/sf-spatial-relations> ;
-	schema:description """States that the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***"""@en ;
+	schema:description """States that the subject SpatialObject is spatially within the object SpatialObject. DE-9IM: T*F**F***""" ;
 	rdfs:seeAlso "http://dbpedia.org/resource/DE-9IM"^^xsd:anyURI ;
-	schema:name "within"@en ;
+	schema:name "within" ;
 .
 
 :hasSize
@@ -611,9 +611,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/topology-vocab-extension/spatial-object-properties> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/topology-vocab-extension/spatial-object-properties> ;
-	schema:description """Subproperties of this property are used to indicate the size of a Spatial Object as a measurement or estimate of one or more dimensions of the Spatial Object's spatial presence."""@en ;
-	skos:note """The recommended way to specify size is by using a subproperty of hasMetricSize. Subproperties of hasSize can be used if more complex expressions are necessary, for example if the unit of length can not be converted to meter, or if additional data are needed to describe the measurement or estimate."""@en ;
-	schema:name "has size"@en ;
+	schema:description """Subproperties of this property are used to indicate the size of a Spatial Object as a measurement or estimate of one or more dimensions of the Spatial Object's spatial presence.""" ;
+	skos:note """The recommended way to specify size is by using a subproperty of hasMetricSize. Subproperties of hasSize can be used if more complex expressions are necessary, for example if the unit of length can not be converted to meter, or if additional data are needed to describe the measurement or estimate.""" ;
+	schema:name "has size" ;
 .
 
 # #################################################################
@@ -631,8 +631,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-as-gml-literal> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-as-gml-literal> ;
-	schema:description """The GML serialization of a Geometry"""@en ;
-	schema:name "as GML"@en ;
+	schema:description """The GML serialization of a Geometry""" ;
+	schema:name "as GML" ;
 	skos:example
 		spec11:B.1.2.4 ;
 .
@@ -646,8 +646,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-as-wkt-literal> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-as-wkt-literal> ;
-	schema:description """The WKT serialization of a Geometry"""@en ;
-	schema:name "as WKT"@en ;
+	schema:description """The WKT serialization of a Geometry""" ;
+	schema:name "as WKT" ;
 	skos:example
 		spec11:B.1.1.2.2 ,
 		spec11:B.1.1.2.3 ,
@@ -672,8 +672,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-as-geojson-literal> ;
-	schema:description """The GeoJSON serialization of a Geometry"""@en ;
-	schema:name "as GeoJSON"@en ;
+	schema:description """The GeoJSON serialization of a Geometry""" ;
+	schema:name "as GeoJSON" ;
 	skos:example
 		spec11:B.1.2.4 ;
 .
@@ -687,8 +687,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-as-kml-literal> ;
-	schema:description """The KML serialization of a Geometry"""@en ;
-	schema:name "as KML"@en ;
+	schema:description """The KML serialization of a Geometry""" ;
+	schema:name "as KML" ;
 	skos:example
 		spec11:B.1.2.4 ;
 .
@@ -701,8 +701,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-as-dggs-literal> ;
-	schema:description """The Discrete Global Grid System (DGGS) serialization of a Geometry"""@en ;
-	schema:name "as DGGS"@en ;
+	schema:description """The Discrete Global Grid System (DGGS) serialization of a Geometry""" ;
+	schema:name "as DGGS" ;
 	skos:example
 		spec11:B.1.2.4 ;
 .
@@ -714,8 +714,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties> ;
-	schema:description """The number of measurements or axes needed to describe the position of this Geometry in a coordinate system."""@en ;
-	schema:name "coordinate dimension"@en ;
+	schema:description """The number of measurements or axes needed to describe the position of this Geometry in a coordinate system.""" ;
+	schema:name "coordinate dimension" ;
 	skos:example
 		spec11:B.1.2.3 ;
 .
@@ -727,8 +727,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties> ;
-	schema:description """The topological dimension of this geometric object, which must be less than or equal to the coordinate dimension. In non-homogeneous collections, this will return the largest topological dimension of the contained objects."""@en ;
-	schema:name "dimension"@en ;
+	schema:description """The topological dimension of this geometric object, which must be less than or equal to the coordinate dimension. In non-homogeneous collections, this will return the largest topological dimension of the contained objects.""" ;
+	schema:name "dimension" ;
 	skos:example
 		spec11:B.1.2.3 ;
 .
@@ -741,8 +741,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-properties> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties> ;
-	schema:description """Connects a Geometry object with its text-based serialization."""@en ;
-	schema:name "has serialization"@en ;
+	schema:description """Connects a Geometry object with its text-based serialization.""" ;
+	schema:name "has serialization" ;
 	skos:example
 		spec11:B.1.2.3 ;
 .
@@ -755,8 +755,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-properties> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties> ;
-	schema:description """(true) if this geometric object is the empty Geometry. If true, then this geometric object represents the empty point set for the coordinate space."""@en ;
-	schema:name "is empty"@en ;
+	schema:description """(true) if this geometric object is the empty Geometry. If true, then this geometric object represents the empty point set for the coordinate space.""" ;
+	schema:name "is empty" ;
 	skos:example
 		spec11:B.1.2.3 ;
 .
@@ -769,9 +769,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-properties> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties> ;
-	schema:description """(true) if this geometric object has no anomalous geometric points, such as self intersection or self tangency."""@en ;
+	schema:description """(true) if this geometric object has no anomalous geometric points, such as self intersection or self tangency.""" ;
 	rdfs:seeAlso "https://portal.ogc.org/files/?artifact_id=25355"^^xsd:anyURI ;
-	schema:name "is simple"@en ;
+	schema:name "is simple" ;
 	skos:example
 		spec11:B.1.2.3 ;
 .
@@ -784,8 +784,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-properties> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties> ;
-	schema:description """The number of measurements or axes needed to describe the spatial position of this Geometry in a coordinate system."""@en ;
-	schema:name "spatial dimension"@en ;
+	schema:description """The number of measurements or axes needed to describe the spatial position of this Geometry in a coordinate system.""" ;
+	schema:name "spatial dimension" ;
 	skos:example
 		spec11:B.1.2.3 ;
 .
@@ -797,9 +797,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties> ;
-	schema:description """The spatial resolution of a Geometry in meters."""@en ;
-	skos:note """Spatial resolution specifies the level of detail of a Geometry. It the smallest dinstinguishable distance between spatially adjacent coordinates."""@en;
-	schema:name "has spatial resolution in meters"@en ;
+	schema:description """The spatial resolution of a Geometry in meters.""" ;
+	skos:note """Spatial resolution specifies the level of detail of a Geometry. It the smallest dinstinguishable distance between spatially adjacent coordinates.""";
+	schema:name "has spatial resolution in meters" ;
 	skos:example
 		spec11:B.1.1.2.6 ,
 		spec11:B.1.2.2 ;
@@ -812,9 +812,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-properties> ;
-	schema:description """The positional accuracy of the coordinates of a Geometry in meters."""@en ;
-	skos:note """Spatial accuracy is applicable when a Geometry is used to represent a Feature. It is expressed as a distance that indicates the truthfullness of the positions (coordinates) that define the Geometry. In this case accuracy defines a zone surrounding each coordinate within wich the real positions are known to be. The accuracy value defines this zone as a distance from the coordinate(s) in all directions (e.g. a line, a circle or a sphere, depending on spatial dimension)."""@en;
-	schema:name "has spatial accuracy in meters"@en ;
+	schema:description """The positional accuracy of the coordinates of a Geometry in meters.""" ;
+	skos:note """Spatial accuracy is applicable when a Geometry is used to represent a Feature. It is expressed as a distance that indicates the truthfullness of the positions (coordinates) that define the Geometry. In this case accuracy defines a zone surrounding each coordinate within wich the real positions are known to be. The accuracy value defines this zone as a distance from the coordinate(s) in all directions (e.g. a line, a circle or a sphere, depending on spatial dimension).""";
+	schema:name "has spatial accuracy in meters" ;
 	skos:example
 		spec11:B.1.2.3 ;
 .
@@ -827,8 +827,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties> ;
-	schema:description """The length of a Spatial Object in meters."""@en ;
-	schema:name "has length in meters"@en ;
+	schema:description """The length of a Spatial Object in meters.""" ;
+	schema:name "has length in meters" ;
 	skos:example
 		spec11:B.1.2.2 ;
 .
@@ -841,8 +841,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties> ;
-	schema:description """The length of the perimeter of a Spatial Object in meters."""@en ;
-	schema:name "has perimeter length in meters"@en ;
+	schema:description """The length of the perimeter of a Spatial Object in meters.""" ;
+	schema:name "has perimeter length in meters" ;
 	skos:example
 		spec11:B.1.1.1.2 ;
 .
@@ -855,8 +855,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties> ;
-	schema:description """The area of a Spatial Object in square meters."""@en ;
-	schema:name "has area in square meters"@en ;
+	schema:description """The area of a Spatial Object in square meters.""" ;
+	schema:name "has area in square meters" ;
 	skos:example
 		spec11:B.1.1.2.3 ,
 		spec11:B.1.1.2.9 ,
@@ -872,8 +872,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties> ;
-	schema:description """The volume of a Spatial Object in cubic meters."""@en ;
-	schema:name "has volume in cubic meters"@en ;
+	schema:description """The volume of a Spatial Object in cubic meters.""" ;
+	schema:name "has volume in cubic meters" ;
 	skos:example
 		spec11:B.1.1.2.9 ,
 		spec11:B.1.2.2 ;
@@ -886,8 +886,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 	rdfs:isDefinedBy
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/spatial-object-properties> ;
-	schema:description """Subproperties of this property are used to indicate the size of a Spatial Object, as a measurement or estimate of one or more dimensions of the Spatial Object's spatial presence. Units are always metric (meter, square meter or cubic meter)."""@en ;
-	schema:name "has metric size"@en ;
+	schema:description """Subproperties of this property are used to indicate the size of a Spatial Object, as a measurement or estimate of one or more dimensions of the Spatial Object's spatial presence. Units are always metric (meter, square meter or cubic meter).""" ;
+	schema:name "has metric size" ;
 .
 
 # #################################################################
@@ -904,9 +904,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/core/feature-class> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/core/feature-class> ;
-	schema:description """A discrete spatial phenomenon in a universe of discourse."""@en ;
-	skos:note """A Feature represents a uniquely identifiable phenomenon, for example a river or an apple. While such phenomena (and therefore the Features used to represent them) are bounded, their boundaries may be crisp (e.g., the declared boundaries of a state), vague (e.g., the delineation of a valley versus its neighboring mountains), and change with time (e.g., a storm front). While discrete in nature, Features may be created from continuous observations, such as an isochrone that determines the region that can be reached by ambulance within 5 minutes."""@en ;
-	schema:name "Feature"@en ;
+	schema:description """A discrete spatial phenomenon in a universe of discourse.""" ;
+	skos:note """A Feature represents a uniquely identifiable phenomenon, for example a river or an apple. While such phenomena (and therefore the Features used to represent them) are bounded, their boundaries may be crisp (e.g., the declared boundaries of a state), vague (e.g., the delineation of a valley versus its neighboring mountains), and change with time (e.g., a storm front). While discrete in nature, Features may be created from continuous observations, such as an isochrone that determines the region that can be reached by ambulance within 5 minutes.""" ;
+	schema:name "Feature" ;
 	skos:example
 		spec11:B.1.1.2.1 ,
 		spec11:B.1.1.2.2 ,
@@ -935,8 +935,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		owl:allValuesFrom :Feature ;
 		owl:onProperty rdfs:member ;
 	] ;
-	schema:name "Feature Collection"@en ;
-	schema:description "A collection of individual Features."@en ;
+	schema:name "Feature Collection" ;
+	schema:description "A collection of individual Features." ;
 	skos:example
 		spec11:B.1.1.6 ;
 .
@@ -948,9 +948,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/geometry-extension/geometry-class> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/geometry-extension/geometry-class> ;
-	schema:description """A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS)."""@en ;
-	skos:note """Geometry can be used as a representation of the shape, extent or location of a Feature and may exist as a self-contained entity."""@en ;
-	schema:name "Geometry"@en ;
+	schema:description """A coherent set of direct positions in space. The positions are held within a Spatial Reference System (SRS).""" ;
+	skos:note """Geometry can be used as a representation of the shape, extent or location of a Feature and may exist as a self-contained entity.""" ;
+	schema:name "Geometry" ;
 	skos:example
 		spec11:B.1.1.2.2 ,
 		spec11:B.1.1.2.3 ,
@@ -977,8 +977,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		owl:allValuesFrom :Geometry ;
 		owl:onProperty rdfs:member ;
 	] ;
-	schema:description "A collection of individual Geometries."@en ;
-	schema:name "Geometry Collection"@en ;
+	schema:description "A collection of individual Geometries." ;
+	schema:name "Geometry Collection" ;
 	skos:example
 		spec11:B.1.1.7 ;
 .
@@ -989,9 +989,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		: ,
 		<http://www.opengis.net/spec/geosparql/1.0/req/core/spatial-object-class> ,
 		<http://www.opengis.net/spec/geosparql/1.1/req/core/spatial-object-class> ;
-	schema:description """Anything spatial (being or having a shape, position or an extent)."""@en ;
-	skos:note """Subclasses of this class are expected to be used for instance data."""@en ;
-	schema:name "Spatial Object"@en ;
+	schema:description """Anything spatial (being or having a shape, position or an extent).""" ;
+	skos:note """Subclasses of this class are expected to be used for instance data.""" ;
+	schema:name "Spatial Object" ;
 	skos:example
 		spec11:B.1.1.1.1 ,
 		spec11:B.1.1.1.2 ;
@@ -1008,7 +1008,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 		owl:allValuesFrom :SpatialObject ;
 		owl:onProperty rdfs:member ;
 	] ;
-	schema:name "Spatial Object Collection"@en ;
-	schema:description """A collection of individual Spatial Objects."""@en ;
-	skos:note "This is the superclass of Feature Collection and Geometry Collection."@en ;
+	schema:name "Spatial Object Collection" ;
+	schema:description """A collection of individual Spatial Objects.""" ;
+	skos:note "This is the superclass of Feature Collection and Geometry Collection." ;
 .
