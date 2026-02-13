@@ -3322,20 +3322,6 @@ frbr:embodimentOf
     schema:name "is embodiment of" ;
 .
 
-skos:Concept
-    a owl:Class ;
-    rdfs:isDefinedBy ont: ;
-    owl:disjointWith skos:ConceptScheme ;
-    schema:description """A SKOS concept can be viewed as an idea or notion; a unit of thought. However, what constitutes a unit of thought is subjective, and this definition is meant to be suggestive, rather than restrictive.
-
-The notion of a SKOS concept is useful when describing the conceptual or intellectual structure of a knowledge organization system, and when referring to specific ideas or meanings established within a KOS.
-
-Note that, because SKOS is designed to be a vehicle for representing semi-formal KOS, such as thesauri and classification schemes, a certain amount of flexibility has been built in to the formal definition of this class.""" ;
-    schema:name "concept" ;
-.
-
-
-
 :AnalogStorageMedium
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
@@ -3739,7 +3725,7 @@ ont:
         <http://example.com/person/Silvio-Peroni> ;
     schema:dateCreated "2018-05-02"^^xsd:date ;
     schema:dateIssued "2018-02-19"^^xsd:date ;
-    schema:dateModified "2018-02-19"^^xsd:date ;
+    schema:dateModified "2026-02-14"^^xsd:date ;
     schema:description """The FRBR-aligned Bibliographic Ontology (FaBiO) is an ontology for describing entities that are published or potentially publishable (e.g., journal articles, conference papers, books), and that contain or are referred to by bibliographic references.
 
 **URL:** http://purl.org/spar/fabio

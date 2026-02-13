@@ -26,25 +26,6 @@ rdfs:Literal
     schema:name "Literal" ;
 .
 
-skos:Concept
-    a owl:Class ;
-    rdfs:isDefinedBy skos: ;
-    skos:example """# See the example for CompoundName and add the following
-#
-PREFIX ex: <http://example.com/>
-PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-
-ex:Island
-    a skos:Concept ;
-    skos:inScheme ex:someConceptScheme ;
-    schema:name "Island" ;
-    skos:altLabel "Is." ;
-.""" ;
-    skos:scopeNote "This class is the type of the expected values for the property schema:additionalType when used within this model. Concepts are typically controlled terms within ConceptSchemes. Literal representations of Concepts should easily be obtainable" ;
-    schema:description "An idea or notion; a unit of thought" ;
-    schema:name "Concept" ;
-.
-
 :CompoundName
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
@@ -175,8 +156,8 @@ schema:name
 
 ont:
     a owl:Ontology ;
-    owl:versionIRI :0.0.1 ;
-    owl:versionInfo "0.0.1" ;
+    owl:versionIRI :0.0.2 ;
+    owl:versionInfo "0.0.2" ;
     skos:historyNote """This ontology was made for the Queensland Department of Resources, Spatial Information unit in 2023 to assist with future Address, Place Names, Roads & Cadastre systems design however it is intended to provide background modelling for all ANZ jurisdictions' foundational spatial data.
 
 This model has been made with the FSDF Supermodel in mind (https://linked.data.gov.au/def/fsdf-supermodel) so that is compatible with that, and the Locaiton Index (Loc-I) projects' modelling and goals."""@en ;

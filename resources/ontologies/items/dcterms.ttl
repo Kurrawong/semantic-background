@@ -74,7 +74,7 @@ dcterms:LicenseDocument
 
 dcterms:LinguisticSystem
     a rdfs:Class ;
-    dcterms:description "Written, spoken, sign, and computer languages are linguistic systems." ;
+    skos:scopeNote "Written, spoken, sign, and computer languages are linguistic systems." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     schema:description "A system of signs, symbols, sounds, gestures, or rules used in communication." ;
@@ -142,7 +142,7 @@ dcterms:PeriodOfTime
 
 dcterms:PhysicalMedium
     a rdfs:Class ;
-    dcterms:description "Examples include paper, canvas, or DVD." ;
+    skos:scopeNote "Examples include paper, canvas, or DVD." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subClassOf dcterms:MediaType ;
@@ -184,7 +184,7 @@ dcterms:RightsStatement
 
 dcterms:SizeOrDuration
     a rdfs:Class ;
-    dcterms:description "Examples include a number of pages, a specification of length, width, and breadth, or a period in hours, minutes, and seconds." ;
+    skos:scopeNote "Examples include a number of pages, a specification of length, width, and breadth, or a period in hours, minutes, and seconds." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subClassOf dcterms:MediaTypeOrExtent ;
@@ -318,7 +318,7 @@ dcterms:RFC1766
 
 dcterms:RFC3066
     a rdfs:Datatype ;
-    dcterms:description "RFC 3066 has been obsoleted by RFC 4646." ;
+    skos:scopeNote "RFC 3066 has been obsoleted by RFC 4646." ;
     dcterms:issued "2002-07-13"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:seeAlso <http://www.ietf.org/rfc/rfc3066.txt> ;
@@ -328,7 +328,7 @@ dcterms:RFC3066
 
 dcterms:RFC4646
     a rdfs:Datatype ;
-    dcterms:description "RFC 4646 obsoletes RFC 3066." ;
+    skos:scopeNote "RFC 4646 obsoletes RFC 3066." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:seeAlso <http://www.ietf.org/rfc/rfc4646.txt> ;
@@ -338,7 +338,7 @@ dcterms:RFC4646
 
 dcterms:RFC5646
     a rdfs:Datatype ;
-    dcterms:description "RFC 5646 obsoletes RFC 4646." ;
+    skos:scopeNote "RFC 5646 obsoletes RFC 4646." ;
     dcterms:issued "2010-10-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:seeAlso <http://www.ietf.org/rfc/rfc5646.txt> ;
@@ -388,7 +388,7 @@ dcterms:abstract
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
         dc:description ,
-        dcterms:description ;
+        skos:scopeNote ;
     schema:description "A summary of the resource." ;
     schema:name "Abstract" ;
 .
@@ -396,7 +396,7 @@ dcterms:abstract
 dcterms:accessRights
     a rdf:Property ;
     dcam:rangeIncludes dcterms:RightsStatement ;
-    dcterms:description "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies." ;
+    skos:scopeNote "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies." ;
     dcterms:issued "2003-02-15"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -409,7 +409,7 @@ dcterms:accessRights
 dcterms:accrualMethod
     a rdf:Property ;
     dcam:rangeIncludes dcterms:MethodOfAccrual ;
-    dcterms:description "Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary [[DCMI-ACCRUALMETHOD](https://dublincore.org/groups/collections/accrual-method/)]." ;
+    skos:scopeNote "Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary [[DCMI-ACCRUALMETHOD](https://dublincore.org/groups/collections/accrual-method/)]." ;
     dcterms:issued "2005-06-13"^^xsd:date ;
     rdfs:domain dcmitype:Collection ;
     rdfs:isDefinedBy dcterms: ;
@@ -420,7 +420,7 @@ dcterms:accrualMethod
 dcterms:accrualPeriodicity
     a rdf:Property ;
     dcam:rangeIncludes dcterms:Frequency ;
-    dcterms:description "Recommended practice is to use a value from the Collection Description Frequency Vocabulary [[DCMI-COLLFREQ](https://dublincore.org/groups/collections/frequency/)]." ;
+    skos:scopeNote "Recommended practice is to use a value from the Collection Description Frequency Vocabulary [[DCMI-COLLFREQ](https://dublincore.org/groups/collections/frequency/)]." ;
     dcterms:issued "2005-06-13"^^xsd:date ;
     rdfs:domain dcmitype:Collection ;
     rdfs:isDefinedBy dcterms: ;
@@ -431,7 +431,7 @@ dcterms:accrualPeriodicity
 dcterms:accrualPolicy
     a rdf:Property ;
     dcam:rangeIncludes dcterms:Policy ;
-    dcterms:description "Recommended practice is to use a value from the Collection Description Accrual Policy Vocabulary [[DCMI-ACCRUALPOLICY](https://dublincore.org/groups/collections/accrual-policy/)]." ;
+    skos:scopeNote "Recommended practice is to use a value from the Collection Description Accrual Policy Vocabulary [[DCMI-ACCRUALPOLICY](https://dublincore.org/groups/collections/accrual-policy/)]." ;
     dcterms:issued "2005-06-13"^^xsd:date ;
     rdfs:domain dcmitype:Collection ;
     rdfs:isDefinedBy dcterms: ;
@@ -441,7 +441,7 @@ dcterms:accrualPolicy
 
 dcterms:alternative
     a rdf:Property ;
-    dcterms:description "The distinction between titles and alternative titles is application-specific." ;
+    skos:scopeNote "The distinction between titles and alternative titles is application-specific." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -454,7 +454,7 @@ dcterms:alternative
 
 dcterms:available
     a rdf:Property ;
-    dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
+    skos:scopeNote "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -467,7 +467,7 @@ dcterms:available
 
 dcterms:bibliographicCitation
     a rdf:Property ;
-    dcterms:description "Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible." ;
+    skos:scopeNote "Recommended practice is to include sufficient bibliographic detail to identify the resource as unambiguously as possible." ;
     dcterms:issued "2003-02-15"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -492,7 +492,7 @@ dcterms:conformsTo
 
 dcterms:created
     a rdf:Property ;
-    dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
+    skos:scopeNote "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -506,7 +506,7 @@ dcterms:created
 dcterms:creator
     a rdf:Property ;
     dcam:rangeIncludes dcterms:Agent ;
-    dcterms:description "Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided." ;
+    skos:scopeNote "Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -519,7 +519,7 @@ dcterms:creator
 
 dcterms:dateAccepted
     a rdf:Property ;
-    dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or an article (accepted by a journal)." ;
+    skos:scopeNote "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a date of acceptance may be relevant are a thesis (accepted by a university department) or an article (accepted by a journal)." ;
     dcterms:issued "2002-07-13"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -532,7 +532,7 @@ dcterms:dateAccepted
 
 dcterms:dateCopyrighted
     a rdf:Property ;
-    dcterms:description "Typically a year.  Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
+    skos:scopeNote "Typically a year.  Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
     dcterms:issued "2002-07-13"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -545,7 +545,7 @@ dcterms:dateCopyrighted
 
 dcterms:dateSubmitted
     a rdf:Property ;
-    dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a 'Date Submitted' may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal)." ;
+    skos:scopeNote "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty.  Examples of resources to which a 'Date Submitted' may be relevant include a thesis (submitted to a university department) or an article (submitted to a journal)." ;
     dcterms:issued "2002-07-13"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -569,7 +569,7 @@ dcterms:educationLevel
 dcterms:extent
     a rdf:Property ;
     dcam:rangeIncludes dcterms:SizeOrDuration ;
-    dcterms:description "Recommended practice is to specify the file size in megabytes and duration in ISO 8601 format." ;
+    skos:scopeNote "Recommended practice is to specify the file size in megabytes and duration in ISO 8601 format." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -581,7 +581,7 @@ dcterms:extent
 
 dcterms:hasFormat
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Is Format Of." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. This property is an inverse property of Is Format Of." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -593,7 +593,7 @@ dcterms:hasFormat
 
 dcterms:hasPart
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Is Part Of." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. This property is an inverse property of Is Part Of." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -605,7 +605,7 @@ dcterms:hasPart
 
 dcterms:hasVersion
     a rdf:Property ;
-    dcterms:description "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of." ;
+    skos:scopeNote "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -618,7 +618,7 @@ dcterms:hasVersion
 dcterms:instructionalMethod
     a rdf:Property ;
     dcam:rangeIncludes dcterms:MethodOfInstruction ;
-    dcterms:description "Instructional Method typically includes ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback." ;
+    skos:scopeNote "Instructional Method typically includes ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback." ;
     dcterms:issued "2005-06-13"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     schema:description "A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support." ;
@@ -627,7 +627,7 @@ dcterms:instructionalMethod
 
 dcterms:isFormatOf
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Has Format." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. This property is an inverse property of Has Format." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -639,7 +639,7 @@ dcterms:isFormatOf
 
 dcterms:isPartOf
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Has Part." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. This property is an inverse property of Has Part." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -651,7 +651,7 @@ dcterms:isPartOf
 
 dcterms:isReferencedBy
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of References." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. This property is an inverse property of References." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -663,7 +663,7 @@ dcterms:isReferencedBy
 
 dcterms:isReplacedBy
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Replaces." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. This property is an inverse property of Replaces." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -675,7 +675,7 @@ dcterms:isReplacedBy
 
 dcterms:isRequiredBy
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Requires." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. This property is an inverse property of Requires." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -687,7 +687,7 @@ dcterms:isRequiredBy
 
 dcterms:isVersionOf
     a rdf:Property ;
-    dcterms:description "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Has Version." ;
+    skos:scopeNote "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Has Version." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -699,7 +699,7 @@ dcterms:isVersionOf
 
 dcterms:issued
     a rdf:Property ;
-    dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
+    skos:scopeNote "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -713,7 +713,7 @@ dcterms:issued
 dcterms:language
     a rdf:Property ;
     dcam:rangeIncludes dcterms:LinguisticSystem ;
-    dcterms:description "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag." ;
+    skos:scopeNote "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dc:language ;
@@ -724,7 +724,7 @@ dcterms:language
 dcterms:license
     a rdf:Property ;
     dcam:rangeIncludes dcterms:LicenseDocument ;
-    dcterms:description "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided." ;
+    skos:scopeNote "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided." ;
     dcterms:issued "2004-06-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -737,7 +737,7 @@ dcterms:license
 dcterms:mediator
     a rdf:Property ;
     dcam:rangeIncludes dcterms:AgentClass ;
-    dcterms:description "In an educational context, a mediator might be a parent, teacher, teaching assistant, or care-giver." ;
+    skos:scopeNote "In an educational context, a mediator might be a parent, teacher, teaching assistant, or care-giver." ;
     dcterms:issued "2001-05-21"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dcterms:audience ;
@@ -760,7 +760,7 @@ dcterms:medium
 
 dcterms:modified
     a rdf:Property ;
-    dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
+    skos:scopeNote "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -774,7 +774,7 @@ dcterms:modified
 dcterms:provenance
     a rdf:Property ;
     dcam:rangeIncludes dcterms:ProvenanceStatement ;
-    dcterms:description "The statement may include a description of any changes successive custodians made to the resource." ;
+    skos:scopeNote "The statement may include a description of any changes successive custodians made to the resource." ;
     dcterms:issued "2004-09-20"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     schema:description "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation." ;
@@ -793,7 +793,7 @@ dcterms:publisher
 
 dcterms:references
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Is Referenced By." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. This property is an inverse property of Is Referenced By." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -805,7 +805,7 @@ dcterms:references
 
 dcterms:replaces
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Is Replaced By." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. This property is an inverse property of Is Replaced By." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -817,7 +817,7 @@ dcterms:replaces
 
 dcterms:requires
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. This property is an inverse property of Is Required By." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. This property is an inverse property of Is Required By." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -830,7 +830,7 @@ dcterms:requires
 dcterms:rightsHolder
     a rdf:Property ;
     dcam:rangeIncludes dcterms:Agent ;
-    dcterms:description "Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided." ;
+    skos:scopeNote "Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided." ;
     dcterms:issued "2004-06-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     schema:description "A person or organization owning or managing rights over the resource." ;
@@ -839,7 +839,7 @@ dcterms:rightsHolder
 
 dcterms:source
     a rdf:Property ;
-    dcterms:description "This property is intended to be used with non-literal values. The described resource may be derived from the related resource in whole or in part. Best practice is to identify the related resource by means of a URI or a string conforming to a formal identification system." ;
+    skos:scopeNote "This property is intended to be used with non-literal values. The described resource may be derived from the related resource in whole or in part. Best practice is to identify the related resource by means of a URI or a string conforming to a formal identification system." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
@@ -863,7 +863,7 @@ dcterms:spatial
 
 dcterms:subject
     a rdf:Property ;
-    dcterms:description "Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary." ;
+    skos:scopeNote "Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dc:subject ;
@@ -877,7 +877,7 @@ dcterms:tableOfContents
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf
         dc:description ,
-        dcterms:description ;
+        skos:scopeNote ;
     schema:description "A list of subunits of the resource." ;
     schema:name "Table Of Contents" ;
 .
@@ -896,7 +896,7 @@ dcterms:temporal
 
 dcterms:type
     a rdf:Property ;
-    dcterms:description "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format." ;
+    skos:scopeNote "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dc:type ;
@@ -906,7 +906,7 @@ dcterms:type
 
 dcterms:valid
     a rdf:Property ;
-    dcterms:description "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
+    skos:scopeNote "Recommended practice is to describe the date, date/time, or period of time as recommended for the property Date, of which this is a subproperty." ;
     dcterms:issued "2000-07-11"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -929,7 +929,7 @@ dcterms:Period
 dcterms:contributor
     a rdf:Property ;
     dcam:rangeIncludes dcterms:Agent ;
-    dcterms:description "The guidelines for using names of persons or organizations as creators apply to contributors." ;
+    skos:scopeNote "The guidelines for using names of persons or organizations as creators apply to contributors." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dc:contributor ;
@@ -939,7 +939,7 @@ dcterms:contributor
 
 dcterms:identifier
     a rdf:Property ;
-    dcterms:description "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs." ;
+    skos:scopeNote "Recommended practice is to identify the resource by means of a string conforming to an identification system. Examples include International Standard Book Number (ISBN), Digital Object Identifier (DOI), and Uniform Resource Name (URN).  Persistent identifiers should be provided as HTTP URIs." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -961,7 +961,7 @@ dcterms:title
 dcterms:audience
     a rdf:Property ;
     dcam:rangeIncludes dcterms:AgentClass ;
-    dcterms:description "Recommended practice is to use this property with non-literal values from a vocabulary of audience types." ;
+    skos:scopeNote "Recommended practice is to use this property with non-literal values from a vocabulary of audience types." ;
     dcterms:issued "2001-05-21"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     schema:description "A class of agents for whom the resource is intended or useful." ;
@@ -974,7 +974,7 @@ dcterms:coverage
         dcterms:Jurisdiction ,
         dcterms:Location ,
         dcterms:Period ;
-    dcterms:description "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage." ;
+    skos:scopeNote "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dc:coverage ;
@@ -982,9 +982,9 @@ dcterms:coverage
     schema:name "Coverage" ;
 .
 
-dcterms:description
+skos:scopeNote
     a rdf:Property ;
-    dcterms:description "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
+    skos:scopeNote "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dc:description ;
@@ -997,7 +997,7 @@ dcterms:format
     dcam:rangeIncludes
         dcterms:Extent ,
         dcterms:MediaType ;
-    dcterms:description "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration." ;
+    skos:scopeNote "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dc:format ;
@@ -1008,7 +1008,7 @@ dcterms:format
 dcterms:rights
     a rdf:Property ;
     dcam:rangeIncludes dcterms:RightsStatement ;
-    dcterms:description "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided." ;
+    skos:scopeNote "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dc:rights ;
@@ -1018,7 +1018,7 @@ dcterms:rights
 
 dcterms:date
     a rdf:Property ;
-    dcterms:description "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing." ;
+    skos:scopeNote "Date may be used to express temporal information at any level of granularity.  Recommended practice is to express the date, date/time, or period of time according to ISO 8601-1 [[ISO 8601-1](https://www.iso.org/iso-8601-date-and-time-format.html)] or a published profile of the ISO standard, such as the W3C Note on Date and Time Formats [[W3CDTF](https://www.w3.org/TR/NOTE-datetime)] or the Extended Date/Time Format Specification [[EDTF](http://www.loc.gov/standards/datetime/)].  If the full date is unknown, month and year (YYYY-MM) or just year (YYYY) may be used. Date ranges may be specified using ISO 8601 period of time specification in which start and end dates are separated by a '/' (slash) character.  Either the start or end date may be missing." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:range rdfs:Literal ;
@@ -1029,7 +1029,7 @@ dcterms:date
 
 dcterms:relation
     a rdf:Property ;
-    dcterms:description "Recommended practice is to identify the related resource by means of a URI.  If this is not possible or feasible, a string conforming to a formal identification system may be provided." ;
+    skos:scopeNote "Recommended practice is to identify the related resource by means of a URI.  If this is not possible or feasible, a string conforming to a formal identification system may be provided." ;
     dcterms:issued "2008-01-14"^^xsd:date ;
     rdfs:isDefinedBy dcterms: ;
     rdfs:subPropertyOf dc:relation ;
@@ -1043,8 +1043,9 @@ dcterms:
     schema:creator <http://purl.org/dc/aboutdcmi#DCMI> ;
     schema:dateCreated "2012-06-14"^^xsd:date ;
     schema:dateIssued "2012-06-14"^^xsd:date ;
-    schema:dateModified "2012-06-14"^^xsd:date ;
+    schema:dateModified "2026-02-14"^^xsd:date ;
     schema:description "Dublin Core Metadata Terms"@en ;
     schema:name "DCMI Metadata Terms" ;
     schema:publisher <http://purl.org/dc/aboutdcmi#DCMI> ;
+    schema:version "1" ;
 .
