@@ -607,18 +607,11 @@ dwc:materialSampleID
     schema:name "material sample ID" ;
 .
 
-<http://www.opengis.net/ont/geosparql>
-    schema:description "An RDF/OWL vocabulary for representing spatial information"@en ;
-    schema:name "GeoSPARQL Ontology" ;
-.
-
 geo:Feature
     schema:description
-        "A discrete spatial phenomenon in a universe of discourse"@en ,
-        "A discrete spatial phenomenon in a universe of discourse."@en ;
+        "A discrete spatial phenomenon in a universe of discourse"@en ;
     schema:name
-        "Feature" ,
-        "Feature"@en ;
+        "Feature" ;
 .
 
 geo:FeatureCollection
