@@ -125,7 +125,7 @@ prov:RightsAssignment
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf prov:Activity ;
     schema:description "Activity that identifies the rights assignment of a resource." ;
-    schema:name "RightsAssignment" ;
+    schema:name "Rights Assignment" ;
 .
 
 prov:RightsHolder
@@ -133,7 +133,7 @@ prov:RightsHolder
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf prov:Role ;
     schema:description "Role with the function of owning or managing rights over a resource. The Agent assigned to this role is associated with a RightsAssignment Activity" ;
-    schema:name "RightsHolder" ;
+    schema:name "Rights Holder" ;
 .
 
 prov:ServiceDescription
@@ -155,6 +155,7 @@ prov:Submit
 .
 
 prov:activityOfInfluence
+    a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o-inverses#> ;
     owl:inverseOf prov:activity ;
     schema:description "activity of influence" ;
@@ -162,6 +163,7 @@ prov:activityOfInfluence
 .
 
 prov:agentOfInfluence
+    a owl:ObjectProperty ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov-o-inverses#> ;
     owl:inverseOf prov:agent ;
     schema:description "agent of influence" ;
@@ -186,7 +188,7 @@ prov:asInBundle
     schema:description """prov:asInBundle is used to specify which bundle the general entity of a prov:mentionOf property is described.
 
 When :x prov:mentionOf :y and :y is described in Bundle :b, the triple :x prov:asInBundle :b is also asserted to cite the Bundle in which :y was described.""" ;
-    schema:name "asInBundle" ;
+    schema:name "as in bundle" ;
 .
 
 prov:category
@@ -304,7 +306,7 @@ prov:hadDictionaryMember
     prov:dm "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-membership"^^xsd:anyURI ;
     prov:n "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-membership"^^xsd:anyURI ;
     schema:description "Describes the key-entity pair that was member of a prov:Dictionary. A dictionary can have multiple members." ;
-    schema:name "hadDictionaryMember" ;
+    schema:name "had dictionary member" ;
 .
 
 prov:hadInfluence
@@ -403,7 +405,7 @@ prov:provenanceUriTemplate
     prov:aq "http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/"^^xsd:anyURI ;
     prov:category "access-and-query" ;
     schema:description "Relates a provenance service to a URI template string for constructing provenance-URIs." ;
-    schema:name "provenanceUriTemplate" ;
+    schema:name "provenance uri template" ;
 .
 
 prov:qualifiedAssociationOf
@@ -500,7 +502,7 @@ prov:qualifiedInsertion
     prov:dm "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion"^^xsd:anyURI ;
     prov:n "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion"^^xsd:anyURI ;
     schema:description "The dictionary was derived from the other by insertion. prov:qualifiedInsertion shows details of the insertion, in particular the inserted key-entity pairs." ;
-    schema:name "qualifiedInsertion" ;
+    schema:name "qualified insertion" ;
 .
 
 prov:qualifiedInvalidationOf
@@ -529,7 +531,7 @@ prov:qualifiedRemoval
     prov:dm "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal"^^xsd:anyURI ;
     prov:n "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal"^^xsd:anyURI ;
     schema:description "The dictionary was derived from the other by removal. prov:qualifiedRemoval shows details of the removal, in particular the removed keys." ;
-    schema:name "qualifiedRemoval" ;
+    schema:name "qualified removal" ;
 .
 
 prov:qualifiedSourceOf
@@ -685,8 +687,7 @@ prov:Contribute
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf prov:Activity ;
     schema:description "Activity that identifies any contribution of an agent to a resource. " ;
-    schema:name """Contribute
-""" ;
+    schema:name "Contribute" ;
 .
 
 prov:Contributor
@@ -721,7 +722,7 @@ prov:derivedByInsertionFrom
     prov:dm "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion"^^xsd:anyURI ;
     prov:n "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion"^^xsd:anyURI ;
     schema:description "The dictionary was derived from the other by insertion. prov:qualifiedInsertion shows details of the insertion, in particular the inserted key-entity pairs." ;
-    schema:name "derivedByInsertionFrom" ;
+    schema:name "derived by insertion from" ;
 .
 
 prov:derivedByRemovalFrom
@@ -736,7 +737,7 @@ prov:derivedByRemovalFrom
     prov:dm "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal"^^xsd:anyURI ;
     prov:n "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal"^^xsd:anyURI ;
     schema:description "The dictionary was derived from the other by removal. prov:qualifiedRemoval shows details of the removal, in particular the removed key-entity pairs." ;
-    schema:name "derivedByRemovalFrom" ;
+    schema:name "derived by removal from" ;
 .
 
 prov:endedAtTime
@@ -835,7 +836,7 @@ prov:insertedKeyEntityPair
     prov:dm "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-insertion"^^xsd:anyURI ;
     prov:n "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-insertion"^^xsd:anyURI ;
     schema:description "An object property to refer to the prov:KeyEntityPair inserted into a prov:Dictionary." ;
-    schema:name "insertedKeyEntityPair" ;
+    schema:name "inserted key entity pair" ;
 .
 
 prov:invalidated
@@ -879,7 +880,7 @@ prov:mentionOf
     schema:description """prov:mentionOf is used to specialize an entity as described in another bundle. It is to be used in conjuction with prov:asInBundle.
 
 prov:asInBundle is used to cite the Bundle in which the generalization was mentioned.""" ;
-    schema:name "mentionOf" ;
+    schema:name "mention of" ;
 .
 
 prov:pairEntity
@@ -925,7 +926,7 @@ prov:removedKey
     prov:dm "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#term-dictionary-removal"^^xsd:anyURI ;
     prov:n "http://www.w3.org/TR/2013/NOTE-prov-dictionary-20130430/#expression-dictionary-removal"^^xsd:anyURI ;
     schema:description "The key removed in a Removal." ;
-    schema:name "removedKey" ;
+    schema:name "removed key" ;
 .
 
 prov:startedAtTime
@@ -1009,7 +1010,7 @@ prov:atLocation
     prov:inverse "locationOf" ;
     prov:sharesDefinitionWith prov:Location ;
     schema:description "The Location of any resource." ;
-    schema:name "atLocation" ;
+    schema:name "at location" ;
 .
 
 prov:dictionary
