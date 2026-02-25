@@ -2199,10 +2199,6 @@ ont:
         <http://www.w3.org/ns/prov-links#> ,
         <http://www.w3.org/ns/prov-o#> ,
         <http://www.w3.org/ns/prov-o-inverses#> ;
-    owl:versionIRI
-        ont:-20130430 ,
-        ont:-o-20130430 ,
-        ont:-o-inverses-20130430 ;
     owl:versionInfo "Recommendation version 2013-04-30" ;
     skos:historyNote "2026-01 NJC: added OntPub elements, including the Ontology class definition" ;
     schema:creator <https://www.w3.org> ;
@@ -2214,6 +2210,7 @@ ont:
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome.""" ;
     schema:name "W3C PROVenance Interchange Ontology (PROV-O)" ;
     schema:publisher <https://www.w3.org> ;
+    schema:version "K1" ;
 .
 
 []    a owl:Axiom ;

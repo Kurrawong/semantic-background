@@ -46,11 +46,6 @@ wfprov:wasPartOfWorkflowRun
     schema:name "was part of workflow run" ;
 .
 
-ont:-additions
-    a olis:VirtualGraph ;
-    schema:mainEntity ont: ;
-.
-
 wfprov:WorkflowEngine
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
@@ -156,5 +151,5 @@ This ontology can be further linked to more specific provenance ontologies like 
     schema:license <http://purl.org/NET/rdflicense/cc-by3.0> ;
     schema:name "Workflow 4Ever Provenance Ontology" ;
     schema:publisher <https://wf4ever.github.io> ;
-    schema:version "0.1.1" ;
+    schema:version "0.1.2" ;
 .

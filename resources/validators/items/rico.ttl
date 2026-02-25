@@ -9910,7 +9910,7 @@ ont:
     schema:creator <https://kurrawong.ai/people#lawson-lewis> ;
     schema:dateCreated "2026-02-03"^^xsd:date ;
     schema:dateIssued "2026-02-03"^^xsd:date ;
-    schema:dateModified "2026-02-03"^^xsd:date ;
+    schema:dateModified "2026-02-25"^^xsd:date ;
     schema:description "OntoShacl generated validator for https://www.ica.org/standards/RiC/ontology#" ;
     schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
     schema:name "RiC-O Validator" ;
