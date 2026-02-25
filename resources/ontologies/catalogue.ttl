@@ -1,4 +1,4 @@
-PREFIX astatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX status: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX dc: <http://purl.org/dc/elements/1.1/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX foaf: <http://xmlns.com/foaf/0.1/>
@@ -48,9 +48,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://www.opengis.net/ont/gml> ,
         <http://www.opengis.net/ont/sf> ,
         <http://www.w3.org/1999/02/22-rdf-syntax-ns> ,
-        rdf: ,
         <http://www.w3.org/2000/01/rdf-schema> ,
-        rdfs: ,
         <http://www.w3.org/2002/07/owl> ,
         <http://www.w3.org/2003/06/sw-vocab-status/ns> ,
         <http://www.w3.org/2004/02/skos/core> ,
@@ -59,9 +57,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://www.w3.org/ns/dcat> ,
         <http://www.w3.org/ns/dx/prof> ,
         <http://www.w3.org/ns/odrl/2> ,
-        odrl: ,
         <http://www.w3.org/ns/prov> ,
-        prov: ,
         sh: ,
         <http://www.w3.org/ns/sosa> ,
         sosa: ,
@@ -83,5 +79,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://www.ica.org/standards/RiC/ontology> ;
     schema:name "Semantic Background Ontologies" ;
     schema:publisher <https://kurrawong.ai> ;
-    schema:status astatus:experimental ;
+    schema:status status:experimental ;
 .

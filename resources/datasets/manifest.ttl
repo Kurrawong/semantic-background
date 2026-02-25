@@ -15,7 +15,7 @@ PREFIX schema: <https://schema.org/>
         [
             prof:hasArtifact "../_background/*.ttl" ;
             prof:hasRole mrr:IncompleteCatalogueAndResourceLabels ;
-            schema:name "SemBack Background Resources" ;
+            schema:name "SemBack Dataset Resources" ;
         ] ,
         [
             dcterms:conformsTo <https://linked.data.gov.au/def/bcrp/validator> ;
