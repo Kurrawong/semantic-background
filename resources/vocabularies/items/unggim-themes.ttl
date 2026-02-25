@@ -435,19 +435,6 @@ There are an increasing number of these sensors available for both satellite and
     skos:topConceptOf cs: ;
 .
 
-<https://linked.data.gov.au/org/icsm>
-    a schema:Organization ;
-    schema:name "Intergovernmental Committee on Surveying & Mapping" ;
-    schema:url "https://icsm.gov.au"^^xsd:anyURI ;
-.
-
-<https://orcid.org/0000-0003-2130-0312>
-    a schema:Person ;
-    schema:email "beyza.yaman@adaptcentre.ie"^^xsd:anyURI ;
-    schema:name "Beyza Yaman" ;
-    schema:url "https://dblp.org/pers/y/Yaman:Beyza.html" ;
-.
-
 :Addresses
     a skos:Concept ;
     skos:altLabel "Geocoded Addressing" ;

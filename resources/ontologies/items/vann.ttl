@@ -1,60 +1,56 @@
 PREFIX cc: <http://web.resource.org/cc/>
-PREFIX dcmitype: <http://purl.org/dc/dcmitype/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ont: <http://purl.org/vocab/vann>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX vann: <http://purl.org/vocab/vann/>
-
-<>
-    a cc:Work ;
-    dcterms:type dcmitype:Text ;
-    cc:license <http://creativecommons.org/licenses/by/1.0/> ;
-.
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 vann:changes
     a owl:AnnotationProperty ;
-    rdfs:label "Changes"@en ;
-    rdfs:comment "A reference to a resource that describes changes between this version of a vocabulary and the previous."@en ;
-    rdfs:isDefinedBy vann: ;
+    rdfs:isDefinedBy ont: ;
     rdfs:subPropertyOf rdfs:seeAlso ;
+    schema:description "A reference to a resource that describes changes between this version of a vocabulary and the previous." ;
+    schema:name "Changes" ;
 .
 
 vann:example
     a owl:AnnotationProperty ;
-    rdfs:label "Example"@en ;
-    rdfs:comment "A reference to a resource that provides an example of how this resource can be used."@en ;
-    rdfs:isDefinedBy vann: ;
+    rdfs:isDefinedBy ont: ;
     rdfs:subPropertyOf rdfs:seeAlso ;
+    schema:description "A reference to a resource that provides an example of how this resource can be used." ;
+    schema:name "Example" ;
 .
 
 vann:preferredNamespacePrefix
     a owl:AnnotationProperty ;
-    rdfs:label "Preferred Namespace Prefix"@en ;
-    rdfs:comment "The preferred namespace prefix to use when using terms from this vocabulary in an XML document."@en ;
-    rdfs:isDefinedBy vann: ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "The preferred namespace prefix to use when using terms from this vocabulary in an XML document." ;
+    schema:name "Preferred Namespace Prefix" ;
 .
 
 vann:preferredNamespaceUri
     a owl:AnnotationProperty ;
-    rdfs:label "Preferred Namespace Uri"@en ;
-    rdfs:comment "The preferred namespace URI to use when using terms from this vocabulary in an XML document."@en ;
-    rdfs:isDefinedBy vann: ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "The preferred namespace URI to use when using terms from this vocabulary in an XML document." ;
+    schema:name "Preferred Namespace Uri" ;
 .
 
 vann:termGroup
     a owl:AnnotationProperty ;
-    rdfs:label "Term Group"@en ;
-    rdfs:comment "A group of related terms in a vocabulary."@en ;
-    rdfs:isDefinedBy vann: ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A group of related terms in a vocabulary." ;
+    schema:name "Term Group" ;
 .
 
 vann:usageNote
     a owl:AnnotationProperty ;
-    rdfs:label "Usage Note"@en ;
-    rdfs:comment "A reference to a resource that provides information on how this resource is to be used."@en ;
-    rdfs:isDefinedBy vann: ;
+    rdfs:isDefinedBy ont: ;
     rdfs:subPropertyOf rdfs:seeAlso ;
+    schema:description "A reference to a resource that provides information on how this resource is to be used." ;
+    schema:name "Usage Note" ;
 .
 
 <http://creativecommons.org/licenses/by/1.0/>
@@ -68,21 +64,27 @@ vann:usageNote
         cc:Notice ;
 .
 
-<http://iandavis.com/id/me>
-    a foaf:Person ;
-    foaf:name "Ian Davis" ;
-.
-
 vann:
     a owl:Ontology ;
-    dcterms:creator <http://iandavis.com/id/me> ;
-    dcterms:date "2010-06-07" ;
-    dcterms:description "This document describes a vocabulary for annotating descriptions of vocabularies with examples and usage notes."@en ;
-    dcterms:identifier "http://purl.org/vocab/vann/vann-vocab-20050401" ;
     dcterms:isVersionOf vann: ;
     dcterms:replaces vann:vann-vocab-20040305 ;
-    dcterms:rights "Copyright © 2005 Ian Davis" ;
-    dcterms:title "VANN: A vocabulary for annotating vocabulary descriptions"@en ;
     vann:preferredNamespacePrefix "vann" ;
     vann:preferredNamespaceUri "http://purl.org/vocab/vann/" ;
+    skos:historyNote "2026-01 NJC: added OntPub elements" ;
+    schema:copyrightNotice "Copyright © 2005 Ian Davis" ;
+    schema:creator <http://iandavis.com/id/me> ;
+    schema:dateCreated "2010-06-07"^^xsd:date ;
+    schema:dateIssued "2010-06-07"^^xsd:date ;
+    schema:dateModified "2010-06-07"^^xsd:date ;
+    schema:description "This document describes a vocabulary for annotating descriptions of vocabularies with examples and usage notes." ;
+    schema:identifier "http://purl.org/vocab/vann/vann-vocab-20050401" ;
+    schema:license <http://creativecommons.org/licenses/by/1.0/> ;
+    schema:name "VANN: A vocabulary for annotating vocabulary descriptions" ;
+    schema:publisher <http://iandavis.com/id/me> ;
+.
+
+<http://iandavis.com/id/me>
+    a schema:Person ;
+    schema:email ""^^xsd:anyURI ;
+    schema:name "Ian Davis" ;
 .

@@ -1,0 +1,48 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prez: <https://prez.dev/>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://prez.dev/ont>
+    a owl:Ontology ;
+    owl:versionIRI <https://prez.dev/ont/1.0.0> ;
+    owl:versionInfo "1.0.0: First public version" ;
+    schema:description "This ontology contains a number of Classes and Predicates used by the Prez system"@en ;
+    skos:historyNote "Created in 2024" ;
+    schema:name "Prez Ontology" ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:dateCreated "2024-11-29"^^xsd:date ;
+    schema:dateModified "2025-03-25"^^xsd:date ;
+    schema:publisher <https://kurrawong.ai> ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+<https://prez.dev/ont/1.0.0>
+    schema:name "1.0.0" ;
+.
+
+
+prez:link schema:name "link" .
+prez:count schema:name "count" .
+prez:members schema:name "members" .
+prez:CatalogList schema:name "Catalog List" .
+prez:DatasetList schema:name "Dataset List" .
+prez:FeatureCollectionList schema:name "Feature Collection List" .
+prez:FeatureList schema:name "Feature List" .
+prez:SchemesList schema:name "Schemes List" .
+prez:VocPrezCollectionList schema:name "VocPrez Collection List" .
+prez:searchResultMatch schema:name "Matched Term" .
+prez:searchResultPredicate schema:name "Matched Predicate" .
+prez:searchResultWeight schema:name "Search Result Weight" .
+prez:endpointTemplate schema:name "endpoint template" .
+prez:deliversClasses schema:name "delivers classes" .
+prez:parentEndpoint schema:name "parent endpoint" .
+prez:parentToFocusRelation schema:name "parent to focus relation" .
+prez:focusToParentRelation schema:name "focus to parent relation" .

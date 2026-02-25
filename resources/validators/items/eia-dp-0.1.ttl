@@ -17,9 +17,10 @@ ont:
     schema:hasPart
         :Requirement-D-boundingbox ,
         :Requirement-D-keywords-envthes ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "EIA Data Profile Validator" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
-    schema:version "0.1" ;
+    schema:version "0.2" ;
 .
 
 <https://kurrawong.ai>

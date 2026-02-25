@@ -5,17 +5,19 @@ PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX ont: <https://prez.dev/manifest-model>
 
-<https://prez.dev/manifest-model>
+ont:
     a owl:Ontology ;
     owl:versionIRI <https://prez.dev/ont/1.0.0> ;
     owl:versionInfo "1.0.0: First public version" ;
-    skos:definition "This ontology describes a formulation of a content manifest for catalogues of RDF data to be loaded into instances of the PRez tool"@en ;
+    schema:description "This ontology describes a formulation of a content manifest for catalogues of RDF data to be loaded into instances of the PRez tool" ;
     skos:historyNote "Created in 2024 for Prez data loading" ;
-    skos:prefLabel "Prez Manifest Model" ;
+    schema:name "Prez Manifest Model" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2024-11-29"^^xsd:date ;
     schema:dateModified "2025-03-25"^^xsd:date ;
+    schema:dateIssued "2025-03-25"^^xsd:date ;
     schema:publisher <https://kurrawong.ai> ;
 .
 
@@ -33,46 +35,5 @@ prez:Manifest
     a owl:Class ;
     schema:name "Manifest" ;
     schema:description "An RDF file that describes and links to a set of resources that can be loaded into an RDF database for the Prez system to provide access to" ;
-.
-
-prof:ResourceDescriptor
-    a owl:Class ;
-    schema:name "Resource Descriptor"@en ;
-    schema:description "A description of a resource that defines an aspect - a particular part, feature or role - of a Profile"@en ;
-.
-
-prof:hasResource
-    a owl:ObjectProperty ;
-    rdfs:range prof:ResourceDescriptor ;
-    schema:name "has resource"@en ;
-    schema:description "A resource which describes the nature of an artifact and the role it plays in relation to the Profile"@en ;
-.
-
-prof:hasArtifact
-    a owl:ObjectProperty ;
-    rdfs:domain prof:ResourceDescriptor ;
-    schema:name "has artifact" ;
-    skos:usageNote "A property to link from a Resource Descriptor to an actual information resource (rdfs:Resource; an individual) that implements it"@en ;
-    schema:description "A literal file path or a literal path pattern or a Blank node containing a schema:contentLocation predicated indicating the literal path or path pattern"@en ;
-.
-
-prof:hasRole
-    a owl:ObjectProperty ;
-    rdfs:domain prof:ResourceDescriptor ;
-    rdfs:range skos:Concept ;
-    schema:name "has role" ;
-    schema:description "The function of an artifact described by a Resource Descriptor, such as specification, guidance etc."@en ;
-    skos:usageNote "Within the context of Prez Manifests, the role indicated must be a Concept from the Manifest Resource Roles vocabulary"@en ;
-.
-
-schema:name
-    a owl:AnnotationProperty ;
-    schema:name "name" ;
-    schema:description "The name of the item" ;
-.
-
-schema:description
-    a owl:AnnotationProperty ;
-    schema:name "description" ;
-    schema:description "A description of the item" ;
+    rdfs:isDefinedBy ont: ;
 .

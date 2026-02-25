@@ -1,0 +1,84 @@
+PREFIX : <https://olis.dev/GraphRoles/>
+PREFIX cs: <https://olis.dev/GraphRoles>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+:Added
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The subject Real Graph is to be added to another Named Graph" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Added" ;
+    skos:topConceptOf cs: ;
+.
+
+:Inferred
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The subject Real Graph is inferred from another Named Graph" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Inferred" ;
+    skos:topConceptOf cs: ;
+.
+
+:Original
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The subject Real Graph is asserted without relation to another Named Graph" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Original" ;
+    skos:topConceptOf cs: ;
+.
+
+:Removed
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The subject Real Graph is removed from another Named Graph" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Removed" ;
+    skos:topConceptOf cs: ;
+.
+
+:Rules
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "The subject Real Graph contains rules to be executed on another graph" ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Rules" ;
+    skos:topConceptOf cs: ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+:1.0.0
+    rdfs:label "1.0.0" ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    owl:versionIRI :1.0.0 ;
+    owl:versionInfo "1.0.0: First public version" ;
+    skos:definition "The roles that Named Graphs can play within an Olis context"@en ;
+    skos:hasTopConcept
+        :Added ,
+        :Inferred ,
+        :Original ,
+        :Removed
+        :Rules ;
+    skos:historyNote """2025-12: Create in 2025 for Kurra tool operations
+
+2026-01: Added Rules concept""" ;
+    skos:prefLabel "Olis Graph Roles Vocabulary" ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:dateCreated "2025-12-23"^^xsd:date ;
+    schema:dateModified "2026-01-16"^^xsd:date ;
+    schema:publisher <https://kurrawong.ai> ;
+.

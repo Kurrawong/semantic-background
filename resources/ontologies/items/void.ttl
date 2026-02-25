@@ -1,257 +1,355 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix adms: <http://www.w3.org/ns/adms#> .
-@prefix dct: <http://purl.org/dc/terms/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix vann: <http://purl.org/vocab/vann/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix void: <http://rdfs.org/ns/void#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sdo: <https://schema.org/> .
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ont: <http://vocab.deri.ie/void>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vann: <http://purl.org/vocab/vann/>
+PREFIX void: <http://rdfs.org/ns/void#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://vocab.deri.ie/void> a owl:Ontology, adms:SemanticAsset;
-    dct:title "Vocabulary of Interlinked Datasets (VoID)";
-    dct:description "The Vocabulary of Interlinked Datasets (VoID) is an RDF Schema vocabulary for expressing metadata about RDF datasets. It is intended as a bridge between the publishers and users of RDF data, with applications ranging from data discovery to cataloging and archiving of datasets. This document provides a formal definition of the new RDF classes and properties introduced for VoID. It is a companion to the main specification document for VoID, <em><a href=\"http://www.w3.org/TR/void/\">Describing Linked Datasets with the VoID Vocabulary</a></em>.";
-    dct:modified "2011-03-06"^^xsd:date;
-    vann:preferredNamespaceUri "http://rdfs.org/ns/void#";
-    vann:preferredNamespacePrefix "void";
-    foaf:homepage <http://vocab.deri.ie/void.html>;
-    dct:created "2010-01-26"^^xsd:date;
-    dct:publisher [
-        sdo:name "Digital Enterprise Research Institute, NUI Galway" ;
-        sdo:identifier <http://vocab.deri.ie/void#Digital%20Enterprise%20Research%20Institute%2C%20NUI%20Galway> ;
-        rdfs:seeAlso <http://www.insight-centre.org> , <http://www.deri.ie/> ;
-    ] ;
-    dct:partOf <http://vocab.deri.ie>;
-    dct:type <http://purl.org/adms/assettype/Ontology>;
-    dct:status <http://purl.org/adms/status/UnderDevelopment>;
-    dct:creator
-    [
-        a sdo:Person;
-        sdo:name "Richard Cyganiak";
-        sdo:url <http://richard.cyganiak.de/>;
-        sdo:email <mailto:richard.cyganiak@deri.org> ;
-        sdo:affiliation [
-            a sdo:Organization ;
-            foaf:name "Digital Enterprise Research Institute, NUI Galway";
-            foaf:homepage <http://www.deri.ie/> ;
-        ]
-    ],
-    [
-        a sdo:Person;
-        sdo:name "Jun Zhao";
-        sdo:url <http://users.ox.ac.uk/~zool0770/>;
-        sdo:email <mailto:jun.zhao@zoo.ox.ac.uk> ;
-        sdo:affiliation [
-            a sdo:Organization ;
-            sdo:name "Department of Zoology, University of Oxford";
-            sdo:url <http://www.zoo.ox.ac.uk/> ;
-        ]
-    ] ,
-    [
-        a sdo:Person;
-        sdo:name "Keith Alexander";
-        sdo:url <http://kwijibo.talis.com/>;
-        sdo:email <mailto:Keith.Alexander@talis.com> ;
-        sdo:affiliation [
-            a sdo:Organization ;
-            sdo:name "Talis";
-            sdo:url <http://www.talis.com/> ;
-        ]
-    ] ,
-    [
-        a sdo:Person;
-        sdo:name "Michael Hausenblas";
-        sdo:url <http://sw-app.org/about.html>;
-        sdo:email <mailto:michael.hausenblas@deri.org> ;
-        sdo:affiliation [
-            a sdo:Organization ;
-            sdo:name "LiDRC";
-            sdo:url <http://linkeddata.deri.ie/> ;
-        ]
-    ] .
+void:DatasetDescription
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf foaf:Document ;
+    schema:description "A web resource whose foaf:primaryTopic or foaf:topics include void:Datasets." ;
+    schema:name "dataset description" ;
+.
 
-<http://vocab.deri.ie/void#ttl> a adms:SemanticDistribution;
-    dct:FileFormat <>;
-    adms:accessURL "http://vocab.deri.ie/void.ttl";
-    adms:status <http://purl.org/adms/status/Completed> .
+void:class
+    a owl:FunctionalProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdfs:Class ;
+    schema:description "The rdfs:Class that is the rdf:type of all entities in a class-based partition." ;
+    schema:name "class" ;
+.
 
-<http://vocab.deri.ie/void#rdf> a adms:SemanticDistribution;
-    dct:FileFormat <>;
-    adms:accessURL "http://vocab.deri.ie/void.rdf";
-    adms:status <http://purl.org/adms/status/Completed> .
+void:classPartition
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range void:Dataset ;
+    rdfs:subPropertyOf void:subset ;
+    schema:description "A subset of a void:Dataset that contains only the entities of a certain rdfs:Class." ;
+    schema:name "class partition" ;
+.
 
-void:Dataset a rdfs:Class, owl:Class;
-    rdfs:label "dataset";
-    rdfs:comment "A set of RDF triples that are published, maintained or aggregated by a single provider." .
+void:classes
+    a owl:DatatypeProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:integer ;
+    schema:description "The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type triples in the dataset." ;
+    schema:name "classes" ;
+.
 
-void:Linkset a rdfs:Class, owl:Class;
-    rdfs:label "linkset";
-    rdfs:comment "A collection of RDF links between two void:Datasets.";
-    rdfs:subClassOf void:Dataset .
+void:dataDump
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdfs:Resource ;
+    schema:description "An RDF dump, partial or complete, of a void:Dataset." ;
+    schema:name "Data Dump" ;
+.
 
-void:TechnicalFeature a rdfs:Class, owl:Class;
-    rdfs:label "technical feature";
-    rdfs:comment "A technical feature of a void:Dataset, such as a supported RDF serialization format." .
+void:distinctObjects
+    a owl:DatatypeProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:integer ;
+    schema:description "The total number of distinct objects in a void:Dataset. In other words, the number of distinct resources that occur in the object position of triples in the dataset. Literals are included in this count." ;
+    schema:name "distinct objects" ;
+.
 
-void:DatasetDescription a rdfs:Class, owl:Class;
-    rdfs:label "dataset description";
-    rdfs:comment "A web resource whose foaf:primaryTopic or foaf:topics include void:Datasets.";
-    rdfs:subClassOf foaf:Document .
+void:distinctSubjects
+    a owl:DatatypeProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:integer ;
+    schema:description "The total number of distinct subjects in a void:Dataset. In other words, the number of distinct resources that occur in the subject position of triples in the dataset." ;
+    schema:name "distinct subjects" ;
+.
 
-void:feature a owl:ObjectProperty;
-    rdfs:label "feature";
-    rdfs:domain void:Dataset;
-    rdfs:range void:TechnicalFeature .
+void:documents
+    a owl:DatatypeProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:integer ;
+    schema:description "The total number of documents, for datasets that are published as a set of individual documents, such as RDF/XML documents or RDFa-annotated web pages. Non-RDF documents, such as web pages in HTML or images, are usually not included in this count. This property is intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities should be preferred where practical." ;
+    schema:name "number of documents" ;
+.
 
-void:subset a owl:ObjectProperty;
-    rdfs:label "has subset";
-    rdfs:domain void:Dataset;
-    rdfs:range void:Dataset .
+void:entities
+    a owl:DatatypeProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:integer ;
+    schema:description "The total number of entities that are described in a void:Dataset." ;
+    schema:name "number of entities" ;
+.
 
-void:target a owl:ObjectProperty;
-    rdfs:label "Target";
-    rdfs:comment "One of the two datasets linked by the Linkset.";
-    rdfs:domain void:Linkset;
-    rdfs:range void:Dataset .
+void:exampleResource
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdfs:Resource ;
+    schema:description "example resource of dataset" ;
+    schema:name "example resource of dataset" ;
+.
 
-void:sparqlEndpoint a owl:ObjectProperty;
-    rdfs:label "has a SPARQL endpoint at";
-    rdfs:domain void:Dataset .
+void:feature
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range void:TechnicalFeature ;
+    schema:description "feature" ;
+    schema:name "feature" ;
+.
 
-void:linkPredicate a owl:ObjectProperty;
-    rdfs:label "a link predicate";
-    rdfs:domain void:Linkset;
-    rdfs:range rdf:Property .
+void:inDataset
+    a owl:ObjectProperty ;
+    rdfs:domain foaf:Document ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range void:Dataset ;
+    schema:description "Points to the void:Dataset that a document is a part of." ;
+    schema:name "in dataset" ;
+.
 
-void:exampleResource a owl:ObjectProperty;
-    rdfs:label "example resource of dataset";
-    rdfs:domain void:Dataset;
-    rdfs:range rdfs:Resource .
+void:linkPredicate
+    a owl:ObjectProperty ;
+    rdfs:domain void:Linkset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdf:Property ;
+    schema:description "a link predicate" ;
+    schema:name "a link predicate" ;
+.
 
-void:vocabulary a owl:ObjectProperty;
-    rdfs:label "vocabulary";
-    rdfs:comment "A vocabulary that is used in the dataset.";
-    rdfs:domain void:Dataset .
+void:objectsTarget
+    a owl:FunctionalProperty ;
+    rdfs:domain void:Linkset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range void:Dataset ;
+    rdfs:subPropertyOf void:target ;
+    schema:description "The dataset describing the objects of the triples contained in the Linkset." ;
+    schema:name "Objects Target" ;
+.
 
-void:subjectsTarget a owl:FunctionalProperty;
-    rdfs:label "Subjects Target";
-    rdfs:comment "The dataset describing the subjects of triples contained in the Linkset.";
-    rdfs:domain void:Linkset;
-    rdfs:range void:Dataset;
-    rdfs:subPropertyOf void:target .
+void:openSearchDescription
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range foaf:Document ;
+    schema:description "An OpenSearch description document for a free-text search service over a void:Dataset." ;
+    schema:name "open search description" ;
+.
 
-void:objectsTarget a owl:FunctionalProperty;
-    rdfs:label "Objects Target";
-    rdfs:comment "The dataset describing the objects of the triples contained in the Linkset.";
-    rdfs:domain void:Linkset;
-    rdfs:range void:Dataset;
-    rdfs:subPropertyOf void:target .
+void:properties
+    a owl:DatatypeProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:integer ;
+    schema:description "The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset." ;
+    schema:name "number of properties" ;
+.
 
-void:dataDump a owl:ObjectProperty;
-    rdfs:label "Data Dump";
-    rdfs:comment "An RDF dump, partial or complete, of a void:Dataset.";
-    rdfs:domain void:Dataset;
-    rdfs:range rdfs:Resource .
+void:property
+    a owl:FunctionalProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdf:Property ;
+    schema:description "The rdf:Property that is the predicate of all triples in a property-based partition." ;
+    schema:name "property" ;
+.
 
-void:uriLookupEndpoint a owl:ObjectProperty;
-    rdfs:label "has an URI look-up endpoint at";
-    rdfs:comment "Defines a simple URI look-up protocol for accessing a dataset.";
-    rdfs:domain void:Dataset .
+void:propertyPartition
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range void:Dataset ;
+    rdfs:subPropertyOf void:subset ;
+    schema:description "A subset of a void:Dataset that contains only the triples of a certain rdf:Property." ;
+    schema:name "property partition" ;
+.
 
-void:uriRegexPattern a rdf:DatatypeProperty;
-    rdfs:label "has URI regular expression pattern";
-    rdfs:comment "Defines a regular expression pattern matching URIs in the dataset.";
-    rdfs:domain void:Dataset .
+void:rootResource
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A top concept or entry point for a void:Dataset that is structured in a tree-like fashion. All resources in a dataset can be reached by following links from its root resources in a small number of steps." ;
+    schema:name "root resource" ;
+.
 
-void:class a owl:FunctionalProperty;
-    rdfs:label "class";
-    rdfs:comment "The rdfs:Class that is the rdf:type of all entities in a class-based partition.";
-    rdfs:domain void:Dataset;
-    rdfs:range rdfs:Class .
+void:sparqlEndpoint
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "has a SPARQL endpoint at" ;
+    schema:name "has a SPARQL endpoint at" ;
+.
 
-void:classes a owl:DatatypeProperty;
-    rdfs:label "classes";
-    rdfs:comment "The total number of distinct classes in a void:Dataset. In other words, the number of distinct resources occuring as objects of rdf:type triples in the dataset.";
-    rdfs:domain void:Dataset;
-    rdfs:range xsd:integer .
+void:subjectsTarget
+    a owl:FunctionalProperty ;
+    rdfs:domain void:Linkset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range void:Dataset ;
+    rdfs:subPropertyOf void:target ;
+    schema:description "The dataset describing the subjects of triples contained in the Linkset." ;
+    schema:name "Subjects Target" ;
+.
 
-void:classPartition a owl:ObjectProperty;
-    rdfs:label "class partition";
-    rdfs:comment "A subset of a void:Dataset that contains only the entities of a certain rdfs:Class.";
-    rdfs:domain void:Dataset;
-    rdfs:range void:Dataset;
-    rdfs:subPropertyOf void:subset .
+void:triples
+    a owl:DatatypeProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range xsd:integer ;
+    schema:description "The total number of triples contained in a void:Dataset." ;
+    schema:name "number of triples" ;
+.
 
-void:distinctObjects a owl:DatatypeProperty;
-    rdfs:label "distinct objects";
-    rdfs:comment "The total number of distinct objects in a void:Dataset. In other words, the number of distinct resources that occur in the object position of triples in the dataset. Literals are included in this count.";
-    rdfs:domain void:Dataset;
-    rdfs:range xsd:integer .
+void:uriLookupEndpoint
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "Defines a simple URI look-up protocol for accessing a dataset." ;
+    schema:name "has an URI look-up endpoint at" ;
+.
 
-void:distinctSubjects a owl:DatatypeProperty;
-    rdfs:label "distinct subjects";
-    rdfs:comment "The total number of distinct subjects in a void:Dataset. In other words, the number of distinct resources that occur in the subject position of triples in the dataset.";
-    rdfs:domain void:Dataset;
-    rdfs:range xsd:integer .
+void:uriRegexPattern
+    a rdf:DatatypeProperty ;
+    rdfs:domain void:Dataset ;
+    schema:description "Defines a regular expression pattern matching URIs in the dataset." ;
+    schema:name "has URI regular expression pattern" ;
+.
 
-void:documents a owl:DatatypeProperty;
-    rdfs:label "number of documents";
-    rdfs:comment "The total number of documents, for datasets that are published as a set of individual documents, such as RDF/XML documents or RDFa-annotated web pages. Non-RDF documents, such as web pages in HTML or images, are usually not included in this count. This property is intended for datasets where the total number of triples or entities is hard to determine. void:triples or void:entities should be preferred where practical.";
-    rdfs:domain void:Dataset;
-    rdfs:range xsd:integer .
+void:uriSpace
+    a owl:DatatypeProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range rdfs:Literal ;
+    schema:description "A URI that is a common string prefix of all the entity URIs in a void:Dataset." ;
+    schema:name "URI space" ;
+.
 
-void:entities a owl:DatatypeProperty;
-    rdfs:label "number of entities";
-    rdfs:comment "The total number of entities that are described in a void:Dataset.";
-    rdfs:domain void:Dataset;
-    rdfs:range xsd:integer .
+void:vocabulary
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A vocabulary that is used in the dataset." ;
+    schema:name "vocabulary" ;
+.
 
-void:inDataset a owl:ObjectProperty;
-    rdfs:label "in dataset";
-    rdfs:comment "Points to the void:Dataset that a document is a part of.";
-    rdfs:domain foaf:Document;
-    rdfs:range void:Dataset .
+<http://linkeddata.deri.ie>
+    a schema:Organization ;
+    schema:name "LiDRC" ;
+    schema:url "http://linkeddata.deri.ie/"^^xsd:anyURI ;
+.
 
-void:openSearchDescription a owl:ObjectProperty;
-    rdfs:label "open search description";
-    rdfs:comment "An OpenSearch description document for a free-text search service over a void:Dataset.";
-    rdfs:domain void:Dataset;
-    rdfs:range foaf:Document .
+void:TechnicalFeature
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A technical feature of a void:Dataset, such as a supported RDF serialization format." ;
+    schema:name "technical feature" ;
+.
 
-void:properties a owl:DatatypeProperty;
-    rdfs:label "number of properties";
-    rdfs:comment "The total number of distinct properties in a void:Dataset. In other words, the number of distinct resources that occur in the predicate position of triples in the dataset.";
-    rdfs:domain void:Dataset;
-    rdfs:range xsd:integer .
+<http://www.talis.com>
+    a schema:Organization ;
+    schema:name "Talis" ;
+    schema:url "http://www.talis.com/"^^xsd:anyURI ;
+.
 
-void:property a owl:FunctionalProperty;
-    rdfs:label "property";
-    rdfs:comment "The rdf:Property that is the predicate of all triples in a property-based partition.";
-    rdfs:domain void:Dataset;
-    rdfs:range rdf:Property .
+<http://www.zoo.ox.ac.uk>
+    a schema:Organization ;
+    schema:name "Department of Zoology, University of Oxford" ;
+    schema:url "http://www.zoo.ox.ac.uk/"^^xsd:anyURI ;
+.
 
-void:propertyPartition a owl:ObjectProperty;
-    rdfs:label "property partition";
-    rdfs:comment "A subset of a void:Dataset that contains only the triples of a certain rdf:Property.";
-    rdfs:domain void:Dataset;
-    rdfs:range void:Dataset;
-    rdfs:subPropertyOf void:subset .
+void:subset
+    a owl:ObjectProperty ;
+    rdfs:domain void:Dataset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range void:Dataset ;
+    schema:description "has subset" ;
+    schema:name "has subset" ;
+.
 
-void:rootResource a owl:ObjectProperty;
-    rdfs:label "root resource";
-    rdfs:comment "A top concept or entry point for a void:Dataset that is structured in a tree-like fashion. All resources in a dataset can be reached by following links from its root resources in a small number of steps.";
-    rdfs:domain void:Dataset .
+void:target
+    a owl:ObjectProperty ;
+    rdfs:domain void:Linkset ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range void:Dataset ;
+    schema:description "One of the two datasets linked by the Linkset." ;
+    schema:name "Target" ;
+.
 
-void:triples a owl:DatatypeProperty;
-    rdfs:label "number of triples";
-    rdfs:comment "The total number of triples contained in a void:Dataset.";
-    rdfs:domain void:Dataset;
-    rdfs:range xsd:integer .
+<http://www.deri.ie>
+    a schema:Organization ;
+    rdfs:seeAlso
+        <http://www.deri.ie/> ,
+        <http://www.insight-centre.org> ;
+    schema:identifier <http://vocab.deri.ie/void#Digital%20Enterprise%20Research%20Institute%2C%20NUI%20Galway> ;
+    schema:name "Digital Enterprise Research Institute, NUI Galway" ;
+    schema:url "http://www.deri.ie/"^^xsd:anyURI ;
+.
 
-void:uriSpace a owl:DatatypeProperty;
-    rdfs:label "URI space";
-    rdfs:comment "A URI that is a common string prefix of all the entity URIs in a void:Dataset.";
-    rdfs:domain void:Dataset;
-    rdfs:range rdfs:Literal .
+void:Linkset
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf void:Dataset ;
+    schema:description "A collection of RDF links between two void:Datasets." ;
+    schema:name "linkset" ;
+.
+
+void:Dataset
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A set of RDF triples that are published, maintained or aggregated by a single provider." ;
+    schema:name "dataset" ;
+.
+
+ont:
+    a owl:Ontology ;
+    dct:status <http://purl.org/adms/status/UnderDevelopment> ;
+    dct:type <http://purl.org/adms/assettype/Ontology> ;
+    vann:preferredNamespacePrefix "void" ;
+    vann:preferredNamespaceUri "http://rdfs.org/ns/void#" ;
+    skos:historyNote "2026-01 NJC: added OntPub elements, including the Ontology class definition" ;
+    schema:creator 
+        [
+            a schema:Person ;
+            schema:affiliation <http://www.deri.ie> ;
+            schema:email "richard.cyganiak@deri.org"^^xsd:anyURI ;
+            schema:name "Richard Cyganiak" ;
+            schema:url "http://richard.cyganiak.de/"^^xsd:anyURI ;
+        ] ,
+        [
+            a schema:Person ;
+            schema:affiliation <http://www.talis.com> ;
+            schema:email "Keith.Alexander@talis.com"^^xsd:anyURI ;
+            schema:name "Keith Alexander" ;
+            schema:url "http://kwijibo.talis.com/"^^xsd:anyURI ;
+        ] ,
+        [
+            a schema:Person ;
+            schema:affiliation <http://www.zoo.ox.ac.uk> ;
+            schema:email "jun.zhao@zoo.ox.ac.uk"^^xsd:anyURI ;
+            schema:name "Jun Zhao" ;
+            schema:url "http://users.ox.ac.uk/~zool0770/"^^xsd:anyURI ;
+        ] ,
+        [
+            a schema:Person ;
+            schema:affiliation <http://linkeddata.deri.ie> ;
+            schema:email "michael.hausenblas@deri.org"^^xsd:anyURI ;
+            schema:name "Michael Hausenblas" ;
+            schema:url "http://sw-app.org/about.html"^^xsd:anyURI ;
+        ] ;
+    schema:dateCreated "2010-01-26"^^xsd:date ;
+    schema:dateIssued "2011-03-06"^^xsd:date ;
+    schema:dateModified "2011-03-06"^^xsd:date ;
+    schema:description "The Vocabulary of Interlinked Datasets (VoID) is an RDF Schema vocabulary for expressing metadata about RDF datasets. It is intended as a bridge between the publishers and users of RDF data, with applications ranging from data discovery to cataloging and archiving of datasets. This document provides a formal definition of the new RDF classes and properties introduced for VoID. It is a companion to the main specification document for VoID, <em><a href=\"http://www.w3.org/TR/void/\">Describing Linked Datasets with the VoID Vocabulary</a></em>." ;
+    schema:name "Vocabulary of Interlinked Datasets (VoID)" ;
+    schema:publisher <http://www.deri.ie> ;
+    schema:url "http://vocab.deri.ie/void.html"^^xsd:anyURI ;
+.
