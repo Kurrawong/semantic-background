@@ -19,7 +19,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2023"^^xsd:gYear ;
-    schema:dateModified "2026-02-13"^^xsd:date ;
+    schema:dateModified "2026-02-04"^^xsd:date ;
     schema:description "A catalogue of reference Semantic Web ontologies used by KurrawongAI" ;
     schema:hasPart
         <http://datashapes.org/dash> ,
@@ -57,6 +57,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <http://www.w3.org/ns/dcat> ,
         <http://www.w3.org/ns/dx/prof> ,
         <http://www.w3.org/ns/odrl/2> ,
+        <http://www.w3.org/ns/org> ,
         <http://www.w3.org/ns/prov> ,
         sh: ,
         <http://www.w3.org/ns/sosa> ,
@@ -80,4 +81,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Semantic Background Ontologies" ;
     schema:publisher <https://kurrawong.ai> ;
     schema:status status:experimental ;
+    schema:version "1" ;
 .
