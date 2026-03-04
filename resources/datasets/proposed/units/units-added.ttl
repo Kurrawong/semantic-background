@@ -1,0 +1,21 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<http://qudt.org/vocab/unit>
+    schema:name "QUDT Units" ;
+    schema:description "The Quantities, Units, Dimensions and Types' initiatives' dataset of units." ;
+    schema:version "3.1.5" ;
+    schema:codeRepository "https://github.com/qudt/qudt-public-repo"^^xsd:anyURI ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;  # taken from the GitHub repo
+    schema:creator <https://qudt.org> ;
+    schema:publisher <https://qudt.org> ;
+    schema:dateCreated "2019-07-30"^^xsd:date ;
+    schema:dateModified "2025-11-30"^^xsd:date ;
+.
+
+<https://qudt.org>
+    a schema:Organization ;
+    schema:name "QUDT.org" ;
+    schema:description "QUDT.org is a 501(c)(3) public charity nonprofit organization founded to provide semantic specifications for units of measure, quantity kind, dimensions and data types.   QUDT is an advocate for the development and implementation of standards to quantify data expressed in RDF and JSON.   Our mission is to improve interoperability of data and the specification of information structures through industry standards for Units of Measure, Quantity Kinds, Dimensions and Data Types." ;
+    schema:url "https://www.qudt.org/"^^xsd:anyURI ;
+.

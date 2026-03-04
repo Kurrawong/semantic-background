@@ -1,0 +1,9 @@
+# remove all labels with language tags
+DELETE {
+    ?s rdfs:label ?o
+}
+WHERE {
+    ?s rdfs:label ?o .
+
+    FILTER (LANG(?label) != "")
+}
