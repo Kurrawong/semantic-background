@@ -1,0 +1,381 @@
+PREFIX : <https://linked.data.gov.au/def/csdm/surveyfeatures/>
+PREFIX com: <https://linked.data.gov.au/def/csdm/commonpatterns/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX landinfra: <http://www.opengis.net/def/schema/landinfra/core/>
+PREFIX ns1: <https://data.surroundaustralia.com/def/class-example-shapes/>
+PREFIX ont: <https://linked.data.gov.au/def/csdm/surveyfeatures>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX specs: <https://linked.data.gov.au/def/csdm/impspecs/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:AdoptedVector
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyedLine ;
+    schema:description "A vector included in a CSD that has previously been observed and included in an existing CSD or Survey Plan." ;
+    schema:name "Adopted Vector" ;
+.
+
+:AllowableCoordinateReferenceSystem
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    schema:description "The set of CRS supported by a cadastral system for survey lodgement." ;
+    schema:name "Allowable Coordinate Reference System" ;
+.
+
+:BoundaryMark
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyMark ;
+    schema:description """Means a location that defines a boundary corner or boundary alignment. The location will be physically marked unless the location is obstructed by a structure that can not be marked.
+A boundary mark MAY be a Geodetic Reference Mark.""" ;
+    schema:name "Boundary Mark" ;
+.
+
+:CadastralMark
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyMark ;
+    schema:description """Any survey mark placed or observed as part of a cadastral survey that is not a boundary mark or a geodetic reference mark
+""" ;
+    schema:name "Cadastral Mark" ;
+.
+
+:GeodeticReferenceMark
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyMark ;
+    schema:description "Means a mark that connects a survey to the jurisdictional geodetic network, vertical or horizontal." ;
+    schema:name "Geodetic Reference Mark" ;
+.
+
+:NoOccupation
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :Occupation ;
+    schema:description "Special case where no occupation is observable." ;
+    schema:name "No Occupation" ;
+.
+
+:ObservedVector
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyedLine ;
+    schema:description "A vector consisting of one or more reduced and/or adjusted observed measurements.  Observations may include calculation procedures." ;
+    schema:image
+        [
+            a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "Diagram for Observed Vector." ;
+            schema:contentUrl "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/ObservedVector.png"^^xsd:anyURI ;
+        ] ;
+    schema:name "Observed Vector" ;
+.
+
+:OccupationMark
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyPoint ;
+    skos:editorialNote "Occupation Marks are not monumented but may be described. Observed Vectors or Direct Position Observations determine the location of the mark." ;
+    schema:description "Means a mark used for a cadastral survey to define the location of an occupation feature near a cadastral boundary" ;
+    schema:name "Occupation Mark" ;
+.
+
+:SurveyPointPurpose
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    schema:description "The purpose of a recorded survey point in relation to the current survey activity" ;
+    schema:name "Survey Point Purpose" ;
+.
+
+:SurveyPointQuality
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    schema:description "The quality/accuracy class of a recorded survey point in accordance with the relevant jurisdiction standard" ;
+    schema:name "Survey Point Quality" ;
+.
+
+:Terrain
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :Occupation ;
+    schema:name "Terrain" ;
+.
+
+:VectorDeterminationMethod
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    schema:description "Each vector MAY state how it was defined using the relevant jurisdictional code list" ;
+    schema:name "Vector Determination Method" ;
+.
+
+:distance
+    a owl:ObjectProperty ;
+    rdfs:domain :SurveyedLine ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :Distance ;
+    skos:altLabel "Slope Distance" ;
+    schema:description "The line of sight distance between the instrument and target point" ;
+    schema:name "Distance" ;
+.
+
+:form
+    a rdf:Property ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :MonumentForm ;
+    schema:description "Physical form of monument using code list" ;
+    schema:name "Monument physical form" ;
+.
+
+:from
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :SurveyPoint ;
+    schema:description "Start point for a survey line" ;
+    schema:name "from" ;
+.
+
+:horizontalAngle
+    a owl:ObjectProperty ;
+    rdfs:domain :SurveyedLine ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :Angle ;
+    schema:description "The horizontal angle of the target point relative to the setup bearing" ;
+    schema:name "horizontal angle" ;
+.
+
+:provenance
+    a rdf:Property ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :SurveyPointProvenance ;
+    schema:description "Survey point provenance" ;
+    schema:name "provenance" ;
+.
+
+:purpose
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "Purpose of an entity using relevant codelist" ;
+    schema:name "purpose" ;
+.
+
+:references
+    a owl:objectProperty ;
+    schema:name "references" ;
+.
+
+:replaces
+    a owl:ObjectProperty ;
+    rdfs:domain :Monument ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :Monument ;
+    schema:description "Reference to description of previous monument" ;
+    schema:name "replaces" ;
+.
+
+:setup
+    a owl:DatatypeProperty ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "setup" ;
+.
+
+:state
+    a owl:ObjectProperty ;
+    rdfs:domain :SurveyMark ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :SurveyPointState ;
+    schema:description "State of survey point" ;
+    schema:name "state" ;
+.
+
+:target
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :SurveyPoint ;
+    schema:description "Target (end) point for a survey line" ;
+    schema:name "target" ;
+.
+
+:vectorPurpose
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "Purpose of vector, using relevant codelist" ;
+    schema:name "purpose for a survey vector" ;
+.
+
+:verticalAngle
+    a owl:ObjectProperty ;
+    rdfs:domain :SurveyedLine ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :Angle ;
+    schema:description "The horizontal angle of the target point relative to the setup bearing" ;
+    schema:name "vertical angle" ;
+.
+
+:Distance
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:Measure ;
+    schema:name "Distance Measurement" ;
+.
+
+:MonumentCondition
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    schema:description "Means the state of a survey mark at the time it is found during a cadastral survey." ;
+    schema:name "Monument Condition" ;
+.
+
+:MonumentForm
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    schema:description "Physical Form of a monument" ;
+    schema:name "Monument Form" ;
+.
+
+:SurveyPointProvenance
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    schema:description "A survey point MAY state the source of the point, and that it may be declared using a relevant jurisdictional code list or a jurisdictional pattern" ;
+    schema:name "Survey Point Provenance" ;
+.
+
+:SurveyPointState
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    skos:editorialNote "The distinction between survey point state and monument condition may require further explanations and examples." ;
+    schema:description "The state of a recorded survey point in accordance with the relevant jurisdiction standard" ;
+    schema:name "Survey Point State" ;
+.
+
+:condition
+    a rdf:Property ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range :MonumentCondition ;
+    schema:name "monument condition" ;
+.
+
+:monumentedBy
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "Reference to physical monument description" ;
+    schema:name "monumented by" ;
+.
+
+:Angle
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:Measure ;
+    schema:name "Angle Measurement" ;
+.
+
+:Monument
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf 
+        [
+            a owl:Restriction ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :condition ;
+        ] ,
+        :CadastralFeature ;
+    schema:description "An object that is placed in the ground, or referred to, for the purpose of identifying a survey point in a cadastral survey." ;
+    schema:name "Monument" ;
+.
+
+:Occupation
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geo:Feature ;
+    schema:description """Means those long-established features that might be used to determine the limits of an occupier’s land, and that are used to exclude possession by others, e.g., fences, walls, trees, hedges, buildings, ditches, or other artificial things; and natural land features such as a water body.
+An occupation feature is disjoint from (has no common elements with) a boundary.""" ;
+    schema:name "Occupation Feature" ;
+.
+
+:CadastralFeature
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf geo:Feature ;
+    foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/SurveyFeatures.png> ;
+    schema:description "This is an abstract feature to identify elements of the Cadastral Survey Conceptual Model" ;
+    schema:image
+        [
+            a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "Diagram for Cadastral Feature." ;
+            schema:contentUrl "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/SurveyFeatures.png"^^xsd:anyURI ;
+        ] ;
+    schema:name "Cadastral Feature" ;
+.
+
+:SurveyMark
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf 
+        [
+            a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty com:name ;
+        ] ,
+        [
+            a owl:Restriction ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty :monumentedBy ;
+        ] ,
+        :SurveyPoint ;
+    owl:equivalentClass landinfra:SurveyMark ;
+    skos:editorialNote "The purpose of the mark is relative the CSD - so the same identified object may have different types in different CSDs - in which case how does the aggregated data record the purpose?" ;
+    foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/surveymark.png> ;
+    schema:description "A SurveyMark is a physically located object which by its form defines a point on the surface of the Earth and which is stable during surveying operations" ;
+    schema:name "Survey Mark" ;
+.
+
+:SurveyPoint
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :CadastralFeature ;
+    schema:description "Any point of interest in a survey. It may relate to a boundary corner (marked or unmarked), a cadastral mark, a geodetic reference mark, or an occupation mark" ;
+    schema:name "Survey Point" ;
+.
+
+:SurveyedLine
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :CadastralFeature ;
+    skos:scopeNote "To keep consistent with the paradigm of a line existing between two points, and to avoid duplication of information the instrument location is a special type of feature with a point geometry that may have several related observations and a link to setup information. " ;
+    schema:description "A line of survey between an instrument location and a target point" ;
+    skos:scopeNote "Means a geometric object that has magnitude (or length) and direction. For a cadastral survey system the geometric object consists of a set of reduced survey observations between two survey points." ;
+    schema:name "Surveyed Line" ;
+.
+
+ont:
+    a owl:Ontology ;
+    ns1:implExample
+        [
+            a prof:ResourceDescriptor ;
+            dct:conformsTo
+                specs:ClassContextDiagram ,
+                specs:UML ;
+            prof:hasArtifact "https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/survey_package_diagram.png" ;
+            schema:name "Package Dependencies Diagram" ;
+        ] ;
+    schema:description "Feature Types defined by Cadastral Surveys" ;
+    schema:name "Survey Features Model" ;
+.
+

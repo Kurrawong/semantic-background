@@ -1,0 +1,9 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+
+SELECT ?iri (COUNT(?lbl) AS ?lcl_count)
+WHERE {
+    ?iri schema:description ?lbl
+}
+GROUP BY ?iri
+ORDER BY DESC(?lbl_count)

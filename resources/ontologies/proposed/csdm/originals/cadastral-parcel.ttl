@@ -1,0 +1,325 @@
+# baseURI: https://linked.data.gov.au/def/csdm/parcels
+# imports: https://linked.data.gov.au/def/csdm/commonpatterns
+# imports: https://linked.data.gov.au/def/csdm/geometry
+
+@prefix :                 <https://linked.data.gov.au/def/csdm/parcels/> .
+@prefix com:              <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix foaf:             <http://xmlns.com/foaf/0.1/> .
+@prefix geo:              <http://www.opengis.net/ont/geosparql#> .
+@prefix geometry:         <https://linked.data.gov.au/def/csdm/geometry/> .
+@prefix gml:              <http://www.opengis.net/ont/gml#> .
+@prefix ont:              <https://linked.data.gov.au/def/csdm/parcels> .
+@prefix ontologyprojects: <http://teamwork.topbraidlive.org/ontologyprojects#> .
+@prefix owl:              <http://www.w3.org/2002/07/owl#> .
+@prefix rdf:              <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:             <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:           <https://schema.org/> .
+@prefix sh:               <http://www.w3.org/ns/shacl#> .
+@prefix skos:             <http://www.w3.org/2004/02/skos/core#> .
+@prefix teamwork:         <http://topbraid.org/teamwork#> .
+@prefix xsd:              <http://www.w3.org/2001/XMLSchema#> .
+@prefix sdo:              <https://schema.org/> .
+
+geometry:hasGeometryPart
+    rdfs:subPropertyOf geo:hasGeometry ;
+.
+
+ont:
+    a               owl:Ontology ;
+    skos:prefLabel  "Cadastral Parcels Model"@en ;
+    skos:definition "A model for cadastral parcels"@en ;
+    # owl:imports <https://linked.data.gov.au/def/csdm/commonpatterns> ;
+    # owl:imports <https://linked.data.gov.au/def/csdm/geometryprim> ;
+    foaf:depiction  <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/ParcelModel.png> ;
+.
+
+:Appellation
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   "Appellation"@en ;
+    rdfs:subClassOf  :ParcelModel ;
+    skos:definition  "The legal description for a specific piece of land." ;
+    skos:example     """
+    examples:Lot1_Appellation
+      a parcel:Appellation ;
+      dct:hasPart examples:NamePart_Lot ;
+      rdfs:label "Lot 1 DP 333333" ;
+    .
+  """ ;
+.
+
+:Estate
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   " Estate"@en ;
+    rdfs:subClassOf  :LandInterest ;
+    skos:definition  "A set of real property rights that can be held by a legal entity." ;
+    skos:example     """
+    examples:Estate-Lot1
+      a parcel:Estate ;
+      rdfs:comment "An estate is not modelled explicitly - it is simply a reference to an external system - for example a persistent IRI or local system identifier. Implementing profiles may define addtional metadata for such references if needed." ;
+      rdfs:label "Estate - Ownership of Lot1" ;
+    .
+  """ ;
+    skos:editorialNote
+                     "An estate is not modelled explicitly - it is simply a reference to an external system - for example a persistent IRI or local system identifier. Implementing profiles may define addtional metadata for such references if needed." ;
+.
+
+:EstateParcel
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   " Estate Parcel"@en ;
+    rdfs:subClassOf  :ParcelAggregate ;
+    rdfs:subClassOf  [ a                  owl:Restriction ;
+                       owl:minCardinality 1 ;
+                       owl:onProperty     :parcel ; ] ;
+    skos:definition  "The spatial extent of an Estate. It may consist of one or more cadastral parcels." ;
+    skos:example     """
+    examples:DP_333333
+      a parcel:EstateParcel ;
+      rdfs:label "Yellow And Blue Units" ;
+      parcel:interest examples:Estate-Lot1 ;
+      parcel:parcel examples:cp1 ;
+      parcel:parcel examples:cp2 ;
+    .
+  """ ;
+.
+
+:LandInterest
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   " Interest In Land"@en ;
+    rdfs:subClassOf  :ParcelModel ;
+    skos:definition  "An Interest In Land is ownership or security towards real property." ;
+    skos:editorialNote
+                     "This is from LandInfra  - Easement is just one example here but it may be worth making explicit as it is the touch point with the LandInfra scope." ;
+.
+
+:Parcel
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   "Cadastral Parcel"@en ;
+    rdfs:subClassOf  geometry:3DSpatialUnit ;
+    rdfs:subClassOf  :ParcelModel ;
+    skos:definition  "A single or multi area, or solid, above, or below the surface of the earth as specified through legislated process. The extent of a cadastral parcel can be described by a surface or solid and topological relationships with other parcels." ;
+    sh:property      :Parcel-parcelType ;
+    foaf:depiction   <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/CadastralParcel.png> ;
+    schema:image     [ a              schema:ImageObject ;
+                       sh:order       0 ;
+                       schema:caption "Diagram for Cadastral Parcel." ;
+                       schema:contentUrl
+                                      "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/CadastralParcel.png"^^xsd:anyURI ; ] ;
+    schema:image     [ a              schema:ImageObject ;
+                       sh:order       1 ;
+                       schema:caption "Diagram for Cadastral Parcel." ;
+                       schema:contentUrl
+                                      "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/cadastralparcelexample.png"^^xsd:anyURI ; ] ;
+    schema:image     [ a        schema:ImageObject ;
+                       sh:order 2 ;
+                       schema:caption
+                                "A Cadastral Parcel defined by a boundary line in 2D. The default geometry of this as a 3D unit is not specified, but may be derived from the boundary as an Extruded Surface using implicit or explicit limits. The boundary property is a sub-property of hasGeometry - so an application could infer the boundary as an available geometry.." ;
+                       schema:contentUrl
+                                "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/blue_box.png"^^xsd:anyURI ; ] ;
+.
+
+
+:appellation
+  a owl:ObjectProperty ;
+  rdfs:comment "Modelled as a compound name so individual parts can be referenced if required." ;
+  rdfs:label "appellation" ;
+  rdfs:subPropertyOf com:name ;
+  skos:definition "The legal description for a specific piece of land." ;
+.
+
+:surfaceArea
+  a owl:DatatypeProperty ;
+  rdfs:label "surfaceArea" ;
+  rdfs:range xsd:decimal ;
+  skos:definition "The surface area of the parcel (in the units defined by the given implementation profile of this standard)." ;
+.
+
+sdo:address
+    rdfs:Label      "Address" ;
+    a               rdf:Property ;
+    skos:definition "An arbitrary address descriptor, specialisable by implementing jurisdictions."
+.
+
+:ParcelAggregate
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   "Parcel Aggregate"@en ;
+    rdfs:subClassOf  geometry:3DSpatialUnit ;
+    rdfs:subClassOf  :ParcelModel ;
+    skos:definition  "A parcel aggregate is a collection of parcels whose collective extent may be described as a spatial unit." ;
+    skos:editorialNote
+                     "This superclass supports alignment with the LandInfra concept of a LandPropertyUnit without assuming that this is the only requirement to aggregate parcels." ;
+.
+
+:ParcelModel
+    a               owl:Class ;
+    skos:prefLabel  "Parcel Module Component"@en ;
+    rdfs:subClassOf owl:Thing ;
+.
+
+:ParcelState
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   "Parcel State"@en ;
+    rdfs:subClassOf  com:RelevantJurisdictionalCodelist ;
+    rdfs:subClassOf  :CodeTypes ;
+    skos:definition  """Means the action or effect the survey has on a parcel.
+""" ;
+.
+
+:ParcelPurpose
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   "Parcel Purpose"@en ;
+    rdfs:subClassOf  com:RelevantJurisdictionalCodelist ;
+    rdfs:subClassOf  :CodeTypes ;
+    skos:definition  """Purpose of parcel.""" ;
+.
+
+:ParcelType
+    a               owl:Class ;
+    rdfs:comment    "Code for describing a sub-type of parcel.  Note that implementations may explicitly model these parcel types as sub-classes in order to define additional properties (attributes and relations) relevant to these sub-types." ;
+    skos:prefLabel  "Parcel Type"@en ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    rdfs:subClassOf :CodeTypes ;
+.
+
+:PrimaryParcel
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   "Primary Cadastral Parcel"@en ;
+    rdfs:subClassOf  :Parcel ;
+    skos:definition  "A parcel that may not overlap with other parcels of the same type - they represent exclusive rights. Different types of primary parcels may be nested within a given type provided no nested parcles are of this type." ;
+.
+
+:PurposeOfSpatialUnit
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   "Purpose of Spatial Unit"@en ;
+    rdfs:subClassOf  com:RelevantJurisdictionalCodelist ;
+    rdfs:subClassOf  <urn:x-evn-master:file_parcels_ttl/CodeTypes> ;
+.
+
+:SecondaryParcel
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    skos:prefLabel   "Secondary Cadastral Parcel"@en ;
+    rdfs:subClassOf  :Parcel ;
+    skos:definition  "A parcel representing the extent of a non-exclusive right. Secondary parcels may overlap both primary parcels and other secondary parcels." ;
+.
+
+:TerrainIntersection
+    a               owl:Class ;
+    skos:prefLabel  "Terrain Intersection"@en ;
+    rdfs:subClassOf geometry:3DSpatialUnit ;
+    skos:definition "A feature representing the overlap of a 3D cadastral parcel with a terrain surface of a containing primary parcel." ;
+.
+
+:interest
+    a              owl:ObjectProperty ;
+    skos:prefLabel "interest"@en ;
+    rdfs:range     :LandInterest ;
+.
+
+:parcel
+    a              owl:ObjectProperty ;
+    skos:prefLabel "parcel"@en ;
+    rdfs:range     :Parcel ;
+.
+
+:parcelState
+    a              owl:ObjectProperty ;
+    skos:prefLabel "parcelState"@en ;
+    rdfs:range     skos:Concept ;
+.
+
+:floor
+    skos:prefLabel  "floor"@en ;
+    skos:definition "A floor designator" ;
+    skos:scopeNote  "May be implemented with a code, number or description"
+.
+
+:zmin
+    a               owl:DatatypeProperty ;
+    skos:prefLabel  "Z Min Value"@en ;
+    skos:definition "Lower extent indicator value" ;
+    skos:scopeNote  "Exact interpretation is implementation and context dependent" ;
+    rdfs:range      xsd:decimal ;
+.
+
+:zmax
+    a               owl:DatatypeProperty ;
+    skos:prefLabel  "Z Max Value"@en ;
+    skos:definition "Upper extent indicator value" ;
+    skos:scopeNote  "Exact interpretation is implementation and context dependent" ;
+    rdfs:range      xsd:decimal ;
+.
+
+:area
+    a               owl:DatatypeProperty ;
+    skos:prefLabel  "Parcel Area"@en ;
+    skos:definition "Parcel Area in units appropriate to CRS definition." ;
+    rdfs:range      xsd:decimal ;
+.
+
+:qualityClass
+    a              owl:ObjectProperty ;
+    skos:prefLabel "parcel quality"@en ;
+    rdfs:range     skos:Concept ;
+.
+
+:surface
+    a                  owl:ObjectProperty ;
+    rdfs:comment       "Terrain model of parcel surface" ;
+    rdfs:domain        :Parcel ;
+    skos:prefLabel     "surface"@en ;
+    rdfs:subPropertyOf geo:hasGeometry ;
+    skos:definition    "Terrain (ground level) of a parcel." ;
+.
+
+:terrainIntersectionCurve
+    a                  owl:ObjectProperty ;
+    rdfs:comment       "Note that the 3D objects defined above and below the terrain intersection may be implemented as secondary parcel types, and the terrain intersection face defined by the Linear Ring geometry used to define a BoundaryFace object shared by the secondary parcels." ;
+    rdfs:domain        :Parcel ;
+    skos:prefLabel     "terrain intersection"@en ;
+    rdfs:range         gml:LinearRing ;
+    rdfs:subPropertyOf geo:hasGeometry ;
+    skos:definition    "Terrain (ground level) intersection curve of a 3D parcel." ;
+.
+
+:type
+    a              owl:ObjectProperty ;
+    skos:prefLabel "parcel type"@en ;
+    rdfs:range     :ParcelType ;
+.
+
+:state
+    a              owl:ObjectProperty ;
+    skos:prefLabel "parcel state"@en ;
+    rdfs:range     :ParcelState ;
+.
+
+:purpose
+    a              owl:ObjectProperty ;
+    skos:prefLabel "parcel purpose"@en ;
+    rdfs:range     :ParcelPurpose ;
+.
+
+:unitVolume
+    a              owl:DatatypeProperty ;
+    skos:prefLabel "unit volume"@en ;
+    rdfs:range     xsd:decimal ;
+    skos:definition
+                   "The reported volume of a 3D spatial unit  (in the units defined by the given implementation profile of this standard)." ;
+.
+
+:CodeTypes
+    a               owl:Class ;
+    rdfs:comment    "Value types for customisable codelists" ;
+    skos:prefLabel  "Code Types"@en ;
+    rdfs:subClassOf :ParcelModel ;
+.

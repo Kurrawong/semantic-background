@@ -1,0 +1,22 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+
+INSERT {
+    ?iri rdfs:isDefinedBy ?ont .
+}
+WHERE {
+    ?ont a owl:Ontology .
+
+    VALUES ?type {
+        owl:Class
+        owl:ObjectProperty
+        owl:DatatypeProperty
+        rdf:Property
+    }
+    ?iri a ?type .
+
+    FILTER NOT EXISTS {
+        ?iri rdfs:isDefinedBy ?x
+    }
+}

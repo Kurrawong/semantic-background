@@ -1,0 +1,252 @@
+PREFIX com: <https://linked.data.gov.au/def/csdm/commonpatterns/>
+PREFIX container: <https://linked.data.gov.au/def/csdm/container/>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX geometry: <https://linked.data.gov.au/def/csdm/geometry/>
+PREFIX ont: <https://linked.data.gov.au/def/csdm/container>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX parcel: <https://linked.data.gov.au/def/csdm/parcels/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa: <http://www.w3.org/ns/sosa/>
+PREFIX surv: <https://linked.data.gov.au/def/csdm/surveyfeatures/>
+PREFIX surveyobs: <https://linked.data.gov.au/def/csdm/surveyobs/>
+PREFIX survprov: <https://linked.data.gov.au/def/csdm/surveyprov/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+container:CSD
+    a
+        owl:Class ,
+        sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf
+        container:ClassIn3DCadastre ,
+        survprov:SurveyEntity ;
+    skos:scopeNote "Cadastral Survey Datasets may reference data from previous surveys, the extracted subset for each relevant previous survey is contained within a separate CSD object referenced by the CSD being submitted. Implementations will determine how these make be packaged, conceptually referenced CSDs are seen as a property of any given CSD. This exists without adequate definition in both LandInfra and landXML" ;
+    schema:description "The set of cadastral survey data necessary to integrate a cadastral survey into, or transfer survey observations from, a cadastral database. A CSD identifier may be used to reference a previous survey." ;
+    schema:image
+        [
+            a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "Diagram for Cadastral Survey Dataset." ;
+            schema:contentUrl "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/CSD_logical.png"^^xsd:anyURI ;
+        ] ;
+    schema:name "Cadastral Survey Dataset" ;
+    schema:workExample
+        [
+            a schema:TextObject ;
+            schema:encodingFormat "text/turtle" ;
+            schema:text """
+      examples1:SurveyExample
+        a container:CSD ;
+        rdfs:label "Example Cadastral Survey Dataset" ;
+        prov:wasGeneratedBy surveyobs_examples:surveyActivity1 ;
+        container:calculatedObservations surveyobs_examples:calculated_observations ;
+        container:occupationFeatures surveyobs_examples:fence1 ;
+        container:referencedCSD surveyobs_examples:csd2 ;
+        container:vectorObservations surveyobs_examples:vector_observations ;
+      .
+    """ ;
+        ] ;
+.
+
+container:adminUnit
+    a rdf:Property ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "Qualified reference to Administration Unit identifiers." ;
+    schema:name "Administration Unit" ;
+.
+
+container:bearingRotation
+    a rdf:Property ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "The bearing rotation to apply to all vectors in a CSD relative to a referential context such as a CSD adopting bearings from this CSD." ;
+    schema:name "bearingRotation" ;
+.
+
+container:compoundCRS
+    a rdf:Property ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "The CRS to assume for both horizontal and vertical coordinates in scope of this object." ;
+    schema:name "Compound CRS" ;
+.
+
+container:horizontalCRS
+    a rdf:Property ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "The CRS  to assume for all horizontal coordinates in scope of this object." ;
+    schema:name "horizontal CRS" ;
+.
+
+container:occupationFeatures
+    a owl:ObjectProperty ;
+    dct:description "Occupation Features referenced in occupation observations or by specific Observation Marks" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range geometry:FeatureCollection ;
+    schema:name "Occupation Features" ;
+.
+
+container:occupationObservations
+    a
+        owl:ObjectProperty ,
+        sh:PropertyShape ;
+    dct:description "the set of observations about the nature of occupation present for survey features. Note that the relative positions of occupation features may be present as vector observations." ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range sosa:ObservationCollection ;
+    schema:name "Observations on Occupation Features" ;
+.
+
+container:parcels
+    a owl:ObjectProperty ;
+    dct:description "the set of Parcels defined or re-surveyed by this survey. These reference vectors which in turn reference the points coordinate geometry of the survey, using topological relationships to these points via the \"id\" property." ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range geometry:FeatureCollection ;
+    schema:name "Parcels" ;
+.
+
+container:points
+    a owl:ObjectProperty ;
+    dct:description "the set of survey points defined or re-surveyed by this survey. These contain all the coordinate geometry of the survey, other features are defined using topological relationships to these points by the \"id\" property." ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range geometry:FeatureCollection ;
+    schema:name "Survey Points" ;
+.
+
+container:purpose
+    a owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range skos:Concept ;
+    schema:description "the purpose of a survey" ;
+    schema:name "Survey Purpose" ;
+.
+
+container:referencedCSD
+    a rdf:Property ;
+    dct:description "Is a CSD container that references existing CSD survey features and observations surveyed and /or used/adopted as part of the survey definition for the CSD. In short, it is a list of previous surveys (CSD) used in the current survey. Note that the implementation may be a set of empty (shell) CSDs containing minimal metadata and a CSD referencing this will contain the relevant set of adopted observations and points" ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "A CSD containing referenced survey features and observations" ;
+    schema:name "Referenced CSD" ;
+.
+
+container:surveyProvenance
+    a owl:ObjectProperty ;
+    dct:description "The set of activities, actors and related information objects describing the provenance of an object " ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range prov:Bundle ;
+    schema:name "Provenance" ;
+.
+
+container:vectorObservations
+    a
+        owl:ObjectProperty ,
+        sh:PropertyShape ;
+    dct:description "the set of observed vectors defined or re-surveyed by this survey - adopted vectors will be present in the context of the original CSD they are adopted from to preserve metadata." ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range sosa:ObservationCollection ;
+    schema:name "Vector Observations" ;
+.
+
+container:verticalDatum
+    a rdf:Property ;
+    rdfs:isDefinedBy ont: ;
+    schema:description "The verticalDatum to assume for all height values in scope of this object." ;
+    schema:name "verticalDatum" ;
+.
+
+geometry:3DSpatialUnit
+    rdfs:subClassOf container:GeoSPARQL-3D ;
+.
+
+geometry:BoundaryFeature
+    rdfs:subClassOf container:GeoSPARQL-3D ;
+.
+
+geometry:SolidGeometry
+    rdfs:subClassOf container:GeoSPARQL-3D ;
+.
+
+parcel:ParcelModel
+    rdfs:subClassOf container:ClassIn3DCadastre ;
+.
+
+surv:CadastralFeature
+    rdfs:subClassOf container:ClassIn3DCadastre ;
+.
+
+surv:SurveyPurpose
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    schema:description "A controlled vocabulary term for the purpose of a survey" ;
+    schema:name "Survey Purpose Code" ;
+.
+
+surveyobs:Measure
+    a
+        owl:Class ,
+        sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf container:StandardClass ;
+    schema:name "GeoSPARQL 1.2 (3D profile)" ;
+.
+
+surveyobs:SurveyObservation
+    rdfs:subClassOf
+        sosa:Observation ,
+        container:ClassIn3DCadastre ;
+.
+
+survprov:SurveyProvenanceObject
+    rdfs:subClassOf container:ClassIn3DCadastre ;
+.
+
+container:StandardClass
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf container:ModelledElement ;
+    schema:description "This class is just to provide a highlight for key class types used by 3D Cadastre model" ;
+    schema:name "Key Class used by 3D Cadastre Model" ;
+.
+
+container:ModelledElement
+    a
+        owl:Class ,
+        sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf owl:Thing ;
+    schema:name "SelectableModelElement" ;
+.
+
+container:GeoSPARQL-3D
+    a
+        owl:Class ,
+        sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf container:ClassIn3DCadastre ;
+    schema:description "This class represents a container for objects described by the 3D profile of ISO19107 as a GeoSPARQL 1.2 extension candidate." ;
+    schema:name "GeoSPARQL 1.2 (3D profile)" ;
+.
+
+container:ClassIn3DCadastre
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf container:ModelledElement ;
+    schema:name "Class defined in 3D Cadastre Model" ;
+.
+
+ont:
+    a owl:Ontology ;
+    schema:description "Import closure for 3D model packages and aggregation containers for exchange objects." ;
+    schema:image
+        [
+            a schema:ImageObject ;
+            sh:order 0 ;
+            schema:caption "Diagram of the class Container." ;
+            schema:contentUrl "https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/Container.png"^^xsd:anyURI ;
+        ] ;
+    schema:name "Survey Plan Container Model" ;
+.
+

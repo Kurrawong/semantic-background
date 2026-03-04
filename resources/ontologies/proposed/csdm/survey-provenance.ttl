@@ -1,0 +1,101 @@
+PREFIX : <https://linked.data.gov.au/def/csdm/surveyprov/>
+PREFIX com: <https://linked.data.gov.au/def/csdm/commonpatterns/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX ont: <https://linked.data.gov.au/def/csdm/surveyprov>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX surveyobs: <https://linked.data.gov.au/def/csdm/surveyobs/>
+
+surveyobs:Survey
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf prov:Entity ;
+    schema:name "Survey" ;
+.
+
+:CadastralSurveyor
+    a owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf :SurveyAgent ;
+    skos:altLabel
+        "Licenced Surveyor" ,
+        "Registered Surveyor" ;
+    schema:description "An identified agent licensed to undertake cadastral surveys" ;
+    schema:name "Cadastral Surveyor" ;
+.
+
+:SurveyActivity
+    a
+        owl:Class ,
+        sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf
+        prov:Activity ,
+        :SurveyProvenanceObject ;
+    schema:description "An activity in the lifecycle of a survey" ;
+    schema:name "Survey CSD Lifecycle Activity" ;
+.
+
+:SurveyActivityType
+    a
+        owl:Class ,
+        sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf com:RelevantJurisdictionalCodelist ;
+    schema:description "A codelist of survey activity types relevant to a particular jurisdiction. May import from common shared codelists and include additional details regarding sequences and metadata requirements for a given process, defined in a jurisdictional profile of this model" ;
+    schema:name "Survey Activity Type" ;
+.
+
+:SurveyEntity
+    a
+        owl:Class ,
+        sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf
+        prov:Entity ,
+        :SurveyProvenanceObject ;
+    schema:description "A data object influenced by a SurveyActivity, such as a Cadastral Survey Dataset (CSD)" ;
+    schema:name "Survey Entity" ;
+.
+
+:SurveyAgent
+    a
+        owl:Class ,
+        sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf
+        prov:Agent ,
+        :SurveyProvenanceObject ;
+    skos:example """
+    <ex:AH>
+      a survprov:CadastralSurveyor ;
+      rdfs:label "Andrew Hunter" ;
+    .
+  """ ;
+    schema:description "PROV Agent types" ;
+    schema:name "Survey Agent" ;
+.
+
+:SurveyProvenanceObject
+    a
+        owl:Class ,
+        sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf owl:Thing ;
+    schema:description "Entities, Activities and Agents for Cadastral Survey Data Exchange Activities" ;
+    schema:name "Survey Activity" ;
+.
+
+ont:
+    a owl:Ontology ;
+    prof:isProfileOf <http://www.w3.org/ns/prov-o#> ;
+    foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/provprof_package_diagram.png> ;
+    schema:description "Survey Provenance modelling for Cadastral Surveys" ;
+    schema:name "Survey Provenance Model" ;
+.
+

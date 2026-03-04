@@ -1,0 +1,428 @@
+# baseURI: https://linked.data.gov.au/def/csdm/surveyobs
+# imports: http://www.w3.org/ns/sosa/
+# imports: http://www.w3.org/ns/ssn/
+# imports: http://www.w3.org/ns/ssn/ext
+# imports: https://linked.data.gov.au/def/csdm/parcels
+# imports: https://linked.data.gov.au/def/csdm/surveyfeatures
+
+PREFIX :        <https://linked.data.gov.au/def/csdm/surveyobs/>
+PREFIX com:     <https://linked.data.gov.au/def/csdm/commonpatterns/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX foaf:    <http://xmlns.com/foaf/0.1/>
+PREFIX ont:     <https://linked.data.gov.au/def/csdm/surveyobs>
+PREFIX owl:     <http://www.w3.org/2002/07/owl#>
+PREFIX rdf:     <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:    <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema:  <https://schema.org/>
+PREFIX sdo:     <https://schema.org/>
+PREFIX sh:      <http://www.w3.org/ns/shacl#>
+PREFIX skos:    <http://www.w3.org/2004/02/skos/core#>
+PREFIX sosa:    <http://www.w3.org/ns/sosa/>
+PREFIX ssn:     <http://www.w3.org/ns/ssn/>
+PREFIX surv:    <https://linked.data.gov.au/def/csdm/surveyfeatures/>
+PREFIX xsd:     <http://www.w3.org/2001/XMLSchema#>
+
+:Computation
+    a                rdfs:Class, owl:Class, sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:Procedure ;
+    sdo:description  "A computation method. Note that the sensor used SHOULD identify the specific software application that implements this method" ;
+    sdo:name         "Computation" ;
+.
+
+:IFCRef
+    a                rdfs:Class, owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:Result ;
+    sdo:description  "Definition not yet provided" ;
+    sdo:name         "BIM/IFC design model reference" ;
+.
+
+:OffsetMeasurement
+    a                rdfs:Class, owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:Procedure ;
+    sdo:description  "A field measurement or estimation to provide a description of relative location of a related feature" ;
+    sdo:name         "Offset Measurement" ;
+.
+
+:Position
+    a                rdfs:Class, owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:ObservableProperty ;
+    sdo:description  "Definition not yet provided" ;
+    sdo:name         "Position" ;
+.
+
+:QualifiedPosition
+    a                rdfs:Class, owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:Result ;
+    sdo:description  "Definition not yet provided" ;
+    sdo:name         "Qualified Position" ;
+.
+
+:QualifiedVector
+    a                                                                                                    rdfs:Class,
+                                                                                                         owl:Class ;
+    rdfs:isDefinedBy                                                                                     ont: ;
+    rdfs:subClassOf                                                                                      [ a owl:Restriction ;
+                                                                                                           owl:cardinality
+                                                                                                             "1"^^xsd:nonNegativeInteger ;
+                                                                                                           owl:onProperty
+                                                                                                             surv:horizontalAngle ],
+                                                                                                         [ a owl:Restriction ;
+                                                                                                           owl:cardinality
+                                                                                                             "1"^^xsd:nonNegativeInteger ;
+                                                                                                           owl:onProperty
+                                                                                                             surv:verticalAngle ],
+                                                                                                         [ a owl:Restriction ;
+                                                                                                           owl:maxCardinality
+                                                                                                             "1"^^xsd:nonNegativeInteger ;
+                                                                                                           owl:onProperty
+                                                                                                             surv:distance ],
+                                                                                                         [ a owl:Restriction ;
+                                                                                                           owl:maxCardinality
+                                                                                                             "1"^^xsd:nonNegativeInteger ;
+                                                                                                           owl:onProperty
+                                                                                                             surv:horizontalDistance ],
+                                                                                                         sosa:Result ;
+    skos:editorialNote                                                                                   "Active development of the OGC O&M standard provides for multiple values and abstraction of obervable property and different approaches for mapping observation results to feature properties. This model assumes these patterns are supported.",
+                                                                                                         "Future evolutions of logical models and physical encodings for ISO 19157 may suggest alternative patterns." ;
+    sdo:description                                                                                      "A vector data model with qualified datatypes for each component" ;
+    sdo:name                                                                                             "Qualified Vector" ;
+.
+
+:SideShot
+    a                rdfs:Class, owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:Procedure ;
+    sdo:description  "A radiation vector from a point in a survey traverse" ;
+    sdo:name         "Side Shot" ;
+.
+
+:Traversal
+    a                rdfs:Class, owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:Procedure ;
+    sdo:description  "A procedure for defining a traverse. Instances of this class may be used to define local regulations and/or practices." ;
+    sdo:name         "Survey Traversal" ;
+.
+
+:VectorDetermination
+    a                rdfs:Class, owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:ObservableProperty ;
+    sdo:description  "The set of properties requires to define a vector in 3D space. Typically azimuth, zenith angles and distance." ;
+    sdo:name         "Vector Determination" ;
+.
+
+surv:Traverse
+    a                owl:Class ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/csdm/surveyfeatures> ;
+    rdfs:subClassOf  sosa:ObservationCollection ;
+    sdo:description  "Definition not yet provided" ;
+    sdo:name         "Traverse" ;
+.
+
+surv:age
+    a                rdf:Property ;
+    rdfs:comment     "Use a note for further description" ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/csdm/surveyfeatures> ;
+    sdo:description  "Estimated Age in years of a physical object. May be implemented with any relevant object model or literal" ;
+    sdo:name         "estimated age" ;
+.
+
+ont:
+    a                   owl:Ontology ;
+    dcterms:provenance  "This model was created for the Intergovernmental Committee on Surveying & Mapping (ICSM)'s Cadastral Survey Model (CSDM) project in 2022" ;
+    # owl:imports
+    #     sosa: ,
+    #     ssn: ,
+    #     ssn:ext ,
+    #     <https://linked.data.gov.au/def/csdm/parcels> ,
+    #     <https://linked.data.gov.au/def/csdm/surveyfeatures> ;
+    owl:versionIRI      :0.0.2 ;
+    owl:versionInfo     "0.0.2: Updates on 2022 model for documentation tooling purposes only. Changed IRI to use AGLDWG" ;
+    sdo:codeRepository  "https://github.com/icsm-au/3d-csdm"^^xsd:anyURI ;
+    sdo:copyrightHolder <https://linked.data.gov.au/org/icsm> ;
+    sdo:copyrightNotice "(c) Intergovernmental Committee on Surveying & Mapping, 2023" ;
+    sdo:copyrightYear   "2023"^^xsd:gYear ;
+    sdo:dateCreated     "2023-04-26"^^xsd:date ;
+    sdo:dateIssued      "2023-04-26"^^xsd:date ;
+    sdo:dateModified    "2023-04-27"^^xsd:date ;
+    sdo:description     "Survey Observations modelling for Cadastral Surveys"@en ;
+    sdo:license         "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
+    sdo:name            "Survey Observations Model" ;
+    sdo:creator         <https://linked.data.gov.au/org/icsm> ;
+    sdo:publisher       <https://linked.data.gov.au/org/icsm> ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a        sdo:Organization ;
+    sdo:name "Intergovernmental Committee on Surveying and Mapping" ;
+    sdo:url  "https://www.icsm.gov.au"^^xsd:anyURI ;
+.
+
+:DesignModel
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  surv:Occupation ;
+    sdo:description  "A BIM design model describing the physical features of a structure or landscape element that may be used to describe the occupation present at a boundary." ;
+    sdo:name         "Design Model of Occupation" ;
+.
+
+:DirectPositionObservation
+    a                                                                                            owl:Class ;
+    rdfs:isDefinedBy                                                                             ont: ;
+    rdfs:subClassOf                                                                              [ a owl:Restriction ;
+                                                                                                   owl:allValuesFrom
+                                                                                                     :QualifiedPosition ;
+                                                                                                   owl:cardinality
+                                                                                                     "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onProperty
+                                                                                                     sosa:hasResult ],
+                                                                                                 :SurveyObservation ;
+    skos:example                                                                                 "GNSS or other positioning system location observation" ;
+    sdo:description                                                                              "Direct observation of a position in cartesian space" ;
+    sdo:name                                                                                     "Direct Position Observation" ;
+.
+
+:OccupationAsFeature
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  surv:Occupation ;
+    skos:editorialNote
+                     "Occupation observation is to a Observation Mark submitted as a distinct survey point in a 3D cadatsral model.  Observation result may be an attribute of a survey mark - e.g. 3m north of X (distance, bearing, type and optional id) - or a vector  to an occupationMark" ;
+    sdo:description  "A spatial feature from some reference dataset or described as part of a survey which represents, or contains an identifiable element representing, the occupation of a cadastral feature boundary" ;
+    sdo:name         "Occupation As Feature" ;
+.
+
+:OccupationModelVertex
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  surv:OccupationMark ;
+    sdo:description  "A point object with a reference to vertex in some form of model of an occupation feature. This may be a design model or GIS system object" ;
+    sdo:name         "Occupation Model Vertex" ;
+.
+
+:OccupationObservation
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  :SurveyVectorObservation ;
+    sdo:description  "An observation to an occupation mark. May be directly observed or calculated from occupation description" ;
+    sdo:name         "Occupation Observation" ;
+    schema:image     [ a              schema:ImageObject ;
+                       sh:order       0 ;
+                       schema:caption "Diagram for Occupation Observation." ;
+                       schema:contentUrl
+                                      "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/occobs.png"^^xsd:anyURI ; ] ;
+    skos:example     """
+        surveyobs_examples:oo1
+            a surveylineobs:OccupationObservation ;
+            rdfs:label "T1 -Occ1 occupation observation" ;
+            sosa:hasFeatureOfInterest surveyobs_examples:oo1vector ;
+        .
+    """ ;
+.
+
+:OccupationObservations
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:ObservationCollection ;
+    skos:editorialNote
+                     "Active development of the OGC O&M standard directly supports the ObservationCollection and common metadata pattern.",
+                     "May require specialised sub-classes for vectors and ooccupation feature descriptions" ;
+    foaf:depiction   "https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/OccupationsObservations.png"^^xsd:anyURI ;
+    sdo:description  "Container for occupation observations" ;
+    sdo:name         "Occupation Observations" ;
+.
+
+:ParcelBoundaryOccupation
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  :FeatureOccupationObservation ;
+    sdo:description  "Observation of the occupation at a boundary" ;
+    sdo:name         "Parcel Boundary Observation" ;
+.
+
+:Setup
+    a                owl:Class ;
+    rdfs:comment     "A setup will have various observations - TBD what needs to be modelled at this stage" ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  <http://www.opengis.net/ont/geosparql#Feature> ;
+    sdo:description  "Definition not yet provided" ;
+    sdo:name         "Instrument Setup" ;
+.
+
+:SurveyNetwork
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:ObservationCollection ;
+    sdo:description  "Definition not yet provided" ;
+    sdo:name         "Survey Network" ;
+.
+
+:SurveyPointOccupation
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  :FeatureOccupationObservation ;
+    skos:editorialNote
+                     "Further work will be required to determine whether the result is constrained to a description, localised model or common model - for example point cloud, images etc" ;
+    sdo:description  "Occupation at a survey point" ;
+    sdo:name         "Survey Point Occupation" ;
+.
+
+:Traverse
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  surv:CadastralFeature ;
+    skos:editorialNote
+                     "Optional - NZ uses the pool of all observations. What is the need to collate a subset as a traverse - what properties does it have?  Traverse along a natural boundary, centreline traverse.. all a network with some connectivity" ;
+    sdo:description  "A Traverse comprises a connected set of geodetic and/or cadastral observations.  There may be one of more traverses for any one survey.  A traverse must include a linear connection path between and identified start and end without loops or multiple paths. A closed traverse has known start and end points" ;
+    sdo:name         "Traverse" ;
+.
+
+:VectorDeterminationMethod
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  com:RelevantJurisdictionalCodelist ;
+    sdo:description  "Each vector MAY state how it was defined using the relevant jurisdictional code list" ;
+    sdo:name         "Vector Determination Method" ;
+.
+
+:VectorObservations
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:ObservationCollection ;
+    foaf:depiction   "https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/SurveyVectorObservations.png"^^xsd:anyURI ;
+    sdo:description  "Container holding common metadata for member vector observations" ;
+    sdo:name         "Vector Observations" ;
+.
+
+:angleQualityMeasure
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   ont: ;
+    rdfs:subPropertyOf com:qualityMeasure ;
+    sdo:description    "A numerical measure of confidence in an angle measure expressed in the same units as the measure" ;
+    sdo:name           "angle quality" ;
+.
+
+:angleType
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   ont: ;
+    sdo:description    "A reference to the specific type of angle measurement" ;
+    sdo:name           "angle type" ;
+.
+
+:distanceType
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   ont: ;
+    sdo:description    "A reference to the specific type of distance measured, according to assumptions about projections and datum" ;
+    sdo:name           "distance type" ;
+.
+
+:angleQuality
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   ont: ;
+    rdfs:subPropertyOf com:qualityMeasure ;
+    sdo:description    "A numerical measure of confidence in an angle measure expressed in the same units as the measure" ;
+    sdo:name           "angle quality" ;
+.
+
+:distanceQualityMeasure
+    a                  owl:DatatypeProperty ;
+    rdfs:isDefinedBy   ont: ;
+    rdfs:subPropertyOf com:qualityMeasure ;
+    sdo:description    "A numerical measure of confidence in an distance measure expressed in the same units as the measure" ;
+    sdo:name           "distance quality" ;
+.
+
+:distanceQuality
+    a                  owl:ObjectProperty ;
+    rdfs:isDefinedBy   ont: ;
+    rdfs:subPropertyOf com:qualityMeasure ;
+    sdo:description    "A numerical measure of confidence in an distance measure expressed in the same units as the measure" ;
+    sdo:name           "distance quality" ;
+    skos:scopeNote     "object models for quality should be defined according to application need."
+.
+
+
+:occupation
+    a                owl:ObjectProperty ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:range       :FeatureOccupationObservation ;
+    sdo:description  "Definition not yet provided" ;
+    sdo:name         "occupation" ;
+.
+
+<http://www.opengis.net/ont/geosparql#Feature>
+    rdfs:subClassOf sosa:FeatureOfInterest ;
+.
+
+surv:horizontalDistance
+    a                owl:ObjectProperty ;
+    rdfs:comment     "This allows 2D observations to be adopted in a 3D survey, or reported to a system that requires distance observations to projected to a nominal ground level" ;
+    rdfs:domain      surv:SurveyedLine ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/csdm/surveyfeatures> ;
+    rdfs:range       surv:Distance ;
+    skos:altLabel    "Distance at Ground Level" ;
+    sdo:description  "the distance projected at nominal ground level between instrument and target point" ;
+    sdo:name         "horizontal distance" ;
+.
+
+:SurveyVectorObservation
+    a                                                                                            owl:Class ;
+    rdfs:isDefinedBy                                                                             ont: ;
+    rdfs:subClassOf                                                                              [ a owl:Restriction ;
+                                                                                                   owl:allValuesFrom
+                                                                                                     :QualifiedVector ;
+                                                                                                   owl:cardinality
+                                                                                                     "1"^^xsd:nonNegativeInteger ;
+                                                                                                   owl:onProperty
+                                                                                                     sosa:hasResult ],
+                                                                                                 :SurveyObservation ;
+    skos:editorialNote                                                                           "was: An observation of bearings and distance between survey points or identifiable points in occupation features" ;
+    sdo:description                                                                              "'An observation of horizontal direction, vertical/zenith angle and direct distance between two survey points or two identifiable points in occupation features.'" ;
+    sdo:name                                                                                     "Survey Vector Observation" ;
+    schema:image                                                                                 [ a        schema:ImageObject ;
+                                                                                                   sh:order 0 ;
+                                                                                                   schema:caption
+                                                                                                            "Example computed vector - observed using a computational process that is described via procedure where sensor is the implementing software (typically default)." ;
+                                                                                                   schema:contentUrl
+                                                                                                            "https://icsm-au.github.io/3d-csdm-design/2022/spec_files/traverseobs.png"^^xsd:anyURI ; ] ;
+    skos:example                                                                                 """
+        surveyobs_examples:obs1
+        a surveylineobs:SurveyVectorObservation ;
+        rdfs:comment "Inherits quality measures from containing CSD defaults;" ;
+        rdfs:label "Vector Determination Observation on traverse element T1 - T2" ;
+        sosa:Procedure surveyobs_examples:trav ;
+        sosa:featureOfInterest surveyobs_examples:tv1 ;
+        sosa:hasResult  [ a                           surveyobs:QualifiedVector ;
+                             surv:distance               17.055 ;
+                             surv:distanceQualityMeasure 0.05 ;
+                             surv:horizontalAngle        335.01666667 ;
+                             surv:angleQualityMeasure    0.003 ;
+                             surv:verticalAngle          95.45 ] ;
+        foaf:depiction <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/traverseobs.png> ;
+        .
+    """ ;
+.
+
+:FeatureOccupationObservation
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  :SurveyObservation ;
+    skos:scopeNote   "Note that observation of location of an occupation via a Surveyed Vector is typically augmented by a FeatureOccupationObservation of the actual form of the occupation" ;
+    foaf:depiction   "https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/OccupationObservations.png"^^xsd:anyURI ;
+    sdo:description  "Observation of occupation present at a feature" ;
+    sdo:name         "Feature Occupation Observation" ;
+.
+
+:SurveyObservation
+    a                owl:Class ;
+    rdfs:isDefinedBy ont: ;
+    rdfs:subClassOf  sosa:Observation ;
+    sdo:description  "Abstract superclass of observations undertaken during survey activities" ;
+    sdo:name         "Survey Observation" ;
+.

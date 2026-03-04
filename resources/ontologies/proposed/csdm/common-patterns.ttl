@@ -1,0 +1,122 @@
+# baseURI: https://linked.data.gov.au/def/csdm/commonpatterns
+# imports: http://www.w3.org/2004/02/skos/core
+# imports: http://www.w3.org/ns/dx/prof
+
+@prefix : <https://linked.data.gov.au/def/csdm/commonpatterns/> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix ont: <https://linked.data.gov.au/def/csdm/commonpatterns> .
+@prefix ontologyprojects: <http://teamwork.topbraidlive.org/ontologyprojects#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix teamwork: <http://topbraid.org/teamwork#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+ont:
+  a owl:Ontology ;
+  rdfs:label "Common implementation patterns not directly supported by other standards" ;
+  # owl:imports <http://www.w3.org/2004/02/skos/core> ;
+  # owl:imports <http://www.w3.org/ns/dx/prof> ;
+.
+:Common
+  a owl:Class ;
+  a sh:NodeShape ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Common Implementation Patterns" ;
+  skos:definition "SuperClass for common implementations patterns not provided by existing standards" ;
+  skos:prefLabel "Common Reusable Patterns" ;
+.
+:CompoundName
+  a owl:Class ;
+  a sh:NodeShape ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "CompoundName" ;
+  rdfs:subClassOf :Common ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:minCardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty dct:hasPart ;
+    ] ;
+  skos:definition "An ordered list of name parts. The order may be specified by either a list implementation, by implicit order defined in a formatting specification, or within a more explicit model of name part types." ;
+  <http://xmlns.com/foaf/0.1/depiction> <https://surroundbitbucket.bitbucket.io/3d-cadastre/spec/CompoundName.png> ;
+.
+:Measure
+  a owl:Class ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Qualified Measurement" ;
+  rdfs:subClassOf :Common ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality 1 ;
+      owl:onProperty :value ;
+    ] ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:maxCardinality 1 ;
+      owl:onProperty :qualityMeasure ;
+    ] ;
+.
+:NamePart
+  a owl:Class ;
+  a sh:NodeShape ;
+  rdfs:comment "Name Parts may be specialised by local business rules and support additional referential and syntactic requirements. Localised models may define implicit order for constructing a compound name if no format is specified in a containing CompoundName." ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Name Part" ;
+  rdfs:subClassOf :Common ;
+  rdfs:subClassOf [
+      a owl:Restriction ;
+      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+      owl:onProperty skos:prefLabel ;
+    ] ;
+  skos:definition "An ordered part of a compound name." ;
+.
+:RelevantJurisdictionalCodelist
+  a owl:Class ;
+  a sh:NodeShape ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Relevant Jurisdictional Codelist" ;
+  rdfs:subClassOf skos:ConceptScheme ;
+  rdfs:subClassOf :Common ;
+  skos:definition "A codelist that will be defined in each implementing jurisdiction" ;
+.
+:Report
+  a owl:Class ;
+  a sh:NodeShape ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Report" ;
+  rdfs:subClassOf prof:ResourceDescriptor ;
+  rdfs:subClassOf :Common ;
+  skos:definition "An arbitrary report of a known type, with metadata about its purpose and format as required." ;
+  skos:editorialNote "Logical model using the ResourceDescriptor pattern from the Profiles vocabulary to allow specification of what form the report or document is in. " ;
+.
+:name
+  a owl:ObjectProperty ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:comment "a label property may be present on the subject with the preferred formatting of a compound name." ;
+  rdfs:label "Name" ;
+  rdfs:range :CompoundName ;
+  skos:definition "A name composed of components according to localised implementation requirements." ;
+.
+:qualityMeasure
+  a owl:DatatypeProperty ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Quality Measure" ;
+  rdfs:range xsd:decimal ;
+  skos:definition "a numeric quality measure" ;
+  skos:scopeNote "This has not been fully modelled - a placeholder - for an ISO 19157 DQV concept" ;
+.
+:qualityClass
+  a owl:ObjectProperty ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "Quality Class" ;
+  skos:scopeNote "A reference to a code indicating a quality class" ;
+.
+:value
+  a owl:DatatypeProperty ;
+  rdfs:isDefinedBy ont: ;
+  rdfs:label "value" ;
+  rdfs:range xsd:decimal ;
+.
