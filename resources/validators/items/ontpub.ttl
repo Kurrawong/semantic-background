@@ -47,7 +47,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property
         [
-            sh:message "Requirement 2.1.13 Any licence pertaining to the reuse of a ontology's content SHOULD be given using the schema:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in text, a literal text field may be indicated" ;
+            sh:message "Requirement 2.1.12 Any licence pertaining to the reuse of an ontology's content SHOULD be given using the schema:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in text, a literal text field may be indicated" ;
             sh:or (
                 
                 [
@@ -792,7 +792,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ont:
     a owl:Ontology ;
     owl:versionIRI :1.5 ;
-    owl:versionInfo """1.5 2026-01: allow schema:licese to indicate an IRI
+    owl:versionInfo """1.5 2026-01: allow schema:license to indicate an IRI
 
 1.4 2025-07: Changed to linked.data.gov.au IRI
 

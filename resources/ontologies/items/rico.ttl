@@ -921,7 +921,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ] ;
     rdfs:subPropertyOf :thingIsContextOfRelation ;
     owl:inverseOf :asConcernsActivity ;
-    schema:description "Connects an Activity to an Agent Temporal Relation (when the Activity is transferred from an Agent to another one) or a Mandate Relation (the Mandate assigns the  Activity to the Agent or defines it)." ;
+    schema:description "Connects an Activity to an Agent Temporal Relation (when the Activity is transferred from an Agent to another one) or a Mandate Relation (the Mandate assigns the Activity to the Agent or defines it)." ;
     schema:name "activity is context of relation" ;
 .
 
@@ -1668,10 +1668,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :hasOrHadAllMembersWithCategory ;
     owl:inverseOf :isOrWasContentTypeOfAllMembersOf ;
     schema:description "Connects a Record Set and a Content Type that categorizes all the Records or Record Parts that are or were included in the Record Set." ;
-    schema:name
-        "has or had all members with content type" ,
-        "tienen o tenían todos sus miembros como tipo de contenido"@es ,
-        "inclut ou a inclus des membres ayant tous pour type de contenu"@fr ;
+    schema:name "has or had all members with content type" ;
 .
 
 :hasOrHadAllMembersWithCreationDate
@@ -1682,10 +1679,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :hasBeginningDate ;
     owl:inverseOf :isOrWasCreationDateOfAllMembersOf ;
     schema:description "Inverse of 'is or was creation date of all members of' object property" ;
-    schema:name
-        "has or had all members with creation date" ,
-        "tienen o tenían todos sus miembros como fecha de creación"@es ,
-        "inclut ou a inclus des membres ayant tous pour date de création"@fr ;
+    schema:name "has or had all members with creation date" ;
     :RiCCMCorrespondingComponent "RiC-R081i ('has or had all members with creation date' relation)" ;
 .
 
@@ -1719,9 +1713,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :hasOrHadAllMembersWithCategory ;
     owl:inverseOf :isOrWasLegalStatusOfAllMembersOf ;
     schema:description "Connects a Record Set and a Legal Status that categorizes all the Records or Record Parts that are or were included in the Record Set." ;
-    schema:name
-        "has or had all members with legal status" ,
-        "inclut ou a inclus des membres ayant tous pour statut légal"@fr ;
+    schema:name "has or had all members with legal status" ;
 .
 
 :hasOrHadAllMembersWithRecordState
@@ -1732,10 +1724,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :hasOrHadAllMembersWithCategory ;
     owl:inverseOf :isOrWasRecordStateOfAllMembersOf ;
     schema:description "Connects a Record Set and a Record State that categorizes all the Records or Record Parts that are or were included in the Record Set." ;
-    schema:name
-        "has or had all members with record state" ,
-        "tiene o tenían todos sus miembros como estado de documento"@es ,
-        "inclut ou a inclus des membres ayant tous pour état"@fr ;
+    schema:name "has or had all members with record state" ;
 .
 
 :hasOrHadAnalogueInstantiation
@@ -1861,10 +1850,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         :relationHasSource
     ) ;
     schema:description "Inverse of 'is or was holder of intellectual property rights of' object property." ;
-    schema:name
-        "has or had intellectual property rights holder" ,
-        "tiene o tenía como titular de derechos de propiedad intelectual a"@es ,
-        "a ou a détenu les droits de propriété intellectuelle sur"@fr ;
+    schema:name "has or had intellectual property rights holder" ;
     :RiCCMCorrespondingComponent "RiC-R040i ('has or had intellectual property rights holder ' relation)" ;
 .
 
@@ -1982,10 +1968,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :hasOrHadSomeMembersWithCreationDate ;
     owl:inverseOf :isOrWasCreationDateOfMostMembersOf ;
     schema:description "Inverse of 'is or was creation date of most members of' object property" ;
-    schema:name
-        "has or had most members with creation date" ,
-        "tienen o tenían la mayoría de sus miembros como fecha de creación"@es ,
-        "inclut ou a inclus des membres dont la plupart ont pour date de création"@fr ;
+    schema:name "has or had most members with creation date" ;
     :RiCCMCorrespondingComponent "RiC-R083i ('has or had most members with creation date' relation)" ;
 .
 
@@ -2082,10 +2065,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :hasOrHadSomeMembersWithCategory ;
     owl:inverseOf :isOrWasContentTypeOfSomeMembersOf ;
     schema:description "Connects a Record Set and a Content Type that categorizes some of the Records or Record Parts that are or were included in the Record Set." ;
-    schema:name
-        "has or had some members with content type" ,
-        "tienen o tenían algunos de sus miembros como tipo de contenido"@es ,
-        "inclut ou a inclus des membres ayant pour type de contenu"@fr ;
+    schema:name "has or had some members with content type" ;
 .
 
 :hasOrHadSomeMembersWithDocumentaryFormType
@@ -2096,10 +2076,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :hasOrHadSomeMembersWithCategory ;
     owl:inverseOf :isOrWasDocumentaryFormTypeOfSomeMembersOf ;
     schema:description "Connects a Record Set and a Documentary Form Type that categorizes some of the Records or Record Parts that are or were included in the Record Set." ;
-    schema:name
-        "has or had some members with documentary form type" ,
-        "tienen o tenía algunos de sus miembros como tipo documental"@es ,
-        "inclut ou a inclus des membres ayant pour type de document"@fr ;
+    schema:name "has or had some members with documentary form type" ;
 .
 
 :hasOrHadSomeMembersWithLanguage
@@ -2121,10 +2098,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :hasOrHadSomeMembersWithCategory ;
     owl:inverseOf :isOrWasLegalStatusOfSomeMembersOf ;
     schema:description "Connects a Record Set and a Legal Status that categorizes some of the Records or Record Parts that are or were included in the Record Set." ;
-    schema:name
-        "has or had some members with legal status" ,
-        "tienen o tenían algunos de sus miembros como status jurídico"@es ,
-        "inclut ou a inclus des membres ayant pour statut légal"@fr ;
+    schema:name "has or had some members with legal status" ;
 .
 
 :hasOrHadSomeMembersWithRecordState
@@ -2135,10 +2109,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :hasOrHadSomeMembersWithCategory ;
     owl:inverseOf :isOrWasRecordStateOfSomeMembersOf ;
     schema:description "Connects a Record Set and a Record State that categorizes some of the Records or Record Parts that are or were included in the Record Set." ;
-    schema:name
-        "has or had some members with record state" ,
-        "tienen o tenía algunos de sus miembros como estado de documento"@es ,
-        "inclut ou a inclus des membres ayant pour état"@fr ;
+    schema:name "has or had some members with record state" ;
 .
 
 :hasOrHadStudent
@@ -2448,9 +2419,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :thingIsContextOfRelation ;
     owl:inverseOf :authorizingAgent ;
     schema:description "Connects an Agent that assigns the Mandate, to a Mandate Relation." ;
-    schema:name
-        "is authorizing agent in mandate relation" ,
-        "est l’agent donnant l’autorisation dans la relation impliquant un mandat"@fr ;
+    schema:name "is authorizing agent in mandate relation" ;
 .
 
 :isBirthDateOf
@@ -2972,10 +2941,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     owl:inverseOf :hasOrHadMostMembersWithCreationDate ;
     skos:scopeNote "To be used for specifying a bulk date, i.e. the predominant date of the members of the record set." ;
     schema:description "Connects a Date to a Record Set most of whose present or past members were created at this Date." ;
-    schema:name
-        "is or was creation date of most members of" ,
-        "es o era fecha de creación de la mayoría de los miembros de"@es ,
-        "est ou a été la date de création de la plupart des membres de"@fr ;
+    schema:name "is or was creation date of most members of" ;
     :RiCCMCorrespondingComponent "RiC-R083 ('is or was creation date of most members of' relation)" ;
 .
 
@@ -3114,10 +3080,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         :relationHasTarget
     ) ;
     schema:description "Connects an Agent to a Record Resource or Instantiation on which the Agent has or had some intellectual property rights." ;
-    schema:name
-        "is or was holder of intellectual property rights of" ,
-        "es o era conservador de derechos de propiedad intelectual de"@es ,
-        "détient ou a détenu les droits de propriété intellectuelle sur"@fr ;
+    schema:name "is or was holder of intellectual property rights of" ;
     :RiCCMCorrespondingComponent "RiC-R040 ('is or was holder of intellectual property rights of' relation)" ;
 .
 
@@ -3831,7 +3794,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         "Watermarked" ,
         "carrier heavily foxed" ,
         "some loss of text due to rodent damage" ;
-    skos:scopeNote "Not to be confused with the intellectual completeness of a Record Resource and its sub-entities, which is covered by the Integrity attribute. May include digital file fixity. " ;
+    skos:scopeNote "Not to be confused with the intellectual completeness of a Record Resource and its sub-entities, which is covered by the Integrity attribute. May include digital file fixity." ;
     schema:description "Information about the physical features, completeness, or conservation status of an Instantiation. Includes information about the physical nature and condition  such as conservation status or the deterioration of an Instantiation (for example its carrier) affecting the ability to recover information. " ;
     schema:name "physical characteristics note" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-A31 (Physical Characteristics Note attribute)" ;
@@ -4132,7 +4095,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             owl:hasSelf true ;
             owl:onProperty :accumulationRelation_role ;
         ] ;
-    schema:description "Connects at least one Record Resource or Instantiation to at least one Agent, when the Record Resource or Instantiation is or was accumulated by the Agent, be it  intentionally (collecting it) or not (receiving it in the course of its activities). The Record Resource(s) or Instantiation(s) is the source of the Relation, and the Agent(s) is the  target." ;
+    schema:description "Connects at least one Record Resource or Instantiation to at least one Agent, when the Record Resource or Instantiation is or was accumulated by the Agent, be it  intentionally (collecting it) or not (receiving it in the course of its activities). The Record Resource(s) or Instantiation(s)  is the source of the Relation, and the Agent(s) is the  target." ;
     schema:name "Accumulation Relation" ;
     :RiCCMCorrespondingComponent "Class implementation of RiC-R028 and RiC-R028i relations" ;
 .
@@ -4539,7 +4502,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             owl:onProperty :migrationRelation_role ;
         ] ;
     skos:scopeNote "Use for digital instantiations." ;
-    schema:description "Connects an Instantiation and at least another Instantiation it has been migrated into. The Relation is oriented chronologically, from the first Instantiation in  time (the migrated one) to the one which results from its migration: the first Instantiation in time is the source of the Relation, and the resulting Instantiation is the target." ;
+    schema:description "Connects an Instantiation and at least another Instantiation it has been migrated into. The Relation is oriented chronologically, from the first Instantiation in  time (the migrated one) to the one which results from its migration: the first Instantiation in time is the source of the Relation,  and the resulting Instantiation is the target." ;
     schema:name "Migration Relation" ;
     :RiCCMCorrespondingComponent "Class implementation of RiC-R015 and RiC-R015i relations" ;
 .
@@ -4773,7 +4736,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             owl:hasSelf true ;
             owl:onProperty :recordResourceGeneticRelation_role ;
         ] ;
-    schema:description "Connects two or more record resources when there is a genetic link between them. Genetic in this sense is as defined by diplomatics, i.e., the process by which a  record resource is developed. This Relation is a generic, not oriented one." ;
+    schema:description "Connects two or more record resources when there is a genetic link between them. Genetic in this sense is as defined by diplomatics,  i.e., the process by which a  record resource is developed. This Relation is a generic, not oriented one." ;
     schema:name "Record Resource Genetic Relation" ;
     :RiCCMCorrespondingComponent "Class implementation of RiC-R023 and RiC-023i relations" ;
 .
@@ -4808,10 +4771,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             owl:onProperty :recordResourceHoldingRelation_role ;
         ] ;
     schema:description "Connects at least one Agent and one or more Record Resource or Instantiation that the Agent(s) hold(s) or held. The Agent(s) is the source of the Relation and the Record Resource(s) or Instantiation is the target." ;
-    schema:name
-        "Record Resource Holding Relation" ,
-        "Relación entre agentes y recursos documentales que conservan"@es ,
-        "Relation entre agents et ressources archivistiques ou instanciations conservées"@fr ;
+    schema:name "Record Resource Holding Relation" ;
     :RiCCMCorrespondingComponent "Class implementation of RiC-R039 and RiC-039i relations" ;
 .
 
@@ -4838,7 +4798,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             owl:hasSelf true ;
             owl:onProperty :recordResourceToInstantiationRelation_role ;
         ] ;
-    skos:scopeNote "In some situations, it may be useful or necessary to connect a record resource to an instantiation that no longer exists or has been lost, when some of its  characteristics are known from a source, such as an old finding aid." ;
+    skos:scopeNote "In some situations, it may be useful or necessary to connect a record resource to an instantiation that no longer exists or has been lost,  when some of its  characteristics are known from a source, such as an old finding aid." ;
     schema:description "Connects a Record Resource to one or more Instantiations that instantiate it, and which either may exist or may have been lost or destroyed. The Record Resource  is the source of the Relation and the Instantiation(s) is the target." ;
     schema:name "Record Resource to Instantiation Relation" ;
     :RiCCMCorrespondingComponent "Class implementation of RiC-R025 and RiC-R025i relations" ;
@@ -4848,7 +4808,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :Type ;
-    skos:scopeNote "Four instances of Record Set Type are included for now in RiC-O; they also are instances of skos:Concept and, as such, part of a SKOS vocabulary. Record Set Type may  also be used (or extended) to categorize types of Record Set that have not traditionally been considered archival, e.g. search result list." ;
+    skos:scopeNote "Four instances of Record Set Type are included for now in RiC-O; they also are instances of skos:Concept and, as such, part of a SKOS  vocabulary. Record Set Type may  also be used (or extended) to categorize types of Record Set that have not traditionally been considered archival, e.g. search result list." ;
     schema:description "A broad categorization of the type of Record Set." ;
     schema:name "Record Set Type" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-A36 (Record Set Type attribute)" ;
@@ -4858,7 +4818,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :Type ;
-    skos:scopeNote "Can be unmediated (which allows humans to receive the message communicated without an intermediation of a device) and mediated (which needs a device to decode the  message). A lot of contemporary mediated types are digital. Each representation type may present specific features: bit rate for audio, resolution for digital images, encoding format for video etc. Depending on the type, specific attributes may be added to describe their characteristics." ;
+    skos:scopeNote "Can be unmediated (which allows humans to receive the message communicated without an intermediation of a device) and mediated (which needs a device to decode the  message). A lot of contemporary mediated types are digital. Each representation type may present specific features: bit rate for audio,  resolution for digital images, encoding format for video etc. Depending on the type, specific attributes may be added to describe their characteristics." ;
     schema:description "Method of recording the content type of an Instantiation" ;
     schema:name "Representation Type" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-A37 (Representation Type attribute)" ;
@@ -5051,12 +5011,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :CorrespondenceRelation ;
     rdfs:subPropertyOf :knowingRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the CorrespondenceRelation class. It should be used only when you have to manage instances of the CorrespondenceRelation class, to connect  each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the CorrespondenceRelation class. It should be used only when you have to manage instances of the CorrespondenceRelation class, to connect  each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a CorrespondenceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
-    schema:name
-        "has the role of the Correspondence Relation" ,
-        "desempeña el papel de la Relación entre personas por correspondencia"@es ,
-        "a le rôle de la Relation épistolaire"@fr ;
+    schema:name "has the role of the Correspondence Relation" ;
 .
 
 :followsInSequenceTransitive
@@ -5080,12 +5037,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :FunctionalEquivalenceRelation ;
     rdfs:subPropertyOf :instantiationToInstantiationRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the FunctionalEquivalenceRelation class. It should be used only when you have to manage instances of the FunctionalEquivalenceRelation  class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the FunctionalEquivalenceRelation class. It should be used only when you have to manage instances of the FunctionalEquivalenceRelation  class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a FunctionalEquivalenceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore  a knowledge graph." ;
-    schema:name
-        "has the role of the Functional Equivalence Relation" ,
-        "desempeña el papel de la Relación de equivalencia funcional"@es ,
-        "a le rôle de la Relation d’équivalence fonctionnelle"@fr ;
+    schema:name "has the role of the Functional Equivalence Relation" ;
 .
 
 :hadSubordinate
@@ -5322,10 +5276,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :hasBeginningDate ;
     owl:inverseOf :isOrWasCreationDateOfSomeMembersOf ;
     schema:description "Inverse of 'is or was creation date of some members of' object property" ;
-    schema:name
-        "has or had some members with creation date" ,
-        "tienen o tenían algunos de sus miembros como fecha de creación"@es ,
-        "inclut ou a inclus des membres ayant pour date de création"@fr ;
+    schema:name "has or had some members with creation date" ;
     :RiCCMCorrespondingComponent "RiC-R082i ('has or had some members with creation date' relation)" ;
 .
 
@@ -5696,12 +5647,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :RecordResourceGeneticRelation ;
     rdfs:subPropertyOf :recordResourceToRecordResourceRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the RecordResourceGeneticRelation class. It should be used only when you have to manage instances of the RecordResourceGeneticRelation  class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the RecordResourceGeneticRelation class. It should be used only when you have to manage instances of the RecordResourceGeneticRelation  class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a RecordResourceGeneticRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore  a knowledge graph." ;
-    schema:name
-        "has the role of the Record Resource Genetic Relation" ,
-        "desempeña el papel de la Relación genética entre recursos documentales"@es ,
-        "a le rôle de la Relation génétique entre des ressources archivistiques"@fr ;
+    schema:name "has the role of the Record Resource Genetic Relation" ;
 .
 
 :referenceSystem
@@ -5745,12 +5693,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :SiblingRelation ;
     rdfs:subPropertyOf :familyRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the SiblingRelation class. It should be used only when you have to manage instances of the SiblingRelation class, to connect each instance  to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the SiblingRelation class. It should be used only when you have to manage instances of the SiblingRelation class,  to connect each instance  to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a SiblingRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
-    schema:name
-        "has the role of the Sibling Relation" ,
-        "desempeña el papel de la Relación familiar entre hermanos"@es ,
-        "a le rôle de la Relation de fratrie"@fr ;
+    schema:name "has the role of the Sibling Relation" ;
 .
 
 :spouseRelation_role
@@ -5761,12 +5706,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :SpouseRelation ;
     rdfs:subPropertyOf :familyRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the SpouseRelation class. It should be used only when you have to manage instances of the SpouseRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the SpouseRelation class. It should be used only when you have to manage instances of the SpouseRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a SpouseRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
-    schema:name
-        "has the role of the Spouse Relation" ,
-        "desempeña el papel de la Relación matrimonial entre personas"@es ,
-        "a le rôle de la Relation matrimoniale"@fr ;
+    schema:name "has the role of the Spouse Relation" ;
 .
 
 :structure
@@ -5810,7 +5752,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :WorkRelation ;
     rdfs:subPropertyOf :agentToAgentRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the WorkRelation class. It should be used only when you have to manage instances of the WorkRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the WorkRelation class. It should be used only when you have to manage instances of the WorkRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a WorkRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Work Relation" ;
 .
@@ -5859,7 +5801,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :Type ;
-    skos:scopeNote "Can be extended with any number of specific subclasses. Among possible specific demographic groups are gender, (biological) sex, education, identity, place, ancestry, ethnic/cultural identification, and religion." ;
+    skos:scopeNote "Can be extended with any number of specific subclasses. Among possible specific demographic groups are gender, (biological) sex, education,  identity, place, ancestry, ethnic/cultural identification, and religion." ;
     schema:description "Categorization of a Person or Group based on shared characteristics." ;
     schema:name "Demographic Group" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-A15 (Demographic Group attribute)" ;
@@ -5890,7 +5832,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             owl:onProperty :derivationRelation_role ;
         ] ;
     skos:scopeNote "In some situations, it may be useful or necessary to connect an instantiation to an instantiation that was derived from it but no longer exists or has been lost." ;
-    schema:description "Connects an Instantiation to at least one Instantiation that is derived from it, whether it exists or has been lost or destroyed. The Relation is oriented  chronologically, from the first Instantiation in time to the derived Instantiation: the first Instantiation is the source of the Relation, and the derived Instantiation(s) is the  target." ;
+    schema:description "Connects an Instantiation to at least one Instantiation that is derived from it, whether it exists or has been lost or destroyed. The Relation is oriented  chronologically, from the first Instantiation in time to the derived Instantiation: the first Instantiation is the source of the Relation,  and the derived Instantiation(s) is the  target." ;
     schema:name "Derivation Relation" ;
     :RiCCMCorrespondingComponent "Class implementation of RiC-R014 and RiR014i relations" ;
 .
@@ -6084,8 +6026,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :AccumulationRelation ;
     rdfs:subPropertyOf :organicProvenanceRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the AccumulationRelation class. It should be used only when you have to manage instances of the AccumulationRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a AccumulationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
+    skos:scopeNote "This property 'rolifies' the AccumulationRelation class. It should be used only when you have to manage instances of the AccumulationRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a AccumulationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a  knowledge graph." ;
     schema:name "has the role of the Accumulation Relation" ;
 .
 
@@ -6099,12 +6041,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf
         :eventRelation_role ,
         :organicOrFunctionalProvenanceRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the ActivityDocumentationRelation class. It should be used only when you have to manage instances of the ActivityDocumentationRelation  class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the ActivityDocumentationRelation class. It should be used only when you have to manage instances of the ActivityDocumentationRelation  class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a ActivityDocumentationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore  a knowledge graph." ;
-    schema:name
-        "has the role of the Activity Documentation Relation" ,
-        "desempeña el papel de la Relación de procedencia funcional"@es ,
-        "a le rôle de la Relation entre activités et ressources archivistiques"@fr ;
+    schema:name "has the role of the Activity Documentation Relation" ;
 .
 
 :appellationRelation_role
@@ -6115,8 +6054,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :AppellationRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the AppellationRelation class. It should be used only when you have to manage instances of the AppellationRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a AppellationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
+    skos:scopeNote "This property 'rolifies' the AppellationRelation class. It should be used only when you have to manage instances of the AppellationRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a AppellationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a  knowledge graph." ;
     schema:name "has the role of the Appellation Relation" ;
 .
 
@@ -6128,11 +6067,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :AuthorshipRelation ;
     rdfs:subPropertyOf :creationRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the AuthorshipRelation class. It should be used only when you have to manage instances of the AuthorshipRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a AuthorshipRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge graph." ;
-    schema:name
-        "has the role of the Authorship Relation" ,
-        "a le rôle de la Relation de responsabilité intellectuelle"@fr ;
+    skos:scopeNote "This property 'rolifies' the AuthorshipRelation class. It should be used only when you have to manage instances of the AuthorshipRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a AuthorshipRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a knowledge graph." ;
+    schema:name "has the role of the Authorship Relation" ;
 .
 
 :beginningDate
@@ -6155,7 +6092,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :ChildRelation ;
     rdfs:subPropertyOf :descendanceRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the ChildRelation class. It should be used only when you have to manage instances of the ChildRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the ChildRelation class. It should be used only when you have to manage instances of the ChildRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a ChildRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Child Relation" ;
 .
@@ -6198,12 +6135,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf
         :agentHierarchicalRelation_role ,
         :wholePartRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the GroupSubdivisionRelation class. It should be used only when you have to manage instances of the GroupSubdivisionRelation class, to  connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a GroupSubdivisionRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
-    schema:name
-        "has the role of the Group Subdivision Relation" ,
-        "desempeña el papel de la Relación de subdivisión entre grupos de agentes"@es ,
-        "a le rôle de la Relation de subdivision entre groupes d’agents"@fr ;
+    skos:scopeNote "This property 'rolifies' the GroupSubdivisionRelation class. It should be used only when you have to manage instances of the GroupSubdivisionRelation class, to  connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a GroupSubdivisionRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary,  e.g. when you explore a  knowledge graph." ;
+    schema:name "has the role of the Group Subdivision Relation" ;
 .
 
 :hasAccumulator
@@ -6452,12 +6386,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :IntellectualPropertyRightsRelation ;
     rdfs:subPropertyOf :authorityRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the IntellectualPropertyRightsRelation class. It should be used only when you have to manage instances of the  IntellectualPropertyRightsRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the IntellectualPropertyRightsRelation class. It should be used only when you have to manage instances of the IntellectualPropertyRightsRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a IntellectualPropertyRightsRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you  explore a knowledge graph." ;
-    schema:name
-        "has the role of the Intellectual Property Rights Relation" ,
-        "desempeña el papel de la Relación de propiedad intelectual"@es ,
-        "a le rôle de la Relation de propriété intellectuelle"@fr ;
+    schema:name "has the role of the Intellectual Property Rights Relation" ;
 .
 
 :isAccumulatorOf
@@ -6717,12 +6648,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :KnowingOfRelation ;
     rdfs:subPropertyOf :agentToAgentRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the KnowingOfRelation class. It should be used only when you have to manage instances of the KnowingOfRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the KnowingOfRelation class. It should be used only when you have to manage instances of the KnowingOfRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a KnowingOfRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
-    schema:name
-        "has the role of the Knowing Of Relation" ,
-        "desempeña el papel de la Relación de conocimieto indirecto entre personas"@es ,
-        "a le rôle de la Relation de connaissance à propos d’une personne"@fr ;
+    schema:name "has the role of the Knowing Of Relation" ;
 .
 
 :knows
@@ -6752,8 +6680,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :LeadershipRelation ;
     rdfs:subPropertyOf :agentControlRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the LeadershipRelation class. It should be used only when you have to manage instances of the LeadershipRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a LeadershipRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge graph." ;
+    skos:scopeNote "This property 'rolifies' the LeadershipRelation class. It should be used only when you have to manage instances of the LeadershipRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a LeadershipRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a knowledge graph." ;
     schema:name "has the role of the Leadership Relation" ;
 .
 
@@ -6765,7 +6693,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :MandateRelation ;
     rdfs:subPropertyOf :ruleRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the MandateRelation class. It should be used only when you have to manage instances of the MandateRelation class, to connect each instance  to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the MandateRelation class. It should be used only when you have to manage instances of the MandateRelation class,  to connect each instance  to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a MandateRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Mandate Relation" ;
 .
@@ -6778,8 +6706,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :MembershipRelation ;
     rdfs:subPropertyOf :agentToAgentRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the MembershipRelation class. It should be used only when you have to manage instances of the MembershipRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a MembershipRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge graph." ;
+    skos:scopeNote "This property 'rolifies' the MembershipRelation class. It should be used only when you have to manage instances of the MembershipRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a MembershipRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a knowledge graph." ;
     schema:name "has the role of the Membership Relation" ;
 .
 
@@ -6791,12 +6719,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :MigrationRelation ;
     rdfs:subPropertyOf :derivationRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the MigrationRelation class. It should be used only when you have to manage instances of the MigrationRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the MigrationRelation class. It should be used only when you have to manage instances of the MigrationRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a MigrationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
-    schema:name
-        "has the role of the Migration Relation" ,
-        "desempeña el papel de la Relación de migración entre instanciaciones"@es ,
-        "a le rôle de la Relation de migration"@fr ;
+    schema:name "has the role of the Migration Relation" ;
 .
 
 :ownershipRelation_role
@@ -6807,7 +6732,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :OwnershipRelation ;
     rdfs:subPropertyOf :authorityRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the OwnershipRelation class. It should be used only when you have to manage instances of the OwnershipRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the OwnershipRelation class. It should be used only when you have to manage instances of the OwnershipRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a OwnershipRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Ownership Relation" ;
 .
@@ -6820,12 +6745,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :PerformanceRelation ;
     rdfs:subPropertyOf :eventRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the PerformanceRelation class. It should be used only when you have to manage instances of the PerformanceRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a PerformanceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
-    schema:name
-        "has the role of the Performance Relation" ,
-        "desempeña el papel de la Relación de desarrollo funcional"@es ,
-        "a le rôle de la Relation entre activités et agents"@fr ;
+    skos:scopeNote "This property 'rolifies' the PerformanceRelation class. It should be used only when you have to manage instances of the PerformanceRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a PerformanceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a  knowledge graph." ;
+    schema:name "has the role of the Performance Relation" ;
 .
 
 :physicalOrLogicalExtent
@@ -6852,7 +6774,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :PlaceRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the PlaceRelation class. It should be used only when you have to manage instances of the PlaceRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the PlaceRelation class. It should be used only when you have to manage instances of the PlaceRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a PlaceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Place Relation" ;
 .
@@ -6865,12 +6787,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :PositionHoldingRelation ;
     rdfs:subPropertyOf :agentToAgentRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the PositionHoldingRelation class. It should be used only when you have to manage instances of the PositionHoldingRelation class, to  connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a PositionHoldingRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
-    schema:name
-        "has the role of the Position Holding Relation" ,
-        "desempeña el papel de la Relación de ocupación entre una persona y un puesto"@es ,
-        "a le rôle de la Relation entre une personne et un poste"@fr ;
+    skos:scopeNote "This property 'rolifies' the PositionHoldingRelation class. It should be used only when you have to manage instances of the PositionHoldingRelation class, to  connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a PositionHoldingRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary,  e.g. when you explore a  knowledge graph." ;
+    schema:name "has the role of the Position Holding Relation" ;
 .
 
 :positionToGroupRelation_role
@@ -6881,12 +6800,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :PositionToGroupRelation ;
     rdfs:subPropertyOf :agentToAgentRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the PositionToGroupRelation class. It should be used only when you have to manage instances of the PositionToGroupRelation class, to  connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a PositionToGroupRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
-    schema:name
-        "has the role of the Position to Group Relation" ,
-        "desempeña el papel de la Relación de ocupación entre un grupo y un puesto"@es ,
-        "a le rôle de la Relation entre un poste et un groupe"@fr ;
+    skos:scopeNote "This property 'rolifies' the PositionToGroupRelation class. It should be used only when you have to manage instances of the PositionToGroupRelation class, to  connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a PositionToGroupRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary,  e.g. when you explore a  knowledge graph." ;
+    schema:name "has the role of the Position to Group Relation" ;
 .
 
 :recordResourceHoldingRelation_role
@@ -6897,12 +6813,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :RecordResourceHoldingRelation ;
     rdfs:subPropertyOf :managementRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the RecordResourceHoldingRelation class. It should be used only when you have to manage instances of the RecordResourceHoldingRelation  class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the RecordResourceHoldingRelation class. It should be used only when you have to manage instances of the RecordResourceHoldingRelation  class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a RecordResourceHoldingRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore  a knowledge graph." ;
-    schema:name
-        "has the role of the Record Resource Holding Relation" ,
-        "desempeña el papel de la Relación entre agentes y recursos documentales que conservan"@es ,
-        "a le rôle de la Relation entre agents et ressources archivistiques ou instanciations conservées"@fr ;
+    schema:name "has the role of the Record Resource Holding Relation" ;
 .
 
 :recordResourceToInstantiationRelation_role
@@ -6913,12 +6826,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :RecordResourceToInstantiationRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the RecordResourceToInstantiationRelation class. It should be used only when you have to manage instances of the  RecordResourceToInstantiationRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this  n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the RecordResourceToInstantiationRelation class. It should be used only when you have to manage instances of the RecordResourceToInstantiationRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this  n-ary class." ;
     schema:description "Connects a RecordResourceToInstantiationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you  explore a knowledge graph." ;
-    schema:name
-        "has the role of the Record Resource to Instantiation Relation" ,
-        "desempeña el papel de la Relación de recurso documental a instanciación"@es ,
-        "a le rôle de la Relation d’instanciation"@fr ;
+    schema:name "has the role of the Record Resource to Instantiation Relation" ;
 .
 
 :recordResourceToRecordResourceRelation_role
@@ -6929,12 +6839,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :RecordResourceToRecordResourceRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the RecordResourceToRecordResourceRelation class. It should be used only when you have to manage instances of the  RecordResourceToRecordResourceRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this  n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the RecordResourceToRecordResourceRelation class. It should be used only when you have to manage instances of the RecordResourceToRecordResourceRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this  n-ary class." ;
     schema:description "Connects a RecordResourceToRecordResourceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge graph." ;
-    schema:name
-        "has the role of the Record Resource to Record Resource Relation" ,
-        "desempeña el papel de la Relación entre recursos documentales"@es ,
-        "a le rôle de la Relation entre ressources archivistiques"@fr ;
+    schema:name "has the role of the Record Resource to Record Resource Relation" ;
 .
 
 :teachingRelation_role
@@ -6945,7 +6852,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :TeachingRelation ;
     rdfs:subPropertyOf :knowingRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the TeachingRelation class. It should be used only when you have to manage instances of the TeachingRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the TeachingRelation class. It should be used only when you have to manage instances of the TeachingRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a TeachingRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Teaching Relation" ;
 .
@@ -6974,7 +6881,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :TypeRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the TypeRelation class. It should be used only when you have to manage instances of the TypeRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the TypeRelation class. It should be used only when you have to manage instances of the TypeRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a TypeRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Type Relation" ;
 .
@@ -7283,12 +7190,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf
         :agentHierarchicalRelation_role ,
         :authorityRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the AgentControlRelation class. It should be used only when you have to manage instances of the AgentControlRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a AgentControlRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
-    schema:name
-        "has the role of the Agent Control Relation" ,
-        "desempeña el papel de la Relación de control entre agentes"@es ,
-        "a le rôle de la Relation de contrôle entre agents"@fr ;
+    skos:scopeNote "This property 'rolifies' the AgentControlRelation class. It should be used only when you have to manage instances of the AgentControlRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a AgentControlRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a  knowledge graph." ;
+    schema:name "has the role of the Agent Control Relation" ;
 .
 
 :agentTemporalRelation_role
@@ -7301,12 +7205,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf
         :agentToAgentRelation_role ,
         :temporalRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the AgentTemporalRelation class. It should be used only when you have to manage instances of the AgentTemporalRelation class, to connect  each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a AgentTemporalRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
-    schema:name
-        "has the role of the Agent Temporal Relation" ,
-        "desempeña el papel de la Relación temporal entre agentes"@es ,
-        "a le rôle de la Relation temporelle entre agents"@fr ;
+    skos:scopeNote "This property 'rolifies' the AgentTemporalRelation class. It should be used only when you have to manage instances of the AgentTemporalRelation class, to connect  each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a AgentTemporalRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a  knowledge graph." ;
+    schema:name "has the role of the Agent Temporal Relation" ;
 .
 
 :creationRelation_role
@@ -7317,7 +7218,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :CreationRelation ;
     rdfs:subPropertyOf :organicProvenanceRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the CreationRelation class. It should be used only when you have to manage instances of the CreationRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the CreationRelation class. It should be used only when you have to manage instances of the CreationRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a CreationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Creation Relation" ;
 .
@@ -7343,8 +7244,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf
         :instantiationToInstantiationRelation_role ,
         :temporalRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the DerivationRelation class. It should be used only when you have to manage instances of the DerivationRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a DerivationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge graph." ;
+    skos:scopeNote "This property 'rolifies' the DerivationRelation class. It should be used only when you have to manage instances of the DerivationRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a DerivationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a knowledge graph." ;
     schema:name "has the role of the Derivation Relation" ;
 .
 
@@ -7358,8 +7259,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf
         :agentTemporalRelation_role ,
         :familyRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the DescendanceRelation class. It should be used only when you have to manage instances of the DescendanceRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a DescendanceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
+    skos:scopeNote "This property 'rolifies' the DescendanceRelation class. It should be used only when you have to manage instances of the DescendanceRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a DescendanceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a  knowledge graph." ;
     schema:name "has the role of the Descendance Relation" ;
 .
 
@@ -7450,7 +7351,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :InstantiationToInstantiationRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the InstantiationToInstantiationRelation class. It should be used only when you have to manage instances of the  InstantiationToInstantiationRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this  n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the InstantiationToInstantiationRelation class. It should be used only when you have to manage instances of the   InstantiationToInstantiationRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this  n-ary class." ;
     schema:description "Connects a InstantiationToInstantiationRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you  explore a knowledge graph." ;
     schema:name "has the role of the Instantiation to Instantiation Relation" ;
 .
@@ -7505,12 +7406,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :KnowingRelation ;
     rdfs:subPropertyOf :agentToAgentRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the KnowingRelation class. It should be used only when you have to manage instances of the KnowingRelation class, to connect each instance  to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the KnowingRelation class. It should be used only when you have to manage instances of the KnowingRelation class,  to connect each instance  to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a KnowingRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
-    schema:name
-        "has the role of the Knowing Relation" ,
-        "desempeña el papel de la Relación de conocimiento directo entre personas"@es ,
-        "a le rôle de la Relation de connaissance entre personnes"@fr ;
+    schema:name "has the role of the Knowing Relation" ;
 .
 
 :managementRelation_role
@@ -7521,8 +7419,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :ManagementRelation ;
     rdfs:subPropertyOf :authorityRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the ManagementRelation class. It should be used only when you have to manage instances of the ManagementRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a ManagementRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge graph." ;
+    skos:scopeNote "This property 'rolifies' the ManagementRelation class. It should be used only when you have to manage instances of the ManagementRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a ManagementRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a knowledge graph." ;
     schema:name "has the role of the Management Relation" ;
 .
 
@@ -7538,7 +7436,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         :sequentialRelation_role
         :relationHasTarget
     ) ;
-    skos:scopeNote "The relation does not specify by itself what criteria are used for ordering the sequence. There may actually be zero to many intermediate Entities, ignored or unkown, in the sequence between the two connected Things. Can be used, for example, for specifying that some Record 'precedes' (has next) some Record within a Record Set." ;
+    skos:scopeNote "The relation does not specify by itself what criteria are used for ordering the sequence. There may actually be zero to many intermediate Entities, ignored or unkown, in the sequence between the two connected Things. Can be used, for example, for specifying that some Record 'precedes' (has next)  some Record within a Record Set." ;
     schema:description "Connects a Thing to a Thing that follows or followed it in some sequence." ;
     schema:name "precedes or preceded" ;
     :RiCCMCorrespondingComponent "RiC-R008 ('precedes or preceded' relation)" ;
@@ -7552,7 +7450,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :RuleRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the RuleRelation class. It should be used only when you have to manage instances of the RuleRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the RuleRelation class. It should be used only when you have to manage instances of the RuleRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a RuleRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Rule Relation" ;
 .
@@ -7565,8 +7463,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :SequentialRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the SequentialRelation class. It should be used only when you have to manage instances of the SequentialRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a SequentialRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge graph." ;
+    skos:scopeNote "This property 'rolifies' the SequentialRelation class. It should be used only when you have to manage instances of the SequentialRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a SequentialRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a knowledge graph." ;
     schema:name "has the role of the Sequential Relation" ;
 .
 
@@ -7578,7 +7476,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :WholePartRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the WholePartRelation class. It should be used only when you have to manage instances of the WholePartRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the WholePartRelation class. It should be used only when you have to manage instances of the WholePartRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a WholePartRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Whole Part Relation" ;
 .
@@ -7650,7 +7548,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             owl:hasSelf true ;
             owl:onProperty :creationRelation_role ;
         ] ;
-    skos:scopeNote "Covers the definition of \"author\" in diplomatics, and any agent that makes a contribution to the intellectual content of a record resource. Can also be used for any agent that was involved in the genesis (e.g. with the role of witness, representative of the author etc.) or in the production (e.g. with the role of scribe, secretary, notary, printer  etc.) of the record resource or instantiation." ;
+    skos:scopeNote "Covers the definition of \"author\" in diplomatics, and any agent that makes a contribution to the intellectual content of a record resource. Can also be used for any agent that was involved in the genesis (e.g. with the role of witness, representative of the author etc.) or in the production (e.g.  with the role of scribe, secretary, notary, printer  etc.) of the record resource or instantiation." ;
     schema:description "Connects at least one Record Resource or Instantiation to at least one Agent, when the Agent is either responsible for all or some of the content of the Record  Resource, or is a contributor to the genesis or production of the Instantiation. The Record Resource or Instantiation is the source of the Relation, and the Agent(s) is the target. " ;
     schema:name "Creation Relation" ;
     :RiCCMCorrespondingComponent "Class implementation of RiC-R027 and RiC-R027i relations" ;
@@ -7707,12 +7605,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :AgentHierarchicalRelation ;
     rdfs:subPropertyOf :agentToAgentRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the AgentHierarchicalRelation class. It should be used only when you have to manage instances of the AgentHierarchicalRelation class, to  connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a AgentHierarchicalRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
-    schema:name
-        "has the role of the Agent Hierarchical Relation" ,
-        "desempeña el papel de la Relación jerárquica entre agentes"@es ,
-        "a le rôle de la Relation hiérarchique entre agents"@fr ;
+    skos:scopeNote "This property 'rolifies' the AgentHierarchicalRelation class. It should be used only when you have to manage instances of the AgentHierarchicalRelation class, to  connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a AgentHierarchicalRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary,  e.g. when you explore a  knowledge graph." ;
+    schema:name "has the role of the Agent Hierarchical Relation" ;
 .
 
 :eventRelation_role
@@ -7723,7 +7618,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :EventRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the EventRelation class. It should be used only when you have to manage instances of the EventRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the EventRelation class. It should be used only when you have to manage instances of the EventRelation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a EventRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Event Relation" ;
 .
@@ -7736,7 +7631,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :FamilyRelation ;
     rdfs:subPropertyOf :agentToAgentRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the FamilyRelation class. It should be used only when you have to manage instances of the FamilyRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the FamilyRelation class. It should be used only when you have to manage instances of the FamilyRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a FamilyRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Family Relation" ;
 .
@@ -7749,9 +7644,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:subPropertyOf :isRelatedTo ;
     owl:inverseOf :isOrWasCategoryOfAllMembersOf ;
     schema:description "Connects a Record Set and a Category (Type) to which all the Records or Record Parts that are or were included in the Record Set belong." ;
-    schema:name
-        "has or had all members with category" ,
-        "inclut ou a inclus des membres ayant tous pour catégorie"@fr ;
+    schema:name "has or had all members with category" ;
 .
 
 :hasOrHadAuthorityOver
@@ -7953,12 +7846,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :OrganicOrFunctionalProvenanceRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the OrganicOrFunctionalProvenanceRelation class. It should be used only when you have to manage instances of the  OrganicOrFunctionalProvenanceRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this  n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the OrganicOrFunctionalProvenanceRelation class. It should be used only when you have to manage instances of the   OrganicOrFunctionalProvenanceRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this  n-ary class." ;
     schema:description "Connects a OrganicOrFunctionalProvenanceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you  explore a knowledge graph." ;
-    schema:name
-        "has the role of the Organic or functional provenance Relation" ,
-        "desempeña el papel de la Relación de procedencia orgánica or funcional"@es ,
-        "a le rôle de la Relation de provenance organique ou fonctionnelle"@fr ;
+    schema:name "has the role of the Organic or functional provenance Relation" ;
 .
 
 :organicProvenanceRelation_role
@@ -7969,12 +7859,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :OrganicProvenanceRelation ;
     rdfs:subPropertyOf :organicOrFunctionalProvenanceRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the OrganicProvenanceRelation class. It should be used only when you have to manage instances of the OrganicProvenanceRelation class, to  connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a OrganicProvenanceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
-    schema:name
-        "has the role of the Organic Provenance Relation" ,
-        "desempeña el papel de la Relación de procedencia orgánica"@es ,
-        "a le rôle de la Relation de provenance organique"@fr ;
+    skos:scopeNote "This property 'rolifies' the OrganicProvenanceRelation class. It should be used only when you have to manage instances of the OrganicProvenanceRelation class, to  connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a OrganicProvenanceRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary,  e.g. when you explore a  knowledge graph." ;
+    schema:name "has the role of the Organic Provenance Relation" ;
 .
 
 :temporalRelation_role
@@ -7985,7 +7872,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :TemporalRelation ;
     rdfs:subPropertyOf :sequentialRelation_role ;
-    skos:scopeNote "This property \"rolifies\" the TemporalRelation class. It should be used only when you have to manage instances of the TemporalRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the TemporalRelation class. It should be used only when you have to manage instances of the TemporalRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a TemporalRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
     schema:name "has the role of the Temporal Relation" ;
 .
@@ -8035,7 +7922,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :Type ;
     skos:scopeNote "Documentary Form Type plays an important role in determining the type of information a Record may comprise, its status of perfection, and its authenticity and  reliability. Documentary form types exist in a specific social and cultural context, and within that context, are subject to change over time." ;
-    schema:description "Categorization of a Record or Record Part with respect to its extrinsic and intrinsic elements that together communicate its content, administrative and  documentary context, and authority." ;
+    schema:description "Categorization of a Record or Record Part with respect to its extrinsic and intrinsic elements that together communicate its content,  administrative and  documentary context, and authority." ;
     schema:name "Documentary Form Type" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-A17 (Documentary Form Type attribute)" ;
 .
@@ -8087,7 +7974,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             owl:hasSelf true ;
             owl:onProperty :mandateRelation_role ;
         ] ;
-    schema:description "Connects at least one Mandate and at least one Agent, when the first gives or gave the second one the authority or competencies to act. May also involve one to  many Activities that the Mandate(s) assign(s) or assigned to the Agent(s). The Mandate(s) is the source of the Relation and the Agent(s) is the target." ;
+    schema:description "Connects at least one Mandate and at least one Agent, when the first gives or gave the second one the authority or competencies to act.  May also involve one to  many Activities that the Mandate(s) assign(s) or assigned to the Agent(s). The Mandate(s) is the source of the Relation and the Agent(s) is the target." ;
     schema:name "Mandate Relation" ;
     :RiCCMCorrespondingComponent "Class implementation of RiC-R067 and RiC-R067i relations" ;
 .
@@ -8131,9 +8018,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ) ;
     skos:scopeNote "Use to connect two Record Resources only if it is not possible to use a narrower, more specific, asymmetric Record Resource to Record Resource relation, for example  is original of." ;
     schema:description "Connects two Record Resources when there is a genetic link between them. Genetic in this sense is as defined by diplomatics, i.e. the process by which a Record  Resource is developed. This relation is symmetric." ;
-    schema:name
-        "has genetic link to record resource" ,
-        "a une relation génétique avec la ressource archivistique"@fr ;
+    schema:name "has genetic link to record resource" ;
     :RiCCMCorrespondingComponent "RiC-R023 ('has genetic link to record resource' relation)" ;
 .
 
@@ -8256,12 +8141,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :AuthorityRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the AuthorityRelation class. It should be used only when you have to manage instances of the AuthorityRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the AuthorityRelation class. It should be used only when you have to manage instances of the AuthorityRelation class, to connect each  instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a AuthorityRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge  graph." ;
-    schema:name
-        "has the role of the Authority Relation" ,
-        "desempeña el papel de la Relación de control por parte de agentes"@es ,
-        "a le rôle de la Relation d’autorité"@fr ;
+    schema:name "has the role of the Authority Relation" ;
 .
 
 :followsInTime
@@ -8345,9 +8227,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ) ;
     skos:scopeNote "Use to connect two Record Resources only if it is not possible to use a narrower, more specific relation, for example has genetic link to." ;
     schema:description "Connects two Record Resources. This relation is symmetric." ;
-    schema:name
-        "is record resource associated with record resource" ,
-        "est une ressource archivistique associée avec la ressource archivistique"@fr ;
+    schema:name "is record resource associated with record resource" ;
     :RiCCMCorrespondingComponent "RiC-R022 ('is record resource associated with record resource' relation)" ;
 .
 
@@ -8536,8 +8416,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:range :AgentToAgentRelation ;
     rdfs:subPropertyOf :relation_role ;
-    skos:scopeNote "This property \"rolifies\" the AgentToAgentRelation class. It should be used only when you have to manage instances of the AgentToAgentRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
-    schema:description "Connects a AgentToAgentRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a  knowledge graph." ;
+    skos:scopeNote "This property 'rolifies' the AgentToAgentRelation class. It should be used only when you have to manage instances of the AgentToAgentRelation class, to connect each instance to itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    schema:description "Connects a AgentToAgentRelation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g.  when you explore a  knowledge graph." ;
     schema:name "has the role of the Agent Relation" ;
 .
 
@@ -8545,7 +8425,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :Group ;
-    skos:scopeNote "Corporate body is a kind of Group (RiC-E09). By exception, within some legal contexts, a sole trader or sole proprietor may be recognized as a corporate body, even  when the economic enterprise does not have additional members. Corporate bodies often have a mandate giving them the authority to act within their area(s) of competence. They will also  usually act within a particular jurisdiction being governed by legal and other rule-based frameworks. A corporate body though may be constituted in a more informal manner and exist as an entity by virtue of its recognition as such by its members." ;
+    skos:scopeNote "Corporate body is a kind of Group (RiC-E09). By exception, within some legal contexts, a sole trader or sole proprietor may be recognized as a corporate body, even  when the economic enterprise does not have additional members. Corporate bodies often have a mandate giving them the authority to act within their area(s) of competence. They will also  usually act within a particular jurisdiction being governed by legal and other rule-based frameworks. A  corporate body though may be constituted in a more informal manner and exist as an entity by virtue of its recognition as such by its members." ;
     schema:description "An organized group of persons that act together as an Agent, and that has a recognized legal or social status." ;
     schema:name "Corporate Body" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-E11 (Corporate Body entity)" ;
@@ -8604,7 +8484,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:domain :Relation ;
     rdfs:isDefinedBy ont: ;
     rdfs:range :Relation ;
-    skos:scopeNote "This property \"rolifies\" the generic Relation class. It should be used only when you have to manage instances of this Relation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
+    skos:scopeNote "This property 'rolifies' the generic Relation class. It should be used only when you have to manage instances of this Relation class, to connect each instance to  itself, in order to be able to infer, using OWL-RL and property paths, the two shortcuts corresponding to this n-ary class." ;
     schema:description "Connects a Relation to itself. It is a reflexive property, that can stand for an instance of the class when necessary, e.g. when you explore a knowledge graph." ;
     schema:name "has the role of the Relation" ;
 .
@@ -8768,7 +8648,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :Thing ;
-    skos:scopeNote "A jurisdiction is the bounded geographic area within which an Agent has the authority to perform specified activities constrained by rules. Jurisdictions, man-made  structures, and natural features are historical entities. A Place thus may have a beginning date and ending date and changing boundaries that result from human or natural events. A Place may be systematically referenced to a location on the earth (geographic coordinates)." ;
+    skos:scopeNote "A jurisdiction is the bounded geographic area within which an Agent has the authority to perform specified activities constrained by rules.  Jurisdictions, man-made  structures, and natural features are historical entities. A Place thus may have a beginning date and ending date and changing boundaries that result from human or natural events. A Place may be systematically referenced to a location on the earth (geographic coordinates)." ;
     schema:description "Bounded, named geographic area or region." ;
     schema:name "Place" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-E22 (Place entity)" ;
@@ -8788,7 +8668,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :RecordResource ;
-    skos:scopeNote "Record is a kind of Record Resource. A Record may itself contain one or more Records, or may consist of one or more Record Parts. A Record must have or have had at  least one Instantiation. A Record may have more than one Instantiation. An Instantiation derived from another Instantiation of a Record may be considered the instantiation of the same  Record or an instantiation of a new Record, depending on the context. A Record may serve a variety of purposes, though it always documents or is evidence of Activity." ;
+    skos:scopeNote "Record is a kind of Record Resource. A Record may itself contain one or more Records, or may consist of one or more Record Parts. A Record must have or have had at  least one Instantiation. A Record may have more than one Instantiation. An Instantiation derived from another Instantiation of a Record may be considered the instantiation of the same  Record or an instantiation of a new Record, depending on the context. A Record may serve a variety of purposes,  though it always documents or is evidence of Activity." ;
     schema:description "Discrete information content formed and inscribed, at least once, by any method on any carrier in any persistent, recoverable form by an Agent in the course of  life or work activity." ;
     schema:name "Record" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-E04 (Record entity)" ;
@@ -8815,7 +8695,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :RecordResource ;
-    skos:scopeNote "Record set is a kind of Record Resource. The member records in a Record Set may physically reside together, though physical proximity is not essential. In a  particular context, an Agent (for example, administrator, records manager, archivist, end-user, etc.) may select the member records of a Record Set based on any shared attribute or  attributes, or any shared relation or relations. The grouping of the records serves a purpose or purposes specific to the context of the Agent. For example, all member records of a  Record Set have been accumulated by the same Agent; have the same Documentary Form Type; or are related to and document the same Activity. A Record Set may represent the act of  classifying the records in accordance with a formal classification scheme that may be based on activity, subject, organizational structure, or other criteria; an act of archival  arrangement (for example, based on common provenance); or some other selection and grouping that fulfils a particular purpose or purposes (for example, a classification that reflects or  supports the purposes of a researcher). By exception, some records are brought together based on their not belonging in the context of selection to other designated groups: a 'Miscellaneous' series, for example. A Record Sset accumulated by an Agent in the course of life or work activity should be described in a manner that preserves context and  evidential value. Record Sets may also contain other Record Sets. A Record Set or Record may simultaneously be a member of more than one Record Set, and over the course of its existence, a Record Set or Record may be a member of an indeterminate number of Record Sets in an indeterminate number of contexts. Record Sets and Records contained within a Record Set may be  ordered into a sequence based on a common property or relation, or common properties or relations (for example, alphabetical by agent or related place); chronological order by creation  date; or some other criterion (for example, an imposed order by relevance)." ;
+    skos:scopeNote "Record set is a kind of Record Resource. The member records in a Record Set may physically reside together, though physical proximity is not essential. In a  particular context, an Agent (for example, administrator, records manager, archivist, end-user, etc.) may select the member records of a Record Set based on any shared attribute or  attributes, or any shared relation or relations. The grouping of the records serves a purpose or purposes specific to the context of the Agent. For example, all member records of a  Record Set have been accumulated by the same Agent; have the same Documentary Form Type; or are related to and document the same Activity. A Record Set may represent the act of  classifying the records in accordance with a formal classification scheme that may be based on activity, subject, organizational structure, or other criteria; an act of archival  arrangement (for example, based on common provenance); or some other selection and grouping that fulfils a particular purpose or purposes (for example, a classification that reflects or  supports the purposes of a researcher). By exception, some records are brought together based on their not belonging in the context of selection to other designated groups: a 'Miscellaneous' series, for example. A Record Sset accumulated by an Agent in the course of life or work activity should be described in a manner that preserves context and  evidential value. Record Sets may also contain other Record Sets. A Record Set or Record may simultaneously be a member of more than one Record Set, and over the course of its existence, a Record Set or Record may be a member of an indeterminate number of Record Sets in an indeterminate number of contexts.  Record Sets and Records contained within a Record Set may be  ordered into a sequence based on a common property or relation, or common properties or relations (for example, alphabetical by agent or related place); chronological order by creation  date; or some other criterion (for example, an imposed order by relevance)." ;
     schema:description "One or more records that are grouped together by an Agent based on the records sharing one or more attributes or relations." ;
     schema:name "Record Set" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-E03 (Record Set entity)" ;
@@ -8848,7 +8728,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :Agent ;
     owl:disjointWith :Position ;
-    skos:scopeNote "Person is a kind of Agent. Most commonly, a human being (biological person) has a single socially constructed identity or persona. Less common though not rare, one or more personae in addition to the original persona which emerges at or near birth may be associated with the human being over the course of that human being’s lifetime. Such \"alternative personae\" are most often created by the original person for  specific purposes. The original persona may, in everyday discourse, be regarded as “the real person”. Under some circumstances, an alternative persona might eclipse or replace the  original person (Mark Twain eclipsing Samuel Clemens; John Wayne eclipsing Marion Mitchell Morrison), that is, the alternative identity becomes the predominant identity. Less common is  when two or more persons collaborate to create a shared persona. A persona shared by two or more persons constitutes a kind of group. Within the archival context, the description of a  person commonly will focus on the original associated persona, with alternative personae noted. Exceptionally, an alternative persona may displace the original persona as the focus of  the description. Under some circumstances, for example, when record resources are associated with two or more different personae of one person, describing the different personae as  separate though related persons may be desirable. Alternatively, a person may change their identity over the course of their lifetime." ;
+    skos:scopeNote "Person is a kind of Agent. Most commonly, a human being (biological person) has a single socially constructed identity or persona. Less common though not rare, one or more personae in addition to the original persona which emerges at or near birth may be associated with the human being over the course of that human being’s lifetime. Such \"alternative personae\" are most often created by the original person for  specific purposes. The original persona may, in everyday discourse, be regarded as “the real person”. Under some circumstances, an alternative persona might eclipse or replace the  original person (Mark Twain eclipsing Samuel Clemens; John Wayne eclipsing Marion Mitchell Morrison), that is, the alternative identity becomes the predominant identity. Less common is  when two or more persons collaborate to create a shared persona. A persona shared by two or more persons constitutes a kind of group. Within the archival context, the description of a  person commonly will focus on the original associated persona, with alternative personae noted. Exceptionally, an alternative persona may displace the original persona as the focus of  the description. Under some circumstances, for example, when record resources are associated with two or more different personae of one person, describing the different personae as  separate though related persons may be desirable.  Alternatively, a person may change their identity over the course of their lifetime." ;
     schema:description "An individual human being." ;
     schema:name "Person" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-E08 (Person entity)" ;
@@ -8858,7 +8738,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :Thing ;
-    skos:scopeNote "Record resource is a kind of Thing. Producing a record resource may imply either its initial creation or a reuse of previous existing information by combination,  rearrangement, selecting, reformatting, etc. Record set, record, and record part are kinds of record resource. A record resource is evidence of the activity of an agent. More than one  agent may be involved in the creation of a record resource. The role of the agent in creating the record resource may take different forms, for example, authoring of an individual  record, accumulating a record set, or arranging a record set. Though a record, record set, and record part, under most circumstances, may be easily distinguished from one another,  identifying the boundary of each may frequently present particular challenges. Documentary forms provide the rules governing the structure of many types of records, providing criteria  for identifying a record's boundary, and identifying its essential parts. Many records, though, do not have well-established documentary forms, particularly in the case of digital  records, where it may be difficult to determine whether individual elements represented in separate bitstreams are record parts, records, or record sets. For example, is photographic  information represented independently in a bitstream embedded in a text document a record or a record part? Or is the same photographic information attached to an email that maintains  its independent representation, a record or a record part? Information grouped for some purpose, for example, ZIP or TAR \"file compression\" for saving storage space, presents a further challenge. One file comprises multiple bitstreams subjected to techniques that remove bits that can be losslessly recovered when decompressed. Under what circumstances is such a  compressed bitstream a record or a record set? Determining when an information object is a record, record set, or record part is based on perspective and judgement exercised in a  particular context. In one context, the agent describing an information object may designate it a record, while another agent in a different context may designate it a record part. Both  designations are supported by RiC-CM, and the significance of the difference for users of the records is ameliorated by the fact that all of the attributes and relations employed in  describing record and record part are shared, as are many of the attributes and relations employed in describing a record set." ;
+    skos:scopeNote "Record resource is a kind of Thing. Producing a record resource may imply either its initial creation or a reuse of previous existing information by combination,  rearrangement, selecting, reformatting, etc. Record set, record, and record part are kinds of record resource. A record resource is evidence of the activity of an agent. More than one  agent may be involved in the creation of a record resource. The role of the agent in creating the record resource may take different forms, for example, authoring of an individual  record, accumulating a record set, or arranging a record set. Though a record, record set, and record part, under most circumstances, may be easily distinguished from one another,  identifying the boundary of each may frequently present particular challenges. Documentary forms provide the rules governing the structure of many types of records, providing criteria  for identifying a record's boundary, and identifying its essential parts. Many records, though, do not have well-established documentary forms, particularly in the case of digital  records, where it may be difficult to determine whether individual elements represented in separate bitstreams are record parts, records, or record sets. For example, is photographic information represented independently in a bitstream embedded in a text document a record or a record part? Or is the same photographic information attached to an email that maintains  its independent representation, a record or a record part? Information grouped for some purpose, for example, ZIP or TAR \"file compression\" for saving storage space, presents a further challenge. One file comprises multiple bitstreams subjected to techniques that remove bits that can be losslessly recovered when decompressed. Under what circumstances is such a  compressed bitstream a record or a record set? Determining when an information object is a record, record set, or record part is based on perspective and judgement exercised in a  particular context. In one context, the agent describing an information object may designate it a record, while another agent in a different context may designate it a record part. Both  designations are supported by RiC-CM, and the significance of the difference for users of the records is ameliorated by the fact that all of the attributes and relations employed in   describing record and record part are shared, as are many of the attributes and relations employed in describing a record set." ;
     schema:description "Information produced or acquired and retained by an Agent in the course of life or work activity." ;
     schema:name "Record Resource" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-E02 (Record Resource entity)" ;
@@ -8868,7 +8748,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :Thing ;
-    skos:scopeNote "A Record or Record Part must have been instantiated at least once, though this instantiation may no longer exist at the moment of description. An instantiation  might also exist at the moment of description, but be destroyed at a later moment in time, when, for example, a derived instantiation might become the only remaining instantiation. A  Record Set may have an instantiation, which is to say that it is not a necessary condition. An Instantiation may be derived from another Instantiation. A Record Resource may have many  Instantiations simultaneously (for instance, a record printed and saved in the same time as DOCX and PDF/A would have 3 concurrent instantiations) or through time (for example, copy of a record). Depending on the context, a new instantiation may be seen as a new or as the same record resource. During in the process of re-instantiation something is lost and something is  preserved, but it is up to the context and the Agent that produces or uses that Instantiation to assess whether the two instantiations are functionally equivalent or not. For instance, a postcard representing a town map from 1874 (Instantiation 1) is digitized and kept as a JPEG file (Instantiation 2). The digital copy may be considered as instantiating the \"same\" Record by an Agent considering the  information transmitted by the Record (e.g., the urban landscape displayed), but as a\" different\" Record by an antiquarian more focused on the materiality of the carrier. Successive  instantiations may change the perceivable boundaries of a Record Resource. For instance, a case file comprising many records may be digitized and saved as one single PDF file, which,  from management perspective, may be treated as one Record. Similarly, a large Record Set (a fonds or a series) may be maintained as one database. On the other hand, one record (main  document and its annexes) may be digitized in separate files and each one may be managed as a discrete “physical” item. Instantiations may require mediation to communicate the  information in the Record Resource. While a traditional Record on paper can simply be read by an Agent in order to understand the information, a vinyl recording, a video cassette or a  digital file needs a device (mediator) to codify or decodify the information conveyed. This mediator may imply simple physical components (a turntable needle, for example), or a complex  gallery of software and hardware elements. Instantiations are more than the mere informational content of Record Resource and may be the focus of preservation and physical management of  records. The use of particular document types for records, such as a medieval charter, may have implications for the authenticity of the records. Hence, the way a Record Resource is  instantiated contributes to the contextualizing of the content.record resource is instantiated contributes to the contextualizing the content. Distinguishing the message conveyed (Record Resource) and its physical representations (Instantiation) allows for the efficient management of their descriptions, and preserve information about a Record Resource even when no  physical representation of it exists or is known to exist anymore. The relations between distinct instantiations can then be expressed wherever they coexist, and they can be related to  the Record Resource they instantiate." ;
+    skos:scopeNote "A Record or Record Part must have been instantiated at least once, though this instantiation may no longer exist at the moment of description. An instantiation  might also exist at the moment of description, but be destroyed at a later moment in time, when, for example, a derived instantiation might become the only remaining instantiation. A  Record Set may have an instantiation, which is to say that it is not a necessary condition. An Instantiation may be derived from another Instantiation. A Record Resource may have many  Instantiations simultaneously (for instance, a record printed and saved in the same time as DOCX and PDF/A would have 3 concurrent instantiations) or through time (for example, copy of a record). Depending on the context, a new instantiation may be seen as a new or as the same record resource. During in the process of re-instantiation something is lost and something is  preserved, but it is up to the context and the Agent that produces or uses that Instantiation to assess whether the two instantiations are functionally equivalent or not. For instance, a postcard representing a town map from 1874 (Instantiation 1) is digitized and kept as a JPEG file (Instantiation 2). The digital copy may be considered as instantiating the \"same\" Record by an Agent considering the  information transmitted by the Record (e.g., the urban landscape displayed), but as a\" different\" Record by an antiquarian more focused on the materiality of the carrier. Successive  instantiations may change the perceivable boundaries of a Record Resource. For instance, a case file comprising many records may be digitized and saved as one single PDF file, which,  from management perspective, may be treated as one Record. Similarly, a large Record Set (a fonds or a series) may be maintained as one database. On the other hand, one record (main  document and its annexes) may be digitized in separate files and each one may be managed as a discrete “physical” item. Instantiations may require mediation to communicate the  information in the Record Resource. While a traditional Record on paper can simply be read by an Agent in order to understand the information, a vinyl recording, a video cassette or a  digital file needs a device (mediator) to codify or decodify the information conveyed. This mediator may imply simple physical components (a turntable needle, for example), or a complex  gallery of software and hardware elements. Instantiations are more than the mere informational content of Record Resource and may be the focus of preservation and physical management of  records. The use of particular document types for records, such as a medieval charter, may have implications for the authenticity of the records. Hence, the way a Record Resource is  instantiated contributes to the contextualizing of the content.record resource is instantiated contributes to the contextualizing the content. Distinguishing the message conveyed (Record Resource) and its physical representations (Instantiation) allows for the efficient management of their descriptions, and preserve information about a Record Resource even when no physical representation of it exists or is known to exist anymore. The relations between distinct instantiations can then be expressed wherever they coexist, and they can be related to  the Record Resource they instantiate." ;
     schema:description "The inscription of information made by an Agent on a physical carrier in any persistent, recoverable form as a means of communicating information through time and space." ;
     schema:name "Instantiation" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-E06 (Instantiation entity)" ;
@@ -8879,7 +8759,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a owl:Class ;
     rdfs:isDefinedBy ont: ;
     rdfs:subClassOf :Thing ;
-    skos:scopeNote "An Agent may have one or more identities; an identity is a constellation of properties or relations that together “identify” the Agent. A Person or Group commonly has one identity, though each also may have one or more alternative identities. Such alternative identities may be shared by more than one Person or Group. Alternative identities include but are not limited to pseudonyms, heteronyms, DBA (Doing Business As), and trade identities. An alternative identity should not be confused with a Position in a Group, for example,  presidents, prime ministers, governors, popes, royalty, or bishops. Nor should an alternative identity be confused with a variant name or identifier of the same identity. Agent also  includes entities created by a Person or Group that act on behalf of the creating Agent in an autonomous or semi-autonomous manner. Examples of a Mechanism include software agents,  robots, and space and underwater probes that generate data (records) in the course of Activity assigned to and in conformance with the instructions given to them by the creating Person  or Group." ;
+    skos:scopeNote "An Agent may have one or more identities; an identity is a constellation of properties or relations that together “identify” the Agent. A  Person or Group commonly has one identity, though each also may have one or more alternative identities. Such alternative identities may be shared by more than one Person or Group. Alternative identities include but are not limited to pseudonyms, heteronyms, DBA (Doing Business As), and trade identities. An alternative identity should not be confused with a Position in a Group, for example,  presidents, prime ministers, governors, popes, royalty, or bishops. Nor should an alternative identity be confused with a variant name or identifier of the same identity. Agent also  includes entities created by a Person or Group that act on behalf of the creating Agent in an autonomous or semi-autonomous manner. Examples of a Mechanism include software agents,  robots, and space and underwater probes that generate data (records) in the course of Activity assigned to and in conformance with the instructions given to them by the creating Person  or Group." ;
     schema:description "A Person, or Group, or an entity created by a Person or Group (Mechanism), or a Position, that acts in the world." ;
     schema:name "Agent" ;
     :RiCCMCorrespondingComponent "Corresponds to RiC-E07 (Agent entity)" ;
@@ -8914,7 +8794,7 @@ ont:
     schema:creator <http://www.wikidata.org/entity/Q1421986> ;
     schema:dateCreated "2019-01-01"^^xsd:date ;
     schema:dateIssued "2024-05-13"^^xsd:date ;
-    schema:dateModified "2024-05-13"^^xsd:date ;
+    schema:dateModified "2026-03-07"^^xsd:date ;
     schema:description "RiC-O (Records in Contexts-Ontology) is an OWL ontology for describing archival record resources. As the third part of Records in Contexts standard, it is a  formal representation of Records in Contexts Conceptual Model (RiC-CM)." ;
     schema:license <https://creativecommons.org/licenses/by/4.0/> ;
     schema:name "International Council on Archives Records in Contexts Ontology (ICA RiC-O) version 1.0.1" ;

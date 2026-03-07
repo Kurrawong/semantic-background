@@ -1,0 +1,11 @@
+PREFIX schema: <https://schema.org/>
+
+DELETE {
+  ?iri schema:name ?n .
+}
+WHERE {
+  ?iri schema:name ?n .
+  
+  FILTER (LANG(?n) != "en")
+  FILTER (LANG(?n) != "")
+}
