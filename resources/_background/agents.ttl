@@ -88,6 +88,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "http://www.linked.data.gov.au"^^xsd:anyURI ;
 .
 
+<https://linked.data.gov.au/org/ga>
+    a schema:Organization ;
+    schema:name "Geoscience Australia" ;
+    schema:url "http://www.ga.gov.au"^^xsd:anyURI ;
+.
+
 <https://linked.data.gov.au/org/ardc>
     a schema:Organization ;
     schema:name "Australian Research Data Commons" ;

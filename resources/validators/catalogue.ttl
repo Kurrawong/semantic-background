@@ -23,6 +23,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://linked.data.gov.au/def/loci-dp/validator> ,
         <https://linked.data.gov.au/def/ontpub/validator> ,
         <https://linked.data.gov.au/def/valpub/validator> ,
+        <https://linked.data.gov.au/def/vocpub-ga/validator> ,
         <https://linked.data.gov.au/def/vocpub/validator> ,
         <https://olis.dev/sg-validator> ,
         <https://prez.dev/manifest-validator> ,

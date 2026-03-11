@@ -1,7 +1,8 @@
-PREFIX : <https://linked.data.gov.au/def/vocpub/validator/>
+PREFIX : <https://linked.data.gov.au/def/vocpub-ga/validator/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX ont: <https://linked.data.gov.au/def/vocpub/validator>
+PREFIX gavoc: <https://pid.geoscience.gov.au/def/voc/ga/>
+PREFIX ont: <https://linked.data.gov.au/def/vocpub-ga/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -851,6 +852,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "theming" ;
 .
 
+<https://linked.data.gov.au/org/agldwg>
+    a schema:Organization ;
+    schema:name "Australian Government Linked Data Working Group" ;
+    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
 :definition
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
@@ -1010,10 +1017,38 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "provenance wasDerivedFrom" ;
 .
 
+#
+#   GA Additions
+#
+
+# GA Vocabs must have an eCat ID
+:Requirement-GA.1
+    a sh:NodeShape ;
+    sh:targetClass skos:ConceptScheme ;
+    sh:property :conceptSchemeGaCatId ;
+    sh:message "Targets a ConceptScheme looking for GA-specific metadata" ;
+    schema:name "GA Concept Scheme Shape" ;
+    rdfs:isDefinedBy ont: ;
+.
+
+:conceptSchemeGaCatId
+    a sh:PropertyShape ;
+    sh:message "Requirement GA CAT ID: Each vocabulary MUST have exactly one identifier predicate indicating an eCatID, which means a schema:identifier predicate indicating a URL starting https://pid.geoscience.gov.au/dataset/ga/ and ending with a multi-digit number" ;
+    sh:path schema:identifier ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:datatype gavoc:eCatID ;
+    sh:pattern "^https://pid.geoscience.gov.au/dataset/ga/[0-9]+$" ;
+    schema:name "Concept Scheme eCat ID" ;
+    rdfs:isDefinedBy ont: ;
+.
+
 ont:
     a owl:Ontology ;
-    owl:versionIRI :5.5 ;
-    owl:versionInfo """5.5 2026-02: Added Shapes for Reqs 2.3.10 - 2.3.19
+    owl:versionIRI :5.5.GA ;
+    owl:versionInfo """5.5.GA: 2026-03: Added GA's additional shape for eCatID to the v5.5 VocPub validator
+
+5.5 2026-02: Added Shapes for Reqs 2.3.10 - 2.3.19
 
 5.4 2026-02: Small fixes for a number of Issues raised in the Issue Tracker
 
@@ -1056,14 +1091,14 @@ ont:
 3.1: Changed dcterms:provenance to skos:historyNote
 
 3.0: Removed Requirement-2.3.5 (identifiers) as these are auto-generated in systems like VocPrez; Added Requirement-2.1.10 & 2.1.11 and sub parts to test for qualifiedDerivation and status of a ConceptScheme""" ;
-    skos:historyNote "Created to validate Australian government vocabularies in 2020. Now used widely." ;
+    skos:historyNote "Created extending the VocPub validator to cater for Geoscience Australia vocabulary elements." ;
     schema:codeRepository "https://github.com/AGLDWG/vocpub-profile/"^^xsd:anyURI ;
     schema:copyrightHolder <https://orcid.org/0000-0002-8742-7730> ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
-    schema:dateCreated "2020-06-14"^^xsd:date ;
-    schema:dateModified "2026-02-25"^^xsd:date ;
-    schema:description "SHACL validator for the VocPub Profile" ;
+    schema:dateCreated "2026-03-10"^^xsd:date ;
+    schema:dateModified "2026-03-11"^^xsd:date ;
+    schema:description "SHACL validator for the GA extended VocPub Profile" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "VocPub Validator" ;
-    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+    schema:name "VocPub GA Validator" ;
+    schema:publisher <https://linked.data.gov.au/org/ga> ;
 .
