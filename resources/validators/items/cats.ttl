@@ -12,21 +12,25 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<https://linked.data.gov.au/org/dcceew> a schema:Organization ;
+schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+schema:url "https://www.dcceew.gov.au"^^xsd:anyURI .
 
 <https://linked.data.gov.au/def/bdr-pr/cats/validator>
     a owl:Ontology ;
-    owl:versionIRI :1.1 ;
-    owl:versionInfo """1.1 Minor addition - license
-
-1.0 First version""" ;
-    schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/tree/main/resources/validators/bdr/items"^^xsd:anyURI ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0 First version" ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2025-08-01"^^xsd:date ;
-    schema:dateModified "2025-08-15"^^xsd:date ;
-    schema:definition "SHACL validator for catalogues used by the Biodiversity Data Repository"@en ;
-    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:dateModified "2026-04-2"^^xsd:date ;
+    skos:historyNote "Updated to conform with ValPub validator" ; 
+    schema:description "SHACL validator for catalogues used by the Biodiversity Data Repository"@en ;
     schema:name "BDR Catalogues Validator"@en ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues"^^xsd:anyURI ;
+    schema:copyrightYear "2026"^^xsd:gYear ;
+    schema:copyrightHolder <https://linked.data.gov.au/org/dcceew> ;
+    schema:copyrightNotice "© Department of Climate Change, Energy, the Environment and Water" ;
 .
 
 :ns-01
@@ -38,6 +42,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         :p-03 ,
         :p-04 ,
         :item-classes ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/bdr-pr/cats/validator> ;
+    skos:historyNote "Defined here for the first time by the BDR Catalogues Validator" ;
+    schema:description "This NodeShape defines all Property Shapes targeting a DataCatalog" ; 
+    schema:name "DataCatalog Property Shapes" ;
 .
 
 :p-01
@@ -46,6 +54,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:datatype xsd:string ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/bdr-pr/cats/validator> ;
+    skos:historyNote "Defined here for the first time by the BDR Catalogues Validator" ;
+    sh:message "A DataCatalog SHALL have exactly one name, indicated with schema:name, with datatype xsd:string" ;
+    schema:name "Shape Name" ;
 .
 
 :p-02
@@ -54,6 +66,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:datatype xsd:string ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/bdr-pr/cats/validator> ;
+    sh:message "A DataCatalog SHALL have exactly one description, indicated with schema:description, with datatype xsd:string" ;
+    skos:historyNote "Defined here for the first time by the BDR Catalogues Validator" ;
+    schema:name "Shape Description" ;
 .
 
 :p-03
@@ -62,6 +78,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:datatype xsd:date ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/bdr-pr/cats/validator> ;
+    sh:message "A DataCatalog SHALL have exactly one creation date, indicated with schema:dateCreated, with datatype xsd:date" ;
+    skos:historyNote "Defined here for the first time by the BDR Catalogues Validator" ;
+    schema:name "Shape Date Created" ;
 .
 
 :p-04
@@ -70,6 +90,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:maxCount 1 ;
     sh:datatype xsd:date ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/bdr-pr/cats/validator> ;
+    sh:message "A DataCatalog SHALL have exactly one modification date, indicated with schema:dateModified, with datatype xsd:date" ;
+    skos:historyNote "Defined here for the first time by the BDR Catalogues Validator" ;
+    schema:name "Shape Date Modified" ;
 .
 
 :item-classes
@@ -80,4 +104,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     #    [ sh:class schema:Dataset ]
     #    [ sh:class owl:Ontology ]
     #) ;
+    rdfs:isDefinedBy <https://linked.data.gov.au/def/bdr-pr/cats/validator> ;
+    sh:message "A validator, typed as either a schema:DataCatalog, schema:Dataset and/or owl:Ontology, SHOULD indicate member shapes with the schema:hasPart predicate" ;
+    skos:historyNote "Defined here for the first time by the BDR Catalogues Validator" ;
+    schema:name "Shape Has Part" ;
 .
