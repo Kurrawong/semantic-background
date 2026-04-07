@@ -235,7 +235,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:message
         "Requirement 2.2.2" ,
-        "Requirement 2.2.2: SHACL Shapes MUST have at message value, indicated using sh:message" ;
+        "Requirement 2.2.2: SHACL Shapes MUST have a message value, indicated using sh:message" ;
     sh:property <https://linked.data.gov.au/def/valpub/req/2.2.2-property-shape> ;
     sh:targetClass
         sh:NodeShape ,
@@ -734,7 +734,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/valpub/req/2.2.2-property-shape>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.2: SHACL Shapes MUST have at message value, indicated using sh:message or a description, indicated using schema:description" ;
+    sh:message "Requirement 2.2.2: SHACL Shapes MUST have a message value, indicated using sh:message or a description, indicated using schema:description" ;
     sh:minCount 1 ;
     sh:or (
 
