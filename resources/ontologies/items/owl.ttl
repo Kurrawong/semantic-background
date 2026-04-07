@@ -12,7 +12,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdfs:Resource ;
     schema:description "The class of collections of pairwise different individuals." ;
-    schema:name "AllDifferent" ;
+    schema:name "All Different" ;
 .
 
 :AllDisjointClasses
@@ -20,7 +20,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdfs:Resource ;
     schema:description "The class of collections of pairwise disjoint classes." ;
-    schema:name "AllDisjointClasses" ;
+    schema:name "All Disjoint Classes" ;
 .
 
 :AllDisjointProperties
@@ -28,7 +28,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdfs:Resource ;
     schema:description "The class of collections of pairwise disjoint properties." ;
-    schema:name "AllDisjointProperties" ;
+    schema:name "All Disjoint Properties" ;
 .
 
 :Annotation
@@ -44,7 +44,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdf:Property ;
     schema:description "The class of annotation properties." ;
-    schema:name "AnnotationProperty" ;
+    schema:name "Annotation Property" ;
 .
 
 :AsymmetricProperty
@@ -52,7 +52,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf :ObjectProperty ;
     schema:description "The class of asymmetric properties." ;
-    schema:name "AsymmetricProperty" ;
+    schema:name "Asymmetric Property" ;
 .
 
 :Axiom
@@ -76,7 +76,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdfs:Datatype ;
     schema:description "The class of OWL data ranges, which are special kinds of datatypes. Note: The use of the IRI :DataRange has been deprecated as of OWL 2. The IRI rdfs:Datatype SHOULD be used instead." ;
-    schema:name "DataRange" ;
+    schema:name "Data Range" ;
 .
 
 :DatatypeProperty
@@ -84,7 +84,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdf:Property ;
     schema:description "The class of data properties." ;
-    schema:name "DatatypeProperty" ;
+    schema:name "Datatype Property" ;
 .
 
 :DeprecatedClass
@@ -92,7 +92,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdfs:Class ;
     schema:description "The class of deprecated classes." ;
-    schema:name "DeprecatedClass" ;
+    schema:name "Deprecated Class" ;
 .
 
 :DeprecatedProperty
@@ -100,7 +100,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdf:Property ;
     schema:description "The class of deprecated properties." ;
-    schema:name "DeprecatedProperty" ;
+    schema:name "Deprecated Property" ;
 .
 
 :FunctionalProperty
@@ -108,7 +108,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdf:Property ;
     schema:description "The class of functional properties." ;
-    schema:name "FunctionalProperty" ;
+    schema:name "Functional Property" ;
 .
 
 :InverseFunctionalProperty
@@ -116,7 +116,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf :ObjectProperty ;
     schema:description "The class of inverse-functional properties." ;
-    schema:name "InverseFunctionalProperty" ;
+    schema:name "Inverse Functional Property" ;
 .
 
 :IrreflexiveProperty
@@ -124,7 +124,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf :ObjectProperty ;
     schema:description "The class of irreflexive properties." ;
-    schema:name "IrreflexiveProperty" ;
+    schema:name "Irreflexive Property" ;
 .
 
 :NamedIndividual
@@ -132,7 +132,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf :Thing ;
     schema:description "The class of named individuals." ;
-    schema:name "NamedIndividual" ;
+    schema:name "Named Individual" ;
 .
 
 :NegativePropertyAssertion
@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdfs:Resource ;
     schema:description "The class of negative property assertions." ;
-    schema:name "NegativePropertyAssertion" ;
+    schema:name "Negative Property Assertion" ;
 .
 
 :ObjectProperty
@@ -148,7 +148,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdf:Property ;
     schema:description "The class of object properties." ;
-    schema:name "ObjectProperty" ;
+    schema:name "Object Property" ;
 .
 
 :Ontology
@@ -164,7 +164,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf rdf:Property ;
     schema:description "The class of ontology properties." ;
-    schema:name "OntologyProperty" ;
+    schema:name "Ontology Property" ;
 .
 
 :ReflexiveProperty
@@ -172,7 +172,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf :ObjectProperty ;
     schema:description "The class of reflexive properties." ;
-    schema:name "ReflexiveProperty" ;
+    schema:name "Reflexive Property" ;
 .
 
 :Restriction
@@ -188,7 +188,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf :ObjectProperty ;
     schema:description "The class of symmetric properties." ;
-    schema:name "SymmetricProperty" ;
+    schema:name "Symmetric Property" ;
 .
 
 :TransitiveProperty
@@ -196,7 +196,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:subClassOf :ObjectProperty ;
     schema:description "The class of transitive properties." ;
-    schema:name "TransitiveProperty" ;
+    schema:name "Transitive Property" ;
 .
 
 :Nothing
@@ -213,7 +213,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Class ;
     schema:description "The property that determines the class that a universal property restriction refers to." ;
-    schema:name "allValuesFrom" ;
+    schema:name "all values from" ;
 .
 
 :annotatedProperty
@@ -222,7 +222,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Resource ;
     schema:description "The property that determines the predicate of an annotated axiom or annotated annotation." ;
-    schema:name "annotatedProperty" ;
+    schema:name "annotated property" ;
 .
 
 :annotatedSource
@@ -231,7 +231,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Resource ;
     schema:description "The property that determines the subject of an annotated axiom or annotated annotation." ;
-    schema:name "annotatedSource" ;
+    schema:name "annotated source" ;
 .
 
 :annotatedTarget
@@ -240,7 +240,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Resource ;
     schema:description "The property that determines the object of an annotated axiom or annotated annotation." ;
-    schema:name "annotatedTarget" ;
+    schema:name "annotated target" ;
 .
 
 :assertionProperty
@@ -249,7 +249,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:Property ;
     schema:description "The property that determines the predicate of a negative property assertion." ;
-    schema:name "assertionProperty" ;
+    schema:name "assertion property" ;
 .
 
 :backwardCompatibleWith
@@ -260,7 +260,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Ontology ;
     schema:description "The annotation property that indicates that a given ontology is backward compatible with another ontology." ;
-    schema:name "backwardCompatibleWith" ;
+    schema:name "backward compatible with" ;
 .
 
 :bottomDataProperty
@@ -269,7 +269,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Literal ;
     schema:description "The data property that does not relate any individual to any data value." ;
-    schema:name "bottomDataProperty" ;
+    schema:name "bottom Data Property" ;
 .
 
 :bottomObjectProperty
@@ -278,7 +278,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Thing ;
     schema:description "The object property that does not relate any two individuals." ;
-    schema:name "bottomObjectProperty" ;
+    schema:name "bottom Object Property" ;
 .
 
 :cardinality
@@ -296,7 +296,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Class ;
     schema:description "The property that determines that a given class is the complement of another class." ;
-    schema:name "complementOf" ;
+    schema:name "complement of" ;
 .
 
 :datatypeComplementOf
@@ -305,7 +305,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Datatype ;
     schema:description "The property that determines that a given data range is the complement of another data range with respect to the data domain." ;
-    schema:name "datatypeComplementOf" ;
+    schema:name "datatype complement of" ;
 .
 
 :deprecated
@@ -323,7 +323,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Thing ;
     schema:description "The property that determines that two given individuals are different." ;
-    schema:name "differentFrom" ;
+    schema:name "different from" ;
 .
 
 :disjointUnionOf
@@ -332,7 +332,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:List ;
     schema:description "The property that determines that a given class is equivalent to the disjoint union of a collection of other classes." ;
-    schema:name "disjointUnionOf" ;
+    schema:name "disjoint union of" ;
 .
 
 :disjointWith
@@ -341,7 +341,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Class ;
     schema:description "The property that determines that two given classes are disjoint." ;
-    schema:name "disjointWith" ;
+    schema:name "disjoint with" ;
 .
 
 :distinctMembers
@@ -350,7 +350,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:List ;
     schema:description "The property that determines the collection of pairwise different individuals in a :AllDifferent axiom." ;
-    schema:name "distinctMembers" ;
+    schema:name "distinct members" ;
 .
 
 :equivalentClass
@@ -359,7 +359,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Class ;
     schema:description "The property that determines that two given classes are equivalent, and that is used to specify datatype definitions." ;
-    schema:name "equivalentClass" ;
+    schema:name "equivalent class" ;
 .
 
 :equivalentProperty
@@ -368,7 +368,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:Property ;
     schema:description "The property that determines that two given properties are equivalent." ;
-    schema:name "equivalentProperty" ;
+    schema:name "equivalent property" ;
 .
 
 :hasKey
@@ -377,7 +377,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:List ;
     schema:description "The property that determines the collection of properties that jointly build a key." ;
-    schema:name "hasKey" ;
+    schema:name "has key" ;
 .
 
 :hasSelf
@@ -386,7 +386,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Resource ;
     schema:description "The property that determines the property that a self restriction refers to." ;
-    schema:name "hasSelf" ;
+    schema:name "has self" ;
 .
 
 :hasValue
@@ -395,7 +395,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Resource ;
     schema:description "The property that determines the individual that a has-value restriction refers to." ;
-    schema:name "hasValue" ;
+    schema:name "has value" ;
 .
 
 :imports
@@ -415,7 +415,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Ontology ;
     schema:description "The annotation property that indicates that a given ontology is incompatible with another ontology." ;
-    schema:name "incompatibleWith" ;
+    schema:name "incompatible with" ;
 .
 
 :intersectionOf
@@ -424,7 +424,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:List ;
     schema:description "The property that determines the collection of classes or data ranges that build an intersection." ;
-    schema:name "intersectionOf" ;
+    schema:name "intersection of" ;
 .
 
 :inverseOf
@@ -433,7 +433,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :ObjectProperty ;
     schema:description "The property that determines that two given properties are inverse." ;
-    schema:name "inverseOf" ;
+    schema:name "inverse of" ;
 .
 
 :maxCardinality
@@ -442,7 +442,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range xsd:nonNegativeInteger ;
     schema:description "The property that determines the cardinality of a maximum cardinality restriction." ;
-    schema:name "maxCardinality" ;
+    schema:name "max cardinality" ;
 .
 
 :maxQualifiedCardinality
@@ -451,7 +451,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range xsd:nonNegativeInteger ;
     schema:description "The property that determines the cardinality of a maximum qualified cardinality restriction." ;
-    schema:name "maxQualifiedCardinality" ;
+    schema:name "max qualified cardinality" ;
 .
 
 :members
@@ -469,7 +469,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range xsd:nonNegativeInteger ;
     schema:description "The property that determines the cardinality of a minimum cardinality restriction." ;
-    schema:name "minCardinality" ;
+    schema:name "min cardinality" ;
 .
 
 :minQualifiedCardinality
@@ -478,7 +478,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range xsd:nonNegativeInteger ;
     schema:description "The property that determines the cardinality of a minimum qualified cardinality restriction." ;
-    schema:name "minQualifiedCardinality" ;
+    schema:name "min qualified cardinality" ;
 .
 
 :onClass
@@ -487,7 +487,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Class ;
     schema:description "The property that determines the class that a qualified object cardinality restriction refers to." ;
-    schema:name "onClass" ;
+    schema:name "on Class" ;
 .
 
 :onDataRange
@@ -496,7 +496,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Datatype ;
     schema:description "The property that determines the data range that a qualified data cardinality restriction refers to." ;
-    schema:name "onDataRange" ;
+    schema:name "on data range" ;
 .
 
 :onDatatype
@@ -505,7 +505,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Datatype ;
     schema:description "The property that determines the datatype that a datatype restriction refers to." ;
-    schema:name "onDatatype" ;
+    schema:name "on Datatype" ;
 .
 
 :onProperties
@@ -514,7 +514,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:List ;
     schema:description "The property that determines the n-tuple of properties that a property restriction on an n-ary data range refers to." ;
-    schema:name "onProperties" ;
+    schema:name "on properties" ;
 .
 
 :onProperty
@@ -523,7 +523,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:Property ;
     schema:description "The property that determines the property that a property restriction refers to." ;
-    schema:name "onProperty" ;
+    schema:name "on Property" ;
 .
 
 :oneOf
@@ -532,7 +532,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:List ;
     schema:description "The property that determines the collection of individuals or data values that build an enumeration." ;
-    schema:name "oneOf" ;
+    schema:name "one of" ;
 .
 
 :priorVersion
@@ -543,7 +543,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Ontology ;
     schema:description "The annotation property that indicates the predecessor ontology of a given ontology." ;
-    schema:name "priorVersion" ;
+    schema:name "prior version" ;
 .
 
 :propertyChainAxiom
@@ -552,7 +552,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:List ;
     schema:description "The property that determines the n-tuple of properties that build a sub property chain of a given property." ;
-    schema:name "propertyChainAxiom" ;
+    schema:name "property chain axiom" ;
 .
 
 :propertyDisjointWith
@@ -561,7 +561,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:Property ;
     schema:description "The property that determines that two given properties are disjoint." ;
-    schema:name "propertyDisjointWith" ;
+    schema:name "property disjoint with" ;
 .
 
 :qualifiedCardinality
@@ -570,7 +570,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range xsd:nonNegativeInteger ;
     schema:description "The property that determines the cardinality of an exact qualified cardinality restriction." ;
-    schema:name "qualifiedCardinality" ;
+    schema:name "qualified cardinality" ;
 .
 
 :sameAs
@@ -579,7 +579,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Thing ;
     schema:description "The property that determines that two given individuals are equal." ;
-    schema:name "sameAs" ;
+    schema:name "same as" ;
 .
 
 :someValuesFrom
@@ -588,7 +588,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Class ;
     schema:description "The property that determines the class that an existential property restriction refers to." ;
-    schema:name "someValuesFrom" ;
+    schema:name "some values from" ;
 .
 
 :sourceIndividual
@@ -597,7 +597,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Thing ;
     schema:description "The property that determines the subject of a negative property assertion." ;
-    schema:name "sourceIndividual" ;
+    schema:name "source individual" ;
 .
 
 :targetIndividual
@@ -606,7 +606,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Thing ;
     schema:description "The property that determines the object of a negative object property assertion." ;
-    schema:name "targetIndividual" ;
+    schema:name "target individual" ;
 .
 
 :targetValue
@@ -615,7 +615,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Literal ;
     schema:description "The property that determines the value of a negative data property assertion." ;
-    schema:name "targetValue" ;
+    schema:name "target value" ;
 .
 
 :topDataProperty
@@ -624,7 +624,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Literal ;
     schema:description "The data property that relates every individual to every data value." ;
-    schema:name "topDataProperty" ;
+    schema:name "top data property" ;
 .
 
 :topObjectProperty
@@ -633,7 +633,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Thing ;
     schema:description "The object property that relates every two individuals." ;
-    schema:name "topObjectProperty" ;
+    schema:name "top object property" ;
 .
 
 :unionOf
@@ -642,7 +642,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:List ;
     schema:description "The property that determines the collection of classes or data ranges that build a union." ;
-    schema:name "unionOf" ;
+    schema:name "union of" ;
 .
 
 :versionIRI
@@ -651,7 +651,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range :Ontology ;
     schema:description "The property that identifies the version IRI of an ontology." ;
-    schema:name "versionIRI" ;
+    schema:name "version IRI" ;
 .
 
 :versionInfo
@@ -660,7 +660,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdfs:Resource ;
     schema:description "The annotation property that provides version information for an ontology or another OWL construct." ;
-    schema:name "versionInfo" ;
+    schema:name "version Info" ;
 .
 
 :withRestrictions
@@ -669,7 +669,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy <http://www.w3.org/2002/07/owl#> ;
     rdfs:range rdf:List ;
     schema:description "The property that determines the collection of facet-value pairs that define a datatype restriction." ;
-    schema:name "withRestrictions" ;
+    schema:name "with restrictions" ;
 .
 
 owl:
@@ -685,7 +685,7 @@ owl:
     schema:creator <https://www.w3.org> ;
     schema:dateCreated "2010-01-01"^^xsd:date ;
     schema:dateIssued "2012-11-12"^^xsd:date ;
-    schema:dateModified "2012-11-12"^^xsd:date ;
+    schema:dateModified "2026-03-08"^^xsd:date ;
     schema:description "This ontology partially describes the built-in classes and properties that together form the basis of the RDF/XML syntax of OWL 2. The content of this ontology is based on Tables 6.1 and 6.2 in Section 6.4 of the OWL 2 RDF-Based Semantics specification, available at http://www.w3.org/TR/owl2-rdf-based-semantics/. Please note that those tables do not include the different annotations (labels, comments and rdfs:isDefinedBy links) used in this file. Also note that the descriptions provided in this ontology do not provide a complete and correct formal description of either the syntax or the semantics of the introduced terms (please see the OWL 2 recommendations for the complete and normative specifications). Furthermore, the information provided by this ontology may be misleading if not used with care. This ontology SHOULD NOT be imported into OWL ontologies. Importing this file into an OWL 2 DL ontology will cause it to become an OWL 2 Full ontology and may have other, unexpected, consequences." ;
     schema:name "The OWL 2 Schema vocabulary (OWL 2)" ;
     schema:publisher <https://www.w3.org> ;

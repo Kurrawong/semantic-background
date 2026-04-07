@@ -1,0 +1,149 @@
+PREFIX : <https://linked.data.gov.au/def/bdr-pr/cats/validator/>
+PREFIX ont: <https://linked.data.gov.au/def/bdr-pr/cats/validator>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:ns-01
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        :C-created-property ,
+        :C-desc-property ,
+        :C-modified-property ,
+        :C-name-property ,
+        :item-classes ;
+    sh:targetClass schema:DataCatalog ;
+    schema:description "Checks all the properties of the Data Catalog class" ;
+    schema:name "Shape for the Data Catalog class" ;
+.
+
+:C-created-property
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement D-created: Each catalogue MUST have exactly one created date indicated using the schema:dateCreated predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:dateTime ;
+        ]
+        
+        [
+            sh:datatype xsd:date ;
+        ]
+        
+        [
+            sh:datatype xsd:dateTimeStamp ;
+        ]
+        
+        [
+            sh:datatype xsd:gYear ;
+        ]
+    ) ;
+    sh:path schema:dateCreated ;
+    schema:name "Catalogue created date property" ;
+.
+
+:C-desc-property
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Each catalogue MUST have one and description which is to be a text literal, indicated using the schema:description predicate" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path schema:description ;
+    schema:name "Catalogue description property" ;
+.
+
+:C-modified-property
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement D-modified: Each catalogue MUST have exactly one created date indicated using the schema:dateModified predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:dateTime ;
+        ]
+        
+        [
+            sh:datatype xsd:date ;
+        ]
+        
+        [
+            sh:datatype xsd:dateTimeStamp ;
+        ]
+    ) ;
+    sh:path schema:dateModified ;
+    schema:name "Catalogue modified date property" ;
+.
+
+:C-name-property
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Each catalogue MUST have one and only one name which is to be a text literal, indicated using the schema:name predicate" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path schema:name ;
+    schema:name "Catalogue name property" ;
+.
+
+:item-classes
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:path schema:hasPart ;
+    #sh:or (
+    #    [ sh:class schema:DataCatalog ]
+    #    [ sh:class schema:Dataset ]
+    #    [ sh:class owl:Ontology ]
+    #) ;
+    sh:message "The parts of this Catalogue must be of a known class" ;
+    schema:name "Item Classes" ;
+.
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :1.1 ;
+    owl:versionInfo """1.1 Minor addition - license
+
+1.0 First version""" ;
+    schema:codeRepository "https://github.com/dcceew-bdr/bdr-catalogues/tree/main/resources/validators/bdr/items"^^xsd:anyURI ;
+    schema:creator <https://linked.data.gov.au/org/dcceew> ;
+    schema:dateCreated "2025-08-01"^^xsd:date ;
+    schema:dateModified "2026-04-07"^^xsd:date ;
+    schema:description "SHACL validator for catalogues used by the Biodiversity Data Repository"@en ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "BDR Catalogues Validator"@en ;
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+.
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au/"^^xsd:anyURI ;
+.

@@ -1,0 +1,126 @@
+PREFIX : <https://linked.data.gov.au/def/bdr-pr/pr/validator/>
+PREFIX ont: <https://linked.data.gov.au/def/bdr-pr/pr/validator>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://linked.data.gov.au/org/ausbigg>
+    a schema:Organization ;
+    schema:name "Australian Biodiversity Information Governance Group" ;
+    schema:url "https://github.com/AusBIGG/"^^xsd:anyURI ;
+.
+
+:shape-01
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Dataset IRIs must match the BDR Profile of ABIS' proscribed pattern of https://linked.data.gov.au/dataset/bdr/{UUID}" ;
+    sh:pattern "^https://linked\\.data\\.gov\\.au/dataset/bdr/[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}$" ;
+    sh:targetClass tern:Dataset ;
+    schema:name "IRI pattern for Dataset" ;
+.
+
+:shape-02
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Site IRIs must match the BDR Profile of ABIS' proscribed pattern which includes linked.data.gov.au" ;
+    sh:pattern "linked\\.data\\.gov\\.au" ;
+    sh:targetClass tern:Site ;
+    schema:name "IRI pattern for Site" ;
+.
+
+:shape-03
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Survey IRIs must match the BDR Profile of ABIS' proscribed pattern which includes linked.data.gov.au" ;
+    sh:pattern "linked\\.data\\.gov\\.au" ;
+    sh:targetClass tern:Survey ;
+    schema:name "IRI pattern for Survey" ;
+.
+
+:shape-04
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "SiteVisit IRIs must match the BDR Profile of ABIS' proscribed pattern which includes linked.data.gov.au" ;
+    sh:pattern "linked\\.data\\.gov\\.au" ;
+    sh:targetClass tern:SiteVisit ;
+    schema:name "IRI pattern for SiteVisit" ;
+.
+
+:shape-05
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Sample IRIs must match the BDR Profile of ABIS' proscribed pattern which includes linked.data.gov.au" ;
+    sh:pattern "linked\\.data\\.gov\\.au" ;
+    sh:targetClass tern:Sample ;
+    schema:name "IRI pattern for Sample" ;
+.
+
+:shape-06
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Observation IRIs must match the BDR Profile of ABIS' proscribed pattern pattern of https://linked.data.gov.au/dataset/bdr/{UUID}/ + supplier pattern" ;
+    sh:pattern "^https://linked\\.data\\.gov\\.au/dataset/bdr/[0-9a-f]{8}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{4}-?[0-9a-f]{12}/.+" ;
+    sh:targetClass tern:Observation ;
+    schema:name "IRI pattern for Observation" ;
+.
+
+:shape-07
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Agent (Person and Organization) IRIs must match the BDR Profile of ABIS' proscribed pattern which includes linked.data.gov.au" ;
+    sh:pattern "linked\\.data\\.gov\\.au" ;
+    sh:targetClass
+        schema:Organization ,
+        schema:Person ;
+    schema:name "IRI pattern for agents" ;
+.
+
+<https://linked.data.gov.au/org/bdr-team>
+    a schema:Organization ;
+    schema:name "BDR Team" ;
+    schema:url "https://bdr.gov.au/"^^xsd:anyURI ;
+.
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
+.
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :1.2 ;
+    owl:versionInfo """1.2 2025-07: Tidy up for inclusion in the BDR Validators Catalogue
+
+1.1 2025-05: Minor updates
+
+1.0 2025-04: First version""" ;
+    skos:historyNote "Created by the BDR Team in 2025 to validate data bound for the Biodiversity Data Repository" ;
+    schema:copyrightNotice "(c) 2026 DCCEEW" ;
+    schema:creator <https://linked.data.gov.au/org/bdr-team> ;
+    schema:dateCreated "2022-05-11"^^xsd:date ;
+    schema:dateModified "2026-04-07"^^xsd:date ;
+    schema:description "SHACL validator for the Biodiversity Data Repository (BDR)'s profile of Australian Biodiversity Information Standard (ABIS)" ;
+    schema:hasPart
+        :shape-01 ,
+        :shape-02 ,
+        :shape-03 ,
+        :shape-04 ,
+        :shape-05 ,
+        :shape-06 ,
+        :shape-07 ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "BDR Profile of ABIS Core Validator" ;
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    owl:imports
+        <https://linked.data.gov.au/def/abis/validator> ,
+        <https://linked.data.gov.au/def/bcp/validator> ,
+        <https://linked.data.gov.au/def/bcrp/validator> ,
+        <https://linked.data.gov.au/def/bdr-pr/cats/validator/> ,
+        <https://linked.data.gov.au/def/bdr-pr/dr/validator> ,
+        <https://linked.data.gov.au/def/bdr-pr/proj/validator> ;
+.

@@ -10,28 +10,34 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2025-12-11"^^xsd:gYear ;
-    schema:dateModified "2026-02-06"^^xsd:date ;
+    schema:dateModified "2026-03-11"^^xsd:date ;
     schema:description "A catalogue of reference SHACL validators used by KurrawongAI" ;
     schema:hasPart
         <http://www.opengis.net/def/geosparql/validator> ,
         prof:validator ,
         <http://www.w3.org/ns/shacl-shacl#> ,
+        <https://data.idnau.org/pid/cp/validator> ,
+        <https://linked.data.gov.au/def/abis/validator> ,
         <https://linked.data.gov.au/def/bcp/validator> ,
         <https://linked.data.gov.au/def/bcrp/validator> ,
-        <https://linked.data.gov.au/def/bdr-pr/cats/validator> ,
+        <https://linked.data.gov.au/def/bdr-pr/cats/validator/> ,
+        <https://linked.data.gov.au/def/bdr-pr/dr/validator> ,
+        <https://linked.data.gov.au/def/bdr-pr/validator> ,
+        <https://linked.data.gov.au/def/bdr-pr/proj/validator> ,
         <https://linked.data.gov.au/def/eia-dp/validator> ,
         <https://linked.data.gov.au/def/loci-dp/validator> ,
         <https://linked.data.gov.au/def/ontpub/validator> ,
+        <https://linked.data.gov.au/def/sosa-validator> ,
         <https://linked.data.gov.au/def/valpub/validator> ,
         <https://linked.data.gov.au/def/vocpub-ga/validator> ,
         <https://linked.data.gov.au/def/vocpub/validator> ,
         <https://olis.dev/sg-validator> ,
         <https://prez.dev/manifest-validator> ,
-        <https://www.ica.org/standards/RiC/ontology> ,
-        <https://w3id.org/tern/shapes/tern/> ;
+        <https://w3id.org/tern/shapes/tern/> ,
+        <https://www.ica.org/standards/RiC/ontology> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Semantic Background Validators" ;
     schema:publisher <https://kurrawong.ai> ;
     schema:status astatus:stable ;
-    schema:version "6" ;
+    schema:version "9" ;
 .

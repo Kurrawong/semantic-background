@@ -1,0 +1,78 @@
+PREFIX : <https://linked.data.gov.au/def/bdr-pr/proj/validator/>
+PREFIX ont: <https://linked.data.gov.au/def/bdr-pr/proj/validator>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:proj-props
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        :proj-assoc-property ,
+        :proj-generated ,
+        :proj-part ;
+    sh:targetClass schema:Project ;
+    schema:description "Checks that projects are associated with agents" ;
+    schema:name "Project properties" ;
+.
+
+:proj-assoc-property
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "If a Project indicate a qualified association, the indicated object must further indicate an Agent (Person or Organisation) with the prov:agent predicate" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class schema:Person ;
+        ]
+        
+        [
+            sh:class schema:Organization ;
+        ]
+    ) ;
+    sh:path prov:agent ;
+    schema:name "Project association" ;
+.
+
+:proj-generated
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:class tern:Dataset ;
+    sh:message "If a Project is indicated as having generated something, that thing must be a tern:Dataset" ;
+    sh:path prov:generated ;
+    schema:name "Project generated" ;
+.
+
+:proj-part
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:class schema:Project ;
+    sh:message "If a Project is indicated as having a part, the other thing must also be a Project" ;
+    sh:path schema:hasPart ;
+    schema:name "Project part" ;
+.
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
+.
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo "1.0 First version" ;
+    schema:creator <https://linked.data.gov.au/org/dcceew> ;
+    schema:dateCreated "2025-04-30"^^xsd:date ;
+    schema:dateModified "2026-04-07"^^xsd:date ;
+    schema:description "SHACL validator for the BDR Project Model"@en ;
+    schema:name "BDR Project Model Validator"@en ;
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+.

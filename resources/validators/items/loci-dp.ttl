@@ -122,7 +122,7 @@ ont:
     rdfs:isDefinedBy ont: ;
     sh:property
         [
-            sh:description "Requirement-D-creator: Each Dataset MUST indicate one or more agents with the schema:creator predicate, typed as an schema:Person or schema:Organization" ;
+            sh:message "Requirement-D-creator: Each Dataset MUST indicate one or more agents with the schema:creator predicate, typed as an schema:Person or schema:Organization" ;
             sh:minCount 1 ;
             sh:or (
                 
@@ -259,7 +259,7 @@ ont:
     rdfs:isDefinedBy ont: ;
     sh:property
         [
-            sh:description "Requirement-D-publisher: Each Dataset MUST indicate one or more agents with the schema:publisher predicate, typed as an schema:Person or schema:Organization" ;
+            sh:message "Requirement-D-publisher: Each Dataset MUST indicate one or more agents with the schema:publisher predicate, typed as an schema:Person or schema:Organization" ;
             sh:minCount 1 ;
             sh:or (
                 

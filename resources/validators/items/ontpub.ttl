@@ -313,7 +313,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property 
         [
-            sh:description "Requirement 2.1.7 Each ontology MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
+            sh:message "Requirement 2.1.7 Each ontology MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
             sh:minCount 1 ;
             sh:or (
                 
@@ -328,7 +328,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sh:path schema:creator ;
         ] ,
         [
-            sh:description "Requirement 2.1.7 Each ontology MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
+            sh:message "Requirement 2.1.7 Each ontology MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
             sh:minCount 1 ;
             sh:or (
                 
@@ -350,7 +350,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property
         [
-            sh:description "Requirement 2.1.8 Each ontology MAY have at least any number of contributors, indicated using schema:contributor property that must be a IRI value indicating an agent, that is an instance of schema:Person, schema:Organization or a subclass of either" ;
+            sh:message "Requirement 2.1.8 Each ontology MAY have at least any number of contributors, indicated using schema:contributor property that must be a IRI value indicating an agent, that is an instance of schema:Person, schema:Organization or a subclass of either" ;
             sh:or (
                 
                 [
