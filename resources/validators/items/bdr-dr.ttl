@@ -1,6 +1,6 @@
-PREFIX : <https://linked.data.gov.au/def/bdr-dr/validator/>
-PREFIX dr: <https://linked.data.gov.au/def/bdr-dr/>
-PREFIX ont: <https://linked.data.gov.au/def/bdr-dr/validator>
+PREFIX : <https://linked.data.gov.au/def/bdr-pr/dr/validator/>
+PREFIX dr: <https://linked.data.gov.au/def/bdr-pr/dr/>
+PREFIX ont: <https://linked.data.gov.au/def/bdr-pr/dr/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>

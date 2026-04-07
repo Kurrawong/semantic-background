@@ -1,5 +1,5 @@
-PREFIX : <https://linked.data.gov.au/def/bdr-pr/pr/validator/>
-PREFIX ont: <https://linked.data.gov.au/def/bdr-pr/pr/validator>
+PREFIX : <https://linked.data.gov.au/def/bdr-pr/validator/>
+PREFIX ont: <https://linked.data.gov.au/def/bdr-pr/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
