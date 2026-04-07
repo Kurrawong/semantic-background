@@ -234,7 +234,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
     sh:message
-        "Requirement 2.2.2" ,
         "Requirement 2.2.2: SHACL Shapes MUST have a message value, indicated using sh:message" ;
     sh:property <https://linked.data.gov.au/def/valpub/req/2.2.2-property-shape> ;
     sh:targetClass
