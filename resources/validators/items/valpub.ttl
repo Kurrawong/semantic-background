@@ -347,7 +347,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/valpub/req/2.1.12-property-shape-02>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.12a: SHACL ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
+    sh:message "Requirement 2.1.12b: SHACL ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
     sh:path schema:license ;
