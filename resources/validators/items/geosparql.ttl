@@ -2,6 +2,7 @@ BASE <http://www.opengis.net/def/geosparql/validator/>
 
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX ont: <http://www.opengis.net/def/geosparql/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX schema: <https://schema.org/>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
@@ -10,7 +11,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
 
-<http://www.opengis.net/def/geosparql/validator>
+ont:
 	a owl:Ontology ;
   	schema:name "GeoSPARQL RDF Shapes Validator" ;
 	schema:description """This is a [Shapes Constraint Language (SHACL)](https://www.w3.org/TR/shacl/) file that specifies constraints for RDF data. It can be used to test the conformance of data to the GeoSPARQL standard.
@@ -34,6 +35,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S1-hasGeometry-hasSerialization>
     a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetClass geo:Geometry ;
 	sh:targetObjectsOf 
 		geo:hasGeometry , 
@@ -55,6 +57,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S1-a-hasGeometry-hasSerialization-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:asWKT ;
 	sh:maxCount 1 ;
 	sh:message "Each Geometry node can have a maximum of one outgoing geo:asWKT relation."@en ;
@@ -95,6 +98,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S1-b-hasGeometry-hasSerialization-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:asGML ;
 	sh:maxCount 1 ;
 	sh:message "Each Geometry node can have a maximum of one outgoing geo:asGML relation."@en ;
@@ -102,6 +106,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S1-c-hasGeometry-hasSerialization-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:asGeoJSON ;
 	sh:maxCount 1 ;
 	sh:message "Each Geometry node can have a maximum of one outgoing geo:asGeoJSON relation."@en ;
@@ -109,6 +114,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S1-d-hasGeometry-hasSerialization-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:asKML ;
 	sh:maxCount 1 ;
 	sh:message "Each Geometry node can have a maximum of one outgoing geo:asKML relation."@en ;
@@ -116,6 +122,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S1-e-hasGeometry-hasSerialization-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:asDGGS ;
 	sh:maxCount 1 ;
 	sh:message "Each Geometry node can have a maximum of one outgoing geo:asDGGS relation."@en ;
@@ -127,30 +134,35 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S2-a-Geometry>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetClass geo:Geometry ;
 	sh:property <S2-hasGeometry-hasGeometry-sub> ;
 .
 
 <S2-b-hasGeometry-hasGeometry>
     a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetObjectsOf geo:hasGeometry ;
 	sh:property <S2-hasGeometry-hasGeometry-sub> ;
 .
 
 <S2-c-hasDefaultGeometry-hasGeometry>
     a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetObjectsOf geo:hasDefaultGeometry ;
 	sh:property <S2-hasGeometry-hasGeometry-sub> ;
 .
 
 <S2-d-defaultGeometry-hasGeometry>
     a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetObjectsOf geo:defaultGeometry ;
 	sh:property <S2-hasGeometry-hasGeometry-sub> ;
 .
 
 <S2-hasGeometry-hasGeometry-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path [ 
 		sh:alternativePath (
 			geo:hasGeometry
@@ -211,6 +223,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S3-hasSerialization-literal>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetObjectsOf
 		geo:hasSerialization ,
 		geo:asGML ,
@@ -249,6 +262,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S4-asWKT-wktLiteral>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetObjectsOf geo:asWKT ;
 	sh:datatype geo:wktLiteral ;
 	sh:message "The target of a geo:asWKT property should be an RDF literal with datatype geo:wktLiteral."@en ;
@@ -287,6 +301,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S5-asGML-gmlLiteral>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetObjectsOf geo:asGML ;
 	sh:datatype geo:gmlLiteral ;
 	sh:message "The target of a geo:asGML property should be an RDF literal with datatype geo:gmlLiteral."@en ;
@@ -294,6 +309,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S6-asGeoJSON-geoJSONLiteral>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetObjectsOf geo:asGeoJSON ;
 	sh:datatype geo:geoJSONLiteral ;
 	sh:message "The target of a geo:asGeoJSON property should be an RDF literal with datatype geo:geoJSONLiteral."@en ;
@@ -301,6 +317,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S7-asKML-kmlLiteral>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetObjectsOf geo:asKML ;
 	sh:datatype geo:kmlLiteral ;
 	sh:message "The target of a geo:asKML property should be an RDF literal with datatype geo:kmlLiteral."@en ;
@@ -308,6 +325,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S8-asDGGS-dggsLiteral>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:targetObjectsOf geo:asDGGS ;
 	sh:datatype geo:dggsLiteral ;
 	sh:message "The target of a geo:asDGGS property should be an RDF literal with datatype geo:dggsLiteral."@en ;
@@ -319,12 +337,14 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S09-many-coordinateDimension-one>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S09-many-coordinateDimension-one-sub> ;
 	sh:targetSubjectsOf geo:coordinateDimension ;
 .
 	
 <S09-many-coordinateDimension-one-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:coordinateDimension ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:coordinateDimension property."@en ;
@@ -355,12 +375,14 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 	
 <S10-many-dimension-one>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S10-many-dimension-one-sub> ;
 	sh:targetSubjectsOf geo:dimension ;
 .
 	
 <S10-many-dimension-one-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:dimension ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:dimension property."@en ;
@@ -368,12 +390,14 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S11-many-isEmpty-one>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S11-many-isEmpty-one-sub> ;
 	sh:targetSubjectsOf geo:isEmpty ;
 .
 	
 <S11-many-isEmpty-one-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:isEmpty ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:isEmpty property."@en ;
@@ -381,12 +405,14 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S12-many-isSimple-one>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S12-many-isSimple-one-sub> ;
 	sh:targetSubjectsOf geo:isSimple ;
 .
 	
 <S12-many-isSimple-one-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:isSimple ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have a maximum one outgoing geo:isSimple property."@en ;
@@ -394,12 +420,14 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S13-many-spatialDimension-one>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S13-many-spatialDimension-one-sub> ;
 	sh:targetSubjectsOf geo:spatialDimension ;
 .
 	
 <S13-many-spatialDimension-one-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:spatialDimension ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:spatialDimension property."@en ;
@@ -407,6 +435,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S14-many-hasSpatialResolution-one>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property 
 		<S14-many-hasSpatialResolution-one-sub> ,
 		<S14-many-hasMetricSpatialResolution-one-sub> ;
@@ -417,6 +446,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 	
 <S14-many-hasSpatialResolution-one-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:hasSpatialResolution ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:hasSpatialResolution property."@en ;
@@ -424,6 +454,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S14-many-hasMetricSpatialResolution-one-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:hasMetricSpatialResolution ;
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:hasMetricSpatialResolution property."@en ;
@@ -431,6 +462,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S15-many-hasSpatialAccuracy-one>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property 
 		<S15-many-hasSpatialAccuracy-one-sub> ,
 		<S15-many-hasMetricSpatialAccuracy-one-sub> ;
@@ -441,6 +473,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 	
 <S15-many-hasSpatialAccuracy-one-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:hasSpatialAccuracy ; 
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:hasSpatialAccuracy property."@en ;
@@ -448,6 +481,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S15-many-hasMetricSpatialAccuracy-one-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:hasMetricSpatialAccuracy ; 
 	sh:maxCount 1 ;
 	sh:message "A geo:Geometry node should have maximum of one outgoing geo:hasMetricSpatialAccuracy."@en ;
@@ -459,12 +493,14 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S16-wkt-content>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S16-wkt-content-sub-start> ;
 	sh:targetSubjectsOf geo:asWKT ;
 .
 
 <S16-wkt-content-sub-start>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:asWKT ;
 	sh:pattern "^\\s*$|^\\s*(M|P|C|S|L|T|<|m|p|c|s|l|t)" ; # starts with space, < or P, C etc.
 	sh:flags "m" ;
@@ -473,12 +509,14 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S17-gml-content>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S17-gml-content-sub-start> ;
 	sh:targetSubjectsOf geo:asGML ;
 .
 
 <S17-gml-content-sub-start>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:asGML ;
 	sh:pattern "^\\s*$|^\\s*(<)(.+)(>)\\s*$" ;  # starts with < ends with >
 	sh:flags "m" ;
@@ -487,12 +525,14 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S18-geojson-content>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S18-geojson-content-sub-start> ;
 	sh:targetSubjectsOf geo:asGeoJSON ;
 .
 
 <S18-geojson-content-sub-start>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:asGeoJSON ;
 	sh:pattern "^\\s*$|^\\s*({)(.*)(})\\s*$" ;  # starts with { ends with }
 	sh:flags "s" ;
@@ -501,12 +541,14 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S19-kml-content>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S19-kml-content-sub-start> ;
 	sh:targetSubjectsOf geo:asKML ;
 .
 
 <S19-kml-content-sub-start>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:asKML ;
 	sh:pattern "^\\s*$|^\\s*(<)(.+)(>)\\s*$" ;  # starts with < ends with >
 	sh:flags "m" ;
@@ -515,6 +557,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S20-dggs-content>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S20-dggs-content-sub-start> ;
 	sh:targetSubjectsOf geo:asDGGS ;
 	sh:deactivated true ;
@@ -523,6 +566,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S20-dggs-content-sub-start>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:asDGGS ;
 	sh:pattern "^\\s*(<(.+)>(\\s+(.+))?)?\\s*$" ;  # starts with space, <, then IRI, then > then DGGS literal content
 	sh:message "The content of an RDF literal with an incoming geo:asDGGS relation must conform to DGGS literals, as defined by their specifications, however GeoSPARQL requires all DGGS Literals to start by indicating the specific DGGS used with an IRI for that DGGS enclosed n < & >"@en ;
@@ -534,12 +578,14 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S21-dimension-coordinateDimension>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property <S21-dimension-coordinateDimension-sub> ;
 	sh:targetSubjectsOf geo:dimension ;
 .
 
 <S21-dimension-coordinateDimension-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path geo:coordinateDimension ;
 	sh:sparql [
 		sh:message "If both geo:dimension and geo:coordinateDimension properties are asserted, the value of geo:dimension should be less than or equal to the value of geo:coordinateDimension"@en ;
@@ -588,6 +634,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S22-FeatureCollectionClass-member-feature>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property
 	    <S22-FeatureCollectionClass-minOneMember-feature-sub> ,
 	    <S22-FeatureCollectionClass-member-onlyFeature-sub> ;
@@ -596,6 +643,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S22-FeatureCollectionClass-minOneMember-feature-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path rdfs:member ;
 	sh:minCount 1 ;
 	sh:message "An instance of geo:FeatureCollection should have at least one outgoing rdfs:member relation."@en ;
@@ -626,6 +674,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S22-FeatureCollectionClass-member-onlyFeature-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path rdfs:member ;
 	sh:sparql [
 		sh:message "An instance of geo:FeatureCollection should only have outgoing rdfs:member going to geo:Feature instances."@en ;
@@ -679,6 +728,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S23-GeometryCollectionClass-member-geometry>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property 
 		<S23-GeometryCollectionClass-minOneMember-geometry-sub> ,
 		<S23-GeometryCollectionClass-member-onlyGeometry-sub> ;
@@ -687,6 +737,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S23-GeometryCollectionClass-minOneMember-geometry-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path rdfs:member ;
 	sh:minCount 1 ;
 	sh:message "An instance of geo:GeometryCollection should have at least one outgoing rdfs:member relation."@en ;
@@ -714,6 +765,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S23-GeometryCollectionClass-member-onlyGeometry-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path rdfs:member ;
 	sh:sparql [
 		sh:message "An instance of geo:GeometryCollection should only have outgoing rdfs:member relations to geo:Geometry instances."@en ;
@@ -762,6 +814,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S24-SpatialObjectCollection-member-spatialObject>
 	a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:property 
 		<S24-SpatialObjectCollection-minOneMember-spatialObject-sub> ,
 		<S24-SpatialObjectCollection-member-onlySpatialObject-sub> ;
@@ -770,6 +823,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S24-SpatialObjectCollection-minOneMember-spatialObject-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path rdfs:member ;
 	sh:minCount 1 ;
 	sh:message "An instance of geo:SpatialObjectCollection should have at least one outgoing rdfs:member relation."@en ;
@@ -799,6 +853,7 @@ As of GeoSPARQL 1.1, this validator is not normative, only informative, however 
 
 <S24-SpatialObjectCollection-member-onlySpatialObject-sub>
 	a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
 	sh:path rdfs:member ;
 	sh:sparql [
 		sh:message "An instance of geo:SpatialObjectCollection should only have outgoing rdfs:member relations going to geo:SpatialObject instances, or subclasses of them."@en ;

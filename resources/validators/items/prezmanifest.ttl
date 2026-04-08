@@ -15,6 +15,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :ShapeP01 ;
     sh:targetClass prez:Manifest ;
+    schema:name "Shape N01" ;
+    schema:description "Shape N01" ;
 .
 
 :ShapeN02
@@ -26,20 +28,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         :ShapeP04 ,
         :ShapeP05 ;
     sh:targetObjectsOf prof:hasResource ;
+    schema:name "Shape N02" ;
+    schema:description "Shape N02" ;
 .
 
 :ShapeN03
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property
-        [
-            a sh:PropertyShape ;
-            rdfs:isDefinedBy ont: ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path skos:inScheme ;
-        ] ;
+    sh:property :ShapeP06 ;
     sh:targetObjectsOf prof:hasRole ;
+    schema:name "Shape N03" ;
+    schema:description "Shape N03" ;
 .
 
 :ShapeN04
@@ -47,30 +46,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:message "ShapeN04: If you supplied a prof:hasArtifact for a prez:Manifest's Resource Descriptors that indicated a Blank Node, the Blank Node must contain exactly one schema:contentLocation and exactly one schema:mainEntity predicates" ;
     sh:or (
+        
         [
             sh:nodeKind sh:Literal ;
         ]
         
         [
             sh:nodeKind sh:BlankNode ;
-            sh:property 
-                [
-                    sh:maxCount 1 ;
-                    sh:message "ShapeN04 P01: You supplied a prof:hasArtifact value as Blank Node, the Blank Node so it must contain exactly exactly one schema:contentLocation predicate" ;
-                    sh:minCount 1 ;
-                    sh:nodeKind sh:Literal ;
-                    sh:path schema:contentLocation ;
-                ] ,
-                [
-                    sh:maxCount 1 ;
-                    sh:message "ShapeN04 P02: You supplied a prof:hasArtifact value as Blank Node, the Blank Node so it must contain exactly exactly one schema:mainEntity predicate" ;
-                    sh:minCount 1 ;
-                    sh:nodeKind sh:IRI ;
-                    sh:path schema:mainEntity ;
-                ] ;
+            sh:property
+                :ShapeP07 ,
+                :ShapeP08 ;
         ]
     ) ;
     sh:targetObjectsOf prof:hasArtifact ;
+    schema:name "Shape N04" ;
+    schema:description "Shape N04" ;
 .
 
 <https://orcid.org/0000-0002-8742-7730>
@@ -92,6 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path prof:hasResource ;
+    schema:name "Shape P01" ;
 .
 
 :ShapeP02
@@ -100,6 +91,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "ShapeP02: You must supply at least one value for prof:hasArtifact for a prez:Manifest's Resource Descriptors and each must be a string that can be interpreted as a file path, either relative to the manifest file, or an absolute system path or a URL or a Blank Node with a schema:contentLocation and schema:mainEntity predicates" ;
     sh:minCount 1 ;
     sh:or (
+        
         [
             sh:nodeKind sh:Literal ;
         ]
@@ -109,6 +101,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ]
     ) ;
     sh:path prof:hasArtifact ;
+    schema:name "Shape P02" ;
 .
 
 :ShapeP03
@@ -119,6 +112,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
     sh:path prof:hasRole ;
+    schema:name "Shape P03" ;
 .
 
 :ShapeP04
@@ -127,6 +121,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:maxCount 1 ;
     sh:message "ShapeP04: If you supply a schema:description for a prez:Manifest's Resource Descriptors, it must be either a plain string or a langString literal" ;
     sh:or (
+        
         [
             sh:datatype xsd:string ;
         ]
@@ -136,6 +131,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ]
     ) ;
     sh:path schema:description ;
+    schema:name "Shape P04" ;
 .
 
 :ShapeP05
@@ -144,6 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:maxCount 1 ;
     sh:message "ShapeP05: If you supply a schema:name for a prez:Manifest's Resource Descriptors, it must be either a plain string or a langString literal" ;
     sh:or (
+        
         [
             sh:datatype xsd:string ;
         ]
@@ -153,6 +150,39 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         ]
     ) ;
     sh:path schema:name ;
+    schema:name "Shape P05" ;
+.
+
+:ShapeP06
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "ShapeN03 P06: Role values indicated by prof:hasRole must indicate the Concept Scheme they are defined or used in with skos:inScheme" ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:path skos:inScheme ;
+    schema:name "Shape P06" ;
+.
+
+:ShapeP07
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "ShapeN04 P01: You supplied a prof:hasArtifact value as Blank Node, the Blank Node so it must contain exactly exactly one schema:contentLocation predicate" ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:Literal ;
+    sh:path schema:contentLocation ;
+    schema:name "Shape P07" ;
+.
+
+:ShapeP08
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "ShapeN04 P02: You supplied a prof:hasArtifact value as Blank Node, the Blank Node so it must contain exactly exactly one schema:mainEntity predicate" ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path schema:mainEntity ;
+    schema:name "Shape P08" ;
 .
 
 <https://kurrawong.ai>
@@ -164,12 +194,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ont:
     a owl:Ontology ;
     owl:versionIRI :0.5.0 ;
-    owl:versionInfo """0.5.0: Handles artifacts as objects with predicates, not just literals (file paths)
+    owl:versionInfo """0.5.1 2026-04: made ValPub valid
+
+0.5.0: Handles artifacts as objects with predicates, not just literals (file paths)
 
 0.4.0: First public version""" ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2024-11-29"^^xsd:date ;
-    schema:dateModified "2026-02-06"^^xsd:date ;
+    schema:dateModified "2026-04-08"^^xsd:date ;
     schema:description "The SHACL Shapes Validator for the Prez Ontology Manifest Model"@en ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Prez Manifest Validator" ;

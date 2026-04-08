@@ -3,96 +3,15 @@ PREFIX gr: <https://olis.dev/GraphRoles/>
 PREFIX olis: <https://olis.dev/>
 PREFIX ont: <https://olis.dev/sg-validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-ont:
-    a owl:Ontology ;
-    schema:creator <https://kurrawong.ai> ;
-    schema:dateCreated "2026-01-16"^^xsd:date ;
-    schema:dateModified "2026-01-17"^^xsd:date ;
-    schema:description "Olis System Graph validator" ;
-    schema:hasPart
-        :rg ,
-        :vg ,
-        :hasBaseGraph-domain ,
-        :hasBaseGraph-range ,
-        :hasGraphRole-domain ,
-        :hasGraphRole-range ,
-        :hasRulesGraph-domain ,
-        :hasRulesGraph-range ;
-    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "Olis System Graph validator" ;
-    schema:publisher <https://kurrawong.ai> ;
-    schema:version 1.1 ;
-.
-
-<https://kurrawong.ai>
-    a schema:Organization ;
-    schema:name "KurrawongAI" ;
-    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
-.
-
-:rg
-    a sh:NodeShape ;
-    sh:message "Olis Real Graphs MUST NOT also be Virtual Graphs" ;
-    sh:not
-        [
-            sh:class olis:VirtualGraph ;
-        ] ;
-    sh:property [
-        sh:path olis:includes ;
-        sh:maxCount 0 ;
-        sh:message "Olis Real Graphs MUST NOT include other graphs" ;
-    ] ;
-    sh:targetClass olis:RealGraph ;
-.
-
-:vg
-    a sh:NodeShape ;
-    sh:property [
-        sh:path olis:hasBaseGraph ;
-        sh:maxCount 0 ;
-        sh:message "Olis Virtual Graphs MUST NOT link to other graphs via olis:hasBaseGraph" ;
-    ] ;
-    sh:property [
-        sh:path olis:hasRulesGraph ;
-        sh:maxCount 0 ;
-        sh:message "Olis Virtual Graphs MUST NOT link to other graphs via olis:hasRulesGraph" ;
-    ] ;
-    sh:property [
-        sh:path olis:hasGraphRole ;
-        sh:maxCount 0 ;
-        sh:message "Olis Virtual Graphs MUST NOT link to other graphs via olis:hasGraphRole" ;
-    ] ;
-    sh:targetClass olis:VirtualGraph ;
-.
-
-:hasBaseGraph-domain
-    a sh:NodeShape ;
-    sh:targetSubjectsOf olis:hasBaseGraph ;
-    sh:class olis:RealGraph ;
-    sh:message "Subjects of olis:hasBaseGraph must be instances of olis:RealGraph." ;
-.
-
-:hasBaseGraph-range
-    a sh:NodeShape ;
-    sh:targetObjectsOf olis:hasBaseGraph ;
-    sh:class olis:RealGraph ;
-    sh:message "Objects of olis:hasBaseGraph must be instances of olis:RealGraph." ;
-.
-
-:hasGraphRole-domain
-    a sh:NodeShape ;
-    sh:targetSubjectsOf olis:hasGraphRole ;
-    sh:class olis:RealGraph ;
-    sh:message "Subjects of olis:hasGraphRole must be instances of olis:RealGraph." ;
-.
-
 :hasGraphRole-range-value
     a sh:NodeShape ;
-    sh:targetObjectsOf olis:hasGraphRole ;
+    rdfs:isDefinedBy ont: ;
     sh:in (
         gr:Added
         gr:Inferred
@@ -101,18 +20,139 @@ ont:
         gr:Rules
     ) ;
     sh:message "Objects of olis:hasGraphRole must be one of gr:Added, gr:Inferred, gr:Original, gr:Removed, gr:Rules" ;
+    sh:targetObjectsOf olis:hasGraphRole ;
+    schema:name "hasGraphRole range Node Shape" ;
+.
+
+:hasBaseGraph-domain
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:class olis:RealGraph ;
+    sh:message "Subjects of olis:hasBaseGraph must be instances of olis:RealGraph." ;
+    sh:targetSubjectsOf olis:hasBaseGraph ;
+    schema:name "hasBaseGraph domain Node Shape" ;
+.
+
+:hasBaseGraph-range
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:class olis:RealGraph ;
+    sh:message "Objects of olis:hasBaseGraph must be instances of olis:RealGraph." ;
+    sh:targetObjectsOf olis:hasBaseGraph ;
+    schema:name "hasBaseGraph range Node Shape" ;
+.
+
+:hasGraphRole-domain
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:class olis:RealGraph ;
+    sh:message "Subjects of olis:hasGraphRole must be instances of olis:RealGraph." ;
+    sh:targetSubjectsOf olis:hasGraphRole ;
+    schema:name "hasGraphRole domain Node Shape" ;
 .
 
 :hasRulesGraph-domain
     a sh:NodeShape ;
-    sh:targetSubjectsOf olis:hasRulesGraph ;
+    rdfs:isDefinedBy ont: ;
     sh:class olis:RealGraph ;
     sh:message "Subjects of olis:hasRulesGraph must be instances of olis:RealGraph." ;
+    sh:targetSubjectsOf olis:hasRulesGraph ;
+    schema:name "hasRulesGraph domain Node Shape" ;
 .
 
 :hasRulesGraph-range
     a sh:NodeShape ;
-    sh:targetObjectsOf olis:hasRulesGraph ;
+    rdfs:isDefinedBy ont: ;
     sh:class olis:RealGraph ;
     sh:message "Objects of olis:hasRulesGraph must be instances of olis:RealGraph." ;
+    sh:targetObjectsOf olis:hasRulesGraph ;
+    schema:name "hasRulesGraph range Node Shape" ;
+.
+
+:rg
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Olis Real Graphs MUST NOT also be Virtual Graphs" ;
+    sh:not
+        [
+            sh:class olis:VirtualGraph ;
+        ] ;
+    sh:property :rg-p-01 ;
+    sh:targetClass olis:RealGraph ;
+    schema:name "Real Graph Node Shape" ;
+.
+
+:rg-p-01
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 0 ;
+    sh:message "Olis Real Graphs MUST NOT include other graphs" ;
+    sh:path olis:includes ;
+    schema:name "RG Property Shape 01 - no included graphs" ;
+.
+
+:vg
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        :vg-p-01 ,
+        :vg-p-02 ,
+        :vg-p-03 ;
+    sh:targetClass olis:VirtualGraph ;
+    schema:name "Virtual Graph Node Shape" ;
+    schema:description "Virtual Graph Node Shape" ;
+.
+
+:vg-p-01
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 0 ;
+    sh:message "Olis Virtual Graphs MUST NOT link to other graphs via olis:hasBaseGraph" ;
+    sh:path olis:hasBaseGraph ;
+    schema:name "VG Property Shape 01 - hasBaseGraph" ;
+.
+
+:vg-p-02
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 0 ;
+    sh:message "Olis Virtual Graphs MUST NOT link to other graphs via olis:hasRulesGraph" ;
+    sh:path olis:hasRulesGraph ;
+    schema:name "VG Property Shape 02 - hasRulesGraph" ;
+.
+
+:vg-p-03
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 0 ;
+    sh:message "Olis Virtual Graphs MUST NOT link to other graphs via olis:hasGraphRole" ;
+    sh:path olis:hasGraphRole ;
+    schema:name "VG Property Shape 03 - hasGraphRole" ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+ont:
+    a owl:Ontology ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:dateCreated "2026-01-16"^^xsd:date ;
+    schema:dateModified "2026-01-17"^^xsd:date ;
+    schema:description "Olis System Graph validator" ;
+    schema:hasPart
+        :hasBaseGraph-domain ,
+        :hasBaseGraph-range ,
+        :hasGraphRole-domain ,
+        :hasGraphRole-range ,
+        :hasRulesGraph-domain ,
+        :hasRulesGraph-range ,
+        :rg ,
+        :vg ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "Olis System Graph validator" ;
+    schema:publisher <https://kurrawong.ai> ;
+    schema:version 1.1 ;
 .

@@ -2,50 +2,94 @@ PREFIX : <http://www.w3.org/ns/dx/prof/validator/>
 PREFIX ont: <http://www.w3.org/ns/dx/prof/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-ont:
-    a owl:Ontology ;
-    schema:name "DX Profiles Vocabulary Validator" ;
-.
-
 :ProfileDisjointFromResourceDescriptorShape
     a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
     sh:message "Instances of prof:Profile must not also be instances of prof:ResourceDescriptor." ;
     sh:not
         [
             sh:class prof:ResourceDescriptor ;
         ] ;
     sh:targetClass prof:Profile ;
+    schema:name "Profile Disjoint From Resource Descriptor Shape" ;
 .
 
 :ResourceDescriptorDisjointFromProfileShape
     a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
     sh:message "Instances of prof:ResourceDescriptor must not also be instances of prof:Profile." ;
     sh:not
         [
             sh:class prof:Profile ;
         ] ;
     sh:targetClass prof:ResourceDescriptor ;
+    schema:name "Resource Descriptor Disjoint From Profile Shape" ;
 .
 
-:ResourceDescriptorHasExactlyOneArtifactShape
+:ResourceDescriptorExactlyOneArtifactShape
     a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
     sh:property
-        [
-            sh:maxCount 1 ;
-            sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasRole value." ;
-            sh:minCount 1 ;
-            sh:path prof:hasRole ;
-            sh:nodeKind sh:IRI ;
-        ] ,
-        [
-            sh:maxCount 1 ;
-            sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasArtifact value." ;
-            sh:minCount 1 ;
-            sh:path prof:hasArtifact ;
-        ] ;
+        :propShapeResourceDescriptorHasArtifact ,
+        :propShapeResourceDescriptorHasRole ;
     sh:targetClass prof:ResourceDescriptor ;
+    schema:description "Resource Descriptor Exactly One ArtifactShape" ;
+    schema:name "Resource Descriptor Exactly One ArtifactShape" ;
+.
+
+:0.1.0
+    schema:name "0.1.0" ;
+.
+
+:propShapeResourceDescriptorHasArtifact
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasArtifact value." ;
+    sh:minCount 1 ;
+    sh:path prof:hasArtifact ;
+    schema:name "Resource Descriptor exactly 1 hasArtifact" ;
+.
+
+:propShapeResourceDescriptorHasRole
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Each prof:ResourceDescriptor must have exactly one prof:hasRole value." ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path prof:hasRole ;
+    schema:name "Resource Descriptor exactly 1 hasRole" ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+    schema:memberOf <https://kurrawong.ai> ;
+    schema:name "Nicholas J. Car" ;
+.
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :0.1.0 ;
+    owl:versionInfo "0.5.1 2026-04: made ValPub valid" ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2026-01-15"^^xsd:date ;
+    schema:dateModified "2026-04-08"^^xsd:date ;
+    schema:description "A SHACL Shapes Validator for The Profiles Vocabulary's RDF vocabulary"@en ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "DX Profiles Vocabulary Validator" ;
+    schema:publisher <https://kurrawong.ai> ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
