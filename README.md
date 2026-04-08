@@ -20,9 +20,9 @@ Most users of this repo will only need the `annotations/` & `ontologies/` folder
 
 There are two Catalogue declarations too:
 
-* `catalogue-annotations.ttl` - definition of the 'Semantic Background Ontologies' catalogue
+* `catalogue-annotations.ttl` - definition of the 'Semantic Background Annotations' catalogue
   * `manifest-annotations.ttl` - the manifest for the catalogue using `annotations.trig` for all Resources
-* `catalogue-ontologies.ttl` - definition of the 'Semantic Background Annotations' catalogue
+* `catalogue-ontologies.ttl` - definition of the 'Semantic Background Ontologies' catalogue
   * `manifest-ontologies.ttl` - the manifest for the catalogue using `annotations.trig` for all Resources
 
 ## License
