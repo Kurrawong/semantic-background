@@ -93,6 +93,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ont:
     a owl:Ontology ;
+    owl:imports
+        <https://linked.data.gov.au/def/abis/validator> ,
+        <https://linked.data.gov.au/def/bcp/validator> ,
+        <https://linked.data.gov.au/def/bcrp/validator> ,
+        <https://linked.data.gov.au/def/bdr-pr/cats/validator> ,
+        <https://linked.data.gov.au/def/bdr-pr/dr/validator> ,
+        <https://linked.data.gov.au/def/bdr-pr/proj/validator> ;
     owl:versionIRI :1.2 ;
     owl:versionInfo """1.2 2025-07: Tidy up for inclusion in the BDR Validators Catalogue
 
@@ -116,11 +123,4 @@ ont:
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "BDR Profile of ABIS Core Validator" ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
-    owl:imports
-        <https://linked.data.gov.au/def/abis/validator> ,
-        <https://linked.data.gov.au/def/bcp/validator> ,
-        <https://linked.data.gov.au/def/bcrp/validator> ,
-        <https://linked.data.gov.au/def/bdr-pr/cats/validator/> ,
-        <https://linked.data.gov.au/def/bdr-pr/dr/validator> ,
-        <https://linked.data.gov.au/def/bdr-pr/proj/validator> ;
 .

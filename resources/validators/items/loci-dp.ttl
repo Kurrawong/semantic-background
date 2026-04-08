@@ -11,6 +11,12 @@ PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+<http://orcid.org/0000-0002-8742-7730>
+    schema:affiliation <https://kurrawong.ai> ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:name "Nicholas J Car" ;
+.
+
 :Requirement-D-temporal
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
@@ -18,18 +24,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass schema:Dataset ;
     schema:description "D temporal" ;
     schema:name "D temporal" ;
-.
-
-<http://orcid.org/0000-0002-8742-7730>
-    schema:affiliation <https://kurrawong.ai> ;
-    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
-    schema:name "Nicholas J Car" ;
-.
-
-<https://kurrawong.ai>
-    a schema:Organization ;
-    schema:name "KurrawongAI" ;
-    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
 
 :D-created-property
@@ -227,8 +221,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:class geo:FeatureCollection ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:message "Requirement-F-part-of: Each Feature MUST indicate that it is part of exactly one geo:FeatureCollection instance with use of the schema:isPartOf predicate or Feature Collection must indicate the Feature Collection is a part of it with rdfs:member" ;
+    sh:minCount 1 ;
     sh:path
         [
             sh:inversePath rdfs:member ;
@@ -241,7 +235,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:class geo:FeatureCollection ;
     sh:maxCount 1 ;
-        sh:message "Requirement-F-part-of: Each Feature MUST indicate that it is part of exactly one geo:FeatureCollection instance with use of the schema:isPartOf predicate or Feature Collection must indicate the Feature Collection is a part of it with rdfs:member" ;
+    sh:message "Requirement-F-part-of: Each Feature MUST indicate that it is part of exactly one geo:FeatureCollection instance with use of the schema:isPartOf predicate or Feature Collection must indicate the Feature Collection is a part of it with rdfs:member" ;
     sh:minCount 1 ;
     sh:path schema:isPartOf ;
     schema:name "F isPartOf" ;
@@ -269,8 +263,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:class schema:Dataset ;
     sh:maxCount 1 ;
-    sh:minCount 1 ;
     sh:message "Requirement-FC-part-of: Each Feature Collection MUST indicate that it is part of exactly one schema:Dataset instance with use of the schema:isPartOf predicate or the Dataset must indicate the Feature Collection is a part of it with rdfs:member" ;
+    sh:minCount 1 ;
     sh:path
         [
             sh:inversePath rdfs:member ;
@@ -301,6 +295,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :FC-part-of-property
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
+    sh:message "Requirement-FC-part-of: Each Feature Collection MUST indicate that it is part of exactly one schema:Dataset instance with use of the schema:isPartOf predicate or the Dataset must indicate the Feature Collection is a part of it with rdfs:member" ;
     sh:property
         [
             sh:class schema:Dataset ;
@@ -308,7 +303,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             sh:minCount 1 ;
             sh:path schema:isPartOf ;
         ] ;
-    sh:message "Requirement-FC-part-of: Each Feature Collection MUST indicate that it is part of exactly one schema:Dataset instance with use of the schema:isPartOf predicate or the Dataset must indicate the Feature Collection is a part of it with rdfs:member" ;
     schema:name "FC part of property" ;
 .
 
@@ -582,8 +576,24 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://www.ga.gov.au"^^xsd:anyURI ;
 .
 
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:affiliation <https://kurrawong.ai> ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:honorificPrefix "Dr" ;
+    schema:name "Nicholas J. Car" ;
+    schema:url "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
 ont:
     a owl:Ontology ;
+    owl:imports <http://www.opengis.net/def/geosparql/validator> ;
     skos:historyNote """2025-06 2.2: fixed Dataset class targeting & allowed more temporal object types
 
 2025-06: Added a requirement for geometry representation as WKT; removed ID requirements
@@ -617,13 +627,4 @@ ont:
     schema:name "Loc-I Data Profile Validator" ;
     schema:publisher <https://linked.data.gov.au/org/ga> ;
     schema:version "2.2" ;
-.
-
-<https://orcid.org/0000-0002-8742-7730>
-    a schema:Person ;
-    schema:affiliation <https://kurrawong.ai> ;
-    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
-    schema:honorificPrefix "Dr" ;
-    schema:name "Nicholas J. Car" ;
-    schema:url "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
 .
