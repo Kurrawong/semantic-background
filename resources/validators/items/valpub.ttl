@@ -897,7 +897,7 @@ ont:
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2025-12-15"^^xsd:date ;
     schema:dateIssued "2026-02-09"^^xsd:date ;
-    schema:dateModified "2026-02-23"^^xsd:date ;
+    schema:dateModified "2026-04-08"^^xsd:date ;
     schema:description "SHACL Shapes to validate ontologies of SHACL shapes according to the Validator Publications Profile" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Validator Publication Profile Validator" ;
