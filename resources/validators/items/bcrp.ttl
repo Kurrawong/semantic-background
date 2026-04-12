@@ -1,4 +1,5 @@
 PREFIX : <https://linked.data.gov.au/def/bcrp/validator/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX ont: <https://linked.data.gov.au/def/bcrp/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -9,24 +10,177 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<http://orcid.org/0000-0002-8742-7730>
-    a schema:Person ;
-    schema:affiliation <https://kurrawong.ai> ;
-    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
-    schema:name "Nicholas J Car" ;
+:node-01-cat-resource-exists
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property :prop-01-exists ;
+    sh:targetNode schema:CreativeWork ;
+    schema:description "Check that a Resource exists" ;
+    schema:name "Catalogued Resource exists" ;
 .
 
-<https://kurrawong.ai>
-    a schema:Organization ;
-    schema:name "KurrawongAI" ;
-    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+:node-02-cat-resource-basic-props
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        :prop-02-name ,
+        :prop-03-description ,
+        :prop-04-creator ,
+        :prop-05-publisher ,
+        :prop-06-created ,
+        :prop-07-modified ,
+        :prop-08-license ;
+    sh:targetClass schema:CreativeWork ;
+    schema:description "Checks all the property shapes for Resource" ;
+    schema:name "Catalogued Resource Node Shape" ;
 .
 
-:CW-created-property
+:node-03-cat-resource-prov-props
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "A catalogued resource MUST have at least one value for schema:citation (URL or string), skos:historyNote (string) or wasDerivedFrom (IRI)" ;
+    sh:or (
+        :prop-provenance-wdf
+        :prop-provenance-citation
+        :prop-provenance-history-note
+    ) ;
+    sh:targetClass schema:CreativeWork ;
+    schema:name "Catalogued Resource name Node Shape" ;
+.
+
+:node-04-org-props
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        :prop-02-name ,
+        :prop-org-url ;
+    sh:targetClass schema:Organization ;
+    schema:description "Checks all the property shapes for Organization" ;
+    schema:name "Organization Node Shape" ;
+.
+
+:node-05-person-props
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property
+        :prop-02-name ,
+        :prop-person-email ;
+    sh:targetClass schema:Person ;
+    schema:description "Checks all the property shapes for Person" ;
+    schema:name "Person Node Shape" ;
+.
+
+:prop-01-exists
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Each graph MUST have at least one catalogued resource instance" ;
+    sh:minCount 1 ;
+    sh:path
+        [
+            sh:inversePath rdf:type ;
+        ] ;
+    schema:name "Catalogued resource exists property" ;
+.
+
+:prop-02-name
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement D-created: Each catalogued resource MUST have exactly one created date indicated using the schema:dateCreated predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
+    sh:message "The subject MUST have a label (rdfs:label, schema:name or skos:prefLabel) predicate and it MUST indicate a string or a language string literal value" ;
+    sh:minCount 1 ;
+    sh:or (
+
+        [
+            sh:datatype rdf:langString ;
+        ]
+
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path
+        [
+            sh:alternativePath (
+                rdfs:label
+                dcterms:title
+                schema:name
+                skos:prefLabel
+            ) ;
+        ] ;
+    schema:name "Catalogued resource name property" ;
+.
+
+:prop-03-description
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "The subject MUST have a description (rdfs:comment, dcterms:description, schema:description or skos:definition) predicate and it MUST indicate a string or a language string literal value" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path
+        [
+            sh:alternativePath (
+                rdfs:comment
+                dcterms:description
+                schema:description
+                skos:definition
+            ) ;
+        ] ;
+    schema:name "Catalogued resource description property" ;
+.
+
+:prop-04-creator
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Each catalogued resource MUST indicate one or more Agents with the schema:creator predicate, typed as an schema:Person or schema:Organization" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path schema:creator ;
+    schema:name "Catalogued resource creator property" ;
+.
+
+:prop-05-publisher
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Each catalogued resource MUST indicate one or more agents with the schema:publisher predicate, typed as an schema:Person or schema:Organization" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class schema:Organization ;
+        ]
+        
+        [
+            sh:class schema:Person ;
+        ]
+    ) ;
+    sh:path schema:publisher ;
+    schema:name "Catalogued resource publisher property" ;
+.
+
+:prop-06-created
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Each catalogued resource MUST have exactly one created date indicated using the schema:dateCreated predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -50,73 +204,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Catalogued resource created date property" ;
 .
 
-:CW-creator-property
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement D-creator: Each catalogued resource MUST indicate one or more agents with the schema:creator predicate, typed as an schema:Person or schema:Organization" ;
-    sh:minCount 1 ;
-    sh:or (
-        
-        [
-            sh:class schema:Organization ;
-        ]
-        
-        [
-            sh:class schema:Person ;
-        ]
-    ) ;
-    sh:path schema:creator ;
-    schema:name "Catalogued resource creator property" ;
-.
-
-:CW-desc-property
+:prop-07-modified
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Each catalogued resource MUST have one and description which is to be a text literal, indicated using the schema:description predicate" ;
-    sh:minCount 1 ;
-    sh:or (
-        
-        [
-            sh:datatype rdf:langString ;
-        ]
-        
-        [
-            sh:datatype xsd:string ;
-        ]
-    ) ;
-    sh:path schema:description ;
-    schema:name "Catalogued resource description property" ;
-.
-
-:CW-exists-property
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Each graph MUST have at least one catalogued resource instance" ;
-    sh:minCount 1 ;
-    sh:path
-        [
-            sh:inversePath rdf:type ;
-        ] ;
-    schema:name "Catalogued resource exists property" ;
-.
-
-:CW-license-property
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:maxCount 1 ;
-    sh:message "Requirement D-license: Each catalogued resource MUST indicate a license that defines conditions for its use with the schema:license predicate with the value indicated coming from either the RDF Licenses dataset or being locally-defined odrl:Policy instance" ;
-    sh:minCount 1 ;
-    sh:nodeKind sh:IRI ;
-    sh:path schema:license ;
-    schema:name "Catalogued resource license property" ;
-.
-
-:CW-modified-property
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:maxCount 1 ;
-    sh:message "Requirement D-modified: Each catalogued resource MUST have exactly one created date indicated using the schema:dateModified predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
+    sh:message "Each catalogued resource MUST have exactly one created date indicated using the schema:dateModified predicate with a literal value of either xsd:date, xsd:dateTime or xsd:dateTimeStamp type" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -136,142 +228,40 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Catalogued resource modified date property" ;
 .
 
-:CW-name-property
+:prop-08-license
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Each catalogued resource MUST have one and only one name which is to be a text literal, indicated using the schema:name predicate" ;
-    sh:minCount 1 ;
-    sh:or (
-        
-        [
-            sh:datatype rdf:langString ;
-        ]
-        
-        [
-            sh:datatype xsd:string ;
-        ]
-    ) ;
-    sh:path schema:name ;
-    schema:name "Catalogued resource name property" ;
-.
-
-:CW-publisher-property
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement D-publisher: Each catalogued resource MUST indicate one or more agents with the schema:publisher predicate, typed as an schema:Person or schema:Organization" ;
-    sh:minCount 1 ;
-    sh:or (
-        
-        [
-            sh:class schema:Organization ;
-        ]
-        
-        [
-            sh:class schema:Person ;
-        ]
-    ) ;
-    sh:path schema:publisher ;
-    schema:name "Catalogued resource publisher property" ;
-.
-
-:Requirement-CW-created
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property :CW-created-property ;
-    sh:targetClass schema:CreativeWork ;
-    schema:description "Check that the Catalogued resource has a created date" ;
-    schema:name "Catalogued resource created date" ;
-.
-
-:Requirement-CW-creator
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property :CW-creator-property ;
-    sh:targetClass schema:CreativeWork ;
-    schema:description "Check that the Catalogued resource has a creator" ;
-    schema:name "Catalogued resource creator" ;
-.
-
-:Requirement-CW-desc
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property :CW-desc-property ;
-    sh:targetClass schema:CreativeWork ;
-    schema:description "Check that the Catalogued resource has a description" ;
-    schema:name "Catalogued resource description" ;
-.
-
-:Requirement-CW-exists
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property :CW-exists-property ;
-    sh:targetNode schema:CreativeWork ;
-    schema:description "Check that the Catalogued resource exists" ;
-    schema:name "Catalogued resource exists" ;
-.
-
-:Requirement-CW-history
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement D-history: Each catalogued resource SHOULD indicate how it was produced or its origin by use of one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom" ;
-    sh:or (
-        :provenance-properties-01
-        :provenance-properties-02
-        :provenance-properties-03
-    ) ;
-    sh:severity sh:Warning ;
-    sh:targetClass schema:CreativeWork ;
-    schema:name "Catalogued resource history" ;
-.
-
-:Requirement-CW-license
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property :CW-license-property ;
-    sh:targetClass schema:CreativeWork ;
-    schema:description "Check that the Catalogued resource has a license" ;
-    schema:name "Catalogued resource license" ;
-.
-
-:Requirement-CW-modified
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property :CW-modified-property ;
-    sh:targetClass schema:CreativeWork ;
-    schema:description "Check that the Catalogued resource has a modified date" ;
-    schema:name "Catalogued resource modified date" ;
-.
-
-:Requirement-CW-name
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property :CW-name-property ;
-    sh:targetClass schema:CreativeWork ;
-    schema:description "Check that the Catalogued resource has a name" ;
-    schema:name "Catalogued resource name" ;
-.
-
-:Requirement-CW-publisher
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property :CW-publisher-property ;
-    sh:targetClass schema:CreativeWork ;
-    schema:description "Check that the Catalogued resource has a publisher" ;
-    schema:name "Catalogued resource publisher" ;
-.
-
-:provenance-properties-01
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "prov:wasDerivedFrom must indicate an IRI" ;
+    sh:message "Each catalogued resource MUST indicate a license that defines conditions for its use with the schema:license predicate" ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
-    sh:path prov:wasDerivedFrom ;
-    schema:name "Catalogued resource provenance property 01" ;
+    sh:path schema:license ;
+    schema:name "Catalogued resource license property" ;
 .
 
-:provenance-properties-02
+:prop-org-url
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+    sh:message "The subject MUST must indicate exactly one schema:url predicate with an xsd:anyURI value" ;
+    sh:minCount 1 ;
+    sh:path schema:url ;
+    schema:name "Catalogued resource creator property" ;
+.
+
+:prop-person-email
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+    sh:message "The subject MUST indicate exactly one schema:email predicate with an xsd:anyURI value" ;
+    sh:minCount 1 ;
+    sh:path schema:email ;
+    schema:name "Catalogued resource creator property" ;
+.
+
+:prop-provenance-citation
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:message "schema:citation must indicate a URL or a string" ;
@@ -290,7 +280,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Catalogued resource provenance property 02" ;
 .
 
-:provenance-properties-03
+:prop-provenance-history-note
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:message "skos:historyNote must indicate a string, with or without language indicated" ;
@@ -309,30 +299,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Catalogued resource provenance property 03" ;
 .
 
-<https://linked.data.gov.au/org/dcceew>
-    a schema:Organization ;
-    schema:name "Department of Climate Change, energy, the Environment and Water" ;
-    schema:url "https://www.dcceew.gov.au/"^^xsd:anyURI ;
+:prop-provenance-wdf
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "prov:wasDerivedFrom must indicate an IRI" ;
+    sh:minCount 1 ;
+    sh:nodeKind sh:IRI ;
+    sh:path prov:wasDerivedFrom ;
+    schema:name "Catalogued resource provenance property 01" ;
 .
 
 ont:
     a owl:Ontology ;
-    schema:creator <http://orcid.org/0000-0002-8742-7730> ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2025-05-30"^^xsd:date ;
-    schema:dateModified "2026-04-07"^^xsd:date ;
+    schema:dateModified "2026-04-12"^^xsd:date ;
     schema:description "The Basic Catalogue Resource Profile validator" ;
     schema:hasPart
-        :Requirement-CW-created ,
-        :Requirement-CW-creator ,
-        :Requirement-CW-desc ,
-        :Requirement-CW-exists ,
-        :Requirement-CW-history ,
-        :Requirement-CW-license ,
-        :Requirement-CW-modified ,
-        :Requirement-CW-name ,
-        :Requirement-CW-publisher ;
+        :node-cat-resource-exists ,
+        :node-cat-resource-props ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Basic Catalogue Resource Profile Validator" ;
-    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
-    schema:version "4" ;
+    schema:publisher <https://kurrawong.ai> ;
+    schema:version "5" ;
 .
