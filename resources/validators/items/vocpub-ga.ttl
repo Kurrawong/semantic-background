@@ -20,7 +20,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :conceptSchemeGaCatId
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:datatype xsd:anyURI ;
+    sh:datatype <https://pid.geoscience.gov.au/def/voc/ga/eCatID> ;
     sh:maxCount 1 ;
     sh:message "Requirement GA ECAT-ID: Each vocabulary MUST have exactly one identifier predicate indicating an eCatID, which means a schema:identifier predicate indicating a URL starting https://pid.geoscience.gov.au/dataset/ga/ and ending with a multi-digit number" ;
     sh:minCount 1 ;
@@ -46,10 +46,10 @@ ont:
     a owl:Ontology ;
     owl:versionIRI <https://linked.data.gov.au/def/vocpub/validator/5.5.GA> ;
     owl:versionInfo "5.5 2026-02: Aligns with use of VocPub 5.5. eCatID requirement for Concept Scheme only" ;
-    prof:isProfileOf <https://linked.data.gov.au/def/vocpub/validator> ;
+    owl:imports <https://linked.data.gov.au/def/vocpub/validator> ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2020-06-14"^^xsd:date ;
-    schema:dateModified "2026-02-25"^^xsd:date ;
+    schema:dateModified "2026-04-20"^^xsd:date ;
     schema:dateIssued "2026-02-25"^^xsd:date ;
     schema:description "Geoscience Australia's additional vocabulary validation rules, to be added to VocPub" ;
     schema:name "VocPub Validator - GA"@en ;
@@ -58,4 +58,5 @@ ont:
     schema:codeRepository "https://github.com/AGLDWG/vocpub-profile/"^^xsd:anyURI ;
     schema:copyrightHolder <https://linked.data.gov.au/org/ga> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:version "2" ;
 .

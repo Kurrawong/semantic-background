@@ -363,3 +363,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Oracle Corporation" ;
     schema:url "https://www.oracle.com"^^xsd:anyURI ;
 .
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
+.
+
+
+<https://linked.data.gov.au/org/bdr-team>
+    a schema:Organization ;
+    schema:name "BDR Team" ;
+    schema:url "https://bdr.gov.au/"^^xsd:anyURI ;
+    schema:parentOrganization <https://linked.data.gov.au/org/dcceew> ;
+.
