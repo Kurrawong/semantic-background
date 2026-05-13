@@ -76,10 +76,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.08
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property :single-term-hierarchy ;
-    sh:targetClass skos:Concept ;
-    schema:description "Requirement 2.1.08" ;
+    schema:description "Requirement 2.1.08 - implemented by :Requirement-2.3.03" ;
     schema:name "Requirement 2.1.08" ;
 .
 
@@ -233,7 +230,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :Requirement-2.3.03
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property :in-scheme ;
+    sh:property :in-scheme-or-top-concept-of ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.03" ;
     schema:name "Requirement 2.3.03" ;
@@ -477,7 +474,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "Requirement 2.1.09 Each vocabulary's Concept Scheme MUST link to at least one Concept within the vocabulary with the skos:hasTopConcept predicate" ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
-    sh:path skos:hasTopConcept ;
+    sh:path [ sh:alternativePath ( skos:hasTopConcept [ sh:inversePath skos:topConceptOf ] ) ] ;
     schema:name "at least one concept" ;
 .
 
@@ -787,17 +784,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "qualified derivation role" ;
 .
 
-:single-term-hierarchy
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:class skos:ConceptScheme ;
-    sh:maxCount 1 ;
-    sh:message "Requirement 2.1.08 All Concept instances within a Concept Scheme MUST be contained in a single term hierarchy using skos:hasTopConcept / skos:topConceptOf predicates indicating the broadest Concepts in the vocabulary and then skos:broader and/or skos:narrower predicates for all non-broadest Concepts in a hierarchy that contains no cycles" ;
-    sh:minCount 1 ;
-    sh:path skos:inScheme ;
-    schema:name "single term hierarchy" ;
-.
-
 :temporal-entity-end-date-one
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
@@ -909,15 +895,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "status" ;
 .
 
-:in-scheme
+:in-scheme-or-top-concept-of
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:maxCount 1 ;
-    sh:message "Requirement 2.2.03 A Collections and Concepts MUST indicate any vocabulary they are used in with the skos:inScheme predicate" ;
+    sh:maxCount 2 ;
+    sh:message "Requirement 2.2.03 All Collections and Concepts MUST indicate any vocabulary they are used in with either the skos:inScheme predicate or the skos:topConceptOf predicate" ;
     sh:minCount 1 ;
-    sh:path skos:inScheme ;
+    sh:path [ sh:alternativePath ( skos:inScheme skos:topConceptOf [ sh:inversePath skos:hasTopConcept ] ) ] ;
     schema:name "in scheme" ;
 .
+
 
 :provenance-citation
     a sh:PropertyShape ;
