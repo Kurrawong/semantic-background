@@ -15,11 +15,11 @@ cs:
     schema:creator <https://linked.data.gov.au/org/idn> ;
     schema:dateIssued "2024-02-28"^^xsd:date ;
     schema:license "https://creativecommons.org/licenses/by/4.0/"^^xsd:anyURI ;
-    schema:dateModified "2024-02-28"^^xsd:date ;
+    schema:dateModified "2026-05-12"^^xsd:date ;
     skos:historyNote "Derived from the ISO 19115's CI Role Code codelist and added to by Australian vocabulary users"@en ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
     schema:copyrightNotice "(c) Australian Government Linked Data Working Group, 2024" ;
-    schema:citation "http://iso.kurrawong.net/vocab/CI_RoleCode"^^xsd:anyURI ;
+    schema:citation "https://def.isotc211.org/codeset/RoleCode"^^xsd:anyURI ;
     reg:status status:stable ;
     skos:definition "This vocabulary lists the roles that Agents - People and Organisations - play in relation to data. This is an extended and Semantic Web version of the International Organisation for Standardization's ISO19115-1 standard's Role Codes codelist."@en ;
     skos:hasTopConcept
