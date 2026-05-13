@@ -1,0 +1,43 @@
+# The Concept Scheme is missing a prefLabel
+
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX test: <http://example.com/test/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+test:error
+    sh:message "Requirement 2.1.04, 2.2.1 or 2.3.1 Each vocabulary, Collection or Concept MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
+    sh:node <http://example.com/resource/x> ;
+.
+
+<http://example.com/resource/x/c1>
+    a skos:Concept ;
+    rdfs:isDefinedBy <http://example.com/resource/x> ;
+    skos:definition "Stuff about Resource X"@en ;
+    skos:inScheme <http://example.com/resource/x> ;
+    skos:prefLabel "Resource X"@en ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:affiliation <https://kurrawong.ai> ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:honorificPrefix "Dr" ;
+    schema:name "Nicholas J. Car" ;
+    schema:url "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+.
+
+<http://example.com/resource/x>
+    a skos:ConceptScheme ;
+    skos:definition "Stuff about Resource X"@en ;
+    skos:hasTopConcept <http://example.com/resource/x/c1> ;
+    schema:citation "Made for testing" ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2026-04-09"^^xsd:date ;
+    schema:dateModified "2026-04-09"^^xsd:date ;
+    schema:datePublished "2026-04-09"^^xsd:date ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:publisher <https://orcid.org/0000-0002-8742-7730> ;
+.
