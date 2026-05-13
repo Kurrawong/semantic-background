@@ -45,7 +45,7 @@ def _validate_files(data_dir, validator):
                 r2 = query(v[1],
                           "SELECT ?node WHERE { ?x sh:focusNode ?node }",
                           {"sh": SH}, return_format="python", return_bindings_only=True)
-                assert r[0]["node"] == r2[0]["node"]
+                assert r[0]["node"] == r2[0]["node"], f'{r[0]["node"]} was found, test indicated {r2[0]["node"]}'
 
         else:  # not [v0] and validity
             resp += f" {f.name} should be invalid but is valid"
