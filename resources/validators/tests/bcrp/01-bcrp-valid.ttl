@@ -1,0 +1,25 @@
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<http://example.com/resource/x>
+    a schema:CreativeWork ;
+    schema:name "Resource X" ;
+    schema:description "Stuff about Resource X" ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:publisher <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2026-04-09"^^xsd:date ;
+    schema:dateModified "2026-04-09"^^xsd:date ;
+    schema:datePublished "2026-04-09"^^xsd:date ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:citation "Made for testing" ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:affiliation <https://kurrawong.ai> ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:honorificPrefix "Dr" ;
+    schema:name "Nicholas J. Car" ;
+    schema:url "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+.

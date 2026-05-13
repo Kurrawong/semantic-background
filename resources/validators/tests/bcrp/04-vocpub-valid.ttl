@@ -1,0 +1,38 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+skos:prefLabel rdfs:subPropertyOf schema:name .
+
+
+<http://example.com/resource/x>
+    a skos:ConceptScheme ;
+    skos:prefLabel "Resource X"@en ;
+    skos:definition "Stuff about Resource X"@en ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:publisher <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2026-04-09"^^xsd:date ;
+    schema:dateModified "2026-04-09"^^xsd:date ;
+    schema:datePublished "2026-04-09"^^xsd:date ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:citation "Made for testing" ;
+    skos:hasTopConcept <http://example.com/resource/x/c1> ;
+.
+
+<http://example.com/resource/x/c1>
+    a skos:Concept ;
+    skos:prefLabel "Resource X"@en ;
+    skos:definition "Stuff about Resource X"@en ;
+    rdfs:isDefinedBy <http://example.com/resource/x> ;
+    skos:inScheme <http://example.com/resource/x> ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:affiliation <https://kurrawong.ai> ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:honorificPrefix "Dr" ;
+    schema:name "Nicholas J. Car" ;
+    schema:url "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+.
