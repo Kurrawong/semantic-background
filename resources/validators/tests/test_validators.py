@@ -30,7 +30,7 @@ def _validate_files(data_dir, validator):
         if v[0] and validity:
             resp += " ok"
         elif not v[0] and validity:
-            resp += f" {f.name} should be valid but is invalid: {v[2]}"
+            resp += f" should be valid but is invalid: {v[2]}"
         elif not v[0] and not validity:
             # if invalid, extract the expected failure info and compare messages and focus nodes
             r = query(data_graph,
@@ -40,7 +40,7 @@ def _validate_files(data_dir, validator):
                 if r[0]["msg"] in v[2]:
                     resp += " ok"
                 else:
-                    resp += f" {f.name} is invalid, as expected, but the error message \'{r[0]['msg']}\' was not found in the error report: {v[2]}"
+                    resp += f" is invalid, as expected, but the error message \'{r[0]['msg']}\' was not found in the error report: {v[2]}"
 
                 r2 = query(v[1],
                           "SELECT ?node WHERE { ?x sh:focusNode ?node }",
@@ -48,7 +48,7 @@ def _validate_files(data_dir, validator):
                 assert r[0]["node"] == r2[0]["node"], f'{r[0]["node"]} was found, test indicated {r2[0]["node"]}'
 
         else:  # not [v0] and validity
-            resp += f" {f.name} should be invalid but is valid"
+            resp += f" should be invalid but is valid"
 
         print(resp)
 

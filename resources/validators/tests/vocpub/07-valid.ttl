@@ -1,18 +1,12 @@
+# uses a skos:broader and a skos:narrower in the hierarchy with no alternatives
+
 PREFIX : <https://pid.geoscience.gov.au/def/voc/ga/SeabedGeomorphologySettings/>
 PREFIX astatus: <https://linked.data.gov.au/def/reg-statuses/>
 PREFIX cs: <https://pid.geoscience.gov.au/def/voc/ga/SeabedGeomorphologySettings>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
-PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
-PREFIX test: <http://example.com/test/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-test:error
-    rdfs:comment "Same as 01-valid.ttl but missing the topConceptOf predicate for :Biogenic_Process" ;
-    sh:message "Requirement 2.3.03 Each Concept in a vocabulary MUST indicate that it appears within that vocabulary's hierarchy of Concepts either directly by use of the skos:topConceptOf predicate indicating the vocabulary or indirectly by use of one or more skos:broader / skos:narrower predicates placing the Concept within a chain of other Concepts, the top concept of which is indicated as a top concept of the vocabulary" ;
-    sh:node :Biogenic_Process ;
-.
 
 :Anthropogenic_Process
     a skos:Concept ;
@@ -35,6 +29,24 @@ test:error
     skos:prefLabel "back reef"@en ;
     schema:citation "https://pid.geoscience.gov.au/def/voc/ga/SeabedGeomorphologyGeneral/basic_geomorphic_unit_BGU"^^xsd:anyURI ;
     schema:status astatus:stable ;
+    skos:narrower :other ;
+.
+
+:other
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "Other example concept"@en ;
+    skos:prefLabel "other Concept"@en ;
+.
+
+:Biogenic_Process
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A PROCESS grouping in which geomorphic UNITS are biogenic landforms (bioconstructions and build-ups) that can predominantly be attributed to the activity of organisms at or below highest astronomical tides."@en ;
+    skos:historyNote "2026-05: This Concept was updated in 2026 following revision and maintenance of the ISGM 2-part geomorphic classification scheme." ;
+    skos:prefLabel "Biogenic Process"@en ;
+    skos:topConceptOf cs: ;
+    schema:status astatus:stable ;
 .
 
 :Coastal_Setting
@@ -50,15 +62,6 @@ test:error
     a schema:Organization ;
     schema:name "Geoscience Australia" ;
     schema:url "http://www.ga.gov.au"^^xsd:anyURI ;
-.
-
-:Biogenic_Process
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:definition "A PROCESS grouping in which geomorphic UNITS are biogenic landforms (bioconstructions and build-ups) that can predominantly be attributed to the activity of organisms at or below highest astronomical tides."@en ;
-    skos:historyNote "2026-05: This Concept was updated in 2026 following revision and maintenance of the ISGM 2-part geomorphic classification scheme." ;
-    skos:prefLabel "Biogenic Process"@en ;
-    schema:status astatus:stable ;
 .
 
 cs:

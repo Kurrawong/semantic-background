@@ -197,16 +197,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Requirement 2.2.03" ;
 .
 
-:Requirement-2.2.03b
-    a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:property :in-scheme ;
-    sh:severity sh:Warning ;
-    sh:targetClass skos:Collection ;
-    schema:description "Requirement 2.2.03b" ;
-    schema:name "Requirement 2.2.03b" ;
-.
-
 :Requirement-2.2.04
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
@@ -230,7 +220,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :Requirement-2.3.03
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    sh:property :in-scheme-or-top-concept-of ;
+    sh:property :in-hierarchy ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.03" ;
     schema:name "Requirement 2.3.03" ;
@@ -672,23 +662,51 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "creator" ;
 .
 
-:in-scheme-or-top-concept-of
+:in-hierarchy
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:maxCount 2 ;
-    sh:message "Requirement 2.2.03 & 2.3.03b All Collections and Concepts MUST indicate they are within the Concept Scheme of the vocabulary by skos:inScheme. A Concept may instead use skos:topConceptOf" ;
+    sh:message "Requirement 2.3.03 Each Concept in a vocabulary MUST indicate that it appears within that vocabulary's hierarchy of Concepts either directly by use of the skos:topConceptOf predicate indicating the vocabulary or indirectly by use of one or more skos:broader / skos:narrower predicates placing the Concept within a chain of other Concepts, the top concept of which is indicated as a top concept of the vocabulary" ;
     sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:class skos:ConceptScheme ;
+        ]
+        
+        [
+            sh:class skos:Concept ;
+        ]
+    ) ;
     sh:path
         [
             sh:alternativePath (
-                skos:inScheme
-                skos:topConceptOf
+                skos:broader
                 
                 [
-                    sh:inversePath skos:hasTopConcept ;
+                    sh:inversePath skos:narrower ;
+                ]
+                
+                [
+                    sh:alternativePath (
+                        skos:topConceptOf
+                        
+                        [
+                            sh:inversePath skos:hasTopConcept ;
+                        ]
+                    ) ;
                 ]
             ) ;
         ] ;
+    schema:name "broader / topConceptOf chain" ;
+.
+
+:in-scheme
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.2.03 All Collections MUST indicate they are within the Concept Scheme of the vocabulary with the skos:inScheme predicate" ;
+    sh:minCount 1 ;
+    sh:path skos:inScheme ;
     schema:name "in scheme" ;
 .
 
