@@ -326,7 +326,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/valpub/req/2.1.12-property-shape-01>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.12a: SHACL ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
+    sh:message "Requirement 2.1.12a: SHACL ontologies SHOULD present any licence pertaining to its use using the schema:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in text, a literal text field may be indicated." ;
     sh:minCount 1 ;
     sh:nodeKind sh:Literal ;
     sh:or (
@@ -884,8 +884,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ont:
     a owl:Ontology ;
-    owl:versionIRI :1.2 ;
-    owl:versionInfo """1.2 2026-02: Changes a couple of Violations to Warnings
+    owl:versionIRI :1.3 ;
+    owl:versionInfo """1.3 2026-04: Align schema:license allowed types with VocPub
+
+1.2 2026-02: Changes a couple of Violations to Warnings
 
 1.1 2026-02: Made ValPub compliant; move all Property Shapes to IRIs, not BNs
 
@@ -897,9 +899,10 @@ ont:
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2025-12-15"^^xsd:date ;
     schema:dateIssued "2026-02-09"^^xsd:date ;
-    schema:dateModified "2026-04-08"^^xsd:date ;
+    schema:dateModified "2026-04-22"^^xsd:date ;
     schema:description "SHACL Shapes to validate ontologies of SHACL shapes according to the Validator Publications Profile" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Validator Publication Profile Validator" ;
     schema:publisher <https://kurrawong.ai> ;
+    schema:version "1.3" ;
 .

@@ -394,7 +394,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.10-property-shape>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.10: OWL ontologies SHOULD indicate a version using the property owl:versionIRI with an IRI object." ;
+    sh:message "Requirement 2.1.10: OWL Ontologies SHOULD indicate a version using the property owl:versionIRI with an IRI object." ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
     sh:path owl:versionIRI ;
@@ -406,7 +406,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:datatype xsd:anyURI ;
-    sh:message "Requirement 2.1.11: OWL ontologies SHOULD indicate any online version controlled source code repository storing the ontology and related content with the schema:codeRepository with a xsd:anyURI object." ;
+    sh:message "Requirement 2.1.11: OWL Ontologies SHOULD indicate any online version controlled source code repository storing the ontology and related content with the schema:codeRepository with a xsd:anyURI object." ;
     sh:minCount 1 ;
     sh:path schema:codeRepository ;
     sh:severity sh:Warning ;
@@ -416,17 +416,21 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.12-property-shape-01>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.12a: OWL ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
+    sh:message "Requirement 2.1.12a: OWL Ontologies SHOULD present any licence pertaining to its use using the schema:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in text, a literal text field may be indicated." ;
     sh:minCount 1 ;
     sh:nodeKind sh:Literal ;
     sh:or (
         
         [
+            sh:nodeKind sh:IRI ;
+        ]
+
+        [
             sh:datatype xsd:anyURI ;
         ]
-        
+
         [
-            sh:nodeKind sh:Literal ;
+            sh:datatype xsd:string ;
         ]
     ) ;
     sh:path schema:license ;
@@ -437,7 +441,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.12-property-shape-02>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.12a: OWL ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
+    sh:message "Requirement 2.1.12a: OWL Ontologies SHOULD present a license for its use indicated with the schema:license use indicating either the literal text of a license or a URL of a license using the datatype xsd:anyURI or they may link to a Semantic Web version of a license via its IRI." ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
     sh:path schema:license ;
@@ -448,7 +452,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.13-property-shape>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.13: OWL ontologies MAY present usage information alongside license information using the schema:usageInfo property indicating literal text." ;
+    sh:message "Requirement 2.1.13: OWL Ontologies MAY present usage information alongside license information using the schema:usageInfo property indicating literal text." ;
     sh:nodeKind sh:Literal ;
     sh:path schema:usageInfo ;
     schema:name "Ontology usage info - property shape" ;
@@ -457,7 +461,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.14a-property-shape>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.14: OWL ontologies SHOULD present a copyright information for it indicated with properties schema:copyrightHolder, schema:copyrightNotice and schema:copyrightYear. schema:copyrightHolder may be used with a text object or, preferably, an schema:Person or schema:Organization object." ;
+    sh:message "Requirement 2.1.14: OWL Ontologies SHOULD present a copyright information for it indicated with properties schema:copyrightHolder, schema:copyrightNotice and schema:copyrightYear. schema:copyrightHolder may be used with a text object or, preferably, an schema:Person or schema:Organization object." ;
     sh:minCount 1 ;
     sh:or (
         
@@ -477,7 +481,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.15-property-shape>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.15: OWL ontologies MUST present at least one sh:NodeShape or sh:PropertyShape within the ontology file" ;
+    sh:message "Requirement 2.1.15: OWL Ontologies MUST present at least one sh:NodeShape or sh:PropertyShape within the ontology file" ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path
         [
@@ -500,7 +504,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.2 OWL ontologies MUST be presented as a single owl:Ontology object & Requirement 2.1.3 Each OWL ontology MUST be presented in a single file which does not contain information other than that which is directly part of the ontology and the file is considered the point-of-truth" ;
+    sh:message "Requirement 2.1.2: OWL Ontologies MUST be presented as a single owl:Ontology object & Requirement 2.1.3 Each OWL ontology MUST be presented in a single file which does not contain information other than that which is directly part of the ontology and the file is considered the point-of-truth" ;
     sh:minCount 1 ;
     sh:path rdf:type ;
     schema:name "Single ontology - property shape" ;
@@ -510,7 +514,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:datatype rdf:langString ;
-    sh:message "Requirement 2.1.4: OWL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:message "Requirement 2.1.4: OWL Ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
     sh:minCount 1 ;
     sh:path skos:prefLabel ;
     sh:uniqueLang true ;
@@ -520,7 +524,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.4-property-shape-02>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.4: OWL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:message "Requirement 2.1.4: OWL Ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -541,7 +545,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.5: OWL ontologies MUST have exactly one definition, a text literal text, indicated using either the skos:definition or schema:description property" ;
+    sh:message "Requirement 2.1.5: OWL Ontologies MUST have exactly one definition, a text literal text, indicated using either the skos:definition or schema:description property" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -561,7 +565,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.5: OWL ontologies MUST have exactly one definition, a text literal text, indicated using either the skos:definition or schema:description property" ;
+    sh:message "Requirement 2.1.5: OWL Ontologies MUST have exactly one definition, a text literal text, indicated using either the skos:definition or schema:description property" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -581,7 +585,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.6: OWL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated & schema:dateModified properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+    sh:message "Requirement 2.1.6: OWL Ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated & schema:dateModified properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -605,7 +609,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.6: OWL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated & schema:dateModified properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+    sh:message "Requirement 2.1.6: OWL Ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated & schema:dateModified properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -628,7 +632,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.7-property-shape-01>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.7: OWL ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
+    sh:message "Requirement 2.1.7: OWL Ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -647,7 +651,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.7-property-shape-02>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.7: OWL ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
+    sh:message "Requirement 2.1.7: OWL Ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -666,7 +670,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.8-property-shape>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.8: OWL ontologies MAY have at least any number of contributors, indicated using schema:contributor property that must be a IRI value indicating an agent, that is an instance of schema:Person, schema:Organization or a subclass of either" ;
+    sh:message "Requirement 2.1.8: OWL Ontologies MAY have at least any number of contributors, indicated using schema:contributor property that must be a IRI value indicating an agent, that is an instance of schema:Person, schema:Organization or a subclass of either" ;
     sh:or (
         
         [
@@ -721,7 +725,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.9b: OWL ontologies MUST NOT use skos:historyNote property more than once on any object." ;
+    sh:message "Requirement 2.1.9b: OWL Ontologies MUST NOT use skos:historyNote property more than once on any object." ;
     sh:path skos:historyNote ;
     schema:name "Single history note predicate - property shape" ;
 .
@@ -1006,8 +1010,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ont:
     a owl:Ontology ;
-    owl:versionIRI :1.5 ;
-    owl:versionInfo """1.5 2026-01: allow schema:license to indicate an IRI
+    owl:versionIRI :1.6 ;
+    owl:versionInfo """1.6 2026-04: Align schema:license allowed types with VocPub
+
+1.5 2026-01: allow schema:license to indicate an IRI
 
 1.4 2025-07: Changed to linked.data.gov.au IRI
 
@@ -1023,10 +1029,10 @@ ont:
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2022-03-19"^^xsd:date ;
     schema:dateIssued "2023-09-21"^^xsd:date ;
-    schema:dateModified "2026-02-06"^^xsd:date ;
+    schema:dateModified "2026-04-22"^^xsd:date ;
     schema:description "SHACL Shapes to validate RDF data according to the Ontology Publications Profile" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Ontology Publication Profile Validator" ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
-    schema:version "1.5" ;
+    schema:version "1.6" ;
 .
