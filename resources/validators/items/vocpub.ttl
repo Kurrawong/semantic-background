@@ -665,7 +665,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :in-hierarchy
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.3.03 Each Concept in a vocabulary MUST indicate that it appears within that vocabulary's hierarchy of Concepts either directly by use of the skos:topConceptOf predicate indicating the vocabulary or indirectly by use of one or more skos:broader / skos:narrower predicates placing the Concept within a chain of other Concepts, the top concept of which is indicated as a top concept of the vocabulary" ;
+    sh:message "Requirement 2.3.03 Each Concept in a vocabulary MUST indicate that it appears within that vocabulary's hierarchy of Concepts either directly by use of the skos:topConceptOf predicate indicating the vocabulary or indirectly by use of one or more skos:broader / skos:narrower predicates placing the Concept within a chain of other Concepts, the end of which is indicated as a top concept of the vocabulary" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -1067,7 +1067,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 ont:
     a owl:Ontology ;
     owl:versionIRI :5.6 ;
-    owl:versionInfo """5.6 2023-05: Test that broader/narrower indicates a Concept in this vocab (2.3.02), allow topConceptOf instead of inScheme in 2.2.03 & 2.3.03b, allow topConceptOf or hasTopConcept for 2.1.08 & 2.3.03; use same test for 2.1.08 & 2.3.03
+    owl:versionInfo """5.6 2023-05: Test that broader/narrower indicates a Concept in this vocab (2.3.02), allow topConceptOf or hasTopConcept for 2.1.08 & 2.3.03; use same test for 2.1.08 & 2.3.03
 
 5.5 2026-02: Added Shapes for Reqs 2.3.10 - 2.3.19
 
