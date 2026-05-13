@@ -1,16 +1,17 @@
-PREFIX gavoc: <https://pid.geoscience.gov.au/def/voc/ga/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX test: <http://example.com/test/>
 
+test:error
+    rdfs:comment "The ConceptScheme has a literal identifier of type string (default) not gavoc:eCatID" ;
+    sh:message "Requirement GA ECAT-ID: Each vocabulary MUST have exactly one identifier predicate indicating an eCatID, which means a schema:identifier predicate indicating a URL starting https://pid.geoscience.gov.au/dataset/ga/ and ending with a multi-digit number" ;
+    sh:node <http://example.com/resource/x> ;
+.
+
 <http://example.com/resource/x>
     a skos:ConceptScheme ;
     schema:identifier "https://pid.geoscience.gov.au/dataset/ga/147628" ;
     schema:publisher <https://linked.data.gov.au/org/ga> ;
-.
-
-test:error
-    sh:node <http://example.com/resource/x> ;
-    sh:message "Requirement GA ECAT-ID: Each vocabulary MUST have exactly one identifier predicate indicating an eCatID, which means a schema:identifier predicate indicating a URL starting https://pid.geoscience.gov.au/dataset/ga/ and ending with a multi-digit number" ;
 .

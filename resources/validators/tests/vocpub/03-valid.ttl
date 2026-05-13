@@ -19,6 +19,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:status astatus:stable ;
 .
 
+:Coastal_Setting
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A SETTING in which geomorphic UNITS are primarily formed by coastal processes (waves, tides, rivers and winds) on modern or former CONTINENTAL SHELVES (PHYSIOGRAPHY)."@en ;
+    skos:historyNote "2026-05: This Concept was updated in 2026 following revision and maintenance of the ISGM 2-part geomorphic classification scheme." ;
+    skos:prefLabel "Coastal Setting"@en ;
+    skos:topConceptOf cs: ;
+    schema:status astatus:stable ;
+.
+
 :back_reef
     a skos:Concept ;
     rdfs:isDefinedBy cs: ;
@@ -37,16 +47,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     skos:definition "A PROCESS grouping in which geomorphic UNITS are biogenic landforms (bioconstructions and build-ups) that can predominantly be attributed to the activity of organisms at or below highest astronomical tides."@en ;
     skos:historyNote "2026-05: This Concept was updated in 2026 following revision and maintenance of the ISGM 2-part geomorphic classification scheme." ;
     skos:prefLabel "Biogenic Process"@en ;
-    skos:topConceptOf cs: ;
-    schema:status astatus:stable ;
-.
-
-:Coastal_Setting
-    a skos:Concept ;
-    rdfs:isDefinedBy cs: ;
-    skos:definition "A SETTING in which geomorphic UNITS are primarily formed by coastal processes (waves, tides, rivers and winds) on modern or former CONTINENTAL SHELVES (PHYSIOGRAPHY)."@en ;
-    skos:historyNote "2026-05: This Concept was updated in 2026 following revision and maintenance of the ISGM 2-part geomorphic classification scheme." ;
-    skos:prefLabel "Coastal Setting"@en ;
     skos:topConceptOf cs: ;
     schema:status astatus:stable ;
 .

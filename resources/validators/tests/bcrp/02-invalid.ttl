@@ -1,20 +1,25 @@
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX test: <http://example.com/test/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+test:error
+    rdfs:comment "Same as 01-valid.ttl but with the Concept Scheme missing a license" ;
+    sh:message "Each catalogued resource MUST indicate a license that defines conditions for its use with the schema:license predicate" ;
+    sh:node <http://example.com/resource/x> ;
+.
 
 <http://example.com/resource/x>
     a schema:CreativeWork ;
-    schema:name "Resource X" ;
-    schema:description "Stuff about Resource X" ;
+    schema:citation "Made for testing" ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
-    schema:publisher <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2026-04-09"^^xsd:date ;
     schema:dateModified "2026-04-09"^^xsd:date ;
     schema:datePublished "2026-04-09"^^xsd:date ;
-    # schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:citation "Made for testing" ;
+    schema:description "Stuff about Resource X" ;
+    schema:name "Resource X" ;
+    schema:publisher <https://orcid.org/0000-0002-8742-7730> ;
 .
 
 <https://orcid.org/0000-0002-8742-7730>
@@ -24,9 +29,4 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:honorificPrefix "Dr" ;
     schema:name "Nicholas J. Car" ;
     schema:url "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
-.
-
-test:error
-    sh:node <http://example.com/resource/x> ;
-    sh:message "Each catalogued resource MUST indicate a license that defines conditions for its use with the schema:license predicate" ;
 .
