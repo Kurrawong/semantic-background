@@ -1,0 +1,78 @@
+PREFIX : <https://pid.geoscience.gov.au/def/voc/ga/SeabedGeomorphologySettings/>
+PREFIX astatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX cs: <https://pid.geoscience.gov.au/def/voc/ga/SeabedGeomorphologySettings>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX test: <http://example.com/test/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+test:error
+    rdfs:comment "Same as 01-valid.ttl but with th skos:broader for :back_reef pointing not to a Concept in this vocab" ;
+    sh:message "Requirement 2.3.20 If a Concept indicates a broader Concept with skos:broader, that Concept must exist in the vocabulary" ;
+    sh:node :back_reef ;
+.
+
+:Anthropogenic_Process
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A PROCESS grouping in which geomorphic units are primarily the result of Anthropogenic activity (e.g. PYLONS; BEDFORMS and SCOURS around infrastructure)."@en ;
+    skos:historyNote "2026-05: This Concept was updated in 2026 following revision and maintenance of the ISGM 2-part geomorphic classification scheme." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "Anthropogenic Process"@en ;
+    skos:topConceptOf cs: ;
+    schema:status astatus:stable ;
+.
+
+:Biogenic_Process
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A PROCESS grouping in which geomorphic UNITS are biogenic landforms (bioconstructions and build-ups) that can predominantly be attributed to the activity of organisms at or below highest astronomical tides."@en ;
+    skos:historyNote "2026-05: This Concept was updated in 2026 following revision and maintenance of the ISGM 2-part geomorphic classification scheme." ;
+    skos:prefLabel "Biogenic Process"@en ;
+    skos:topConceptOf cs: ;
+    schema:status astatus:stable ;
+.
+
+:Coastal_Setting
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:definition "A SETTING in which geomorphic UNITS are primarily formed by coastal processes (waves, tides, rivers and winds) on modern or former CONTINENTAL SHELVES (PHYSIOGRAPHY)."@en ;
+    skos:historyNote "2026-05: This Concept was updated in 2026 following revision and maintenance of the ISGM 2-part geomorphic classification scheme." ;
+    skos:prefLabel "Coastal Setting"@en ;
+    schema:status astatus:stable ;
+.
+
+:back_reef
+    a skos:Concept ;
+    rdfs:isDefinedBy cs: ;
+    skos:broader <http://example.com/concept/external> ;
+    skos:definition "Wide (up to kms) zone extending back from the REEF FLAT, mainly found in linear-shaped reefs. BACK REEF zone supports scattered small submerged PATCH REEFS and extensive sand bank development (Maxwell, 1968)."@en ;
+    skos:historyNote "2026-05: This Concept was updated in 2026 following revision and maintenance of the ISGM 2-part geomorphic classification scheme." ;
+    skos:inScheme cs: ;
+    skos:prefLabel "back reef"@en ;
+    schema:citation "https://pid.geoscience.gov.au/def/voc/ga/SeabedGeomorphologyGeneral/basic_geomorphic_unit_BGU"^^xsd:anyURI ;
+    schema:status astatus:stable ;
+.
+
+<https://linked.data.gov.au/org/ga>
+    a schema:Organization ;
+    schema:name "Geoscience Australia" ;
+    schema:url "http://www.ga.gov.au"^^xsd:anyURI ;
+.
+
+cs:
+    a skos:ConceptScheme ;
+    skos:definition "A vocabulary of ..."@en ;
+    skos:hasTopConcept :Coastal_Setting ;
+    skos:historyNote "stuff"@en ;
+    skos:prefLabel "Seabed geomorphology - Part 2 Geomorphology"@en ;
+    schema:creator <https://linked.data.gov.au/org/ga> ;
+    schema:dateCreated "2024-06-17"^^xsd:date ;
+    schema:dateModified "2026-05-08"^^xsd:date ;
+    schema:keywords <https://pid.geoscience.gov.au/def/voc/ga/DataThemes/geomorphology> ;
+    schema:publisher <https://linked.data.gov.au/org/ga> ;
+    schema:status astatus:experimental ;
+    schema:version "2.0" ;
+.

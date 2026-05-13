@@ -274,13 +274,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :Requirement-2.3.11
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
+    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its range value MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
     sh:targetClass skos:Concept ;
     sh:xone (
         :concept-historyNote-string
         :concept-historyNote-lang
         :concept-historyNote-none
     ) ;
-    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its range value MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
     schema:name "Requirement 2.3.11" ;
 .
 
@@ -370,9 +370,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             ) ;
         ]
     ) ;
-    sh:targetClass time:TemporalEntity ;
     sh:message "Requirement 2.3.19 If a Concept indicates a temporal coverage, its range value MUST be a temporal entity (time:TemporalEntity) with either or both schema:startDate and schema:endDate values which must be dates (xsd:date)" ;
+    sh:targetClass time:TemporalEntity ;
     schema:name "Requirement 2.3.19-temporal-entity" ;
+.
+
+:Requirement-2.3.20
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:property :broaders-and-narrowers-must-be-concepts ;
+    sh:targetClass skos:Concept ;
+    schema:description "Requirement 2.3.20" ;
+    schema:name "Requirement 2.3.20" ;
 .
 
 :Requirement-2.4.02
@@ -474,8 +483,26 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "Requirement 2.1.09 Each vocabulary's Concept Scheme MUST link to at least one Concept within the vocabulary with the skos:hasTopConcept predicate" ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
-    sh:path [ sh:alternativePath ( skos:hasTopConcept [ sh:inversePath skos:topConceptOf ] ) ] ;
+    sh:path
+        [
+            sh:alternativePath (
+                skos:hasTopConcept
+                
+                [
+                    sh:inversePath skos:topConceptOf ;
+                ]
+            ) ;
+        ] ;
     schema:name "at least one concept" ;
+.
+
+:broaders-and-narrowers-must-be-concepts
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:class skos:Concept ;
+    sh:message "Requirement 2.3.20 If a Concept indicates a broader Concept with skos:broader, that Concept must exist in the vocabulary" ;
+    sh:path skos:broader ;
+    schema:name "broader must be a Concept" ;
 .
 
 :concept-date-created
@@ -507,17 +534,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "concept history note lang" ;
 .
 
-:concept-historyNote-string
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:datatype xsd:string ;
-    sh:maxCount 1 ;
-    sh:minCount 1 ;
-    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its range value MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
-    sh:path skos:historyNote ;
-    schema:name "concept history note string" ;
-.
-
 :concept-historyNote-none
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
@@ -525,6 +541,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its range value MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
     sh:path skos:historyNote ;
     schema:name "concept history note none" ;
+.
+
+:concept-historyNote-string
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:datatype xsd:string ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its range value MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
+    sh:minCount 1 ;
+    sh:path skos:historyNote ;
+    schema:name "concept history note string" ;
 .
 
 :concept-isReplacedBy
@@ -643,6 +670,26 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             ) ;
         ] ;
     schema:name "creator" ;
+.
+
+:in-scheme-or-top-concept-of
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 2 ;
+    sh:message "Requirement 2.2.03 All Collections and Concepts MUST indicate any vocabulary they are used in with either the skos:inScheme predicate or the skos:topConceptOf predicate" ;
+    sh:minCount 1 ;
+    sh:path
+        [
+            sh:alternativePath (
+                skos:inScheme
+                skos:topConceptOf
+                
+                [
+                    sh:inversePath skos:hasTopConcept ;
+                ]
+            ) ;
+        ] ;
+    schema:name "in scheme" ;
 .
 
 :is-defined-by
@@ -837,6 +884,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "theming" ;
 .
 
+<https://linked.data.gov.au/org/agldwg>
+    a schema:Organization ;
+    schema:name "Australian Government Linked Data Working Group" ;
+    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
 :definition
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
@@ -895,16 +948,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "status" ;
 .
 
-:in-scheme-or-top-concept-of
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:maxCount 2 ;
-    sh:message "Requirement 2.2.03 All Collections and Concepts MUST indicate any vocabulary they are used in with either the skos:inScheme predicate or the skos:topConceptOf predicate" ;
-    sh:minCount 1 ;
-    sh:path [ sh:alternativePath ( skos:inScheme skos:topConceptOf [ sh:inversePath skos:hasTopConcept ] ) ] ;
-    schema:name "in scheme" ;
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
+    schema:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+    schema:name "Nicholas J. Car" ;
 .
-
 
 :provenance-citation
     a sh:PropertyShape ;
@@ -995,19 +1044,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:path prov:wasDerivedFrom ;
     sh:severity sh:Warning ;
     schema:name "provenance wasDerivedFrom" ;
-.
-
-<https://orcid.org/0000-0002-8742-7730>
-    a schema:Person ;
-    schema:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
-    schema:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
-    schema:name "Nicholas J. Car" ;
-.
-
-<https://linked.data.gov.au/org/agldwg>
-    a schema:Organization ;
-    schema:name "Australian Government Linked Data Working Group" ;
-    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
 .
 
 ont:
