@@ -10,7 +10,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 test:error
     rdfs:comment "Same as 01-valid.ttl but missing the topConceptOf predicate for :Biogenic_Process" ;
-    sh:message "Requirement 2.2.03 All Collections and Concepts MUST indicate any vocabulary they are used in with either the skos:inScheme predicate or the skos:topConceptOf predicate" ;
+    sh:message "Requirement 2.2.03 & 2.3.03b All Collections and Concepts MUST indicate they are within the Concept Scheme of the vocabulary by skos:inScheme. A Concept may instead use skos:topConceptOf" ;
     sh:node :Biogenic_Process ;
 .
 

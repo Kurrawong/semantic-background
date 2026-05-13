@@ -40,7 +40,7 @@ def _validate_files(data_dir, validator):
                 if r[0]["msg"] in v[2]:
                     resp += " ok"
                 else:
-                    resp += f" {f.name} is invalid, as expected, but the error message was not \'{r[0]['msg']}\' but {v[2]}"
+                    resp += f" {f.name} is invalid, as expected, but the error message \'{r[0]['msg']}\' was not found in the error report: {v[2]}"
 
                 r2 = query(v[1],
                           "SELECT ?node WHERE { ?x sh:focusNode ?node }",
