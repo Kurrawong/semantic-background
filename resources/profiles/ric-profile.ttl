@@ -1,0 +1,115 @@
+@prefix : <https://www.ica.org/standards/RiC/profile/> .
+@prefix ont: <https://www.ica.org/standards/RiC/ontology#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://www.ica.org/standards/RiC/profile> a prof:Profile ;
+    prof:hasToken "ricprof" ;
+    schema:name "RiC  Profile" ;
+    schema:definition "This is a profile of the archival data model Records in Context (RiC). It defines resources that support the profile including the ontology (RiC-O), specification, record validator, record examples, guidance document,  and change history register"@en ;
+    schema:publisher <https://kurrawong.ai> ;
+    schema:creator <https://orcid.org/0000-0001-5640-3202> ;
+    schema:dateCreated "2026-06-09"^^xsd:date ;
+    schema:dateModified "2026-06-09"^^xsd:date ;
+    prof:hasResource 
+        :examples ,
+        :guidance ,
+        :history ,
+        :mappings ,
+        :ontology ,
+        :documentaryFormTypes ,
+        :recordSetTypes ,
+        :specification ,
+        :validator ;
+    owl:versionIRI :0.1
+.
+
+:0.1
+schema:name "v0.1" .
+
+<https://orcid.org/0000-0001-5640-3202> a schema:Person ;
+schema:name "Les Kneebone" ;
+schema:email "les@kurrawong.ai"^^xsd:anyURI
+.
+
+<https://kurrawong.ai> a schema:Organization ;
+schema:name "KurrawongAI" ;
+schema:url "https://kurrawong.ai"^^xsd:anyURI
+.
+
+:documentaryFormTypes a prof:ResourceDescriptor ;
+        schema:name "Documentary Form Types" ;
+        schema:description "A vocabulary that provides URIs for describing documentary form types of RiC Records and Record Parts." ;
+        prof:hasRole role:vocabulary ;
+        prof:hasArtifact  "https://www.ica.org/standards/RiC/RiC-O_1-1.html#documentaryFormTypes"^^xsd:anyURI ;
+        prof:hasFormat <https://w3id.org/mediatype/text/html>
+.
+
+:examples a prof:ResourceDescriptor ;
+        schema:name "RiC-O Examples" ;
+        schema:description "RiC-O record examples" ;
+        prof:hasRole role:example ; 
+        prof:hasArtifact <https://www.ica.org/standards/RiC/profile/examples.html> ;
+        prof:hasFormat <https://w3id.org/mediatype/text/html>
+.
+
+:guidance a prof:ResourceDescriptor ;
+        schema:name "RiC-O Guidance" ;
+        schema:description "Guidance on using and implementing RiC-O Profile resources" ;
+        prof:hasRole role:guidance ;
+        prof:hasArtifact <https://www.ica.org/standards/RiC/profile/guidance.html> ;
+        prof:hasFormat <https://w3id.org/mediatype/text/html>
+.
+
+:history a prof:ResourceDescriptor ;
+        schema:name "RiC-O Change History" ;
+        schema:description "RiC-O official register of selected changes to RiC-O Profile resources" ;
+        prof:hasRole role:guidance ;
+        prof:hasArtifact <https://www.ica.org/standards/RiC/profile/history.html> ;
+        prof:hasFormat <https://w3id.org/mediatype/text/html>
+.
+
+:mappings a prof:ResourceDescriptor ;
+        schema:name "RiC-O Mappings" ;
+        schema:description "RiC-O mapping definition between RiC-O Ontology classes and properties and other ontologies" ;
+        prof:hasRole role:mapping ;
+        prof:hasArtifact  <https://www.ica.org/standards/RiC/profile/mapping.ttl> ;
+        prof:hasFormat <https://w3id.org/mediatype/text/turtle>
+.
+
+:ontology a prof:ResourceDescriptor ;
+        schema:name "RiC-O Ontology Resource" ;
+        schema:description "RiC-O Ontology semantic artefact" ;
+        prof:hasRole role:schema ;
+        prof:hasArtifact  <https://www.ica.org/standards/RiC/ontology.ttl> ;
+        prof:hasFormat <https://w3id.org/mediatype/text/turtle>
+.
+
+:recordSetTypes a prof:ResourceDescriptor ;
+        schema:name "Record Set Types" ;
+        schema:description "A vocabulary that provides URIs for describing types of RiC Record Sets." ;
+        prof:hasRole role:vocabulary ;
+        prof:hasArtifact  "https://www.ica.org/standards/RiC/RiC-O_1-1.html#recordSetTypes"^^xsd:anyURI ;
+        prof:hasFormat <https://w3id.org/mediatype/text/html>
+.
+
+:specification a prof:ResourceDescriptor ;
+        prof:hasRole role:specification ;
+        prof:hasArtifact "https://www.ica.org/standards/RiC/profile/spec"^^xsd:anyURI ;
+        prof:hasFormat <https://w3id.org/mediatype/text/html>
+.
+
+:validator a prof:ResourceDescriptor ;
+        prof:hasRole role:validation ;
+        prof:hasArtifact  <https://www.ica.org/standards/RiC/profile/validator.ttl> ;
+        prof:hasFormat <https://w3id.org/mediatype/text/turtle> ;
+        dcterms:conformsTo :specification
+.
