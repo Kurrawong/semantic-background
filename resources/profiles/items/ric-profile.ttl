@@ -28,7 +28,7 @@
         :documentaryFormTypes ,
         :recordSetTypes ,
         :specification ,
-        :validator ;
+        <https://kurrawong.ai/validator/rico#> ;
     owl:versionIRI :0.1
 .
 
@@ -107,7 +107,9 @@ schema:url "https://kurrawong.ai"^^xsd:anyURI
         prof:hasFormat <https://w3id.org/mediatype/text/html>
 .
 
-:validator a prof:ResourceDescriptor ;
+<https://kurrawong.ai/validator/rico#> a prof:ResourceDescriptor ;
+        schema:name "RiC-O Validator" ;
+        schema:description "OntoShacl generated validator for https://www.ica.org/standards/RiC/ontology#" ;
         prof:hasRole role:validation ;
         prof:hasArtifact  <https://www.ica.org/standards/RiC/profile/validator.ttl> ;
         prof:hasFormat <https://w3id.org/mediatype/text/turtle> ;
