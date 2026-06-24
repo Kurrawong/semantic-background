@@ -1,0 +1,388 @@
+[[appendix-I]]
+==== Appendix I: list of the changes made since the release of RiC-O v0.1
+
+The following is a list of the changes made to RiC-O since the release
+of RiC-O v0.1 in December 2019. The most important changes are mentioned
+in bold. *Note that from October 2020 any change on a component is
+described and dated in the specification of this component, using
+skos:changeNote*.
+
+* Fixed a bug in the documentation of rico:PerformanceRelation and its
+object properties.
+* Renamed the file and updated the ontology metadata.
+* OccupationType made a subclass of ActivityType.
+* Changed the domain and range of rico:hasOriginal and rico:hasDraft (it
+is now Record or Record Part); same for their inverse properties.
+* Fixed a bug in the definition of rico:provenanceRelationHasTarget
+(removed the owl:propertyChainAxiom).
+* Changed the name of rico:leadBy object property (grammatical mistake)
+to rico:ledBy.
+* 2020, October 19: Added a vann:preferredNamespaceUri and
+vann:preferredNamespacePrefix property to the ontology metadata
+* 2020, October 19 : created RuleType and IdentifierType classes, along
+with the associated object properties.
+* 2020, October 23: *updated the text definition and/or scope note of 33
+classes, that correspond to RiC-CM entities or attributes, in order to
+make them compliant with RiC-CM v0.2*. Added a few owl:disjointWith
+properties.
+* 2020, November 1: *updated the text definition and/or scope note of,
+and/or added examples for, 27 datatype properties, that correspond to
+RiC-CM attributes, in order to make them compliant with RiC-CM v0.2*.
+* 2020, November 20: *created new classes and properties for handling an
+accurate description of instantation and record resource extent*:
+Extent, Carrier Extent, Instantiation Extent, Record Resource Extent,
+Unit of measurement, Extent Type classes; unit of measurement and
+quantity datatype properties; has Extent, is Extent Of, has Extent Type,
+is Extent Type Of, has Unit Of Measurement, is Unit of Measurement Of,
+object properties.
+* 2020, December 28: changed the IRIs and definition of
+RecordResourceState class and of the associated object properties;
+*changed the domain or ranges and textual definitions of properties
+associated with Language, LegalStatus, ContentType, DocumentaryFormType;
+added new object properties for handling the description of some or all
+members of Record Set*. Added the corresponding change notes.
+* 2020, December 29: deleted the isSuperiorTo and isInferiorTo object
+properties, as well as the AgentSubordinationRelation and its object
+properties (as the RiC-R043 relation has been removed from RiC-CM 0.2).
+Added the hasAuthor/isAuthorOf object properties, plus an
+AuthorshipRelation class and its specific object properties (as the
+RiC-R079 relation has been added to RiC-CM 0.2). Added the corresponding
+change notes.
+* 2021, January 22: *changed the IRI, label, and/or superproperties or
+inverse property IRI, and/or textual definition, and/or domain or range,
+of 152 object properties. Among them, changed the IRI of 119 object
+properties; 85 correspond to RiC-CM relations whose name has been
+changed in RiC-CM 0.2*. Added the corresponding change notes.
+* 2021, January 27: added an rdfs:isDefinedBy to the specification of
+each RiC-O class and property and made the last changes to the ontology
+metadata (mainly in the history note).
+* 2021, February 1: last small changes in the ontology metadata (mainly
+in the abstract).
+* 2021, February 1: 'hasOrHadPhysicalLocation' made a subproperty of
+'isPlaceAssociatedWith'; 'isOrWasPhysicalLocationOf' made a subproperty
+of 'isAssociatedWithPlace'.
+* 2021, February 1: reordered everything with Protégé without changing
+the content
+* 2021, February 4: checked and fixed the language of the examples.
+* 2021, February 8: removed a few Restriction classes
+(rdfs:subClassOf/owl:Restriction) in the definition of classes;
+completed the textual definition and scope note of the Relation class.
+* 2021, February 9: added a link to RiC-CM 0.2 diagram overview in the
+introduction; fixed some typos.
+* 2021, February 11: added an @xml:lang='en' on a few labels; updated
+the definition (rdfs:comment) and scope note of the Rule class, as they
+were recently changed in RiC-CM 0.2 full draft.
+* 2023, April 17: renamed the file (moving to RiC-O 1.0) and started to
+update the ontology metadata.
+* 2023, April 19: *removed the unnecessary restrictions specified for a
+significant number of classes*, among which most of the subclasses of
+Type, plus Activity, AgentTemporalRelation, Coordinates,
+CreationRelation, Event, Identifier, Instantiation, MandateRelation,
+Person, PhysicalLocation, Place, RecordResource, RecordSet, Rule.
+* 2023, April 21: removed an unnecessary restriction that remained on
+Mandate class.
+* 2023, end of May-June 5: fixed some typos in the introduction and
+definition of entities, including the use of "data property" term
+instead of the correct "datatype property" one.
+* 2023, June 5: *made includesOrIncluded object property a subproperty
+of hasOrHadPart in addition to
+isRecordResourceAssociatedToRecordResource*.
+* 2023, June 21: *added two object properties, sub-properties of
+hasSuccessor: wasMergedInto and wasSplitInto*, with Corporate Body as
+domain and range, and their inverse ones.
+* 2023, July 25: adjusted definition of hasOrHadLanguage
+* 2023, August 25: added French labels to the descriptions of classes
+and of datatype properties
+* 2023, August 28: added French labels to the descriptions of 250 object
+properties; added an xml:lang attribute with value 'en' on rdfs:comment
+when it was missing. Also added French labels to the two RiC-O
+annotation properties and to the few named individuals already defined.
+* 2023, August 28: changed the domain of hasExtent (from Instantiation
+or RecordResource to Thing), same for the range of isExtentOf; added a
+length datatype property under measure.
+* 2023, August 29: *updated hasInstantiation and
+hasDerivedInstantiation*, and the inverse properties (changed their
+IRIs, labels, definitions, inverse properties, according to RiC-CM 1.0).
+As a consequence, also updated the superproperties of migratedInto and
+migratedFrom. *Created four new object properties:
+hasOrHadDigitalInstantiation, hasOrHadAnalogueInstantiation, and the
+inverse ones*.
+* 2023, August 29: fixed some typos in the English labels of a few
+object properties and added the past tense to the English label of
+hasOrHadCoordinates.
+* 2023, September 13: added 54 new object properties under
+'hasorhadpart', in order to extend the following nine existing
+properties: 'containsOrContained', 'hasOrHadComponent',
+'hasOrHadConstituent', 'includesOrIncluded', 'hasOrHadSubdivision',
+'hasOrHadSubevent'. Also did the same for 'followsInTime',
+'followsOrFollowed', 'isOrWasSubordinateto'. For each listed property,
+one was added to express past partitive relations, and 2 other ones for
+present partitive relations, the first one being transitive and the
+superproperty of the second one. Added the inverse properties as well.
+Made 'hasDescendant' and 'hasAncestor' transitive.
+* 2023, September 20: *began to review and adjust the object properties
+added on September 13, starting with the properties under hasOrHadPart,
+and under the inverse isOrWasPartOf property. Among the changes made:
+adjusted the change notes, added a few 'this is a transitive relation'
+when missing in the rdfs:comment, and fixed the hierarchy of the
+properties. Also, every past relation (e.g. contained) also made a
+subproperty of hadPart. Every current transitive relation (e.g.
+containsTransitive) made a subproperty of hasPartTransitive. Every
+current direct relation (e.g. directlyContains) made a subproperty of
+hasDirectPart*. Fixed a syntaxic bug on the ontology history note.
+* 2023, September 22: finished to check and fix the object properties
+added on September 13, working on
+hasOrHadSubordinate/isOrWasSubordinateTo subproperties and on
+precedesOrPreceded/followsOrFollowed subproperties.
+* 2023, September 22: *removed DateSingle, DateRange, DateSet and added
+datatype and properties for dates*.
+* 2023, October 10: began to complete the updates made for date and its
+properties. work done for Date Type, hasDateType, is dateTypeOf,
+expressedDate, normalizedDateValue and dateQualifier. Also made
+isCreationDateOfMostMembersOf a subproperty of
+isCreationDateOfSomeMembersOf; same for the inverse object properties.
+* 2023, October 12: *finished to complete the updates made for date and
+its properties*. updated isCreationDateOf,
+isCreationDateOfSomeMembersOf, isCreationDateOfMostMembersOf,
+isCreationDateOfAllMembersOf, isPublicationDateOf and the inverse
+properties. Also, renamed isDeletionDateOf into isDestructionDateOf, and
+applied the same change to hasDeletiondate. Created isOccurrenceOf,
+isWithin, intersects ant the inverse properties.
+* 2023, October 13: adjusted a few details on date object properties
+(renamed some of them to correct the spelling or take past members of
+record sets into account; added a few subPropertyOf; adjusted the
+annotations accordingly). Fixed a syntax problem on the history note of
+the ontology.
+* 2023, October 14: reintroduced the certainty datatype property with
+domain Event and Relation. Adjusted a few details in the annotations of
+the date properties.
+* 2023, October 16: fixed several bugs while resolving conflicts before
+merging, including bad IRIs.
+* 2023, October 17: made occurredAtDate and isDateOfOccurenceof
+subproperties of isEventAssociatedWith and isAssociatedWithEvent
+* 2023, October 19: made rico:wasUsedFromDate and rico:wasUsedToDate
+(and its inverses) sub-properties of rico:hasBeginningDate and
+rico:hasEndDate (and its inverses) respectively
+* 2023, October 19: added RecordPart to domain of hasOrHadConstituent
+and to the range of the inverse property as well.
+* 2023, October 20: *created the following new properties
+isAgentAssociatedWithPlace, hasDeathPlace, hasBirthPlace,
+agentHasOrHadLocation, hasOrHadEmployer and their inverse properties* as
+well.
+* 2023, October 26: added Record Part to the domain of
+hadOrhadConstituent subproperties, and RecordPart to the range of the
+inverse ones. Changed the definitions of these properties accordingly.
+Fixed a bug in the history note of the ontology. Regenerated the inverse
+properties.
+* 2023, October 26: changed the domain and range of 'is or was employer
+of', removed 'has or had member' super-property of the propertyn added
+an rdfs:comment to it. Same for the inverse property.
+* 2023, October 26: added rdfs:comments, fixed one IRI, French labels,
+some domains and range, to the recently added
+isPlaceAssociatedWithAgent, isBirthPlaceOf, isDeathPlaceOf,
+isOrWasLocationOfAgent, and their inverse properties. Fixed a bug in the
+history note of the ontology. Regenerated the inverse properties.
+* 2023, November 2: *added Spanish labels to 59 datatype properties, 103
+classes and 277 object properties*.
+* 2023, November 7: added property chain axioms that were missing, in
+order to define the following properties as shortcuts: isChildOf,
+hasOrHadPosition, isOrWasAppellationOf, isOrWasDerivedFromInstantiation,
+hasOrHadWorkRelationWith and hasGeneticLinkToRecordResource.
+* 2023, November 7: added a hasOrganicOrFunctionalProvenance property,
+superproperty of documents and of hasOrganicProvenance (new name of
+hasProvenance); added the shortcut. Same for the inverse property. Added
+a OrganicAndFunctionalProvenanceRelation, superclass of
+OrganicProvenanceRelation (new name of AgentOriginationRelation) and
+ActivityDocumentationRelation; created the needed object properties.
+Adjusted the names of the properties of OrganicProvenanceRelation.
+* 2023, November 8: *rolifying the Relation classes, step 1*: created 48
+reflexive object properties that rolify the classes; modified the
+specifications of the Relation classes; modified the property chain
+axioms of the corresponding shortcuts. Fixed the range of isExtentOf.
+* 2023, November 8, later: *rolifying the Relation classes, step 2*:
+deleted 166 object properties that had become unnecessary.
+* 2023, November 12: *updated the datatype properties in order to make
+them compliant with RiC-CM 1.0 attributes*. Changed the IRIS of accrual
+(to accruals), accrualStatus (to accrualsStatus), descriptiveNote (to
+generalDescription), integrity (to integrityNote),
+physicalCharacteristics (to physicalCharacteristicsNote),
+qualityOfRepresentation (to qualityOfRepresentationNote). Made
+scopeAndContent a subproperty of generalDescription, and expressedDate a
+subproperty of name. Updated or added a few domains and many
+rdfs:comment, skos:scopeNote, skos:example. Also made usedFromDate a
+subproperty of beginningDate, and usedToDate a subproperty of endDate.
+* 2023, November 12: *updated the classes in order to make them
+compliant with RiC-CM 1.0 entities and attributes*. Updated or added
+many rdfs:comment and skos:scopeNote, taking into account, as concerns
+the Relation classes, the fact that they are n-ary. Created a new
+MandateType class, corresponding to RiC-A44 attribute in RiC-CM 1.0.
+Also added a rdfs:isDefinedBy to skos:Concept, skos:ConceptScheme and
+voaf:Vocabulary.
+* 2023, November 12 and 13: *updated 35 object properties in order to
+make them compliant with RiC-CM 1.0 relations. Added labels or modified
+rdfs:comment of 65 other object properties. Added hasOrHadMandateType
+and isOrWasMandateType of.*
+* 2023, November 13: added or modified a few French or Spanish labels.
+* 2023, November 13: updated the ontology metadata.
+* 2023, November 14: fixed some typos in the ontology metadata.
+* 2023, November 24: started to work on v1.0, after releasing v
+1.0-beta: renamed the file and updated a few metadata.
+* 2023, November 25: fixed three French labels; added Spanish labels to
+the annotation properties and named individuals.
+* 2023, November 27: added Spanish labels to the 93 object properties
+which were missing one.
+* 2023, December 6: *improved the description (rdfs:comment) of the 48
+n-ary Relation classes by clearly specifying how they are directed*.
+* 2023, December 13: Completed the metadata of the vocabulary: added
+dc:language, a history note and a scope note.
+* 2023, December 21: *revised and updated the ontology metadata and
+introduction, and the HTML view.*.
+* 2023, December 27: in order to make the ontology clearer and more
+consistent, renamed the certainty and source datatype properties to
+relationCertainty and relationSource and reduced their domain to
+Relation. Renamed the 'hasSource' object property to 'isEvidencedBy' and
+reduced its domain to Relation and range to RecordResource; same for the
+inverse property, 'isSourceOf', renamed to 'evidences'. Updated the
+specifications of these properties accordingly.
+* 2023, December 27: added rdfs:isDefinedBy to all the properties not
+defined in RiC-O itself.
+* 2023, December 28: made a few changes in the ontology introduction
+(dcterms:description) and metadata.
+* 2023, December 29: Added the property chain axiom on 'hasCreator'.
+* 2023, December 30: Fixed a typo in five French labels.
+* 2024, February 21: Fixed a typo in the rdfs:comment of rico:RoleType
+class.
+* 2024, April 10: *Fixed the IRI of
+'hasOrHadSomeMemberswithDocumentaryFormType' object property (changed to
+'hasOrHadSomeMembersWithDocumentaryFormType')* and corrected several
+typos.
+* 2024, April 12: Replaced the code illustrating the shortcut by an
+image, change the headers of the subsections in 'From RiC-CM to RiC-O';
+added a few details to an sentence in the section on Ric-O properties;
+adjusted the metadata, mainly moved to v1.0.1.
+* 2024, May 2: Added Richard David Williamson to the list of
+contributors and set the date of v1.0.1 to May 2, 2024.
+* 2024, May 13: Added Richard Williamson's ORCID number, changed the
+affiliation of T. Wildi and J. Krause-Bilvin, and set the date of v1.0.1
+to May 13, 2024.
+* *2024, August 2: Removed global reflexivity from the object properties
+that rolify the Relation classes, to fix a source of inconsistency*
+(they still satisfy local reflexivity, i.e. reflexivity for each of
+these object properties can be inferred for all individuals in their
+domain).
+* 2024, September 2: Fixed the French label (rdfs:label) of the
+following object properties: rico:isOrWasEnforcedBy;
+rico:isOrWasResponsibleForEnforcing;
+rico:hasOrHadIntellectualPropertyRightsHolder; rico:hasOrHadController;
+rico:isOrWasControllerOf; rico:isOrWasJurisdictionOf.
+* 2024, September 2: Moved to v1.0.2: updated the metadata, and *added a
+owl:versionIRI to this new version*. Moved v1.0.1 to the
+previous-versions subfolder.
+* 2024, September 2: Fixed a typo in two of the EDTF examples for
+rico:normalizedDateValue.
+* 2024, September 4: Fixed a few typos in Appendix 1 and in a change
+note. Changed the date of the release (it is 2024 September 4th now).
+* 2024, October 4: Added TitleType, hasTitleType and isTitleTypeOf;
+*Changed hasOrHadCategory et al. into hasOrHadType*
+* 2024, October 10: changed the French and/or Spanish labels of the
+DemographicGroup class and of the 2 properties used with it,
+hasOrHadDemographicGroup and isOrWasDemographicGroupOf.
+* 2024, October 14: *added the following object properties under
+isDateAssociatedWith: isAccumulationDateOf,
+isOrWasAccumulationDateOfAllMembersOf,
+isOrWasAccumulationDateOfSomeMembersOf (and its
+isOrWasAccumulationDateOfMostMembersOf subproperty)*, and also created
+the inverse properties under isAssociatedWithDate.
+* 2024, October 16: started to move to v2.0.0: modified some of the
+ontology metadata (versionIRI, versionInfo, rdfs:label, dcterms:title).
+Removed the declarations of the two not used dcterms:creator and
+dcterms:rights annotations. Checked the annotation properties. Renamed
+the file.
+* 2024, October 21: fixed the Spanish label of 'hasSubeventTransitive'.
+Added @xml:lang to 5 rdf:value and removed it from 9 dc:date in
+skos:changeNote. Automatically reordered everything in the file,
+including the labels and the change notes; regenerated the inverse
+properties.
+* 2024, October 22: went back from 2.0.0 to v1.1, following a decision
+made by the RiC-O team today. Modified the ontology metadata
+(owl:versionInfo, rdfs:label, dcterms:title). Renamed the file.
+* 2024, December 19: *added relationHasDate and
+isDateAssociatedWithRelation object properties, to connect n-ary
+Relation classes and Dates. Added hasOrganicProvenanceDate and
+isOrganicProvenanceDateOf object properties (with property chain axioms
+to connect those properties to the OrganicProvenanceRelation). Added
+property chain axioms to hasCreationDate, hasAccumulationDate, and to
+their inverse properties*.
+* 2024, December 23: added the following datatype properties:
+accumulationDate, allMembersWithAccumulationDate,
+someMembersWithAccumulationDate (subproperties of date);
+mostMembersWithAccumulationDate (subproperty of
+someMembersWithAccumulationDate); allMembersWithCreationDate and
+someMembersWithCreationDate (subproperties of beginningDate);
+mostMembersWithCreationDate (subproperty of
+someMembersWithCreationDate). Narrowed the domain of creationDate.
+* 2024, December 24: *added two new object properties,
+studiesOrStudiedAt and isOrWasAttendedByStudent, plus a StudyAtRelation
+n-ary Relation class*, and studyAtRelation++_++role accompanyning
+property.
+* 2025, January 17: *added a 'recordResourceSourceOfInformation'
+datatype property, and the 'recordResourceHasSourceOfInformation' and
+'isSourceOfInformationOfRecordResource' object properties*. These
+properties replace, as concerns Record Resource, the 'source' datatype
+property and the 'hasSource'/'isSourceOf' object properties, which had
+been created in RC-O 0.1 and removed in RiC-O 1.0.
+* 2025, January 17: *added a 'note' datatype property*, superproperty of
+the existing 'integrityNote', 'authenticityNote' and
+'physicalCharacteristicsNote' properties.
+* 2025, January 30: *added a 'IIIFManifest' SKOS Concept, RiC-O
+Documentary Form Type, to the named individuals*. Made it a concept of
+the vocabulary on documentary form types and a narrower concept of
+FindingAid.
+* 2025, February 19: *changed definitions so that dates for destruction,
+accumulation, creation and publication could be in the future. Added
+hasMigrationDate, isMigrationDateOf and migrationDate. Restricted the
+domain of hasDestructionDate and of destructionDate*
+* 2025, March 1st: fixed a bug (made isPublicationDateOf a subproperty
+of isDateAssociatedWith, instead of isBeginningDateOf). *Added
+'hasDerivationDate', 'isDerivationDateOf' and 'derivationDate'*. Changed
+the rdfs:subpropertyOf of hasMigrationDate, isMigrationDateOf and of
+migrationDate accordingly. Removed the mention of Record Resource from
+the rdfs:comment of isMigrationDateOf and migrationDate.
+* 2025, March 4th: *introduced datatype properties rankInSequence and
+rankInHierarchy, expanded the range of proxyIn to any RecordResource and
+tweaked the definition of it and proxyFor accordingly, added an inverse
+property hasProxy for proxyFor, added two new sub-properties
+proxyInRecord and proxyInRecordSet of ProxyIn, introduced 36 object
+properties pertaining to use of Proxy in sequences or hierarchies, and
+added one or two property chain axioms involving rico:Proxy to a few
+object properties used to define sequences or hierarchies*.
+* 2025, March 6th: added a new object property 'isOrWasActiveAtDate' and
+an inverse.
+* 2025, March 13: added French and Spanish labels to the object
+properties that connect Date and Relation, and to the
+isOrganicProvenanceDateOf/hasOrganicProvenanceDate properties. Fixed the
+domain and a rdfs:subPropertyOf of isDateAssociatedWithRelation. Also
+added property chain axioms to hasDerivationDate, hasMigrationDate and
+to their inverse properties.
+* 2025, April 2nd: reviewed the new properties for Proxies, hierarchies
+and sequences. Fixed a few owl:inverseOf, owl:subPropertyOf and a
+property chain axiom. Modified a few details in the rdfs:comment of
+those properties. Added French and Spanish labels to these new
+properties.
+* 2025, April 3rd: renamed the inverse property of
+'isOrWasActiveAtDate', adjusted the rdfs:comment of the two properties,
+added a chain property axiom and French and Spanish labels.
+* 2025, April 5th: *added hasContentWhichRepresents and
+hasContentWhichMainlyRepresents properties*, with domain Record or
+Record Part, and the inverse properties.
+* 2025, April 6th: Added the sentimentOrEmotionExpressed datatype
+property, with domain Record or Record Part. *Added the object
+properties needed to connect a Record Set, some or all of whose members
+have subject or main subject a Thing, or represent a Thing, and this
+Thing, plus the inverse properties*. Adjusted the Spanish labels of
+several existing object properties.
+* 2025, April 8th: *Added German labels to the 107 RiC-O classes*.
+* 2025, May 12th: revised and updated the ontology metadata.
+* 2025, May 14th: added a dcat:version to the two skos:ConceptScheme
+named individuals.
+
