@@ -10,19 +10,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :used-procedure-iri
     a sh:NodeShape ;
     rdfs:isDefinedBy ont: ;
-    schema:description "Checks that the value for usedProcedure is an IRI" ;
-    schema:name "Use Procedure IRI" ;
     sh:property :used-procedure-iri-property ;
     sh:targetSubjectsOf sosa:usedProcedure ;
+    schema:description "Checks that the value for usedProcedure is an IRI" ;
+    schema:name "Use Procedure IRI" ;
 .
 
 :used-procedure-iri-property
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:message "Objects for the predicate sosa:usedProcedure must be IRIs" ;
-    schema:name "Use Procedure IRI property" ;
     sh:nodeKind sh:IRI ;
     sh:path sosa:usedProcedure ;
+    schema:name "Use Procedure IRI property" ;
 .
 
 <https://linked.data.gov.au/org/ausbigg>

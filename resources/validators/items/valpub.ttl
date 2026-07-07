@@ -538,7 +538,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/valpub/req/2.1.7-property-shape-01>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.7: SHACL ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
+    sh:message "Requirement 2.1.7: SHACL ontologies MUST have at least one creator, indicated using schema:creator that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
     sh:minCount 1 ;
     sh:or (
 
@@ -557,7 +557,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/valpub/req/2.1.7-property-shape-02>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.7: SHACL ontologies MUST have at least one creator, indicated using schema:creator and at least one schema:publisher property that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
+    sh:message "Requirement 2.1.7: SHACL ontologies MUST have at least one publisher, indicated using schema:publisher that must be IRI values indicating agents, that is instances of schema:Person, schema:Organization or a subclass of either" ;
     sh:minCount 1 ;
     sh:or (
 
