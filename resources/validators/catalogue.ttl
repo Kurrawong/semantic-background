@@ -14,6 +14,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:description "A catalogue of reference SHACL validators used by KurrawongAI" ;
     schema:hasPart
         <https://linked.data.gov.au/def/addr/validator> ,
+        <https://linked.data.gov.au/def/addr/validator-act> ,
+        <https://linked.data.gov.au/def/addr/validator-qld> ,
         <http://www.opengis.net/def/geosparql/validator> ,
         prof:validator ,
         <http://www.w3.org/ns/shacl-shacl#> ,
