@@ -1,0 +1,194 @@
+PREFIX : <https://linked.data.gov.au/def/addr/validator/>
+PREFIX addr: <https://linked.data.gov.au/def/addr/>
+PREFIX cn: <https://linked.data.gov.au/def/cn/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX ls: <https://linked.data.gov.au/def/lifecycle/>
+PREFIX ont: <https://linked.data.gov.au/def/addr/validator>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+:address-parts-1
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Each Address must have at least one part which must be Compound Names, indicated with schema:hasPart" ;
+    sh:property
+        [
+            sh:class cn:CompoundName ;
+            sh:minCount 1 ;
+            sh:path schema:hasPart ;
+        ] ;
+    sh:targetClass addr:Address ;
+    schema:name "Address at least one part" ;
+.
+
+:addressable-object-present
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Each Address must indicate an IRI with the predicate cn:isNameFor" ;
+    sh:property
+        [
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path cn:isNameFor ;
+        ] ;
+    sh:targetClass addr:Address ;
+    schema:name "Address is name for" ;
+.
+
+:geocode-present
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Each Address must indicate at least one Geocode with the predicate addr:hasGeocode" ;
+    sh:property
+        [
+            sh:class addr:Geocode ;
+            sh:minCount 1 ;
+            sh:path addr:hasGeocode ;
+        ] ;
+    sh:targetClass addr:Address ;
+    schema:name "Address at least one Geocode" ;
+.
+
+:geocode-roleName
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Each Geocode role MUST be an IRI and within the Geocode Types vocabulary" ;
+    sh:property
+        [
+            sh:in (
+                <https://linked.data.gov.au/def/geocode-types/building-access-point>
+                <https://linked.data.gov.au/def/geocode-types/building-centroid>
+                <https://linked.data.gov.au/def/geocode-types/centreline-dropped-driveway-frontage>
+                <https://linked.data.gov.au/def/geocode-types/centreline-dropped-frontage>
+                <https://linked.data.gov.au/def/geocode-types/driveway-frontage>
+                <https://linked.data.gov.au/def/geocode-types/electricity-connection-point>
+                <https://linked.data.gov.au/def/geocode-types/electricity-meter>
+                <https://linked.data.gov.au/def/geocode-types/emergency-access>
+                <https://linked.data.gov.au/def/geocode-types/emergency-access-secondary>
+                <https://linked.data.gov.au/def/geocode-types/front-door-access>
+                <https://linked.data.gov.au/def/geocode-types/frontage-centre>
+                <https://linked.data.gov.au/def/geocode-types/frontage-centre-setback>
+                <https://linked.data.gov.au/def/geocode-types/gas-connection-point>
+                <https://linked.data.gov.au/def/geocode-types/gas-meter>
+                <https://linked.data.gov.au/def/geocode-types/internet-connection-point>
+                <https://linked.data.gov.au/def/geocode-types/letterbox>
+                <https://linked.data.gov.au/def/geocode-types/property-access-aeroplane>
+                <https://linked.data.gov.au/def/geocode-types/property-access-helicopter>
+                <https://linked.data.gov.au/def/geocode-types/property-access-point>
+                <https://linked.data.gov.au/def/geocode-types/property-access-point-setback>
+                <https://linked.data.gov.au/def/geocode-types/property-access-water>
+                <https://linked.data.gov.au/def/geocode-types/property-centroid>
+                <https://linked.data.gov.au/def/geocode-types/service-connection-point>
+                <https://linked.data.gov.au/def/geocode-types/service-meter>
+                <https://linked.data.gov.au/def/geocode-types/sewerage-connection-point>
+                <https://linked.data.gov.au/def/geocode-types/telephone-connection-point>
+                <https://linked.data.gov.au/def/geocode-types/unit-centroid>
+                <https://linked.data.gov.au/def/geocode-types/water-connection-point>
+                <https://linked.data.gov.au/def/geocode-types/water-meter>
+            ) ;
+            sh:kind sh:IRI ;
+            sh:minCount 1 ;
+            sh:path schema:roleName ;
+        ] ;
+    sh:targetClass addr:Geocode ;
+    schema:name "Geocode role" ;
+.
+
+:geometry-asWKT
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Each Geometry MUST have exactly one geo:wktLiteral value for the predicate geo:asWKT" ;
+    sh:property
+        [
+            sh:datatype geo:wktLiteral ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path geo:asWKT ;
+        ] ;
+    sh:targetClass geo:Geometry ;
+    schema:name "Geometry WKT existence" ;
+.
+
+:lifecycleStage-present
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Each Address MUST have at least one Lifecycle Stage indicated by hasLifecycleStage" ;
+    sh:property
+        [
+            sh:class ls:LifecycleStage ;
+            sh:minCount 1 ;
+            sh:path ls:hasLifecycleStage ;
+        ] ;
+    sh:targetClass addr:Address ;
+    schema:name "Address Lifecycle Stage existence" ;
+.
+
+:lifecycleStageTypes
+    a sh:NodeShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:message "Each Lifecycle Stage MUST have exactly one additional type indicating a concept from the Lifecycle Stage Types vocabulary" ;
+    sh:property
+        [
+            sh:in (
+                <https://linked.data.gov.au/def/lifecycle-stage-types/current>
+                <https://linked.data.gov.au/def/lifecycle-stage-types/proposed>
+                <https://linked.data.gov.au/def/lifecycle-stage-types/rejected>
+                <https://linked.data.gov.au/def/lifecycle-stage-types/reserved>
+                <https://linked.data.gov.au/def/lifecycle-stage-types/retired>
+                <https://linked.data.gov.au/def/lifecycle-stage-types/unknown>
+            ) ;
+            sh:kind sh:IRI ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path schema:additionalType ;
+        ] ;
+    sh:targetClass ls:LifecycleStage ;
+    schema:name "Lifecycle Stage Type" ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+:1.0.4
+    schema:name "1.0.4" ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:memberOf <https://kurrawong.ai> ;
+    schema:name "Nicholas J. Car"@en ;
+.
+
+<https://linked.data.gov.au/org/icsm>
+    a schema:Organization ;
+    schema:name "Intergovernmental Committee on Surveying & Mapping" ;
+    schema:url "https://www.icsm.gov.au"^^xsd:anyURI ;
+.
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI :1.0.4 ;
+    owl:versionInfo "1.0.4" ;
+    skos:definition "This validator is a Shapes Constraint Language (SHACL) resource that can be used to check the conformance of RDF data to the Address Model (<https://linked.data.gov.au/def/addr>). It only check for 3 things which are described in individual shapes within this validator"@en ;
+    skos:historyNote "This model validator was made for the Queensland Department of Resources, Spatial Information unit to assist with future Address database design."@en ;
+    schema:codeRepository "https://github.com/icsm-au/addr-model"^^xsd:anyURI ;
+    schema:copyrightHolder <https://linked.data.gov.au/org/icsm> ;
+    schema:copyrightNotice "(c) Intergovernmental Committee on Surveying & Mapping 2026" ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2021-12-16"^^xsd:date ;
+    schema:dateIssued "2023-06-30"^^xsd:date ;
+    schema:dateModified "2026-06-09"^^xsd:date ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "Address Model Validator" ;
+    schema:publisher <https://linked.data.gov.au/org/icsm> ;
+.

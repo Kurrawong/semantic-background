@@ -41,11 +41,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ont:
     a owl:Ontology ;
-    owl:imports 
-        <https://linked.data.gov.au/def/vocpub/validator> ,
-        <https://w3id.org/tern/shapes/tern/> ,
+    owl:imports
+        <http://www.opengis.net/def/geosparql/validator> ,
         <https://linked.data.gov.au/def/bdr-pr/sosa-validator> ,
-        <http://www.opengis.net/def/geosparql/validator> ;
+        <https://linked.data.gov.au/def/vocpub/validator> ,
+        <https://w3id.org/tern/shapes/tern/> ;
     owl:versionIRI :1.1 ;
     owl:versionInfo """1.1 2026-04 simplified imports
 

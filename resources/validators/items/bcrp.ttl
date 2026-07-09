@@ -82,34 +82,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Catalogued resource exists property" ;
 .
 
-:prop-02-name
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:maxCount 1 ;
-    sh:message "The subject MUST have a label (rdfs:label, schema:name or skos:prefLabel) predicate and it MUST indicate a string or a language string literal value" ;
-    sh:minCount 1 ;
-    sh:or (
-
-        [
-            sh:datatype rdf:langString ;
-        ]
-
-        [
-            sh:datatype xsd:string ;
-        ]
-    ) ;
-    sh:path
-        [
-            sh:alternativePath (
-                rdfs:label
-                dcterms:title
-                schema:name
-                skos:prefLabel
-            ) ;
-        ] ;
-    schema:name "Catalogued resource name property" ;
-.
-
 :prop-03-description
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
@@ -307,6 +279,34 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:nodeKind sh:IRI ;
     sh:path prov:wasDerivedFrom ;
     schema:name "Catalogued resource provenance property 01" ;
+.
+
+:prop-02-name
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    sh:maxCount 1 ;
+    sh:message "The subject MUST have a label (rdfs:label, schema:name or skos:prefLabel) predicate and it MUST indicate a string or a language string literal value" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
+    sh:path
+        [
+            sh:alternativePath (
+                rdfs:label
+                dcterms:title
+                schema:name
+                skos:prefLabel
+            ) ;
+        ] ;
+    schema:name "Catalogued resource name property" ;
 .
 
 ont:

@@ -1,261 +1,206 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix qskos: <https://linked.data.gov.au/def/ated/qskos/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <https://schema.org/> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-qskos:
-    a owl:Ontology ;
-    sh:declare qskos:SkosPrefixDeclaration ;
-    owl:versionIRI qskos:0.1.0 ;
-    owl:versionInfo "0.1.0" ;
-    skos:historyNote "SHACL translation of locally applicable checks from the qSKOS quality issue catalogue. Network-dependent checks, including broken-link detection, are not included."@en ;
-    schema:citation "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    schema:codeRepository "https://github.com/leskneebone/ated"^^xsd:anyURI ;
-    schema:copyrightHolder <https://kurrawong.ai> ;
-    schema:creator <https://orcid.org/0000-0001-5640-3202> ;
-    schema:dateCreated "2026-06-24"^^xsd:date ;
-    schema:dateModified "2026-06-24"^^xsd:date ;
-    schema:description "SHACL shapes implementing structural and graph-based qSKOS quality checks for SKOS vocabularies."@en ;
-    schema:license <https://kurrawong.ai> ;
-    schema:name "qSKOS SHACL Validator"@en ;
-    schema:publisher <https://ror.org/012x2n652> ;
-    schema:version "0.1.0" ;
-.
-
-<https://ror.org/012x2n652>
-    a schema:Organization ;
-    schema:name "Australian Council for Educational Research" ;
-    schema:url "https://www.acer.org/"^^xsd:anyURI ;
-.
-
-<https://kurrawong.ai>
-    a schema:Organization ;
-    schema:name "Kurrawong AI" ;
-    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
-.
-
-<https://orcid.org/0000-0001-5640-3202>
-    a schema:Person ;
-    schema:name "Les Kneebone" ;
-    schema:email "leskneebone@outlook.com"^^xsd:anyURI ;
-.
-
-qskos:SkosPrefixDeclaration
-    sh:prefix "skos" ;
-    sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
-.
-
-qskos:ConceptLabelsPref
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy qskos: ;
-    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
-    sh:path skos:prefLabel ;
-    sh:minCount 1 ;
-    sh:datatype rdf:langString ;
-    sh:uniqueLang true ;
-    sh:message "missing labels / inconsistent preferred labels: each concept must have at least one language-tagged preferred label and no more than one per language."@en ;
-    schema:name "Concept preferred labels"@en ;
-    schema:description "Checks required preferred labels, language tags and preferred-label uniqueness."@en ;
-.
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ont: <https://linked.data.gov.au/def/qskos/validator>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX qskos: <https://linked.data.gov.au/def/qskos/validator/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 qskos:ConceptLabelsAlt
     a sh:PropertyShape ;
-    rdfs:isDefinedBy qskos: ;
     dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
-    sh:path skos:altLabel ;
+    rdfs:isDefinedBy ont: ;
     sh:datatype rdf:langString ;
     sh:message "omitted or invalid language tags: alternative labels must be language-tagged strings."@en ;
-    schema:name "Concept alternative labels"@en ;
+    sh:path skos:altLabel ;
+    sh:targetClass skos:Concept ;
     schema:description "Checks that alternative labels are language-tagged strings."@en ;
+    schema:name "Concept alternative labels"@en ;
 .
 
 qskos:ConceptLabelsHidden
     a sh:PropertyShape ;
-    rdfs:isDefinedBy qskos: ;
     dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
-    sh:path skos:hiddenLabel ;
+    rdfs:isDefinedBy ont: ;
     sh:datatype rdf:langString ;
     sh:message "omitted or invalid language tags: hidden labels must be language-tagged strings."@en ;
-    schema:name "Concept hidden labels"@en ;
+    sh:path skos:hiddenLabel ;
+    sh:targetClass skos:Concept ;
     schema:description "Checks that hidden labels are language-tagged strings."@en ;
+    schema:name "Concept hidden labels"@en ;
 .
 
-qskos:EmptyLabels
-    a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
+qskos:ConceptLabelsPref
+    a sh:PropertyShape ;
     dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetSubjectsOf skos:prefLabel ;
-    sh:targetSubjectsOf skos:altLabel ;
-    sh:targetSubjectsOf skos:hiddenLabel ;
-    sh:sparql qskos:EmptyLabelsConstraint ;
-    schema:name "Empty labels"@en ;
-    schema:description "Detects empty or whitespace-only preferred, alternative and hidden labels."@en ;
+    rdfs:isDefinedBy ont: ;
+    sh:datatype rdf:langString ;
+    sh:message "missing labels / inconsistent preferred labels: each concept must have at least one language-tagged preferred label and no more than one per language."@en ;
+    sh:minCount 1 ;
+    sh:path skos:prefLabel ;
+    sh:targetClass skos:Concept ;
+    sh:uniqueLang true ;
+    schema:description "Checks required preferred labels, language tags and preferred-label uniqueness."@en ;
+    schema:name "Concept preferred labels"@en ;
 .
 
 qskos:DisjointLabels
     a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
     dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
+    rdfs:isDefinedBy ont: ;
     sh:sparql qskos:DisjointLabelsConstraint ;
-    schema:name "Disjoint labels"@en ;
+    sh:targetClass skos:Concept ;
     schema:description "Detects labels used simultaneously as preferred, alternative or hidden labels on one concept."@en ;
+    schema:name "Disjoint labels"@en ;
 .
 
-qskos:OverlappingPreferredLabels
+qskos:EmptyLabels
     a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
     dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
-    sh:severity sh:Warning ;
-    sh:sparql qskos:OverlappingPreferredLabelsConstraint ;
-    schema:name "Overlapping preferred labels"@en ;
-    schema:description "Warns when concepts in the same scheme share an identical preferred label."@en ;
-.
-
-qskos:UndocumentedConcepts
-    a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
-    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
-    sh:severity sh:Warning ;
-    sh:sparql qskos:UndocumentedConceptsConstraint ;
-    schema:name "Undocumented concepts"@en ;
-    schema:description "Warns about concepts without notes, definitions, examples or other SKOS documentation."@en ;
-.
-
-qskos:OrphanConcepts
-    a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
-    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
-    sh:severity sh:Warning ;
-    sh:sparql qskos:OrphanConceptsConstraint ;
-    schema:name "Orphan concepts"@en ;
-    schema:description "Warns about concepts disconnected from semantic relations and top-concept declarations."@en ;
-.
-
-qskos:ReflexiveRelations
-    a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
-    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
-    sh:sparql qskos:ReflexiveRelationsConstraint ;
-    schema:name "Reflexive relations"@en ;
-    schema:description "Detects semantic and mapping relations from a concept to itself."@en ;
-.
-
-qskos:UnidirectionalRelated
-    a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
-    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetSubjectsOf skos:related ;
-    sh:severity sh:Warning ;
-    sh:sparql qskos:UnidirectionalRelatedConstraint ;
-    schema:name "Unidirectional related relations"@en ;
-    schema:description "Warns when symmetric associative relations are not asserted in both directions."@en ;
-.
-
-qskos:UnidirectionalHierarchy
-    a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
-    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
-    sh:severity sh:Warning ;
-    sh:sparql qskos:UnidirectionalHierarchyConstraint ;
-    schema:name "Unidirectional hierarchy"@en ;
-    schema:description "Warns when broader and narrower inverse statements are not both explicitly present."@en ;
+    rdfs:isDefinedBy ont: ;
+    sh:sparql qskos:EmptyLabelsConstraint ;
+    sh:targetSubjectsOf
+        skos:altLabel ,
+        skos:hiddenLabel ,
+        skos:prefLabel ;
+    schema:description "Detects empty or whitespace-only preferred, alternative and hidden labels."@en ;
+    schema:name "Empty labels"@en ;
 .
 
 qskos:HierarchicalCycles
     a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
     dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
+    rdfs:isDefinedBy ont: ;
     sh:sparql qskos:HierarchicalCyclesConstraint ;
-    schema:name "Hierarchical cycles"@en ;
-    schema:description "Detects cycles in the transitive broader hierarchy."@en ;
-.
-
-qskos:TopConceptsWithBroader
-    a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
-    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetSubjectsOf skos:topConceptOf ;
-    sh:targetObjectsOf skos:hasTopConcept ;
-    sh:sparql qskos:TopConceptsWithBroaderConstraint ;
-    schema:name "Top concepts with broader concepts"@en ;
-    schema:description "Detects declared top concepts that also have broader concepts."@en ;
-.
-
-qskos:OmittedTopConcepts
-    a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
-    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:ConceptScheme ;
-    sh:severity sh:Warning ;
-    sh:sparql qskos:OmittedTopConceptsConstraint ;
-    schema:name "Omitted top concepts"@en ;
-    schema:description "Warns when a concept scheme does not declare any top concepts."@en ;
-.
-
-qskos:RelationClashes
-    a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
-    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
     sh:targetClass skos:Concept ;
-    sh:sparql qskos:RelationClashesConstraint ;
-    schema:name "Relation clashes"@en ;
-    schema:description "Detects concept pairs linked by both hierarchical and associative relations."@en ;
+    schema:description "Detects cycles in the transitive broader hierarchy."@en ;
+    schema:name "Hierarchical cycles"@en ;
 .
 
 qskos:MappingRelationsMisuse
     a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
     dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
+    rdfs:isDefinedBy ont: ;
     sh:sparql qskos:MappingRelationsMisuseConstraint ;
-    schema:name "Mapping relations misuse"@en ;
+    sh:targetClass skos:Concept ;
     schema:description "Detects mapping properties used between concepts in the same scheme."@en ;
+    schema:name "Mapping relations misuse"@en ;
+.
+
+qskos:OmittedTopConcepts
+    a sh:NodeShape ;
+    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
+    rdfs:isDefinedBy ont: ;
+    sh:severity sh:Warning ;
+    sh:sparql qskos:OmittedTopConceptsConstraint ;
+    sh:targetClass skos:ConceptScheme ;
+    schema:description "Warns when a concept scheme does not declare any top concepts."@en ;
+    schema:name "Omitted top concepts"@en ;
+.
+
+qskos:OrphanConcepts
+    a sh:NodeShape ;
+    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
+    rdfs:isDefinedBy ont: ;
+    sh:severity sh:Warning ;
+    sh:sparql qskos:OrphanConceptsConstraint ;
+    sh:targetClass skos:Concept ;
+    schema:description "Warns about concepts disconnected from semantic relations and top-concept declarations."@en ;
+    schema:name "Orphan concepts"@en ;
+.
+
+qskos:OverlappingPreferredLabels
+    a sh:NodeShape ;
+    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
+    rdfs:isDefinedBy ont: ;
+    sh:severity sh:Warning ;
+    sh:sparql qskos:OverlappingPreferredLabelsConstraint ;
+    sh:targetClass skos:Concept ;
+    schema:description "Warns when concepts in the same scheme share an identical preferred label."@en ;
+    schema:name "Overlapping preferred labels"@en ;
+.
+
+qskos:ReflexiveRelations
+    a sh:NodeShape ;
+    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
+    rdfs:isDefinedBy ont: ;
+    sh:sparql qskos:ReflexiveRelationsConstraint ;
+    sh:targetClass skos:Concept ;
+    schema:description "Detects semantic and mapping relations from a concept to itself."@en ;
+    schema:name "Reflexive relations"@en ;
+.
+
+qskos:RelationClashes
+    a sh:NodeShape ;
+    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
+    rdfs:isDefinedBy ont: ;
+    sh:sparql qskos:RelationClashesConstraint ;
+    sh:targetClass skos:Concept ;
+    schema:description "Detects concept pairs linked by both hierarchical and associative relations."@en ;
+    schema:name "Relation clashes"@en ;
+.
+
+qskos:TopConceptsWithBroader
+    a sh:NodeShape ;
+    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
+    rdfs:isDefinedBy ont: ;
+    sh:sparql qskos:TopConceptsWithBroaderConstraint ;
+    sh:targetObjectsOf skos:hasTopConcept ;
+    sh:targetSubjectsOf skos:topConceptOf ;
+    schema:description "Detects declared top concepts that also have broader concepts."@en ;
+    schema:name "Top concepts with broader concepts"@en ;
 .
 
 qskos:UndefinedRelatedResources
     a sh:NodeShape ;
-    rdfs:isDefinedBy qskos: ;
     dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    sh:targetClass skos:Concept ;
+    rdfs:isDefinedBy ont: ;
     sh:sparql qskos:UndefinedRelatedResourcesConstraint ;
-    schema:name "Undefined related resources"@en ;
+    sh:targetClass skos:Concept ;
     schema:description "Detects semantic or mapping relation targets that are not declared as SKOS concepts."@en ;
+    schema:name "Undefined related resources"@en ;
 .
 
-qskos:EmptyLabelsConstraint
-    a sh:SPARQLConstraint ;
-    sh:prefixes qskos: ;
-    sh:message "empty labels: a SKOS label is empty or contains only whitespace."@en ;
-    sh:select """
-        SELECT DISTINCT $this ?path ?value
-        WHERE {
-            VALUES ?path { skos:prefLabel skos:altLabel skos:hiddenLabel }
-            $this ?path ?value .
-            FILTER(STRLEN(REPLACE(STR(?value), "\\\\s", "")) = 0)
-        }
-    """ ;
+qskos:UndocumentedConcepts
+    a sh:NodeShape ;
+    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
+    rdfs:isDefinedBy ont: ;
+    sh:severity sh:Warning ;
+    sh:sparql qskos:UndocumentedConceptsConstraint ;
+    sh:targetClass skos:Concept ;
+    schema:description "Warns about concepts without notes, definitions, examples or other SKOS documentation."@en ;
+    schema:name "Undocumented concepts"@en ;
+.
+
+qskos:UnidirectionalHierarchy
+    a sh:NodeShape ;
+    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
+    rdfs:isDefinedBy ont: ;
+    sh:severity sh:Warning ;
+    sh:sparql qskos:UnidirectionalHierarchyConstraint ;
+    sh:targetClass skos:Concept ;
+    schema:description "Warns when broader and narrower inverse statements are not both explicitly present."@en ;
+    schema:name "Unidirectional hierarchy"@en ;
+.
+
+qskos:UnidirectionalRelated
+    a sh:NodeShape ;
+    dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
+    rdfs:isDefinedBy ont: ;
+    sh:severity sh:Warning ;
+    sh:sparql qskos:UnidirectionalRelatedConstraint ;
+    sh:targetSubjectsOf skos:related ;
+    schema:description "Warns when symmetric associative relations are not asserted in both directions."@en ;
+    schema:name "Unidirectional related relations"@en ;
 .
 
 qskos:DisjointLabelsConstraint
     a sh:SPARQLConstraint ;
-    sh:prefixes qskos: ;
     sh:message "disjoint-label violation: the same lexical label and language is used with more than one SKOS label property on this concept."@en ;
+    sh:prefixes qskos: ;
     sh:select """
         SELECT DISTINCT $this ?value
         WHERE {
@@ -269,42 +214,67 @@ qskos:DisjointLabelsConstraint
     """ ;
 .
 
-qskos:OverlappingPreferredLabelsConstraint
+qskos:EmptyLabelsConstraint
     a sh:SPARQLConstraint ;
+    sh:message "empty labels: a SKOS label is empty or contains only whitespace."@en ;
     sh:prefixes qskos: ;
-    sh:message "overlapping labels: another concept in the same scheme has the same preferred label."@en ;
     sh:select """
-        SELECT DISTINCT $this ?value
+        SELECT DISTINCT $this ?path ?value
         WHERE {
-            $this skos:inScheme ?scheme ; skos:prefLabel ?value .
-            ?other skos:inScheme ?scheme ; skos:prefLabel ?value .
-            FILTER(?other != $this)
+            VALUES ?path { skos:prefLabel skos:altLabel skos:hiddenLabel }
+            $this ?path ?value .
+            FILTER(STRLEN(REPLACE(STR(?value), "\\\\s", "")) = 0)
         }
     """ ;
 .
 
-qskos:UndocumentedConceptsConstraint
+qskos:HierarchicalCyclesConstraint
     a sh:SPARQLConstraint ;
+    sh:message "hierarchical cycle: following skos:broader one or more times returns to the same concept."@en ;
     sh:prefixes qskos: ;
-    sh:message "undocumented concept: the concept has no SKOS documentation property."@en ;
     sh:select """
         SELECT $this
         WHERE {
-            FILTER NOT EXISTS {
-                $this ?documentation ?value .
-                VALUES ?documentation {
-                    skos:note skos:changeNote skos:definition skos:editorialNote
-                    skos:example skos:historyNote skos:scopeNote
-                }
+            $this skos:broader+ $this .
+        }
+    """ ;
+.
+
+qskos:MappingRelationsMisuseConstraint
+    a sh:SPARQLConstraint ;
+    sh:message "mapping relation misuse: a mapping property links concepts belonging to the same concept scheme."@en ;
+    sh:prefixes qskos: ;
+    sh:select """
+        SELECT DISTINCT $this ?path ?value
+        WHERE {
+            VALUES ?path {
+                skos:broadMatch skos:narrowMatch skos:relatedMatch
+                skos:closeMatch skos:exactMatch
             }
+            $this ?path ?value ;
+                  skos:inScheme ?scheme .
+            ?value skos:inScheme ?scheme .
+        }
+    """ ;
+.
+
+qskos:OmittedTopConceptsConstraint
+    a sh:SPARQLConstraint ;
+    sh:message "omitted top concepts: the concept scheme has no declared top concept."@en ;
+    sh:prefixes qskos: ;
+    sh:select """
+        SELECT $this
+        WHERE {
+            FILTER NOT EXISTS { $this skos:hasTopConcept ?concept }
+            FILTER NOT EXISTS { ?concept skos:topConceptOf $this }
         }
     """ ;
 .
 
 qskos:OrphanConceptsConstraint
     a sh:SPARQLConstraint ;
-    sh:prefixes qskos: ;
     sh:message "orphan concept: the concept has no semantic relation and is not declared as a top concept."@en ;
+    sh:prefixes qskos: ;
     sh:select """
         SELECT $this
         WHERE {
@@ -321,10 +291,24 @@ qskos:OrphanConceptsConstraint
     """ ;
 .
 
+qskos:OverlappingPreferredLabelsConstraint
+    a sh:SPARQLConstraint ;
+    sh:message "overlapping labels: another concept in the same scheme has the same preferred label."@en ;
+    sh:prefixes qskos: ;
+    sh:select """
+        SELECT DISTINCT $this ?value
+        WHERE {
+            $this skos:inScheme ?scheme ; skos:prefLabel ?value .
+            ?other skos:inScheme ?scheme ; skos:prefLabel ?value .
+            FILTER(?other != $this)
+        }
+    """ ;
+.
+
 qskos:ReflexiveRelationsConstraint
     a sh:SPARQLConstraint ;
-    sh:prefixes qskos: ;
     sh:message "reflexive relation: a concept has a semantic or mapping relation to itself."@en ;
+    sh:prefixes qskos: ;
     sh:select """
         SELECT DISTINCT $this ?path
         WHERE {
@@ -338,23 +322,76 @@ qskos:ReflexiveRelationsConstraint
     """ ;
 .
 
-qskos:UnidirectionalRelatedConstraint
+qskos:RelationClashesConstraint
     a sh:SPARQLConstraint ;
+    sh:message "relation clash: two concepts are both hierarchically and associatively related."@en ;
     sh:prefixes qskos: ;
-    sh:message "unidirectional associative relation: the inverse skos:related statement is not explicitly present."@en ;
     sh:select """
         SELECT DISTINCT $this ?value
         WHERE {
-            $this skos:related ?value .
-            FILTER NOT EXISTS { ?value skos:related $this }
+            $this (skos:broader|skos:narrower) ?value ;
+                  skos:related ?value .
+        }
+    """ ;
+.
+
+qskos:SkosPrefixDeclaration
+    sh:namespace "http://www.w3.org/2004/02/skos/core#"^^xsd:anyURI ;
+    sh:prefix "skos" ;
+.
+
+qskos:TopConceptsWithBroaderConstraint
+    a sh:SPARQLConstraint ;
+    sh:message "top concept with broader concept: a declared top concept has skos:broader."@en ;
+    sh:prefixes qskos: ;
+    sh:select """
+        SELECT DISTINCT $this ?value
+        WHERE {
+            $this skos:broader ?value .
+        }
+    """ ;
+.
+
+qskos:UndefinedRelatedResourcesConstraint
+    a sh:SPARQLConstraint ;
+    sh:message "undefined SKOS resource: a semantic relation points to a resource not typed as skos:Concept."@en ;
+    sh:prefixes qskos: ;
+    sh:select """
+        SELECT DISTINCT $this ?path ?value
+        WHERE {
+            VALUES ?path {
+                skos:broader skos:narrower skos:related
+                skos:broadMatch skos:narrowMatch skos:relatedMatch
+                skos:closeMatch skos:exactMatch
+            }
+            $this ?path ?value .
+            FILTER NOT EXISTS { ?value a skos:Concept }
+        }
+    """ ;
+.
+
+qskos:UndocumentedConceptsConstraint
+    a sh:SPARQLConstraint ;
+    sh:message "undocumented concept: the concept has no SKOS documentation property."@en ;
+    sh:prefixes qskos: ;
+    sh:select """
+        SELECT $this
+        WHERE {
+            FILTER NOT EXISTS {
+                $this ?documentation ?value .
+                VALUES ?documentation {
+                    skos:note skos:changeNote skos:definition skos:editorialNote
+                    skos:example skos:historyNote skos:scopeNote
+                }
+            }
         }
     """ ;
 .
 
 qskos:UnidirectionalHierarchyConstraint
     a sh:SPARQLConstraint ;
-    sh:prefixes qskos: ;
     sh:message "unidirectional hierarchy: a broader or narrower relation lacks its explicit inverse."@en ;
+    sh:prefixes qskos: ;
     sh:select """
         SELECT DISTINCT $this ?path ?value
         WHERE {
@@ -373,88 +410,46 @@ qskos:UnidirectionalHierarchyConstraint
     """ ;
 .
 
-qskos:HierarchicalCyclesConstraint
+qskos:UnidirectionalRelatedConstraint
     a sh:SPARQLConstraint ;
+    sh:message "unidirectional associative relation: the inverse skos:related statement is not explicitly present."@en ;
     sh:prefixes qskos: ;
-    sh:message "hierarchical cycle: following skos:broader one or more times returns to the same concept."@en ;
-    sh:select """
-        SELECT $this
-        WHERE {
-            $this skos:broader+ $this .
-        }
-    """ ;
-.
-
-qskos:TopConceptsWithBroaderConstraint
-    a sh:SPARQLConstraint ;
-    sh:prefixes qskos: ;
-    sh:message "top concept with broader concept: a declared top concept has skos:broader."@en ;
     sh:select """
         SELECT DISTINCT $this ?value
         WHERE {
-            $this skos:broader ?value .
+            $this skos:related ?value .
+            FILTER NOT EXISTS { ?value skos:related $this }
         }
     """ ;
 .
 
-qskos:OmittedTopConceptsConstraint
-    a sh:SPARQLConstraint ;
-    sh:prefixes qskos: ;
-    sh:message "omitted top concepts: the concept scheme has no declared top concept."@en ;
-    sh:select """
-        SELECT $this
-        WHERE {
-            FILTER NOT EXISTS { $this skos:hasTopConcept ?concept }
-            FILTER NOT EXISTS { ?concept skos:topConceptOf $this }
-        }
-    """ ;
+<https://orcid.org/0000-0001-5640-3202>
+    a schema:Person ;
+    schema:email "leskneebone@outlook.com"^^xsd:anyURI ;
+    schema:name "Les Kneebone" ;
 .
 
-qskos:RelationClashesConstraint
-    a sh:SPARQLConstraint ;
-    sh:prefixes qskos: ;
-    sh:message "relation clash: two concepts are both hierarchically and associatively related."@en ;
-    sh:select """
-        SELECT DISTINCT $this ?value
-        WHERE {
-            $this (skos:broader|skos:narrower) ?value ;
-                  skos:related ?value .
-        }
-    """ ;
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "Kurrawong AI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
 
-qskos:MappingRelationsMisuseConstraint
-    a sh:SPARQLConstraint ;
-    sh:prefixes qskos: ;
-    sh:message "mapping relation misuse: a mapping property links concepts belonging to the same concept scheme."@en ;
-    sh:select """
-        SELECT DISTINCT $this ?path ?value
-        WHERE {
-            VALUES ?path {
-                skos:broadMatch skos:narrowMatch skos:relatedMatch
-                skos:closeMatch skos:exactMatch
-            }
-            $this ?path ?value ;
-                  skos:inScheme ?scheme .
-            ?value skos:inScheme ?scheme .
-        }
-    """ ;
-.
-
-qskos:UndefinedRelatedResourcesConstraint
-    a sh:SPARQLConstraint ;
-    sh:prefixes qskos: ;
-    sh:message "undefined SKOS resource: a semantic relation points to a resource not typed as skos:Concept."@en ;
-    sh:select """
-        SELECT DISTINCT $this ?path ?value
-        WHERE {
-            VALUES ?path {
-                skos:broader skos:narrower skos:related
-                skos:broadMatch skos:narrowMatch skos:relatedMatch
-                skos:closeMatch skos:exactMatch
-            }
-            $this ?path ?value .
-            FILTER NOT EXISTS { ?value a skos:Concept }
-        }
-    """ ;
+ont:
+    a owl:Ontology ;
+    owl:versionIRI qskos:0.1.0 ;
+    owl:versionInfo "0.1.0" ;
+    skos:historyNote "SHACL translation of locally applicable checks from the qSKOS quality issue catalogue. Network-dependent checks, including broken-link detection, are not included."@en ;
+    sh:declare qskos:SkosPrefixDeclaration ;
+    schema:citation "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
+    schema:codeRepository "https://github.com/leskneebone/ated"^^xsd:anyURI ;
+    schema:copyrightHolder <https://kurrawong.ai> ;
+    schema:creator <https://orcid.org/0000-0001-5640-3202> ;
+    schema:dateCreated "2026-06-24"^^xsd:date ;
+    schema:dateModified "2026-07-07"^^xsd:date ;
+    schema:description "SHACL shapes implementing structural and graph-based qSKOS quality checks for SKOS vocabularies."@en ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "qSKOS SHACL Validator"@en ;
+    schema:publisher <https://kurrawong.ai> ;
+    schema:version "0.1.0" ;
 .

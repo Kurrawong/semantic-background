@@ -116,14 +116,15 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 :item-classes
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:path schema:hasPart ;
-    #sh:or (
-    #    [ sh:class schema:DataCatalog ]
-    #    [ sh:class schema:Dataset ]
-    #    [ sh:class owl:Ontology ]
-    #) ;
     sh:message "The parts of this Catalogue must be of a known class" ;
+    sh:path schema:hasPart ;
     schema:name "Item Classes" ;
+.
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au/"^^xsd:anyURI ;
 .
 
 ont:
@@ -140,10 +141,4 @@ ont:
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "BDR Catalogues Validator"@en ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
-.
-
-<https://linked.data.gov.au/org/dcceew>
-    a schema:Organization ;
-    schema:name "Department of Climate Change, energy, the Environment and Water" ;
-    schema:url "https://www.dcceew.gov.au/"^^xsd:anyURI ;
 .
