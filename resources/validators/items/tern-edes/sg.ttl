@@ -4,7 +4,7 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <urn:edes:shapes>
-    a sh:ShapesGraph ;
+    a sh:ShapesGraph , owl:Ontology ;
     owl:imports
         <urn:edes:shapes:basal-area> ,
         <urn:edes:shapes:camera-trapping> ,

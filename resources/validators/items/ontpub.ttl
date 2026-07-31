@@ -1,5 +1,4 @@
 PREFIX : <https://linked.data.gov.au/def/ontpub/validator/>
-PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX ont: <https://linked.data.gov.au/def/ontpub/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -182,8 +181,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:property <https://linked.data.gov.au/def/ontpub/req/2.1.9b-property-shape> ;
     sh:targetSubjectsOf skos:historyNote ;
     schema:description "Req 2.1.9b" ;
-    schema:name
-        "Req 2.1.9b, Single history note predicate" ;
+    schema:name "Req 2.1.9b, Single history note predicate" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.1.9c>
@@ -193,8 +191,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:property <https://linked.data.gov.au/def/ontpub/req/2.1.9c-property-shape> ;
     sh:targetSubjectsOf schema:citation ;
     schema:description "Req 2.1.9c" ;
-    schema:name
-        "Req 2.1.9c, Single source predicate" ;
+    schema:name "Req 2.1.9c, Single source predicate" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.1.9d>
@@ -216,8 +213,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:property <https://linked.data.gov.au/def/ontpub/req/2.1.9e-property-shape> ;
     sh:targetSubjectsOf schema:citation ;
     schema:description "Req 2.1.9e" ;
-    schema:name
-        "Req 2.1.9e, Source predicate range type" ;
+    schema:name "Req 2.1.9e, Source predicate range type" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.1.9f>
@@ -421,11 +417,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         [
             sh:nodeKind sh:IRI ;
         ]
-
+        
         [
             sh:datatype xsd:anyURI ;
         ]
-
+        
         [
             sh:datatype xsd:string ;
         ]
@@ -748,11 +744,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.9e-property-shape>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    or (
-        [sh:datatype xsd:anyURI ]
-        [sh:datatype xsd:string ]
-    ) ;
     sh:message "Requirement 2.1.9e: Whenever schema:citation is used, it must be a datatype property indicating an object of type xsd:anyURI or xsd:string" ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:anyURI ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
     sh:path schema:citation ;
     schema:name "Source predicate range type - property shape" ;
 .

@@ -1,12 +1,12 @@
 PREFIX : <https://linked.data.gov.au/def/valpub/validator/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX sg: <https://linked.data.gov.au/def/valpub/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX req: <https://linked.data.gov.au/def/valpub/req/>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/valpub/validator>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
@@ -93,8 +93,7 @@ req:2.1.2-3
 req:2.1.4
     a sh:NodeShape ;
     rdfs:isDefinedBy sg: ;
-    sh:message
-        "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
     sh:or (
         req:2.1.4-p-01
         req:2.1.4-p-02
@@ -655,11 +654,17 @@ req:2.1.9d-p
 req:2.1.9e-p
     a sh:PropertyShape ;
     rdfs:isDefinedBy sg: ;
-    sh:or (
-        [sh:datatype xsd:anyURI ]
-        [sh:datatype xsd:string ]
-    ) ;
     sh:message "Requirement 2.1.9e: Whenever dcterms:source is used, it must be a datatype property indicating an object of type xsd:anyURI" ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:anyURI ;
+        ]
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+    ) ;
     sh:path dcterms:source ;
     schema:name "Source predicate range type - property shape" ;
 .
@@ -908,7 +913,7 @@ sg:
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2025-12-15"^^xsd:date ;
     schema:dateIssued "2026-02-09"^^xsd:date ;
-    schema:dateModified "2026-07-09"^^xsd:date ;
+    schema:dateModified "2026-07-31"^^xsd:date ;
     schema:description "SHACL Shapes to validate ontologies of SHACL shapes according to the Validator Publications Profile" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Validator Publication Profile Validator" ;

@@ -40,10 +40,29 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://prez.dev/manifest-validator> ,
         <https://w3id.org/tern/shapes/tern/> ,
         <https://kurrawong.ai/validator/rico> ,
-        <urn:edes:shapes> ;
+        <urn:edes:shapes> ,
+        <urn:edes:shapes:basal-area> ,
+        <urn:edes:shapes:camera-trapping> ,
+        <urn:edes:shapes:coarse-woody-debris-protocol> ,
+        <urn:edes:shapes:condition-protocol> ,
+        <urn:edes:shapes:cover> ,
+        <urn:edes:shapes:fauna-aerial-survey-protocol> ,
+        <urn:edes:shapes:fauna-ground-counts> ,
+        <urn:edes:shapes:fire-protocol> ,
+        <urn:edes:shapes:floristics> ,
+        <urn:edes:shapes:herbivory-and-physical-damage> ,
+        <urn:edes:shapes:invertebrate-fauna> ,
+        <urn:edes:shapes:opportune-protocol> ,
+        <urn:edes:shapes:plant-tissue-vouchering> ,
+        <urn:edes:shapes:plot-description> ,
+        <urn:edes:shapes:recruitment> ,
+        <urn:edes:shapes:sign-based-fauna> ,
+        <urn:edes:shapes:soils> ,
+        <urn:edes:shapes:vegetation-mapping-protocol> ,
+        <urn:edes:shapes:vertebrate-fauna> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Semantic Background Validators" ;
     schema:publisher <https://kurrawong.ai> ;
     schema:status astatus:stable ;
-    schema:version "12" ;
+    schema:version "13" ;
 .
