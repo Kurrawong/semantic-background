@@ -1,0 +1,13 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+
+DELETE {
+    ?x dc:description|dcterms:description ?y
+}
+INSERT {
+    ?x skos:definition ?y
+}
+WHERE {
+    ?x dc:description|dcterms:description ?y
+}

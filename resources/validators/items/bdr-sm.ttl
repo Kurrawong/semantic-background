@@ -1,0 +1,74 @@
+PREFIX : <https://linked.data.gov.au/def/bdr-sm/validator/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX sm: <https://linked.data.gov.au/def/bdr-pr/sm>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+<https://linked.data.gov.au/def/bdr-pr/sm/validator>
+    a owl:Ontology ;
+    schema:name "BDR Submission Manifest Model Validator"@en ;
+    schema:definition "SHACL validator for the BDR Submission Manifest Model"@en ;
+    schema:creator <https://linked.data.gov.au/org/dcceew> ;
+    schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:dateCreated "2025-02-15"^^xsd:date ;
+    schema:dateModified "2025-04-29"^^xsd:date ;
+    owl:versionIRI :1.0 ;
+    owl:versionInfo """1.0 First version""" ;
+.
+
+:1.0 schema:name "1.0" .
+
+<https://linked.data.gov.au/org/dcceew>
+    a schema:Organization ;
+    schema:name "Department of Climate Change, Energy, the Environment and Water" ;
+    schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
+.
+
+:shape-01
+    a sh:NodeShape ;
+    sh:targetClass sm:SubmissionManifest ;
+    sh:property [
+        sh:path prof:hasResource ;
+        sh:minCount 1 ;
+        sh:message "A Submission Manifest must have at least one Resource Descriptor indicated by hasResource" ;
+    ] ;
+.
+
+:shape-02
+    a sh:NodeShape ;
+    sh:targetObjectsOf prof:hasResource ;
+    sh:property [
+        sh:path prof:hasArtifact ;
+        sh:datatype xsd:string ;
+        sh:minCount 1 ;
+        sh:message "Each Resource Descriptor must have at least one literal artifact indicated with prof:hasArtifact" ;
+    ] ;
+.
+
+:shape-03
+    a sh:NodeShape ;
+    sh:targetObjectsOf prof:hasResource ;
+    sh:property [
+        sh:path prof:hasRole ;
+        sh:nodeKind sh:IRI ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Each Resource Descriptor must have exactly one role IRI indicated with prof:hasRole" ;
+    ] ;
+.
+
+:shape-04
+    a sh:NodeShape ;
+    sh:targetObjectsOf prof:hasRole ;
+    sh:property [
+        sh:path skos:inScheme ;
+        sh:value <https://linked.data.gov.au/dataset/bdr/smrr> ;
+        sh:minCount 1 ;
+        sh:maxCount 1 ;
+        sh:message "Each role indicated for a Resource Descriptor a member of the Submission Manifest Model Resource Roles Vocabulary, indicated with the skos:inScheme predicate for the role Concept" ;
+    ] ;
+.

@@ -1,0 +1,9 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
+
+INSERT {
+    ?x schema:name "Union Class" .
+}
+WHERE {
+    ?x owl:unionOf ?y .
+}

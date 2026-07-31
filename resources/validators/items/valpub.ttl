@@ -655,7 +655,10 @@ req:2.1.9d-p
 req:2.1.9e-p
     a sh:PropertyShape ;
     rdfs:isDefinedBy sg: ;
-    sh:datatype xsd:anyURI ;
+    sh:or (
+        [sh:datatype xsd:anyURI ]
+        [sh:datatype xsd:string ]
+    ) ;
     sh:message "Requirement 2.1.9e: Whenever dcterms:source is used, it must be a datatype property indicating an object of type xsd:anyURI" ;
     sh:path dcterms:source ;
     schema:name "Source predicate range type - property shape" ;

@@ -1,0 +1,45 @@
+PREFIX addr: <https://w3id.org/profile/anz-address/>
+PREFIX ex: <http://example.com/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX addrct: <https://w3id.org/profile/anz-address/AnzAddressComponentTypes/>
+
+ex:20-oxford-place
+    a addr:Address ;
+    addr:hasAddressComponent
+        [
+            dcterms:type addrct:numberFirst ;
+            addr:hasValueText "20" ;
+            addr:hasValue 20
+        ] ,
+        [
+            dcterms:type addrct:streetLocality ;
+            addr:hasValueText "Oxford Place" ;
+            addr:hasValue <https://linked.data.gov.au/dataset/gnaf/streetLocality/QLD140492>
+        ] ,
+        [
+            dcterms:type addrct:locality ;
+            addr:hasValueText "Shorncliffe" ;
+            addr:hasValue <https://linked.data.gov.au/dataset/gnaf/locality/loc38f189794e03>
+        ] ,
+        [
+            dcterms:type addrct:administrativeArea ;
+            # addr:hasValueText "Queensland" ;
+            addr:hasValue <https://linked.data.gov.au/dataset/asgsed3/STE/3>
+        ] ,
+        [
+            dcterms:type addrct:postcode ;
+            addr:hasValueText "4017" ;
+            addr:hasValue 4017
+        ] ;
+    addr:hasGeocode [
+        a geo:Geometry ;
+        # dcterms:type <https://linked.data.gov.au/dataset/gnaf/code/geocodeType/PC> ;  # Property Centroid
+        geo:asWKT "POINT(153.08468369 -27.32703398)"^^geo:wktLiteral
+    ] ;
+    addr:isAddressFor ex:property-x ;
+.
+
+ex:property-x
+    a geo:Feature ;
+.

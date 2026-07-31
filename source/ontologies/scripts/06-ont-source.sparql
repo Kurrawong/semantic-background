@@ -1,0 +1,14 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema: <https://schema.org/>
+
+DELETE {
+    ?x dc:source ?y .
+    ?x dcterms:source ?y .
+}
+INSERT {
+    ?x schema:citation ?y
+}
+WHERE {
+    ?x dc:source|dcterms:source ?y
+}

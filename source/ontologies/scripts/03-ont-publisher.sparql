@@ -1,0 +1,13 @@
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX schema: <https://schema.org/>
+
+DELETE {
+    ?x dc:publisher|dcterms:publisher ?y
+}
+INSERT {
+    ?x schema:publisher ?y
+}
+WHERE {
+    ?x dc:publisher|dcterms:publisher ?y
+}

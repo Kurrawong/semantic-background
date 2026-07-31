@@ -183,8 +183,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetSubjectsOf skos:historyNote ;
     schema:description "Req 2.1.9b" ;
     schema:name
-        "Req 2.1.9b" ,
-        "Single history note predicate" ;
+        "Req 2.1.9b, Single history note predicate" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.1.9c>
@@ -192,11 +191,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:message "Requirement 2.1.9c" ;
     sh:property <https://linked.data.gov.au/def/ontpub/req/2.1.9c-property-shape> ;
-    sh:targetSubjectsOf dcterms:source ;
+    sh:targetSubjectsOf schema:citation ;
     schema:description "Req 2.1.9c" ;
     schema:name
-        "Req 2.1.9c" ,
-        "Single source predicate" ;
+        "Req 2.1.9c, Single source predicate" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.1.9d>
@@ -216,11 +214,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:message "Requirement 2.1.9e" ;
     sh:property <https://linked.data.gov.au/def/ontpub/req/2.1.9e-property-shape> ;
-    sh:targetSubjectsOf dcterms:source ;
+    sh:targetSubjectsOf schema:citation ;
     schema:description "Req 2.1.9e" ;
     schema:name
-        "Req 2.1.9e" ,
-        "Source predicate range type" ;
+        "Req 2.1.9e, Source predicate range type" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.1.9f>
@@ -697,9 +694,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.9-property-shape-02>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "This is a message about dcterms:source" ;
+    sh:message "This is a message about schema:citation" ;
     sh:minCount 1 ;
-    sh:path dcterms:source ;
+    sh:path schema:citation ;
     schema:name "Ontology provenance - source" ;
 .
 
@@ -734,8 +731,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.9c: You MUST NOT use dcterms:source property more than once on any object." ;
-    sh:path dcterms:source ;
+    sh:message "Requirement 2.1.9c: You MUST NOT use schema:citation property more than once on any object." ;
+    sh:path schema:citation ;
     schema:name "Single source predicate - property shape" ;
 .
 
@@ -751,9 +748,12 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.9e-property-shape>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:datatype xsd:anyURI ;
-    sh:message "Requirement 2.1.9e: Whenever dcterms:source is used, it must be a datatype property indicating an object of type xsd:anyURI" ;
-    sh:path dcterms:source ;
+    or (
+        [sh:datatype xsd:anyURI ]
+        [sh:datatype xsd:string ]
+    ) ;
+    sh:message "Requirement 2.1.9e: Whenever schema:citation is used, it must be a datatype property indicating an object of type xsd:anyURI or xsd:string" ;
+    sh:path schema:citation ;
     schema:name "Source predicate range type - property shape" ;
 .
 
@@ -858,7 +858,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.2.3-property-shape-01>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, schema:citation or prov:wasDerivedFrom." ;
     sh:minCount 1 ;
     sh:path prov:wasDerivedFrom ;
     schema:name "Shape provenance - wasDerivedFrom" ;
@@ -867,16 +867,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.2.3-property-shape-02>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, schema:citation or prov:wasDerivedFrom." ;
     sh:minCount 1 ;
-    sh:path dcterms:source ;
+    sh:path schema:citation ;
     schema:name "Shape provenance - source" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.2.3-property-shape-03>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
+    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, schema:citation or prov:wasDerivedFrom." ;
     sh:minCount 1 ;
     sh:path skos:historyNote ;
     schema:name "Shape provenance - historyNote" ;

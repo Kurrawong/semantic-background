@@ -1,0 +1,59 @@
+PREFIX addr: <https://linked.data.gov.au/def/addr/>
+PREFIX apt: <http://linked.data.gov.au/def/address-part-types/>
+PREFIX cn: <https://linked.data.gov.au/def/cn/>
+PREFIX ex: <http://example.com/>
+PREFIX ex-parcel: <http://example.com/parcel/>
+PREFIX geo: <http://www.opengis.net/ont/geosparql#>
+PREFIX ls: <https://linked.data.gov.au/def/lifecycle/>
+PREFIX schema: <https://schema.org/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+ex:oxford
+    a addr:Address ;
+    addr:hasGeocode
+        [
+            a addr:Geocode ;
+            schema:roleName <https://linked.data.gov.au/def/geocode-types/property-centroid> ;
+            schema:value
+                [
+                    geo:asWKT "POINT(153.0846 -27.3270)"^^geo:wktLiteral ;
+                ] ;
+        ] ;
+    cn:isNameFor ex-parcel:161162441 ;
+    ls:hasLifecycleStage
+        [
+            a ls:LifecycleStage ;
+            schema:additionalType <https://linked.data.gov.au/def/lifecycle-stage-types/proposed> ;
+        ] ;
+    schema:hasPart 
+        [
+            a cn:CompoundName ;
+            schema:additionalType apt:numberFirst ;
+            schema:value 20 ;
+        ] ,
+        [
+            a cn:CompoundName ;
+            schema:additionalType apt:locality ;
+            schema:value <https://linked.data.gov.au/dataset/qldaddr/locality/loc38f189794e03> ;
+        ] ,
+        [
+            a cn:CompoundName ;
+            schema:additionalType apt:postcode ;
+            schema:value 4017 ;
+        ] ,
+        [
+            a cn:CompoundName ;
+            schema:additionalType apt:country ;
+            schema:value <https://linked.data.gov.au/dataset/asgsed3/AUS/AUS> ;
+        ] ,
+        [
+            a cn:CompoundName ;
+            schema:additionalType apt:road ;
+            schema:value <https://linked.data.gov.au/dataset/qldaddr/streetLocality/QLD140492> ;
+        ] ,
+        [
+            a cn:CompoundName ;
+            schema:additionalType apt:stateOrTerritory ;
+            schema:value <https://linked.data.gov.au/dataset/asgsed3/STE/3> ;
+        ] ;
+.

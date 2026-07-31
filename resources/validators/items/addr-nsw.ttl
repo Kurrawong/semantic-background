@@ -1,0 +1,65 @@
+PREFIX : <https://linked.data.gov.au/def/addr/validator-nsw/>
+PREFIX addr: <https://linked.data.gov.au/def/addr/>
+PREFIX apt: <http://linked.data.gov.au/def/address-part-types/>
+PREFIX cn: <https://linked.data.gov.au/def/cn/>
+PREFIX sg: <https://linked.data.gov.au/def/addr/validator-nsw>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+sg:
+    a owl:Ontology ;
+    owl:imports addr:validator ;
+    owl:versionIRI :1.0.1 ;
+    owl:versionInfo "1.0.1" ;
+    skos:historyNote "This model validator was made for NSW spatial Services, July 2026." ;
+    schema:codeRepository "https://github.com/icsm-au/addr-model"^^xsd:anyURI ;
+    schema:copyrightHolder <https://kurrawong.ai> ;
+    schema:copyrightNotice "(c) NSW Spatial Services, 2026" ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2026-07-09"^^xsd:date ;
+    schema:dateIssued "2026-07-09"^^xsd:date ;
+    schema:dateModified "2026-07-09"^^xsd:date ;
+    schema:description "This validator is a Shapes Constraint Language (SHACL) resource that can be used to check the conformance of RDF data to the ANZ ICSM Address Model with extensions for the NSW" ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "Address Model Validator for NSW" ;
+    schema:publisher <https://kurrawong.ai> ;
+.
+
+:state-is-nsw
+    a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Each NSW Address must indicate an Address Part with the ASGS IRI for the NSW" ;
+    sh:property
+        [
+            rdfs:isDefinedBy sg: ;
+            sh:hasValue <https://linked.data.gov.au/dataset/asgsed3/STE/1> ;
+            sh:path (
+                schema:hasPart
+                schema:value
+            ) ;
+        ] ;
+    sh:targetClass addr:Address ;
+    schema:name "State is NSW" ;
+.
+
+:1.0.1
+    schema:name "1.0.1" ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:email "nick@kurrawong.ai"^^xsd:anyURI ;
+    schema:memberOf <https://kurrawong.ai> ;
+    schema:name "Nicholas J. Car" ;
+.
+
+<https://kurrawong.ai>
+    a schema:Organization ;
+    schema:name "KurrawongAI" ;
+    schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
