@@ -1,0 +1,21 @@
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<urn:edes:shapes:herbivory-and-physical-damage>
+    a
+        owl:Ontology ,
+        sh:ShapesGraph ;
+    owl:imports
+        <urn:edes:shapes:herbivory-and-physical-damage-active-search-protocol-shapes> ,
+        <urn:edes:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes> ,
+        <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    schema:contributor <https://kurrawong.ai> ;
+    schema:creator <https://linked.data.gov.au/org/tern> ;
+    schema:dateCreated "2026-07-31"^^xsd:date ;
+    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:description "EDES Herbivory And Physical Damage Shapes Graph" ;
+    schema:name "EDES Herbivory And Physical Damage Shapes Graph" ;
+    schema:publisher <https://linked.data.gov.au/org/tern> ;
+.
