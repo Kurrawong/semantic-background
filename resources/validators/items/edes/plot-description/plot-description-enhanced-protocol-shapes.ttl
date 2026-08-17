@@ -1,9 +1,11 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/plot-description-enhanced-protocol-shapes/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/plot-description-enhanced-protocol-shapes>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -12,13 +14,13 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:aspect:feature-type>
+:aspect-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
@@ -39,17 +41,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b2 ;
+    urnp:examples _:cb46d80457bb0ffb43299c3c059c87bbb462ed848cb674ba36917d34e1860f13416 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:aspect:site-visit>
+:aspect-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -71,17 +73,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b2 ;
+    urnp:examples _:cb46d80457bb0ffb43299c3c059c87bbb462ed848cb674ba36917d34e1860f13416 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:aspect:unit-of-measure>
+:aspect-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG`." ;
     sh:hasValue unit:DEG ;
     sh:message "The result _MUST_ have `unit:DEG` as the value for `tern:unit`." ;
@@ -114,17 +116,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b2 ;
+    urnp:examples _:cb46d80457bb0ffb43299c3c059c87bbb462ed848cb674ba36917d34e1860f13416 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:aspect:used-procedure>
+:aspect-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -148,17 +150,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b2 ;
+    urnp:examples _:cb46d80457bb0ffb43299c3c059c87bbb462ed848cb674ba36917d34e1860f13416 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:aspect:value-range>
+:aspect-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be between 0 inclusive and 360 inclusive." ;
     sh:maxInclusive 360 ;
@@ -180,17 +182,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b2 ;
+    urnp:examples _:cb46d80457bb0ffb43299c3c059c87bbb462ed848cb674ba36917d34e1860f13416 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:aspect:value-type>
+:aspect-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -211,17 +213,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b2 ;
+    urnp:examples _:cb46d80457bb0ffb43299c3c059c87bbb462ed848cb674ba36917d34e1860f13416 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:feature-type>
+:coarse-fragments-abundance-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
@@ -242,18 +244,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b10 ;
+    urnp:examples _:cb48c11916b921613ef565adef96e294ef41215c8ac02aa57086f8db8ef93332231 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:result-value>
+:coarse-fragments-abundance-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the soil coarse fragments abundance types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f>
@@ -282,7 +284,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b10 ;
+    urnp:examples _:cb48c11916b921613ef565adef96e294ef41215c8ac02aa57086f8db8ef93332231 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -295,13 +297,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:simple-result>
+:coarse-fragments-abundance-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -325,17 +327,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b10 ;
+    urnp:examples _:cb48c11916b921613ef565adef96e294ef41215c8ac02aa57086f8db8ef93332231 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:site-visit>
+:coarse-fragments-abundance-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -357,17 +359,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b10 ;
+    urnp:examples _:cb48c11916b921613ef565adef96e294ef41215c8ac02aa57086f8db8ef93332231 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:used-procedure>
+:coarse-fragments-abundance-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -391,17 +393,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b10 ;
+    urnp:examples _:cb48c11916b921613ef565adef96e294ef41215c8ac02aa57086f8db8ef93332231 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:value-type>
+:coarse-fragments-abundance-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -422,17 +424,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b10 ;
+    urnp:examples _:cb48c11916b921613ef565adef96e294ef41215c8ac02aa57086f8db8ef93332231 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-abundance:vocabulary>
+:coarse-fragments-abundance-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/bec608c4-3a66-4630-b666-cabb666ac8d2>`.
 
         `<https://linked.data.gov.au/def/nrm/bec608c4-3a66-4630-b666-cabb666ac8d2>` is the IRI for "soil coarse fragments abundance types".""" ;
@@ -454,17 +456,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b10 ;
+    urnp:examples _:cb48c11916b921613ef565adef96e294ef41215c8ac02aa57086f8db8ef93332231 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:feature-type>
+:coarse-fragments-lithology-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
@@ -485,18 +487,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b26 ;
+    urnp:examples _:cb4e4a6a386334847c22c64e17a4b9df499d1c90624df2d9af115cde0aba8e23963 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:result-value>
+:coarse-fragments-lithology-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the soil lithology types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f>
@@ -607,7 +609,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b26 ;
+    urnp:examples _:cb4e4a6a386334847c22c64e17a4b9df499d1c90624df2d9af115cde0aba8e23963 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -620,13 +622,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:simple-result>
+:coarse-fragments-lithology-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -650,17 +652,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b26 ;
+    urnp:examples _:cb4e4a6a386334847c22c64e17a4b9df499d1c90624df2d9af115cde0aba8e23963 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:site-visit>
+:coarse-fragments-lithology-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -682,17 +684,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b26 ;
+    urnp:examples _:cb4e4a6a386334847c22c64e17a4b9df499d1c90624df2d9af115cde0aba8e23963 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:used-procedure>
+:coarse-fragments-lithology-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -716,17 +718,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b26 ;
+    urnp:examples _:cb4e4a6a386334847c22c64e17a4b9df499d1c90624df2d9af115cde0aba8e23963 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:value-type>
+:coarse-fragments-lithology-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -747,17 +749,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b26 ;
+    urnp:examples _:cb4e4a6a386334847c22c64e17a4b9df499d1c90624df2d9af115cde0aba8e23963 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-lithology:vocabulary>
+:coarse-fragments-lithology-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/1d50eb79-685f-45ea-84b4-627154eddede>`.
 
         `<https://linked.data.gov.au/def/nrm/1d50eb79-685f-45ea-84b4-627154eddede>` is the IRI for "soil lithology types".""" ;
@@ -779,17 +781,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b26 ;
+    urnp:examples _:cb4e4a6a386334847c22c64e17a4b9df499d1c90624df2d9af115cde0aba8e23963 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:feature-type>
+:coarse-fragments-size-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
@@ -810,18 +812,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b124 ;
+    urnp:examples _:cb5f635478b05efeb0f57a354c37b82a421e325883baea8d72d084145261a785af8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:result-value>
+:coarse-fragments-size-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the soil coarse fragments sizes controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f>
@@ -851,7 +853,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b124 ;
+    urnp:examples _:cb5f635478b05efeb0f57a354c37b82a421e325883baea8d72d084145261a785af8 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -864,13 +866,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:simple-result>
+:coarse-fragments-size-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -894,17 +896,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b124 ;
+    urnp:examples _:cb5f635478b05efeb0f57a354c37b82a421e325883baea8d72d084145261a785af8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:site-visit>
+:coarse-fragments-size-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -926,17 +928,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b124 ;
+    urnp:examples _:cb5f635478b05efeb0f57a354c37b82a421e325883baea8d72d084145261a785af8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:used-procedure>
+:coarse-fragments-size-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -960,17 +962,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b124 ;
+    urnp:examples _:cb5f635478b05efeb0f57a354c37b82a421e325883baea8d72d084145261a785af8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:value-type>
+:coarse-fragments-size-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -991,17 +993,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b124 ;
+    urnp:examples _:cb5f635478b05efeb0f57a354c37b82a421e325883baea8d72d084145261a785af8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:coarse-fragments-size:vocabulary>
+:coarse-fragments-size-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/06d01bf1-3863-44ea-95fe-4c62bb47b996>`.
 
         `<https://linked.data.gov.au/def/nrm/06d01bf1-3863-44ea-95fe-4c62bb47b996>` is the IRI for "soil coarse fragments sizes".""" ;
@@ -1023,17 +1025,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b124 ;
+    urnp:examples _:cb5f635478b05efeb0f57a354c37b82a421e325883baea8d72d084145261a785af8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:field-species-name:datatype>
+:field-species-name-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -1053,17 +1055,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b141 ;
+    urnp:examples _:cb41ba9a0628c6887c76fd848962fba4445ffd5f05b7b46687fb850a84f4965967b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:field-species-name:feature-type>
+:field-species-name-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -1084,17 +1086,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b141 ;
+    urnp:examples _:cb41ba9a0628c6887c76fd848962fba4445ffd5f05b7b46687fb850a84f4965967b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:field-species-name:simple-result>
+:field-species-name-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1118,17 +1120,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b141 ;
+    urnp:examples _:cb41ba9a0628c6887c76fd848962fba4445ffd5f05b7b46687fb850a84f4965967b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:field-species-name:site-visit>
+:field-species-name-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1150,17 +1152,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b141 ;
+    urnp:examples _:cb41ba9a0628c6887c76fd848962fba4445ffd5f05b7b46687fb850a84f4965967b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:field-species-name:used-procedure>
+:field-species-name-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -1184,17 +1186,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b141 ;
+    urnp:examples _:cb41ba9a0628c6887c76fd848962fba4445ffd5f05b7b46687fb850a84f4965967b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:field-species-name:value-type>
+:field-species-name-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -1215,17 +1217,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b141 ;
+    urnp:examples _:cb41ba9a0628c6887c76fd848962fba4445ffd5f05b7b46687fb850a84f4965967b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:fire-history:feature-type>
+:fire-history-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d[`land surface disturbance`]." ;
@@ -1246,18 +1248,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b148 ;
+    urnp:examples _:cb4a7993fb125f00f261c0a258e78e58a577f8682da6a590bc5058bcccc33465a00 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:fire-history:result-value>
+:fire-history-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Fire history types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/be2897e6-c4ef-49af-973b-f902908939a9>
@@ -1280,7 +1282,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b148 ;
+    urnp:examples _:cb4a7993fb125f00f261c0a258e78e58a577f8682da6a590bc5058bcccc33465a00 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1293,13 +1295,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:fire-history:simple-result>
+:fire-history-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1323,17 +1325,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b148 ;
+    urnp:examples _:cb4a7993fb125f00f261c0a258e78e58a577f8682da6a590bc5058bcccc33465a00 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:fire-history:site-visit>
+:fire-history-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1355,17 +1357,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b148 ;
+    urnp:examples _:cb4a7993fb125f00f261c0a258e78e58a577f8682da6a590bc5058bcccc33465a00 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:fire-history:used-procedure>
+:fire-history-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -1389,17 +1391,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b148 ;
+    urnp:examples _:cb4a7993fb125f00f261c0a258e78e58a577f8682da6a590bc5058bcccc33465a00 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:fire-history:value-type>
+:fire-history-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1420,17 +1422,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b148 ;
+    urnp:examples _:cb4a7993fb125f00f261c0a258e78e58a577f8682da6a590bc5058bcccc33465a00 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:fire-history:vocabulary>
+:fire-history-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>`.
 
         `<https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>` is the IRI for "Fire history types".""" ;
@@ -1452,17 +1454,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b148 ;
+    urnp:examples _:cb4a7993fb125f00f261c0a258e78e58a577f8682da6a590bc5058bcccc33465a00 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:feature-type>
+:homogeneity-measure-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant community_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
@@ -1483,17 +1485,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b158 ;
+    urnp:examples _:cb4573bc9beb6039c8e4f3b8c39e27cb8e7ad98c0ebf5db966b8aa6298f6cad64e0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:site-visit>
+:homogeneity-measure-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1515,17 +1517,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b158 ;
+    urnp:examples _:cb4573bc9beb6039c8e4f3b8c39e27cb8e7ad98c0ebf5db966b8aa6298f6cad64e0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:unit-of-measure>
+:homogeneity-measure-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
     sh:hasValue unit:M ;
     sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
@@ -1545,17 +1547,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b158 ;
+    urnp:examples _:cb4573bc9beb6039c8e4f3b8c39e27cb8e7ad98c0ebf5db966b8aa6298f6cad64e0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:used-procedure>
+:homogeneity-measure-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -1579,17 +1581,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b158 ;
+    urnp:examples _:cb4573bc9beb6039c8e4f3b8c39e27cb8e7ad98c0ebf5db966b8aa6298f6cad64e0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:value-range>
+:homogeneity-measure-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ not be negative." ;
     sh:message "The result _MUST_ not be negative." ;
@@ -1610,17 +1612,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b158 ;
+    urnp:examples _:cb4573bc9beb6039c8e4f3b8c39e27cb8e7ad98c0ebf5db966b8aa6298f6cad64e0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:homogeneity-measure:value-type>
+:homogeneity-measure-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -1641,17 +1643,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b158 ;
+    urnp:examples _:cb4573bc9beb6039c8e4f3b8c39e27cb8e7ad98c0ebf5db966b8aa6298f6cad64e0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:datatype>
+:introduced-plant-species-impact-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -1671,17 +1673,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b165 ;
+    urnp:examples _:cb3b21a5ddea4dac61578ed44d86fe4d3809834adc6f6b09e825eabec454974af15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:feature-type>
+:introduced-plant-species-impact-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d[`land surface disturbance`]." ;
@@ -1702,17 +1704,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b165 ;
+    urnp:examples _:cb3b21a5ddea4dac61578ed44d86fe4d3809834adc6f6b09e825eabec454974af15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:simple-result>
+:introduced-plant-species-impact-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1736,17 +1738,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b165 ;
+    urnp:examples _:cb3b21a5ddea4dac61578ed44d86fe4d3809834adc6f6b09e825eabec454974af15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:site-visit>
+:introduced-plant-species-impact-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1768,17 +1770,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b165 ;
+    urnp:examples _:cb3b21a5ddea4dac61578ed44d86fe4d3809834adc6f6b09e825eabec454974af15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:used-procedure>
+:introduced-plant-species-impact-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -1802,17 +1804,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b165 ;
+    urnp:examples _:cb3b21a5ddea4dac61578ed44d86fe4d3809834adc6f6b09e825eabec454974af15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:introduced-plant-species-impact:value-type>
+:introduced-plant-species-impact-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -1833,17 +1835,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b165 ;
+    urnp:examples _:cb3b21a5ddea4dac61578ed44d86fe4d3809834adc6f6b09e825eabec454974af15 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:land-use-history:feature-type>
+:land-use-history-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
@@ -1864,18 +1866,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b172 ;
+    urnp:examples _:cb41a15ae84c1c377024c0b743c40bf0f5b8e17e7caa600b2c41b52fb207dfae411 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:land-use-history:result-value>
+:land-use-history-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Australian Land Use and Management Classification controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/alum/1.1.2>
@@ -2093,17 +2095,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b172 ;
+    urnp:examples _:cb41a15ae84c1c377024c0b743c40bf0f5b8e17e7caa600b2c41b52fb207dfae411 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:land-use-history:simple-result>
+:land-use-history-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2127,17 +2129,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b172 ;
+    urnp:examples _:cb41a15ae84c1c377024c0b743c40bf0f5b8e17e7caa600b2c41b52fb207dfae411 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:land-use-history:site-visit>
+:land-use-history-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2159,17 +2161,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b172 ;
+    urnp:examples _:cb41a15ae84c1c377024c0b743c40bf0f5b8e17e7caa600b2c41b52fb207dfae411 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:land-use-history:used-procedure>
+:land-use-history-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -2193,17 +2195,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b172 ;
+    urnp:examples _:cb41a15ae84c1c377024c0b743c40bf0f5b8e17e7caa600b2c41b52fb207dfae411 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:land-use-history:value-type>
+:land-use-history-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2224,17 +2226,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b172 ;
+    urnp:examples _:cb41a15ae84c1c377024c0b743c40bf0f5b8e17e7caa600b2c41b52fb207dfae411 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-element:feature-type>
+:landform-element-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
@@ -2255,18 +2257,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b376 ;
+    urnp:examples _:cb3db2f0a1e2d75397b5214fdda890c05c640db577fe800acfb0622ca53b49b996c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-element:result-value>
+:landform-element-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Landform element types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/e705f231-3807-5f0b-9afd-59a1c9093a36>
@@ -2367,7 +2369,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b376 ;
+    urnp:examples _:cb3db2f0a1e2d75397b5214fdda890c05c640db577fe800acfb0622ca53b49b996c ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2380,13 +2382,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-element:simple-result>
+:landform-element-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2410,17 +2412,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b376 ;
+    urnp:examples _:cb3db2f0a1e2d75397b5214fdda890c05c640db577fe800acfb0622ca53b49b996c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-element:site-visit>
+:landform-element-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2442,17 +2444,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b376 ;
+    urnp:examples _:cb3db2f0a1e2d75397b5214fdda890c05c640db577fe800acfb0622ca53b49b996c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-element:used-procedure>
+:landform-element-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -2476,17 +2478,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b376 ;
+    urnp:examples _:cb3db2f0a1e2d75397b5214fdda890c05c640db577fe800acfb0622ca53b49b996c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-element:value-type>
+:landform-element-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2507,17 +2509,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b376 ;
+    urnp:examples _:cb3db2f0a1e2d75397b5214fdda890c05c640db577fe800acfb0622ca53b49b996c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-element:vocabulary>
+:landform-element-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/c1a58967-cb12-4c2c-a7ca-9cee2589919c>`.
 
         `<https://linked.data.gov.au/def/nrm/c1a58967-cb12-4c2c-a7ca-9cee2589919c>` is the IRI for "Landform element types".""" ;
@@ -2539,17 +2541,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b376 ;
+    urnp:examples _:cb3db2f0a1e2d75397b5214fdda890c05c640db577fe800acfb0622ca53b49b996c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:feature-type>
+:landform-pattern-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
@@ -2570,18 +2572,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b464 ;
+    urnp:examples _:cb496b14f76104c6840ce723f1c621cd3db2d774f5a2c79ddb561a2b7314c55edbd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:result-value>
+:landform-pattern-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the landform pattern types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f>
@@ -2643,7 +2645,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b464 ;
+    urnp:examples _:cb496b14f76104c6840ce723f1c621cd3db2d774f5a2c79ddb561a2b7314c55edbd ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2656,13 +2658,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:simple-result>
+:landform-pattern-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2686,17 +2688,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b464 ;
+    urnp:examples _:cb496b14f76104c6840ce723f1c621cd3db2d774f5a2c79ddb561a2b7314c55edbd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:site-visit>
+:landform-pattern-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2718,17 +2720,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b464 ;
+    urnp:examples _:cb496b14f76104c6840ce723f1c621cd3db2d774f5a2c79ddb561a2b7314c55edbd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:used-procedure>
+:landform-pattern-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -2752,17 +2754,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b464 ;
+    urnp:examples _:cb496b14f76104c6840ce723f1c621cd3db2d774f5a2c79ddb561a2b7314c55edbd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:value-type>
+:landform-pattern-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2783,17 +2785,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b464 ;
+    urnp:examples _:cb496b14f76104c6840ce723f1c621cd3db2d774f5a2c79ddb561a2b7314c55edbd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:landform-pattern:vocabulary>
+:landform-pattern-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/19d91a7a-2733-4b84-9d2b-4bda4808c003>`.
 
         `<https://linked.data.gov.au/def/nrm/19d91a7a-2733-4b84-9d2b-4bda4808c003>` is the IRI for "landform pattern types".""" ;
@@ -2815,17 +2817,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b464 ;
+    urnp:examples _:cb496b14f76104c6840ce723f1c621cd3db2d774f5a2c79ddb561a2b7314c55edbd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:life-stage:feature-type>
+:life-stage-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -2846,18 +2848,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b513 ;
+    urnp:examples _:cb577f403302f55c0121ed9b7cebe9fd6fb67c89a021e45c5c1359e773492d54dc6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:life-stage:result-value>
+:life-stage-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Life stages controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/019f50b1-80ee-537c-97bf-3d1825826a8c>
@@ -2888,7 +2890,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b513 ;
+    urnp:examples _:cb577f403302f55c0121ed9b7cebe9fd6fb67c89a021e45c5c1359e773492d54dc6 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2901,13 +2903,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:life-stage:simple-result>
+:life-stage-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2931,17 +2933,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b513 ;
+    urnp:examples _:cb577f403302f55c0121ed9b7cebe9fd6fb67c89a021e45c5c1359e773492d54dc6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:life-stage:site-visit>
+:life-stage-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2963,17 +2965,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b513 ;
+    urnp:examples _:cb577f403302f55c0121ed9b7cebe9fd6fb67c89a021e45c5c1359e773492d54dc6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:life-stage:used-procedure>
+:life-stage-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -2997,17 +2999,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b513 ;
+    urnp:examples _:cb577f403302f55c0121ed9b7cebe9fd6fb67c89a021e45c5c1359e773492d54dc6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:life-stage:value-type>
+:life-stage-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -3028,17 +3030,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b513 ;
+    urnp:examples _:cb577f403302f55c0121ed9b7cebe9fd6fb67c89a021e45c5c1359e773492d54dc6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:life-stage:vocabulary>
+:life-stage-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>`.
 
         `<https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>` is the IRI for "Life stages".""" ;
@@ -3060,17 +3062,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b513 ;
+    urnp:examples _:cb577f403302f55c0121ed9b7cebe9fd6fb67c89a021e45c5c1359e773492d54dc6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:datatype>
+:mass-flowering-event-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:boolean ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
@@ -3090,17 +3092,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b531 ;
+    urnp:examples _:cb3fe087756bb23e3418519ff912b52ef017826c2cf77bd3e9c090bd79c2beae0a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:feature-type>
+:mass-flowering-event-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611[`plant occurrence`]." ;
@@ -3121,17 +3123,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b531 ;
+    urnp:examples _:cb3fe087756bb23e3418519ff912b52ef017826c2cf77bd3e9c090bd79c2beae0a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:simple-result>
+:mass-flowering-event-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3155,17 +3157,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b531 ;
+    urnp:examples _:cb3fe087756bb23e3418519ff912b52ef017826c2cf77bd3e9c090bd79c2beae0a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:site-visit>
+:mass-flowering-event-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3187,17 +3189,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b531 ;
+    urnp:examples _:cb3fe087756bb23e3418519ff912b52ef017826c2cf77bd3e9c090bd79c2beae0a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:used-procedure>
+:mass-flowering-event-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -3221,17 +3223,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b531 ;
+    urnp:examples _:cb3fe087756bb23e3418519ff912b52ef017826c2cf77bd3e9c090bd79c2beae0a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:mass-flowering-event:value-type>
+:mass-flowering-event-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Boolean ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
     sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
@@ -3252,17 +3254,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b531 ;
+    urnp:examples _:cb3fe087756bb23e3418519ff912b52ef017826c2cf77bd3e9c090bd79c2beae0a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:feature-type>
+:nearest-infrastructure-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
@@ -3283,18 +3285,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b538 ;
+    urnp:examples _:cb4bb61a1867047e16ad1c26c98a4e39855b5a9c52be449d977c3a4eb4c00a21b84 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:result-value>
+:nearest-infrastructure-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the intensive uses controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/alum/1.1.2>
@@ -3512,17 +3514,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b538 ;
+    urnp:examples _:cb4bb61a1867047e16ad1c26c98a4e39855b5a9c52be449d977c3a4eb4c00a21b84 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:simple-result>
+:nearest-infrastructure-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3546,17 +3548,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b538 ;
+    urnp:examples _:cb4bb61a1867047e16ad1c26c98a4e39855b5a9c52be449d977c3a4eb4c00a21b84 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:site-visit>
+:nearest-infrastructure-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3578,17 +3580,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b538 ;
+    urnp:examples _:cb4bb61a1867047e16ad1c26c98a4e39855b5a9c52be449d977c3a4eb4c00a21b84 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:used-procedure>
+:nearest-infrastructure-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -3612,17 +3614,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b538 ;
+    urnp:examples _:cb4bb61a1867047e16ad1c26c98a4e39855b5a9c52be449d977c3a4eb4c00a21b84 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:nearest-infrastructure:value-type>
+:nearest-infrastructure-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -3643,17 +3645,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b538 ;
+    urnp:examples _:cb4bb61a1867047e16ad1c26c98a4e39855b5a9c52be449d977c3a4eb4c00a21b84 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:feature-type>
+:outcrop-lithology-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
@@ -3674,18 +3676,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b742 ;
+    urnp:examples _:cb406d2877fb522b23b0314e35748dea99e404b5fcafef984f8ea7d92cf458d7b63 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:result-value>
+:outcrop-lithology-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the soil lithology types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f>
@@ -3796,7 +3798,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b742 ;
+    urnp:examples _:cb406d2877fb522b23b0314e35748dea99e404b5fcafef984f8ea7d92cf458d7b63 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -3809,13 +3811,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:simple-result>
+:outcrop-lithology-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3839,17 +3841,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b742 ;
+    urnp:examples _:cb406d2877fb522b23b0314e35748dea99e404b5fcafef984f8ea7d92cf458d7b63 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:site-visit>
+:outcrop-lithology-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3871,17 +3873,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b742 ;
+    urnp:examples _:cb406d2877fb522b23b0314e35748dea99e404b5fcafef984f8ea7d92cf458d7b63 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:used-procedure>
+:outcrop-lithology-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -3905,17 +3907,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b742 ;
+    urnp:examples _:cb406d2877fb522b23b0314e35748dea99e404b5fcafef984f8ea7d92cf458d7b63 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:value-type>
+:outcrop-lithology-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -3936,17 +3938,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b742 ;
+    urnp:examples _:cb406d2877fb522b23b0314e35748dea99e404b5fcafef984f8ea7d92cf458d7b63 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:outcrop-lithology:vocabulary>
+:outcrop-lithology-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/1d50eb79-685f-45ea-84b4-627154eddede>`.
 
         `<https://linked.data.gov.au/def/nrm/1d50eb79-685f-45ea-84b4-627154eddede>` is the IRI for "soil lithology types".""" ;
@@ -3968,17 +3970,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b742 ;
+    urnp:examples _:cb406d2877fb522b23b0314e35748dea99e404b5fcafef984f8ea7d92cf458d7b63 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:datatype>
+:plot-description-comments-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -3998,17 +4000,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b840 ;
+    urnp:examples _:cb516a81e53d1128b7dad7a608f8e509d00adf411e457be280e5ac50b733cac31a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:feature-type>
+:plot-description-comments-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
@@ -4029,17 +4031,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b840 ;
+    urnp:examples _:cb516a81e53d1128b7dad7a608f8e509d00adf411e457be280e5ac50b733cac31a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:simple-result>
+:plot-description-comments-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4063,17 +4065,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b840 ;
+    urnp:examples _:cb516a81e53d1128b7dad7a608f8e509d00adf411e457be280e5ac50b733cac31a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:site-visit>
+:plot-description-comments-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -4095,17 +4097,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b840 ;
+    urnp:examples _:cb516a81e53d1128b7dad7a608f8e509d00adf411e457be280e5ac50b733cac31a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:used-procedure>
+:plot-description-comments-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -4129,17 +4131,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b840 ;
+    urnp:examples _:cb516a81e53d1128b7dad7a608f8e509d00adf411e457be280e5ac50b733cac31a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:plot-description-comments:value-type>
+:plot-description-comments-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -4160,17 +4162,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b840 ;
+    urnp:examples _:cb516a81e53d1128b7dad7a608f8e509d00adf411e457be280e5ac50b733cac31a1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:relief:feature-type>
+:relief-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
@@ -4191,18 +4193,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b847 ;
+    urnp:examples _:cb3274376faaa50d2c2d7c1f4413a919a9544734da0fa8c9d03863a405258c4e203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:relief:result-value>
+:relief-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Soil reliefs controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/145e80b2-8d8f-5db1-8d9a-7bf934e1ec77>
@@ -4228,7 +4230,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b847 ;
+    urnp:examples _:cb3274376faaa50d2c2d7c1f4413a919a9544734da0fa8c9d03863a405258c4e203 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -4241,13 +4243,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:relief:simple-result>
+:relief-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4271,17 +4273,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b847 ;
+    urnp:examples _:cb3274376faaa50d2c2d7c1f4413a919a9544734da0fa8c9d03863a405258c4e203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:relief:site-visit>
+:relief-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -4303,17 +4305,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b847 ;
+    urnp:examples _:cb3274376faaa50d2c2d7c1f4413a919a9544734da0fa8c9d03863a405258c4e203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:relief:used-procedure>
+:relief-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -4337,17 +4339,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b847 ;
+    urnp:examples _:cb3274376faaa50d2c2d7c1f4413a919a9544734da0fa8c9d03863a405258c4e203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:relief:value-type>
+:relief-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4368,17 +4370,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b847 ;
+    urnp:examples _:cb3274376faaa50d2c2d7c1f4413a919a9544734da0fa8c9d03863a405258c4e203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:relief:vocabulary>
+:relief-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/9e377f67-190e-4d58-9ec9-adebedaf14e2>`.
 
         `<https://linked.data.gov.au/def/nrm/9e377f67-190e-4d58-9ec9-adebedaf14e2>` is the IRI for "Soil reliefs".""" ;
@@ -4400,17 +4402,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b847 ;
+    urnp:examples _:cb3274376faaa50d2c2d7c1f4413a919a9544734da0fa8c9d03863a405258c4e203 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:feature-type>
+:site-disturbance-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d[`land surface disturbance`]." ;
@@ -4431,18 +4433,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b860 ;
+    urnp:examples _:cb349d3115012efdba82bc0d7d171eccd787fa3edf2af0cb6a0cbcbb32c6b394ce0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:result-value>
+:site-disturbance-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the disturbance types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/8457585c-9358-5bc0-b975-0a449b304006>
@@ -4478,7 +4480,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b860 ;
+    urnp:examples _:cb349d3115012efdba82bc0d7d171eccd787fa3edf2af0cb6a0cbcbb32c6b394ce0 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -4491,13 +4493,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:simple-result>
+:site-disturbance-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4521,17 +4523,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b860 ;
+    urnp:examples _:cb349d3115012efdba82bc0d7d171eccd787fa3edf2af0cb6a0cbcbb32c6b394ce0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:site-visit>
+:site-disturbance-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -4553,17 +4555,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b860 ;
+    urnp:examples _:cb349d3115012efdba82bc0d7d171eccd787fa3edf2af0cb6a0cbcbb32c6b394ce0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:used-procedure>
+:site-disturbance-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -4587,17 +4589,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b860 ;
+    urnp:examples _:cb349d3115012efdba82bc0d7d171eccd787fa3edf2af0cb6a0cbcbb32c6b394ce0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:value-type>
+:site-disturbance-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4618,17 +4620,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b860 ;
+    urnp:examples _:cb349d3115012efdba82bc0d7d171eccd787fa3edf2af0cb6a0cbcbb32c6b394ce0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:site-disturbance:vocabulary>
+:site-disturbance-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>`.
 
         `<https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>` is the IRI for "disturbance types".""" ;
@@ -4650,17 +4652,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b860 ;
+    urnp:examples _:cb349d3115012efdba82bc0d7d171eccd787fa3edf2af0cb6a0cbcbb32c6b394ce0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope-class:feature-type>
+:slope-class-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
@@ -4681,18 +4683,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b883 ;
+    urnp:examples _:cb40a0055cfeba8705ddd3ff6f26683d1c7f8c94190afbb0fc67c6c76e2f3b29043 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope-class:result-value>
+:slope-class-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the slope classes controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/43c0c157-aa65-5101-a0e9-f12e47e91cc1>
@@ -4721,7 +4723,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b883 ;
+    urnp:examples _:cb40a0055cfeba8705ddd3ff6f26683d1c7f8c94190afbb0fc67c6c76e2f3b29043 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -4734,13 +4736,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope-class:simple-result>
+:slope-class-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4764,17 +4766,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b883 ;
+    urnp:examples _:cb40a0055cfeba8705ddd3ff6f26683d1c7f8c94190afbb0fc67c6c76e2f3b29043 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope-class:site-visit>
+:slope-class-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -4796,17 +4798,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b883 ;
+    urnp:examples _:cb40a0055cfeba8705ddd3ff6f26683d1c7f8c94190afbb0fc67c6c76e2f3b29043 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope-class:used-procedure>
+:slope-class-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -4830,17 +4832,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b883 ;
+    urnp:examples _:cb40a0055cfeba8705ddd3ff6f26683d1c7f8c94190afbb0fc67c6c76e2f3b29043 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope-class:value-type>
+:slope-class-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4861,17 +4863,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b883 ;
+    urnp:examples _:cb40a0055cfeba8705ddd3ff6f26683d1c7f8c94190afbb0fc67c6c76e2f3b29043 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope-class:vocabulary>
+:slope-class-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/d893e669-c530-4bc3-a057-a5799ffcb5db>`.
 
         `<https://linked.data.gov.au/def/nrm/d893e669-c530-4bc3-a057-a5799ffcb5db>` is the IRI for "slope classes".""" ;
@@ -4893,17 +4895,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b883 ;
+    urnp:examples _:cb40a0055cfeba8705ddd3ff6f26683d1c7f8c94190afbb0fc67c6c76e2f3b29043 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope:feature-type>
+:slope-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _landform_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2cf3ed29-440e-4a50-9bbc-5aab30df9fcd[`landform`]." ;
@@ -4924,17 +4926,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b899 ;
+    urnp:examples _:cb484b087ec2f04ab38f0122c49f4c51a90cfac1e9cd1aed5dddc8aac803a25b03b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope:site-visit>
+:slope-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -4956,17 +4958,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b899 ;
+    urnp:examples _:cb484b087ec2f04ab38f0122c49f4c51a90cfac1e9cd1aed5dddc8aac803a25b03b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope:unit-of-measure>
+:slope-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG`." ;
     sh:hasValue unit:DEG ;
     sh:message "The result _MUST_ have `unit:DEG` as the value for `tern:unit`." ;
@@ -4986,17 +4988,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b899 ;
+    urnp:examples _:cb484b087ec2f04ab38f0122c49f4c51a90cfac1e9cd1aed5dddc8aac803a25b03b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope:used-procedure>
+:slope-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -5020,17 +5022,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b899 ;
+    urnp:examples _:cb484b087ec2f04ab38f0122c49f4c51a90cfac1e9cd1aed5dddc8aac803a25b03b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope:value-range>
+:slope-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 and 90 inclusive." ;
     sh:maxInclusive 90 ;
@@ -5052,17 +5054,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b899 ;
+    urnp:examples _:cb484b087ec2f04ab38f0122c49f4c51a90cfac1e9cd1aed5dddc8aac803a25b03b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:slope:value-type>
+:slope-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -5083,17 +5085,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b899 ;
+    urnp:examples _:cb484b087ec2f04ab38f0122c49f4c51a90cfac1e9cd1aed5dddc8aac803a25b03b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:structural-formation:feature-type>
+:structural-formation-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant community_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
@@ -5114,18 +5116,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b906 ;
+    urnp:examples _:cb51b16c7655d0295a72d00fdebd15f99ef7691b414c25174b534fde760c71fa76f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:structural-formation:result-value>
+:structural-formation-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Vegetation structural formation types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/380517df-4ccc-57b1-af0e-940872681545>
@@ -5251,7 +5253,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b906 ;
+    urnp:examples _:cb51b16c7655d0295a72d00fdebd15f99ef7691b414c25174b534fde760c71fa76f ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -5264,13 +5266,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:structural-formation:simple-result>
+:structural-formation-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -5294,17 +5296,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b906 ;
+    urnp:examples _:cb51b16c7655d0295a72d00fdebd15f99ef7691b414c25174b534fde760c71fa76f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:structural-formation:site-visit>
+:structural-formation-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -5326,17 +5328,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b906 ;
+    urnp:examples _:cb51b16c7655d0295a72d00fdebd15f99ef7691b414c25174b534fde760c71fa76f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:structural-formation:used-procedure>
+:structural-formation-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -5360,17 +5362,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b906 ;
+    urnp:examples _:cb51b16c7655d0295a72d00fdebd15f99ef7691b414c25174b534fde760c71fa76f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:structural-formation:value-type>
+:structural-formation-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -5391,17 +5393,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b906 ;
+    urnp:examples _:cb51b16c7655d0295a72d00fdebd15f99ef7691b414c25174b534fde760c71fa76f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:structural-formation:vocabulary>
+:structural-formation-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/6e9baf51-566e-4a5d-93c4-a6e097dc364d>`.
 
         `<https://linked.data.gov.au/def/nrm/6e9baf51-566e-4a5d-93c4-a6e097dc364d>` is the IRI for "Vegetation structural formation types".""" ;
@@ -5423,17 +5425,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b906 ;
+    urnp:examples _:cb51b16c7655d0295a72d00fdebd15f99ef7691b414c25174b534fde760c71fa76f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:feature-type>
+:vegetation-growth-stage-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant community_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
@@ -5454,18 +5456,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b1019 ;
+    urnp:examples _:cb480c556a86ac87c53e2f8b1f1dc0ebe320c73a20c43f64c9dae8adf51861c61df ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:result-value>
+:vegetation-growth-stage-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Vegetation growth stage types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/56dff2fb-9cc0-5262-8d70-15e383f88ab7>
@@ -5491,7 +5493,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b1019 ;
+    urnp:examples _:cb480c556a86ac87c53e2f8b1f1dc0ebe320c73a20c43f64c9dae8adf51861c61df ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -5504,13 +5506,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:simple-result>
+:vegetation-growth-stage-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -5534,17 +5536,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b1019 ;
+    urnp:examples _:cb480c556a86ac87c53e2f8b1f1dc0ebe320c73a20c43f64c9dae8adf51861c61df ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:site-visit>
+:vegetation-growth-stage-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Enhanced Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -5566,17 +5568,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b1019 ;
+    urnp:examples _:cb480c556a86ac87c53e2f8b1f1dc0ebe320c73a20c43f64c9dae8adf51861c61df ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:used-procedure>
+:vegetation-growth-stage-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>`.
 
     # `<https://linked.data.gov.au/def/nrm/88068941-4dc9-4b44-bcfe-5eeeb3ba1a21>` is the IRI for "Enhanced Protocol".""" ;
@@ -5600,17 +5602,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b1019 ;
+    urnp:examples _:cb480c556a86ac87c53e2f8b1f1dc0ebe320c73a20c43f64c9dae8adf51861c61df ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:value-type>
+:vegetation-growth-stage-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -5631,17 +5633,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b1019 ;
+    urnp:examples _:cb480c556a86ac87c53e2f8b1f1dc0ebe320c73a20c43f64c9dae8adf51861c61df ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes:vegetation-growth-stage:vocabulary>
+:vegetation-growth-stage-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:plot-description-enhanced-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>`.
 
         `<https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>` is the IRI for "Vegetation growth stage types".""" ;
@@ -5663,129 +5665,130 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:na0e860825f0a4a22906d0a1a58add699b1019 ;
+    urnp:examples _:cb480c556a86ac87c53e2f8b1f1dc0ebe320c73a20c43f64c9dae8adf51861c61df ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:plot-description-enhanced-protocol-shapes>
+sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
     schema:description "SHACL shapes in the urn:shapes:plot-description-enhanced-protocol-shapes namespace." ;
     schema:name "EDES Plot Description Enhanced Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b141
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b158
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b165
+_:cb3b21a5ddea4dac61578ed44d86fe4d3809834adc6f6b09e825eabec454974af15
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/introduced-plant-species-impact/valid.ttl"^^xsd:anyURI ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b172
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b531
+_:cb3fe087756bb23e3418519ff912b52ef017826c2cf77bd3e9c090bd79c2beae0a1
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/mass-flowering-event/valid.ttl"^^xsd:anyURI ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b538
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/valid.ttl"^^xsd:anyURI ;
+_:cb41a15ae84c1c377024c0b743c40bf0f5b8e17e7caa600b2c41b52fb207dfae411
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/land-use-history/valid.ttl"^^xsd:anyURI ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b840
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/valid.ttl"^^xsd:anyURI ;
+_:cb41ba9a0628c6887c76fd848962fba4445ffd5f05b7b46687fb850a84f4965967b
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b899
+_:cb4573bc9beb6039c8e4f3b8c39e27cb8e7ad98c0ebf5db966b8aa6298f6cad64e0
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/homogeneity-measure/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb46d80457bb0ffb43299c3c059c87bbb462ed848cb674ba36917d34e1860f13416
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/aspect/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb484b087ec2f04ab38f0122c49f4c51a90cfac1e9cd1aed5dddc8aac803a25b03b
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope/valid.ttl"^^xsd:anyURI ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b10
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/valid.ttl"^^xsd:anyURI ;
+_:cb4bb61a1867047e16ad1c26c98a4e39855b5a9c52be449d977c3a4eb4c00a21b84
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/nearest-infrastructure/valid.ttl"^^xsd:anyURI ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b1019
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
+_:cb516a81e53d1128b7dad7a608f8e509d00adf411e457be280e5ac50b733cac31a1
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/plot-description-comments/valid.ttl"^^xsd:anyURI ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b124
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b148
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b26
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b376
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b464
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b513
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b742
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/valid.ttl"^^xsd:anyURI ;
-.
-
-_:na0e860825f0a4a22906d0a1a58add699b847
+_:cb3274376faaa50d2c2d7c1f4413a919a9544734da0fa8c9d03863a405258c4e203
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/relief/valid.ttl"^^xsd:anyURI ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b860
+_:cb349d3115012efdba82bc0d7d171eccd787fa3edf2af0cb6a0cbcbb32c6b394ce0
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/site-disturbance/valid.ttl"^^xsd:anyURI ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b883
+_:cb3db2f0a1e2d75397b5214fdda890c05c640db577fe800acfb0622ca53b49b996c
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-element/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb406d2877fb522b23b0314e35748dea99e404b5fcafef984f8ea7d92cf458d7b63
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/outcrop-lithology/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb40a0055cfeba8705ddd3ff6f26683d1c7f8c94190afbb0fc67c6c76e2f3b29043
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/slope-class/valid.ttl"^^xsd:anyURI ;
 .
 
-_:na0e860825f0a4a22906d0a1a58add699b906
+_:cb480c556a86ac87c53e2f8b1f1dc0ebe320c73a20c43f64c9dae8adf51861c61df
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb48c11916b921613ef565adef96e294ef41215c8ac02aa57086f8db8ef93332231
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-abundance/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb496b14f76104c6840ce723f1c621cd3db2d774f5a2c79ddb561a2b7314c55edbd
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/landform-pattern/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4a7993fb125f00f261c0a258e78e58a577f8682da6a590bc5058bcccc33465a00
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/fire-history/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4e4a6a386334847c22c64e17a4b9df499d1c90624df2d9af115cde0aba8e23963
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-lithology/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb51b16c7655d0295a72d00fdebd15f99ef7691b414c25174b534fde760c71fa76f
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/structural-formation/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb577f403302f55c0121ed9b7cebe9fd6fb67c89a021e45c5c1359e773492d54dc6
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/life-stage/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb5f635478b05efeb0f57a354c37b82a421e325883baea8d72d084145261a785af8
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/plot-description/plot-description-enhanced-protocol-shapes/coarse-fragments-size/valid.ttl"^^xsd:anyURI ;
 .

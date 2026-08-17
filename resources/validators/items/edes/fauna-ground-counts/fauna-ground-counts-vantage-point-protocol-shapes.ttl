@@ -1,9 +1,11 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/fauna-ground-counts-vantage-point-protocol-shapes/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/fauna-ground-counts-vantage-point-protocol-shapes>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -12,13 +14,13 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:Cat-coat-colour:feature-type>
+:Cat-coat-colour-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -39,18 +41,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb197 ;
+    urnp:examples _:cb561450a75681977f2c3a44b11f35af254a28ac866489edcabb54ff38d9843915f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:Cat-coat-colour:result-value>
+:Cat-coat-colour-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Cat coat colour controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/2233e495-6dbc-55ff-8ca8-a5a5aa4a4909>
@@ -77,7 +79,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb197 ;
+    urnp:examples _:cb561450a75681977f2c3a44b11f35af254a28ac866489edcabb54ff38d9843915f ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -90,13 +92,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:Cat-coat-colour:simple-result>
+:Cat-coat-colour-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -120,17 +122,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb197 ;
+    urnp:examples _:cb561450a75681977f2c3a44b11f35af254a28ac866489edcabb54ff38d9843915f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:Cat-coat-colour:used-procedure>
+:Cat-coat-colour-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -154,17 +156,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb197 ;
+    urnp:examples _:cb561450a75681977f2c3a44b11f35af254a28ac866489edcabb54ff38d9843915f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:Cat-coat-colour:value-type>
+:Cat-coat-colour-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -185,17 +187,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb197 ;
+    urnp:examples _:cb561450a75681977f2c3a44b11f35af254a28ac866489edcabb54ff38d9843915f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:Cat-coat-colour:vocabulary>
+:Cat-coat-colour-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0c428cb8-25fe-5d09-a361-4164d8b15571>`.
 
         `<https://linked.data.gov.au/def/nrm/0c428cb8-25fe-5d09-a361-4164d8b15571>` is the IRI for "Cat coat colour".""" ;
@@ -217,17 +219,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb197 ;
+    urnp:examples _:cb561450a75681977f2c3a44b11f35af254a28ac866489edcabb54ff38d9843915f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/Cat-coat-colour/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:NVIS-major-vegetation-group:feature-type>
+:NVIS-major-vegetation-group-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant community_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
@@ -248,18 +250,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb210 ;
+    urnp:examples _:cb57e8d695a30e28aa23c7878c3071f52139c917ed930c3a574662f2c60babd5624 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:NVIS-major-vegetation-group:result-value>
+:NVIS-major-vegetation-group-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the NVIS major vegetation groups controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/263d4e06-2095-4d73-a7f9-c5448cfe405a>
@@ -313,7 +315,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb210 ;
+    urnp:examples _:cb57e8d695a30e28aa23c7878c3071f52139c917ed930c3a574662f2c60babd5624 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -326,13 +328,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:NVIS-major-vegetation-group:simple-result>
+:NVIS-major-vegetation-group-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -356,17 +358,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb210 ;
+    urnp:examples _:cb57e8d695a30e28aa23c7878c3071f52139c917ed930c3a574662f2c60babd5624 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:NVIS-major-vegetation-group:used-procedure>
+:NVIS-major-vegetation-group-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -390,17 +392,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb210 ;
+    urnp:examples _:cb57e8d695a30e28aa23c7878c3071f52139c917ed930c3a574662f2c60babd5624 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:NVIS-major-vegetation-group:value-type>
+:NVIS-major-vegetation-group-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -421,17 +423,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb210 ;
+    urnp:examples _:cb57e8d695a30e28aa23c7878c3071f52139c917ed930c3a574662f2c60babd5624 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:NVIS-major-vegetation-group:vocabulary>
+:NVIS-major-vegetation-group-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/2aa40711-7c6d-506f-ae57-90551476d521>`.
 
         `<https://linked.data.gov.au/def/nrm/2aa40711-7c6d-506f-ae57-90551476d521>` is the IRI for "NVIS major vegetation groups".""" ;
@@ -453,17 +455,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb210 ;
+    urnp:examples _:cb57e8d695a30e28aa23c7878c3071f52139c917ed930c3a574662f2c60babd5624 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/NVIS-major-vegetation-group/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:air-temperature:feature-type>
+:air-temperature-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -484,17 +486,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb250 ;
+    urnp:examples _:cb32d7cab87caf1bbcf7ad4bdbc57bf0f475184be5b1ddca4d52f09422a17a85496 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:air-temperature:unit-of-measure>
+:air-temperature-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG_C`." ;
     sh:hasValue unit:DEG_C ;
     sh:message "The result _MUST_ have `unit:DEG_C` as the value for `tern:unit`." ;
@@ -514,17 +516,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb250 ;
+    urnp:examples _:cb32d7cab87caf1bbcf7ad4bdbc57bf0f475184be5b1ddca4d52f09422a17a85496 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:air-temperature:used-procedure>
+:air-temperature-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -548,17 +550,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb250 ;
+    urnp:examples _:cb32d7cab87caf1bbcf7ad4bdbc57bf0f475184be5b1ddca4d52f09422a17a85496 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:air-temperature:value-range>
+:air-temperature-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between -30 and 55 exclusive." ;
     sh:maxExclusive 55 ;
@@ -580,17 +582,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb250 ;
+    urnp:examples _:cb32d7cab87caf1bbcf7ad4bdbc57bf0f475184be5b1ddca4d52f09422a17a85496 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:air-temperature:value-type>
+:air-temperature-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -611,17 +613,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb250 ;
+    urnp:examples _:cb32d7cab87caf1bbcf7ad4bdbc57bf0f475184be5b1ddca4d52f09422a17a85496 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:animal-count:feature-type>
+:animal-count-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -642,17 +644,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb256 ;
+    urnp:examples _:cb3e8d5c6159bfea251125b3a80a101f785e9ec8f5d3a0d4237d1e55a32d0747ddf ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:animal-count:simple-result>
+:animal-count-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -676,17 +678,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb256 ;
+    urnp:examples _:cb3e8d5c6159bfea251125b3a80a101f785e9ec8f5d3a0d4237d1e55a32d0747ddf ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:animal-count:used-procedure>
+:animal-count-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -710,17 +712,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb256 ;
+    urnp:examples _:cb3e8d5c6159bfea251125b3a80a101f785e9ec8f5d3a0d4237d1e55a32d0747ddf ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:animal-count:value-range>
+:animal-count-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ not be negative." ;
     sh:message "The result _MUST_ not be a negative value." ;
@@ -741,17 +743,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb256 ;
+    urnp:examples _:cb3e8d5c6159bfea251125b3a80a101f785e9ec8f5d3a0d4237d1e55a32d0747ddf ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:animal-count:value-type>
+:animal-count-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -772,17 +774,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb256 ;
+    urnp:examples _:cb3e8d5c6159bfea251125b3a80a101f785e9ec8f5d3a0d4237d1e55a32d0747ddf ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:cloud-cover:feature-type>
+:cloud-cover-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -803,18 +805,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb262 ;
+    urnp:examples _:cb460ffb37964044b8e2b842e17ba04e3628e985c05e01c39bd48e4342f20c275d9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:cloud-cover:result-value>
+:cloud-cover-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Cloud cover types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/7773b3e9-83e7-5057-b7d6-6a025e0b6a2b>
@@ -840,7 +842,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb262 ;
+    urnp:examples _:cb460ffb37964044b8e2b842e17ba04e3628e985c05e01c39bd48e4342f20c275d9 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -853,13 +855,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:cloud-cover:simple-result>
+:cloud-cover-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -883,17 +885,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb262 ;
+    urnp:examples _:cb460ffb37964044b8e2b842e17ba04e3628e985c05e01c39bd48e4342f20c275d9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:cloud-cover:used-procedure>
+:cloud-cover-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -917,17 +919,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb262 ;
+    urnp:examples _:cb460ffb37964044b8e2b842e17ba04e3628e985c05e01c39bd48e4342f20c275d9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:cloud-cover:value-type>
+:cloud-cover-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -948,17 +950,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb262 ;
+    urnp:examples _:cb460ffb37964044b8e2b842e17ba04e3628e985c05e01c39bd48e4342f20c275d9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:cloud-cover:vocabulary>
+:cloud-cover-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/b001aab8-d5c2-4268-a750-bed499386691>`.
 
         `<https://linked.data.gov.au/def/nrm/b001aab8-d5c2-4268-a750-bed499386691>` is the IRI for "Cloud cover types".""" ;
@@ -980,17 +982,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb262 ;
+    urnp:examples _:cb460ffb37964044b8e2b842e17ba04e3628e985c05e01c39bd48e4342f20c275d9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:fauna-growth-class:feature-type>
+:fauna-growth-class-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -1011,18 +1013,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb274 ;
+    urnp:examples _:cb449847839bca3d0e4763016e2e12ab3c0dd4a8b46fa5c679c7b4e9cfc5f04da6e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:fauna-growth-class:result-value>
+:fauna-growth-class-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Age classes controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/42ecaeb5-306a-59f5-abb3-a27181d12cb6>
@@ -1054,7 +1056,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb274 ;
+    urnp:examples _:cb449847839bca3d0e4763016e2e12ab3c0dd4a8b46fa5c679c7b4e9cfc5f04da6e ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1067,13 +1069,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:fauna-growth-class:simple-result>
+:fauna-growth-class-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1097,17 +1099,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb274 ;
+    urnp:examples _:cb449847839bca3d0e4763016e2e12ab3c0dd4a8b46fa5c679c7b4e9cfc5f04da6e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:fauna-growth-class:used-procedure>
+:fauna-growth-class-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -1131,17 +1133,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb274 ;
+    urnp:examples _:cb449847839bca3d0e4763016e2e12ab3c0dd4a8b46fa5c679c7b4e9cfc5f04da6e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:fauna-growth-class:value-type>
+:fauna-growth-class-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1162,17 +1164,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb274 ;
+    urnp:examples _:cb449847839bca3d0e4763016e2e12ab3c0dd4a8b46fa5c679c7b4e9cfc5f04da6e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:fauna-growth-class:vocabulary>
+:fauna-growth-class-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0e2641c3-0d7e-4d94-8cd7-02c21d564630>`.
 
         `<https://linked.data.gov.au/def/nrm/0e2641c3-0d7e-4d94-8cd7-02c21d564630>` is the IRI for "Age classes".""" ;
@@ -1194,17 +1196,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb274 ;
+    urnp:examples _:cb449847839bca3d0e4763016e2e12ab3c0dd4a8b46fa5c679c7b4e9cfc5f04da6e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:field-species-name:feature-type>
+:field-species-name-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -1225,18 +1227,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb292 ;
+    urnp:examples _:cb47571c4bb209519ee4da3d5a9a3022832452a60d17765004392bbf2522f1a9f43 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:field-species-name:result-value>
+:field-species-name-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "If value is not free input, the value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the target species types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7>
@@ -1278,7 +1280,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             ?this a tern:IRI .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb292 ;
+    urnp:examples _:cb47571c4bb209519ee4da3d5a9a3022832452a60d17765004392bbf2522f1a9f43 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1291,13 +1293,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:field-species-name:simple-result>
+:field-species-name-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1321,17 +1323,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb292 ;
+    urnp:examples _:cb47571c4bb209519ee4da3d5a9a3022832452a60d17765004392bbf2522f1a9f43 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:field-species-name:used-procedure>
+:field-species-name-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -1355,17 +1357,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb292 ;
+    urnp:examples _:cb47571c4bb209519ee4da3d5a9a3022832452a60d17765004392bbf2522f1a9f43 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:field-species-name:value-type>
+:field-species-name-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI` or `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI` or `tern:Text`." ;
     sh:name "Value type" ;
@@ -1395,17 +1397,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb292 ;
+    urnp:examples _:cb47571c4bb209519ee4da3d5a9a3022832452a60d17765004392bbf2522f1a9f43 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:field-species-name:vocabulary>
+:field-species-name-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>`.
 
         `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>` is the IRI for "Pest species types".""" ;
@@ -1427,17 +1429,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb292 ;
+    urnp:examples _:cb47571c4bb209519ee4da3d5a9a3022832452a60d17765004392bbf2522f1a9f43 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:moon-phase:feature-type>
+:moon-phase-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -1458,18 +1460,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb323 ;
+    urnp:examples _:cb3af46d4608e84ddb04dfbe0d035c87b08c2a8d018ed91fb9e83609ee70c17dec5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:moon-phase:result-value>
+:moon-phase-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Weather condition - moon phases controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/d14a1582-9c5c-5178-9197-d073b54e3cf8>
@@ -1494,7 +1496,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb323 ;
+    urnp:examples _:cb3af46d4608e84ddb04dfbe0d035c87b08c2a8d018ed91fb9e83609ee70c17dec5 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1507,13 +1509,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:moon-phase:simple-result>
+:moon-phase-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1537,17 +1539,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb323 ;
+    urnp:examples _:cb3af46d4608e84ddb04dfbe0d035c87b08c2a8d018ed91fb9e83609ee70c17dec5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:moon-phase:used-procedure>
+:moon-phase-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -1571,17 +1573,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb323 ;
+    urnp:examples _:cb3af46d4608e84ddb04dfbe0d035c87b08c2a8d018ed91fb9e83609ee70c17dec5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:moon-phase:value-type>
+:moon-phase-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1602,17 +1604,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb323 ;
+    urnp:examples _:cb3af46d4608e84ddb04dfbe0d035c87b08c2a8d018ed91fb9e83609ee70c17dec5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:moon-phase:vocabulary>
+:moon-phase-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>`.
 
         `<https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>` is the IRI for "Weather condition - moon phases".""" ;
@@ -1634,17 +1636,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb323 ;
+    urnp:examples _:cb3af46d4608e84ddb04dfbe0d035c87b08c2a8d018ed91fb9e83609ee70c17dec5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-duration:feature-type>
+:rainfall-duration-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -1665,18 +1667,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb334 ;
+    urnp:examples _:cb5a68953c05d546ea8488c4f472694172309ec29b7395c760e6e5ce56d35d57902 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-duration:result-value>
+:rainfall-duration-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Precipitation duration types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/08eed747-4ef0-5546-b032-93705178b1fd>
@@ -1703,7 +1705,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb334 ;
+    urnp:examples _:cb5a68953c05d546ea8488c4f472694172309ec29b7395c760e6e5ce56d35d57902 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1716,13 +1718,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-duration:simple-result>
+:rainfall-duration-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1746,17 +1748,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb334 ;
+    urnp:examples _:cb5a68953c05d546ea8488c4f472694172309ec29b7395c760e6e5ce56d35d57902 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-duration:used-procedure>
+:rainfall-duration-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -1780,17 +1782,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb334 ;
+    urnp:examples _:cb5a68953c05d546ea8488c4f472694172309ec29b7395c760e6e5ce56d35d57902 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-duration:value-type>
+:rainfall-duration-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1811,17 +1813,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb334 ;
+    urnp:examples _:cb5a68953c05d546ea8488c4f472694172309ec29b7395c760e6e5ce56d35d57902 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-duration:vocabulary>
+:rainfall-duration-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>`.
 
         `<https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>` is the IRI for "Precipitation duration types".""" ;
@@ -1843,17 +1845,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb334 ;
+    urnp:examples _:cb5a68953c05d546ea8488c4f472694172309ec29b7395c760e6e5ce56d35d57902 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-type:feature-type>
+:rainfall-type-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -1874,18 +1876,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb347 ;
+    urnp:examples _:cb4815012ae92dd73b2af4ba8f37dd41098a133ac22474e4a0eabea597d589f0315 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-type:result-value>
+:rainfall-type-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Precipitation types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/507fab84-10d1-5153-ab14-9f6a28ce9cbc>
@@ -1914,7 +1916,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb347 ;
+    urnp:examples _:cb4815012ae92dd73b2af4ba8f37dd41098a133ac22474e4a0eabea597d589f0315 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1927,13 +1929,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-type:simple-result>
+:rainfall-type-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1957,17 +1959,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb347 ;
+    urnp:examples _:cb4815012ae92dd73b2af4ba8f37dd41098a133ac22474e4a0eabea597d589f0315 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-type:used-procedure>
+:rainfall-type-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -1991,17 +1993,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb347 ;
+    urnp:examples _:cb4815012ae92dd73b2af4ba8f37dd41098a133ac22474e4a0eabea597d589f0315 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-type:value-type>
+:rainfall-type-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2022,17 +2024,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb347 ;
+    urnp:examples _:cb4815012ae92dd73b2af4ba8f37dd41098a133ac22474e4a0eabea597d589f0315 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:rainfall-type:vocabulary>
+:rainfall-type-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/36e4cff5-f238-45e3-85ec-bdd0973f09d7>`.
 
         `<https://linked.data.gov.au/def/nrm/36e4cff5-f238-45e3-85ec-bdd0973f09d7>` is the IRI for "Precipitation types".""" ;
@@ -2054,17 +2056,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb347 ;
+    urnp:examples _:cb4815012ae92dd73b2af4ba8f37dd41098a133ac22474e4a0eabea597d589f0315 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:sex:feature-type>
+:sex-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -2085,18 +2087,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb362 ;
+    urnp:examples _:cb54634121d5e1f7acf1684ecb4b5ab079e4da10984523ccf94d159f3f728db9247 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:sex:result-value>
+:sex-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Animal sexes controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/f6b0f6d8-16d8-5dd7-b1b7-66b0c020b96f>
@@ -2123,7 +2125,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb362 ;
+    urnp:examples _:cb54634121d5e1f7acf1684ecb4b5ab079e4da10984523ccf94d159f3f728db9247 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2136,13 +2138,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:sex:simple-result>
+:sex-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2166,17 +2168,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb362 ;
+    urnp:examples _:cb54634121d5e1f7acf1684ecb4b5ab079e4da10984523ccf94d159f3f728db9247 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:sex:used-procedure>
+:sex-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -2200,17 +2202,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb362 ;
+    urnp:examples _:cb54634121d5e1f7acf1684ecb4b5ab079e4da10984523ccf94d159f3f728db9247 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:sex:value-type>
+:sex-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2231,17 +2233,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb362 ;
+    urnp:examples _:cb54634121d5e1f7acf1684ecb4b5ab079e4da10984523ccf94d159f3f728db9247 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:sex:vocabulary>
+:sex-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/fcc3a1e1-3e35-4a4f-bd44-eface035025c>`.
 
         `<https://linked.data.gov.au/def/nrm/fcc3a1e1-3e35-4a4f-bd44-eface035025c>` is the IRI for "Animal sexes".""" ;
@@ -2263,17 +2265,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb362 ;
+    urnp:examples _:cb54634121d5e1f7acf1684ecb4b5ab079e4da10984523ccf94d159f3f728db9247 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/sex/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:wind-description:feature-type>
+:wind-description-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -2294,18 +2296,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb375 ;
+    urnp:examples _:cb3ee2e39de05a3b92592e78354424b7d8faf909dce1bd618350fba55dc4a6e6602 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:wind-description:result-value>
+:wind-description-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Wind description types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/786f0acf-ea07-5c51-a173-f456f541e28d>
@@ -2336,7 +2338,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb375 ;
+    urnp:examples _:cb3ee2e39de05a3b92592e78354424b7d8faf909dce1bd618350fba55dc4a6e6602 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2349,13 +2351,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:wind-description:simple-result>
+:wind-description-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2379,17 +2381,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb375 ;
+    urnp:examples _:cb3ee2e39de05a3b92592e78354424b7d8faf909dce1bd618350fba55dc4a6e6602 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:wind-description:used-procedure>
+:wind-description-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>`.
 
     `<https://linked.data.gov.au/def/nrm/44c5567d-3437-4e89-b0b7-caefc07bb16c>` is the IRI for "Vantage Point Protocol".""" ;
@@ -2413,17 +2415,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb375 ;
+    urnp:examples _:cb3ee2e39de05a3b92592e78354424b7d8faf909dce1bd618350fba55dc4a6e6602 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:wind-description:value-type>
+:wind-description-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2444,17 +2446,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb375 ;
+    urnp:examples _:cb3ee2e39de05a3b92592e78354424b7d8faf909dce1bd618350fba55dc4a6e6602 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes:wind-description:vocabulary>
+:wind-description-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0fb03c4e-ad42-445a-a2c5-688d7d7effd8>`.
 
         `<https://linked.data.gov.au/def/nrm/0fb03c4e-ad42-445a-a2c5-688d7d7effd8>` is the IRI for "Wind description types".""" ;
@@ -2476,79 +2478,80 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n11aef5edfd1343778f7f3c21020a807eb375 ;
+    urnp:examples _:cb3ee2e39de05a3b92592e78354424b7d8faf909dce1bd618350fba55dc4a6e6602 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fauna-ground-counts-vantage-point-protocol-shapes>
+sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
     schema:description "SHACL shapes in the urn:shapes:fauna-ground-counts-vantage-point-protocol-shapes namespace." ;
     schema:name "EDES Fauna Ground Counts Vantage Point Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
 .
 
-_:n11aef5edfd1343778f7f3c21020a807eb250
+_:cb32d7cab87caf1bbcf7ad4bdbc57bf0f475184be5b1ddca4d52f09422a17a85496
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/air-temperature/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/air-temperature/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n11aef5edfd1343778f7f3c21020a807eb256
+_:cb3e8d5c6159bfea251125b3a80a101f785e9ec8f5d3a0d4237d1e55a32d0747ddf
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/animal-count/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n11aef5edfd1343778f7f3c21020a807eb197
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/Cat-coat-colour/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/Cat-coat-colour/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n11aef5edfd1343778f7f3c21020a807eb210
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/NVIS-major-vegetation-group/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/NVIS-major-vegetation-group/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n11aef5edfd1343778f7f3c21020a807eb262
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/cloud-cover/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/cloud-cover/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n11aef5edfd1343778f7f3c21020a807eb274
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/fauna-growth-class/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/fauna-growth-class/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n11aef5edfd1343778f7f3c21020a807eb292
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n11aef5edfd1343778f7f3c21020a807eb323
+_:cb3af46d4608e84ddb04dfbe0d035c87b08c2a8d018ed91fb9e83609ee70c17dec5
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/moon-phase/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/moon-phase/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n11aef5edfd1343778f7f3c21020a807eb334
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-duration/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-duration/valid.ttl"^^xsd:anyURI ;
+_:cb3ee2e39de05a3b92592e78354424b7d8faf909dce1bd618350fba55dc4a6e6602
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n11aef5edfd1343778f7f3c21020a807eb347
+_:cb449847839bca3d0e4763016e2e12ab3c0dd4a8b46fa5c679c7b4e9cfc5f04da6e
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/fauna-growth-class/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/fauna-growth-class/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb460ffb37964044b8e2b842e17ba04e3628e985c05e01c39bd48e4342f20c275d9
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/cloud-cover/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/cloud-cover/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb47571c4bb209519ee4da3d5a9a3022832452a60d17765004392bbf2522f1a9f43
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4815012ae92dd73b2af4ba8f37dd41098a133ac22474e4a0eabea597d589f0315
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-type/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n11aef5edfd1343778f7f3c21020a807eb362
+_:cb54634121d5e1f7acf1684ecb4b5ab079e4da10984523ccf94d159f3f728db9247
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/sex/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/sex/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n11aef5edfd1343778f7f3c21020a807eb375
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/wind-description/valid.ttl"^^xsd:anyURI ;
+_:cb561450a75681977f2c3a44b11f35af254a28ac866489edcabb54ff38d9843915f
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/Cat-coat-colour/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/Cat-coat-colour/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb57e8d695a30e28aa23c7878c3071f52139c917ed930c3a574662f2c60babd5624
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/NVIS-major-vegetation-group/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/NVIS-major-vegetation-group/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb5a68953c05d546ea8488c4f472694172309ec29b7395c760e6e5ce56d35d57902
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-duration/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fauna-ground-counts/fauna-ground-counts-vantage-point-protocol-shapes/rainfall-duration/valid.ttl"^^xsd:anyURI ;
 .

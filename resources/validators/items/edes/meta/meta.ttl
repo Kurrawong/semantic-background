@@ -1,12 +1,30 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/meta/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
+PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/meta>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:meta:controlled:query>
+sg:
+    a
+        owl:Ontology ,
+        sh:ShapesGraph ;
+    schema:contributor <https://kurrawong.ai> ;
+    schema:creator <https://linked.data.gov.au/org/tern> ;
+    schema:dateCreated "2026-07-31"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
+    schema:description "EDES Meta Shapes Graph" ;
+    schema:name "EDES Meta Shapes Graph" ;
+    schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
+.
+
+:controlled-query
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -15,7 +33,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Controlled ;
 .
 
-<urn:edes:shapes:meta:requirement:description>
+:requirement-description
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -25,7 +43,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:edes:shapes:meta:requirement:examples>
+:requirement-examples
     a sh:PropertyShape ;
     sh:maxCount 1 ;
     sh:message "An instance of urn:class:Requirement must have a value for urn:property:examples" ;
@@ -35,7 +53,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:edes:shapes:meta:requirement:invalidExample>
+:requirement-invalidExample
     a sh:PropertyShape ;
     sh:datatype xsd:anyURI ;
     sh:maxCount 1 ;
@@ -45,7 +63,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetObjectsOf urnp:examples ;
 .
 
-<urn:edes:shapes:meta:requirement:message>
+:requirement-message
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -55,7 +73,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:edes:shapes:meta:requirement:name>
+:requirement-name
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -65,20 +83,20 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:edes:shapes:meta:requirement:rdf-type>
+:requirement-rdf-type
     a sh:PropertyShape ;
     sh:in (
-            sh:PropertyShape
-            sh:NodeShape
-            urnc:Requirement
-            urnc:Controlled
-        ) ;
+        sh:PropertyShape
+        sh:NodeShape
+        urnc:Requirement
+        urnc:Controlled
+    ) ;
     sh:message "An instance of urn:class:Requirement must only be instances of other classes specified in the controlled list." ;
     sh:path rdf:type ;
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:edes:shapes:meta:requirement:source>
+:requirement-source
     a sh:PropertyShape ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
@@ -88,13 +106,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:edes:shapes:meta:requirement:status>
+:requirement-status
     a sh:PropertyShape ;
     sh:in (
-            reg:statusSubmitted
-            reg:statusStable
-            reg:statusInvalid
-        ) ;
+        reg:statusSubmitted
+        reg:statusStable
+        reg:statusInvalid
+    ) ;
     sh:maxCount 1 ;
     sh:message "An instance of urn:class:Requirement must have a value for reg:status." ;
     sh:minCount 1 ;
@@ -102,7 +120,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetClass urnc:Requirement ;
 .
 
-<urn:edes:shapes:meta:requirement:validExample>
+:requirement-validExample
     a sh:PropertyShape ;
     sh:datatype xsd:anyURI ;
     sh:maxCount 1 ;
@@ -112,7 +130,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:targetObjectsOf urnp:examples ;
 .
 
-<urn:edes:shapes:meta:requirement:validator>
+:requirement-validator
     a sh:PropertyShape ;
     sh:datatype xsd:anyURI ;
     sh:maxCount 1 ;
@@ -120,23 +138,4 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:minCount 1 ;
     sh:path urnp:validator ;
     sh:targetClass urnc:Requirement ;
-.
-
-
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX schema: <https://schema.org/>
-PREFIX sh: <http://www.w3.org/ns/shacl#>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-<urn:edes:shapes:meta>
-    a
-        owl:Ontology ,
-        sh:ShapesGraph ;
-    schema:contributor <https://kurrawong.ai> ;
-    schema:creator <https://linked.data.gov.au/org/tern> ;
-    schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
-    schema:description "EDES Meta Shapes Graph" ;
-    schema:name "EDES Meta Shapes Graph" ;
-    schema:publisher <https://linked.data.gov.au/org/tern> ;
 .

@@ -1,9 +1,11 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -12,13 +14,13 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:air-temperature:feature-type>
+:air-temperature-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -39,17 +41,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb823 ;
+    urnp:examples _:cb39551364c866fd12926846d43787938800d0bf4ea926c8beff4c6973f9f34bcfd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:air-temperature:site-visit>
+:air-temperature-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -71,17 +73,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb823 ;
+    urnp:examples _:cb39551364c866fd12926846d43787938800d0bf4ea926c8beff4c6973f9f34bcfd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:air-temperature:unit-of-measure>
+:air-temperature-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:DEG_C`." ;
     sh:hasValue unit:DEG_C ;
     sh:message "The result _MUST_ have `unit:DEG_C` as the value for `tern:unit`." ;
@@ -101,17 +103,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb823 ;
+    urnp:examples _:cb39551364c866fd12926846d43787938800d0bf4ea926c8beff4c6973f9f34bcfd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:air-temperature:used-procedure>
+:air-temperature-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -135,17 +137,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb823 ;
+    urnp:examples _:cb39551364c866fd12926846d43787938800d0bf4ea926c8beff4c6973f9f34bcfd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:air-temperature:value-range>
+:air-temperature-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between -30 and 55 exclusive." ;
     sh:maxExclusive 55 ;
@@ -167,17 +169,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb823 ;
+    urnp:examples _:cb39551364c866fd12926846d43787938800d0bf4ea926c8beff4c6973f9f34bcfd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:air-temperature:value-type>
+:air-temperature-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -198,17 +200,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb823 ;
+    urnp:examples _:cb39551364c866fd12926846d43787938800d0bf4ea926c8beff4c6973f9f34bcfd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:feature-type>
+:attributable-fauna-species-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -229,18 +231,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb830 ;
+    urnp:examples _:cb47bfe919e12fdeec1bafb0d873be7092bff141ebfaafb14e929d54794556f2257 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:result-value>
+:attributable-fauna-species-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the target species types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7>
@@ -282,7 +284,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             ?this a tern:IRI .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb830 ;
+    urnp:examples _:cb47bfe919e12fdeec1bafb0d873be7092bff141ebfaafb14e929d54794556f2257 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -295,13 +297,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:simple-result>
+:attributable-fauna-species-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -325,17 +327,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb830 ;
+    urnp:examples _:cb47bfe919e12fdeec1bafb0d873be7092bff141ebfaafb14e929d54794556f2257 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:site-visit>
+:attributable-fauna-species-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -357,17 +359,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb830 ;
+    urnp:examples _:cb47bfe919e12fdeec1bafb0d873be7092bff141ebfaafb14e929d54794556f2257 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:used-procedure>
+:attributable-fauna-species-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -391,17 +393,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb830 ;
+    urnp:examples _:cb47bfe919e12fdeec1bafb0d873be7092bff141ebfaafb14e929d54794556f2257 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:value-type>
+:attributable-fauna-species-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI` or `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI` or `tern:Text`." ;
     sh:name "Value type" ;
@@ -431,17 +433,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb830 ;
+    urnp:examples _:cb47bfe919e12fdeec1bafb0d873be7092bff141ebfaafb14e929d54794556f2257 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:vocabulary>
+:attributable-fauna-species-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>`.
 
         `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>` is the IRI for "target species types".""" ;
@@ -463,17 +465,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb830 ;
+    urnp:examples _:cb47bfe919e12fdeec1bafb0d873be7092bff141ebfaafb14e929d54794556f2257 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:burrow-active-status:datatype>
+:burrow-active-status-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:boolean ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
@@ -493,17 +495,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb862 ;
+    urnp:examples _:cb46b8fec764fa4b40ace31db42734c76494f89814516c2500965d1c4eca10c9f40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/burrow-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:burrow-active-status:feature-type>
+:burrow-active-status-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -524,17 +526,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb862 ;
+    urnp:examples _:cb46b8fec764fa4b40ace31db42734c76494f89814516c2500965d1c4eca10c9f40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/burrow-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:burrow-active-status:simple-result>
+:burrow-active-status-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -558,17 +560,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb862 ;
+    urnp:examples _:cb46b8fec764fa4b40ace31db42734c76494f89814516c2500965d1c4eca10c9f40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/burrow-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:burrow-active-status:site-visit>
+:burrow-active-status-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -590,17 +592,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb862 ;
+    urnp:examples _:cb46b8fec764fa4b40ace31db42734c76494f89814516c2500965d1c4eca10c9f40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/burrow-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:burrow-active-status:used-procedure>
+:burrow-active-status-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -624,17 +626,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb862 ;
+    urnp:examples _:cb46b8fec764fa4b40ace31db42734c76494f89814516c2500965d1c4eca10c9f40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/burrow-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:burrow-active-status:value-type>
+:burrow-active-status-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Boolean ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
     sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
@@ -655,17 +657,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb862 ;
+    urnp:examples _:cb46b8fec764fa4b40ace31db42734c76494f89814516c2500965d1c4eca10c9f40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/burrow-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:cloud-cover:feature-type>
+:cloud-cover-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -686,18 +688,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb869 ;
+    urnp:examples _:cb3f45c6178f267691b0f01a97e220e56bdb1be02e1c9443708a8945a63a618e226 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:cloud-cover:result-value>
+:cloud-cover-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Cloud cover types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/7773b3e9-83e7-5057-b7d6-6a025e0b6a2b>
@@ -723,7 +725,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb869 ;
+    urnp:examples _:cb3f45c6178f267691b0f01a97e220e56bdb1be02e1c9443708a8945a63a618e226 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -736,13 +738,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:cloud-cover:simple-result>
+:cloud-cover-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -766,17 +768,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb869 ;
+    urnp:examples _:cb3f45c6178f267691b0f01a97e220e56bdb1be02e1c9443708a8945a63a618e226 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:cloud-cover:site-visit>
+:cloud-cover-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -798,17 +800,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb869 ;
+    urnp:examples _:cb3f45c6178f267691b0f01a97e220e56bdb1be02e1c9443708a8945a63a618e226 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:cloud-cover:used-procedure>
+:cloud-cover-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -832,17 +834,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb869 ;
+    urnp:examples _:cb3f45c6178f267691b0f01a97e220e56bdb1be02e1c9443708a8945a63a618e226 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:cloud-cover:value-type>
+:cloud-cover-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -863,17 +865,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb869 ;
+    urnp:examples _:cb3f45c6178f267691b0f01a97e220e56bdb1be02e1c9443708a8945a63a618e226 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:cloud-cover:vocabulary>
+:cloud-cover-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/b001aab8-d5c2-4268-a750-bed499386691>`.
 
         `<https://linked.data.gov.au/def/nrm/b001aab8-d5c2-4268-a750-bed499386691>` is the IRI for "Cloud cover types".""" ;
@@ -895,17 +897,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb869 ;
+    urnp:examples _:cb3f45c6178f267691b0f01a97e220e56bdb1be02e1c9443708a8945a63a618e226 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:den-active-status:datatype>
+:den-active-status-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:boolean ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
@@ -925,17 +927,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb882 ;
+    urnp:examples _:cb4f416aca8138726b1229f78d08aa9d343d7a8e26405afdd4d3334f3ca3fadfee4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/den-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:den-active-status:feature-type>
+:den-active-status-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -956,17 +958,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb882 ;
+    urnp:examples _:cb4f416aca8138726b1229f78d08aa9d343d7a8e26405afdd4d3334f3ca3fadfee4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/den-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:den-active-status:simple-result>
+:den-active-status-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -990,17 +992,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb882 ;
+    urnp:examples _:cb4f416aca8138726b1229f78d08aa9d343d7a8e26405afdd4d3334f3ca3fadfee4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/den-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:den-active-status:site-visit>
+:den-active-status-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1022,17 +1024,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb882 ;
+    urnp:examples _:cb4f416aca8138726b1229f78d08aa9d343d7a8e26405afdd4d3334f3ca3fadfee4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/den-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:den-active-status:used-procedure>
+:den-active-status-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -1056,17 +1058,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb882 ;
+    urnp:examples _:cb4f416aca8138726b1229f78d08aa9d343d7a8e26405afdd4d3334f3ca3fadfee4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/den-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:den-active-status:value-type>
+:den-active-status-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Boolean ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
     sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
@@ -1087,17 +1089,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb882 ;
+    urnp:examples _:cb4f416aca8138726b1229f78d08aa9d343d7a8e26405afdd4d3334f3ca3fadfee4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/den-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-growth-class:feature-type>
+:fauna-growth-class-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -1118,18 +1120,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb889 ;
+    urnp:examples _:cb3258e6fda73ac7252f2a20742b63e0955c77fb8aea810afeba8d75c63b1a267a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-growth-class:result-value>
+:fauna-growth-class-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the fauna growth classes controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/42ecaeb5-306a-59f5-abb3-a27181d12cb6>
@@ -1161,7 +1163,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb889 ;
+    urnp:examples _:cb3258e6fda73ac7252f2a20742b63e0955c77fb8aea810afeba8d75c63b1a267a3 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1174,13 +1176,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-growth-class:simple-result>
+:fauna-growth-class-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1204,17 +1206,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb889 ;
+    urnp:examples _:cb3258e6fda73ac7252f2a20742b63e0955c77fb8aea810afeba8d75c63b1a267a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-growth-class:site-visit>
+:fauna-growth-class-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1236,17 +1238,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb889 ;
+    urnp:examples _:cb3258e6fda73ac7252f2a20742b63e0955c77fb8aea810afeba8d75c63b1a267a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-growth-class:used-procedure>
+:fauna-growth-class-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -1270,17 +1272,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb889 ;
+    urnp:examples _:cb3258e6fda73ac7252f2a20742b63e0955c77fb8aea810afeba8d75c63b1a267a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-growth-class:value-type>
+:fauna-growth-class-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1301,17 +1303,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb889 ;
+    urnp:examples _:cb3258e6fda73ac7252f2a20742b63e0955c77fb8aea810afeba8d75c63b1a267a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-growth-class:vocabulary>
+:fauna-growth-class-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0e2641c3-0d7e-4d94-8cd7-02c21d564630>`.
 
         `<https://linked.data.gov.au/def/nrm/0e2641c3-0d7e-4d94-8cd7-02c21d564630>` is the IRI for "fauna growth classes".""" ;
@@ -1333,17 +1335,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb889 ;
+    urnp:examples _:cb3258e6fda73ac7252f2a20742b63e0955c77fb8aea810afeba8d75c63b1a267a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-growth-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-age:feature-type>
+:fauna-sign-age-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -1364,18 +1366,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb908 ;
+    urnp:examples _:cb486dbd471c6fb8331c186e02fdd0c360f4411725066da66b5361f1c69e2949ed5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-age:result-value>
+:fauna-sign-age-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Fauna sign ages controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/b31d68f1-9b8f-5371-a6cf-981748a8dc1e>
@@ -1399,7 +1401,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb908 ;
+    urnp:examples _:cb486dbd471c6fb8331c186e02fdd0c360f4411725066da66b5361f1c69e2949ed5 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1412,13 +1414,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-age:simple-result>
+:fauna-sign-age-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1442,17 +1444,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb908 ;
+    urnp:examples _:cb486dbd471c6fb8331c186e02fdd0c360f4411725066da66b5361f1c69e2949ed5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-age:site-visit>
+:fauna-sign-age-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1474,17 +1476,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb908 ;
+    urnp:examples _:cb486dbd471c6fb8331c186e02fdd0c360f4411725066da66b5361f1c69e2949ed5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-age:used-procedure>
+:fauna-sign-age-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -1508,17 +1510,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb908 ;
+    urnp:examples _:cb486dbd471c6fb8331c186e02fdd0c360f4411725066da66b5361f1c69e2949ed5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-age:value-type>
+:fauna-sign-age-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1539,17 +1541,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb908 ;
+    urnp:examples _:cb486dbd471c6fb8331c186e02fdd0c360f4411725066da66b5361f1c69e2949ed5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-age:vocabulary>
+:fauna-sign-age-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/292b1cf8-6f25-514f-8a94-6d7d690335ed>`.
 
         `<https://linked.data.gov.au/def/nrm/292b1cf8-6f25-514f-8a94-6d7d690335ed>` is the IRI for "Fauna sign ages".""" ;
@@ -1571,17 +1573,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb908 ;
+    urnp:examples _:cb486dbd471c6fb8331c186e02fdd0c360f4411725066da66b5361f1c69e2949ed5 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-comments:datatype>
+:fauna-sign-comments-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -1601,17 +1603,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb919 ;
+    urnp:examples _:cb3e41aefeef317df4cb6c9ec85f31250010643df0608f9ff4e31ff4acabbcc6c3d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-comments:feature-type>
+:fauna-sign-comments-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -1632,17 +1634,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb919 ;
+    urnp:examples _:cb3e41aefeef317df4cb6c9ec85f31250010643df0608f9ff4e31ff4acabbcc6c3d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-comments:simple-result>
+:fauna-sign-comments-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1666,17 +1668,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb919 ;
+    urnp:examples _:cb3e41aefeef317df4cb6c9ec85f31250010643df0608f9ff4e31ff4acabbcc6c3d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-comments:site-visit>
+:fauna-sign-comments-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1698,17 +1700,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb919 ;
+    urnp:examples _:cb3e41aefeef317df4cb6c9ec85f31250010643df0608f9ff4e31ff4acabbcc6c3d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-comments:used-procedure>
+:fauna-sign-comments-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -1732,17 +1734,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb919 ;
+    urnp:examples _:cb3e41aefeef317df4cb6c9ec85f31250010643df0608f9ff4e31ff4acabbcc6c3d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-comments:value-type>
+:fauna-sign-comments-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -1763,17 +1765,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb919 ;
+    urnp:examples _:cb3e41aefeef317df4cb6c9ec85f31250010643df0608f9ff4e31ff4acabbcc6c3d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-comments/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-presence:datatype>
+:fauna-sign-presence-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:boolean ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
@@ -1793,17 +1795,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb926 ;
+    urnp:examples _:cb4a1a3198c21cd1e54a4a6a11acb571d7ab0995cc04141fc30cd88e842f3ee21ee ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-presence:feature-type>
+:fauna-sign-presence-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _quadrat_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4362c8f2-b3cc-4816-b5a2-fb7bb4c0cff5> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4362c8f2-b3cc-4816-b5a2-fb7bb4c0cff5[`quadrat`]." ;
@@ -1824,17 +1826,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb926 ;
+    urnp:examples _:cb4a1a3198c21cd1e54a4a6a11acb571d7ab0995cc04141fc30cd88e842f3ee21ee ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-presence:simple-result>
+:fauna-sign-presence-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1858,17 +1860,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb926 ;
+    urnp:examples _:cb4a1a3198c21cd1e54a4a6a11acb571d7ab0995cc04141fc30cd88e842f3ee21ee ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-presence:site-visit>
+:fauna-sign-presence-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1890,17 +1892,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb926 ;
+    urnp:examples _:cb4a1a3198c21cd1e54a4a6a11acb571d7ab0995cc04141fc30cd88e842f3ee21ee ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-presence:used-procedure>
+:fauna-sign-presence-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -1924,17 +1926,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb926 ;
+    urnp:examples _:cb4a1a3198c21cd1e54a4a6a11acb571d7ab0995cc04141fc30cd88e842f3ee21ee ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-presence:value-type>
+:fauna-sign-presence-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Boolean ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
     sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
@@ -1955,17 +1957,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb926 ;
+    urnp:examples _:cb4a1a3198c21cd1e54a4a6a11acb571d7ab0995cc04141fc30cd88e842f3ee21ee ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-presence/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type-count:feature-type>
+:fauna-sign-type-count-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -1986,17 +1988,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb933 ;
+    urnp:examples _:cb26ced563b939e44f840e54ffcc6dbf2d2cebf539077eee8593b0119b37d4749d6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type-count:simple-result>
+:fauna-sign-type-count-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2020,17 +2022,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb933 ;
+    urnp:examples _:cb26ced563b939e44f840e54ffcc6dbf2d2cebf539077eee8593b0119b37d4749d6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type-count:site-visit>
+:fauna-sign-type-count-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2052,17 +2054,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb933 ;
+    urnp:examples _:cb26ced563b939e44f840e54ffcc6dbf2d2cebf539077eee8593b0119b37d4749d6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type-count:used-procedure>
+:fauna-sign-type-count-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -2086,17 +2088,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb933 ;
+    urnp:examples _:cb26ced563b939e44f840e54ffcc6dbf2d2cebf539077eee8593b0119b37d4749d6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type-count:value-range>
+:fauna-sign-type-count-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ have a positive value." ;
@@ -2117,17 +2119,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb933 ;
+    urnp:examples _:cb26ced563b939e44f840e54ffcc6dbf2d2cebf539077eee8593b0119b37d4749d6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type-count:value-type>
+:fauna-sign-type-count-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -2148,17 +2150,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb933 ;
+    urnp:examples _:cb26ced563b939e44f840e54ffcc6dbf2d2cebf539077eee8593b0119b37d4749d6 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type:feature-type>
+:fauna-sign-type-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -2179,18 +2181,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb940 ;
+    urnp:examples _:cb3b4d51bb08c6ea1a13a93452da547993ae562a788fb2442803a0733da1fa926d0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type:result-value>
+:fauna-sign-type-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Fauna sign types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/096e8903-5752-5971-92c9-dacfd1e725ca>
@@ -2229,7 +2231,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb940 ;
+    urnp:examples _:cb3b4d51bb08c6ea1a13a93452da547993ae562a788fb2442803a0733da1fa926d0 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2242,13 +2244,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type:simple-result>
+:fauna-sign-type-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2272,17 +2274,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb940 ;
+    urnp:examples _:cb3b4d51bb08c6ea1a13a93452da547993ae562a788fb2442803a0733da1fa926d0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type:site-visit>
+:fauna-sign-type-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2304,17 +2306,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb940 ;
+    urnp:examples _:cb3b4d51bb08c6ea1a13a93452da547993ae562a788fb2442803a0733da1fa926d0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type:used-procedure>
+:fauna-sign-type-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -2338,17 +2340,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb940 ;
+    urnp:examples _:cb3b4d51bb08c6ea1a13a93452da547993ae562a788fb2442803a0733da1fa926d0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type:value-type>
+:fauna-sign-type-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2369,17 +2371,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb940 ;
+    urnp:examples _:cb3b4d51bb08c6ea1a13a93452da547993ae562a788fb2442803a0733da1fa926d0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:fauna-sign-type:vocabulary>
+:fauna-sign-type-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/bc7eaeab-ff7c-5d54-aa41-a11003d7fff0>`.
 
         `<https://linked.data.gov.au/def/nrm/bc7eaeab-ff7c-5d54-aa41-a11003d7fff0>` is the IRI for "Fauna sign types".""" ;
@@ -2401,17 +2403,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb940 ;
+    urnp:examples _:cb3b4d51bb08c6ea1a13a93452da547993ae562a788fb2442803a0733da1fa926d0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:moon-phase:feature-type>
+:moon-phase-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -2432,18 +2434,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb966 ;
+    urnp:examples _:cb436f2b044aaebba5420442597a4358f697e8de2f886de31bcf1ee9c0586de1980 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:moon-phase:result-value>
+:moon-phase-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Weather condition - moon phases controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/d14a1582-9c5c-5178-9197-d073b54e3cf8>
@@ -2468,7 +2470,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb966 ;
+    urnp:examples _:cb436f2b044aaebba5420442597a4358f697e8de2f886de31bcf1ee9c0586de1980 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2481,13 +2483,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:moon-phase:simple-result>
+:moon-phase-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2511,17 +2513,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb966 ;
+    urnp:examples _:cb436f2b044aaebba5420442597a4358f697e8de2f886de31bcf1ee9c0586de1980 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:moon-phase:site-visit>
+:moon-phase-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2543,17 +2545,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb966 ;
+    urnp:examples _:cb436f2b044aaebba5420442597a4358f697e8de2f886de31bcf1ee9c0586de1980 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:moon-phase:used-procedure>
+:moon-phase-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -2577,17 +2579,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb966 ;
+    urnp:examples _:cb436f2b044aaebba5420442597a4358f697e8de2f886de31bcf1ee9c0586de1980 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:moon-phase:value-type>
+:moon-phase-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2608,17 +2610,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb966 ;
+    urnp:examples _:cb436f2b044aaebba5420442597a4358f697e8de2f886de31bcf1ee9c0586de1980 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:moon-phase:vocabulary>
+:moon-phase-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>`.
 
         `<https://linked.data.gov.au/def/nrm/30688460-6aaa-53aa-94e7-be1164f5343b>` is the IRI for "Weather condition - moon phases".""" ;
@@ -2640,17 +2642,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb966 ;
+    urnp:examples _:cb436f2b044aaebba5420442597a4358f697e8de2f886de31bcf1ee9c0586de1980 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/moon-phase/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-burrow-entrances:feature-type>
+:number-of-burrow-entrances-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -2671,17 +2673,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb978 ;
+    urnp:examples _:cb4d1b4b90d2fd6b810f2437f82974982a6ba030c01273a3316b9e4f1c36aba6bf4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-burrow-entrances:simple-result>
+:number-of-burrow-entrances-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2705,17 +2707,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb978 ;
+    urnp:examples _:cb4d1b4b90d2fd6b810f2437f82974982a6ba030c01273a3316b9e4f1c36aba6bf4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-burrow-entrances:site-visit>
+:number-of-burrow-entrances-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2737,17 +2739,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb978 ;
+    urnp:examples _:cb4d1b4b90d2fd6b810f2437f82974982a6ba030c01273a3316b9e4f1c36aba6bf4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-burrow-entrances:used-procedure>
+:number-of-burrow-entrances-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -2771,17 +2773,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb978 ;
+    urnp:examples _:cb4d1b4b90d2fd6b810f2437f82974982a6ba030c01273a3316b9e4f1c36aba6bf4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-burrow-entrances:value-range>
+:number-of-burrow-entrances-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ have a positive value." ;
@@ -2802,17 +2804,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb978 ;
+    urnp:examples _:cb4d1b4b90d2fd6b810f2437f82974982a6ba030c01273a3316b9e4f1c36aba6bf4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-burrow-entrances:value-type>
+:number-of-burrow-entrances-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -2833,17 +2835,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb978 ;
+    urnp:examples _:cb4d1b4b90d2fd6b810f2437f82974982a6ba030c01273a3316b9e4f1c36aba6bf4 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-den-entrances:feature-type>
+:number-of-den-entrances-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -2864,17 +2866,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb985 ;
+    urnp:examples _:cb4a50223c8dd146e5d40d060df058a18892e50d7bf3a7aec80ce68fafb169bb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-den-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-den-entrances:simple-result>
+:number-of-den-entrances-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2898,17 +2900,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb985 ;
+    urnp:examples _:cb4a50223c8dd146e5d40d060df058a18892e50d7bf3a7aec80ce68fafb169bb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-den-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-den-entrances:site-visit>
+:number-of-den-entrances-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2930,17 +2932,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb985 ;
+    urnp:examples _:cb4a50223c8dd146e5d40d060df058a18892e50d7bf3a7aec80ce68fafb169bb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-den-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-den-entrances:used-procedure>
+:number-of-den-entrances-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -2964,17 +2966,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb985 ;
+    urnp:examples _:cb4a50223c8dd146e5d40d060df058a18892e50d7bf3a7aec80ce68fafb169bb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-den-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-den-entrances:value-range>
+:number-of-den-entrances-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ have a positive value." ;
@@ -2995,17 +2997,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb985 ;
+    urnp:examples _:cb4a50223c8dd146e5d40d060df058a18892e50d7bf3a7aec80ce68fafb169bb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-den-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-den-entrances:value-type>
+:number-of-den-entrances-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -3026,17 +3028,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb985 ;
+    urnp:examples _:cb4a50223c8dd146e5d40d060df058a18892e50d7bf3a7aec80ce68fafb169bb162 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-den-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-warren-entrances:feature-type>
+:number-of-warren-entrances-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -3057,17 +3059,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb992 ;
+    urnp:examples _:cb4ceb1974911704a707149c5b2305b149e315673e72325801ac2fabb7ed8f07521 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-warren-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-warren-entrances:simple-result>
+:number-of-warren-entrances-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3091,17 +3093,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb992 ;
+    urnp:examples _:cb4ceb1974911704a707149c5b2305b149e315673e72325801ac2fabb7ed8f07521 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-warren-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-warren-entrances:site-visit>
+:number-of-warren-entrances-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3123,17 +3125,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb992 ;
+    urnp:examples _:cb4ceb1974911704a707149c5b2305b149e315673e72325801ac2fabb7ed8f07521 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-warren-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-warren-entrances:used-procedure>
+:number-of-warren-entrances-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -3157,17 +3159,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb992 ;
+    urnp:examples _:cb4ceb1974911704a707149c5b2305b149e315673e72325801ac2fabb7ed8f07521 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-warren-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-warren-entrances:value-range>
+:number-of-warren-entrances-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ have a positive value." ;
@@ -3188,17 +3190,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb992 ;
+    urnp:examples _:cb4ceb1974911704a707149c5b2305b149e315673e72325801ac2fabb7ed8f07521 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-warren-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:number-of-warren-entrances:value-type>
+:number-of-warren-entrances-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -3219,17 +3221,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb992 ;
+    urnp:examples _:cb4ceb1974911704a707149c5b2305b149e315673e72325801ac2fabb7ed8f07521 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-warren-entrances/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-duration:feature-type>
+:rainfall-duration-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -3250,18 +3252,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb999 ;
+    urnp:examples _:cb4896b1c74e109165126b82180f2dc2d89421be63fde35b99430661ff784aa08c2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-duration:result-value>
+:rainfall-duration-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Precipitation duration types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/08eed747-4ef0-5546-b032-93705178b1fd>
@@ -3288,7 +3290,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb999 ;
+    urnp:examples _:cb4896b1c74e109165126b82180f2dc2d89421be63fde35b99430661ff784aa08c2 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -3301,13 +3303,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-duration:simple-result>
+:rainfall-duration-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3331,17 +3333,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb999 ;
+    urnp:examples _:cb4896b1c74e109165126b82180f2dc2d89421be63fde35b99430661ff784aa08c2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-duration:site-visit>
+:rainfall-duration-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3363,17 +3365,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb999 ;
+    urnp:examples _:cb4896b1c74e109165126b82180f2dc2d89421be63fde35b99430661ff784aa08c2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-duration:used-procedure>
+:rainfall-duration-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -3397,17 +3399,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb999 ;
+    urnp:examples _:cb4896b1c74e109165126b82180f2dc2d89421be63fde35b99430661ff784aa08c2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-duration:value-type>
+:rainfall-duration-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -3428,17 +3430,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb999 ;
+    urnp:examples _:cb4896b1c74e109165126b82180f2dc2d89421be63fde35b99430661ff784aa08c2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-duration:vocabulary>
+:rainfall-duration-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>`.
 
         `<https://linked.data.gov.au/def/nrm/34789810-a3bc-4def-9ddb-d14ff4ba02ea>` is the IRI for "Precipitation duration types".""" ;
@@ -3460,17 +3462,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb999 ;
+    urnp:examples _:cb4896b1c74e109165126b82180f2dc2d89421be63fde35b99430661ff784aa08c2 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-duration/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-type:feature-type>
+:rainfall-type-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -3491,18 +3493,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1013 ;
+    urnp:examples _:cb42bf83fc6a928f9f9817b8afa39e1c46559a873f51cc0f6802d5f33ac000ee74a ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-type:result-value>
+:rainfall-type-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Precipitation types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/507fab84-10d1-5153-ab14-9f6a28ce9cbc>
@@ -3531,7 +3533,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1013 ;
+    urnp:examples _:cb42bf83fc6a928f9f9817b8afa39e1c46559a873f51cc0f6802d5f33ac000ee74a ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -3544,13 +3546,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-type:simple-result>
+:rainfall-type-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3574,17 +3576,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1013 ;
+    urnp:examples _:cb42bf83fc6a928f9f9817b8afa39e1c46559a873f51cc0f6802d5f33ac000ee74a ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-type:site-visit>
+:rainfall-type-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3606,17 +3608,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1013 ;
+    urnp:examples _:cb42bf83fc6a928f9f9817b8afa39e1c46559a873f51cc0f6802d5f33ac000ee74a ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-type:used-procedure>
+:rainfall-type-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -3640,17 +3642,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1013 ;
+    urnp:examples _:cb42bf83fc6a928f9f9817b8afa39e1c46559a873f51cc0f6802d5f33ac000ee74a ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-type:value-type>
+:rainfall-type-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -3671,17 +3673,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1013 ;
+    urnp:examples _:cb42bf83fc6a928f9f9817b8afa39e1c46559a873f51cc0f6802d5f33ac000ee74a ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:rainfall-type:vocabulary>
+:rainfall-type-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/36e4cff5-f238-45e3-85ec-bdd0973f09d7>`.
 
         `<https://linked.data.gov.au/def/nrm/36e4cff5-f238-45e3-85ec-bdd0973f09d7>` is the IRI for "Precipitation types".""" ;
@@ -3703,17 +3705,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1013 ;
+    urnp:examples _:cb42bf83fc6a928f9f9817b8afa39e1c46559a873f51cc0f6802d5f33ac000ee74a ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:warren-active-status:datatype>
+:warren-active-status-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:boolean ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
@@ -3733,17 +3735,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1029 ;
+    urnp:examples _:cb4ee6a47341a153934bd84f58f5b44299092912f84532f0af324c6d1cb40dd8b86 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/warren-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:warren-active-status:feature-type>
+:warren-active-status-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal evidence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/4507e510-bf25-467b-a97e-abd56776507a[`animal evidence`]." ;
@@ -3764,17 +3766,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1029 ;
+    urnp:examples _:cb4ee6a47341a153934bd84f58f5b44299092912f84532f0af324c6d1cb40dd8b86 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/warren-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:warren-active-status:simple-result>
+:warren-active-status-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -3798,17 +3800,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1029 ;
+    urnp:examples _:cb4ee6a47341a153934bd84f58f5b44299092912f84532f0af324c6d1cb40dd8b86 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/warren-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:warren-active-status:site-visit>
+:warren-active-status-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -3830,17 +3832,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1029 ;
+    urnp:examples _:cb4ee6a47341a153934bd84f58f5b44299092912f84532f0af324c6d1cb40dd8b86 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/warren-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:warren-active-status:used-procedure>
+:warren-active-status-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -3864,17 +3866,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1029 ;
+    urnp:examples _:cb4ee6a47341a153934bd84f58f5b44299092912f84532f0af324c6d1cb40dd8b86 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/warren-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:warren-active-status:value-type>
+:warren-active-status-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Boolean ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
     sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
@@ -3895,17 +3897,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1029 ;
+    urnp:examples _:cb4ee6a47341a153934bd84f58f5b44299092912f84532f0af324c6d1cb40dd8b86 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/warren-active-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:wind-description:feature-type>
+:wind-description-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _weather events_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/e196c39e-959f-4dd4-8816-d0a58b7cc630[`weather events`]." ;
@@ -3926,18 +3928,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1036 ;
+    urnp:examples _:cb5f4f4dc911eadd008ffb13c0c07282fedbbe3f089e957949436338922b781cc2b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:wind-description:result-value>
+:wind-description-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Wind description types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/786f0acf-ea07-5c51-a173-f456f541e28d>
@@ -3968,7 +3970,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1036 ;
+    urnp:examples _:cb5f4f4dc911eadd008ffb13c0c07282fedbbe3f089e957949436338922b781cc2b ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -3981,13 +3983,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:wind-description:simple-result>
+:wind-description-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -4011,17 +4013,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1036 ;
+    urnp:examples _:cb5f4f4dc911eadd008ffb13c0c07282fedbbe3f089e957949436338922b781cc2b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:wind-description:site-visit>
+:wind-description-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -4043,17 +4045,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1036 ;
+    urnp:examples _:cb5f4f4dc911eadd008ffb13c0c07282fedbbe3f089e957949436338922b781cc2b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:wind-description:used-procedure>
+:wind-description-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>`.
 
     `<https://linked.data.gov.au/def/nrm/4307974a-f0ea-4d84-abee-de2451eac329>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -4077,17 +4079,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1036 ;
+    urnp:examples _:cb5f4f4dc911eadd008ffb13c0c07282fedbbe3f089e957949436338922b781cc2b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:wind-description:value-type>
+:wind-description-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -4108,17 +4110,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1036 ;
+    urnp:examples _:cb5f4f4dc911eadd008ffb13c0c07282fedbbe3f089e957949436338922b781cc2b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes:wind-description:vocabulary>
+:wind-description-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/0fb03c4e-ad42-445a-a2c5-688d7d7effd8>`.
 
         `<https://linked.data.gov.au/def/nrm/0fb03c4e-ad42-445a-a2c5-688d7d7effd8>` is the IRI for "Wind description types".""" ;
@@ -4140,114 +4142,115 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nac38ceccd4174b699d5ed1a5f14b2fceb1036 ;
+    urnp:examples _:cb5f4f4dc911eadd008ffb13c0c07282fedbbe3f089e957949436338922b781cc2b ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes>
+sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
     schema:description "SHACL shapes in the urn:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes namespace." ;
     schema:name "EDES Sign Based Fauna Survey Within Plot Belt Transect Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb1029
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/warren-active-status/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/warren-active-status/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nac38ceccd4174b699d5ed1a5f14b2fceb823
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nac38ceccd4174b699d5ed1a5f14b2fceb862
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/burrow-active-status/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/burrow-active-status/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nac38ceccd4174b699d5ed1a5f14b2fceb882
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/den-active-status/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/den-active-status/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nac38ceccd4174b699d5ed1a5f14b2fceb919
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-comments/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-comments/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nac38ceccd4174b699d5ed1a5f14b2fceb926
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-presence/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-presence/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nac38ceccd4174b699d5ed1a5f14b2fceb933
+_:cb26ced563b939e44f840e54ffcc6dbf2d2cebf539077eee8593b0119b37d4749d6
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type-count/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type-count/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb978
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/valid.ttl"^^xsd:anyURI ;
+_:cb39551364c866fd12926846d43787938800d0bf4ea926c8beff4c6973f9f34bcfd
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/air-temperature/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb985
+_:cb3e41aefeef317df4cb6c9ec85f31250010643df0608f9ff4e31ff4acabbcc6c3d
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-comments/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-comments/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb46b8fec764fa4b40ace31db42734c76494f89814516c2500965d1c4eca10c9f40
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/burrow-active-status/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/burrow-active-status/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4a1a3198c21cd1e54a4a6a11acb571d7ab0995cc04141fc30cd88e842f3ee21ee
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-presence/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-presence/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4a50223c8dd146e5d40d060df058a18892e50d7bf3a7aec80ce68fafb169bb162
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-den-entrances/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-den-entrances/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb992
+_:cb4ceb1974911704a707149c5b2305b149e315673e72325801ac2fabb7ed8f07521
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-warren-entrances/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-warren-entrances/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb1013
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/valid.ttl"^^xsd:anyURI ;
+_:cb4d1b4b90d2fd6b810f2437f82974982a6ba030c01273a3316b9e4f1c36aba6bf4
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/number-of-burrow-entrances/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb1036
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/valid.ttl"^^xsd:anyURI ;
+_:cb4ee6a47341a153934bd84f58f5b44299092912f84532f0af324c6d1cb40dd8b86
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/warren-active-status/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/warren-active-status/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb830
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/valid.ttl"^^xsd:anyURI ;
+_:cb4f416aca8138726b1229f78d08aa9d343d7a8e26405afdd4d3334f3ca3fadfee4
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/den-active-status/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/den-active-status/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb869
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nac38ceccd4174b699d5ed1a5f14b2fceb889
+_:cb3258e6fda73ac7252f2a20742b63e0955c77fb8aea810afeba8d75c63b1a267a3
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-growth-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-growth-class/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb908
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nac38ceccd4174b699d5ed1a5f14b2fceb940
+_:cb3b4d51bb08c6ea1a13a93452da547993ae562a788fb2442803a0733da1fa926d0
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-type/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb966
+_:cb3f45c6178f267691b0f01a97e220e56bdb1be02e1c9443708a8945a63a618e226
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/cloud-cover/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb42bf83fc6a928f9f9817b8afa39e1c46559a873f51cc0f6802d5f33ac000ee74a
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-type/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb436f2b044aaebba5420442597a4358f697e8de2f886de31bcf1ee9c0586de1980
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/moon-phase/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/moon-phase/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nac38ceccd4174b699d5ed1a5f14b2fceb999
+_:cb47bfe919e12fdeec1bafb0d873be7092bff141ebfaafb14e929d54794556f2257
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb486dbd471c6fb8331c186e02fdd0c360f4411725066da66b5361f1c69e2949ed5
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/fauna-sign-age/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4896b1c74e109165126b82180f2dc2d89421be63fde35b99430661ff784aa08c2
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-duration/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/rainfall-duration/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb5f4f4dc911eadd008ffb13c0c07282fedbbe3f089e957949436338922b781cc2b
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/sign-based-fauna/within-plot-belt-transect-protocol-shapes/wind-description/valid.ttl"^^xsd:anyURI ;
 .

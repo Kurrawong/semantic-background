@@ -1,9 +1,11 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/soil-soil-bulk-density-protocol-shapes/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/soil-soil-bulk-density-protocol-shapes>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -12,13 +14,13 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:fine-earth-bulk-density:feature-type>
+:fine-earth-bulk-density-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _soil sample_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116[`soil sample`]." ;
@@ -39,17 +41,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb23 ;
+    urnp:examples _:cb40a69a43efb1a38f6fa53586ed4053c1f188c6419234b2f3b3d9ed6ffb69a1d06 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:fine-earth-bulk-density:site-visit>
+:fine-earth-bulk-density-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Soil Bulk Density Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -71,17 +73,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb23 ;
+    urnp:examples _:cb40a69a43efb1a38f6fa53586ed4053c1f188c6419234b2f3b3d9ed6ffb69a1d06 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:fine-earth-bulk-density:unit-of-measure>
+:fine-earth-bulk-density-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:GM-PER-CentiM3`." ;
     sh:hasValue unit:GM-PER-CentiM3 ;
     sh:message "The result _MUST_ have `unit:GM-PER-CentiM3` as the value for `tern:unit`." ;
@@ -101,17 +103,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb23 ;
+    urnp:examples _:cb40a69a43efb1a38f6fa53586ed4053c1f188c6419234b2f3b3d9ed6ffb69a1d06 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:fine-earth-bulk-density:used-procedure>
+:fine-earth-bulk-density-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436>`.
 
     `<https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436>` is the IRI for "Soil Bulk Density Protocol".""" ;
@@ -135,17 +137,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb23 ;
+    urnp:examples _:cb40a69a43efb1a38f6fa53586ed4053c1f188c6419234b2f3b3d9ed6ffb69a1d06 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:fine-earth-bulk-density:value-range>
+:fine-earth-bulk-density-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 1 and 2 inclusive." ;
     sh:maxInclusive 2 ;
@@ -167,17 +169,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb23 ;
+    urnp:examples _:cb40a69a43efb1a38f6fa53586ed4053c1f188c6419234b2f3b3d9ed6ffb69a1d06 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:fine-earth-bulk-density:value-type>
+:fine-earth-bulk-density-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -198,17 +200,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb23 ;
+    urnp:examples _:cb40a69a43efb1a38f6fa53586ed4053c1f188c6419234b2f3b3d9ed6ffb69a1d06 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:gross-bulk-density:feature-type>
+:gross-bulk-density-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _soil sample_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116[`soil sample`]." ;
@@ -229,17 +231,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb30 ;
+    urnp:examples _:cb310312fc32d1b7612ad1ebb919acd5a6fd4634a1e656b7de0d553fdeb9056ed40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:gross-bulk-density:site-visit>
+:gross-bulk-density-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Soil Bulk Density Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -261,17 +263,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb30 ;
+    urnp:examples _:cb310312fc32d1b7612ad1ebb919acd5a6fd4634a1e656b7de0d553fdeb9056ed40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:gross-bulk-density:unit-of-measure>
+:gross-bulk-density-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:GM-PER-CentiM3`." ;
     sh:hasValue unit:GM-PER-CentiM3 ;
     sh:message "The result _MUST_ have `unit:GM-PER-CentiM3` as the value for `tern:unit`." ;
@@ -291,17 +293,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb30 ;
+    urnp:examples _:cb310312fc32d1b7612ad1ebb919acd5a6fd4634a1e656b7de0d553fdeb9056ed40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:gross-bulk-density:used-procedure>
+:gross-bulk-density-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436>`.
 
     `<https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436>` is the IRI for "Soil Bulk Density Protocol".""" ;
@@ -325,17 +327,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb30 ;
+    urnp:examples _:cb310312fc32d1b7612ad1ebb919acd5a6fd4634a1e656b7de0d553fdeb9056ed40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:gross-bulk-density:value-range>
+:gross-bulk-density-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 1 and 2 inclusive." ;
     sh:maxInclusive 2 ;
@@ -357,17 +359,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb30 ;
+    urnp:examples _:cb310312fc32d1b7612ad1ebb919acd5a6fd4634a1e656b7de0d553fdeb9056ed40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:gross-bulk-density:value-type>
+:gross-bulk-density-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -388,17 +390,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb30 ;
+    urnp:examples _:cb310312fc32d1b7612ad1ebb919acd5a6fd4634a1e656b7de0d553fdeb9056ed40 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:soil-bulk-density:feature-type>
+:soil-bulk-density-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _soil sample_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/06461021-a6c2-4175-9651-23653c2b9116[`soil sample`]." ;
@@ -419,17 +421,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb37 ;
+    urnp:examples _:cb289b3d09a7c5cc96e38d3a49598703b35f9f3986bf9c96f45543f744e11bd92e9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:soil-bulk-density:site-visit>
+:soil-bulk-density-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Soil Bulk Density Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -451,17 +453,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb37 ;
+    urnp:examples _:cb289b3d09a7c5cc96e38d3a49598703b35f9f3986bf9c96f45543f744e11bd92e9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:soil-bulk-density:unit-of-measure>
+:soil-bulk-density-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:GM-PER-CentiM3`." ;
     sh:hasValue unit:GM-PER-CentiM3 ;
     sh:message "The result _MUST_ have `unit:GM-PER-CentiM3` as the value for `tern:unit`." ;
@@ -481,17 +483,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb37 ;
+    urnp:examples _:cb289b3d09a7c5cc96e38d3a49598703b35f9f3986bf9c96f45543f744e11bd92e9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:soil-bulk-density:used-procedure>
+:soil-bulk-density-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436>`.
 
     `<https://linked.data.gov.au/def/nrm/d9e6739a-c2dd-4619-be43-1251449a6436>` is the IRI for "Soil Bulk Density Protocol".""" ;
@@ -515,17 +517,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb37 ;
+    urnp:examples _:cb289b3d09a7c5cc96e38d3a49598703b35f9f3986bf9c96f45543f744e11bd92e9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:soil-bulk-density:value-range>
+:soil-bulk-density-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 1 and 2 inclusive." ;
     sh:maxInclusive 2 ;
@@ -547,17 +549,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb37 ;
+    urnp:examples _:cb289b3d09a7c5cc96e38d3a49598703b35f9f3986bf9c96f45543f744e11bd92e9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes:soil-bulk-density:value-type>
+:soil-bulk-density-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -578,34 +580,35 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:nbde804572c634929a79531f3a623548bb37 ;
+    urnp:examples _:cb289b3d09a7c5cc96e38d3a49598703b35f9f3986bf9c96f45543f744e11bd92e9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:soil-soil-bulk-density-protocol-shapes>
+sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
     schema:description "SHACL shapes in the urn:shapes:soil-soil-bulk-density-protocol-shapes namespace." ;
     schema:name "EDES Soil Soil Bulk Density Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
 .
 
-_:nbde804572c634929a79531f3a623548bb23
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/valid.ttl"^^xsd:anyURI ;
+_:cb289b3d09a7c5cc96e38d3a49598703b35f9f3986bf9c96f45543f744e11bd92e9
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbde804572c634929a79531f3a623548bb30
+_:cb310312fc32d1b7612ad1ebb919acd5a6fd4634a1e656b7de0d553fdeb9056ed40
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/gross-bulk-density/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nbde804572c634929a79531f3a623548bb37
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/soil-bulk-density/valid.ttl"^^xsd:anyURI ;
+_:cb40a69a43efb1a38f6fa53586ed4053c1f188c6419234b2f3b3d9ed6ffb69a1d06
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/soils/soil-soil-bulk-density-protocol-shapes/fine-earth-bulk-density/valid.ttl"^^xsd:anyURI ;
 .

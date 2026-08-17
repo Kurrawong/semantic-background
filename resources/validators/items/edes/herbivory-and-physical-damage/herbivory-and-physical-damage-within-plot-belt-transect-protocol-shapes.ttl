@@ -1,9 +1,11 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -12,13 +14,13 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:additional-damage-type:datatype>
+:additional-damage-type-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -38,17 +40,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb383 ;
+    urnp:examples _:cb49ee72d8ff98745df5f126e884f33d9b26db5f4a56fc219c5d87213685153c987 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:additional-damage-type:feature-type>
+:additional-damage-type-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45[`vegetation disturbance`]." ;
@@ -69,17 +71,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb383 ;
+    urnp:examples _:cb49ee72d8ff98745df5f126e884f33d9b26db5f4a56fc219c5d87213685153c987 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:additional-damage-type:simple-result>
+:additional-damage-type-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -103,17 +105,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb383 ;
+    urnp:examples _:cb49ee72d8ff98745df5f126e884f33d9b26db5f4a56fc219c5d87213685153c987 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:additional-damage-type:site-visit>
+:additional-damage-type-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -135,17 +137,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb383 ;
+    urnp:examples _:cb49ee72d8ff98745df5f126e884f33d9b26db5f4a56fc219c5d87213685153c987 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:additional-damage-type:used-procedure>
+:additional-damage-type-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -169,17 +171,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb383 ;
+    urnp:examples _:cb49ee72d8ff98745df5f126e884f33d9b26db5f4a56fc219c5d87213685153c987 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:additional-damage-type:value-type>
+:additional-damage-type-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -200,17 +202,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb383 ;
+    urnp:examples _:cb49ee72d8ff98745df5f126e884f33d9b26db5f4a56fc219c5d87213685153c987 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:feature-type>
+:attributable-fauna-species-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _animal occurrence_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2361dea8-598c-4b6f-a641-2b98ff199e9e[`animal occurrence`]." ;
@@ -231,18 +233,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb390 ;
+    urnp:examples _:cb4e81cb8dde43badb816815fcff1c09ffdc7abf282c7b95fdb5f3aa89d5cda30cd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:result-value>
+:attributable-fauna-species-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the target species types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/3a86540a-7f40-578a-8431-6bcacb0194d7>
@@ -284,7 +286,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             ?this a tern:IRI .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb390 ;
+    urnp:examples _:cb4e81cb8dde43badb816815fcff1c09ffdc7abf282c7b95fdb5f3aa89d5cda30cd ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -297,13 +299,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:simple-result>
+:attributable-fauna-species-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -327,17 +329,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb390 ;
+    urnp:examples _:cb4e81cb8dde43badb816815fcff1c09ffdc7abf282c7b95fdb5f3aa89d5cda30cd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:site-visit>
+:attributable-fauna-species-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -359,17 +361,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb390 ;
+    urnp:examples _:cb4e81cb8dde43badb816815fcff1c09ffdc7abf282c7b95fdb5f3aa89d5cda30cd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:used-procedure>
+:attributable-fauna-species-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -393,17 +395,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb390 ;
+    urnp:examples _:cb4e81cb8dde43badb816815fcff1c09ffdc7abf282c7b95fdb5f3aa89d5cda30cd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:value-type>
+:attributable-fauna-species-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI` or `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI` or `tern:Text`." ;
     sh:name "Value type" ;
@@ -433,17 +435,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb390 ;
+    urnp:examples _:cb4e81cb8dde43badb816815fcff1c09ffdc7abf282c7b95fdb5f3aa89d5cda30cd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:attributable-fauna-species:vocabulary>
+:attributable-fauna-species-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>`.
 
         `<https://linked.data.gov.au/def/nrm/ff157253-6923-5816-ac05-312dc32cd903>` is the IRI for "target species types".""" ;
@@ -465,17 +467,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb390 ;
+    urnp:examples _:cb4e81cb8dde43badb816815fcff1c09ffdc7abf282c7b95fdb5f3aa89d5cda30cd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:field-species-name:datatype>
+:field-species-name-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -495,17 +497,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb422 ;
+    urnp:examples _:cb45994f58bdfbf358acd9865eaba2e5860553d7ac6d8ce6e68c1341e460458a265 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:field-species-name:feature-type>
+:field-species-name-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45[`vegetation disturbance`]." ;
@@ -526,17 +528,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb422 ;
+    urnp:examples _:cb45994f58bdfbf358acd9865eaba2e5860553d7ac6d8ce6e68c1341e460458a265 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:field-species-name:simple-result>
+:field-species-name-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -560,17 +562,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb422 ;
+    urnp:examples _:cb45994f58bdfbf358acd9865eaba2e5860553d7ac6d8ce6e68c1341e460458a265 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:field-species-name:site-visit>
+:field-species-name-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -592,17 +594,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb422 ;
+    urnp:examples _:cb45994f58bdfbf358acd9865eaba2e5860553d7ac6d8ce6e68c1341e460458a265 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:field-species-name:used-procedure>
+:field-species-name-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -626,17 +628,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb422 ;
+    urnp:examples _:cb45994f58bdfbf358acd9865eaba2e5860553d7ac6d8ce6e68c1341e460458a265 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:field-species-name:value-type>
+:field-species-name-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -657,17 +659,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb422 ;
+    urnp:examples _:cb45994f58bdfbf358acd9865eaba2e5860553d7ac6d8ce6e68c1341e460458a265 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:foliage-damage-extent:feature-type>
+:foliage-damage-extent-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45[`vegetation disturbance`]." ;
@@ -688,17 +690,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb429 ;
+    urnp:examples _:cb5a6c678353648966bb511e11289e2f378095f9a63edbad7c187a45578fcfb7c0f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:foliage-damage-extent:site-visit>
+:foliage-damage-extent-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -720,17 +722,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb429 ;
+    urnp:examples _:cb5a6c678353648966bb511e11289e2f378095f9a63edbad7c187a45578fcfb7c0f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:foliage-damage-extent:unit-of-measure>
+:foliage-damage-extent-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:PERCENT`." ;
     sh:hasValue unit:PERCENT ;
     sh:message "The result _MUST_ have `unit:PERCENT` as the value for `tern:unit`." ;
@@ -750,17 +752,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb429 ;
+    urnp:examples _:cb5a6c678353648966bb511e11289e2f378095f9a63edbad7c187a45578fcfb7c0f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:foliage-damage-extent:used-procedure>
+:foliage-damage-extent-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -784,17 +786,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb429 ;
+    urnp:examples _:cb5a6c678353648966bb511e11289e2f378095f9a63edbad7c187a45578fcfb7c0f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:foliage-damage-extent:value-range>
+:foliage-damage-extent-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value _MUST_ be between 0 and 100 inclusive." ;
     sh:maxInclusive 100 ;
     sh:message "The result _MUST_ have a value between 0 and 100 inclusively." ;
@@ -815,17 +817,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb429 ;
+    urnp:examples _:cb5a6c678353648966bb511e11289e2f378095f9a63edbad7c187a45578fcfb7c0f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:foliage-damage-extent:value-type>
+:foliage-damage-extent-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -846,17 +848,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb429 ;
+    urnp:examples _:cb5a6c678353648966bb511e11289e2f378095f9a63edbad7c187a45578fcfb7c0f ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:grazing-severity-class:feature-type>
+:grazing-severity-class-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45[`vegetation disturbance`]." ;
@@ -877,18 +879,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb436 ;
+    urnp:examples _:cb4061870644e0945b0c8348a1fb130af8eade045c1396583dcac3c6157335c1e47 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:grazing-severity-class:result-value>
+:grazing-severity-class-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Grazing severity types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/33273222-b7c2-5505-93c1-480e186e6651>
@@ -912,7 +914,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb436 ;
+    urnp:examples _:cb4061870644e0945b0c8348a1fb130af8eade045c1396583dcac3c6157335c1e47 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -925,13 +927,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:grazing-severity-class:simple-result>
+:grazing-severity-class-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -955,17 +957,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb436 ;
+    urnp:examples _:cb4061870644e0945b0c8348a1fb130af8eade045c1396583dcac3c6157335c1e47 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:grazing-severity-class:site-visit>
+:grazing-severity-class-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -987,17 +989,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb436 ;
+    urnp:examples _:cb4061870644e0945b0c8348a1fb130af8eade045c1396583dcac3c6157335c1e47 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:grazing-severity-class:used-procedure>
+:grazing-severity-class-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -1021,17 +1023,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb436 ;
+    urnp:examples _:cb4061870644e0945b0c8348a1fb130af8eade045c1396583dcac3c6157335c1e47 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:grazing-severity-class:value-type>
+:grazing-severity-class-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1052,17 +1054,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb436 ;
+    urnp:examples _:cb4061870644e0945b0c8348a1fb130af8eade045c1396583dcac3c6157335c1e47 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:grazing-severity-class:vocabulary>
+:grazing-severity-class-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/cb9ba2d1-3a37-5f68-b6d8-7deefb307835>`.
 
         `<https://linked.data.gov.au/def/nrm/cb9ba2d1-3a37-5f68-b6d8-7deefb307835>` is the IRI for "Grazing severity types".""" ;
@@ -1084,17 +1086,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb436 ;
+    urnp:examples _:cb4061870644e0945b0c8348a1fb130af8eade045c1396583dcac3c6157335c1e47 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/grazing-severity-class/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:growth-form:feature-type>
+:growth-form-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45[`vegetation disturbance`]." ;
@@ -1115,18 +1117,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb447 ;
+    urnp:examples _:cb649679ac78f0ea311a08bea7b5d39549effef3b9b5c80233b3e77a69175b212bd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:growth-form:result-value>
+:growth-form-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Growth forms controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/9b841f72-4903-5d65-818f-d386a6eca15f>
@@ -1175,7 +1177,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb447 ;
+    urnp:examples _:cb649679ac78f0ea311a08bea7b5d39549effef3b9b5c80233b3e77a69175b212bd ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1188,13 +1190,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:growth-form:simple-result>
+:growth-form-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1218,17 +1220,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb447 ;
+    urnp:examples _:cb649679ac78f0ea311a08bea7b5d39549effef3b9b5c80233b3e77a69175b212bd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:growth-form:site-visit>
+:growth-form-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1250,17 +1252,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb447 ;
+    urnp:examples _:cb649679ac78f0ea311a08bea7b5d39549effef3b9b5c80233b3e77a69175b212bd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:growth-form:used-procedure>
+:growth-form-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -1284,17 +1286,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb447 ;
+    urnp:examples _:cb649679ac78f0ea311a08bea7b5d39549effef3b9b5c80233b3e77a69175b212bd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:growth-form:value-type>
+:growth-form-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1315,17 +1317,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb447 ;
+    urnp:examples _:cb649679ac78f0ea311a08bea7b5d39549effef3b9b5c80233b3e77a69175b212bd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:growth-form:vocabulary>
+:growth-form-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>`.
 
         `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>` is the IRI for "Growth forms".""" ;
@@ -1347,17 +1349,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb447 ;
+    urnp:examples _:cb649679ac78f0ea311a08bea7b5d39549effef3b9b5c80233b3e77a69175b212bd ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:herbivory-damage-type:feature-type>
+:herbivory-damage-type-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45[`vegetation disturbance`]." ;
@@ -1378,18 +1380,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb483 ;
+    urnp:examples _:cb4c05bfca874b1991e018bc545a7b7e65468064b565abdf24a896bbc8853da854d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:herbivory-damage-type:result-value>
+:herbivory-damage-type-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Herbivory damage types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/a96d7507-e823-5f3a-a26b-62313538e0bb>
@@ -1415,7 +1417,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb483 ;
+    urnp:examples _:cb4c05bfca874b1991e018bc545a7b7e65468064b565abdf24a896bbc8853da854d ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1428,13 +1430,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:herbivory-damage-type:simple-result>
+:herbivory-damage-type-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1458,17 +1460,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb483 ;
+    urnp:examples _:cb4c05bfca874b1991e018bc545a7b7e65468064b565abdf24a896bbc8853da854d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:herbivory-damage-type:site-visit>
+:herbivory-damage-type-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1490,17 +1492,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb483 ;
+    urnp:examples _:cb4c05bfca874b1991e018bc545a7b7e65468064b565abdf24a896bbc8853da854d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:herbivory-damage-type:used-procedure>
+:herbivory-damage-type-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -1524,17 +1526,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb483 ;
+    urnp:examples _:cb4c05bfca874b1991e018bc545a7b7e65468064b565abdf24a896bbc8853da854d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:herbivory-damage-type:value-type>
+:herbivory-damage-type-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1555,17 +1557,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb483 ;
+    urnp:examples _:cb4c05bfca874b1991e018bc545a7b7e65468064b565abdf24a896bbc8853da854d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:herbivory-damage-type:vocabulary>
+:herbivory-damage-type-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/eb8f8696-f7ec-5793-8f7a-7331195762db>`.
 
         `<https://linked.data.gov.au/def/nrm/eb8f8696-f7ec-5793-8f7a-7331195762db>` is the IRI for "Herbivory damage types".""" ;
@@ -1587,17 +1589,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb483 ;
+    urnp:examples _:cb4c05bfca874b1991e018bc545a7b7e65468064b565abdf24a896bbc8853da854d ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/herbivory-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:highest-damage-height:feature-type>
+:highest-damage-height-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45[`vegetation disturbance`]." ;
@@ -1618,17 +1620,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb496 ;
+    urnp:examples _:cb3ce23af9aa5af18313521b73c4ac9f4d72aae4567877bf4510c5837acf433ea9c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:highest-damage-height:site-visit>
+:highest-damage-height-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1650,17 +1652,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb496 ;
+    urnp:examples _:cb3ce23af9aa5af18313521b73c4ac9f4d72aae4567877bf4510c5837acf433ea9c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:highest-damage-height:unit-of-measure>
+:highest-damage-height-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:CentiM`." ;
     sh:hasValue unit:CentiM ;
     sh:message "The result _MUST_ have `unit:CentiM` as the value for `tern:unit`." ;
@@ -1680,17 +1682,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb496 ;
+    urnp:examples _:cb3ce23af9aa5af18313521b73c4ac9f4d72aae4567877bf4510c5837acf433ea9c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:highest-damage-height:used-procedure>
+:highest-damage-height-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -1714,17 +1716,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb496 ;
+    urnp:examples _:cb3ce23af9aa5af18313521b73c4ac9f4d72aae4567877bf4510c5837acf433ea9c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:highest-damage-height:value-range>
+:highest-damage-height-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 exclusive and 10000 inclusive. Datatype should be `xsd:float`." ;
     sh:maxInclusive 10000 ;
@@ -1746,17 +1748,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb496 ;
+    urnp:examples _:cb3ce23af9aa5af18313521b73c4ac9f4d72aae4567877bf4510c5837acf433ea9c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:highest-damage-height:value-type>
+:highest-damage-height-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -1777,17 +1779,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb496 ;
+    urnp:examples _:cb3ce23af9aa5af18313521b73c4ac9f4d72aae4567877bf4510c5837acf433ea9c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:life-stage:feature-type>
+:life-stage-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45[`vegetation disturbance`]." ;
@@ -1808,18 +1810,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb503 ;
+    urnp:examples _:cb4f9d5fb85fd076cf0338856bb884cf63257d17518e5df38f5010e1a8e9c3bb81e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:life-stage:result-value>
+:life-stage-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Life stages controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/019f50b1-80ee-537c-97bf-3d1825826a8c>
@@ -1850,7 +1852,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb503 ;
+    urnp:examples _:cb4f9d5fb85fd076cf0338856bb884cf63257d17518e5df38f5010e1a8e9c3bb81e ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1863,13 +1865,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:life-stage:simple-result>
+:life-stage-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1893,17 +1895,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb503 ;
+    urnp:examples _:cb4f9d5fb85fd076cf0338856bb884cf63257d17518e5df38f5010e1a8e9c3bb81e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:life-stage:site-visit>
+:life-stage-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1925,17 +1927,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb503 ;
+    urnp:examples _:cb4f9d5fb85fd076cf0338856bb884cf63257d17518e5df38f5010e1a8e9c3bb81e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:life-stage:used-procedure>
+:life-stage-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -1959,17 +1961,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb503 ;
+    urnp:examples _:cb4f9d5fb85fd076cf0338856bb884cf63257d17518e5df38f5010e1a8e9c3bb81e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:life-stage:value-type>
+:life-stage-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1990,17 +1992,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb503 ;
+    urnp:examples _:cb4f9d5fb85fd076cf0338856bb884cf63257d17518e5df38f5010e1a8e9c3bb81e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:life-stage:vocabulary>
+:life-stage-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>`.
 
         `<https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>` is the IRI for "Life stages".""" ;
@@ -2022,17 +2024,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb503 ;
+    urnp:examples _:cb4f9d5fb85fd076cf0338856bb884cf63257d17518e5df38f5010e1a8e9c3bb81e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:lowest-damage-height:feature-type>
+:lowest-damage-height-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/d4fc54b1-0ad3-4512-86b7-d42b121ece45[`vegetation disturbance`]." ;
@@ -2053,17 +2055,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb521 ;
+    urnp:examples _:cb48d0488cd1fa0e5a5f5e64e9835a7d448838abe0e36456ae6dae8558279fdbd07 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:lowest-damage-height:site-visit>
+:lowest-damage-height-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2085,17 +2087,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb521 ;
+    urnp:examples _:cb48d0488cd1fa0e5a5f5e64e9835a7d448838abe0e36456ae6dae8558279fdbd07 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:lowest-damage-height:unit-of-measure>
+:lowest-damage-height-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:CentiM`." ;
     sh:hasValue unit:CentiM ;
     sh:message "The result _MUST_ have `unit:CentiM` as the value for `tern:unit`." ;
@@ -2115,17 +2117,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb521 ;
+    urnp:examples _:cb48d0488cd1fa0e5a5f5e64e9835a7d448838abe0e36456ae6dae8558279fdbd07 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:lowest-damage-height:used-procedure>
+:lowest-damage-height-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -2149,17 +2151,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb521 ;
+    urnp:examples _:cb48d0488cd1fa0e5a5f5e64e9835a7d448838abe0e36456ae6dae8558279fdbd07 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:lowest-damage-height:value-range>
+:lowest-damage-height-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 and 10000 inclusive. Datatype should be `xsd:float`." ;
     sh:maxInclusive 10000 ;
@@ -2181,17 +2183,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb521 ;
+    urnp:examples _:cb48d0488cd1fa0e5a5f5e64e9835a7d448838abe0e36456ae6dae8558279fdbd07 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:lowest-damage-height:value-type>
+:lowest-damage-height-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -2212,17 +2214,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb521 ;
+    urnp:examples _:cb48d0488cd1fa0e5a5f5e64e9835a7d448838abe0e36456ae6dae8558279fdbd07 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:percent-of-quadrat-affected:feature-type>
+:percent-of-quadrat-affected-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d[`land surface disturbance`]." ;
@@ -2243,17 +2245,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb528 ;
+    urnp:examples _:cb471c8840678e4c110610747390cf802bf3de407fb0351f9b956be8db9af9e3af0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:percent-of-quadrat-affected:site-visit>
+:percent-of-quadrat-affected-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2275,17 +2277,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb528 ;
+    urnp:examples _:cb471c8840678e4c110610747390cf802bf3de407fb0351f9b956be8db9af9e3af0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:percent-of-quadrat-affected:unit-of-measure>
+:percent-of-quadrat-affected-unit-of-measure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:PERCENT`." ;
     sh:hasValue unit:PERCENT ;
     sh:message "The result _MUST_ have `unit:PERCENT` as the value for `tern:unit`." ;
@@ -2305,17 +2307,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb528 ;
+    urnp:examples _:cb471c8840678e4c110610747390cf802bf3de407fb0351f9b956be8db9af9e3af0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:percent-of-quadrat-affected:used-procedure>
+:percent-of-quadrat-affected-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -2339,17 +2341,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb528 ;
+    urnp:examples _:cb471c8840678e4c110610747390cf802bf3de407fb0351f9b956be8db9af9e3af0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:percent-of-quadrat-affected:value-range>
+:percent-of-quadrat-affected-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 and 100 inclusive. Datatype should be `xsd:float`." ;
     sh:maxInclusive 100 ;
@@ -2371,17 +2373,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb528 ;
+    urnp:examples _:cb471c8840678e4c110610747390cf802bf3de407fb0351f9b956be8db9af9e3af0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:percent-of-quadrat-affected:value-type>
+:percent-of-quadrat-affected-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Float ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -2402,17 +2404,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb528 ;
+    urnp:examples _:cb471c8840678e4c110610747390cf802bf3de407fb0351f9b956be8db9af9e3af0 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:physical-damage-type:feature-type>
+:physical-damage-type-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d[`land surface disturbance`]." ;
@@ -2433,18 +2435,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb535 ;
+    urnp:examples _:cb4ee0167bafca724649e15300f79169f65edd4ffcada3d8d80564d1c452f45290c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:physical-damage-type:result-value>
+:physical-damage-type-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Fauna physical damage types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/39dc3f99-65c7-5019-8dcb-62439b3b1cd9>
@@ -2478,7 +2480,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb535 ;
+    urnp:examples _:cb4ee0167bafca724649e15300f79169f65edd4ffcada3d8d80564d1c452f45290c ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2491,13 +2493,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:physical-damage-type:simple-result>
+:physical-damage-type-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2521,17 +2523,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb535 ;
+    urnp:examples _:cb4ee0167bafca724649e15300f79169f65edd4ffcada3d8d80564d1c452f45290c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:physical-damage-type:site-visit>
+:physical-damage-type-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Within-plot Belt Transect Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2553,17 +2555,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb535 ;
+    urnp:examples _:cb4ee0167bafca724649e15300f79169f65edd4ffcada3d8d80564d1c452f45290c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:physical-damage-type:used-procedure>
+:physical-damage-type-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>`.
 
     `<https://linked.data.gov.au/def/nrm/e0cb4c61-eaa4-4c57-b627-2061cc9311bd>` is the IRI for "Within-plot Belt Transect Protocol".""" ;
@@ -2587,17 +2589,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb535 ;
+    urnp:examples _:cb4ee0167bafca724649e15300f79169f65edd4ffcada3d8d80564d1c452f45290c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:physical-damage-type:value-type>
+:physical-damage-type-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2618,17 +2620,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb535 ;
+    urnp:examples _:cb4ee0167bafca724649e15300f79169f65edd4ffcada3d8d80564d1c452f45290c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes:physical-damage-type:vocabulary>
+:physical-damage-type-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/51fa78ee-187a-5788-9fe0-e68cc476ea91>`.
 
         `<https://linked.data.gov.au/def/nrm/51fa78ee-187a-5788-9fe0-e68cc476ea91>` is the IRI for "Fauna physical damage types".""" ;
@@ -2650,79 +2652,80 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n37268db5de4d493c8e3476384b40b30bb535 ;
+    urnp:examples _:cb4ee0167bafca724649e15300f79169f65edd4ffcada3d8d80564d1c452f45290c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes>
+sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
     schema:description "SHACL shapes in the urn:shapes:herbivory-and-physical-damage-within-plot-belt-transect-protocol-shapes namespace." ;
     schema:name "EDES Herbivory And Physical Damage Within Plot Belt Transect Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
 .
 
-_:n37268db5de4d493c8e3476384b40b30bb383
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n37268db5de4d493c8e3476384b40b30bb422
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n37268db5de4d493c8e3476384b40b30bb429
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n37268db5de4d493c8e3476384b40b30bb496
+_:cb3ce23af9aa5af18313521b73c4ac9f4d72aae4567877bf4510c5837acf433ea9c
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/highest-damage-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n37268db5de4d493c8e3476384b40b30bb521
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/valid.ttl"^^xsd:anyURI ;
+_:cb45994f58bdfbf358acd9865eaba2e5860553d7ac6d8ce6e68c1341e460458a265
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n37268db5de4d493c8e3476384b40b30bb528
+_:cb471c8840678e4c110610747390cf802bf3de407fb0351f9b956be8db9af9e3af0
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/percent-of-quadrat-affected/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n37268db5de4d493c8e3476384b40b30bb390
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/valid.ttl"^^xsd:anyURI ;
+_:cb48d0488cd1fa0e5a5f5e64e9835a7d448838abe0e36456ae6dae8558279fdbd07
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/lowest-damage-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n37268db5de4d493c8e3476384b40b30bb436
+_:cb49ee72d8ff98745df5f126e884f33d9b26db5f4a56fc219c5d87213685153c987
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/additional-damage-type/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb5a6c678353648966bb511e11289e2f378095f9a63edbad7c187a45578fcfb7c0f
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/foliage-damage-extent/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4061870644e0945b0c8348a1fb130af8eade045c1396583dcac3c6157335c1e47
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/grazing-severity-class/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/grazing-severity-class/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n37268db5de4d493c8e3476384b40b30bb447
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n37268db5de4d493c8e3476384b40b30bb483
+_:cb4c05bfca874b1991e018bc545a7b7e65468064b565abdf24a896bbc8853da854d
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/herbivory-damage-type/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/herbivory-damage-type/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n37268db5de4d493c8e3476384b40b30bb503
+_:cb4e81cb8dde43badb816815fcff1c09ffdc7abf282c7b95fdb5f3aa89d5cda30cd
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/attributable-fauna-species/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4ee0167bafca724649e15300f79169f65edd4ffcada3d8d80564d1c452f45290c
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4f9d5fb85fd076cf0338856bb884cf63257d17518e5df38f5010e1a8e9c3bb81e
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/life-stage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/life-stage/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n37268db5de4d493c8e3476384b40b30bb535
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/physical-damage-type/valid.ttl"^^xsd:anyURI ;
+_:cb649679ac78f0ea311a08bea7b5d39549effef3b9b5c80233b3e77a69175b212bd
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/herbivory-and-physical-damage/within-plot-belt-transect-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
 .

@@ -1,9 +1,11 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/floristics-standard-protocol-shapes/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/floristics-standard-protocol-shapes>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -11,13 +13,13 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:field-species-name:datatype>
+:field-species-name-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -37,17 +39,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab96 ;
+    urnp:examples _:cb3f867f02a1a5eb03765fab63e880d9db15a4cff479df45cef3c8735a0a5441de9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:field-species-name:feature-type>
+:field-species-name-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -68,17 +70,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab96 ;
+    urnp:examples _:cb3f867f02a1a5eb03765fab63e880d9db15a4cff479df45cef3c8735a0a5441de9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:field-species-name:simple-result>
+:field-species-name-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -102,17 +104,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab96 ;
+    urnp:examples _:cb3f867f02a1a5eb03765fab63e880d9db15a4cff479df45cef3c8735a0a5441de9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:field-species-name:site-visit>
+:field-species-name-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Floristics - Standard Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -134,17 +136,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab96 ;
+    urnp:examples _:cb3f867f02a1a5eb03765fab63e880d9db15a4cff479df45cef3c8735a0a5441de9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:field-species-name:used-procedure>
+:field-species-name-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>`.
 
     # `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>` is the IRI for "Floristics - Standard Protocol".""" ;
@@ -168,17 +170,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab96 ;
+    urnp:examples _:cb3f867f02a1a5eb03765fab63e880d9db15a4cff479df45cef3c8735a0a5441de9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:field-species-name:value-type>
+:field-species-name-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -199,17 +201,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab96 ;
+    urnp:examples _:cb3f867f02a1a5eb03765fab63e880d9db15a4cff479df45cef3c8735a0a5441de9 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:growth-form:feature-type>
+:growth-form-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -230,18 +232,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab103 ;
+    urnp:examples _:cb4b6ddc61a1f01d5700f845b3a2ab814ebbe6a31094c90a6dcb35923e44b33c334 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:growth-form:result-value>
+:growth-form-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Growth forms controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/9b841f72-4903-5d65-818f-d386a6eca15f>
@@ -290,7 +292,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab103 ;
+    urnp:examples _:cb4b6ddc61a1f01d5700f845b3a2ab814ebbe6a31094c90a6dcb35923e44b33c334 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -303,13 +305,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:growth-form:simple-result>
+:growth-form-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -333,17 +335,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab103 ;
+    urnp:examples _:cb4b6ddc61a1f01d5700f845b3a2ab814ebbe6a31094c90a6dcb35923e44b33c334 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:growth-form:site-visit>
+:growth-form-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Floristics - Standard Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -365,17 +367,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab103 ;
+    urnp:examples _:cb4b6ddc61a1f01d5700f845b3a2ab814ebbe6a31094c90a6dcb35923e44b33c334 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:growth-form:used-procedure>
+:growth-form-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>`.
 
     # `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>` is the IRI for "Floristics - Standard Protocol".""" ;
@@ -399,17 +401,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab103 ;
+    urnp:examples _:cb4b6ddc61a1f01d5700f845b3a2ab814ebbe6a31094c90a6dcb35923e44b33c334 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:growth-form:value-type>
+:growth-form-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -430,17 +432,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab103 ;
+    urnp:examples _:cb4b6ddc61a1f01d5700f845b3a2ab814ebbe6a31094c90a6dcb35923e44b33c334 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:growth-form:vocabulary>
+:growth-form-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>`.
 
         `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>` is the IRI for "Growth forms".""" ;
@@ -462,17 +464,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab103 ;
+    urnp:examples _:cb4b6ddc61a1f01d5700f845b3a2ab814ebbe6a31094c90a6dcb35923e44b33c334 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:host-species-name:datatype>
+:host-species-name-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -492,17 +494,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab139 ;
+    urnp:examples _:cb40097dba66b35e015dfa53730a2738f30f40abf9b8942579ca53220b34e85959c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/host-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:host-species-name:feature-type>
+:host-species-name-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -523,17 +525,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab139 ;
+    urnp:examples _:cb40097dba66b35e015dfa53730a2738f30f40abf9b8942579ca53220b34e85959c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/host-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:host-species-name:simple-result>
+:host-species-name-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -557,17 +559,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab139 ;
+    urnp:examples _:cb40097dba66b35e015dfa53730a2738f30f40abf9b8942579ca53220b34e85959c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/host-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:host-species-name:site-visit>
+:host-species-name-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Floristics - Standard Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -589,17 +591,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab139 ;
+    urnp:examples _:cb40097dba66b35e015dfa53730a2738f30f40abf9b8942579ca53220b34e85959c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/host-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:host-species-name:used-procedure>
+:host-species-name-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>`.
 
     # `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>` is the IRI for "Floristics - Standard Protocol".""" ;
@@ -623,17 +625,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab139 ;
+    urnp:examples _:cb40097dba66b35e015dfa53730a2738f30f40abf9b8942579ca53220b34e85959c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/host-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:host-species-name:value-type>
+:host-species-name-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -654,17 +656,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab139 ;
+    urnp:examples _:cb40097dba66b35e015dfa53730a2738f30f40abf9b8942579ca53220b34e85959c ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/host-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:phenological-stage:feature-type>
+:phenological-stage-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -685,18 +687,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab146 ;
+    urnp:examples _:cb305a7bb289d62e3213cc336fc9dd10e6536d6eb66a6a13e50628af91763dd9471 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:phenological-stage:result-value>
+:phenological-stage-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the phenological stages controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/b851a40c-d32b-57a7-8bf8-cca5e202d88d>
@@ -732,7 +734,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab146 ;
+    urnp:examples _:cb305a7bb289d62e3213cc336fc9dd10e6536d6eb66a6a13e50628af91763dd9471 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -745,13 +747,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:phenological-stage:simple-result>
+:phenological-stage-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -775,17 +777,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab146 ;
+    urnp:examples _:cb305a7bb289d62e3213cc336fc9dd10e6536d6eb66a6a13e50628af91763dd9471 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:phenological-stage:site-visit>
+:phenological-stage-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Floristics - Standard Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -807,17 +809,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab146 ;
+    urnp:examples _:cb305a7bb289d62e3213cc336fc9dd10e6536d6eb66a6a13e50628af91763dd9471 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:phenological-stage:used-procedure>
+:phenological-stage-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>`.
 
     # `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>` is the IRI for "Floristics - Standard Protocol".""" ;
@@ -841,17 +843,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab146 ;
+    urnp:examples _:cb305a7bb289d62e3213cc336fc9dd10e6536d6eb66a6a13e50628af91763dd9471 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:phenological-stage:value-type>
+:phenological-stage-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -872,17 +874,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab146 ;
+    urnp:examples _:cb305a7bb289d62e3213cc336fc9dd10e6536d6eb66a6a13e50628af91763dd9471 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:phenological-stage:vocabulary>
+:phenological-stage-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/110398ca-32fa-4f69-b7bb-5aa69d5a5004>`.
 
         `<https://linked.data.gov.au/def/nrm/110398ca-32fa-4f69-b7bb-5aa69d5a5004>` is the IRI for "phenological stages".""" ;
@@ -904,17 +906,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab146 ;
+    urnp:examples _:cb305a7bb289d62e3213cc336fc9dd10e6536d6eb66a6a13e50628af91763dd9471 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:plant-habit:feature-type>
+:plant-habit-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -935,18 +937,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab169 ;
+    urnp:examples _:cb3eada2d3309f8dad53793da68fd43f31e20828a40eacd62e091d59e8062ff1385 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/plant-habit/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:plant-habit:result-value>
+:plant-habit-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the plant habit types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/5459d7c1-b29f-4616-9572-f2f323520cfc>
@@ -980,7 +982,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab169 ;
+    urnp:examples _:cb3eada2d3309f8dad53793da68fd43f31e20828a40eacd62e091d59e8062ff1385 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -993,13 +995,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/plant-habit/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:plant-habit:simple-result>
+:plant-habit-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1023,17 +1025,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab169 ;
+    urnp:examples _:cb3eada2d3309f8dad53793da68fd43f31e20828a40eacd62e091d59e8062ff1385 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/plant-habit/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:plant-habit:site-visit>
+:plant-habit-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Floristics - Standard Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1055,17 +1057,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab169 ;
+    urnp:examples _:cb3eada2d3309f8dad53793da68fd43f31e20828a40eacd62e091d59e8062ff1385 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/plant-habit/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:plant-habit:used-procedure>
+:plant-habit-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>`.
 
     # `<https://linked.data.gov.au/def/nrm/bc2ba93e-43f9-425f-83cd-bbf5c422bdf8>` is the IRI for "Floristics - Standard Protocol".""" ;
@@ -1089,17 +1091,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab169 ;
+    urnp:examples _:cb3eada2d3309f8dad53793da68fd43f31e20828a40eacd62e091d59e8062ff1385 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/plant-habit/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:plant-habit:value-type>
+:plant-habit-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1120,17 +1122,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab169 ;
+    urnp:examples _:cb3eada2d3309f8dad53793da68fd43f31e20828a40eacd62e091d59e8062ff1385 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/plant-habit/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes:plant-habit:vocabulary>
+:plant-habit-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:floristics-standard-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/015360a2-1e21-4401-be70-25c581569ba6>`.
 
         `<https://linked.data.gov.au/def/nrm/015360a2-1e21-4401-be70-25c581569ba6>` is the IRI for "plant habit types".""" ;
@@ -1152,44 +1154,45 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:n32f7ece6b71e4d7c86cf70bb10ea4f4ab169 ;
+    urnp:examples _:cb3eada2d3309f8dad53793da68fd43f31e20828a40eacd62e091d59e8062ff1385 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/plant-habit/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:floristics-standard-protocol-shapes>
+sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
     schema:description "SHACL shapes in the urn:shapes:floristics-standard-protocol-shapes namespace." ;
     schema:name "EDES Floristics Standard Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
 .
 
-_:n32f7ece6b71e4d7c86cf70bb10ea4f4ab139
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/host-species-name/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/host-species-name/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n32f7ece6b71e4d7c86cf70bb10ea4f4ab96
+_:cb3f867f02a1a5eb03765fab63e880d9db15a4cff479df45cef3c8735a0a5441de9
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n32f7ece6b71e4d7c86cf70bb10ea4f4ab103
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
+_:cb40097dba66b35e015dfa53730a2738f30f40abf9b8942579ca53220b34e85959c
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/host-species-name/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/host-species-name/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n32f7ece6b71e4d7c86cf70bb10ea4f4ab146
+_:cb305a7bb289d62e3213cc336fc9dd10e6536d6eb66a6a13e50628af91763dd9471
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/phenological-stage/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n32f7ece6b71e4d7c86cf70bb10ea4f4ab169
+_:cb3eada2d3309f8dad53793da68fd43f31e20828a40eacd62e091d59e8062ff1385
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/plant-habit/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/plant-habit/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4b6ddc61a1f01d5700f845b3a2ab814ebbe6a31094c90a6dcb35923e44b33c334
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/floristics/floristics-standard-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
 .

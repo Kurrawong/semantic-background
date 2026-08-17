@@ -1,9 +1,11 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/recruitment-age-class-protocol-shapes/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/recruitment-age-class-protocol-shapes>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
@@ -11,13 +13,13 @@ PREFIX urnc: <urn:class:>
 PREFIX urnp: <urn:property:>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:field-species-name:datatype>
+:field-species-name-datatype
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -37,17 +39,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db2 ;
+    urnp:examples _:cb46e78da185fca1a02c23fa8b1a7ebe39b77a5cfadb48d860764a58a134dca492e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:field-species-name:feature-type>
+:field-species-name-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -68,17 +70,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db2 ;
+    urnp:examples _:cb46e78da185fca1a02c23fa8b1a7ebe39b77a5cfadb48d860764a58a134dca492e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:field-species-name:simple-result>
+:field-species-name-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -102,17 +104,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db2 ;
+    urnp:examples _:cb46e78da185fca1a02c23fa8b1a7ebe39b77a5cfadb48d860764a58a134dca492e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:field-species-name:site-visit>
+:field-species-name-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Recruitment module - Age Structure Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -134,17 +136,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db2 ;
+    urnp:examples _:cb46e78da185fca1a02c23fa8b1a7ebe39b77a5cfadb48d860764a58a134dca492e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:field-species-name:used-procedure>
+:field-species-name-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>`.
 
     `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>` is the IRI for "Recruitment module - Age Structure Protocol".""" ;
@@ -168,17 +170,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db2 ;
+    urnp:examples _:cb46e78da185fca1a02c23fa8b1a7ebe39b77a5cfadb48d860764a58a134dca492e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:field-species-name:value-type>
+:field-species-name-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Text ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -199,17 +201,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db2 ;
+    urnp:examples _:cb46e78da185fca1a02c23fa8b1a7ebe39b77a5cfadb48d860764a58a134dca492e ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:growth-stage:feature-type>
+:growth-stage-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -230,18 +232,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db9 ;
+    urnp:examples _:cb3f1b0e814ab7a62a6466b41cf4da490f6b607b3510e42f34b06a638333e1117b1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:growth-stage:result-value>
+:growth-stage-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the growth stages controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/e96e34eb-2a2c-5aeb-9f4f-211cbcf43219>
@@ -267,7 +269,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db9 ;
+    urnp:examples _:cb3f1b0e814ab7a62a6466b41cf4da490f6b607b3510e42f34b06a638333e1117b1 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -280,13 +282,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:growth-stage:simple-result>
+:growth-stage-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -310,17 +312,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db9 ;
+    urnp:examples _:cb3f1b0e814ab7a62a6466b41cf4da490f6b607b3510e42f34b06a638333e1117b1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:growth-stage:site-visit>
+:growth-stage-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Recruitment module - Age Structure Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -342,17 +344,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db9 ;
+    urnp:examples _:cb3f1b0e814ab7a62a6466b41cf4da490f6b607b3510e42f34b06a638333e1117b1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:growth-stage:used-procedure>
+:growth-stage-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>`.
 
     `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>` is the IRI for "Recruitment module - Age Structure Protocol".""" ;
@@ -376,17 +378,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db9 ;
+    urnp:examples _:cb3f1b0e814ab7a62a6466b41cf4da490f6b607b3510e42f34b06a638333e1117b1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:growth-stage:value-type>
+:growth-stage-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -407,17 +409,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db9 ;
+    urnp:examples _:cb3f1b0e814ab7a62a6466b41cf4da490f6b607b3510e42f34b06a638333e1117b1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:growth-stage:vocabulary>
+:growth-stage-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>`.
 
         `<https://linked.data.gov.au/def/nrm/096e018a-fb8f-4ba1-9fdc-302164e57682>` is the IRI for "growth stages".""" ;
@@ -439,17 +441,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db9 ;
+    urnp:examples _:cb3f1b0e814ab7a62a6466b41cf4da490f6b607b3510e42f34b06a638333e1117b1 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:juvenile-count:feature-type>
+:juvenile-count-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -470,17 +472,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db22 ;
+    urnp:examples _:cb5282d117d0b0d0080c688f42f7ee5e0661394980ec75a338dc7586a0fae40d291 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:juvenile-count:simple-result>
+:juvenile-count-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -504,17 +506,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db22 ;
+    urnp:examples _:cb5282d117d0b0d0080c688f42f7ee5e0661394980ec75a338dc7586a0fae40d291 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:juvenile-count:site-visit>
+:juvenile-count-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Recruitment module - Age Structure Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -536,17 +538,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db22 ;
+    urnp:examples _:cb5282d117d0b0d0080c688f42f7ee5e0661394980ec75a338dc7586a0fae40d291 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:juvenile-count:used-procedure>
+:juvenile-count-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>`.
 
     `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>` is the IRI for "Recruitment module - Age Structure Protocol".""" ;
@@ -570,17 +572,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db22 ;
+    urnp:examples _:cb5282d117d0b0d0080c688f42f7ee5e0661394980ec75a338dc7586a0fae40d291 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:juvenile-count:value-range>
+:juvenile-count-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be non-negative." ;
     sh:message "The result _MUST_ have a non-negative value." ;
@@ -601,17 +603,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db22 ;
+    urnp:examples _:cb5282d117d0b0d0080c688f42f7ee5e0661394980ec75a338dc7586a0fae40d291 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:juvenile-count:value-type>
+:juvenile-count-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -632,17 +634,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db22 ;
+    urnp:examples _:cb5282d117d0b0d0080c688f42f7ee5e0661394980ec75a338dc7586a0fae40d291 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:life-stage:feature-type>
+:life-stage-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -663,18 +665,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db29 ;
+    urnp:examples _:cb591a6df23c697c9e60ba2b03a228d60d8142e30affdfaaac8968f3c76cdc54ceb ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:life-stage:result-value>
+:life-stage-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Life stages controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/9a4421e0-c308-5e44-b778-24f2688ec1ea>
@@ -705,7 +707,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db29 ;
+    urnp:examples _:cb591a6df23c697c9e60ba2b03a228d60d8142e30affdfaaac8968f3c76cdc54ceb ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -718,13 +720,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:life-stage:simple-result>
+:life-stage-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -748,17 +750,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db29 ;
+    urnp:examples _:cb591a6df23c697c9e60ba2b03a228d60d8142e30affdfaaac8968f3c76cdc54ceb ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:life-stage:site-visit>
+:life-stage-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Recruitment module - Age Structure Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -780,17 +782,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db29 ;
+    urnp:examples _:cb591a6df23c697c9e60ba2b03a228d60d8142e30affdfaaac8968f3c76cdc54ceb ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:life-stage:used-procedure>
+:life-stage-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>`.
 
     `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>` is the IRI for "Recruitment module - Age Structure Protocol".""" ;
@@ -814,17 +816,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db29 ;
+    urnp:examples _:cb591a6df23c697c9e60ba2b03a228d60d8142e30affdfaaac8968f3c76cdc54ceb ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:life-stage:value-type>
+:life-stage-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -845,17 +847,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db29 ;
+    urnp:examples _:cb591a6df23c697c9e60ba2b03a228d60d8142e30affdfaaac8968f3c76cdc54ceb ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:life-stage:vocabulary>
+:life-stage-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>`.
 
         `<https://linked.data.gov.au/def/nrm/5f82c583-167b-4ed2-b25e-4d67decb3f2d>` is the IRI for "Life stages".""" ;
@@ -877,17 +879,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db29 ;
+    urnp:examples _:cb591a6df23c697c9e60ba2b03a228d60d8142e30affdfaaac8968f3c76cdc54ceb ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:regeneration-status:feature-type>
+:regeneration-status-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -908,18 +910,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db47 ;
+    urnp:examples _:cb3d32e1d18e2701b02c11c5d70a21c786e1edfab3d18e8eca148c0933c146982a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:regeneration-status:result-value>
+:regeneration-status-result-value
     a
         sh:PropertyShape ,
         urnc:Controlled ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Fire regeneration statuses controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070>
@@ -943,7 +945,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db47 ;
+    urnp:examples _:cb3d32e1d18e2701b02c11c5d70a21c786e1edfab3d18e8eca148c0933c146982a3 ;
     urnp:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -956,13 +958,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:regeneration-status:simple-result>
+:regeneration-status-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -986,17 +988,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db47 ;
+    urnp:examples _:cb3d32e1d18e2701b02c11c5d70a21c786e1edfab3d18e8eca148c0933c146982a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:regeneration-status:site-visit>
+:regeneration-status-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Recruitment module - Age Structure Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1018,17 +1020,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db47 ;
+    urnp:examples _:cb3d32e1d18e2701b02c11c5d70a21c786e1edfab3d18e8eca148c0933c146982a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:regeneration-status:used-procedure>
+:regeneration-status-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>`.
 
     `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>` is the IRI for "Recruitment module - Age Structure Protocol".""" ;
@@ -1052,17 +1054,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db47 ;
+    urnp:examples _:cb3d32e1d18e2701b02c11c5d70a21c786e1edfab3d18e8eca148c0933c146982a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:regeneration-status:value-type>
+:regeneration-status-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:IRI ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1083,17 +1085,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db47 ;
+    urnp:examples _:cb3d32e1d18e2701b02c11c5d70a21c786e1edfab3d18e8eca148c0933c146982a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:regeneration-status:vocabulary>
+:regeneration-status-vocabulary
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>`.
 
         `<https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>` is the IRI for "Fire regeneration statuses".""" ;
@@ -1115,17 +1117,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db47 ;
+    urnp:examples _:cb3d32e1d18e2701b02c11c5d70a21c786e1edfab3d18e8eca148c0933c146982a3 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:sapling-count:feature-type>
+:sapling-count-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -1146,17 +1148,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db58 ;
+    urnp:examples _:cb34ae163182922253b7147adb7ace1b9b669ad295e8f045dee5e09ed02622171e8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/sapling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:sapling-count:simple-result>
+:sapling-count-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1180,17 +1182,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db58 ;
+    urnp:examples _:cb34ae163182922253b7147adb7ace1b9b669ad295e8f045dee5e09ed02622171e8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/sapling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:sapling-count:site-visit>
+:sapling-count-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Recruitment module - Age Structure Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1212,17 +1214,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db58 ;
+    urnp:examples _:cb34ae163182922253b7147adb7ace1b9b669ad295e8f045dee5e09ed02622171e8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/sapling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:sapling-count:used-procedure>
+:sapling-count-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>`.
 
     `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>` is the IRI for "Recruitment module - Age Structure Protocol".""" ;
@@ -1246,17 +1248,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db58 ;
+    urnp:examples _:cb34ae163182922253b7147adb7ace1b9b669ad295e8f045dee5e09ed02622171e8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/sapling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:sapling-count:value-range>
+:sapling-count-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be non-negative." ;
     sh:message "The result _MUST_ have a non-negative value." ;
@@ -1277,17 +1279,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db58 ;
+    urnp:examples _:cb34ae163182922253b7147adb7ace1b9b669ad295e8f045dee5e09ed02622171e8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/sapling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:sapling-count:value-type>
+:sapling-count-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -1308,17 +1310,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db58 ;
+    urnp:examples _:cb34ae163182922253b7147adb7ace1b9b669ad295e8f045dee5e09ed02622171e8 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/sapling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:seedling-count:feature-type>
+:seedling-count-feature-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant population_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ae71c3f6-d430-400f-a1d4-97a333b4ee02[`plant population`]." ;
@@ -1339,17 +1341,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db65 ;
+    urnp:examples _:cb559a7cbcc11ed41f6f2eb08f63ec5aad8032ab85ecef99a324dd0faf6b3c1c575 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:seedling-count:simple-result>
+:seedling-count-simple-result
     a
         sh:NodeShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1373,17 +1375,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass tern:Observation ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db65 ;
+    urnp:examples _:cb559a7cbcc11ed41f6f2eb08f63ec5aad8032ab85ecef99a324dd0faf6b3c1c575 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:seedling-count:site-visit>
+:seedling-count-site-visit
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Recruitment module - Age Structure Protocol are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1405,17 +1407,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db65 ;
+    urnp:examples _:cb559a7cbcc11ed41f6f2eb08f63ec5aad8032ab85ecef99a324dd0faf6b3c1c575 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:seedling-count:used-procedure>
+:seedling-count-used-procedure
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>`.
 
     `<https://linked.data.gov.au/def/nrm/c93922b2-3b0e-4ee1-b1ef-c9719d039f5f>` is the IRI for "Recruitment module - Age Structure Protocol".""" ;
@@ -1439,17 +1441,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db65 ;
+    urnp:examples _:cb559a7cbcc11ed41f6f2eb08f63ec5aad8032ab85ecef99a324dd0faf6b3c1c575 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:seedling-count:value-range>
+:seedling-count-value-range
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be non-negative." ;
     sh:message "The result _MUST_ have a non-negative value." ;
@@ -1470,17 +1472,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db65 ;
+    urnp:examples _:cb559a7cbcc11ed41f6f2eb08f63ec5aad8032ab85ecef99a324dd0faf6b3c1c575 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes:seedling-count:value-type>
+:seedling-count-value-type
     a
         sh:PropertyShape ,
         urnc:Requirement ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     reg:status reg:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:recruitment-age-class-protocol-shapes> ;
+    rdfs:isDefinedBy sg: ;
     sh:class tern:Integer ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -1501,54 +1503,55 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    urnp:examples _:ndf22831dd6e549edb79564502b1e0b9db65 ;
+    urnp:examples _:cb559a7cbcc11ed41f6f2eb08f63ec5aad8032ab85ecef99a324dd0faf6b3c1c575 ;
     urnp:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:recruitment-age-class-protocol-shapes>
+sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
     schema:description "SHACL shapes in the urn:shapes:recruitment-age-class-protocol-shapes namespace." ;
     schema:name "EDES Recruitment Age Class Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
 .
 
-_:ndf22831dd6e549edb79564502b1e0b9db2
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
-.
-
-_:ndf22831dd6e549edb79564502b1e0b9db22
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/valid.ttl"^^xsd:anyURI ;
-.
-
-_:ndf22831dd6e549edb79564502b1e0b9db58
+_:cb34ae163182922253b7147adb7ace1b9b669ad295e8f045dee5e09ed02622171e8
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/sapling-count/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/sapling-count/valid.ttl"^^xsd:anyURI ;
 .
 
-_:ndf22831dd6e549edb79564502b1e0b9db65
+_:cb46e78da185fca1a02c23fa8b1a7ebe39b77a5cfadb48d860764a58a134dca492e
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb5282d117d0b0d0080c688f42f7ee5e0661394980ec75a338dc7586a0fae40d291
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/juvenile-count/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb559a7cbcc11ed41f6f2eb08f63ec5aad8032ab85ecef99a324dd0faf6b3c1c575
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/seedling-count/valid.ttl"^^xsd:anyURI ;
 .
 
-_:ndf22831dd6e549edb79564502b1e0b9db29
-    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/invalid.ttl"^^xsd:anyURI ;
-    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/valid.ttl"^^xsd:anyURI ;
-.
-
-_:ndf22831dd6e549edb79564502b1e0b9db47
+_:cb3d32e1d18e2701b02c11c5d70a21c786e1edfab3d18e8eca148c0933c146982a3
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/regeneration-status/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/regeneration-status/valid.ttl"^^xsd:anyURI ;
 .
 
-_:ndf22831dd6e549edb79564502b1e0b9db9
+_:cb3f1b0e814ab7a62a6466b41cf4da490f6b607b3510e42f34b06a638333e1117b1
     urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/growth-stage/invalid.ttl"^^xsd:anyURI ;
     urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/growth-stage/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb591a6df23c697c9e60ba2b03a228d60d8142e30affdfaaac8968f3c76cdc54ceb
+    urnp:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/invalid.ttl"^^xsd:anyURI ;
+    urnp:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/recruitment/recruitment-age-class-protocol-shapes/life-stage/valid.ttl"^^xsd:anyURI ;
 .

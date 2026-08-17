@@ -1,3 +1,4 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/fire-protocol/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX ns1: <urn:property:>
 PREFIX ns2: <http://purl.org/linked-data/registry#>
@@ -5,17 +6,18 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/fire-protocol>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:fire-protocol-shapes:field-species-name:datatype>
+:field-species-name-datatype
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -35,17 +37,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb2 ;
+    ns1:examples _:cb4a0f6e28ce771ef24858cb0b987cedc39098dd0597af061b7c03d68f4b66b6a4e ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:field-species-name:feature-type>
+:field-species-name-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
@@ -69,17 +71,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb2 ;
+    ns1:examples _:cb4a0f6e28ce771ef24858cb0b987cedc39098dd0597af061b7c03d68f4b66b6a4e ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:field-species-name:simple-result>
+:field-species-name-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -103,17 +105,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb2 ;
+    ns1:examples _:cb4a0f6e28ce771ef24858cb0b987cedc39098dd0597af061b7c03d68f4b66b6a4e ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:field-species-name:site-visit>
+:field-species-name-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -135,17 +137,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb2 ;
+    ns1:examples _:cb4a0f6e28ce771ef24858cb0b987cedc39098dd0597af061b7c03d68f4b66b6a4e ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:field-species-name:used-procedure>
+:field-species-name-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -169,17 +171,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb2 ;
+    ns1:examples _:cb4a0f6e28ce771ef24858cb0b987cedc39098dd0597af061b7c03d68f4b66b6a4e ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:field-species-name:value-type>
+:field-species-name-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/Text> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -200,17 +202,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb2 ;
+    ns1:examples _:cb4a0f6e28ce771ef24858cb0b987cedc39098dd0597af061b7c03d68f4b66b6a4e ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:fractional-cover-type:feature-type>
+:fractional-cover-type-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
@@ -234,18 +236,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb13 ;
+    ns1:examples _:cb577fd19479c20051efd61003fd25bd0bdc5392ac3907d39fbd4d5bfa5de91352d ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:fractional-cover-type:result-value>
+:fractional-cover-type-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the fractional cover types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/88303e3c-2e15-524d-bcde-3a8c5ac074de>
@@ -269,7 +271,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb13 ;
+    ns1:examples _:cb577fd19479c20051efd61003fd25bd0bdc5392ac3907d39fbd4d5bfa5de91352d ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -282,13 +284,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:fractional-cover-type:simple-result>
+:fractional-cover-type-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -312,17 +314,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb13 ;
+    ns1:examples _:cb577fd19479c20051efd61003fd25bd0bdc5392ac3907d39fbd4d5bfa5de91352d ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:fractional-cover-type:site-visit>
+:fractional-cover-type-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -344,17 +346,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb13 ;
+    ns1:examples _:cb577fd19479c20051efd61003fd25bd0bdc5392ac3907d39fbd4d5bfa5de91352d ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:fractional-cover-type:used-procedure>
+:fractional-cover-type-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -378,17 +380,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb13 ;
+    ns1:examples _:cb577fd19479c20051efd61003fd25bd0bdc5392ac3907d39fbd4d5bfa5de91352d ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:fractional-cover-type:value-type>
+:fractional-cover-type-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -409,17 +411,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb13 ;
+    ns1:examples _:cb577fd19479c20051efd61003fd25bd0bdc5392ac3907d39fbd4d5bfa5de91352d ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:fractional-cover-type:vocabulary>
+:fractional-cover-type-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/51d1a677-0688-57b3-91c7-6f1e3beee188>`.
 
         `<https://linked.data.gov.au/def/nrm/51d1a677-0688-57b3-91c7-6f1e3beee188>` is the IRI for "fractional cover types".""" ;
@@ -441,17 +443,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb13 ;
+    ns1:examples _:cb577fd19479c20051efd61003fd25bd0bdc5392ac3907d39fbd4d5bfa5de91352d ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:growth-form:feature-type>
+:growth-form-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
@@ -475,18 +477,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb26 ;
+    ns1:examples _:cb4e0bf7397f2bff70f71fcd054087687e8c28936c53d303ed42de141eeb4c9284c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:growth-form:result-value>
+:growth-form-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the growth forms controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f>
@@ -535,7 +537,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb26 ;
+    ns1:examples _:cb4e0bf7397f2bff70f71fcd054087687e8c28936c53d303ed42de141eeb4c9284c ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -548,13 +550,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:growth-form:simple-result>
+:growth-form-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -578,17 +580,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb26 ;
+    ns1:examples _:cb4e0bf7397f2bff70f71fcd054087687e8c28936c53d303ed42de141eeb4c9284c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:growth-form:site-visit>
+:growth-form-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -610,17 +612,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb26 ;
+    ns1:examples _:cb4e0bf7397f2bff70f71fcd054087687e8c28936c53d303ed42de141eeb4c9284c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:growth-form:used-procedure>
+:growth-form-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -644,17 +646,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb26 ;
+    ns1:examples _:cb4e0bf7397f2bff70f71fcd054087687e8c28936c53d303ed42de141eeb4c9284c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:growth-form:value-type>
+:growth-form-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -675,17 +677,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb26 ;
+    ns1:examples _:cb4e0bf7397f2bff70f71fcd054087687e8c28936c53d303ed42de141eeb4c9284c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:growth-form:vocabulary>
+:growth-form-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>`.
 
         `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>` is the IRI for "growth forms".""" ;
@@ -707,17 +709,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb26 ;
+    ns1:examples _:cb4e0bf7397f2bff70f71fcd054087687e8c28936c53d303ed42de141eeb4c9284c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:in-canopy-sky:datatype>
+:in-canopy-sky-datatype
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:boolean ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:boolean." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:boolean." ;
@@ -737,17 +739,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb62 ;
+    ns1:examples _:cb3172018fbff1cb87d5c62bc9006f53c64c3589899666a68ea39125d8c9c5e7147 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:in-canopy-sky:feature-type>
+:in-canopy-sky-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
@@ -771,17 +773,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb62 ;
+    ns1:examples _:cb3172018fbff1cb87d5c62bc9006f53c64c3589899666a68ea39125d8c9c5e7147 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:in-canopy-sky:simple-result>
+:in-canopy-sky-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -805,17 +807,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb62 ;
+    ns1:examples _:cb3172018fbff1cb87d5c62bc9006f53c64c3589899666a68ea39125d8c9c5e7147 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:in-canopy-sky:site-visit>
+:in-canopy-sky-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -837,17 +839,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb62 ;
+    ns1:examples _:cb3172018fbff1cb87d5c62bc9006f53c64c3589899666a68ea39125d8c9c5e7147 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:in-canopy-sky:used-procedure>
+:in-canopy-sky-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -871,17 +873,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb62 ;
+    ns1:examples _:cb3172018fbff1cb87d5c62bc9006f53c64c3589899666a68ea39125d8c9c5e7147 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:in-canopy-sky:value-type>
+:in-canopy-sky-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/Boolean> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Boolean`." ;
     sh:message "The result _MUST_ be an instance of `tern:Boolean`." ;
@@ -902,17 +904,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb62 ;
+    ns1:examples _:cb3172018fbff1cb87d5c62bc9006f53c64c3589899666a68ea39125d8c9c5e7147 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/in-canopy-sky/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:maximum-trunk-char-height:feature-type>
+:maximum-trunk-char-height-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant community_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b>
@@ -936,17 +938,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb73 ;
+    ns1:examples _:cb46533107f444807fe2cf8f67794f3624be06e5f1d596ff3a05d95d08343ae63db ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/maximum-trunk-char-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:maximum-trunk-char-height:site-visit>
+:maximum-trunk-char-height-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -968,17 +970,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb73 ;
+    ns1:examples _:cb46533107f444807fe2cf8f67794f3624be06e5f1d596ff3a05d95d08343ae63db ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/maximum-trunk-char-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:maximum-trunk-char-height:unit-of-measure>
+:maximum-trunk-char-height-unit-of-measure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
     sh:hasValue <http://qudt.org/vocab/unit/M> ;
     sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
@@ -998,17 +1000,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb73 ;
+    ns1:examples _:cb46533107f444807fe2cf8f67794f3624be06e5f1d596ff3a05d95d08343ae63db ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/maximum-trunk-char-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:maximum-trunk-char-height:used-procedure>
+:maximum-trunk-char-height-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -1032,17 +1034,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb73 ;
+    ns1:examples _:cb46533107f444807fe2cf8f67794f3624be06e5f1d596ff3a05d95d08343ae63db ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/maximum-trunk-char-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:maximum-trunk-char-height:value-range>
+:maximum-trunk-char-height-value-range
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ have a positive value." ;
@@ -1063,17 +1065,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb73 ;
+    ns1:examples _:cb46533107f444807fe2cf8f67794f3624be06e5f1d596ff3a05d95d08343ae63db ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/maximum-trunk-char-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:maximum-trunk-char-height:value-type>
+:maximum-trunk-char-height-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/Float> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -1094,17 +1096,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb73 ;
+    ns1:examples _:cb46533107f444807fe2cf8f67794f3624be06e5f1d596ff3a05d95d08343ae63db ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/maximum-trunk-char-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-burn-extent:feature-type>
+:plant-burn-extent-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
@@ -1128,18 +1130,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb82 ;
+    ns1:examples _:cb4d42edc95024e2be4f4928df76b653f05f64cdf4a340295e87f7c8bdc3af86843 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-burn-extent:result-value>
+:plant-burn-extent-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Substrate burn extent types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591>
@@ -1162,7 +1164,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb82 ;
+    ns1:examples _:cb4d42edc95024e2be4f4928df76b653f05f64cdf4a340295e87f7c8bdc3af86843 ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1175,13 +1177,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-burn-extent:simple-result>
+:plant-burn-extent-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1205,17 +1207,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb82 ;
+    ns1:examples _:cb4d42edc95024e2be4f4928df76b653f05f64cdf4a340295e87f7c8bdc3af86843 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-burn-extent:site-visit>
+:plant-burn-extent-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1237,17 +1239,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb82 ;
+    ns1:examples _:cb4d42edc95024e2be4f4928df76b653f05f64cdf4a340295e87f7c8bdc3af86843 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-burn-extent:used-procedure>
+:plant-burn-extent-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -1271,17 +1273,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb82 ;
+    ns1:examples _:cb4d42edc95024e2be4f4928df76b653f05f64cdf4a340295e87f7c8bdc3af86843 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-burn-extent:value-type>
+:plant-burn-extent-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1302,17 +1304,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb82 ;
+    ns1:examples _:cb4d42edc95024e2be4f4928df76b653f05f64cdf4a340295e87f7c8bdc3af86843 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-burn-extent:vocabulary>
+:plant-burn-extent-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/78dda800-193d-5b0e-a18b-f54ad942aa51>`.
 
         `<https://linked.data.gov.au/def/nrm/78dda800-193d-5b0e-a18b-f54ad942aa51>` is the IRI for "Substrate burn extent types".""" ;
@@ -1334,17 +1336,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb82 ;
+    ns1:examples _:cb4d42edc95024e2be4f4928df76b653f05f64cdf4a340295e87f7c8bdc3af86843 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-height:feature-type>
+:plant-height-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
@@ -1368,17 +1370,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb94 ;
+    ns1:examples _:cb43f4176e9b522731a0c9ea133d91d38a3db633a2089d270fc48c1e6379a230cf8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-height:site-visit>
+:plant-height-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1400,17 +1402,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb94 ;
+    ns1:examples _:cb43f4176e9b522731a0c9ea133d91d38a3db633a2089d270fc48c1e6379a230cf8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-height:unit-of-measure>
+:plant-height-unit-of-measure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
     sh:hasValue <http://qudt.org/vocab/unit/M> ;
     sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
@@ -1430,17 +1432,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb94 ;
+    ns1:examples _:cb43f4176e9b522731a0c9ea133d91d38a3db633a2089d270fc48c1e6379a230cf8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-height:used-procedure>
+:plant-height-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -1464,17 +1466,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb94 ;
+    ns1:examples _:cb43f4176e9b522731a0c9ea133d91d38a3db633a2089d270fc48c1e6379a230cf8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-height:value-range>
+:plant-height-value-range
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be positive." ;
     sh:message "The result _MUST_ have a positive value." ;
@@ -1495,17 +1497,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb94 ;
+    ns1:examples _:cb43f4176e9b522731a0c9ea133d91d38a3db633a2089d270fc48c1e6379a230cf8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-height:value-type>
+:plant-height-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/Float> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -1526,17 +1528,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb94 ;
+    ns1:examples _:cb43f4176e9b522731a0c9ea133d91d38a3db633a2089d270fc48c1e6379a230cf8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-mortality:feature-type>
+:plant-mortality-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
@@ -1560,18 +1562,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb103 ;
+    ns1:examples _:cb3679d798d133bd14ac3c2c105dac0e683e72aa5cb995400d21a5ce7b2a53a9bd9 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-mortality:result-value>
+:plant-mortality-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Plant statuses controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/2fd1ed97-3e7b-59a0-8d93-9be76f276071>
@@ -1595,7 +1597,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb103 ;
+    ns1:examples _:cb3679d798d133bd14ac3c2c105dac0e683e72aa5cb995400d21a5ce7b2a53a9bd9 ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1608,13 +1610,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-mortality:simple-result>
+:plant-mortality-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1638,17 +1640,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb103 ;
+    ns1:examples _:cb3679d798d133bd14ac3c2c105dac0e683e72aa5cb995400d21a5ce7b2a53a9bd9 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-mortality:site-visit>
+:plant-mortality-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1670,17 +1672,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb103 ;
+    ns1:examples _:cb3679d798d133bd14ac3c2c105dac0e683e72aa5cb995400d21a5ce7b2a53a9bd9 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-mortality:used-procedure>
+:plant-mortality-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -1704,17 +1706,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb103 ;
+    ns1:examples _:cb3679d798d133bd14ac3c2c105dac0e683e72aa5cb995400d21a5ce7b2a53a9bd9 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-mortality:value-type>
+:plant-mortality-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1735,17 +1737,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb103 ;
+    ns1:examples _:cb3679d798d133bd14ac3c2c105dac0e683e72aa5cb995400d21a5ce7b2a53a9bd9 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:plant-mortality:vocabulary>
+:plant-mortality-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>`.
 
         `<https://linked.data.gov.au/def/nrm/b7368a37-a4ac-4c84-8a78-1fb9755ad849>` is the IRI for "Plant statuses".""" ;
@@ -1767,17 +1769,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb103 ;
+    ns1:examples _:cb3679d798d133bd14ac3c2c105dac0e683e72aa5cb995400d21a5ce7b2a53a9bd9 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:regeneration-status:feature-type>
+:regeneration-status-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant occurrence_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/b311c0d3-4a1a-4932-a39c-f5cdc1afa611>
@@ -1801,18 +1803,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb116 ;
+    ns1:examples _:cb2eaad3a0f6cdd69cbb7018e9ec08ee0eb77d2ec5926401c4702bf57d655b517c8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:regeneration-status:result-value>
+:regeneration-status-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Fire regeneration statuses controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/ef12561d-a8d7-5dde-9779-6e02610f2070>
@@ -1836,7 +1838,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb116 ;
+    ns1:examples _:cb2eaad3a0f6cdd69cbb7018e9ec08ee0eb77d2ec5926401c4702bf57d655b517c8 ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1849,13 +1851,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:regeneration-status:simple-result>
+:regeneration-status-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1879,17 +1881,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb116 ;
+    ns1:examples _:cb2eaad3a0f6cdd69cbb7018e9ec08ee0eb77d2ec5926401c4702bf57d655b517c8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:regeneration-status:site-visit>
+:regeneration-status-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -1911,17 +1913,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb116 ;
+    ns1:examples _:cb2eaad3a0f6cdd69cbb7018e9ec08ee0eb77d2ec5926401c4702bf57d655b517c8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:regeneration-status:used-procedure>
+:regeneration-status-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -1945,17 +1947,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb116 ;
+    ns1:examples _:cb2eaad3a0f6cdd69cbb7018e9ec08ee0eb77d2ec5926401c4702bf57d655b517c8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:regeneration-status:value-type>
+:regeneration-status-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1976,17 +1978,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb116 ;
+    ns1:examples _:cb2eaad3a0f6cdd69cbb7018e9ec08ee0eb77d2ec5926401c4702bf57d655b517c8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:regeneration-status:vocabulary>
+:regeneration-status-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>`.
 
         `<https://linked.data.gov.au/def/nrm/a1b8fc00-5d5f-40f8-a7e1-0b09d4bbba4b>` is the IRI for "Fire regeneration statuses".""" ;
@@ -2008,17 +2010,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb116 ;
+    ns1:examples _:cb2eaad3a0f6cdd69cbb7018e9ec08ee0eb77d2ec5926401c4702bf57d655b517c8 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate-burn-extent:feature-type>
+:substrate-burn-extent-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
@@ -2042,18 +2044,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb129 ;
+    ns1:examples _:cb512fd07c14c924a8d7911d152119b13b098c511a9f0946c42035d7a545849b1f0 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate-burn-extent:result-value>
+:substrate-burn-extent-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Substrate burn extent types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/b56bb218-ad1c-59b3-af3f-2f38be6d6591>
@@ -2076,7 +2078,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb129 ;
+    ns1:examples _:cb512fd07c14c924a8d7911d152119b13b098c511a9f0946c42035d7a545849b1f0 ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2089,13 +2091,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate-burn-extent:simple-result>
+:substrate-burn-extent-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2119,17 +2121,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb129 ;
+    ns1:examples _:cb512fd07c14c924a8d7911d152119b13b098c511a9f0946c42035d7a545849b1f0 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate-burn-extent:site-visit>
+:substrate-burn-extent-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2151,17 +2153,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb129 ;
+    ns1:examples _:cb512fd07c14c924a8d7911d152119b13b098c511a9f0946c42035d7a545849b1f0 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate-burn-extent:used-procedure>
+:substrate-burn-extent-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -2185,17 +2187,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb129 ;
+    ns1:examples _:cb512fd07c14c924a8d7911d152119b13b098c511a9f0946c42035d7a545849b1f0 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate-burn-extent:value-type>
+:substrate-burn-extent-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2216,17 +2218,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb129 ;
+    ns1:examples _:cb512fd07c14c924a8d7911d152119b13b098c511a9f0946c42035d7a545849b1f0 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate-burn-extent:vocabulary>
+:substrate-burn-extent-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/78dda800-193d-5b0e-a18b-f54ad942aa51>`.
 
         `<https://linked.data.gov.au/def/nrm/78dda800-193d-5b0e-a18b-f54ad942aa51>` is the IRI for "Substrate burn extent types".""" ;
@@ -2248,17 +2250,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb129 ;
+    ns1:examples _:cb512fd07c14c924a8d7911d152119b13b098c511a9f0946c42035d7a545849b1f0 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate:feature-type>
+:substrate-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_ or _fire disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:in (
         <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb>
@@ -2282,18 +2284,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb141 ;
+    ns1:examples _:cb5138957366dd68e3908a4b2b1d336f312f5e5f1e430026387d538a8e40a2938f2 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate:result-value>
+:substrate-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Substrate types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/94ee6b46-e2f1-5101-8666-3cbcd8697f0f>
@@ -2329,7 +2331,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb141 ;
+    ns1:examples _:cb5138957366dd68e3908a4b2b1d336f312f5e5f1e430026387d538a8e40a2938f2 ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2342,13 +2344,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate:simple-result>
+:substrate-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2372,17 +2374,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb141 ;
+    ns1:examples _:cb5138957366dd68e3908a4b2b1d336f312f5e5f1e430026387d538a8e40a2938f2 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate:site-visit>
+:substrate-site-visit
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Observations following the Fire Severity Module are made in the context of a site visit." ;
     sh:maxCount 1 ;
     sh:message "Observations _MUST_ have a value for `tern:hasSiteVisit`." ;
@@ -2404,17 +2406,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb141 ;
+    ns1:examples _:cb5138957366dd68e3908a4b2b1d336f312f5e5f1e430026387d538a8e40a2938f2 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate:used-procedure>
+:substrate-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>`.
 
     `<https://linked.data.gov.au/def/nrm/91a54c7c-48ff-402d-a761-ed4fd4ad4a4b>` is the IRI for "Fire Severity Module".""" ;
@@ -2438,17 +2440,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb141 ;
+    ns1:examples _:cb5138957366dd68e3908a4b2b1d336f312f5e5f1e430026387d538a8e40a2938f2 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate:value-type>
+:substrate-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2469,17 +2471,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb141 ;
+    ns1:examples _:cb5138957366dd68e3908a4b2b1d336f312f5e5f1e430026387d538a8e40a2938f2 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol-shapes:substrate:vocabulary>
+:substrate-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:fire-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/b061d7db-a608-4062-96d4-b367d6d9a792>`.
 
         `<https://linked.data.gov.au/def/nrm/b061d7db-a608-4062-96d4-b367d6d9a792>` is the IRI for "Substrate types".""" ;
@@ -2501,74 +2503,75 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:n770878aa8a4e4da49d58d023ef54e6ccb141 ;
+    ns1:examples _:cb5138957366dd68e3908a4b2b1d336f312f5e5f1e430026387d538a8e40a2938f2 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:fire-protocol>
+sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
     schema:description "EDES Fire Protocol Shapes Graph" ;
     schema:name "EDES Fire Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
 .
 
-_:n770878aa8a4e4da49d58d023ef54e6ccb2
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n770878aa8a4e4da49d58d023ef54e6ccb62
+_:cb3172018fbff1cb87d5c62bc9006f53c64c3589899666a68ea39125d8c9c5e7147
     ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/in-canopy-sky/invalid.ttl"^^xsd:anyURI ;
     ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/in-canopy-sky/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n770878aa8a4e4da49d58d023ef54e6ccb73
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/maximum-trunk-char-height/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/maximum-trunk-char-height/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n770878aa8a4e4da49d58d023ef54e6ccb94
+_:cb43f4176e9b522731a0c9ea133d91d38a3db633a2089d270fc48c1e6379a230cf8
     ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-height/invalid.ttl"^^xsd:anyURI ;
     ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n770878aa8a4e4da49d58d023ef54e6ccb103
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/valid.ttl"^^xsd:anyURI ;
+_:cb46533107f444807fe2cf8f67794f3624be06e5f1d596ff3a05d95d08343ae63db
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/maximum-trunk-char-height/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/maximum-trunk-char-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n770878aa8a4e4da49d58d023ef54e6ccb116
+_:cb4a0f6e28ce771ef24858cb0b987cedc39098dd0597af061b7c03d68f4b66b6a4e
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb2eaad3a0f6cdd69cbb7018e9ec08ee0eb77d2ec5926401c4702bf57d655b517c8
     ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/invalid.ttl"^^xsd:anyURI ;
     ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/regeneration-status/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n770878aa8a4e4da49d58d023ef54e6ccb129
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/valid.ttl"^^xsd:anyURI ;
+_:cb3679d798d133bd14ac3c2c105dac0e683e72aa5cb995400d21a5ce7b2a53a9bd9
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-mortality/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n770878aa8a4e4da49d58d023ef54e6ccb13
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/valid.ttl"^^xsd:anyURI ;
+_:cb4d42edc95024e2be4f4928df76b653f05f64cdf4a340295e87f7c8bdc3af86843
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n770878aa8a4e4da49d58d023ef54e6ccb141
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/valid.ttl"^^xsd:anyURI ;
-.
-
-_:n770878aa8a4e4da49d58d023ef54e6ccb26
+_:cb4e0bf7397f2bff70f71fcd054087687e8c28936c53d303ed42de141eeb4c9284c
     ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/invalid.ttl"^^xsd:anyURI ;
     ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/growth-form/valid.ttl"^^xsd:anyURI ;
 .
 
-_:n770878aa8a4e4da49d58d023ef54e6ccb82
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/plant-burn-extent/valid.ttl"^^xsd:anyURI ;
+_:cb512fd07c14c924a8d7911d152119b13b098c511a9f0946c42035d7a545849b1f0
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate-burn-extent/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb5138957366dd68e3908a4b2b1d336f312f5e5f1e430026387d538a8e40a2938f2
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/substrate/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb577fd19479c20051efd61003fd25bd0bdc5392ac3907d39fbd4d5bfa5de91352d
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/fire-protocol-shapes/fractional-cover-type/valid.ttl"^^xsd:anyURI ;
 .

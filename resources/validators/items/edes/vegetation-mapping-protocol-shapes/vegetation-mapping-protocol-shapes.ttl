@@ -1,3 +1,4 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/vegetation-mapping-protocol/>
 PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX ns1: <urn:property:>
 PREFIX ns2: <http://purl.org/linked-data/registry#>
@@ -5,17 +6,18 @@ PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/vegetation-mapping-protocol>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX sosa: <http://www.w3.org/ns/sosa/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:average-species-height:feature-type>
+:average-species-height-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation stratum_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c[`vegetation stratum`]." ;
@@ -36,17 +38,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b2 ;
+    ns1:examples _:cb29a40c00e1a4d1012b7071324f33d464e72cdf1d3e5695ed1b57efea657c4f210 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:average-species-height:unit-of-measure>
+:average-species-height-unit-of-measure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
     sh:hasValue <http://qudt.org/vocab/unit/M> ;
     sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
@@ -66,17 +68,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b2 ;
+    ns1:examples _:cb29a40c00e1a4d1012b7071324f33d464e72cdf1d3e5695ed1b57efea657c4f210 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:average-species-height:used-procedure>
+:average-species-height-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -100,17 +102,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b2 ;
+    ns1:examples _:cb29a40c00e1a4d1012b7071324f33d464e72cdf1d3e5695ed1b57efea657c4f210 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:average-species-height:value-range>
+:average-species-height-value-range
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:float ;
     sh:description "Value _MUST_ be between 0 and 200 inclusive." ;
     sh:maxInclusive 200 ;
@@ -132,17 +134,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b2 ;
+    ns1:examples _:cb29a40c00e1a4d1012b7071324f33d464e72cdf1d3e5695ed1b57efea657c4f210 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:average-species-height:value-type>
+:average-species-height-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/Float> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Float`." ;
     sh:message "The result _MUST_ be an instance of `tern:Float`." ;
@@ -163,17 +165,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b2 ;
+    ns1:examples _:cb29a40c00e1a4d1012b7071324f33d464e72cdf1d3e5695ed1b57efea657c4f210 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:feature-type>
+:condition-of-specimen-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant specimen_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb[`plant specimen`]." ;
@@ -194,18 +196,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b8 ;
+    ns1:examples _:cb48ccc24275bc6dcd3945b140029377e05656cd9b1ad361e60f30bb32719623eba ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:result-value>
+:condition-of-specimen-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Fauna specimen conditions controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/7829c93e-d5c5-59b4-abc8-3d3d62cc03f7>
@@ -234,7 +236,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b8 ;
+    ns1:examples _:cb48ccc24275bc6dcd3945b140029377e05656cd9b1ad361e60f30bb32719623eba ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -247,13 +249,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:simple-result>
+:condition-of-specimen-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -277,17 +279,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b8 ;
+    ns1:examples _:cb48ccc24275bc6dcd3945b140029377e05656cd9b1ad361e60f30bb32719623eba ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:used-procedure>
+:condition-of-specimen-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -311,17 +313,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b8 ;
+    ns1:examples _:cb48ccc24275bc6dcd3945b140029377e05656cd9b1ad361e60f30bb32719623eba ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:value-type>
+:condition-of-specimen-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -342,17 +344,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b8 ;
+    ns1:examples _:cb48ccc24275bc6dcd3945b140029377e05656cd9b1ad361e60f30bb32719623eba ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:condition-of-specimen:vocabulary>
+:condition-of-specimen-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/f0647b85-a014-4299-b23f-6aeb25e834bc>`.
 
         `<https://linked.data.gov.au/def/nrm/f0647b85-a014-4299-b23f-6aeb25e834bc>` is the IRI for "Fauna specimen conditions".""" ;
@@ -374,17 +376,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b8 ;
+    ns1:examples _:cb48ccc24275bc6dcd3945b140029377e05656cd9b1ad361e60f30bb32719623eba ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:feature-type>
+:dominant-growth-form-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation stratum_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c[`vegetation stratum`]." ;
@@ -405,18 +407,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b23 ;
+    ns1:examples _:cb3e360bf32ece4ccee9c8be3631c5ce1b21b3449c8089e3fabe0bcf7a7894e2f78 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:result-value>
+:dominant-growth-form-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Growth forms controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/9b841f72-4903-5d65-818f-d386a6eca15f>
@@ -465,7 +467,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b23 ;
+    ns1:examples _:cb3e360bf32ece4ccee9c8be3631c5ce1b21b3449c8089e3fabe0bcf7a7894e2f78 ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -478,13 +480,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:simple-result>
+:dominant-growth-form-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -508,17 +510,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b23 ;
+    ns1:examples _:cb3e360bf32ece4ccee9c8be3631c5ce1b21b3449c8089e3fabe0bcf7a7894e2f78 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:used-procedure>
+:dominant-growth-form-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -542,17 +544,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b23 ;
+    ns1:examples _:cb3e360bf32ece4ccee9c8be3631c5ce1b21b3449c8089e3fabe0bcf7a7894e2f78 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:value-type>
+:dominant-growth-form-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -573,17 +575,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b23 ;
+    ns1:examples _:cb3e360bf32ece4ccee9c8be3631c5ce1b21b3449c8089e3fabe0bcf7a7894e2f78 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:dominant-growth-form:vocabulary>
+:dominant-growth-form-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>`.
 
         `<https://linked.data.gov.au/def/nrm/d0fc07a7-3ec9-45ed-8850-885a32828d3c>` is the IRI for "Growth forms".""" ;
@@ -605,17 +607,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b23 ;
+    ns1:examples _:cb3e360bf32ece4ccee9c8be3631c5ce1b21b3449c8089e3fabe0bcf7a7894e2f78 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:field-species-name:datatype>
+:field-species-name-datatype
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:description "The value in `sosa:hasResult` _MUST_ be xsd:string." ;
     sh:message "The value of `rdf:value` _MUST_ have the datatype xsd:string." ;
@@ -635,17 +637,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b58 ;
+    ns1:examples _:cb3d572bb273f251197d99b6c690e8a275a12ffe21787a7b5fcde9f45ece7f02821 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:field-species-name:feature-type>
+:field-species-name-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation stratum_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c[`vegetation stratum`]." ;
@@ -666,17 +668,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b58 ;
+    ns1:examples _:cb3d572bb273f251197d99b6c690e8a275a12ffe21787a7b5fcde9f45ece7f02821 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:field-species-name:simple-result>
+:field-species-name-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -700,17 +702,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b58 ;
+    ns1:examples _:cb3d572bb273f251197d99b6c690e8a275a12ffe21787a7b5fcde9f45ece7f02821 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:field-species-name:used-procedure>
+:field-species-name-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -734,17 +736,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b58 ;
+    ns1:examples _:cb3d572bb273f251197d99b6c690e8a275a12ffe21787a7b5fcde9f45ece7f02821 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:field-species-name:value-type>
+:field-species-name-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/Text> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Text`." ;
     sh:message "The result _MUST_ be an instance of `tern:Text`." ;
@@ -765,17 +767,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b58 ;
+    ns1:examples _:cb3d572bb273f251197d99b6c690e8a275a12ffe21787a7b5fcde9f45ece7f02821 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:fire-history:feature-type>
+:fire-history-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d[`land surface disturbance`]." ;
@@ -796,18 +798,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b64 ;
+    ns1:examples _:cb4bc9547ceb3e148a9f01668a67ea2f36c11e10457dea3beb10d7e13c063a94794 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:fire-history:result-value>
+:fire-history-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Fire history types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/be2897e6-c4ef-49af-973b-f902908939a9>
@@ -830,7 +832,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b64 ;
+    ns1:examples _:cb4bc9547ceb3e148a9f01668a67ea2f36c11e10457dea3beb10d7e13c063a94794 ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -843,13 +845,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:fire-history:simple-result>
+:fire-history-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -873,17 +875,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b64 ;
+    ns1:examples _:cb4bc9547ceb3e148a9f01668a67ea2f36c11e10457dea3beb10d7e13c063a94794 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:fire-history:used-procedure>
+:fire-history-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -907,17 +909,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b64 ;
+    ns1:examples _:cb4bc9547ceb3e148a9f01668a67ea2f36c11e10457dea3beb10d7e13c063a94794 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:fire-history:value-type>
+:fire-history-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -938,17 +940,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b64 ;
+    ns1:examples _:cb4bc9547ceb3e148a9f01668a67ea2f36c11e10457dea3beb10d7e13c063a94794 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:fire-history:vocabulary>
+:fire-history-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>`.
 
         `<https://linked.data.gov.au/def/nrm/6e9d2f51-ce64-4c67-8391-d14a8bf96b6b>` is the IRI for "Fire history types".""" ;
@@ -970,17 +972,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b64 ;
+    ns1:examples _:cb4bc9547ceb3e148a9f01668a67ea2f36c11e10457dea3beb10d7e13c063a94794 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:feature-type>
+:foliage-projective-cover-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _vegetation stratum_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/32834f36-a478-45be-97f4-ff2ff51e9f5c[`vegetation stratum`]." ;
@@ -1001,17 +1003,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b73 ;
+    ns1:examples _:cb36c76eb64b019952da8989ade7d37fa03d5ff985cbf5ce6e5914aa57dc7c50c06 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:unit-of-measure>
+:foliage-projective-cover-unit-of-measure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:PERCENT`." ;
     sh:hasValue <http://qudt.org/vocab/unit/PERCENT> ;
     sh:message "The result _MUST_ have `unit:PERCENT` as the value for `tern:unit`." ;
@@ -1031,17 +1033,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b73 ;
+    ns1:examples _:cb36c76eb64b019952da8989ade7d37fa03d5ff985cbf5ce6e5914aa57dc7c50c06 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:used-procedure>
+:foliage-projective-cover-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -1065,17 +1067,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b73 ;
+    ns1:examples _:cb36c76eb64b019952da8989ade7d37fa03d5ff985cbf5ce6e5914aa57dc7c50c06 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:value-range>
+:foliage-projective-cover-value-range
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be between 1 and 100 inclusive." ;
     sh:maxInclusive 100 ;
@@ -1097,17 +1099,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b73 ;
+    ns1:examples _:cb36c76eb64b019952da8989ade7d37fa03d5ff985cbf5ce6e5914aa57dc7c50c06 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:foliage-projective-cover:value-type>
+:foliage-projective-cover-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/Integer> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -1128,17 +1130,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b73 ;
+    ns1:examples _:cb36c76eb64b019952da8989ade7d37fa03d5ff985cbf5ce6e5914aa57dc7c50c06 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:feature-type>
+:homogeneity-measure-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant community_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
@@ -1159,17 +1161,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b79 ;
+    ns1:examples _:cb34b063959a4d4239451bd0491def13b78026d321a9a0034b94ad4b36fc292e906 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:unit-of-measure>
+:homogeneity-measure-unit-of-measure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Result value's unit of measure _MUST_ have the value `unit:M`." ;
     sh:hasValue <http://qudt.org/vocab/unit/M> ;
     sh:message "The result _MUST_ have `unit:M` as the value for `tern:unit`." ;
@@ -1189,17 +1191,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b79 ;
+    ns1:examples _:cb34b063959a4d4239451bd0491def13b78026d321a9a0034b94ad4b36fc292e906 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:used-procedure>
+:homogeneity-measure-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -1223,17 +1225,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b79 ;
+    ns1:examples _:cb34b063959a4d4239451bd0491def13b78026d321a9a0034b94ad4b36fc292e906 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:value-range>
+:homogeneity-measure-value-range
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:integer ;
     sh:description "Value _MUST_ be between 0 exclusive and 1000 inclusive." ;
     sh:maxInclusive 1000 ;
@@ -1255,17 +1257,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b79 ;
+    ns1:examples _:cb34b063959a4d4239451bd0491def13b78026d321a9a0034b94ad4b36fc292e906 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:homogeneity-measure:value-type>
+:homogeneity-measure-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/Integer> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:Integer`." ;
     sh:message "The result _MUST_ be an instance of `tern:Integer`." ;
@@ -1286,17 +1288,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b79 ;
+    ns1:examples _:cb34b063959a4d4239451bd0491def13b78026d321a9a0034b94ad4b36fc292e906 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:land-use-history:feature-type>
+:land-use-history-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/8282fb22-4135-415c-8ca2-317860d102fb[`land surface`]." ;
@@ -1317,18 +1319,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b85 ;
+    ns1:examples _:cb30daa2fd31c663cf7c3f60c33922daa53473a7dce8c6b4645bbb278aa11319d1c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:land-use-history:result-value>
+:land-use-history-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Australian Land Use and Management Classification controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/alum/1.1.2>
@@ -1546,17 +1548,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b85 ;
+    ns1:examples _:cb30daa2fd31c663cf7c3f60c33922daa53473a7dce8c6b4645bbb278aa11319d1c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:land-use-history:simple-result>
+:land-use-history-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1580,17 +1582,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b85 ;
+    ns1:examples _:cb30daa2fd31c663cf7c3f60c33922daa53473a7dce8c6b4645bbb278aa11319d1c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:land-use-history:used-procedure>
+:land-use-history-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     # `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation mapping module".""" ;
@@ -1614,17 +1616,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b85 ;
+    ns1:examples _:cb30daa2fd31c663cf7c3f60c33922daa53473a7dce8c6b4645bbb278aa11319d1c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:land-use-history:value-type>
+:land-use-history-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1645,17 +1647,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b85 ;
+    ns1:examples _:cb30daa2fd31c663cf7c3f60c33922daa53473a7dce8c6b4645bbb278aa11319d1c ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:site-disturbance:feature-type>
+:site-disturbance-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _land surface disturbance_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/7e256d28-e686-4b6a-b64a-ac1b1a8f164d[`land surface disturbance`]." ;
@@ -1676,18 +1678,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b288 ;
+    ns1:examples _:cb4cf1ad5431a8c43aa5319e7266e8b86c049b12a2ea5a486a2d236dd3c578fb5d3 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:site-disturbance:result-value>
+:site-disturbance-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the disturbance types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/8457585c-9358-5bc0-b975-0a449b304006>
@@ -1723,7 +1725,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b288 ;
+    ns1:examples _:cb4cf1ad5431a8c43aa5319e7266e8b86c049b12a2ea5a486a2d236dd3c578fb5d3 ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1736,13 +1738,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:site-disturbance:simple-result>
+:site-disturbance-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1766,17 +1768,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b288 ;
+    ns1:examples _:cb4cf1ad5431a8c43aa5319e7266e8b86c049b12a2ea5a486a2d236dd3c578fb5d3 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:site-disturbance:used-procedure>
+:site-disturbance-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -1800,17 +1802,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b288 ;
+    ns1:examples _:cb4cf1ad5431a8c43aa5319e7266e8b86c049b12a2ea5a486a2d236dd3c578fb5d3 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:site-disturbance:value-type>
+:site-disturbance-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -1831,17 +1833,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b288 ;
+    ns1:examples _:cb4cf1ad5431a8c43aa5319e7266e8b86c049b12a2ea5a486a2d236dd3c578fb5d3 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:site-disturbance:vocabulary>
+:site-disturbance-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>`.
 
         `<https://linked.data.gov.au/def/nrm/f5a470e8-d29f-4ff6-b50d-529b0444dbe4>` is the IRI for "disturbance types".""" ;
@@ -1863,17 +1865,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b288 ;
+    ns1:examples _:cb4cf1ad5431a8c43aa5319e7266e8b86c049b12a2ea5a486a2d236dd3c578fb5d3 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:feature-type>
+:vegetation-growth-stage-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant community_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/ea3a4c64-dac3-4660-809a-8ad5ced8997b[`plant community`]." ;
@@ -1894,18 +1896,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b310 ;
+    ns1:examples _:cb42a2a8f7235bb68bd2c57fba75d6000eb3747d5231ec9e125fe80453c5a05dd2a ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:result-value>
+:vegetation-growth-stage-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Vegetation growth stage types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/995b6dfd-3442-522b-a89b-71e71ebd07c9>
@@ -1931,7 +1933,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b310 ;
+    ns1:examples _:cb42a2a8f7235bb68bd2c57fba75d6000eb3747d5231ec9e125fe80453c5a05dd2a ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -1944,13 +1946,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:simple-result>
+:vegetation-growth-stage-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -1974,17 +1976,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b310 ;
+    ns1:examples _:cb42a2a8f7235bb68bd2c57fba75d6000eb3747d5231ec9e125fe80453c5a05dd2a ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:used-procedure>
+:vegetation-growth-stage-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -2008,17 +2010,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b310 ;
+    ns1:examples _:cb42a2a8f7235bb68bd2c57fba75d6000eb3747d5231ec9e125fe80453c5a05dd2a ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:value-type>
+:vegetation-growth-stage-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2039,17 +2041,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b310 ;
+    ns1:examples _:cb42a2a8f7235bb68bd2c57fba75d6000eb3747d5231ec9e125fe80453c5a05dd2a ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:vegetation-growth-stage:vocabulary>
+:vegetation-growth-stage-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>`.
 
         `<https://linked.data.gov.au/def/nrm/30985f0b-095b-50ee-8dfe-f872f73ea5a0>` is the IRI for "Vegetation growth stage types".""" ;
@@ -2071,17 +2073,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b310 ;
+    ns1:examples _:cb42a2a8f7235bb68bd2c57fba75d6000eb3747d5231ec9e125fe80453c5a05dd2a ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:feature-type>
+:voucher-specimen-sample-type-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant specimen_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb[`plant specimen`]." ;
@@ -2102,18 +2104,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b322 ;
+    ns1:examples _:cb4a3f1593fd056330cb98de55538eca97958322638ab3130ce20f1372d9e415c86 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:result-value>
+:voucher-specimen-sample-type-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Voucher specimen sample types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/fe8cac2d-e965-514a-8138-dadf6f6751fa>
@@ -2160,7 +2162,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b322 ;
+    ns1:examples _:cb4a3f1593fd056330cb98de55538eca97958322638ab3130ce20f1372d9e415c86 ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2173,13 +2175,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:simple-result>
+:voucher-specimen-sample-type-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2203,17 +2205,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b322 ;
+    ns1:examples _:cb4a3f1593fd056330cb98de55538eca97958322638ab3130ce20f1372d9e415c86 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:used-procedure>
+:voucher-specimen-sample-type-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -2237,17 +2239,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b322 ;
+    ns1:examples _:cb4a3f1593fd056330cb98de55538eca97958322638ab3130ce20f1372d9e415c86 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:value-type>
+:voucher-specimen-sample-type-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2268,17 +2270,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b322 ;
+    ns1:examples _:cb4a3f1593fd056330cb98de55538eca97958322638ab3130ce20f1372d9e415c86 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-sample-type:vocabulary>
+:voucher-specimen-sample-type-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/a3333793-95bd-47fc-ba90-b8fc65a40456>`.
 
         `<https://linked.data.gov.au/def/nrm/a3333793-95bd-47fc-ba90-b8fc65a40456>` is the IRI for "Voucher specimen sample types".""" ;
@@ -2300,17 +2302,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b322 ;
+    ns1:examples _:cb4a3f1593fd056330cb98de55538eca97958322638ab3130ce20f1372d9e415c86 ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:feature-type>
+:voucher-specimen-type-feature-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "TERN's ecologists have determined the feature type is _plant specimen_, defined by the link:https://www.publish.csiro.au/book/5230/[Australian Soil and Land Survey Field Handbook]." ;
     sh:hasValue <http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb> ;
     sh:message "The value of `tern:featureType` _MUST_ be link: http://linked.data.gov.au/def/tern-cv/2e122e23-881c-43fa-a921-a8745f016ceb[`plant specimen`]." ;
@@ -2331,18 +2333,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b355 ;
+    ns1:examples _:cb3ff52c2d1f3319bef78fd3c9025888bc04259a8d442a628a25390f73daec4f72a ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:result-value>
+:voucher-specimen-type-result-value
     a
         sh:PropertyShape ,
         <urn:class:Controlled> ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "The value in `sosa:hasResult` _MUST_ be a value in `sh:in`, which is the Voucher specimen types controlled vocabulary." ;
     sh:in (
         <https://linked.data.gov.au/def/nrm/aa52280b-a63f-5a6d-b3bd-6045a379df00>
@@ -2371,7 +2373,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b355 ;
+    ns1:examples _:cb3ff52c2d1f3319bef78fd3c9025888bc04259a8d442a628a25390f73daec4f72a ;
     ns1:query """
         PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
         select ?values {
@@ -2384,13 +2386,13 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:simple-result>
+:voucher-specimen-type-simple-result
     a
         sh:NodeShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description "Value of `sosa:hasSimpleResult` _MUST_ be the same as the value in `sosa:hasResult`." ;
     sh:message "The observation's `sosa:hasSimpleResult` _MUST_ have a value that is the same as the value in the value node of `sosa:hasResult`." ;
     sh:name "Simple result" ;
@@ -2414,17 +2416,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     """ ;
         ] ;
     sh:targetClass <https://w3id.org/tern/ontologies/tern/Observation> ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b355 ;
+    ns1:examples _:cb3ff52c2d1f3319bef78fd3c9025888bc04259a8d442a628a25390f73daec4f72a ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:used-procedure>
+:voucher-specimen-type-used-procedure
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of method in procedure _MUST_ have the value `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>`.
 
     `<https://linked.data.gov.au/def/nrm/15361f98-7669-410e-9b04-e9be069c7508>` is the IRI for "Vegetation Mapping Module".""" ;
@@ -2448,17 +2450,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b355 ;
+    ns1:examples _:cb3ff52c2d1f3319bef78fd3c9025888bc04259a8d442a628a25390f73daec4f72a ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:value-type>
+:voucher-specimen-type-value-type
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:class <https://w3id.org/tern/ontologies/tern/IRI> ;
     sh:description "The value of `sosa:hasResult` _MUST_ be a `tern:IRI`." ;
     sh:message "The result _MUST_ be an instance of `tern:IRI`." ;
@@ -2479,17 +2481,17 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     }
     """ ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b355 ;
+    ns1:examples _:cb3ff52c2d1f3319bef78fd3c9025888bc04259a8d442a628a25390f73daec4f72a ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol-shapes:voucher-specimen-type:vocabulary>
+:voucher-specimen-type-vocabulary
     a
         sh:PropertyShape ,
         <urn:class:Requirement> ;
     dcterms:source "Ecological Monitoring System - Australia Protocols" ;
     ns2:status ns2:statusSubmitted ;
-    rdfs:isDefinedBy <urn:edes:shapes:vegetation-mapping-protocol> ;
+    rdfs:isDefinedBy sg: ;
     sh:description """IRI of `tern:vocabulary` in `sosa:hasResult` _MUST_ have the value `<https://linked.data.gov.au/def/nrm/bd389ad0-db83-4f22-b32a-4a4ebedb737d>`.
 
         `<https://linked.data.gov.au/def/nrm/bd389ad0-db83-4f22-b32a-4a4ebedb737d>` is the IRI for "Voucher specimen types".""" ;
@@ -2511,79 +2513,80 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
                 sosa:hasResult ?this .
         }""" ;
         ] ;
-    ns1:examples _:nb109dfa8ec7748a989af1ddc76852797b355 ;
+    ns1:examples _:cb3ff52c2d1f3319bef78fd3c9025888bc04259a8d442a628a25390f73daec4f72a ;
     ns1:validator "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/shapes.ttl"^^xsd:anyURI ;
 .
 
-<urn:edes:shapes:vegetation-mapping-protocol>
+sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
     schema:description "EDES Vegetation Mapping Protocol Shapes Graph" ;
     schema:name "EDES Vegetation Mapping Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
 .
 
-_:nb109dfa8ec7748a989af1ddc76852797b2
+_:cb29a40c00e1a4d1012b7071324f33d464e72cdf1d3e5695ed1b57efea657c4f210
     ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/invalid.ttl"^^xsd:anyURI ;
     ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/average-species-height/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nb109dfa8ec7748a989af1ddc76852797b58
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nb109dfa8ec7748a989af1ddc76852797b73
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nb109dfa8ec7748a989af1ddc76852797b79
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nb109dfa8ec7748a989af1ddc76852797b85
+_:cb30daa2fd31c663cf7c3f60c33922daa53473a7dce8c6b4645bbb278aa11319d1c
     ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/invalid.ttl"^^xsd:anyURI ;
     ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/land-use-history/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nb109dfa8ec7748a989af1ddc76852797b23
+_:cb34b063959a4d4239451bd0491def13b78026d321a9a0034b94ad4b36fc292e906
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/homogeneity-measure/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb36c76eb64b019952da8989ade7d37fa03d5ff985cbf5ce6e5914aa57dc7c50c06
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/foliage-projective-cover/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb3d572bb273f251197d99b6c690e8a275a12ffe21787a7b5fcde9f45ece7f02821
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/field-species-name/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb3e360bf32ece4ccee9c8be3631c5ce1b21b3449c8089e3fabe0bcf7a7894e2f78
     ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/invalid.ttl"^^xsd:anyURI ;
     ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/dominant-growth-form/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nb109dfa8ec7748a989af1ddc76852797b288
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nb109dfa8ec7748a989af1ddc76852797b310
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nb109dfa8ec7748a989af1ddc76852797b322
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/valid.ttl"^^xsd:anyURI ;
-.
-
-_:nb109dfa8ec7748a989af1ddc76852797b355
+_:cb3ff52c2d1f3319bef78fd3c9025888bc04259a8d442a628a25390f73daec4f72a
     ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/invalid.ttl"^^xsd:anyURI ;
     ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-type/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nb109dfa8ec7748a989af1ddc76852797b64
+_:cb42a2a8f7235bb68bd2c57fba75d6000eb3747d5231ec9e125fe80453c5a05dd2a
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/vegetation-growth-stage/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb48ccc24275bc6dcd3945b140029377e05656cd9b1ad361e60f30bb32719623eba
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4a3f1593fd056330cb98de55538eca97958322638ab3130ce20f1372d9e415c86
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/voucher-specimen-sample-type/valid.ttl"^^xsd:anyURI ;
+.
+
+_:cb4bc9547ceb3e148a9f01668a67ea2f36c11e10457dea3beb10d7e13c063a94794
     ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/invalid.ttl"^^xsd:anyURI ;
     ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/fire-history/valid.ttl"^^xsd:anyURI ;
 .
 
-_:nb109dfa8ec7748a989af1ddc76852797b8
-    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/invalid.ttl"^^xsd:anyURI ;
-    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/condition-of-specimen/valid.ttl"^^xsd:anyURI ;
+_:cb4cf1ad5431a8c43aa5319e7266e8b86c049b12a2ea5a486a2d236dd3c578fb5d3
+    ns1:invalidExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/invalid.ttl"^^xsd:anyURI ;
+    ns1:validExample "https://github.com/ternaustralia/dawe-rlp-spec/blob/main/shapes/vegetation-mapping-protocol-shapes/site-disturbance/valid.ttl"^^xsd:anyURI ;
 .

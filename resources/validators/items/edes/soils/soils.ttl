@@ -1,23 +1,26 @@
+PREFIX : <https://linked.data.gov.au/def/edes/validator/soils/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator/soils>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-<urn:edes:shapes:soils>
+sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     owl:imports
-        <urn:edes:shapes:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes> ,
-        <urn:edes:shapes:soil-sample-pit-protocol-shapes> ,
-        <urn:edes:shapes:soil-soil-bulk-density-protocol-shapes> ,
-        <urn:edes:shapes:soil-soil-site-observations-and-pit-characterisation-protocol-shapes> ,
-        <urn:edes:shapes:soil-standard-sub-pit-and-metagenomics-protocol-shapes> ;
+        <https://linked.data.gov.au/def/edes/validator/soil-enhanced-sub-pit-and-metagenomics-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/soil-sample-pit-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/soil-soil-bulk-density-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/soil-soil-site-observations-and-pit-characterisation-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/soil-standard-sub-pit-and-metagenomics-protocol-shapes> ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
-    schema:dateModified "2026-08-14"^^xsd:date ;
+    schema:dateModified "2026-08-17"^^xsd:date ;
     schema:description "EDES Soils Shapes Graph" ;
     schema:name "EDES Soils Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
+    schema:version "1" ;
 .
