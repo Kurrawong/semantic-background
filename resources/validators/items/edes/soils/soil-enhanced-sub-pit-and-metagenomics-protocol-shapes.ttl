@@ -408,7 +408,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:soil-enhanced-sub-pit-and-metagenomics-protocol-shapes namespace." ;
     schema:name "EDES Soil Enhanced Sub Pit And Metagenomics Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb20f98f6b2ccce44cb8c200c7ce7a6f5b93a32deda8629cf689137762c2ba4facf

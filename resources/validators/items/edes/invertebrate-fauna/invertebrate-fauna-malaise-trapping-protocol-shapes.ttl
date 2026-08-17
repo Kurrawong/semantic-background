@@ -2408,7 +2408,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:invertebrate-fauna-malaise-trapping-protocol-shapes namespace." ;
     schema:name "EDES Invertebrate Fauna Malaise Trapping Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb3c5bd0bd1c0b4ab7154bc3f9f69cdb9f75f623bdb060a2d3023844f0e9b10d53c

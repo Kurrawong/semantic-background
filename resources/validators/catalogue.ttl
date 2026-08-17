@@ -103,5 +103,5 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Semantic Background Validators" ;
     schema:publisher <https://kurrawong.ai> ;
     schema:status astatus:stable ;
-    schema:version "14" ;
+    schema:version "15" ;
 .

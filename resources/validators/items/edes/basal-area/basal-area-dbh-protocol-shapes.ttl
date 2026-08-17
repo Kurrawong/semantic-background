@@ -1259,7 +1259,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:basal-area-dbh-protocol-shapes namespace." ;
     schema:name "EDES Basal Area DBH Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb327e3f3cc797479dd5c8c4b52e428d87d7d62df23b19e73164531d2d2d00954e8

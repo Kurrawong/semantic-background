@@ -1457,7 +1457,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:invertebrate-fauna-rapid-ground-trapping-protocol-shapes namespace." ;
     schema:name "EDES Invertebrate Fauna Rapid Ground Trapping Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb2b72f5d14f10d0c62432a2109651ce501bff09fc6a2da1eefd90f95a1cfef16b1

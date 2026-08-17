@@ -21,7 +21,7 @@ sg:
     schema:description "EDES Meta Shapes Graph" ;
     schema:name "EDES Meta Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 :controlled-query

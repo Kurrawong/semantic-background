@@ -795,7 +795,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:basal-area-basal-wedge-protocol-shapes namespace." ;
     schema:name "EDES Basal Area Basal Wedge Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb26f38942330750c10e470d1187b0ec66a6dd83f983b1434c2e16cdc1886115d03

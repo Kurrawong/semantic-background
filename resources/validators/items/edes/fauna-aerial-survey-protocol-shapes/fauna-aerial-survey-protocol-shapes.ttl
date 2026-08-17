@@ -1831,7 +1831,7 @@ sg:
     schema:description "EDES Fauna Aerial Survey Protocol Shapes Graph" ;
     schema:name "EDES Fauna Aerial Survey Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb3755b06ca369e5694c11e109253e8596b9020f2378f6d3578224840a6127af482

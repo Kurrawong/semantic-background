@@ -215,7 +215,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:plant-tissue-vouchering-enhanced-protocol-shapes namespace." ;
     schema:name "EDES Plant Tissue Vouchering Enhanced Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb43c264fc45c51895aa9d7998d50c412be8ae5302c501d28f07fe9ee3c9c61efde

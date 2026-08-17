@@ -4157,7 +4157,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes namespace." ;
     schema:name "EDES Sign Based Fauna Survey Within Plot Belt Transect Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb26ced563b939e44f840e54ffcc6dbf2d2cebf539077eee8593b0119b37d4749d6

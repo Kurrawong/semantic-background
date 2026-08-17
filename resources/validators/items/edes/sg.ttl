@@ -36,5 +36,5 @@ sg:
     schema:description "Ecological Data Exchange Specification Shapes Graph" ;
     schema:name "Ecological Data Exchange Specification Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .

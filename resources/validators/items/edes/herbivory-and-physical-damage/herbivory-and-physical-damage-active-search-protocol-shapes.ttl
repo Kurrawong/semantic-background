@@ -2857,7 +2857,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:herbivory-and-physical-damage-active-search-protocol-shapes namespace." ;
     schema:name "EDES Herbivory And Physical Damage Active Search Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb2fbdc714ecd0fd391827ee75238d91cb1e25046be18356be1f378422ee2acc128

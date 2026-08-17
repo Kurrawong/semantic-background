@@ -1169,7 +1169,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:floristics-enhanced-protocol-shapes namespace." ;
     schema:name "EDES Floristics Enhanced Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb37a140a7f5fa9223e86e337efd900aa0eeab41ef05fb1ee37d8a20047bed1faa3

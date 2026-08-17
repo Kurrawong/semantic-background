@@ -1947,7 +1947,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:invertebrate-fauna-active-sampling-protocol-shapes namespace." ;
     schema:name "EDES Invertebrate Fauna Active Sampling Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb3a702628b3890c693e82a9e7e0c4b2413a47acd4a6f7bb70668fd07cd7d887701

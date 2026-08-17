@@ -6380,7 +6380,7 @@ sg:
     schema:description "EDES Opportune Protocol Shapes Graph" ;
     schema:name "EDES Opportune Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb232f3cbdc1530e7589c0055638f9d3036fd7ad2b40d07daab2eb57d949ba4b2dd

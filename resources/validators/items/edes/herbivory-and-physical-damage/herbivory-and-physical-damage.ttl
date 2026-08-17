@@ -20,5 +20,5 @@ sg:
     schema:description "EDES Herbivory And Physical Damage Shapes Graph" ;
     schema:name "EDES Herbivory And Physical Damage Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .

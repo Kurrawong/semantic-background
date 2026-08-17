@@ -1639,7 +1639,7 @@ sg:
     schema:description "EDES Coarse Woody Debris Protocol Shapes Graph" ;
     schema:name "EDES Coarse Woody Debris Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb26e318732e397e99893d29baad5dad573a1e209d250191e0323254c32ff0acd5e

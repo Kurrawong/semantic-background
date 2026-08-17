@@ -595,7 +595,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:soil-soil-bulk-density-protocol-shapes namespace." ;
     schema:name "EDES Soil Soil Bulk Density Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb289b3d09a7c5cc96e38d3a49598703b35f9f3986bf9c96f45543f744e11bd92e9

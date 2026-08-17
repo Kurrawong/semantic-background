@@ -2519,7 +2519,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:herbivory-and-physical-damage-off-plot-belt-transect-protocol-shapes namespace." ;
     schema:name "EDES Herbivory And Physical Damage Off Plot Belt Transect Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb356c3b18145377c733450823bdbf8cd9b006d905aab7fcaa0f93344dbd85a913d

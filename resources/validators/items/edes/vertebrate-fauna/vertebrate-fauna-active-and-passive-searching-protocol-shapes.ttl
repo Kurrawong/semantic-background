@@ -6469,7 +6469,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:vertebrate-fauna-active-and-passive-searching-protocol-shapes namespace." ;
     schema:name "EDES Vertebrate Fauna Active And Passive Searching Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb293b73b32a118eb4bb4f3871a86121dcd72071ca52edcdf6200fcc733ca05a232

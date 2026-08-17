@@ -2810,7 +2810,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:vertebrate-fauna-bird-survey-protocol-shapes namespace." ;
     schema:name "EDES Vertebrate Fauna Bird Survey Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb3e7a9637a72c177983641ec4524e6a4253d43222bd344a0654e88849f84512a81

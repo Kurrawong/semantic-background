@@ -22,5 +22,5 @@ sg:
     schema:description "EDES Sign Based Fauna Shapes Graph" ;
     schema:name "EDES Sign Based Fauna Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .

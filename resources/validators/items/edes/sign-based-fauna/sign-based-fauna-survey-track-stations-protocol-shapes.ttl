@@ -2075,7 +2075,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:sign-based-fauna-survey-track-stations-protocol-shapes namespace." ;
     schema:name "EDES Sign Based Fauna Survey Track Stations Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb33dc930ae7bb871b1f119248ddb2f8c1f3b03be6d5a8778d825ddf75a9e04ab00

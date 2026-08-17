@@ -2497,7 +2497,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:plot-description-standard-protocol-shapes namespace." ;
     schema:name "EDES Plot Description Standard Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb291cd79c11bc5d565d3525616ddf91778622c37568583b359f6a852bad32208b1

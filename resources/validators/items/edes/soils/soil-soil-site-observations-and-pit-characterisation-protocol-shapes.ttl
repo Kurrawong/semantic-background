@@ -20211,7 +20211,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:soil-soil-site-observations-and-pit-characterisation-protocol-shapes namespace." ;
     schema:name "EDES Soil Soil Site Observations And Pit Characterisation Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb1dd9b14f3bf167c4acebbb4e4d0fed11fc08dc43155f81be1487b3667104a9d7e

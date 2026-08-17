@@ -577,7 +577,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:camera-traps-deployment-protocol-shapes namespace." ;
     schema:name "EDES Camera Traps Deployment Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb27f1318ce9c04ed28feb125f22c809e9c26a1baa5d54797d4ab6d018c9061bc4b

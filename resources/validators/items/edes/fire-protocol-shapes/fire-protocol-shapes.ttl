@@ -2518,7 +2518,7 @@ sg:
     schema:description "EDES Fire Protocol Shapes Graph" ;
     schema:name "EDES Fire Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb3172018fbff1cb87d5c62bc9006f53c64c3589899666a68ea39125d8c9c5e7147

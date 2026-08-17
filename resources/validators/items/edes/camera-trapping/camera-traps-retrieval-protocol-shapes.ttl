@@ -185,7 +185,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:camera-traps-retrieval-protocol-shapes namespace." ;
     schema:name "EDES Camera Traps Retrieval Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb0

@@ -3785,7 +3785,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes namespace." ;
     schema:name "EDES Sign Based Fauna Survey Off Plot Belt Transect Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb1ec55b145ee4a55572c2e413d396eef7c431004ac99522b4f1aa050a11bd52504

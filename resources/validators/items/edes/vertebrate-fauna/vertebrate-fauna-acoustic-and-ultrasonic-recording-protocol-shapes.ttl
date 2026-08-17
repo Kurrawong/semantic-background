@@ -4403,7 +4403,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes namespace." ;
     schema:name "EDES Vertebrate Fauna Acoustic And Ultrasonic Recording Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb36b42046005b7bf7e7e025149ce99c18c9e722747c516843f102e8592261d959e

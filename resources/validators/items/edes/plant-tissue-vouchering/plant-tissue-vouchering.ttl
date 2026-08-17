@@ -19,5 +19,5 @@ sg:
     schema:description "EDES Plant Tissue Vouchering Shapes Graph" ;
     schema:name "EDES Plant Tissue Vouchering Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .

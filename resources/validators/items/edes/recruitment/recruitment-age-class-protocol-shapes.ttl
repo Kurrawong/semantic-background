@@ -1518,7 +1518,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:recruitment-age-class-protocol-shapes namespace." ;
     schema:name "EDES Recruitment Age Class Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb34ae163182922253b7147adb7ace1b9b669ad295e8f045dee5e09ed02622171e8

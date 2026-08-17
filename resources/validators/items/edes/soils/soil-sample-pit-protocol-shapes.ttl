@@ -216,7 +216,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:soil-sample-pit-protocol-shapes namespace." ;
     schema:name "EDES Soil Sample Pit Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb21bb2d738b40153c74cb39ce9b5ac6fc9b52e74679a04d5cdaf1d19c90e559930

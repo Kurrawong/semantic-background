@@ -2493,7 +2493,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:fauna-ground-counts-transects-protocol-shapes namespace." ;
     schema:name "EDES Fauna Ground Counts Transects Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb32654523f7b8d594e050d933004daa28a9ea4f714499c7c0369c7ddef523e1677

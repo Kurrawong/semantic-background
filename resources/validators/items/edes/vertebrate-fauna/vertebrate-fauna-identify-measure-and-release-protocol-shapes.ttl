@@ -6453,7 +6453,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:vertebrate-fauna-identify-measure-and-release-protocol-shapes namespace." ;
     schema:name "EDES Vertebrate Fauna Identify Measure And Release Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb3236ae784931b5d037d69c2f0ee9ae9b4fac9c881a85ec67081f942f2bfe5da71

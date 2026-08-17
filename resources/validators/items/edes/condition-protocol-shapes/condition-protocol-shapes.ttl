@@ -6135,7 +6135,7 @@ sg:
     schema:description "EDES Condition Protocol Shapes Graph" ;
     schema:name "EDES Condition Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb296602ac88f14e4177477c2a94ab5955ba46c579658479f59d7070a2e1f3ca77f

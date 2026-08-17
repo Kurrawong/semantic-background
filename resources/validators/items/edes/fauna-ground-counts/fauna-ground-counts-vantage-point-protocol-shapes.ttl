@@ -2493,7 +2493,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:fauna-ground-counts-vantage-point-protocol-shapes namespace." ;
     schema:name "EDES Fauna Ground Counts Vantage Point Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb32d7cab87caf1bbcf7ad4bdbc57bf0f475184be5b1ddca4d52f09422a17a85496

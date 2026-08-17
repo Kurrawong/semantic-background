@@ -2528,7 +2528,7 @@ sg:
     schema:description "EDES Vegetation Mapping Protocol Shapes Graph" ;
     schema:name "EDES Vegetation Mapping Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb29a40c00e1a4d1012b7071324f33d464e72cdf1d3e5695ed1b57efea657c4f210

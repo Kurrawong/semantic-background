@@ -1087,7 +1087,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:cover-standard-protocol-shapes namespace." ;
     schema:name "EDES Cover Standard Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb33a776e50a1ffc9a82cf86ed9d6eff65cd79e942901847f7654b76f4ed0763828

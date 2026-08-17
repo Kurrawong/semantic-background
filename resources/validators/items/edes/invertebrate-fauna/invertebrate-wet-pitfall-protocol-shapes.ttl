@@ -1457,7 +1457,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:invertebrate-wet-pitfall-protocol-shapes namespace." ;
     schema:name "EDES Invertebrate Wet Pitfall Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb3951d0e153760fb1513d6b661a782b0d27388e8880a1a86f9a8fd479708d086e5

@@ -5710,7 +5710,7 @@ sg:
     schema:description "SHACL shapes in the urn:shapes:recruitment-survivorship-protocol-shapes namespace." ;
     schema:name "EDES Recruitment Survivorship Protocol Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
 
 _:cb25229c1257ba5b451561528a7a20f069c98ea80da9e5a89db74d368190d938af9

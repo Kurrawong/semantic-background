@@ -19,5 +19,5 @@ sg:
     schema:description "EDES Plot Description Shapes Graph" ;
     schema:name "EDES Plot Description Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "1" ;
+    schema:version "2" ;
 .
