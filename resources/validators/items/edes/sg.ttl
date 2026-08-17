@@ -1,7 +1,7 @@
-PREFIX : <urn:edes:shapes/>
+PREFIX : <https://linked.data.gov.au/def/edes/validator/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX schema: <https://schema.org/>
-PREFIX sg: <urn:edes:shapes>
+PREFIX sg: <https://linked.data.gov.au/def/edes/validator>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
@@ -10,25 +10,25 @@ sg:
         owl:Ontology ,
         sh:ShapesGraph ;
     owl:imports
-        <https://linked.data.gov.au/def/edes/validator/basal-area> ,
-        <https://linked.data.gov.au/def/edes/validator/camera-trapping> ,
-        <https://linked.data.gov.au/def/edes/validator/coarse-woody-debris-protocol> ,
-        <https://linked.data.gov.au/def/edes/validator/condition-protocol> ,
-        <https://linked.data.gov.au/def/edes/validator/cover> ,
-        <https://linked.data.gov.au/def/edes/validator/fauna-aerial-survey-protocol> ,
-        <https://linked.data.gov.au/def/edes/validator/fauna-ground-counts> ,
-        <https://linked.data.gov.au/def/edes/validator/fire-protocol> ,
-        <https://linked.data.gov.au/def/edes/validator/floristics> ,
-        <https://linked.data.gov.au/def/edes/validator/herbivory-and-physical-damage> ,
-        <https://linked.data.gov.au/def/edes/validator/invertebrate-fauna> ,
-        <https://linked.data.gov.au/def/edes/validator/opportune-protocol> ,
-        <https://linked.data.gov.au/def/edes/validator/plant-tissue-vouchering> ,
-        <https://linked.data.gov.au/def/edes/validator/plot-description> ,
-        <https://linked.data.gov.au/def/edes/validator/recruitment> ,
-        <https://linked.data.gov.au/def/edes/validator/sign-based-fauna> ,
-        <https://linked.data.gov.au/def/edes/validator/soils> ,
-        <https://linked.data.gov.au/def/edes/validator/vegetation-mapping-protocol> ,
-        <https://linked.data.gov.au/def/edes/validator/vertebrate-fauna> ;
+        :basal-area ,
+        :camera-trapping ,
+        :coarse-woody-debris-protocol ,
+        :condition-protocol ,
+        :cover ,
+        :fauna-aerial-survey-protocol ,
+        :fauna-ground-counts ,
+        :fire-protocol ,
+        :floristics ,
+        :herbivory-and-physical-damage ,
+        :invertebrate-fauna ,
+        :opportune-protocol ,
+        :plant-tissue-vouchering ,
+        :plot-description ,
+        :recruitment ,
+        :sign-based-fauna ,
+        :soils ,
+        :vegetation-mapping-protocol ,
+        :vertebrate-fauna ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
@@ -36,5 +36,5 @@ sg:
     schema:description "Ecological Data Exchange Specification Shapes Graph" ;
     schema:name "Ecological Data Exchange Specification Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/tern> ;
-    schema:version "2" ;
+    schema:version "3" ;
 .

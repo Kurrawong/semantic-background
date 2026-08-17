@@ -1,20 +1,18 @@
-PREFIX : <https://linked.data.gov.au/def/edes/validator/sign-based-fauna/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX schema: <https://schema.org/>
-PREFIX sg: <https://linked.data.gov.au/def/edes/validator/sign-based-fauna>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-sg:
+<https://linked.data.gov.au/def/edes/validator/sign-based-fauna>
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     owl:imports
-        sg:-survey-off-plot-belt-transect-protocol-shapes ,
-        sg:-survey-plot-sign-search-protocol-shapes ,
-        sg:-survey-track-stations-protocol-shapes ,
-        sg:-survey-vehicle-track-protocol-shapes ,
-        sg:-survey-within-plot-belt-transect-protocol-shapes ;
+        <https://linked.data.gov.au/def/edes/validator/sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/sign-based-fauna-survey-plot-sign-search-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/sign-based-fauna-survey-track-stations-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/sign-based-fauna-survey-vehicle-track-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/sign-based-fauna-survey-within-plot-belt-transect-protocol-shapes> ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;

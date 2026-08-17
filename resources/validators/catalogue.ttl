@@ -98,10 +98,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://olis.dev/sg-validator> ,
         <https://prez.dev/manifest-validator> ,
         <https://w3id.org/tern/shapes/tern/> ,
-        <urn:edes:shapes> ;
+        <https://linked.data.gov.au/def/edes/validator> ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Semantic Background Validators" ;
     schema:publisher <https://kurrawong.ai> ;
     schema:status astatus:stable ;
-    schema:version "15" ;
+    schema:version "16" ;
 .

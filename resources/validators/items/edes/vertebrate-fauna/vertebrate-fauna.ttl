@@ -1,19 +1,17 @@
-PREFIX : <https://linked.data.gov.au/def/edes/validator/vertebrate-fauna/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX schema: <https://schema.org/>
-PREFIX sg: <https://linked.data.gov.au/def/edes/validator/vertebrate-fauna>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
-sg:
+<https://linked.data.gov.au/def/edes/validator/vertebrate-fauna>
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     owl:imports
-        sg:-acoustic-and-ultrasonic-recording-protocol-shapes ,
-        sg:-active-and-passive-searching-protocol-shapes ,
-        sg:-bird-survey-protocol-shapes ,
-        sg:-identify-measure-and-release-protocol-shapes ;
+        <https://linked.data.gov.au/def/edes/validator/vertebrate-fauna-acoustic-and-ultrasonic-recording-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/vertebrate-fauna-active-and-passive-searching-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/vertebrate-fauna-bird-survey-protocol-shapes> ,
+        <https://linked.data.gov.au/def/edes/validator/vertebrate-fauna-identify-measure-and-release-protocol-shapes> ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;
