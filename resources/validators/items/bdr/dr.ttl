@@ -1,18 +1,22 @@
 PREFIX : <https://linked.data.gov.au/def/bdr-pr/dr/validator/>
 PREFIX dr: <https://linked.data.gov.au/def/bdr-pr/dr/>
-PREFIX ont: <https://linked.data.gov.au/def/bdr-pr/dr/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/bdr-pr/dr/validator>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX tern: <https://w3id.org/tern/ontologies/tern/>
 PREFIX time: <http://www.w3.org/2006/time#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
+:2.0
+    schema:name "2.0" ;
+.
+
 :dataset-class-shape
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property
         :embargo-period-property ,
         :embargoed-until-property ;
@@ -23,7 +27,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :embargo-period-property
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:class time:DurationDescription ;
     sh:message "A Dataset that uses an embargo period predicate must use it to indicate an instance of the class time:DurationDescription from OWL Time" ;
     sh:path dr:embargoPeriod ;
@@ -32,7 +36,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :embargoed-until-property
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "A Dataset that uses an embargoed until predicate must use it to indicate a xsd:date, xsd:dateTime or xsd:dateTimeStamp literal value" ;
     sh:or (
         
@@ -58,15 +62,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://www.dcceew.gov.au"^^xsd:anyURI ;
 .
 
-ont:
-    a owl:Ontology ;
-    owl:versionIRI :1.0 ;
+sg:
+    a
+        owl:Ontology ,
+        sh:ShapesGraph ;
+    owl:versionIRI :2.0 ;
     owl:versionInfo "1.0 First version" ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;
     schema:dateCreated "2025-02-15"^^xsd:date ;
-    schema:dateModified "2026-04-07"^^xsd:date ;
+    schema:dateModified "2026-08-18"^^xsd:date ;
     schema:description "SHACL validator for the BDR Data Release Model"@en ;
     schema:hasPart :dataset-class-shape ;
     schema:name "BDR Data Release Model Validator"@en ;
     schema:publisher <https://linked.data.gov.au/org/dcceew> ;
+    schema:version "2.0" ;
 .
