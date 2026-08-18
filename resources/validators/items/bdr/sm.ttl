@@ -67,7 +67,7 @@ sg:
             sh:message "Each role indicated for a Resource Descriptor a member of the Submission Manifest Model Resource Roles Vocabulary, indicated with the skos:inScheme predicate for the role Concept" ;
             sh:minCount 1 ;
             sh:path skos:inScheme ;
-            sh:value <https://linked.data.gov.au/dataset/bdr/smrr> ;
+            sh:value smrr-cs: ;
         ] ;
     sh:targetObjectsOf prof:hasRole ;
 .
