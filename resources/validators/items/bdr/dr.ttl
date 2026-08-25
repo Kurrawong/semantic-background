@@ -63,9 +63,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 sg:
-    a
-        owl:Ontology ,
-        sh:ShapesGraph ;
+    a sh:ShapesGraph ;
     owl:versionIRI :2.0 ;
     owl:versionInfo "1.0 First version" ;
     schema:creator <https://linked.data.gov.au/org/dcceew> ;

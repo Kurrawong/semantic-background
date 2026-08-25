@@ -4147,9 +4147,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 sg:
-    a
-        owl:Ontology ,
-        sh:ShapesGraph ;
+    a sh:ShapesGraph ;
     schema:contributor <https://kurrawong.ai> ;
     schema:creator <https://linked.data.gov.au/org/tern> ;
     schema:dateCreated "2026-07-31"^^xsd:date ;

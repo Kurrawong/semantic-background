@@ -4,9 +4,7 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 <https://linked.data.gov.au/def/edes/validator/sign-based-fauna>
-    a
-        owl:Ontology ,
-        sh:ShapesGraph ;
+    a sh:ShapesGraph ;
     owl:imports
         <https://linked.data.gov.au/def/edes/validator/sign-based-fauna-survey-off-plot-belt-transect-protocol-shapes> ,
         <https://linked.data.gov.au/def/edes/validator/sign-based-fauna-survey-plot-sign-search-protocol-shapes> ,
