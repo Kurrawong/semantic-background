@@ -1,13 +1,13 @@
 PREFIX : <https://linked.data.gov.au/def/vocpub/validator/>
 PREFIX dcat: <http://www.w3.org/ns/dcat#>
 PREFIX dcterms: <http://purl.org/dc/terms/>
-PREFIX ont: <https://linked.data.gov.au/def/vocpub/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX reg: <http://purl.org/linked-data/registry#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/vocpub/validator>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX time: <http://www.w3.org/2006/time#>
@@ -15,7 +15,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.02-03
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :ConceptSchemeType ;
     sh:targetNode skos:ConceptScheme ;
     schema:description "Requirement 2.1.02-03" ;
@@ -24,8 +24,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.04
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.04 Each vocabulary MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.1.04 Each vocabulary MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that MUST give textual literal values. Only one definition per language is allowed" ;
     sh:property
         :definition ,
         :prefLabel ;
@@ -36,8 +36,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.05
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.05 Each vocabulary MUST have exactly one created date and exactly one modified date indicated using the schema:dateCreated and schema:dateModified or dcterms:created and dcterms:modified predicates respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal value" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.1.05 Each vocabulary MUST have exactly one created date and exactly one modified date indicated using the schema:dateCreated and schema:dateModified or dcterms:created and dcterms:modified predicates respectively that MUST be either an xsd:date, xsd:dateTime, xsd:dateTimeStamp, xsd:gYearMonth or xsd:gYear literal value" ;
     sh:property
         :created ,
         :modified ;
@@ -48,8 +48,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.06
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.06 Each vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.1.06 Each vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization. A prov:qualifiedAttribution predicate indicating an Agent with the prov:hadRole predicate indicating the value isorole:originator or isorole:publisher may be used instead of schema:creator & schema:publisher, respectively" ;
     sh:property
         :creator ,
         :publisher ;
@@ -60,7 +60,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.07
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Requirement 2.1.07 The origins of a Concept Scheme MUST be indicated by at least one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of schema:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
     sh:or (
         :provenance-wasDerivedFrom
@@ -82,7 +82,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.09
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :at-least-one-concept ;
     sh:targetClass skos:ConceptScheme ;
     schema:description "Requirement 2.1.09" ;
@@ -91,7 +91,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.10
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :status ;
     sh:targetClass skos:ConceptScheme ;
     schema:description "Requirement 2.1.10" ;
@@ -100,7 +100,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.11
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Requirement 2.1.11 The derivation status of the vocabulary SHOULD be given should be given with the predicate prov:qualifiedDerivation indicating a Blank Node that contains the predicated prov:entity, to indicate the vocabulary derived from and prov:hadRole to indicate the mode of derivation which SHOULD be taken from the Vocabulary Derivation Modes vocabulary (https://linked.data.gov.au/def/vocdermods)" ;
     sh:property :qualified-derivation ;
     sh:targetClass skos:ConceptScheme ;
@@ -110,7 +110,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.11b
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :qualified-derivation-entity ;
     sh:targetObjectsOf prov:qualifiedDerivation ;
     schema:description
@@ -121,7 +121,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.11c
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :qualified-derivation-role ;
     sh:targetObjectsOf prov:qualifiedDerivation ;
     schema:description "Requirement 2.1.11c" ;
@@ -130,7 +130,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.12
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :theming ;
     sh:severity sh:Warning ;
     sh:targetClass skos:ConceptScheme ;
@@ -140,7 +140,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.13
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :license ;
     sh:targetClass skos:ConceptScheme ;
     schema:description "Requirement 2.1.13" ;
@@ -149,7 +149,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.14
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :copyright-holder ;
     sh:severity sh:Warning ;
     sh:targetClass skos:ConceptScheme ;
@@ -157,23 +157,31 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "Requirement 2.1.14" ;
 .
 
+:Requirement-2.1.15
+    a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:property :code-repository ;
+    sh:severity sh:Warning ;
+    sh:targetClass skos:ConceptScheme ;
+    schema:description "Requirement 2.1.15" ;
+    schema:name "Requirement 2.1.15" ;
+.
+
 :Requirement-2.2.01
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.04 Each Collection and Concept MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.1.01 Each Collection MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that MUST give textual literal values. Only one definition per language is allowed" ;
     sh:property
         :definition ,
         :prefLabel ;
-    sh:targetClass
-        skos:Collection ,
-        skos:Concept ;
+    sh:targetClass skos:Collection ;
     schema:description "Requirement 2.2.01" ;
     schema:name "Requirement 2.2.01" ;
 .
 
 :Requirement-2.2.02
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Requirement 2.2.02 The origins of a Collection, if different from its containing Concept Scheme, SHOULD be indicated by at least one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of schema:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
     sh:or (
         :provenance-wasDerivedFrom
@@ -190,7 +198,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.2.03
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :in-scheme ;
     sh:targetClass skos:Collection ;
     schema:description "Requirement 2.2.03" ;
@@ -199,17 +207,49 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.2.04
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :member ;
     sh:targetClass skos:Collection ;
     schema:description "Requirement 2.2.04" ;
     schema:name "Requirement 2.2.04" ;
 .
 
+:Requirement-2.2.05
+    a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.2.05 Each Collection in a vocabulary SHOULD indicate the vocabulary that defines it by use of the rdfs:isDefinedBy predicate indicating a Concept Scheme instance. If no such predicate is given, the Concept Scheme in the file that a Collection is provided in is understood to be the defining Concept Scheme" ;
+    sh:property :is-defined-by ;
+    sh:severity sh:Warning ;
+    sh:targetClass skos:Collection ;
+    schema:description "Requirement 2.2.05" ;
+    schema:name "Requirement 2.2.05" ;
+.
+
+:Requirement-2.2.06
+    a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:property :status ;
+    sh:targetClass skos:Collection ;
+    schema:description "Requirement 2.2.06" ;
+    schema:name "Requirement 2.2.06" ;
+.
+
+:Requirement-2.3.01
+    a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.01 Each Concept MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that MUST give textual literal values. Only one definition per language is allowed" ;
+    sh:property
+        :definition ,
+        :prefLabel ;
+    sh:targetClass skos:Concept ;
+    schema:description "Requirement 2.3.01" ;
+    schema:name "Requirement 2.3.01" ;
+.
+
 :Requirement-2.3.02
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.3.2 Each Concept in a vocabulary MAY indicate the vocabulary that defines it by use of the rdfs:isDefinedBy predicate indicating a Concept Scheme instance. If no such predicate is given, the Concept Scheme in the file that a Concept is provided in is understood to be the defining Concept Scheme" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.2 Each Concept in a vocabulary SHOULD indicate the vocabulary that defines it by use of the rdfs:isDefinedBy predicate indicating a Concept Scheme instance. If no such predicate is given, the Concept Scheme in the file that a Concept is provided in is understood to be the defining Concept Scheme" ;
     sh:property :is-defined-by ;
     sh:severity sh:Warning ;
     sh:targetClass skos:Concept ;
@@ -219,7 +259,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.03
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :in-hierarchy ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.03" ;
@@ -228,8 +268,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.04
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.02 The origins of a Concept, if different from its containing Concept Scheme, SHOULD be indicated by at least one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of schema:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.04 The origins of a Concept, if different from its containing Concept Scheme, SHOULD be indicated by at least one of the following predicates: skos:historyNote, schema:citation, prov:wasDerivedFrom. dcterms:source MAY be used instead of schema:citation and dcterms:provenance MAY be used instead of skos:historyNote but the schema.org and SKOS predicates are preferred" ;
     sh:or (
         :provenance-wasDerivedFrom
         :provenance-citation
@@ -245,7 +285,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.05
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :status ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.05" ;
@@ -254,7 +294,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.10
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :notation ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.10" ;
@@ -263,8 +303,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.11
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its range value MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its object MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
     sh:targetClass skos:Concept ;
     sh:xone (
         :concept-historyNote-string
@@ -276,7 +316,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.12
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :concept-wasDerivedFrom ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.12" ;
@@ -285,7 +325,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.13
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :concept-revisionOf ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.13" ;
@@ -294,7 +334,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.14
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :concept-replaces ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.14" ;
@@ -303,7 +343,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.15
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :concept-isReplacedBy ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.15" ;
@@ -312,7 +352,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.16
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :concept-version ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.16" ;
@@ -321,7 +361,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.17
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :concept-date-created ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.17" ;
@@ -330,7 +370,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.18
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :concept-date-modified ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.18" ;
@@ -339,7 +379,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.19
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :concept-temporalCoverage ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.19" ;
@@ -348,7 +388,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.3.19-start
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:and (
         :temporal-entity-start-date-type
         :temporal-entity-end-date-type
@@ -360,14 +400,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
             ) ;
         ]
     ) ;
-    sh:message "Requirement 2.3.19 If a Concept indicates a temporal coverage, its range value MUST be a temporal entity (time:TemporalEntity) with either or both schema:startDate and schema:endDate values which must be dates (xsd:date)" ;
+    sh:message "Requirement 2.3.19 If a Concept indicates a temporal coverage, its object MUST be a temporal entity (time:TemporalEntity) with either or both schema:startDate and schema:endDate values which MUST be dates (xsd:date)" ;
     sh:targetClass time:TemporalEntity ;
     schema:name "Requirement 2.3.19-temporal-entity" ;
 .
 
 :Requirement-2.3.20
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :broaders-and-narrowers-must-be-concepts ;
     sh:targetClass skos:Concept ;
     schema:description "Requirement 2.3.20" ;
@@ -376,7 +416,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.4.02
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:targetClass
         schema:Organization ,
         schema:Person ;
@@ -390,7 +430,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.4.03a
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :agent-url ;
     sh:targetClass schema:Organization ;
     schema:description "Requirement 2.4.03a" ;
@@ -399,16 +439,22 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.4.03b
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:property :agent-email ;
     sh:targetClass schema:Person ;
     schema:description "Requirement 2.4.03b" ;
     schema:name "Requirement 2.4.03b" ;
 .
 
+<https://linked.data.gov.au/org/agldwg>
+    a schema:Organization ;
+    schema:name "Australian Government Linked Data Working Group" ;
+    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+.
+
 :ConceptSchemeType
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Requirement 2.1.02 Each vocabulary MUST be presented as a single Concept Scheme object & Requirement 2.1.3 Each vocabulary MUST be presented in a single RDF file which does not contain information other than that which is directly part of the vocabulary" ;
     sh:path
         [
@@ -426,31 +472,30 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :agent-email
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:anyURI ;
-    sh:message "Requirement 2.4.3 Each Person MUST indicate an email address with the schema:email predicate, pointing to an xsd:anyURI value" ;
-    sh:minCount 1 ;
+    sh:message "Requirement 2.4.3 If a Person indicates an email address with the schema:email predicate, it MUST point to an xsd:anyURI value" ;
     sh:path schema:email ;
     schema:name "agent email" ;
 .
 
 :agent-name
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype rdf:langString ;
-    sh:message "Requirement 2.4.2 Each Agent MUST have at least one name indicated with the schema:name predicate, pointing to a literal text value. If multiple names in multiple languages are desired, then multiple schema:name values are permitted with langString literals, but ony one per language" ;
+    sh:message "Requirement 2.4.2 Each Agent MUST have either one name indicated with the schema:name predicate, pointing to a literal text value or multiple names in multiple languages indicated with skos:prefLabel values pointing to langString literals, but ony one per language" ;
     sh:minCount 1 ;
-    sh:path schema:name ;
+    sh:path skos:prefLabel ;
     sh:uniqueLang true ;
     schema:name "agent name" ;
 .
 
 :agent-name2
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.4.2 Each Agent MUST have at least one name indicated with the schema:name predicate, pointing to a literal text value. If multiple names in multiple languages are desired, then multiple schema:name values are permitted with langString literals, but ony one per language" ;
+    sh:message "Requirement 2.4.2 Each Agent MUST have either one name indicated with the schema:name predicate, pointing to a literal text value or multiple names in multiple languages indicated with skos:prefLabel values pointing to langString literals, but ony one per language" ;
     sh:minCount 1 ;
     sh:path schema:name ;
     schema:name "agent name" ;
@@ -458,17 +503,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :agent-url
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:anyURI ;
-    sh:message "Requirement 2.4.3 Each Organization MUST indicate a website with the schema:url predicate, pointing to an xsd:anyURI value" ;
-    sh:minCount 1 ;
+    sh:message "Requirement 2.4.3 If an Organisation indicates a URL address with the schema:url predicate, it MUST point to an xsd:anyURI value" ;
     sh:path schema:url ;
     schema:name "agent url" ;
 .
 
 :at-least-one-concept
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:class skos:Concept ;
     sh:message "Requirement 2.1.09 Each vocabulary's Concept Scheme MUST link to at least one Concept within the vocabulary with the skos:hasTopConcept predicate" ;
     sh:minCount 1 ;
@@ -488,36 +532,52 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :broaders-and-narrowers-must-be-concepts
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:class skos:Concept ;
-    sh:message "Requirement 2.3.20 If a Concept indicates a broader Concept with skos:broader, that Concept must exist in the vocabulary" ;
-    sh:path skos:broader ;
-    schema:name "broader must be a Concept" ;
+    sh:message "Requirement 2.3.20 If a Concept indicates a broader Concept with skos:broader or a narrower one with skos:narrower, that Concept MUST exist in the same vocabulary" ;
+    sh:path
+        [
+            sh:alternativePath (
+                skos:broader
+                skos:narrower
+            ) ;
+        ] ;
+    schema:name "broader must be a Concept in same vocab" ;
+.
+
+:code-repository
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:datatype xsd:anyURI ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.15 A vocabulary SHOULD indicate a online version-controlled source code repository storing the vocabulary and related content with the schema:codeRepository predicate and if it does, the object indicated MUST be an xsd:anyURI" ;
+    sh:path schema:codeRepository ;
+    schema:name "copyright holder" ;
 .
 
 :concept-date-created
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:date ;
-    sh:message "Requirement 2.3.17 If a Concept indicates a date created, its range value MUST be a date (xsd:date)" ;
+    sh:message "Requirement 2.3.17 If a Concept MAY indicate a date created with schema:dateCreated and if it does, the object indicate MUST be a date (xsd:date)" ;
     sh:path schema:dateCreated ;
     schema:name "concept date created" ;
 .
 
 :concept-date-modified
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:date ;
-    sh:message "Requirement 2.3.18 If a Concept indicates a date modified, its range value MUST be a date (xsd:date)" ;
+    sh:message "Requirement 2.3.18 If a Concept MAY indicate a date modified with schema:dateModified and if it does, the object indicated MUST be a date (xsd:date)" ;
     sh:path schema:dateModified ;
     schema:name "concept date modified" ;
 .
 
 :concept-historyNote-lang
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype rdf:langString ;
-    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its range value MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
+    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its object MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
     sh:minCount 1 ;
     sh:path skos:historyNote ;
     sh:uniqueLang true ;
@@ -526,19 +586,19 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :concept-historyNote-none
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:maxCount 0 ;
-    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its range value MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
+    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its object MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
     sh:path skos:historyNote ;
     schema:name "concept history note none" ;
 .
 
 :concept-historyNote-string
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its range value MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
+    sh:message "Requirement 2.3.11 If a Concept indicates a skos:historyNote, its object MUST be a literal. A plain string value (xsd:string) may be used or, if values in multiple languages are desired, then multiple language string literals (rdf:langString) may be used, but ony one per language and plain strings and language strings should not be mixed" ;
     sh:minCount 1 ;
     sh:path skos:historyNote ;
     schema:name "concept history note string" ;
@@ -546,8 +606,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :concept-isReplacedBy
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.3.15 If a Concept indicates is replaced by, its range value MUST be an IRI" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.15 If a Concept is replaced by another Concept, it SHOULD indicate this with dcterms:isReplacedBy and if it does, the object indicated MUST be the other Concept's IRI" ;
     sh:nodeKind sh:IRI ;
     sh:path dcterms:isReplacedBy ;
     schema:name "is replaced by" ;
@@ -555,8 +615,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :concept-replaces
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.3.14 If a Concept indicates replaces, its range value MUST be an IRI" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.14 If a Concept replaces another Concept, it SHOULD indicate this with dcterms:replaces and if it does, the object indicated MUST be the other Concept's IRI" ;
     sh:nodeKind sh:IRI ;
     sh:path dcterms:replaces ;
     schema:name "replaces" ;
@@ -564,8 +624,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :concept-revisionOf
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.3.13 If a Concept indicates revision of, its range value MUST be an IRI" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.13 If a Concept is a revision of another Concept, it SHOULD indicate this with prov:revisionOf and if it does, the object indicated MUST be the other Concept's IRI" ;
     sh:nodeKind sh:IRI ;
     sh:path prov:revisionOf ;
     schema:name "concept revision of" ;
@@ -573,26 +633,26 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :concept-temporalCoverage
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:class time:TemporalEntity ;
-    sh:message "Requirement 2.3.19 If a Concept indicates a temporal coverage, its range value MUST be a temporal entity (time:TemporalEntity) with either or both schema:startDate and schema:endDate values which must be dates (xsd:date)" ;
+    sh:message "Requirement 2.3.19 If a Concept indicates a temporal coverage, it MUST do so with the predicate schema:temporalCoverage and its object MUST be a temporal entity (time:TemporalEntity) with either or both schema:startDate and schema:endDate values which MUST be dates (xsd:date)" ;
     sh:path schema:temporalCoverage ;
     schema:name "concept date modified" ;
 .
 
 :concept-version
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:datatype xsd:string ;
-    sh:message "Requirement 2.3.16 If a Concept indicates version, its range value MUST be a plain string (xsd:string)" ;
+    sh:message "Requirement 2.3.16 If a Concept is versioned, it SHOULD indicate this with the scehma:version predicate whose object MUST be a plain string (xsd:string)" ;
     sh:path schema:version ;
     schema:name "concept version" ;
 .
 
 :concept-wasDerivedFrom
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.3.12 If a Concept indicates was derived from, its range value MUST be an IRI" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.12 If a Concept was derived from another Concept it SHOULD indicate this with the prov:wasDerivedFrom predicate whose object MUST be the other Concept's IRI" ;
     sh:nodeKind sh:IRI ;
     sh:path prov:wasDerivedFrom ;
     schema:name "concept was derived from" ;
@@ -600,7 +660,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :copyright-holder
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Requirement 2.1.14 The copyright holder for the vocabulary SHOULD be given using the schema:copyrightHolder predicate preferentially indicating the IRI of an Agent or a Blank Node instance of an Agent containing details as per Agent requirements. A prov:qualifiedAttribution predicate indicating an Agent with the prov:hadRole predicate indicating the value isorole:rightsHolder may be used instead of schema:copyrightHolder" ;
     sh:nodeKind sh:IRI ;
     sh:path schema:copyrightHolder ;
@@ -609,9 +669,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :created
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.15 - created date - violated" ;
+    sh:message "Requirement 2.1.05 Created date MUST be indicated with schema:dateCreated or dcterms:created indicating an XSD date, dateTime, dateTimeStamp, gYearMonth or gYear literal value" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -626,6 +686,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         [
             sh:datatype xsd:dateTimeStamp ;
         ]
+        
+        [
+            sh:datatype xsd:gYearMonth ;
+        ]
+        
+        [
+            sh:datatype xsd:gYear ;
+        ]
     ) ;
     sh:path
         [
@@ -639,8 +707,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :creator
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.06 Each vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization. This error message is for creator" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.1.06 A vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization. This error message is for creator" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -664,7 +732,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :in-hierarchy
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Requirement 2.3.03 Each Concept in a vocabulary MUST indicate that it appears within that vocabulary's hierarchy of Concepts either directly by use of the skos:topConceptOf predicate indicating the vocabulary or indirectly by use of one or more skos:broader / skos:narrower predicates placing the Concept within a chain of other Concepts, the end of which is indicated as a top concept of the vocabulary" ;
     sh:minCount 1 ;
     sh:or (
@@ -702,28 +770,18 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :in-scheme
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.2.03 All Collections MUST indicate they are within the Concept Scheme of the vocabulary with the skos:inScheme predicate" ;
+    sh:message "Requirement 2.2.03 All Collections MUST indicate Concept Schemes they are within with the skos:inScheme predicate" ;
     sh:minCount 1 ;
     sh:path skos:inScheme ;
     schema:name "in scheme" ;
 .
 
-:is-defined-by
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:maxCount 1 ;
-    sh:message "Requirement 2.2.03 Collections and Concepts SHOULD indicate the vocabulary that defines it with the rdfs:isDefinedBy predicate" ;
-    sh:minCount 1 ;
-    sh:path rdfs:isDefinedBy ;
-    schema:name "is defined by" ;
-.
-
 :license
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.13 Vocabularies SHOULD present any licence pertaining to its use using the schema:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in text, a literal text field may be indicated." ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.1.13 A vocabulary SHOULD present any licence pertaining to its use using the schema:license predicate preferentially indicating the IRI of a license if in RDF form or a literal URL (datatype xsd:anyURI) if online but not in RDF form. If the licence is expressed in text, a literal text field may be indicated." ;
     sh:or (
         
         [
@@ -745,8 +803,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :member
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.04 A Collection MUST indicate at least one Concept instance that is within the collection with use of the skos:member predicate. The Concept need not be defined by the Concept Scheme that defines the Collection" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.2.04 Each Collection MUST indicate at least one Concept instance that is within the collection with use of the skos:member predicate. The Concept need not be defined by the Concept Scheme that defines the Collection" ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
     sh:path skos:member ;
@@ -755,9 +813,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :modified
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.15 - modified date - violated" ;
+    sh:message "Requirement 2.1.05 Created date MUST be indicated with schema:dateCreated or dcterms:created indicating an XSD date, dateTime, dateTimeStamp, gYearMonth or gYear literal value" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -772,6 +830,14 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         [
             sh:datatype xsd:dateTimeStamp ;
         ]
+        
+        [
+            sh:datatype xsd:gYearMonth ;
+        ]
+        
+        [
+            sh:datatype xsd:gYear ;
+        ]
     ) ;
     sh:path
         [
@@ -785,8 +851,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :notation
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.3.10 If a Concept indicates a skos:notation, its range value MUST be a literal. Note that it SHOULD be of a custom datatype" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.10 If a Concept indicates a skos:notation, its object MUST be a literal which SHOULD be of a custom datatype" ;
     sh:nodeKind sh:Literal ;
     sh:path skos:notation ;
     sh:severity sh:Violation ;
@@ -795,8 +861,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :publisher
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.06 Each vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization. This error message is for publisher" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.1.06 A vocabulary MUST have at least one creator, indicated using schema:creator or dcterms:creator predicate and exactly one publisher, indicated using schema:publisher or dcterms:publisher, all of which MUST be IRIs indicating instances of schema:Person, or schema:Organization. This error message is for publisher" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -820,7 +886,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :qualified-derivation
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Requirement 2.1.11 The derivation status of the vocabulary SHOULD be given should be given with the predicate prov:qualifiedDerivation indicating a Blank Node that contains the predicated prov:entity, to indicate the vocabulary derived from and prov:hadRole to indicate the mode of derivation which SHOULD be taken from the Vocabulary Derivation Modes vocabulary (https://linked.data.gov.au/def/vocdermods)" ;
     sh:nodeKind sh:BlankNodeOrIRI ;
     sh:path prov:qualifiedDerivation ;
@@ -829,9 +895,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :qualified-derivation-entity
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.11 If a vocabulary has a qualified derivation given, it MUST then give a prove:entity predicate within the derivation, indicating the IRI of the vocabulary it is derived from" ;
+    sh:message "Requirement 2.1.11 If a vocabulary has a qualified derivation indicated with prov:qualifiedDerivation, it then MUST give a prov:entity predicate within the derivation whose object is the IRI of the vocabulary it is derived from" ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
     sh:path prov:entity ;
@@ -840,9 +906,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :qualified-derivation-role
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.11 If a vocabulary has a qualified derivation given, it MUST then give a prove:hadRole predicate within the derivation, indicating the IRI of the role" ;
+    sh:message "Requirement 2.1.11 If a vocabulary has a qualified derivation indicated with prov:qualifiedDerivation, it then MUST give a prov:hadRole predicate within the derivation whose object is the IRI of the role" ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
     sh:path prov:hadRole ;
@@ -851,9 +917,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :temporal-entity-end-date-one
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.3.19 A Temporal Entity (time:TemporalEntity) must indicate either or both a start date (schema:startDate) and an end date (schema:endDate) value" ;
+    sh:message "Requirement 2.3.19 If a Temporal Entity (time:TemporalEntity) indicates a start or end date (schema:startDate, schema:endDate) value, it MUST be an xsd:date, xsd:gYearMonth or xsd:gYear literal" ;
     sh:minCount 1 ;
     sh:path schema:endDate ;
     schema:name "temporal entity end date one" ;
@@ -861,18 +927,31 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :temporal-entity-end-date-type
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:datatype xsd:date ;
-    sh:message "Requirement 2.3.19 If a Temporal Entity (time:TemporalEntity) indicates an end date (schema:startDate) value, it must be a literal date (xsd:date)" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.19 If a Temporal Entity (time:TemporalEntity) indicates a start or end date (schema:startDate, schema:endDate) value, it MUST be an xsd:date, xsd:gYearMonth or xsd:gYear literal" ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:date ;
+        ]
+        
+        [
+            sh:datatype xsd:gYearMonth ;
+        ]
+        
+        [
+            sh:datatype xsd:gYear ;
+        ]
+    ) ;
     sh:path schema:endDate ;
     schema:name "temporal entity end date type" ;
 .
 
 :temporal-entity-start-date-one
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.3.19 A Temporal Entity (time:TemporalEntity) must indicate either or both a start date (schema:startDate) and an end date (schema:endDate) value" ;
+    sh:message "Requirement 2.3.19 If a Temporal Entity (time:TemporalEntity) indicates a start or end date (schema:startDate, schema:endDate) value, it MUST be an xsd:date, xsd:gYearMonth or xsd:gYear literal" ;
     sh:minCount 1 ;
     sh:path schema:startDate ;
     schema:name "temporal entity end date one" ;
@@ -880,17 +959,30 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :temporal-entity-start-date-type
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:datatype xsd:date ;
-    sh:message "Requirement 2.3.19 If a Temporal Entity (time:TemporalEntity) indicates a start date (schema:startDate) value, it must be a literal date (xsd:date)" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.3.19 If a Temporal Entity (time:TemporalEntity) indicates a start or end date (schema:startDate, schema:endDate) value, it MUST be an xsd:date, xsd:gYearMonth or xsd:gYear literal" ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:date ;
+        ]
+        
+        [
+            sh:datatype xsd:gYearMonth ;
+        ]
+        
+        [
+            sh:datatype xsd:gYear ;
+        ]
+    ) ;
     sh:path schema:startDate ;
     schema:name "temporal entity start date type" ;
 .
 
 :theming
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.12 High-level theming of a vocabulary SHOULD be given by using the schema:keywords predicate indicating Concepts from another vocabulary. Alternatively, dcat:theme MAY be used. Text literal values for either predicate SHOULD NOT be used" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.1.12 High-level theming of a vocabulary SHOULD be given using the schema:keywords predicate indicating Concepts from another vocabulary. Alternatively, dcat:theme MAY be used. Text literal values for either predicate SHOULD NOT be used" ;
     sh:nodeKind sh:IRI ;
     sh:path
         [
@@ -902,16 +994,27 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "theming" ;
 .
 
-<https://linked.data.gov.au/org/agldwg>
-    a schema:Organization ;
-    schema:name "Australian Government Linked Data Working Group" ;
-    schema:url "https://www.linked.data.gov.au"^^xsd:anyURI ;
+<https://orcid.org/0000-0002-8742-7730>
+    a schema:Person ;
+    schema:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
+    schema:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
+    schema:name "Nicholas J. Car" ;
+.
+
+:is-defined-by
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.2.05 & 2.3.02 All Collections and Concepts SHOULD indicate the vocabulary that defines them with the rdfs:isDefinedBy predicate" ;
+    sh:minCount 1 ;
+    sh:path rdfs:isDefinedBy ;
+    schema:name "is defined by" ;
 .
 
 :definition
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.04, 2.2.01 or 2.3.01 Each vocabulary, Collection or Concept MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.1.04, 2.2.01 or 2.3.01 Each vocabulary, Collection or Concept MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that MUST give textual literal values. Only one definition per language is allowed" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -930,9 +1033,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :prefLabel
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.04, 2.2.1 or 2.3.1 Each vocabulary, Collection or Concept MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
+    sh:message "Requirement 2.1.04, 2.2.01 or 2.3.01 Each vocabulary, Collection or Concept MUST have exactly one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that MUST give textual literal values. Only one definition per language is allowed" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -949,33 +1052,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "prefLabel" ;
 .
 
-:status
-    a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
-    sh:maxCount 1 ;
-    sh:message "Requirement 2.1.10 The status of a vocabulary or a Concept SHOULD be given with the predicate schema:status and MAY be given with the predicate reg:status. Either, if used, MUST indicate a Concept from the Registry Statuses vocabulary (https://linked.data.gov.au/def/reg-statuses)" ;
-    sh:nodeKind sh:IRI ;
-    sh:path
-        [
-            sh:alternativePath (
-                schema:status
-                reg:status
-            ) ;
-        ] ;
-    sh:severity sh:Warning ;
-    schema:name "status" ;
-.
-
-<https://orcid.org/0000-0002-8742-7730>
-    a schema:Person ;
-    schema:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
-    schema:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
-    schema:name "Nicholas J. Car" ;
-.
-
 :provenance-citation
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "schema:citation SHOULD be supplied and, if it is, MUST be a literal of type xsd:string or xsd:anyURI" ;
     sh:minCount 1 ;
     sh:or (
@@ -995,7 +1074,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :provenance-dcterms-provenance
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "dcterms:provenance SHOULD be supplied and, if it is, MUST be a literal of type xsd:string or rdf:langString" ;
     sh:minCount 1 ;
     sh:or (
@@ -1015,7 +1094,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :provenance-historyNote
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "skos:historyNote SHOULD be supplied and, if it is, MUST be a literal of type xsd:string or rdf:langString" ;
     sh:minCount 1 ;
     sh:or (
@@ -1035,7 +1114,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :provenance-source
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "dcterms:source SHOULD be supplied and, if it is, MUST be a literal of type xsd:string or xsd:anyURI" ;
     sh:minCount 1 ;
     sh:or (
@@ -1055,7 +1134,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :provenance-wasDerivedFrom
     a sh:PropertyShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "prov:wasDerivedFrom SHOULD be supplied and, if it is, MUST be an IRI" ;
     sh:minCount 1 ;
     sh:nodeKind sh:IRI ;
@@ -1064,10 +1143,123 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:name "provenance wasDerivedFrom" ;
 .
 
-ont:
-    a owl:Ontology ;
-    owl:versionIRI :5.6 ;
-    owl:versionInfo """5.6 2023-05: Test that broader/narrower indicates a Concept in this vocab (2.3.02), allow topConceptOf or hasTopConcept for 2.1.08 & 2.3.03; use same test for 2.1.08 & 2.3.03
+:status
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:maxCount 1 ;
+    sh:message "Requirement 2.1.10 The status of a vocabulary, Collection or a Concept SHOULD be given with the predicate schema:status and MAY be given with the predicate reg:status. Either, if used, MUST indicate a Concept from the Registry Statuses vocabulary (https://linked.data.gov.au/def/reg-statuses)" ;
+    sh:nodeKind sh:IRI ;
+    sh:path
+        [
+            sh:alternativePath (
+                schema:status
+                reg:status
+            ) ;
+        ] ;
+    sh:severity sh:Warning ;
+    schema:name "status" ;
+.
+
+sg:
+    a
+        owl:Ontology ,
+        sh:ShapesGraph ;
+    rdfs:member
+        :ConceptSchemeType ,
+        :Requirement-2.1.02-03 ,
+        :Requirement-2.1.04 ,
+        :Requirement-2.1.05 ,
+        :Requirement-2.1.06 ,
+        :Requirement-2.1.07 ,
+        :Requirement-2.1.08 ,
+        :Requirement-2.1.09 ,
+        :Requirement-2.1.10 ,
+        :Requirement-2.1.11 ,
+        :Requirement-2.1.11b ,
+        :Requirement-2.1.11c ,
+        :Requirement-2.1.12 ,
+        :Requirement-2.1.13 ,
+        :Requirement-2.1.14 ,
+        :Requirement-2.1.15 ,
+        :Requirement-2.2.01 ,
+        :Requirement-2.2.02 ,
+        :Requirement-2.2.03 ,
+        :Requirement-2.2.04 ,
+        :Requirement-2.2.05 ,
+        :Requirement-2.2.06 ,
+        :Requirement-2.3.01 ,
+        :Requirement-2.3.02 ,
+        :Requirement-2.3.03 ,
+        :Requirement-2.3.04 ,
+        :Requirement-2.3.05 ,
+        :Requirement-2.3.10 ,
+        :Requirement-2.3.11 ,
+        :Requirement-2.3.12 ,
+        :Requirement-2.3.13 ,
+        :Requirement-2.3.14 ,
+        :Requirement-2.3.15 ,
+        :Requirement-2.3.16 ,
+        :Requirement-2.3.17 ,
+        :Requirement-2.3.18 ,
+        :Requirement-2.3.19 ,
+        :Requirement-2.3.19-start ,
+        :Requirement-2.3.20 ,
+        :Requirement-2.4.02 ,
+        :Requirement-2.4.03a ,
+        :Requirement-2.4.03b ,
+        :agent-email ,
+        :agent-name ,
+        :agent-name2 ,
+        :agent-url ,
+        :at-least-one-concept ,
+        :broaders-and-narrowers-must-be-concepts ,
+        :code-repository ,
+        :concept-date-created ,
+        :concept-date-modified ,
+        :concept-historyNote-lang ,
+        :concept-historyNote-none ,
+        :concept-historyNote-string ,
+        :concept-isReplacedBy ,
+        :concept-replaces ,
+        :concept-revisionOf ,
+        :concept-temporalCoverage ,
+        :concept-version ,
+        :concept-wasDerivedFrom ,
+        :copyright-holder ,
+        :created ,
+        :creator ,
+        :definition ,
+        :in-hierarchy ,
+        :in-scheme ,
+        :is-defined-by ,
+        :license ,
+        :member ,
+        :modified ,
+        :notation ,
+        :prefLabel ,
+        :provenance-citation ,
+        :provenance-dcterms-provenance ,
+        :provenance-historyNote ,
+        :provenance-source ,
+        :provenance-wasDerivedFrom ,
+        :publisher ,
+        :qualified-derivation ,
+        :qualified-derivation-entity ,
+        :qualified-derivation-role ,
+        :status ,
+        :temporal-entity-end-date-one ,
+        :temporal-entity-end-date-type ,
+        :temporal-entity-start-date-one ,
+        :temporal-entity-start-date-type ,
+        :theming ;
+    owl:versionIRI :5.9 ;
+    owl:versionInfo """5.9 2026-09: Further systematisation of messages and alignment of text in specification with validator; improved text surrounding Reqs in Spec
+
+5.8 2026-09: Aligned error messages in spec and validator; Temporal Entity start/end more literal date types
+
+5.7 2026-09: Allowed more XSD forms of date - gYear, gYearMonth. Dual classed ontology as a sh:ShapesGraph. Relaxed Agent requirement for URL or email. Allowed Agent to use prefLabel for name
+
+5.6 2026-05: Test that broader/narrower indicates a Concept in this vocab (2.3.02), allow topConceptOf or hasTopConcept for 2.1.08 & 2.3.03; use same test for 2.1.08 & 2.3.03
 
 5.5 2026-02: Added Shapes for Reqs 2.3.10 - 2.3.19
 
@@ -1117,10 +1309,10 @@ ont:
     schema:copyrightHolder <https://orcid.org/0000-0002-8742-7730> ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2020-06-14"^^xsd:date ;
-    schema:dateModified "2026-05-13"^^xsd:date ;
+    schema:dateModified "2026-09-22"^^xsd:date ;
     schema:description "SHACL validator for the VocPub Profile" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "VocPub Validator" ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
-    schema:version "5.6" ;
+    schema:version "5.9" ;
 .

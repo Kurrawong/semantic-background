@@ -96,6 +96,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://linked.data.gov.au/def/valpub/validator> ,
         <https://linked.data.gov.au/def/vocpub/validator> ,
         <https://linked.data.gov.au/def/vocpub/validator-ga> ,
+        <https://linked.data.gov.au/def/vocpub/validator-multilang> ,
         <https://olis.dev/sg-validator> ,
         <https://prez.dev/manifest-validator> ,
         <https://w3id.org/tern/shapes/tern/> ,

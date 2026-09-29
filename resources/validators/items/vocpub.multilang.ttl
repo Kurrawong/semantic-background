@@ -1,36 +1,20 @@
-PREFIX : <https://linked.data.gov.au/def/vocpub/validator-ga/>
+PREFIX : <https://linked.data.gov.au/def/vocpub/validator-multilang/>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
-PREFIX sg: <https://linked.data.gov.au/def/vocpub/validator-ga>
+PREFIX sg: <https://linked.data.gov.au/def/vocpub/validator-multilang>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-
-:Requirement-ECAT-ID
-    a sh:NodeShape ;
-    rdfs:isDefinedBy sg: ;
-    sh:message "ECAT-ID Node Shape" ;
-    sh:property :conceptSchemeGaCatId ;
-    sh:targetClass skos:ConceptScheme ;
-    schema:name "GA.ECAT-ID Node Shape" ;
-.
-
-<https://orcid.org/0000-0002-8742-7730>
-    a schema:Person ;
-    schema:email "nicholas.car@anu.edu.au"^^xsd:anyURI ;
-    schema:identifier "https://orcid.org/0000-0002-8742-7730"^^xsd:anyURI ;
-    schema:name "Nicholas J. Car" ;
-.
 
 sg:
     a
         owl:Ontology ,
         sh:ShapesGraph ;
     rdfs:member
-        :Requirement-ECAT-ID ,
-        :conceptSchemeGaCatId ,
+        :prefLabel ,
         <https://linked.data.gov.au/def/vocpub/validator/ConceptSchemeType> ,
         <https://linked.data.gov.au/def/vocpub/validator/Requirement-2.1.02-03> ,
         <https://linked.data.gov.au/def/vocpub/validator/Requirement-2.1.04> ,
@@ -120,36 +104,36 @@ sg:
         <https://linked.data.gov.au/def/vocpub/validator/theming> ;
     owl:imports <https://linked.data.gov.au/def/vocpub/validator> ;
     owl:versionIRI :5.7 ;
-    owl:versionInfo "5.5 2026-02: Aligns with use of VocPub 5.5. eCatID requirement for Concept Scheme only" ;
-    skos:historyNote "Previous to v5.5, this validator contained all of VocPub. Since 5.5 it contains only the GA-specific Shapes so must be used with VocPub (5.5+) to validate a vocabulary completely" ;
     prof:isProfileOf <https://linked.data.gov.au/def/vocpub/validator> ;
-    schema:codeRepository "https://github.com/AGLDWG/vocpub-profile/"^^xsd:anyURI ;
-    schema:copyrightHolder <https://linked.data.gov.au/org/ga> ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2020-06-14"^^xsd:date ;
-    schema:dateIssued "2026-09-22"^^xsd:date ;
-    schema:dateModified "2026-02-25"^^xsd:date ;
-    schema:description "Geoscience Australia's additional vocabulary validation rules, to be added to VocPub" ;
-    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "VocPub Validator - GA"@en ;
-    schema:publisher <https://linked.data.gov.au/org/ga> ;
+    schema:dateModified "2025-09-22"^^xsd:date ;
+    schema:definition "SHACL validator for the VocPub Profile - multi-language variant. This Validator deactivates the standard VocPub shape that mandates just one prefLabel per Concept and requires instead one prefLabel per language."@en ;
+    schema:name "VocPub Validator - MultiLang"@en ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
     schema:version "5.7" ;
 .
 
-:conceptSchemeGaCatId
+:prefLabel
     a sh:PropertyShape ;
     rdfs:isDefinedBy sg: ;
-    sh:datatype xsd:anyURI ;
-    sh:maxCount 1 ;
-    sh:message "Requirement GA ECAT-ID: Each vocabulary MUST have exactly one identifier predicate indicating an eCatID, which means a schema:identifier predicate indicating a URL starting https://pid.geoscience.gov.au/dataset/ga/ and ending with a multi-digit number" ;
+    sh:message "Requirement 2.1.04, 2.2.1 or 2.3.1 Each vocabulary, Collection or Concept MUST have at least one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
     sh:minCount 1 ;
-    sh:path schema:identifier ;
-    sh:pattern "^https://pid.geoscience.gov.au/dataset/ga/[0-9]+$" ;
-    schema:name "ECAT-ID Property Shape" ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path skos:prefLabel ;
+    sh:uniqueLang true ;
+    schema:name "prefLabel" ;
 .
 
-<https://linked.data.gov.au/org/ga>
-    a schema:Organization ;
-    schema:name "Geoscience Australia" ;
-    schema:url "https://www.ga.gov.au"^^xsd:anyURI ;
+<https://linked.data.gov.au/def/vocpub/validator/prefLabel>
+    sh:deactivated true ;
 .
