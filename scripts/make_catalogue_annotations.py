@@ -33,7 +33,7 @@ template = \
     PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
     PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     
-    <https://kurrawong.ai/semantic-bankground/annotations>
+    <https://kurrawong.ai/semantic-background/annotations>
         a dcat:Catalog ;
         dcterms:hasPart
             {hasParts}

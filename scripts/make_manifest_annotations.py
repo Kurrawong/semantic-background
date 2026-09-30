@@ -14,7 +14,7 @@ PREFIX prez: <https://prez.dev/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX schema: <https://schema.org/>
 
-<https://kurrawong.ai/semantic-bankground/annotations-manifest>
+<https://kurrawong.ai/semantic-background/annotations-manifest>
     a prez:Manifest ;
     prof:hasResource
         [
