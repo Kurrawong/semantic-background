@@ -1,0 +1,172 @@
+PREFIX astatus: <https://linked.data.gov.au/def/reg-statuses/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX ex: <http://example.com/>
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<https://data.kurrawong.ai/sb/examples>
+    a schema:DataCatalog ;
+    schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
+    schema:creator <https://kurrawong.ai> ;
+    schema:dateCreated "2026-09-29"^^xsd:date ;
+    schema:dateModified "2026-09-30"^^xsd:date ;
+    schema:description "A catalogue of example data graphs used by KurrawongAI" ;
+    schema:hasPart
+        <https://data.kurrawong.ai/sb/examples/idncp-invalid-record> ,
+        <https://data.kurrawong.ai/sb/examples/idncp-valid-record> ,
+        <https://data.kurrawong.ai/sb/examples/provwf-valid-record> ,
+        <https://data.kurrawong.ai/sb/examples/provwf-invalid-record> ,
+        <https://data.kurrawong.ai/sb/examples/vocpub-valid-record> ,
+        <https://data.kurrawong.ai/sb/examples/vocpub-valid-warnings-record> ,
+        <https://data.kurrawong.ai/sb/examples/vocpub-invalid-record> ;
+    schema:name "Data graph examples" ;
+    schema:publisher <https://kurrawong.ai> ;
+    schema:status astatus:experimental ;
+    schema:version "1" ;
+.
+
+<https://kurrawong.ai> a schema:Organization ;
+schema:name "KurrawongAI" ;
+schema:url "https://kurrawong.ai"^^xsd:anyURI ;
+.
+
+## catalog records
+
+<https://data.kurrawong.ai/sb/examples/addr-v-record> a dcat:CatalogRecord ;
+    foaf:primaryTopic <https://data.kurrawong.ai/sb/examples/addr-v> ;
+    schema:identifier "44ca90b2dbdf529a85e87daac3a2ca6c" ;
+    schema:name "Address model valid example" ;
+    sh:suggestedShapesGraph <https://linked.data.gov.au/def/addr/validator> ;
+     ex:expectedConformance true .
+
+<https://data.kurrawong.ai/sb/examples/addr-i-record> a dcat:CatalogRecord ;
+    foaf:primaryTopic <https://data.kurrawong.ai/sb/examples/addr-i> ;
+    schema:identifier "ffdbc21c7b0f27cbd0287980bd1339ad" ;
+    schema:name "Address model invalid example" ;
+    sh:suggestedShapesGraph <https://linked.data.gov.au/def/addr/validator> ;
+     ex:expectedConformance false .
+
+<https://data.kurrawong.ai/sb/examples/idncp-invalid-record> a dcat:CatalogRecord ;
+    foaf:primaryTopic <https://data.kurrawong.ai/sb/examples/idncp-invalid> ;
+    schema:identifier "ffdbc21c7b0f27cbd0287980bd1339ad" ;  
+    schema:name "IDN Catalogue Profile invalid example" ;
+    sh:suggestedShapesGraph <https://data.idnau.org/pid/cp/validator> ;
+     ex:expectedConformance false .
+
+<https://data.kurrawong.ai/sb/examples/idncp-valid-record> a dcat:CatalogRecord ;
+    foaf:primaryTopic <https://data.kurrawong.ai/sb/examples/idncp-valid> ;
+    schema:identifier "fa0e1236a21a9b21b1bf18d588ea8909" ;
+    schema:name "IDN Catalogue Profile valid example" ;
+    sh:suggestedShapesGraph <https://data.idnau.org/pid/cp/validator> ;
+     ex:expectedConformance true .
+
+<https://data.kurrawong.ai/sb/examples/vocpub-valid-record> a dcat:CatalogRecord ;
+    foaf:primaryTopic <https://data.kurrawong.ai/sb/examples/vocpub-valid> ;
+    schema:identifier "fe9f4cc21d4312bc860db47911aa4896" ;
+    schema:name "VocPub valid example" ;
+    sh:suggestedShapesGraph <https://linked.data.gov.au/def/vocpub/validator> ;
+    ex:expectedConformance true .
+
+<https://data.kurrawong.ai/sb/examples/vocpub-invalid-record> a dcat:CatalogRecord ;
+    foaf:primaryTopic <https://data.kurrawong.ai/sb/examples/vocpub-invalid> ;
+    schema:identifier "c5faa5d36fb9829bc197dee68581bb4a" ;
+    schema:name "VocPub invalid example" ;
+    sh:suggestedShapesGraph <https://linked.data.gov.au/def/vocpub/validator> ;
+    ex:expectedConformance false .
+
+<https://data.kurrawong.ai/sb/examples/vocpub-valid-warnings-record> a dcat:CatalogRecord ;
+    foaf:primaryTopic <https://data.kurrawong.ai/sb/examples/vocpub-valid-warnings> ;
+    schema:identifier "300d005a9d6afd7580a5b62f66466bf2" ;
+    schema:name "VocPub valid with warnings example" ;
+    sh:suggestedShapesGraph <https://linked.data.gov.au/def/vocpub/validator> ;
+    ex:expectedConformance true .
+
+<https://data.kurrawong.ai/sb/examples/provwf-valid-record> a dcat:CatalogRecord ;
+    schema:name "Prov Workflow valid example" ;
+    schema:identifier "6c203b70467f2b807ab86537df0be494" .
+        # TODO: make validator
+    
+<https://data.kurrawong.ai/sb/examples/provwf-invalid-record> a dcat:CatalogRecord ;
+    schema:name "Prov Workflow invalid example" ;
+    schema:identifier "1a6b8926be8a299d86f1875f47e7464a" .
+        # TODO: make validator
+
+
+## resources
+
+<https://data.kurrawong.ai/sb/examples/vocpub-valid>
+    a dcat:Resource ;
+    dcat:distribution <https://data.kurrawong.ai/sb/examples/vocpub-valid.ttl> .
+
+<https://data.kurrawong.ai/sb/examples/vocpub-invalid>
+    a dcat:Resource ;
+    dcat:distribution <https://data.kurrawong.ai/sb/examples/vocpub-invalid.ttl> .
+
+<https://data.kurrawong.ai/sb/examples/vocpub-valid-warnings>
+    a dcat:Resource ;
+    dcat:distribution <https://data.kurrawong.ai/sb/examples/vocpub-valid-warnings.ttl> .
+
+<https://data.kurrawong.ai/sb/examples/idncp-invalid>
+    a dcat:Resource ;
+    dcat:distribution <https://data.kurrawong.ai/sb/examples/idncp-invalid.ttl> .
+
+<https://data.kurrawong.ai/sb/examples/idncp-valid>
+    a dcat:Resource ;
+    dcat:distribution <https://data.kurrawong.ai/sb/examples/idncp-valid.ttl> .
+
+<https://data.kurrawong.ai/sb/examples/addr-v>
+    a dcat:Resource ;
+    dcat:distribution <https://data.kurrawong.ai/sb/examples/addr-v.ttl> .
+
+<https://data.kurrawong.ai/sb/examples/addr-i>
+    a dcat:Resource ;
+    dcat:distribution <https://data.kurrawong.ai/sb/examples/addr-1.ttl> .
+
+
+## distributions
+
+<https://data.kurrawong.ai/sb/examples/addr-v.ttl>
+    a dcat:Distribution ;
+    dcat:downloadURL "https://github.com/Kurrawong/semantic-background/blob/main/resources/examples/items/addr-v.ttl" ;
+    dcterms:format "text/turtle" .
+
+<https://data.kurrawong.ai/sb/examples/addr-i.ttl>
+    a dcat:Distribution ;
+    dcat:downloadURL "https://github.com/Kurrawong/semantic-background/blob/main/resources/examples/items/addr-i.ttl" ;
+    dcterms:format "text/turtle" .
+
+<https://data.kurrawong.ai/sb/examples/vocpub-valid.ttl>
+    a dcat:Distribution ;
+    dcat:downloadURL "https://github.com/Kurrawong/semantic-background/blob/main/resources/examples/items/vocpub-valid.ttl" ;
+    dcterms:format "text/turtle" .
+
+<https://data.kurrawong.ai/sb/examples/vocpub-invalid.ttl>
+    a dcat:Distribution ;
+    dcat:downloadURL "https://github.com/Kurrawong/semantic-background/blob/main/resources/examples/items/vocpub-invalid.ttl" ;
+    dcterms:format "text/turtle" .
+
+<https://data.kurrawong.ai/sb/examples/vocpub-valid-warnings.ttl>
+    a dcat:Distribution ;
+    dcat:downloadURL "https://github.com/Kurrawong/semantic-background/blob/main/resources/examples/items/vocpub-valid-warnings.ttl" ;
+    dcterms:format "text/turtle" .
+
+<https://data.kurrawong.ai/sb/examples/idncp-invalid.ttl>
+    a dcat:Distribution ;
+    dcat:downloadURL "https://github.com/Kurrawong/semantic-background/blob/main/resources/examples/items/idncp-invalid.ttl" ;
+    dcterms:format "text/turtle" .
+
+<https://data.kurrawong.ai/sb/examples/idncp-valid.ttl>
+    a dcat:Distribution ;
+    dcat:downloadURL "https://github.com/Kurrawong/semantic-background/blob/main/resources/examples/items/idncp-valid.ttl" ;
+    dcterms:format "text/turtle" .
+
+
+ex:expectedConformance a rdf:Property ;
+rdfs:label "Expected conformance" ;
+rdf:range xsd:boolean ;
+.

@@ -1,0 +1,56 @@
+# DCAT Null Profile - Valid
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX dcterms: <http://purl.org/dc/terms/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX sdo: <https://schema.org/>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<http://example.com/catalogue>
+    a dcat:Catalog ;
+    dcterms:title "Example Catalogue" ;
+    dcterms:description "An example, basic, valid, DCAT catalogue for testing of the DCAT Null Profile (https://w3id.org/profile/dcatnull)"@en ;
+    dcterms:creator <https://orcid.org/0000-0002-8742-7730> ;
+    dcterms:created "2022-06-12"^^xsd:date ;
+    dcterms:modified "2022-06-12"^^xsd:date ;
+    dcterms:publisher <https://orcid.org/0000-0002-8742-7730> ;
+    dcterms:hasPart
+        <http://example.com/resource/1> ,
+        <http://example.com/resource/2> ,
+        <http://example.com/dataset/b> ;
+    dcat:dataset
+        <http://example.com/dataset/a> ,
+        <http://example.com/dataset/b> ;
+    dcterms:provenance "Created for testing purpose only: this dataset's data isn't real" ;
+.
+
+<https://orcid.org/0000-0002-8742-7730>
+    sdo:email "nick@kurrawong.net"^^xsd:anyURI ;
+    sdo:name "Nicholas J. Car" ;
+.
+
+<http://example.com/resource/1>
+    a dcat:Resource ;
+    dcterms:title "Example Resource 1" ;
+    dcterms:description "An example resource"@en ;
+.
+
+<http://example.com/resource/2>
+    a dcat:Resource ;
+    dcterms:title "Example Resource 2" ;
+    dcterms:description "A second example resource"@en ;
+.
+
+<http://example.com/dataset/a>
+    a dcat:Dataset ;
+    dcterms:title "Example Dataset a" ;
+    dcterms:description "An example dataset"@en ;
+.
+
+<http://example.com/dataset/b>
+    a dcat:Resource , dcat:Dataset ;
+    dcterms:title "Example Dataset/Resource b" ;
+    dcterms:description "A second example dataset that is also a resource"@en ;
+.
