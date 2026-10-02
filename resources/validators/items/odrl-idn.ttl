@@ -1,0 +1,608 @@
+PREFIX : <http://www.w3.org/ns/odrl/2/>
+PREFIX dcat: <http://www.w3.org/ns/dcat#>
+PREFIX id: <http://id.loc.gov/vocabulary/identifiers/>
+PREFIX ont: <https://data.idnau.org/pid/validator/odrl-idn>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX time: <http://www.w3.org/2006/time#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX validator: <https://data.idnau.org/pid/validator/odrl-idn/>
+
+ont:
+    a owl:Ontology ;
+    owl:versionIRI validator:0.1.1 ;
+    owl:versionInfo "0.1.1" ;
+    prov:wasDerivedFrom <https://github.com/w3c/poe/blob/d353e2b6f02808cba7f7f50c74ea5d045de2f746/semantics/shacl/shapes.ttl> ;
+    skos:historyNote "This validator is an IDN-maintained variant of the experimental ODRL SHACL shapes developed in the W3C Permissions and Obligations Expression Working Group repository in 2017. It has subsequently been adapted for the IDN Catalogue Profile and prospective ATNS agreement enrichment. It is not an official W3C ODRL validator."@en ;
+    schema:citation <https://www.w3.org/TR/odrl-model/> ;
+    schema:codeRepository "https://github.com/idn-au/atns-preservation"^^xsd:anyURI ;
+    schema:copyrightHolder <https://linked.data.gov.au/org/idn> ;
+    schema:copyrightNotice "(c) Indigenous Data Network, 2026" ;
+    schema:copyrightYear "2026"^^xsd:gYear ;
+    schema:creator <https://orcid.org/0000-0001-5640-3202> ;
+    schema:dateCreated "2026-08-16"^^xsd:date ;
+    schema:dateIssued "2026-10-02"^^xsd:date ;
+    schema:dateModified "2026-10-02"^^xsd:date ;
+    schema:description "An IDN variant of the experimental ODRL SHACL validator developed in the W3C Permissions and Obligations Expression Working Group repository. This variant adapts selected ODRL constraints for the IDN Catalogue Profile and adds IDN-specific completeness checks for prospective ATNS agreement enrichment. It is not an official W3C ODRL validator."@en ;
+    schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
+    schema:name "ODRL validator for IDN Catalogue Profile"@en ;
+    schema:publisher <https://linked.data.gov.au/org/idn> ;
+.
+
+<https://linked.data.gov.au/org/idn>
+    a schema:Organization ;
+    schema:name "Indigenous Data Network" ;
+    schema:url "https://mspgh.unimelb.edu.au/centres-institutes/centre-for-health-equity/research-group/indigenous-data-network"^^xsd:anyURI ;
+.
+
+<https://orcid.org/0000-0001-5640-3202> a schema:Person ;
+schema:name "Les Kneebone" ;
+schema:email "les@kurrawong.ai"^^xsd:anyURI ;
+.
+
+# Ranges
+validator:datatypeRangeShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf :datatype ;
+    sh:class rdfs:Datatype ;
+rdfs:isDefinedBy ont: ;
+schema:name "Datatype range shape" ;
+.
+
+
+validator:partyRangeShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf :assignee, :assigner ;
+    sh:deactivated true ; # use only rdfs:domain/range?
+    sh:class :Party ;
+rdfs:isDefinedBy ont: ;
+schema:name "Party range shape" ;
+.
+	
+validator:actionRangeShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf :action, :includedIn, :implies ;
+    sh:deactivated true ; # use only rdfs:domain/range?
+    sh:class :Action ;
+rdfs:isDefinedBy ont: ;
+schema:name "Action range shape" ;
+.
+	
+validator:targetRangeShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf :target ;
+    sh:class :Asset ;
+    sh:severity sh:Warning ;
+    sh:message "An ODRL target SHOULD be typed as odrl:Asset"@en ;
+rdfs:isDefinedBy ont: ;
+schema:name "Target range shape" ;
+.
+
+validator:dutyRangeShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf :remedy, :duty, :consequence, :obligation ;
+    sh:deactivated true ; # use only rdfs:domain/range?
+    sh:class :Duty ;
+rdfs:isDefinedBy ont: ;
+schema:name "Duty range shape" ;
+.	
+
+validator:rightOperandReferenceRangeShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf :rightOperandReference ;
+    sh:nodeKind sh:IRI ;
+rdfs:isDefinedBy ont: ;
+schema:name "Right operand reference range shape" ;
+.
+	
+# Remedy
+validator:RemedyShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf :remedy ;
+    sh:class :Duty ;	
+    sh:property validator:RemedyConsequencePropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Remedy shape" ;
+.
+
+# Policy
+validator:PolicyShape
+    a sh:NodeShape ;
+    sh:targetClass :Policy ;
+    sh:nodeKind sh:IRI ;
+    sh:property
+        validator:PolicyConflictPropertyShape ,
+        validator:PolicyProfilePropertyShape ,
+        validator:PolicyPermissionProhibitionTargetPropertyShape ,
+        validator:PolicyRulePropertyShape ,
+        validator:PolicyInheritanceDisjointPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Remedy node shape" ;
+.
+ 
+validator:targetCardShape
+    a sh:NodeShape ;
+    sh:property validator:TargetCardinalityPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Target card shape" ;
+.
+
+## Agreement
+
+validator:AgreementShape
+    a sh:NodeShape ;
+    sh:targetClass :Agreement ;
+    sh:property validator:AgreementPartiesPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Agreement shape"@en ;
+schema:description "Agreement shape"@en ;
+.
+
+## Offer
+
+validator:OfferShape
+    a sh:NodeShape ;
+    sh:targetClass :Offer ;
+    sh:property validator:OfferAssignerPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Offer shape" ;
+schema:description "Assigner minimum requirements shape for an Offer"@en ;
+.
+	
+validator:assignerMinShape
+    a sh:NodeShape ;
+    sh:property validator:AssignerMinimumPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Assigner minimum shape" ;
+schema:description "Minimum count for an assigner shape" ;
+sh:message "At least one assigner" ; 
+.
+ 
+validator:assigneeMinShape
+    a sh:NodeShape ;
+    sh:property validator:AssigneeMinimumPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Assignee minimum shape" ;
+schema:description "Minimum count for an assignee shape" ;
+sh:message "At least one assignee" ; 
+.
+
+# Rule
+
+validator:RuleShape
+    a sh:NodeShape ;
+    sh:targetClass :Rule ;
+    sh:property
+        validator:RuleActionPropertyShape ,
+        validator:RuleAssigneeMaximumPropertyShape ,
+        validator:RuleAssignerMaximumPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Rule shape" ;
+schema:description "Rule node shape for indicating an Assigner, Assignee and Action"@en ;
+sh:message "A Rule MUST indicate at least one assigner, at least one assignee and exactly one action" ;
+.
+
+# Duty
+
+validator:DutyShape
+    a sh:NodeShape ;
+    sh:targetClass :Duty ;
+    sh:targetObjectsOf :obligation ;
+    sh:property
+        validator:DutyActionPropertyShape ,
+        validator:DutyTargetPropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Duty completeness shape"@en ;
+    schema:description "Warning-level completeness checks for ODRL duties and obligation values."@en ;
+.
+
+## Prohibition
+
+validator:ProhibitionShape
+    a sh:NodeShape ;
+    sh:targetClass :Prohibition ;
+    sh:not [
+        a sh:NodeShape ;
+        sh:class :Permission ;
+        sh:message "Prohibition is disjoint with Permission" ;
+    ] ;
+    sh:not [
+        a sh:NodeShape ;
+        sh:class :Duty ;
+        sh:message "Prohibition is disjoint with Duty" ;
+    ] ;
+rdfs:isDefinedBy ont: ;
+schema:name "Prohibition shape" ;
+schema:description " " ;
+.
+
+# Constraint	
+
+validator:LogicConstraintShape
+    a sh:NodeShape ;
+    sh:targetObjectsOf :and ;         
+    sh:targetObjectsOf :or ;          
+    sh:targetObjectsOf :xone ;       
+    sh:property validator:LogicConstraintMemberPropertyShape ;
+        sh:message "For every RDF list used as the value of odrl:and, odrl:or, or odrl:xone, every member of that list MUST be an odrl:Constraint" ;
+rdfs:isDefinedBy ont: ;
+schema:name "Logic constraint shape" ;
+schema:description " " ;
+.
+
+validator:ConstraintShape
+    a sh:NodeShape ;
+    sh:targetClass :Constraint ;              
+    sh:property
+        validator:ConstraintOperatorPropertyShape ,
+        validator:ConstraintDatatypePropertyShape ,
+        validator:ConstraintUnitPropertyShape ,
+        validator:ConstraintStatusPropertyShape ,
+        validator:ConstraintLeftOperandPropertyShape ;
+    sh:xone ( validator:rightOperandSingleShape validator:rightOperandRefShape ) ;
+rdfs:isDefinedBy ont: ;
+schema:name "Constraint shape" ;
+schema:description "A Constraint shape indicating exclusive OR rules for right-operand and reference properties" ;
+.
+ 
+validator:rightOperandSingleShape
+    a sh:NodeShape ;          
+    sh:property validator:RightOperandPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Right Operand Single Shape" ;
+schema:description "Right Operand Single Shape indicating counts for a Constraint " ;
+.
+ 
+validator:rightOperandRefShape
+    a sh:NodeShape ;          
+    sh:property validator:RightOperandReferencePropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Right Operand Reference Shape" ;
+schema:description "Right Operand Reference Shape indicating counts for a Constraint " ;
+.
+
+# Party
+validator:PartyCollectionShape
+    a sh:NodeShape ;
+    sh:targetClass :PartyCollection ;
+    sh:xone ( validator:WithRefinementShape validator:WithoutRefinementShape ) ;
+rdfs:isDefinedBy ont: ;
+schema:name "Party collection shape" ;
+schema:description " " ;
+
+.
+ 
+validator:WithRefinementShape
+    a sh:NodeShape ;
+    sh:property
+        validator:PartyCollectionSourcePropertyShape ,
+        validator:PartyCollectionRefinementPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "With refinement node sape" ;
+schema:description "Minimum counts for a source and refinement" ;
+.	
+ 
+validator:WithoutRefinementShape
+    a sh:NodeShape ;
+    sh:property
+        validator:PartyCollectionNoSourcePropertyShape ,
+        validator:PartyCollectionNoRefinementPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Without refinement shape" ;
+schema:description "Without refinement or source shape" ;
+.
+
+# Asset
+validator:AssetCollectionShape
+    a sh:NodeShape ;
+    sh:targetClass :AssetCollection ;
+    sh:xone ( validator:WithRefinementShape validator:WithoutRefinementShape ) ;
+rdfs:isDefinedBy ont: ;
+.
+ 
+
+# Action
+validator:ActionShape
+    a sh:NodeShape ;
+    sh:targetClass :Action ;              
+    sh:property validator:ActionIncludedInPropertyShape ;
+rdfs:isDefinedBy ont: ;
+schema:name "Action includedIn shape" ;
+schema:description "Action node shape" ;
+.
+
+# Property shapes
+
+validator:RemedyConsequencePropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Remedy consequence property shape"@en ;
+    schema:description "Prevents a remedy from indicating a consequence."@en ;
+    sh:path :consequence ;
+    sh:maxCount 0 ;
+.
+
+validator:PolicyConflictPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Policy conflict property shape"@en ;
+    schema:description "Constrains a policy to at most one ODRL conflict term."@en ;
+    sh:path :conflict ;
+    sh:class :ConflictTerm ;
+    sh:maxCount 1 ;
+.
+
+validator:PolicyProfilePropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Policy profile property shape"@en ;
+    schema:description "Requires policy profile values to be IRIs."@en ;
+    sh:path :profile ;
+    sh:nodeKind sh:IRI ;
+.
+
+validator:PolicyPermissionProhibitionTargetPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Policy permission or prohibition target property shape"@en ;
+    schema:description "Applies target cardinality constraints to permissions and prohibitions in a policy."@en ;
+    sh:path [ sh:alternativePath ( :permission :prohibition ) ] ;
+    sh:node validator:targetCardShape ;
+.
+
+validator:PolicyRulePropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Policy rule property shape"@en ;
+    schema:description "Requires a policy to indicate at least one permission, prohibition or obligation."@en ;
+    sh:path [ sh:alternativePath ( :permission :prohibition :obligation ) ] ;
+    sh:minCount 1 ;
+.
+
+validator:PolicyInheritanceDisjointPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Policy inheritance disjoint property shape"@en ;
+    schema:description "Prevents circular inheritance through the inverse of odrl:inheritFrom."@en ;
+    sh:path [ sh:oneOrMorePath [ sh:inversePath :inheritFrom ] ] ;
+    sh:disjoint :inheritFrom ;
+.
+
+validator:TargetCardinalityPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Target cardinality property shape"@en ;
+    schema:description "Requires exactly one target for the rule being checked."@en ;
+    sh:path :target ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+.
+
+validator:AgreementPartiesPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Agreement parties property shape"@en ;
+    schema:description "Requires rules arising from an agreement to indicate at least one assigner and one assignee."@en ;
+    sh:message "At least one assigner and at least one assignee MUST be indicated for a Permission, Prohibition or Obligation arising from an Agreement"@en ;
+    sh:path [ sh:alternativePath ( :permission :prohibition :obligation ) ] ;
+    sh:node validator:assignerMinShape ;
+    sh:node validator:assigneeMinShape ;
+.
+
+validator:OfferAssignerPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Offer assigner property shape"@en ;
+    schema:description "Requires rules arising from an offer to indicate at least one assigner."@en ;
+    sh:message "At least one assigner MUST be indicated for a Permission, Prohibition or Obligation arising from an Offer"@en ;
+    sh:path [ sh:alternativePath ( :permission :prohibition :obligation ) ] ;
+    sh:node validator:assignerMinShape ;
+.
+
+validator:AssignerMinimumPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Assigner minimum property shape"@en ;
+    schema:description "Requires at least one assigner."@en ;
+    sh:path :assigner ;
+    sh:minCount 1 ;
+.
+
+validator:AssigneeMinimumPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Assignee minimum property shape"@en ;
+    schema:description "Requires at least one assignee."@en ;
+    sh:path :assignee ;
+    sh:minCount 1 ;
+.
+
+validator:RuleActionPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Rule action property shape"@en ;
+    schema:description "Requires an ODRL rule to indicate exactly one action."@en ;
+    sh:path :action ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "A Rule MUST indicate exactly one action"@en ;
+.
+
+validator:RuleAssigneeMaximumPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Rule assignee maximum property shape"@en ;
+    schema:description "Limits an ODRL rule to at most one directly indicated assignee."@en ;
+    sh:path :assignee ;
+    sh:maxCount 1 ;
+    sh:message "A Rule MUST indicate at most one direct assignee"@en ;
+.
+
+validator:RuleAssignerMaximumPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Rule assigner maximum property shape"@en ;
+    schema:description "Limits an ODRL rule to at most one directly indicated assigner."@en ;
+    sh:path :assigner ;
+    sh:maxCount 1 ;
+    sh:message "A Rule MUST indicate at most one direct assigner"@en ;
+.
+
+validator:DutyActionPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Duty action property shape"@en ;
+    schema:description "Warns when an ODRL duty does not indicate an action."@en ;
+    sh:path :action ;
+    sh:minCount 1 ;
+    sh:severity sh:Warning ;
+    sh:message "An ODRL Duty SHOULD indicate at least one action"@en ;
+.
+
+validator:DutyTargetPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Duty target property shape"@en ;
+    schema:description "Warns when an ODRL duty used as an obligation does not indicate a target."@en ;
+    sh:path :target ;
+    sh:minCount 1 ;
+    sh:severity sh:Warning ;
+    sh:message "An ODRL Duty used as an obligation SHOULD indicate at least one target"@en ;
+.
+
+validator:LogicConstraintMemberPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Logical constraint member property shape"@en ;
+    schema:description "Requires every member of an ODRL logical constraint list to be an ODRL Constraint."@en ;
+    sh:path ( [ sh:zeroOrMorePath rdf:rest ] rdf:first ) ;
+    sh:class :Constraint ;
+.
+
+validator:ConstraintOperatorPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Constraint operator property shape"@en ;
+    schema:description "Requires an ODRL constraint to indicate exactly one operator."@en ;
+    sh:path :operator ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "A Constraint MUST indicate exactly one operator"@en ;
+.
+
+validator:ConstraintDatatypePropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Constraint datatype property shape"@en ;
+    schema:description "Limits an ODRL constraint to at most one datatype."@en ;
+    sh:path :datatype ;
+    sh:maxCount 1 ;
+    sh:message "A Constraint MUST indicate one datatype at most"@en ;
+.
+
+validator:ConstraintUnitPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Constraint unit property shape"@en ;
+    schema:description "Limits an ODRL constraint to at most one unit."@en ;
+    sh:path :unit ;
+    sh:maxCount 1 ;
+    sh:message "A Constraint MUST indicate one unit at most"@en ;
+.
+
+validator:ConstraintStatusPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Constraint status property shape"@en ;
+    schema:description "Limits an ODRL constraint to at most one status."@en ;
+    sh:path :status ;
+    sh:maxCount 1 ;
+    sh:message "A Constraint MUST indicate one status at most"@en ;
+.
+
+validator:ConstraintLeftOperandPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Constraint left operand property shape"@en ;
+    schema:description "Requires an ODRL constraint to indicate exactly one left operand."@en ;
+    sh:path :leftOperand ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "A Constraint MUST indicate exactly one left operand"@en ;
+.
+
+validator:RightOperandPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Right operand property shape"@en ;
+    schema:description "Requires at least one directly indicated right operand."@en ;
+    sh:path :rightOperand ;
+    sh:minCount 1 ;
+    sh:message "At least one right operand"@en ;
+.
+
+validator:RightOperandReferencePropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Right operand reference property shape"@en ;
+    schema:description "Requires at least one right operand reference."@en ;
+    sh:path :rightOperandReference ;
+    sh:minCount 1 ;
+    sh:message "At least one right operand reference"@en ;
+.
+
+validator:PartyCollectionSourcePropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Party collection source property shape"@en ;
+    schema:description "Requires a refined party collection to indicate exactly one source."@en ;
+    sh:path :source ;
+    sh:minCount 1 ;
+    sh:maxCount 1 ;
+    sh:message "Exactly one source is required when a party collection uses refinement"@en ;
+.
+
+validator:PartyCollectionRefinementPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Party collection refinement property shape"@en ;
+    schema:description "Requires a refined party collection to indicate at least one refinement."@en ;
+    sh:path :refinement ;
+    sh:minCount 1 ;
+    sh:message "At least one refinement is required when a party collection indicates a source"@en ;
+.
+
+validator:PartyCollectionNoSourcePropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Party collection no-source property shape"@en ;
+    schema:description "Requires an unrefined party collection not to indicate a source."@en ;
+    sh:path :source ;
+    sh:maxCount 0 ;
+    sh:message "A party collection without refinement MUST NOT indicate a source"@en ;
+.
+
+validator:PartyCollectionNoRefinementPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Party collection no-refinement property shape"@en ;
+    schema:description "Requires an unrefined party collection not to indicate a refinement."@en ;
+    sh:path :refinement ;
+    sh:maxCount 0 ;
+    sh:message "A party collection without a source MUST NOT indicate a refinement"@en ;
+.
+
+validator:ActionIncludedInPropertyShape
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy ont: ;
+    schema:name "Action included-in property shape"@en ;
+    schema:description "Provides the property shape for optional ODRL action inclusion relationships."@en ;
+    sh:path :includedIn ;
+.
+
+# End of odrl-idn.ttl
