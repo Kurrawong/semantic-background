@@ -14,7 +14,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:codeRepository "https://github.com/kurrawong/semantic-background" ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2026-09-29"^^xsd:date ;
-    schema:dateModified "2026-09-30"^^xsd:date ;
+    schema:dateModified "2026-10-07"^^xsd:date ;
     schema:description "A catalogue of example data graphs used by KurrawongAI" ;
     schema:hasPart
         <https://data.kurrawong.ai/sb/examples/idncp-invalid-record> ,
@@ -23,7 +23,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         <https://data.kurrawong.ai/sb/examples/provwf-invalid-record> ,
         <https://data.kurrawong.ai/sb/examples/vocpub-valid-record> ,
         <https://data.kurrawong.ai/sb/examples/vocpub-valid-warnings-record> ,
-        <https://data.kurrawong.ai/sb/examples/vocpub-invalid-record> ;
+        <https://data.kurrawong.ai/sb/examples/vocpub-invalid-record> ,
+        <https://data.kurrawong.ai/sb/examples/local-contexts-valid-direct-record> ,
+        <https://data.kurrawong.ai/sb/examples/local-contexts-valid-qualified-record> ;
     schema:name "Data graph examples" ;
     schema:publisher <https://kurrawong.ai> ;
     schema:status astatus:experimental ;
@@ -96,6 +98,19 @@ schema:url "https://kurrawong.ai"^^xsd:anyURI ;
     schema:identifier "1a6b8926be8a299d86f1875f47e7464a" .
         # TODO: make validator
 
+<https://data.kurrawong.ai/sb/examples/local-contexts-valid-direct-record>
+    foaf:primaryTopic <https://data.kurrawong.ai/sb/examples/local-contexts-valid-direct> ;
+#    schema:identifier "" ;
+    schema:name "Local Contexts valid with direct pattern example" ;
+    sh:suggestedShapesGraph <https://data.idnau.org/pid/cp/validator/local-contexts> ;
+    ex:expectedConformance true .
+
+<https://data.kurrawong.ai/sb/examples/local-contexts-valid-qualified-record>
+    foaf:primaryTopic <https://data.kurrawong.ai/sb/examples/local-contexts-valid-qualified> ;
+#    schema:identifier "" ;
+    schema:name "Local Contexts valid with direct pattern example" ;
+    sh:suggestedShapesGraph <https://data.idnau.org/pid/cp/validator/local-contexts> ;
+    ex:expectedConformance true .
 
 ## resources
 
@@ -127,6 +142,13 @@ schema:url "https://kurrawong.ai"^^xsd:anyURI ;
     a dcat:Resource ;
     dcat:distribution <https://data.kurrawong.ai/sb/examples/addr-1.ttl> .
 
+<https://data.kurrawong.ai/sb/examples/local-contexts-valid-direct>
+    a dcat:Resource ;
+    dcat:distribution <https://data.kurrawong.ai/sb/examples/local-contexts-valid-direct.ttl> .
+
+<https://data.kurrawong.ai/sb/examples/local-contexts-valid-qualified>
+    a dcat:Resource ;
+    dcat:distribution <https://data.kurrawong.ai/sb/examples/local-contexts-valid-qualified.ttl> .
 
 ## distributions
 
@@ -165,6 +187,15 @@ schema:url "https://kurrawong.ai"^^xsd:anyURI ;
     dcat:downloadURL "https://github.com/Kurrawong/semantic-background/blob/main/resources/examples/items/idncp-valid.ttl" ;
     dcterms:format "text/turtle" .
 
+<https://data.kurrawong.ai/sb/examples/local-contexts-valid-direct.ttl>
+    a dcat:Distribution ;
+    dcat:downloadURL "https://github.com/Kurrawong/semantic-background/blob/main/resources/examples/items/local-contexts-valid-direct.ttl" ;
+    dcterms:format "text/turtle" .
+
+<https://data.kurrawong.ai/sb/examples/local-contexts-valid-qualified.ttl>
+    a dcat:Distribution ;
+    dcat:downloadURL "https://github.com/Kurrawong/semantic-background/blob/main/resources/examples/items/local-contexts-valid-qualified.ttl" ;
+    dcterms:format "text/turtle" .
 
 ex:expectedConformance a rdf:Property ;
 rdfs:label "Expected conformance" ;
