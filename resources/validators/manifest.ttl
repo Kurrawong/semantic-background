@@ -2,6 +2,7 @@ PREFIX mrr: <https://prez.dev/ManifestResourceRoles/>
 PREFIX prez: <https://prez.dev/>
 PREFIX prof: <http://www.w3.org/ns/dx/prof/>
 PREFIX schema: <https://schema.org/>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
 
 <https://kurrawong.ai/semantic-bankground/annotations-manifest>
     a <https://prez.dev/Manifest> ;
