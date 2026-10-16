@@ -147,10 +147,11 @@ qskos:TopConceptsWithBroader
     a sh:NodeShape ;
     dcterms:source "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
     rdfs:isDefinedBy ont: ;
+    sh:severity sh:Warning ;
     sh:sparql qskos:TopConceptsWithBroaderConstraint ;
     sh:targetObjectsOf skos:hasTopConcept ;
     sh:targetSubjectsOf skos:topConceptOf ;
-    schema:description "Detects declared top concepts that also have broader concepts."@en ;
+    schema:description "Warns when declared top concepts that also have broader concepts."@en ;
     schema:name "Top concepts with broader concepts"@en ;
 .
 
@@ -442,11 +443,11 @@ ont:
     skos:historyNote "SHACL translation of locally applicable checks from the qSKOS quality issue catalogue. Network-dependent checks, including broken-link detection, are not included."@en ;
     sh:declare qskos:SkosPrefixDeclaration ;
     schema:citation "https://arxiv.org/abs/1206.1339"^^xsd:anyURI ;
-    schema:codeRepository "https://github.com/leskneebone/ated"^^xsd:anyURI ;
+    schema:codeRepository "https://github.com/Kurrawong/semantic-background"^^xsd:anyURI ;
     schema:copyrightHolder <https://kurrawong.ai> ;
     schema:creator <https://orcid.org/0000-0001-5640-3202> ;
     schema:dateCreated "2026-06-24"^^xsd:date ;
-    schema:dateModified "2026-07-07"^^xsd:date ;
+    schema:dateModified "2026-09-29"^^xsd:date ;
     schema:description "SHACL shapes implementing structural and graph-based qSKOS quality checks for SKOS vocabularies."@en ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "qSKOS SHACL Validator"@en ;

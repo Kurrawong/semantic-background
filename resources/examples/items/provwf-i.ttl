@@ -1,0 +1,37 @@
+# ProvWF - invalid
+PREFIX ex: <http://example.com/>
+PREFIX prov: <http://www.w3.org/ns/prov#>
+PREFIX provwfo: <https://data.surroundaustralia.com/def/provworkflow/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+
+ex:wf-1
+    a provwfo:Workflow ;
+    rdfs:label "Workflow 1" ;
+    prov:startedAtTime "2022-07-19T14:22:00"^^xsd:dateTime ;
+    prov:endedAtTime "2022-07-19T14:22:10"^^xsd:dateTime ;
+    prov:used ex:ent-a ;
+    prov:generated ex:ent-b ;
+    provwfo:hadBlock ex:blk-1 ;
+.
+
+ex:blk-1
+    a provwfo:Block ;
+    rdfs:label "Block 1" ;
+    # prov:startedAtTime "2022-07-19T14:22:01"^^xsd:dateTime ;
+    prov:endedAtTime "2022-07-19T14:22:09"^^xsd:dateTime ;
+    prov:used ex:ent-a ;
+    prov:generated ex:ent-b ;
+.
+
+
+ex:ent-a
+    a prov:Entity ;
+    rdfs:label "Entity A" ;
+.
+
+ex:ent-b
+    # a prov:Entity ;
+    rdfs:label "Entity B" ;
+.

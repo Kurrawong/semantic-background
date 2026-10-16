@@ -1,0 +1,17 @@
+# Playground Person data in RDF/XML
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:schema="http://schema.org/">
+  <schema:Person rdf:about="http://example.org/ns#Bob">
+    <schema:givenName>Robert</schema:givenName>
+    <schema:familyName>Junior</schema:familyName>
+    <schema:birthDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1971-07-07</schema:birthDate>
+    <schema:deathDate rdf:datatype="http://www.w3.org/2001/XMLSchema#date">1968-09-10</schema:deathDate>
+    <schema:address>
+      <rdf:Description rdf:about="http://example.org/ns#BobsAddress">
+        <schema:streetAddress>1600 Amphitheatre Pkway</schema:streetAddress>
+        <schema:postalCode rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9404</schema:postalCode>
+      </rdf:Description>
+    </schema:address>
+  </schema:Person>
+</rdf:RDF>

@@ -17,6 +17,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         prof:validator ,
         <http://www.w3.org/ns/shacl-shacl#> ,
         <https://data.idnau.org/pid/cp/validator> ,
+        <https://data.idnau.org/pid/cp/validator/local-contexts> ,
+        <https://data.idnau.org/pid/validator/odrl-idn> ;
         <https://kurrawong.ai/validator/rico> ,
         <https://linked.data.gov.au/def/abis/validator> ,
         <https://linked.data.gov.au/def/addr/validator> ,
