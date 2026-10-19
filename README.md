@@ -25,6 +25,10 @@ There are two Catalogue declarations too:
 * `catalogue-ontologies.ttl` - definition of the 'Semantic Background Ontologies' catalogue
   * `manifest-ontologies.ttl` - the manifest for the catalogue using `annotations.trig` for all Resources
 
+## Skills
+
+See [resources/skills/](resources/skills/README.md) for portable agent Skill examples with RDF metadata, starting with the VocPub Definition Skill.
+
 ## License
 
 Almost all the objects in this repository are licensed by/to others and indicate their licenses within them.

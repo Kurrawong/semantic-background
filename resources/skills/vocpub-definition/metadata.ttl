@@ -1,0 +1,54 @@
+@base <https://linked.data.gov.au/def/vocpub/skill/definition/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix schema: <https://schema.org/> .
+@prefix skill: <https://linked.data.gov.au/def/vocpub/skill/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# Proposed publication IRIs; registration and resolution are not asserted.
+# Add creator/maintainer attribution and a licence before releasing this package.
+# HowTo is a subclass of CreativeWork; Plan supports provenance of later runs.
+skill:definition
+    a schema:HowTo, prov:Plan ;
+    schema:name "VocPub Definition Skill"@en ;
+    schema:description "Investigate missing SKOS concept definitions and propose evidence-backed definitions with provenance for VocPub requirement 2.3.01."@en ;
+    schema:version "0.1.0-draft" ;
+    schema:creativeWorkStatus "Draft" ;
+    schema:dateCreated "2026-10-19"^^xsd:date ;
+    schema:dateModified "2026-10-19"^^xsd:date ;
+    schema:inLanguage "en" ;
+    schema:about skos:definition,
+        <https://agldwg.github.io/vocpub-profile/specification.html#2.3.01> ;
+    dcterms:references <https://linked.data.gov.au/def/vocpub>,
+        <https://linked.data.gov.au/def/vocpub/validator> ;
+    schema:encoding <SKILL.md> ;
+    schema:step
+        [ a schema:HowToStep ; schema:position 1 ;
+          schema:name "Establish the task"@en ;
+          schema:text "Identify the graph, concepts, language and applicable specification and validator versions; diagnose the definition result."@en ],
+        [ a schema:HowToStep ; schema:position 2 ;
+          schema:name "Assess evidence"@en ;
+          schema:text "Inspect authoritative sources, local documentation, mapped concepts and semantic context; assess authority and semantic fit."@en ],
+        [ a schema:HowToStep ; schema:position 3 ;
+          schema:name "Produce proposals"@en ;
+          schema:text "Return candidate definitions with evidence and uncertainty, or an insufficient-evidence outcome; validate authorised edits."@en ] .
+
+<SKILL.md>
+    a schema:MediaObject ;
+    schema:encodingFormat "text/markdown" ;
+    schema:about skill:definition ;
+    dcterms:conformsTo <https://agentskills.io/specification> .
+
+# A proposed descriptor for use if the profile publisher adopts this resource.
+# The profile-to-descriptor triple is deliberately left as an example comment:
+# <https://linked.data.gov.au/def/vocpub> prof:hasResource <#guidance> .
+<#guidance>
+    a prof:ResourceDescriptor ;
+    schema:name "VocPub definition remediation guidance"@en ;
+    schema:about skill:definition ;
+    prof:hasRole role:guidance ;
+    prof:hasArtifact <SKILL.md> ;
+    dcterms:format <https://www.iana.org/assignments/media-types/text/markdown> .
