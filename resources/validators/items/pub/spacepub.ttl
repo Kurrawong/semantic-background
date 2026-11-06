@@ -311,6 +311,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ont:
     a owl:Ontology ;
+    owl:versionIRI :5.10 ;
+    owl:versionInfo "5.10 2026-11: Adopting common *.Pub version numbers" ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2025-05-30"^^xsd:date ;
     schema:dateModified "2026-04-12"^^xsd:date ;
@@ -319,7 +321,7 @@ ont:
         :node-cat-resource-exists ,
         :node-cat-resource-props ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "Basic Catalogue Resource Profile Validator" ;
+    schema:name "Spatial Dataset Publication Profile Validator" ;
     schema:publisher <https://kurrawong.ai> ;
-    schema:version "5" ;
+    schema:version "5.10" ;
 .

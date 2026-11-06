@@ -76,6 +76,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :Requirement-2.1.08
     a sh:NodeShape ;
+    rdfs:isDefinedBy sg: ;
     schema:description "Requirement 2.1.08 - implemented by :Requirement-2.3.03" ;
     schema:name "Requirement 2.1.08" ;
 .
@@ -1161,9 +1162,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 sg:
-    a
-        owl:Ontology ,
-        sh:ShapesGraph ;
+    a sh:ShapesGraph ;
     rdfs:member
         :ConceptSchemeType ,
         :Requirement-2.1.02-03 ,
@@ -1252,8 +1251,10 @@ sg:
         :temporal-entity-start-date-one ,
         :temporal-entity-start-date-type ,
         :theming ;
-    owl:versionIRI :5.9 ;
-    owl:versionInfo """5.9 2026-09: Further systematisation of messages and alignment of text in specification with validator; improved text surrounding Reqs in Spec
+    owl:versionIRI :5.10 ;
+    owl:versionInfo """5.10 2026-11: Adopting common *.Pub version numbers. Small titling changes to all *Pub validators
+
+5.9 2026-09: Further systematisation of messages and alignment of text in specification with validator; improved text surrounding Reqs in Spec
 
 5.8 2026-09: Aligned error messages in spec and validator; Temporal Entity start/end more literal date types
 
@@ -1309,10 +1310,10 @@ sg:
     schema:copyrightHolder <https://orcid.org/0000-0002-8742-7730> ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2020-06-14"^^xsd:date ;
-    schema:dateModified "2026-09-22"^^xsd:date ;
+    schema:dateModified "2026-11-06"^^xsd:date ;
     schema:description "SHACL validator for the VocPub Profile" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "VocPub Validator" ;
+    schema:name "Vocabulary Publication Profile Validator" ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
-    schema:version "5.9" ;
+    schema:version "5.10" ;
 .

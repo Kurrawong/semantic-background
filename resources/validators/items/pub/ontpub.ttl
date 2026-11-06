@@ -1012,8 +1012,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 ont:
     a owl:Ontology ;
-    owl:versionIRI :1.6 ;
-    owl:versionInfo """1.6 2026-04: Align schema:license allowed types with VocPub
+    owl:versionIRI :5.10 ;
+    owl:versionInfo """5.10 2026-11: Adopting common *.Pub version numbers
+
+1.6 2026-04: Align schema:license allowed types with VocPub
 
 1.5 2026-01: allow schema:license to indicate an IRI
 
@@ -1036,5 +1038,5 @@ ont:
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Ontology Publication Profile Validator" ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
-    schema:version "1.6" ;
+    schema:version "5.10" ;
 .

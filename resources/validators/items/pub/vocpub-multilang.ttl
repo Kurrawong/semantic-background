@@ -11,9 +11,7 @@ PREFIX vocpub: <https://linked.data.gov.au/def/vocpub/validator/>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 sg:
-    a
-        owl:Ontology ,
-        sh:ShapesGraph ;
+    a sh:ShapesGraph ;
     rdfs:member
         :prefLabel ,
         vocpub:ConceptSchemeType ,
@@ -104,15 +102,16 @@ sg:
         vocpub:temporal-entity-start-date-type ,
         vocpub:theming ;
     owl:imports <https://linked.data.gov.au/def/vocpub/validator> ;
-    owl:versionIRI :5.7 ;
+    owl:versionIRI :5.10 ;
+    owl:versionInfo "5.10 2026-11: Adopting common *.Pub version numbers" ;
     prof:isProfileOf <https://linked.data.gov.au/def/vocpub/validator> ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2020-06-14"^^xsd:date ;
-    schema:dateModified "2025-09-22"^^xsd:date ;
+    schema:dateModified "2026-11-06"^^xsd:date ;
     schema:definition "SHACL validator for the VocPub Profile - multi-language variant. This Validator deactivates the standard VocPub shape that mandates just one prefLabel per Concept and requires instead one prefLabel per language."@en ;
-    schema:name "VocPub Validator - MultiLang"@en ;
+    schema:name "Vocabulary Publication Profile Validator - MultiLang"@en ;
     schema:publisher <https://linked.data.gov.au/org/agldwg> ;
-    schema:version "5.8" ;
+    schema:version "5.10" ;
 .
 
 :prefLabel
