@@ -3,18 +3,18 @@ PREFIX addr: <https://linked.data.gov.au/def/addr/>
 PREFIX cn: <https://linked.data.gov.au/def/cn/>
 PREFIX geo: <http://www.opengis.net/ont/geosparql#>
 PREFIX ls: <https://linked.data.gov.au/def/lifecycle/>
-PREFIX ont: <https://linked.data.gov.au/def/addr/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/addr/validator>
 PREFIX sh: <http://www.w3.org/ns/shacl#>
 PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :address-parts-1
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Each Address must have at least one part which must be Compound Names, indicated with schema:hasPart" ;
     sh:property
         [
@@ -28,7 +28,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :addressable-object-present
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Each Address must indicate an IRI with the predicate cn:isNameFor" ;
     sh:property
         [
@@ -43,7 +43,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :geocode-present
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Each Address must indicate at least one Geocode with the predicate addr:hasGeocode" ;
     sh:property
         [
@@ -57,7 +57,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :geocode-roleName
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Each Geocode role MUST be an IRI and within the Geocode Types vocabulary" ;
     sh:property
         [
@@ -102,7 +102,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :geometry-asWKT
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Each Geometry MUST have exactly one geo:wktLiteral value for the predicate geo:asWKT" ;
     sh:property
         [
@@ -117,7 +117,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :lifecycleStage-present
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Each Address MUST have at least one Lifecycle Stage indicated by hasLifecycleStage" ;
     sh:property
         [
@@ -131,7 +131,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 :lifecycleStageTypes
     a sh:NodeShape ;
-    rdfs:isDefinedBy ont: ;
+    rdfs:isDefinedBy sg: ;
     sh:message "Each Lifecycle Stage MUST have exactly one additional type indicating a concept from the Lifecycle Stage Types vocabulary" ;
     sh:property
         [
@@ -158,8 +158,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://kurrawong.ai"^^xsd:anyURI ;
 .
 
-:1.0.4
-    schema:name "1.0.4" ;
+:1.1.5
+    schema:name "1.1.5" ;
 .
 
 <https://orcid.org/0000-0002-8742-7730>
@@ -175,20 +175,22 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     schema:url "https://www.icsm.gov.au"^^xsd:anyURI ;
 .
 
-ont:
-    a owl:Ontology ;
-    owl:versionIRI :1.0.4 ;
-    owl:versionInfo "1.0.4" ;
-    skos:definition "This validator is a Shapes Constraint Language (SHACL) resource that can be used to check the conformance of RDF data to the Address Model (<https://linked.data.gov.au/def/addr>). It only check for 3 things which are described in individual shapes within this validator"@en ;
-    skos:historyNote "This model validator was made for the Queensland Department of Resources, Spatial Information unit to assist with future Address database design."@en ;
+sg:
+    a sh:ShapesGraph ;
+    owl:versionIRI :1.1.5 ;
+    owl:versionInfo "1.1.5" ;
+    skos:definition "This is a Shapes Constraint Language (SHACL) resource that can be used to check the conformance of RDF data to the Address Model (<https://linked.data.gov.au/def/addr>). It only check for 3 things which are described in individual shapes within this validator"@en ;
+    skos:historyNote """2026-11: made ValPub conformant
+
+This model validator was made for the Queensland Department of Resources, Spatial Information unit to assist with future Address database design.""" ;
     schema:codeRepository "https://github.com/icsm-au/addr-model"^^xsd:anyURI ;
     schema:copyrightHolder <https://linked.data.gov.au/org/icsm> ;
     schema:copyrightNotice "(c) Intergovernmental Committee on Surveying & Mapping 2026" ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2021-12-16"^^xsd:date ;
     schema:dateIssued "2023-06-30"^^xsd:date ;
-    schema:dateModified "2026-06-09"^^xsd:date ;
+    schema:dateModified "2026-11-06"^^xsd:date ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "Address Model Validator" ;
+    schema:name "Address Model Shapes Graph" ;
     schema:publisher <https://linked.data.gov.au/org/icsm> ;
 .

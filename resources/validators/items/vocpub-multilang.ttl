@@ -1,0 +1,140 @@
+PREFIX : <https://linked.data.gov.au/def/vocpub/validator-multilang/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX prof: <http://www.w3.org/ns/dx/prof/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX schema: <https://schema.org/>
+PREFIX sg: <https://linked.data.gov.au/def/vocpub/validator-multilang>
+PREFIX sh: <http://www.w3.org/ns/shacl#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX vocpub: <https://linked.data.gov.au/def/vocpub/validator/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+sg:
+    a
+        owl:Ontology ,
+        sh:ShapesGraph ;
+    rdfs:member
+        :prefLabel ,
+        vocpub:ConceptSchemeType ,
+        vocpub:Requirement-2.1.02-03 ,
+        vocpub:Requirement-2.1.04 ,
+        vocpub:Requirement-2.1.05 ,
+        vocpub:Requirement-2.1.06 ,
+        vocpub:Requirement-2.1.07 ,
+        vocpub:Requirement-2.1.08 ,
+        vocpub:Requirement-2.1.09 ,
+        vocpub:Requirement-2.1.10 ,
+        vocpub:Requirement-2.1.11 ,
+        vocpub:Requirement-2.1.11b ,
+        vocpub:Requirement-2.1.11c ,
+        vocpub:Requirement-2.1.12 ,
+        vocpub:Requirement-2.1.13 ,
+        vocpub:Requirement-2.1.14 ,
+        vocpub:Requirement-2.1.15 ,
+        vocpub:Requirement-2.2.01 ,
+        vocpub:Requirement-2.2.02 ,
+        vocpub:Requirement-2.2.03 ,
+        vocpub:Requirement-2.2.04 ,
+        vocpub:Requirement-2.2.05 ,
+        vocpub:Requirement-2.2.06 ,
+        vocpub:Requirement-2.3.01 ,
+        vocpub:Requirement-2.3.02 ,
+        vocpub:Requirement-2.3.03 ,
+        vocpub:Requirement-2.3.04 ,
+        vocpub:Requirement-2.3.05 ,
+        vocpub:Requirement-2.3.10 ,
+        vocpub:Requirement-2.3.11 ,
+        vocpub:Requirement-2.3.12 ,
+        vocpub:Requirement-2.3.13 ,
+        vocpub:Requirement-2.3.14 ,
+        vocpub:Requirement-2.3.15 ,
+        vocpub:Requirement-2.3.16 ,
+        vocpub:Requirement-2.3.17 ,
+        vocpub:Requirement-2.3.18 ,
+        vocpub:Requirement-2.3.19 ,
+        vocpub:Requirement-2.3.19-start ,
+        vocpub:Requirement-2.3.20 ,
+        vocpub:Requirement-2.4.02 ,
+        vocpub:Requirement-2.4.03a ,
+        vocpub:Requirement-2.4.03b ,
+        vocpub:agent-email ,
+        vocpub:agent-name ,
+        vocpub:agent-name2 ,
+        vocpub:agent-url ,
+        vocpub:at-least-one-concept ,
+        vocpub:broaders-and-narrowers-must-be-concepts ,
+        vocpub:code-repository ,
+        vocpub:concept-date-created ,
+        vocpub:concept-date-modified ,
+        vocpub:concept-historyNote-lang ,
+        vocpub:concept-historyNote-none ,
+        vocpub:concept-historyNote-string ,
+        vocpub:concept-isReplacedBy ,
+        vocpub:concept-replaces ,
+        vocpub:concept-revisionOf ,
+        vocpub:concept-temporalCoverage ,
+        vocpub:concept-version ,
+        vocpub:concept-wasDerivedFrom ,
+        vocpub:copyright-holder ,
+        vocpub:created ,
+        vocpub:creator ,
+        vocpub:definition ,
+        vocpub:in-hierarchy ,
+        vocpub:in-scheme ,
+        vocpub:is-defined-by ,
+        vocpub:license ,
+        vocpub:member ,
+        vocpub:modified ,
+        vocpub:notation ,
+        vocpub:prefLabel ,
+        vocpub:provenance-citation ,
+        vocpub:provenance-dcterms-provenance ,
+        vocpub:provenance-historyNote ,
+        vocpub:provenance-source ,
+        vocpub:provenance-wasDerivedFrom ,
+        vocpub:publisher ,
+        vocpub:qualified-derivation ,
+        vocpub:qualified-derivation-entity ,
+        vocpub:qualified-derivation-role ,
+        vocpub:status ,
+        vocpub:temporal-entity-end-date-one ,
+        vocpub:temporal-entity-end-date-type ,
+        vocpub:temporal-entity-start-date-one ,
+        vocpub:temporal-entity-start-date-type ,
+        vocpub:theming ;
+    owl:imports <https://linked.data.gov.au/def/vocpub/validator> ;
+    owl:versionIRI :5.7 ;
+    prof:isProfileOf <https://linked.data.gov.au/def/vocpub/validator> ;
+    schema:creator <https://orcid.org/0000-0002-8742-7730> ;
+    schema:dateCreated "2020-06-14"^^xsd:date ;
+    schema:dateModified "2025-09-22"^^xsd:date ;
+    schema:definition "SHACL validator for the VocPub Profile - multi-language variant. This Validator deactivates the standard VocPub shape that mandates just one prefLabel per Concept and requires instead one prefLabel per language."@en ;
+    schema:name "VocPub Validator - MultiLang"@en ;
+    schema:publisher <https://linked.data.gov.au/org/agldwg> ;
+    schema:version "5.8" ;
+.
+
+:prefLabel
+    a sh:PropertyShape ;
+    rdfs:isDefinedBy sg: ;
+    sh:message "Requirement 2.1.04, 2.2.1 or 2.3.1 Each vocabulary, Collection or Concept MUST have at least one title and at least one definition indicated using the skos:prefLabel and the skos:definition predicates respectively that must give textual literal values. Only one definition per language is allowed" ;
+    sh:minCount 1 ;
+    sh:or (
+        
+        [
+            sh:datatype xsd:string ;
+        ]
+        
+        [
+            sh:datatype rdf:langString ;
+        ]
+    ) ;
+    sh:path skos:prefLabel ;
+    sh:uniqueLang true ;
+    schema:name "prefLabel" ;
+.
+
+vocpub:prefLabel
+    sh:deactivated true ;
+.

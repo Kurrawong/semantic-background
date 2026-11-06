@@ -231,7 +231,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 .
 
 :F-part-of-property
-    a sh:NodeShape ;
+    a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:class geo:FeatureCollection ;
     sh:maxCount 1 ;
@@ -296,13 +296,10 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:message "Requirement-FC-part-of: Each Feature Collection MUST indicate that it is part of exactly one schema:Dataset instance with use of the schema:isPartOf predicate or the Dataset must indicate the Feature Collection is a part of it with rdfs:member" ;
-    sh:property
-        [
-            sh:class schema:Dataset ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path schema:isPartOf ;
-        ] ;
+    sh:class schema:Dataset ;
+    sh:maxCount 1 ;
+    sh:minCount 1 ;
+    sh:path schema:isPartOf ;
     schema:name "FC part of property" ;
 .
 
@@ -359,8 +356,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :D-created-property ;
     sh:targetClass schema:Dataset ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "Dataset created" ;
+    schema:name "Dataset created" ;
 .
 
 :Requirement-D-creator
@@ -368,8 +365,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :D-creator-property ;
     sh:targetClass schema:Dataset ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "Dataset creator" ;
+    schema:name "Dataset creator" ;
 .
 
 :Requirement-D-desc
@@ -377,8 +374,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :D-desc-property ;
     sh:targetClass schema:Dataset ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "Dataset description" ;
+    schema:name "Dataset description" ;
 .
 
 :Requirement-D-exists
@@ -386,8 +383,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :D-exists-property ;
     sh:targetNode schema:Dataset ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "Dataset exists" ;
+    schema:name "Dataset exists" ;
 .
 
 :Requirement-D-history
@@ -401,7 +398,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     ) ;
     sh:severity sh:Warning ;
     sh:targetClass schema:Dataset ;
-    schema:name "" ;
+    schema:name "Dataset history" ;
 .
 
 :Requirement-D-license
@@ -410,7 +407,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:property :D-license-property ;
     sh:targetClass schema:Dataset ;
     schema:description "" ;
-    schema:name "" ;
+    schema:name "Dataset license" ;
 .
 
 :Requirement-D-modified
@@ -418,8 +415,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :D-modified-property ;
     sh:targetClass schema:Dataset ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "Dataset modified" ;
+    schema:name "Dataset modified" ;
 .
 
 :Requirement-D-name
@@ -427,8 +424,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :D-name-property ;
     sh:targetClass schema:Dataset ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "Dataset name" ;
+    schema:name "Dataset name" ;
 .
 
 :Requirement-D-publisher
@@ -436,8 +433,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :D-publisher-property ;
     sh:targetClass schema:Dataset ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "Dataset publisher" ;
+    schema:name "Dataset publisher" ;
 .
 
 :Requirement-D-spatial
@@ -445,8 +442,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :D-spatial-property ;
     sh:targetClass geo:FeatureCollection ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "FeatureCollection spatial" ;
+    schema:name "FeatureCollection spatial" ;
 .
 
 :Requirement-F-part-of
@@ -458,7 +455,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         :F-member-property
     ) ;
     sh:targetClass geo:Feature ;
-    schema:name "" ;
+    schema:name "Feature partOf" ;
 .
 
 :Requirement-F-spatial
@@ -466,8 +463,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :F-spatial-property ;
     sh:targetClass geo:Feature ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "Feature spatial" ;
+    schema:name "Feature spatial" ;
 .
 
 :Requirement-FC-name
@@ -475,8 +472,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :FC-name-property ;
     sh:targetClass geo:FeatureCollection ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "FeatureCollection name" ;
+    schema:name "FeatureCollection name" ;
 .
 
 :Requirement-FC-part-of
@@ -488,7 +485,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         :FC-member-inv-property
     ) ;
     sh:targetClass geo:FeatureCollection ;
-    schema:name "" ;
+    schema:name "FeatureCollection -> dataset" ;
 .
 
 :Requirement-FC-spatial
@@ -496,8 +493,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :FC-spatial-property ;
     sh:targetClass geo:FeatureCollection ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "FeatureCollection spatial" ;
+    schema:name "FeatureCollection spatial" ;
 .
 
 :Requirement-FC-temporal
@@ -505,8 +502,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:property :FC-temporal-property ;
     sh:targetClass geo:FeatureCollection ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "FeatureCollection temporal" ;
+    schema:name "FeatureCollection temporal" ;
 .
 
 :Requirement-G-representation
@@ -518,8 +515,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         geo:hasCentroid ,
         geo:hasDefaultGeometry ,
         geo:hasGeometry ;
-    schema:description "" ;
-    schema:name "" ;
+    schema:description "Geometry representation" ;
+    schema:name "Geometry representation" ;
 .
 
 :provenance-properties-01
@@ -603,7 +600,7 @@ ont:
 2022: Initial release for the Loc-I project""" ;
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2021-04-01"^^xsd:date ;
-    schema:dateModified "2026-02-06"^^xsd:date ;
+    schema:dateModified "2026-11-05"^^xsd:date ;
     schema:description "The Loc-I Data Profile SHACL validator." ;
     schema:hasPart
         :Requirement-D-created ,
@@ -626,5 +623,5 @@ ont:
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Loc-I Data Profile Validator" ;
     schema:publisher <https://linked.data.gov.au/org/ga> ;
-    schema:version "2.2" ;
+    schema:version "2.4" ;
 .
