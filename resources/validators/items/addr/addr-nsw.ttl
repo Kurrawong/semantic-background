@@ -52,7 +52,7 @@ sg:
     schema:dateModified "2026-11-06"^^xsd:date ;
     schema:description "This validator is a Shapes Constraint Language (SHACL) resource that can be used to check the conformance of RDF data to the ANZ ICSM Address Model with extensions for the NSW" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
-    schema:name "Address Model Validator for NSW" ;
+    schema:name "Address Model Shapes - NSW" ;
     schema:publisher <https://kurrawong.ai> ;
 .
 

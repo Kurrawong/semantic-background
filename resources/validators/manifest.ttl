@@ -13,7 +13,7 @@ PREFIX sh: <http://www.w3.org/ns/shacl#>
             schema:name "SemBack Validators Catalogue" ;
         ] ,
         [
-            prof:hasArtifact "items/*.ttl" ;
+            prof:hasArtifact "items/**/*.ttl" ;
             prof:hasRole mrr:ResourceData ;
             schema:name "SemBack Validator Resources" ;
         ] ,
