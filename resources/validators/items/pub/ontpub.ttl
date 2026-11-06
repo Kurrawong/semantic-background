@@ -1,4 +1,5 @@
 PREFIX : <https://linked.data.gov.au/def/ontpub/validator/>
+PREFIX dcterms: <http://purl.org/dc/terms/>
 PREFIX ont: <https://linked.data.gov.au/def/ontpub/validator>
 PREFIX owl: <http://www.w3.org/2002/07/owl#>
 PREFIX prov: <http://www.w3.org/ns/prov#>
@@ -181,7 +182,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     sh:property <https://linked.data.gov.au/def/ontpub/req/2.1.9b-property-shape> ;
     sh:targetSubjectsOf skos:historyNote ;
     schema:description "Req 2.1.9b" ;
-    schema:name "Req 2.1.9b, Single history note predicate" ;
+    schema:name
+        "Req 2.1.9b" ,
+        "Single history note predicate" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.1.9c>
@@ -189,9 +192,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:message "Requirement 2.1.9c" ;
     sh:property <https://linked.data.gov.au/def/ontpub/req/2.1.9c-property-shape> ;
-    sh:targetSubjectsOf schema:citation ;
+    sh:targetSubjectsOf dcterms:source ;
     schema:description "Req 2.1.9c" ;
-    schema:name "Req 2.1.9c, Single source predicate" ;
+    schema:name
+        "Req 2.1.9c" ,
+        "Single source predicate" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.1.9d>
@@ -211,9 +216,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     rdfs:isDefinedBy ont: ;
     sh:message "Requirement 2.1.9e" ;
     sh:property <https://linked.data.gov.au/def/ontpub/req/2.1.9e-property-shape> ;
-    sh:targetSubjectsOf schema:citation ;
+    sh:targetSubjectsOf dcterms:source ;
     schema:description "Req 2.1.9e" ;
-    schema:name "Req 2.1.9e, Source predicate range type" ;
+    schema:name
+        "Req 2.1.9e" ,
+        "Source predicate range type" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.1.9f>
@@ -417,11 +424,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         [
             sh:nodeKind sh:IRI ;
         ]
-        
+
         [
             sh:datatype xsd:anyURI ;
         ]
-        
+
         [
             sh:datatype xsd:string ;
         ]
@@ -506,8 +513,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.4-property-shape-01>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:datatype rdf:langString ;
-    sh:message "Requirement 2.1.4: OWL Ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:or (
+        [ sh:datatype xsd:string ]
+        [ sh:datatype rdf:langString ]
+    ) ;
+    sh:message "Requirement 2.1.4: OWL Ontologies MUST have exactly one title, an xsd:string or rdf:langString literal, indicated using the skos:prefLabel or the schema:name property" ;
     sh:minCount 1 ;
     sh:path skos:prefLabel ;
     sh:uniqueLang true ;
@@ -517,7 +527,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.4-property-shape-02>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.4: OWL Ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:message "Requirement 2.1.4: OWL Ontologies MUST have exactly one title, an xsd:string or rdf:langString literal, indicated using the skos:prefLabel or the schema:name property" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -578,7 +588,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.6: OWL Ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated & schema:dateModified properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+    sh:message "Requirement 2.1.6: Each ontology MUST have exactly one modified date indicated using schema:dateModified with an xsd:date, xsd:dateTime, xsd:dateTimeStamp or xsd:gYearMonth literal value." ;
     sh:minCount 1 ;
     sh:or (
         
@@ -592,6 +602,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         
         [
             sh:datatype xsd:dateTimeStamp ;
+        ]
+        [
+            sh:datatype xsd:gYearMonth ;
         ]
     ) ;
     sh:path schema:dateModified ;
@@ -602,7 +615,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.6: OWL Ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated & schema:dateModified properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+    sh:message "Requirement 2.1.6: Each ontology MUST have exactly one created date indicated using schema:dateCreated with an xsd:date, xsd:dateTime, xsd:dateTimeStamp or xsd:gYearMonth literal value." ;
     sh:minCount 1 ;
     sh:or (
         
@@ -616,6 +629,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
         
         [
             sh:datatype xsd:dateTimeStamp ;
+        ]
+        [
+            sh:datatype xsd:gYearMonth ;
         ]
     ) ;
     sh:path schema:dateCreated ;
@@ -690,9 +706,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.9-property-shape-02>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "This is a message about schema:citation" ;
+    sh:message "This is a message about dcterms:source" ;
     sh:minCount 1 ;
-    sh:path schema:citation ;
+    sh:path dcterms:source ;
     schema:name "Ontology provenance - source" ;
 .
 
@@ -727,8 +743,8 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.9c: You MUST NOT use schema:citation property more than once on any object." ;
-    sh:path schema:citation ;
+    sh:message "Requirement 2.1.9c: You MUST NOT use dcterms:source property more than once on any object." ;
+    sh:path dcterms:source ;
     schema:name "Single source predicate - property shape" ;
 .
 
@@ -744,18 +760,9 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.1.9e-property-shape>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.1.9e: Whenever schema:citation is used, it must be a datatype property indicating an object of type xsd:anyURI or xsd:string" ;
-    sh:or (
-        
-        [
-            sh:datatype xsd:anyURI ;
-        ]
-        
-        [
-            sh:datatype xsd:string ;
-        ]
-    ) ;
-    sh:path schema:citation ;
+    sh:datatype xsd:anyURI ;
+    sh:message "Requirement 2.1.9e: Whenever dcterms:source is used, it must be a datatype property indicating an object of type xsd:anyURI" ;
+    sh:path dcterms:source ;
     schema:name "Source predicate range type - property shape" ;
 .
 
@@ -860,7 +867,7 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.2.3-property-shape-01>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, schema:citation or prov:wasDerivedFrom." ;
+    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
     sh:minCount 1 ;
     sh:path prov:wasDerivedFrom ;
     schema:name "Shape provenance - wasDerivedFrom" ;
@@ -869,16 +876,16 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 <https://linked.data.gov.au/def/ontpub/req/2.2.3-property-shape-02>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, schema:citation or prov:wasDerivedFrom." ;
+    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
     sh:minCount 1 ;
-    sh:path schema:citation ;
+    sh:path dcterms:source ;
     schema:name "Shape provenance - source" ;
 .
 
 <https://linked.data.gov.au/def/ontpub/req/2.2.3-property-shape-03>
     a sh:PropertyShape ;
     rdfs:isDefinedBy ont: ;
-    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, schema:citation or prov:wasDerivedFrom." ;
+    sh:message "Requirement 2.2.3: Ontology elements provenance, if different from that of the SHACL ontology being validated, SHOULD be indicated by at least one of the following properties: skos:historyNote, dcterms:source or prov:wasDerivedFrom." ;
     sh:minCount 1 ;
     sh:path skos:historyNote ;
     schema:name "Shape provenance - historyNote" ;
@@ -1033,7 +1040,7 @@ ont:
     schema:creator <https://orcid.org/0000-0002-8742-7730> ;
     schema:dateCreated "2022-03-19"^^xsd:date ;
     schema:dateIssued "2023-09-21"^^xsd:date ;
-    schema:dateModified "2026-04-22"^^xsd:date ;
+    schema:dateModified "2026-11-06"^^xsd:date ;
     schema:description "SHACL Shapes to validate RDF data according to the Ontology Publications Profile" ;
     schema:license <http://purl.org/NET/rdflicense/cc-by4.0> ;
     schema:name "Ontology Publication Profile Validator" ;

@@ -162,7 +162,6 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:NodeShape ;
     rdfs:isDefinedBy sg: ;
     sh:property :code-repository ;
-    sh:severity sh:Warning ;
     sh:targetClass skos:ConceptScheme ;
     schema:description "Requirement 2.1.15" ;
     schema:name "Requirement 2.1.15" ;
@@ -550,10 +549,11 @@ PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
     a sh:PropertyShape ;
     rdfs:isDefinedBy sg: ;
     sh:datatype xsd:anyURI ;
-    sh:maxCount 1 ;
+    sh:minCount 1 ;
     sh:message "Requirement 2.1.15 A vocabulary SHOULD indicate a online version-controlled source code repository storing the vocabulary and related content with the schema:codeRepository predicate and if it does, the object indicated MUST be an xsd:anyURI" ;
     sh:path schema:codeRepository ;
-    schema:name "copyright holder" ;
+    sh:severity sh:Warning ;
+    schema:name "code repository" ;
 .
 
 :concept-date-created
