@@ -1,5 +1,7 @@
 # Semantic Background
 
+![](logo-semback.svg)
+
 This repository contains tidy versions of Semantic Web ontologies and vocabularies frequently used by members of [KurrawongAI](https://kurrawong.ai). 
 
 We keep copies of them all here, so they are in one pace, and we tidy up labels etc., without altering any ontological content.
