@@ -93,7 +93,7 @@ req:2.1.2-3
 req:2.1.4
     a sh:NodeShape ;
     rdfs:isDefinedBy sg: ;
-    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, an xsd:string or rdf:langString literal, indicated using the skos:prefLabel or the schema:name property" ;
     sh:or (
         req:2.1.4-p-01
         req:2.1.4-p-02
@@ -416,8 +416,11 @@ req:2.1.2-3-p
 req:2.1.4-p-01
     a sh:PropertyShape ;
     rdfs:isDefinedBy sg: ;
-    sh:datatype rdf:langString ;
-    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:or (
+        [ sh:datatype xsd:string ]
+        [ sh:datatype rdf:langString ]
+    ) ;
+    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, an xsd:string or rdf:langString literal, indicated using the skos:prefLabel or the schema:name property" ;
     sh:minCount 1 ;
     sh:path skos:prefLabel ;
     sh:uniqueLang true ;
@@ -427,7 +430,7 @@ req:2.1.4-p-01
 req:2.1.4-p-02
     a sh:PropertyShape ;
     rdfs:isDefinedBy sg: ;
-    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, a text literal, indicated using the skos:prefLabel or the schema:name property" ;
+    sh:message "Requirement 2.1.4: SHACL ontologies MUST have exactly one title, an xsd:string or rdf:langString literal, indicated using the skos:prefLabel or the schema:name property" ;
     sh:minCount 1 ;
     sh:or (
         
@@ -488,7 +491,7 @@ req:2.1.6-p-01
     a sh:PropertyShape ;
     rdfs:isDefinedBy sg: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.6: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated & schema:dateModified properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+    sh:message "Requirement 2.1.6: Each SHACL ontology MUST have exactly one modified date indicated using schema:dateModified with an xsd:date, xsd:dateTime, xsd:dateTimeStamp or xsd:gYearMonth literal value." ;
     sh:minCount 1 ;
     sh:or (
         
@@ -503,6 +506,7 @@ req:2.1.6-p-01
         [
             sh:datatype xsd:dateTimeStamp ;
         ]
+        [ sh:datatype xsd:gYearMonth ]
     ) ;
     sh:path schema:dateModified ;
     schema:name "Ontology dates - modified" ;
@@ -512,7 +516,7 @@ req:2.1.6-p-02
     a sh:PropertyShape ;
     rdfs:isDefinedBy sg: ;
     sh:maxCount 1 ;
-    sh:message "Requirement 2.1.6: SHACL ontologies MUST have exactly one created date, exactly one modified date and exactly one issued date indicated using the schema:dateCreated & schema:dateModified properties respectively that must be either an xsd:date, xsd:dateTime or xsd:dateTimeStamp literal values" ;
+    sh:message "Requirement 2.1.6: Each SHACL ontology MUST have exactly one created date indicated using schema:dateCreated with an xsd:date, xsd:dateTime, xsd:dateTimeStamp or xsd:gYearMonth literal value." ;
     sh:minCount 1 ;
     sh:or (
         
@@ -527,6 +531,7 @@ req:2.1.6-p-02
         [
             sh:datatype xsd:dateTimeStamp ;
         ]
+        [ sh:datatype xsd:gYearMonth ]
     ) ;
     sh:path schema:dateCreated ;
     schema:name "Ontology dates - created" ;
