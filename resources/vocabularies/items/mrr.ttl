@@ -70,7 +70,7 @@ cs:
     a skos:ConceptScheme ;
     owl:versionIRI :1.0.0 ;
     owl:versionInfo "1.0.0: First public version" ;
-    skos:definition "This vocabulary is a test vocabulary showing the use of images within Concept definitions"@en ;
+    skos:definition "A vocabulary of roles used to indicate how manifest resources are used by Prez data loading processes."@en ;
     skos:hasTopConcept
         :CompleteCatalogueAndResourceLabels ,
         :CatalogueAndResourceModel ,
@@ -81,8 +81,10 @@ cs:
         :IncompleteCatalogueAndResourceLabels ;
     skos:historyNote "Create in 2024 for Prez data loading" ;
     skos:prefLabel "Manifest Resource Roles Vocabulary" ;
+    schema:codeRepository "https://github.com/Kurrawong/kgm"^^xsd:anyURI ;
+    schema:license <https://opensource.org/license/bsd-3-clause> ;
     schema:creator <https://kurrawong.ai> ;
     schema:dateCreated "2024-11-29"^^xsd:date ;
-    schema:dateModified "2026-05-13"^^xsd:date ;
+    schema:dateModified "2026-11-10"^^xsd:date ;
     schema:publisher <https://kurrawong.ai> ;
 .
