@@ -894,6 +894,7 @@ owl:versionInfo
 
 skos:Collection
     schema:description "A meaningful collection of concepts." ;
+    rdfs:comment "skos:Collection is disjoint with each of skos:Concept and skos:ConceptScheme." ;
     schema:name "Collection" ;
 .
 
@@ -905,6 +906,7 @@ skos:Concept
 skos:ConceptScheme
     schema:description "A set of concepts, optionally including statements about semantic relationships between those concepts." ;
     schema:name "Concept Scheme" ;
+    rdfs:comment "skos:ConceptScheme is disjoint with skos:Concept." ;
 .
 
 skos:OrderedCollection
@@ -949,6 +951,7 @@ skos:editorialNote
 
 skos:exactMatch
     schema:description "skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch." ;
+    rdfs:comment "skos:exactMatch is disjoint with each of the properties skos:broadMatch and skos:relatedMatch." ;
     schema:name "has exact match" ;
 .
 
@@ -984,8 +987,9 @@ skos:memberList
 
 skos:narrower
     schema:description
-        "Narrower concepts are typically rendered as children in a concept hierarchy (tree)." ,
         "Relates a concept to a concept that is more specific in meaning." ;
+    rdfs:comment 
+        "Narrower concepts are typically rendered as children in a concept hierarchy (tree)." ;
     schema:name "has narrower" ;
 .
 
@@ -1010,19 +1014,15 @@ skos:prefLabel
 .
 
 skos:related
-    schema:description
-        "Relates a concept to a concept with which there is an associative semantic relationship." ,
-        "skos:related is disjoint with skos:broaderTransitive" ;
+    schema:description "Relates a concept to a concept with which there is an associative semantic relationship." ;
+    rdfs:comment "skos:related is disjoint with skos:broaderTransitive" ;
     schema:name "has related" ;
 .
 
 skos:scopeNote
     schema:description
-        "A note that helps to clarify the meaning and/or the use of a concept." ,
-        "An account of the resource." ;
-    schema:name
-        "Description" ,
-        "scope note" ;
+        "A note that helps to clarify the meaning and/or the use of a concept." ;
+    schema:name "scope note" ;
 .
 
 skos:topConceptOf
@@ -2277,7 +2277,7 @@ tern:MaterialSample
 tern:Method
     schema:description "A Method describes in detailed steps how a workflow, protocol, plan or algorithm is carried out to make an [Observation](#Observation) or a [Sample](#Sample). It explains the steps to be carried out to arrive at reproducible [Result](#Result)." ;
     schema:name "Method" ;
-    schema:url
+    rdfs:seeAlso
         <https://apps.usgs.gov/thesaurus/term-simple.php?thcode=2&code=376> ,
         <https://the9000store.com/iso-9001-2015-requirements/iso-9001-2015-context-of-the-organization/processes-procedures-work-instructions/> ;
 .
@@ -2385,7 +2385,7 @@ tern:attribute
 tern:centroidPoint
     schema:description "The centroid point of an object-of-interest." ;
     schema:name "centroid point" ;
-    schema:url <https://en.wikipedia.org/wiki/List_of_centroids> ;
+    rdfs:seeAlso <https://en.wikipedia.org/wiki/List_of_centroids> ;
 .
 
 tern:dateCommissioned
@@ -2416,7 +2416,7 @@ tern:featureType
 tern:fluxnetID
     schema:description "The unique identifier for flux towers registered with FLUXNET." ;
     schema:name "fluxnet ID" ;
-    schema:url <https://fluxnet.org/> ;
+    rdfs:seeAlso <https://fluxnet.org/> ;
 .
 
 tern:hasAttribute
@@ -2472,7 +2472,7 @@ tern:isAttributeOf
 tern:length
     schema:description "A measure of distance." ;
     schema:name "length" ;
-    schema:url <http://qudt.org/vocab/quantitykind/Length> ;
+    rdfs:seeAlso <http://qudt.org/vocab/quantitykind/Length> ;
 .
 
 tern:localValue
@@ -2553,7 +2553,7 @@ tern:vocabulary
 tern:width
     schema:description "The measurement or extent of something from side to side." ;
     schema:name "width" ;
-    schema:url <http://qudt.org/vocab/quantitykind/Width> ;
+    rdfs:seeAlso <http://qudt.org/vocab/quantitykind/Width> ;
 .
 
 <http://qudt.org/vocab/quantitykind/Length>
