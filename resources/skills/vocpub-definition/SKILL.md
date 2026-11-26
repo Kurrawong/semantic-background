@@ -2,7 +2,7 @@
 name: vocpub-definition
 description: Investigate missing SKOS concept definitions for VocPub requirement 2.3.01 and propose evidence-backed definitions with provenance. Use for definition enrichment or remediation of definition validation results.
 metadata:
-  version: "0.2.0-draft"
+  version: "0.2.1-draft"
   semantic-metadata: "metadata.ttl"
 ---
 
@@ -55,7 +55,11 @@ Keep proposal provenance separate from established provenance of the concept. If
 
 ## Record the enrichment activity
 
-When definitions are applied, add an enrichment event to the affected `skos:ConceptScheme`'s `skos:historyNote`. Describe the date, responsible agent, Skill IRI `https://linked.data.gov.au/def/vocpub/skill/definition` and exact Skill version or commit, number and scope of applied changes, evidence or generation method, review status and validation scope/outcome. Identify unresolved concepts and link to the run's detailed decision/provenance record when it has a usable identifier. A history note explains the vocabulary revision; the detailed record explains individual proposals. Do not attribute the original vocabulary to the enriching agent or present a test copy as an approved publisher revision.
+When definitions are applied, add an enrichment event to the affected `skos:ConceptScheme`'s `skos:historyNote`. Describe the date, responsible agent application and model, Skill IRI `https://linked.data.gov.au/def/vocpub/skill/definition` and exact Skill version or commit, number and scope of applied changes, evidence or generation method, review status and validation scope/outcome. Identify unresolved concepts and link to the run's detailed decision/provenance record when it has a usable identifier. A history note explains the vocabulary revision; the detailed record explains individual proposals. Do not attribute the original vocabulary to the enriching agent or present a test copy as an approved publisher revision.
+
+In the detailed execution record, distinguish the agent application and its version/build from the model provider, exact model identifier and snapshot/deployment version when available, and from the human operator or reviewer. Record requested and actually reported model identities separately when they differ; identify each model's contribution if a run uses several. Capture these facts from the execution environment or response metadata, rather than inferring a model from the application name. If a detail was not captured, unavailable or withheld, state that explicitly instead of guessing. The history note can summarise the application and model and point to the detailed record; for an earlier run with no captured model identifier, say so. A retrospective record must not imply that metadata was captured during the original operation.
+
+Identify the run itself as a `prov:Activity` with a stable run IRI. Link the enriched vocabulary version or snapshot to that run with `prov:wasGeneratedBy`; use `prov:wasRevisionOf` to identify its input version where applicable. A direct link from the persistent ConceptScheme to an enrichment run can use `prov:wasInfluencedBy`, without asserting that the run first created the scheme. Include these links in the proposed history/provenance changes, respecting any explicit definition-only edit boundary. Keep the activity IRI distinct from the document or graph that describes it.
 
 Preserve existing history. If the applicable profile permits only one history note per language, append the dated event to the existing literal in that language, retaining its previous text, rather than adding a second same-language note. Preserve any required plain-string/language-tag convention. Otherwise a separate event literal may be appropriate. Check the history-note constraints after the change. Record each run once using its run identifier; do not duplicate the event when resuming or rerunning the same change set. If no definitions were applied, report the investigation separately without claiming an enrichment occurred.
 

@@ -15,7 +15,7 @@ skill:definition
     a schema:HowTo, prov:Plan ;
     schema:name "VocPub Definition Skill"@en ;
     schema:description "Investigate missing SKOS concept definitions and propose evidence-backed definitions with provenance for VocPub requirement 2.3.01."@en ;
-    schema:version "0.2.0-draft" ;
+    schema:version "0.2.1-draft" ;
     schema:creativeWorkStatus "Draft" ;
     schema:dateCreated "2026-10-19"^^xsd:date ;
     schema:dateModified "2026-11-26"^^xsd:date ;
@@ -37,7 +37,7 @@ skill:definition
           schema:text "Return candidate definitions with evidence, confidence and uncertainty, or an insufficient-evidence outcome; validate authorised edits."@en ],
         [ a schema:HowToStep ; schema:position 4 ;
           schema:name "Record enrichment history"@en ;
-          schema:text "Describe applied enrichment in the ConceptScheme history note, identifying the Skill IRI and version, responsible agent, scope, evidence, review status and run record while preserving earlier history."@en ] .
+          schema:text "Describe applied enrichment in the ConceptScheme history note, identifying the Skill IRI and version, agent application and model, scope, evidence, review status and run record while preserving earlier history."@en ] .
 
 <SKILL.md>
     a schema:MediaObject ;
