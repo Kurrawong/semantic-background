@@ -10,9 +10,11 @@ Of 3,928 concepts, 3,675 lacked a correctly named `skos:definition`. The test ad
 
 A proposed retrospective history event for that test reads:
 
-> 2026-11-26: Codex added 3,646 English concept definitions to a test copy using https://linked.data.gov.au/def/vocpub/skill/definition at commit 454e39c5b3eba7b7d43c9ba9fe927b878caefd90. Most additions were synthesised from camera-model and sensor-size records; 29 concepts remained unresolved. Vocabulary-editor review pending. The VocPub 5.9 definition-only check retained 29 missing-definition results. Run: urn:vocpub-definition-test:2026-11-26:run. Detailed evidence is held in the accompanying local report, decision log and proposal provenance.
+> 2026-11-26: Codex added 3,646 English concept definitions to a test copy using https://linked.data.gov.au/def/vocpub/skill/definition at commit 454e39c5b3eba7b7d43c9ba9fe927b878caefd90. Model: GPT-6.1 Sol; reasoning effort: Medium, confirmed retrospectively by the operator. Application version and exact model snapshot were not captured. Most additions were synthesised from camera-model and sensor-size records; 29 concepts remained unresolved. Vocabulary-editor review pending. The VocPub 5.9 definition-only check retained 29 missing-definition results. Run: urn:vocpub-definition-test:2026-11-26:run. Detailed evidence is held in the accompanying local report, decision log and proposal provenance.
 
 This is a history-note proposal, not a claim that the test used the revised Skill or that its graph has been updated. The URN identifies the actual run in the local provenance graph; it is not a publicly resolvable report link.
+
+The operator subsequently confirmed the model label and reasoning effort. This confirmation is distinct from metadata captured by the execution environment; it does not establish an exact serving identifier or deployment revision. A separate [AgentPub](https://github.com/leskneebone/AgentPub) example develops the run-resource, agent/model and validation-record packaging.
 
 ## Particular characteristics of this export
 
